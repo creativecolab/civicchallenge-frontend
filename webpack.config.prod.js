@@ -2,6 +2,8 @@ const path = require('path');
 
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
@@ -23,14 +25,8 @@ const rules = [
 ].map(module => module(prod));
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
-
   entry: {
     app: [
-      'eventsource-polyfill',
-      'webpack-hot-middleware/client?timeout=2000&reload=true&noInfo=true',
-      'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
       './client/index.jsx',
     ],
     vendor: [
@@ -40,8 +36,8 @@ module.exports = {
   },
 
   output: {
-    path: __dirname,
-    filename: 'app.js',
+    path: path.join(__dirname, 'client-dist'),
+    filename: '[name].[chunkhash].js',
     publicPath: '/',
   },
 
@@ -60,7 +56,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('development'),
+        NODE_ENV: JSON.stringify('production'),
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -69,16 +65,26 @@ module.exports = {
       filename: 'vendor.js',
     }),
     new ExtractTextPlugin({
-      filename: 'app.css',
+      filename: 'app.[chunkhash].css',
       allChunks: true,
+    }),
+    new ManifestPlugin({
+      basePath: '/',
+    }),
+    new ChunkManifestPlugin({
+      filename: 'chunk-manifest.json',
+      manifestVariable: 'webpackManifest',
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false,
+      },
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      reportFilename: 'bundle-report/bundle-report.html',
-      openAnalyzer: false,
+      reportFilename: '../bundle-report/bundle-report.html',
+      openAnalyzer: true,
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
     new FriendlyErrorsPlugin({
       clearConsole: true,
     }),

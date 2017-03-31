@@ -1,11 +1,17 @@
 const path = require('path');
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const sassModule = require('./webpack-modules/sass-module');
 const imgModule = require('./webpack-modules/img-module');
 
-function resolve(dir) {
-  return path.join(__dirname, dir);
-}
+const env = process.env.NODE_ENV;
+const prod = env === 'production';
+
+const rules = [
+  sassModule,
+  imgModule,
+].map(module => module(prod));
 
 module.exports = {
   output: {
@@ -20,9 +26,12 @@ module.exports = {
     ],
   },
   module: {
-    rules: [
-      sassModule,
-      imgModule,
-    ],
+    rules,
   },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: 'app.css',
+      allChunks: true,
+    }),
+  ],
 };

@@ -3,7 +3,10 @@
  */
 
 if (process.env.NODE_ENV === 'production') {
-  console.log(1);
+  process.env.webpackAssets = JSON.stringify(require('./client-dist/manifest.json'));
+  process.env.webpackChunkAssets = JSON.stringify(require('./client-dist/chunk-manifest.json'));
+
+  require('./server-dist/server.bundle.js');
 } else {
   require('babel-register')({
     plugins: [

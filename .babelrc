@@ -11,10 +11,10 @@
   "env": {
     "production": {
       "presets": [
+        [ "env", { "modules": false } ],
         "es2015",
         "react",
         "react-optimize",
-        "es2015-native-modules",
         "stage-0"
       ]
     }

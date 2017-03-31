@@ -3,12 +3,32 @@
   "version": "1.0.0",
   "description": "Built with the Mongo-Express-React-Node.js stack. Super WIP, name TBD.",
   "scripts": {
+    "// Prod Scripts //": "",
+    "start": "cross-env NODE_ENV=production node index.js",
+
+    "// Dev Scripts //": "",
     "dev": "cross-env BABEL_DISABLE_CACHE=1 DEBUG=server:* NODE_ENV=development nodemon index.js",
-    "clean:dist": "rimraf dist",
+    "start:stage": "cross-env DEBUG=server:* NODE_ENV=production node index.js",
+
+    "// Build Scripts //": "",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:server": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production webpack --config webpack.config.server.js",
+    "build:all": "yarn build:client; yarn build:server",
+
+    "// Cleanup Scripts //": "",
+    "clean:dist": "yarn clean:dist:server; yarn clean:dist:client",
+    "clean:dist:server": "rimraf server-dist",
+    "clean:dist:client": "rimraf client-dist",
     "clean:report": "rimraf bundle-report",
     "clean:all": "yarn clean:dist && yarn clean:report",
+
+    "// Convenience Scripts //": "",
     "reinstall": "rimraf node_modules && yarn",
-    "lint": "eslint --ext .js --ext .jsx client server"
+    "rebuild": "yarn clean:all; yarn build:all",
+
+    "// Lint + Test Scripts //": "",
+    "lint": "eslint --ext .js --ext .jsx client server",
+    "lint:webpack": "eslint --no-ignore webpack-modules webpack.config.babel.js webpack.config.dev.js webpack.config.prod.js webpack.config.server.js"
   },
   "repository": "git@github.com:davidcluu/mern-custom.git",
   "author": "David Luu <luu.david.c@gmail.com>",
@@ -51,6 +71,7 @@
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.24.0",
+    "chunk-manifest-webpack-plugin": "^1.0.0",
     "css-loader": "^0.27.3",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",
@@ -62,6 +83,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "eventsource-polyfill": "^0.9.6",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "node-sass": "^4.5.1",
@@ -76,10 +98,12 @@
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.0",
     "url-loader": "^0.5.8",
-    "webpack": "^2.3.1",
+    "webpack": "^2.3.2",
     "webpack-bundle-analyzer": "^2.3.1",
     "webpack-dev-middleware": "^1.10.1",
-    "webpack-hot-middleware": "^2.17.1"
+    "webpack-externals-plugin": "^1.0.0",
+    "webpack-hot-middleware": "^2.17.1",
+    "webpack-manifest-plugin": "^1.1.0"
   },
   "browserslist": [
     "last 1 versions",

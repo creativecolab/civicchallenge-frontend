@@ -125,7 +125,9 @@ app.use(helmet());
  * Static Content
  */
 
-app.use(serveStatic(path.join(__dirname, 'public')));
+app.use(serveStatic(path.join(__dirname, '../client-dist')));
+
+app.use(serveStatic(path.join(__dirname, '../public')));
 
 
 /**
@@ -171,6 +173,7 @@ const renderFullPage = (req, res, initialView, initialState) => {
     <html lang="en">
     <head>
       ${headString}
+      <link rel="stylesheet" href="${process.env.NODE_ENV === 'production' ? assetsManifest['/app.css'] : './app.css'}" />
     </head>
     <body>
       <div id="root" data-reactmount>${initialView}</div>
