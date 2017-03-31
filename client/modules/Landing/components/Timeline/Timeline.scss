@@ -1,0 +1,82 @@
+@import '~styles/variables';
+
+.timeline {
+  h3 {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .chart {
+    display: flex;
+
+    .item {
+      flex: 1;
+      text-align: center;
+
+      .label {
+
+      }
+
+      .plot-container {
+        $dot-radius: 25px;
+        $plot-color: #909090;
+
+        height: $dot-radius;
+        margin: 1em 0;
+
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dot {
+          border-radius: 50%;
+          width: $dot-radius;
+          height: $dot-radius;
+
+          display: inline-block;
+
+          background-color: $plot-color;
+        }
+
+        .line {
+          margin-right: auto;
+          border-top: 2px solid $plot-color;
+          width: 100%;
+
+          position: absolute;
+        }
+      }
+
+      .description {
+        margin: 0 5%;
+      }
+
+      &.start {
+        .plot-container {
+          .line {
+            width: 50%;
+
+            left: 50%;
+          }
+        }
+      }
+
+      &.end {
+        .plot-container {
+          .line {
+            width: 50%;
+
+            right: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+}
+
+@media (max-width: $mobile-max-width) {
+}

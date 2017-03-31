@@ -1,0 +1,55 @@
+@import '~styles/variables';
+
+.header {
+  height: 40%;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #c2c2c2;
+
+  .background {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+  }
+
+  .text {
+    text-align: center;
+
+    h1 {
+      margin: 0;
+
+      display: inline-block;
+
+      font-weight: normal;
+      font-size: 2.5em;
+    }
+
+    p {
+      margin: 0;
+
+      text-align: justify;
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .header {
+    .text {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .header {
+    .text {
+      width: 90%;
+    }
+  }
+}
