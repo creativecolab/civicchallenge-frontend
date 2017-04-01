@@ -27,7 +27,6 @@
       display: inline-block;
 
       font-weight: normal;
-      font-size: 2.5em;
     }
 
     p {
@@ -42,6 +41,10 @@
   .header {
     .text {
       width: 60%;
+
+      h1 {
+        font-size: 3em;
+      }
     }
   }
 }
@@ -50,6 +53,10 @@
   .header {
     .text {
       width: 90%;
+
+      h1 {
+        font-size: 2.5em;
+      }
     }
   }
 }

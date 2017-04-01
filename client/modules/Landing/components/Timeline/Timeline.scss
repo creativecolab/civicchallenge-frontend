@@ -1,11 +1,15 @@
 @import '~styles/variables';
 
 .timeline {
+  margin: 5em 0;
+
   h3 {
     margin: 0;
+    margin-bottom: 1em;
 
     text-align: center;
-    font-weight: 600;
+    font-size: 2em;
+    font-weight: normal;
   }
 
   .chart {
@@ -21,6 +25,7 @@
 
       .plot-container {
         $dot-radius: 25px;
+        $line-width: 2px;
         $plot-color: #909090;
 
         height: $dot-radius;
@@ -43,7 +48,7 @@
 
         .line {
           margin-right: auto;
-          border-top: 2px solid $plot-color;
+          border-top: $line-width solid $plot-color;
           width: 100%;
 
           position: absolute;
