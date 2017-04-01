@@ -76,9 +76,11 @@ module.exports = {
       manifestVariable: 'webpackManifest',
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compressor: {
+      compress: {
         warnings: false,
       },
+      mangle: true,
+      comments: false,
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
