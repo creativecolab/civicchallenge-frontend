@@ -18,5 +18,13 @@ export default (
         });
       }}
     />
+    <Route
+      path="/placeholder"
+      getComponent={(nextState, cb) => {
+        require.ensure([], (require) => {
+          cb(null, require('./modules/Placeholder/Placeholder').default);
+        });
+      }}
+    />
   </Route>
 );

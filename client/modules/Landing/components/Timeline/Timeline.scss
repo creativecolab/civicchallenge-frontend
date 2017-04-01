@@ -1,18 +1,24 @@
 @import '~styles/variables';
 
+$component-spacing: 3em;
+
 .timeline {
   margin: 5em 0;
 
   h3 {
+    $font-size: 2em;
+
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: $component-spacing * (1em / $font-size);
 
     text-align: center;
-    font-size: 2em;
+    font-size: $font-size;
     font-weight: normal;
   }
 
   .chart {
+    margin-bottom: 1.5 * $component-spacing;
+
     display: flex;
 
     .item {
@@ -26,7 +32,7 @@
       .plot-container {
         $dot-radius: 25px;
         $line-width: 2px;
-        $plot-color: #909090;
+        $plot-color: #c2c2c2;
 
         height: $dot-radius;
         margin: 1em 0;
@@ -78,6 +84,24 @@
           }
         }
       }
+    }
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+
+    a {
+      margin: 0;
+      border: none;
+      padding: 1em 2em;
+
+      display: inline-block;
+      cursor: pointer;
+
+      background-color: #c2c2c2;
+      text-decoration: none;
+      color: #000;
     }
   }
 }
