@@ -2,7 +2,6 @@ const path = require('path');
 
 const webpack = require('webpack');
 const ExternalsPlugin = require('./webpack-modules/webpack-externals-plugin');
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'server/server.jsx'),
@@ -69,9 +68,6 @@ module.exports = {
       },
       mangle: true,
       comments: false,
-    }),
-    new FriendlyErrorsPlugin({
-      clearConsole: false,
     }),
   ],
 };

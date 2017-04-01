@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 const sassModule = require('./webpack-modules/sass-module');
 const imgModule = require('./webpack-modules/img-module');
@@ -77,18 +76,19 @@ module.exports = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
+        screw_ie8: true,
         warnings: false,
       },
-      mangle: true,
+      mangle: {
+        screw_ie8: true,
+      },
+      beautify: false,
       comments: false,
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       reportFilename: '../bundle-report/bundle-report.html',
       openAnalyzer: true,
-    }),
-    new FriendlyErrorsPlugin({
-      clearConsole: false,
     }),
   ],
 };
