@@ -6,7 +6,9 @@
     "stage-0"
   ],
   "plugins": [
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    "transform-react-inline-elements",
+    "transform-react-constant-elements"
   ],
   "env": {
     "production": {

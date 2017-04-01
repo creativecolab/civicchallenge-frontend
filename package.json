@@ -3,30 +3,25 @@
   "version": "1.0.0",
   "description": "Built with the Mongo-Express-React-Node.js stack. Super WIP, name TBD.",
   "scripts": {
-    "// Prod Scripts //": "",
+    "/* Prod Scripts */": "",
     "start": "cross-env NODE_ENV=production node index.js",
-
-    "// Dev Scripts //": "",
+    "/* Dev Scripts */": "",
     "dev": "cross-env BABEL_DISABLE_CACHE=1 DEBUG=server:* NODE_ENV=development nodemon index.js",
     "start:stage": "cross-env DEBUG=server:* NODE_ENV=production node index.js",
-
-    "// Build Scripts //": "",
+    "/* Build Scripts */": "",
     "build:client": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build:server": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production webpack --config webpack.config.server.js",
     "build:all": "yarn build:client; yarn build:server",
-
-    "// Cleanup Scripts //": "",
+    "/* Cleanup Scripts */": "",
     "clean:dist": "yarn clean:dist:server; yarn clean:dist:client",
     "clean:dist:server": "rimraf server-dist",
     "clean:dist:client": "rimraf client-dist",
     "clean:report": "rimraf bundle-report",
     "clean:all": "yarn clean:dist && yarn clean:report",
-
-    "// Convenience Scripts //": "",
+    "/* Convenience Scripts */": "",
     "reinstall": "rimraf node_modules && yarn",
     "rebuild": "yarn clean:all; yarn build:all",
-
-    "// Lint + Test Scripts //": "",
+    "/* Lint + Test Scripts */": "",
     "lint": "eslint --ext .js --ext .jsx client server",
     "lint:webpack": "eslint --no-ignore webpack-modules webpack.config.babel.js webpack.config.dev.js webpack.config.prod.js webpack.config.server.js",
     "lint:all": "yarn lint; yarn lint:webpack"
@@ -63,6 +58,8 @@
     "ava": "^0.18.2",
     "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
     "babel-plugin-webpack-loaders": "^0.9.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.2.2",
