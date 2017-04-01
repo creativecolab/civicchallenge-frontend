@@ -125,8 +125,10 @@ app.use(helmet());
  * Static Content
  */
 
+// Static client content from Webpack
 app.use(serveStatic(path.join(__dirname, '../client-dist')));
 
+// Other static content
 app.use(serveStatic(path.join(__dirname, '../public')));
 
 
