@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import TransitionGroup from 'react-addons-transition-group';
 
 import ChartItem from './components/ChartItem/ChartItem';
 
@@ -44,14 +43,15 @@ class Timeline extends Component {
         <h3>Timeline</h3>
         <div className={styles.chart}>
           {CHART_ITEMS.map((item, i, array) =>
-            <TransitionGroup key={item.label}>
-              <ChartItem
-                styles={styles}
-                start={i === 0}
-                end={i === array.length - 1}
-                {...item}
-              />
-            </TransitionGroup>
+            // <TransitionGroup key={item.label}>
+            <ChartItem
+              key={item.label}
+              styles={styles}
+              start={i === 0}
+              end={i === array.length - 1}
+              {...item}
+            />
+            // </TransitionGroup>
           )}
         </div>
       </div>

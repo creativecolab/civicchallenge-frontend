@@ -28,7 +28,8 @@
 
     "// Lint + Test Scripts //": "",
     "lint": "eslint --ext .js --ext .jsx client server",
-    "lint:webpack": "eslint --no-ignore webpack-modules webpack.config.babel.js webpack.config.dev.js webpack.config.prod.js webpack.config.server.js"
+    "lint:webpack": "eslint --no-ignore webpack-modules webpack.config.babel.js webpack.config.dev.js webpack.config.prod.js webpack.config.server.js",
+    "lint:all": "yarn lint; yarn lint:webpack"
   },
   "repository": "git@github.com:davidcluu/mern-custom.git",
   "author": "David Luu <luu.david.c@gmail.com>",

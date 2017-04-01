@@ -62,7 +62,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: Infinity,
-      filename: 'vendor.js',
+      filename: 'vendor.[chunkhash].js',
     }),
     new ExtractTextPlugin({
       filename: 'app.[chunkhash].css',
@@ -86,7 +86,7 @@ module.exports = {
       openAnalyzer: true,
     }),
     new FriendlyErrorsPlugin({
-      clearConsole: true,
+      clearConsole: false,
     }),
   ],
 };

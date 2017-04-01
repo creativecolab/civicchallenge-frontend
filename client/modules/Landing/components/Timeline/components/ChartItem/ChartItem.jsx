@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { TweenLite, CSSPlugin } from 'gsap'; // eslint-disable-line no-unused-vars
 import classNames from 'util/classNames';
-import chainAnimations from 'util/chainAnimations';
+// import chainAnimations from 'util/chainAnimations';
 
 /**
  * ChartItem
@@ -17,6 +16,7 @@ class ChartItem extends Component {
     this.setState({ isMounted: true });
   }
 
+  /*
   componentWillAppear(callback) {
     const { label, plotDot, plotLine, description } = this;
     const { start, end } = this.props;
@@ -26,7 +26,6 @@ class ChartItem extends Component {
     plotLine.style.width = 0;
     label.style.opacity = 0;
     description.style.opacity = 0;
-
     chainAnimations([
       {
         el: plotDot,
@@ -65,6 +64,7 @@ class ChartItem extends Component {
       ],
     ]);
   }
+  */
 
   render() {
     const { styles, start, end, label, description } = this.props;

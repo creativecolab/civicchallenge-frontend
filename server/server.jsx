@@ -140,11 +140,13 @@ app.use(serveStatic(path.join(__dirname, '../public')));
  */
 
 const renderFullPage = (req, res, initialView, initialState) => {
-  const head = Helmet.renderStatic();
-  const headString = Object.keys(head).map(key => head[key].toString()).join('');
-
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
+
+  const head = Helmet.renderStatic();
+
+  const headString = Object.keys(head).map(key => head[key].toString()).join('');
+  const cssLinkString = process.env.NODE_ENV === 'production' ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : '';
 
   const manifestScript = `
     window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
@@ -173,7 +175,7 @@ const renderFullPage = (req, res, initialView, initialState) => {
     <html lang="en">
     <head>
       ${headString}
-      <link rel="stylesheet" href="${process.env.NODE_ENV === 'production' ? assetsManifest['/app.css'] : './app.css'}" />
+      ${cssLinkString}
     </head>
     <body>
       <div id="root" data-reactmount>${initialView}</div>
