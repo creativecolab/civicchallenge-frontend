@@ -1,13 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import Promise from 'bluebird';
+import { Promise } from 'es6-promise';
 
 import App from './App';
 import configureStore from './store';
 
 // Promise polyfill
-global.Promise = Promise;
+if (!global.Promise) {
+  global.Promise = Promise;
+}
 
 const mountElement = document.getElementById('root');
 const store = configureStore(window.__INITIAL_STATE__);
