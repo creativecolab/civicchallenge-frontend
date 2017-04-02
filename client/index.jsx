@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
 import { Promise } from 'es6-promise';
 
 import App from './App';
@@ -15,25 +14,38 @@ const mountElement = document.getElementById('root');
 const store = configureStore(window.__INITIAL_STATE__);
 
 let routerKey = 0;
+let rootElement = null;
+
+if (process.env.NODE_ENV === 'production') {
+  rootElement = (
+    <App routerKey={routerKey} store={store} />
+  );
+} else {
+  const { AppContainer } = require('react-hot-loader'); // eslint-disable-line global-require
+
+  rootElement = (
+    <AppContainer>
+      <App routerKey={routerKey} store={store} />
+    </AppContainer>
+  );
+
+  // Hot reload in development
+  if (module.hot) {
+    module.hot.accept('./App', () => {
+      routerKey += 1;
+
+      const NextApp = require('./App').default; // eslint-disable-line global-require
+      render(
+        <AppContainer>
+          <NextApp routerKey={routerKey} store={store} />
+        </AppContainer>,
+        mountElement
+      );
+    });
+  }
+}
 
 render(
-  <AppContainer>
-    <App routerKey={routerKey} store={store} />
-  </AppContainer>,
+  rootElement,
   mountElement
 );
-
-// Hot Reloading
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    routerKey += 1;
-
-    const NextApp = require('./App').default; // eslint-disable-line global-require
-    render(
-      <AppContainer>
-        <NextApp routerKey={routerKey} store={store} />
-      </AppContainer>,
-      mountElement
-    );
-  });
-}
