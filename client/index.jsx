@@ -1,9 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import Promise from 'bluebird';
 
 import App from './App';
 import configureStore from './store';
+
+// Promise polyfill
+global.Promise = Promise;
 
 const mountElement = document.getElementById('root');
 const store = configureStore(window.__INITIAL_STATE__);

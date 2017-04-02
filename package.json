@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.24.0",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "client-sessions": "^0.7.0",
     "compression": "^1.6.2",

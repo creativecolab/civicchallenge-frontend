@@ -1,7 +1,7 @@
 import path from 'path';
 import crypto from 'crypto';
 
-import Express from 'express';
+import express from 'express';
 import compression from 'compression';
 import serveStatic from 'serve-static';
 import bodyParser from 'body-parser';
@@ -41,7 +41,7 @@ const debug = {
  * App
  */
 
-const app = new Express();
+const app = express();
 
 app.enable('trust proxy');
 
