@@ -1,4 +1,26 @@
-.container {
+@import '~styles/variables';
+
+.landing {
   width: 100%;
   height: 100%;
+
+  .button-container {
+    margin: $component-vertical-margin auto;
+
+    display: flex;
+    justify-content: center;
+
+    a {
+      margin: 0;
+      border: none;
+      padding: 1em 2em;
+
+      display: inline-block;
+      cursor: pointer;
+
+      background-color: #c2c2c2;
+      text-decoration: none;
+      color: #000;
+    }
+  }
 }

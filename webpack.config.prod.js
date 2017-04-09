@@ -26,6 +26,7 @@ const rules = [
 module.exports = {
   entry: {
     app: [
+      'babel-polyfill',
       './client/index.jsx',
     ],
     vendor: [

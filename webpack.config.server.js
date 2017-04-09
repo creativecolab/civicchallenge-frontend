@@ -4,7 +4,12 @@ const webpack = require('webpack');
 const ExternalsPlugin = require('./webpack-modules/webpack-externals-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'server/server.jsx'),
+  entry: {
+    server: [
+      'babel-polyfill',
+      './server/server.jsx',
+    ],
+  },
 
   output: {
     path: path.join(__dirname, 'server-dist'),

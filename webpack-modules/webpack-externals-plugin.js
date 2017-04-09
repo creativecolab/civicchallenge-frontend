@@ -23,7 +23,12 @@ ExternalsPlugin.prototype.apply = function(compiler) {
           if (ModuleFilenameHelpers.matchObject(opts, module.resource)) {
             const request = data.dependencies[0].request;
             const match = request.match(/(..[\/]|.[\/])node_modules/);
-            const newRequest = data.dependencies[0].request.slice(match.index);
+            let newRequest = '';
+            if (match) {
+              newRequest = data.dependencies[0].request.slice(match.index);
+            } else {
+              newRequest = data.dependencies[0].request;
+            }
             return callback(null, new ExternalModule(
               newRequest,
               opts.type || compiler.options.output.libraryTarget

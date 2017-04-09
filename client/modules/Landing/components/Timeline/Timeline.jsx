@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 
 import ChartItem from './components/ChartItem/ChartItem';
 
@@ -54,9 +53,6 @@ class Timeline extends Component {
             />
             // </TransitionGroup>
           )}
-        </div>
-        <div className={styles.buttonContainer}>
-          <Link to="/placeholder">Button to get involved</Link>
         </div>
       </div>
     );

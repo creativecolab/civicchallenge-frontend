@@ -3,7 +3,7 @@
 $component-spacing: 3em;
 
 .timeline {
-  margin: 5em 0;
+  margin: $component-vertical-margin auto;
 
   h3 {
     $font-size: 2em;
@@ -86,28 +86,16 @@ $component-spacing: 3em;
       }
     }
   }
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-
-    a {
-      margin: 0;
-      border: none;
-      padding: 1em 2em;
-
-      display: inline-block;
-      cursor: pointer;
-
-      background-color: #c2c2c2;
-      text-decoration: none;
-      color: #000;
-    }
-  }
 }
 
 @media (min-width: $desktop-min-width) {
+.timeline {
+  width: $component-width-desktop;
+}
 }
 
 @media (max-width: $mobile-max-width) {
+.timeline {
+  width: $component-width-mobile;
+}
 }

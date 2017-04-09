@@ -11,11 +11,13 @@ if (typeof require.ensure !== 'function') {
 }
 
 const getLanding = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Landing/Landing').default));
+const getTeam = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Team/Team').default));
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default));
 
 export default (
   <Route path="/" component={App}>
     <IndexRoute getComponent={getLanding} />
+    <Route path="/team" getComponent={getTeam} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );

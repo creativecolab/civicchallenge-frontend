@@ -1,0 +1,54 @@
+@import '~styles/variables';
+
+$component-spacing: 3em;
+
+.theme {
+  margin: $component-vertical-margin auto;
+
+  h3 {
+    $font-size: 2em;
+
+    margin-bottom: $component-spacing * (1em / $font-size);
+
+    text-align: center;
+    font-size: $font-size;
+    font-weight: normal;
+  }
+
+  .description {
+  }
+
+  .challenges-container {
+    .challenges {
+      text-align: center;
+
+      .challenge {
+        margin: 10px;
+        border: 1px solid black;
+        width: 200px;
+
+        display: inline-block;
+
+        font-size: 0;
+
+        * {
+          font-size: $font-size;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+.theme > * {
+  margin: 0 auto;
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+.theme > * {
+  margin: 0 auto;
+  width: $component-width-mobile;
+}
+}

@@ -31,6 +31,7 @@ module.exports = {
       'webpack-hot-middleware/client?timeout=2000&reload=true&noInfo=true',
       'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
+      'babel-polyfill',
       './client/index.jsx',
     ],
     vendor: [
