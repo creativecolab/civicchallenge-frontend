@@ -2,8 +2,9 @@
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const cssnext = require('postcss-cssnext');
 const postcssFocus = require('postcss-focus');
+const cssnext = require('postcss-cssnext');
+const autoprefixer = require('autoprefixer');
 const postcssReporter = require('postcss-reporter');
 
 module.exports = (prod) => {
@@ -29,6 +30,7 @@ module.exports = (prod) => {
           cssnext({
             browsers: ['last 2 versions', 'IE > 10'],
           }),
+          autoprefixer(),
           postcssReporter({
             clearMessages: true,
           }),

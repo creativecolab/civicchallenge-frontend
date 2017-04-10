@@ -20,13 +20,12 @@ class Intro extends Component {
   render() {
     return (
       <div className={styles.intro}>
-        <h3>Who We Are</h3>
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Nam eos, excepturi alias vitae iusto illo fugit voluptatibus,
-          at magni hic repudiandae esse ad, inventore rerum sed porro? Libero, quam, officia.
+          D4SD is an initiative led by <Link to="/team">researchers at UC San
+          Diego</Link> that aims to engage citizens using methods from
+          human-centered design and crowdsourcing to innovate solutions for
+          civic challenges.
         </p>
-        <Link to="/team">The team</Link>
       </div>
     );
   }

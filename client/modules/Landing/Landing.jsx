@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { Link } from 'react-router';
 
 import styles from './Landing.scss';
 
-import Intro from './components/Intro/Intro';
 import Header from './components/Header/Header';
-import Timeline from './components/Timeline/Timeline';
+import Intro from './components/Intro/Intro';
+import Process from './components/Process/Process';
 import Theme from './components/Theme/Theme';
 import Footer from './components/Footer/Footer';
 
@@ -33,11 +32,8 @@ class Landing extends Component {
         />
         <Header />
         <Intro />
-        <Timeline />
+        <Process />
         <Theme />
-        <div className={styles.buttonContainer}>
-          <Link to="/placeholder">Button to get involved</Link>
-        </div>
         <Footer />
       </div>
     );

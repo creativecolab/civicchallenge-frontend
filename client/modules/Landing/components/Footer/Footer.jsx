@@ -18,9 +18,9 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className={styles.footer}>
+      <footer className={styles.footer}>
         I be the footer
-      </div>
+      </footer>
     );
   }
 }

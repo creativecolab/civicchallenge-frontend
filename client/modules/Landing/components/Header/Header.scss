@@ -1,14 +1,15 @@
 @import '~styles/variables';
 
+$navbar-height: 50px;
+
+$font-color: #fff;
+
 .header {
   height: 40%;
 
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  background-color: #c2c2c2;
+  color: $font-color;
 
   .background {
     height: 100%;
@@ -16,23 +17,90 @@
 
     position: absolute;
     z-index: -1;
+
+    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
   }
 
-  .text {
-    text-align: center;
+  .navbar-container {
+    $border-width: 1px;
 
-    h1 {
-      margin: 0;
+    border-bottom: $border-width solid #fff;
+    height: $navbar-height - $border-width;
 
-      display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-      font-weight: normal;
+    .logo {
+      margin: 0 10px;
     }
 
-    p {
-      margin: 0;
+    .navbar {
+      .navbar-button {
+        margin: 0 10px;
+        border: 0;
+        padding: 0;
 
-      text-align: justify;
+        cursor: pointer;
+
+        background-color: rgba(0,0,0,0);
+        font: inherit;
+        font-weight: normal;
+        color: $font-color;
+      }
+    }
+  }
+
+  .text-container {
+    height: calc(100% - #{$navbar-height});
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        margin-bottom: 0.25 * $font-size;
+
+        display: inline-block;
+        
+        font-size: 2 * $font-size;
+        font-weight: normal;
+      }
+
+      h2 {
+        margin: 0;
+        margin-bottom: 1.5 * $font-size;
+
+        font-size: 1.1 * $font-size;
+        font-weight: normal;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+
+        a {
+          margin: 0;
+          border: none;
+          border-top-left-radius: 10% 50%;
+          border-top-right-radius: 10% 50%;
+          border-bottom-left-radius: 10% 50%;
+          border-bottom-right-radius: 10% 50%;
+          padding: 0.5em 1.5em;
+
+          display: inline-block;
+          cursor: pointer;
+
+          background-color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: rgb(34, 78, 130);
+        }
+      }
     }
   }
 }

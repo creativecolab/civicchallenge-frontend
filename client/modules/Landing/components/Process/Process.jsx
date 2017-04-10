@@ -1,13 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
-import ChartItem from './components/ChartItem/ChartItem';
+// import ChartItem from './components/ChartItem/ChartItem';
 
-import styles from './Timeline.scss';
+import styles from './Process.scss';
 
 /**
- * Timeline
+ * Process
  */
 
+/*
 const CHART_ITEMS = [
   {
     label: 'Identify',
@@ -26,8 +27,9 @@ const CHART_ITEMS = [
     description: 'This is a long, long winded, and exceedingly boring description',
   },
 ];
+*/
 
-class Timeline extends Component {
+class Process extends Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };
@@ -39,30 +41,17 @@ class Timeline extends Component {
 
   render() {
     return (
-      <div className={styles.timeline}>
-        <h3>Timeline</h3>
-        <div className={styles.chart}>
-          {CHART_ITEMS.map((item, i, array) =>
-            // <TransitionGroup key={item.label}>
-            <ChartItem
-              key={item.label}
-              styles={styles}
-              start={i === 0}
-              end={i === array.length - 1}
-              {...item}
-            />
-            // </TransitionGroup>
-          )}
-        </div>
+      <div className={styles.process}>
+        <h3>Our Process</h3>
       </div>
     );
   }
 }
 
-Timeline.propTypes = {};
+Process.propTypes = {};
 
-Timeline.contextTypes = {
+Process.contextTypes = {
   router: PropTypes.object,
 };
 
-export default Timeline;
+export default Process;

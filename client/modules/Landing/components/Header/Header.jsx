@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 import styles from './Header.scss';
 
@@ -19,18 +20,25 @@ class Header extends Component {
   render() {
     return (
       <header className={styles.header}>
-        <img
-          src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-          alt="Background"
+        <div
           className={styles.background}
         />
-        <div className={styles.text}>
-          <h1>Design San Diego</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Nam eos, excepturi alias vitae iusto illo fugit voluptatibus,
-            at magni hic repudiandae esse ad, inventore rerum sed porro? Libero, quam, officia.
-          </p>
+        <div className={styles.navbarContainer}>
+          <div className={styles.logo}>Design San Diego</div>
+          <nav className={styles.navbar}>
+            <button className={styles.navbarButton}>About</button>
+            <button className={styles.navbarButton}>Mobility Challenges</button>
+            <button className={styles.navbarButton}>Sponsors</button>
+          </nav>
+        </div>
+        <div className={styles.textContainer}>
+          <section className={styles.text}>
+            <h1>Design San Diego</h1>
+            <h2>Exploring citizen-government collaboration in the digital age.</h2>
+            <div className={styles.buttonContainer}>
+              <Link to="/placeholder">Get Involved</Link>
+            </div>
+          </section>
         </div>
       </header>
     );
