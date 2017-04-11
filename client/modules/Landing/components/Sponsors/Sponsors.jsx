@@ -18,9 +18,9 @@ class Sponsors extends Component {
 
   render() {
     return (
-      <div className={styles.sponsors} ref={(element) => { this.rootElement = element; }}>
+      <section className={styles.sponsors} ref={(element) => { this.rootElement = element; }}>
         <h3>Sponsors</h3>
-      </div>
+      </section>
     );
   }
 }

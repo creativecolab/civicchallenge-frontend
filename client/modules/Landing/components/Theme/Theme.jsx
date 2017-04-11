@@ -96,7 +96,7 @@ class Theme extends Component {
 
   render() {
     return (
-      <div className={styles.theme} ref={(element) => { this.rootElement = element; }}>
+      <section className={styles.theme} ref={(element) => { this.rootElement = element; }}>
         <div className={styles.header}>
           <h3>
             <span className={styles.text1}>Civic Challenge:</span>
@@ -113,7 +113,7 @@ class Theme extends Component {
             />
           )}
         </div>
-      </div>
+      </section>
     );
   }
 }
