@@ -18,23 +18,11 @@ import walking from './walking.png';
  */
 
 const ChallengeBox = (props) => {
-  const challengeRef = (el) => {
-    if (el) {
-      el.addEventListener('mouseover', () => {
-        el.classList.add(styles.hover);
-      });
-
-      el.addEventListener('mouseout', () => {
-        el.classList.remove(styles.hover);
-      });
-    }
-  };
-
   return (
-    <div className={styles.challenge} ref={challengeRef}>
+    <div className={styles.challenge}>
       <div className={styles.text}>
-        <div className={styles.name}>{props.name}</div>
-        <div className={styles.description}>{props.description}</div>
+        <span className={styles.name}>{props.name}</span>
+        <span className={styles.description}>{props.description}</span>
       </div>
       <LazyImage className={styles.image} src={props.image} alt={props.name} />
     </div>
