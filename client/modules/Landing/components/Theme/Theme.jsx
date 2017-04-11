@@ -94,14 +94,14 @@ class Theme extends Component {
 
   render() {
     return (
-      <div className={styles.theme}>
+      <div className={styles.theme} ref={(element) => { this.rootElement = element; }}>
         <div className={styles.header}>
           <h3>
             <span className={styles.text1}>Civic Challenge:</span>
             <br />
             <span className={styles.text2}>Mobility</span>
           </h3>
-          <p className={styles.description}>D4SD will host a 2017 large-scale human-centered design challenge around the complex civic issue of Mobility. People need to move around a city. Whether for work or play—and by car, bike, train, bus, boat, or foot— mobility significant affects the daily lives of millions. San Diego is culturally and economically diverse, as well as geographical dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility challenge will investigate concerns currently facing San Diegans, as well as take a look to future transportation systems.</p>
+          <p className={styles.description}>D4SD will host a 2017 large-scale human-centered design challenge around the complex civic issue of Mobility. People need to move around a city. Whether for work or play—and by car, bike, train, bus, boat, or foot— mobility significantly affects the daily lives of millions. San Diego is culturally and economically diverse, as well as geographical dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility challenge will investigate concerns currently facing San Diegans, as well as take a look to future transportation systems.</p>
         </div>
         <div className={styles.challenges}>
           {CHALLENGES.map(challenge =>

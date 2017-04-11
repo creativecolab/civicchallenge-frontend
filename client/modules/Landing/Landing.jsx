@@ -25,16 +25,23 @@ class Landing extends Component {
   }
 
   render() {
+    const scrollElements = {};
+    const refHandler = key => (el) => {
+      if (el) {
+        scrollElements[key] = el.rootElement;
+      }
+    };
+
     return (
       <div className={styles.landing}>
         <Helmet
           title="Landing"
         />
-        <Header />
-        <Process />
-        <Theme />
-        <Sponsors />
-        <Footer />
+        <Header scrollElements={scrollElements} />
+        <Process ref={refHandler('process')} />
+        <Theme ref={refHandler('theme')} />
+        <Sponsors ref={refHandler('sponsors')} />
+        <Footer ref={refHandler('footer')} />
       </div>
     );
   }

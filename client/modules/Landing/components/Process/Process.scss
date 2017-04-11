@@ -3,9 +3,9 @@
 $component-spacing: 3em;
 
 .process {
-  margin: $component-vertical-margin auto 0;
+  margin: 0 auto;
   border-bottom: 1px solid #dfdfdf;
-  padding-bottom: $component-vertical-margin;
+  padding: $component-vertical-margin 0;
 
   text-align: center;
 
