@@ -4,6 +4,7 @@
   "description": "Built with the Mongo-Express-React-Node.js stack. Super WIP, name TBD.",
   "scripts": {
     "/* Prod Scripts */": "",
+    "heroku-postbuild": "yarn build:all",
     "start": "cross-env NODE_ENV=production node index.js",
     "/* Dev Scripts */": "",
     "dev": "cross-env BABEL_DISABLE_CACHE=1 DEBUG=server:* NODE_ENV=development nodemon index.js",
