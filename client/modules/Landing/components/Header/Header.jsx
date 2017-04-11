@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import TweenLite from 'gsap/TweenLite';
-import ScrollToPlugin from 'gsap/ScrollToPlugin'; // eslint-disable-line
 
 import styles from './Header.scss';
 
