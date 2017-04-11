@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
 import styles from './Intro.scss';
 
@@ -20,9 +20,10 @@ class Intro extends Component {
   }
 
   render() {
+    // <Link to="/team">researchers at UC San Diego</Link>
     return (
       <div className={styles.intro}>
-        <p className={styles.description}>D4SD is an initiative led by <Link to="/team">researchers at UC San Diego</Link> that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges.</p>
+        <p className={styles.description}>D4SD is an initiative led by researchers at UC San Diego that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges.</p>
       </div>
     );
   }

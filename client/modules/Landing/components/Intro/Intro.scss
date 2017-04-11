@@ -1,7 +1,9 @@
 @import '~styles/variables';
 
 .intro {
-  margin: $component-vertical-margin auto;
+  margin: $component-vertical-margin auto 0;
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: $component-vertical-margin;
 
   .description {
     margin: 0;

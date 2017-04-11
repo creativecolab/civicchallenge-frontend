@@ -24,7 +24,7 @@ $font-color: #fff;
   .navbar-container {
     $border-width: 1px;
 
-    border-bottom: $border-width solid #fff;
+    border-bottom: $border-width solid rgba(255, 255, 255, 0.5);
     height: $navbar-height - $border-width;
 
     display: flex;
@@ -45,7 +45,9 @@ $font-color: #fff;
 
         background-color: rgba(0,0,0,0);
         font: inherit;
+        font-size: 0.8em;
         font-weight: normal;
+        text-transform: uppercase;
         color: $font-color;
       }
     }
@@ -98,6 +100,7 @@ $font-color: #fff;
           background-color: #fff;
           text-decoration: none;
           text-transform: uppercase;
+          font-weight: 600;
           color: rgb(34, 78, 130);
         }
       }
