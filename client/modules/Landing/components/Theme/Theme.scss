@@ -31,11 +31,13 @@ $component-spacing: 3em;
       .text2 {
         font-size: 1.75 * $font-size;
         font-weight: bold;
+
+        color: rgb(117, 158, 211);
       }
     }
 
     .description {
-
+      color: rgb(131, 131, 131);
     }
   }
 
