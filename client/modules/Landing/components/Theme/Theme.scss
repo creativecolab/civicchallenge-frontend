@@ -3,7 +3,8 @@
 $component-spacing: 3em;
 
 .theme {
-  margin: $component-vertical-margin auto;
+  margin: 0 auto;
+  padding-top: $component-vertical-margin;
 
   .header {
     margin-bottom: 2em;

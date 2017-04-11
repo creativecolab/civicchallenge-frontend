@@ -18,7 +18,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer className={styles.footer}>
+      <footer className={styles.footer} ref={(element) => { this.rootElement = element; }}>
         <div className={styles.name}>D4SD</div>
         <div className={styles.navigate}>
           <h4>Navigate</h4>

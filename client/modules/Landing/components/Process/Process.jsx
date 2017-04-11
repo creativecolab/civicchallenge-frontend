@@ -22,8 +22,8 @@ class Process extends Component {
 
   render() {
     return (
-      <div className={styles.process}>
-        <h3>Our Process</h3>
+      <div className={styles.process} ref={(element) => { this.rootElement = element; }}>
+        <h3>Process</h3>
         <p className={styles.description}>D4SD is an initiative led by researchers at UC San Diego that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges.</p>
         <img src={timeline} alt="Timeline" className={styles.placeholderImg} />
       </div>

@@ -1,7 +1,8 @@
 @import '~styles/variables';
 
 .sponsors {
-  margin: $component-vertical-margin auto;
+  margin: 0 auto;
+  padding: $component-vertical-margin 0;
 
   text-align: center;
 
