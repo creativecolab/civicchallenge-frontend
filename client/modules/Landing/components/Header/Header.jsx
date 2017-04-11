@@ -1,9 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import TweenLite from 'gsap/TweenLite';
-import ScrollToPlugin from 'gsap/ScrollToPlugin'; // eslint-disable-line
 
 import styles from './Header.scss';
+
+let TweenLite = {};
+if (process.env.browser) {
+  TweenLite = require('gsap/TweenLite'); // eslint-disable-line global-require
+  require('gsap/ScrollToPlugin'); // eslint-disable-line global-require
+}
 
 /**
  * Header
@@ -25,9 +29,11 @@ class Header extends Component {
       const scrollTo = scrollElements[key].getBoundingClientRect().top;
       const duration = scrollTo / 750;
 
-      TweenLite.to(window, duration, {
-        scrollTo,
-      });
+      if (process.env.browser) {
+        TweenLite.to(window, duration, {
+          scrollTo,
+        });
+      }
     };
 
     return (
