@@ -36,79 +36,15 @@ $component-spacing: 3em;
     }
   }
 
-  .placeholder-img {
-    width: 100%;
+  .description {
+    margin: 0;
+    margin-bottom: 2em;
+
+    color: rgb(99, 104, 139);
   }
 
-  .chart {
-    margin-bottom: 1.5 * $component-spacing;
-
-    display: flex;
-
-    .item {
-      flex: 1;
-      text-align: center;
-
-      .label {
-
-      }
-
-      .plot-container {
-        $dot-radius: 25px;
-        $line-width: 2px;
-        $plot-color: #c2c2c2;
-
-        height: $dot-radius;
-        margin: 1em 0;
-
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .dot {
-          border-radius: 50%;
-          width: $dot-radius;
-          height: $dot-radius;
-
-          display: inline-block;
-
-          background-color: $plot-color;
-        }
-
-        .line {
-          margin-right: auto;
-          border-top: $line-width solid $plot-color;
-          width: 100%;
-
-          position: absolute;
-        }
-      }
-
-      .description {
-        margin: 0 5%;
-      }
-
-      &.start {
-        .plot-container {
-          .line {
-            width: 50%;
-
-            left: 50%;
-          }
-        }
-      }
-
-      &.end {
-        .plot-container {
-          .line {
-            width: 50%;
-
-            right: 50%;
-          }
-        }
-      }
-    }
+  .placeholder-img {
+    width: 100%;
   }
 }
 

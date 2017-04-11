@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+/* eslint-disable max-len */
 
-// import ChartItem from './components/ChartItem/ChartItem';
+import React, { Component, PropTypes } from 'react';
 
 import styles from './Process.scss';
 
@@ -9,27 +9,6 @@ import timeline from './timeline.png';
 /**
  * Process
  */
-
-/*
-const CHART_ITEMS = [
-  {
-    label: 'Identify',
-    description: 'This is a long, long winded, and exceedingly boring description',
-  },
-  {
-    label: 'Ideate',
-    description: 'This is a long, long winded, and exceedingly boring description',
-  },
-  {
-    label: 'Prototype',
-    description: 'This is a long, long winded, and exceedingly boring description',
-  },
-  {
-    label: 'Implement',
-    description: 'This is a long, long winded, and exceedingly boring description',
-  },
-];
-*/
 
 class Process extends Component {
   constructor(props) {
@@ -45,6 +24,7 @@ class Process extends Component {
     return (
       <div className={styles.process}>
         <h3>Our Process</h3>
+        <p className={styles.description}>D4SD is an initiative led by researchers at UC San Diego that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges.</p>
         <img src={timeline} alt="Timeline" className={styles.placeholderImg} />
       </div>
     );
