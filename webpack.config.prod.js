@@ -2,9 +2,12 @@ const path = require('path');
 
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+const cssnano = require('cssnano');
 
 const sassModule = require('./webpack-modules/sass-module');
 const imgModule = require('./webpack-modules/img-module');
@@ -63,7 +66,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production'),
-        'browser': JSON.stringify(true),
+        browser: JSON.stringify(true),
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -74,6 +77,16 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'app.[chunkhash].css',
       allChunks: true,
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/,
+      cssProcessor: cssnano,
+      cssProcessorOptions: {
+        discardComments: {
+          removeAll: true,
+        },
+      },
+      canPrint: true,
     }),
     new ManifestPlugin({
       basePath: '/',

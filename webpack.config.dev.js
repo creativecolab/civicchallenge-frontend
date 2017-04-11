@@ -68,7 +68,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
-        'browser': JSON.stringify(true),
+        browser: JSON.stringify(true),
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
