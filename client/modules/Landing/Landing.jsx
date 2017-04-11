@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import styles from './Landing.scss';
 
 import Header from './components/Header/Header';
-import Intro from './components/Intro/Intro';
 import Process from './components/Process/Process';
 import Theme from './components/Theme/Theme';
 import Sponsors from './components/Sponsors/Sponsors';
@@ -26,17 +25,23 @@ class Landing extends Component {
   }
 
   render() {
+    const scrollElements = {};
+    const refHandler = key => (el) => {
+      if (el) {
+        scrollElements[key] = el.rootElement;
+      }
+    };
+
     return (
       <div className={styles.landing}>
         <Helmet
           title="Landing"
         />
-        <Header />
-        <Intro />
-        <Process />
-        <Theme />
-        <Sponsors />
-        <Footer />
+        <Header scrollElements={scrollElements} />
+        <Process ref={refHandler('process')} />
+        <Theme ref={refHandler('theme')} />
+        <Sponsors ref={refHandler('sponsors')} />
+        <Footer ref={refHandler('footer')} />
       </div>
     );
   }

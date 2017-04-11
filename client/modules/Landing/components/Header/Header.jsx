@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
+import TweenLite from 'gsap/TweenLite';
+import ScrollToPlugin from 'gsap/ScrollToPlugin'; // eslint-disable-line
 
 import styles from './Header.scss';
 
@@ -18,6 +20,16 @@ class Header extends Component {
   }
 
   render() {
+    const { scrollElements } = this.props;
+    const clickHandler = key => () => {
+      const scrollTo = scrollElements[key].getBoundingClientRect().top;
+      const duration = scrollTo / 750;
+
+      TweenLite.to(window, duration, {
+        scrollTo,
+      });
+    };
+
     return (
       <header className={styles.header}>
         <div
@@ -26,10 +38,10 @@ class Header extends Component {
         <div className={styles.navbarContainer}>
           <div className={styles.logo}>D4SD</div>
           <nav className={styles.navbar}>
-            <button className={styles.navbarButton}>About</button>
-            <button className={styles.navbarButton}>Challenges</button>
-            <button className={styles.navbarButton}>Sponsors</button>
-            <button className={styles.navbarButton}>Contact</button>
+            <button className={styles.navbarButton} onClick={clickHandler('process')}>Process</button>
+            <button className={styles.navbarButton} onClick={clickHandler('theme')}>Challenges</button>
+            <button className={styles.navbarButton} onClick={clickHandler('sponsors')}>Sponsors</button>
+            <button className={styles.navbarButton} onClick={clickHandler('footer')}>Contact</button>
           </nav>
         </div>
         <div className={styles.textContainer}>
@@ -46,7 +58,14 @@ class Header extends Component {
   }
 }
 
-Header.propTypes = {};
+Header.propTypes = {
+  scrollElements: PropTypes.shape({
+    footer: PropTypes.element,
+    process: PropTypes.element,
+    sponsors: PropTypes.element,
+    theme: PropTypes.element,
+  }).isRequired,
+};
 
 Header.contextTypes = {
   router: PropTypes.object,
