@@ -2,6 +2,8 @@
 
 import React, { Component, PropTypes } from 'react';
 
+import LazyImage from 'components/LazyImage/LazyImage';
+
 import styles from './Theme.scss';
 
 import fourteenthStreetPromenade from './14th-street-promenade.png';
@@ -34,7 +36,7 @@ const ChallengeBox = (props) => {
         <div className={styles.name}>{props.name}</div>
         <div className={styles.description}>{props.description}</div>
       </div>
-      <img src={props.image} alt={props.name} />
+      <LazyImage className={styles.image} src={props.image} alt={props.name} />
     </div>
   );
 };
