@@ -5,6 +5,8 @@ $component-spacing: 3em;
 .process {
   margin: $component-vertical-margin auto;
 
+  text-align: center;
+
   h3 {
     $font-size: 2em;
 
@@ -14,6 +16,10 @@ $component-spacing: 3em;
     text-align: center;
     font-size: $font-size;
     font-weight: normal;
+  }
+
+  .placeholder-img {
+    width: 100%;
   }
 
   .chart {
@@ -89,13 +95,13 @@ $component-spacing: 3em;
 }
 
 @media (min-width: $desktop-min-width) {
-.timeline {
+.process {
   width: $component-width-desktop;
 }
 }
 
 @media (max-width: $mobile-max-width) {
-.timeline {
+.process {
   width: $component-width-mobile;
 }
 }

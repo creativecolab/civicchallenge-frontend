@@ -4,6 +4,8 @@ import React, { Component, PropTypes } from 'react';
 
 import styles from './Process.scss';
 
+import timeline from './timeline.png';
+
 /**
  * Process
  */
@@ -43,6 +45,7 @@ class Process extends Component {
     return (
       <div className={styles.process}>
         <h3>Our Process</h3>
+        <img src={timeline} alt="Timeline" className={styles.placeholderImg} />
       </div>
     );
   }

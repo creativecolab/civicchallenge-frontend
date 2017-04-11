@@ -24,17 +24,18 @@ class Header extends Component {
           className={styles.background}
         />
         <div className={styles.navbarContainer}>
-          <div className={styles.logo}>Design San Diego</div>
+          <div className={styles.logo}>D4SD</div>
           <nav className={styles.navbar}>
             <button className={styles.navbarButton}>About</button>
-            <button className={styles.navbarButton}>Mobility Challenges</button>
+            <button className={styles.navbarButton}>Challenges</button>
             <button className={styles.navbarButton}>Sponsors</button>
+            <button className={styles.navbarButton}>Contact</button>
           </nav>
         </div>
         <div className={styles.textContainer}>
           <section className={styles.text}>
             <h1>Design San Diego</h1>
-            <h2>Exploring citizen-government collaboration in the digital age.</h2>
+            <h2>Design for the future of San Diego.</h2>
             <div className={styles.buttonContainer}>
               <Link to="/placeholder">Get Involved</Link>
             </div>

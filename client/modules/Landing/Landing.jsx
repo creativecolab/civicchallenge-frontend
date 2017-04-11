@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
 import Process from './components/Process/Process';
 import Theme from './components/Theme/Theme';
+import Sponsors from './components/Sponsors/Sponsors';
 import Footer from './components/Footer/Footer';
 
 /**
@@ -34,6 +35,7 @@ class Landing extends Component {
         <Intro />
         <Process />
         <Theme />
+        <Sponsors />
         <Footer />
       </div>
     );

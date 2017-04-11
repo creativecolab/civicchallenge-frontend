@@ -1,5 +1,74 @@
 @import '~styles/variables';
 
 .footer {
-  background-color: red;
+  background-color: rgb(45, 50, 77);
+  color: #fff;
+
+  @media (min-width: $desktop-min-width) {
+    padding: 5%;
+
+    .name {
+      width: 20%;
+
+      display: inline-block;
+
+      vertical-align: top;
+      font-weight: bold;
+    }
+
+    .navigate, .affiliates {
+      margin: 0 1%;
+      width: 23%;
+
+      display: inline-block;
+
+      vertical-align: top;
+
+      h4 {
+        margin: 0;
+        margin-bottom: 1em;
+
+        display: inline-block;
+
+        font-weight: normal;
+
+        &:after {
+          content: '';
+
+          margin-top: 0.25em;
+          border-bottom: 2px solid rgb(101, 113, 139);
+          width: 30%;
+
+          display: block;
+
+          text-align: center;
+        }
+      }
+
+      nav {
+        a {
+          display: block;
+          cursor: pointer;
+
+          text-decoration: none;
+          color: rgb(178, 180, 189);
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      width: 30%;
+
+      display: inline-block;
+
+      vertical-align: top;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+  }
 }

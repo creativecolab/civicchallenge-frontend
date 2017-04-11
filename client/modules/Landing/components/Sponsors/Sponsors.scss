@@ -1,0 +1,42 @@
+@import '~styles/variables';
+
+.sponsors {
+  margin: $component-vertical-margin auto;
+
+  text-align: center;
+
+  h3 {
+    margin: 0;
+
+    display: inline-block;
+
+    text-align: center;
+    font-size: 2em;
+    font-weight: normal;
+
+    &:after {
+      content: '';
+
+      margin-top: 0.25em;
+      margin-left: 10%;
+      border-bottom: 4px solid rgb(112, 197, 213);
+      width: 80%;
+
+      display: block;
+
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+.sponsors {
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+.sponsors {
+  width: $component-width-mobile;
+}
+}
