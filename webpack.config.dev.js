@@ -31,7 +31,8 @@ module.exports = {
       'webpack-hot-middleware/client?timeout=2000&reload=true&noInfo=true',
       'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
-      'babel-polyfill',
+      // 'babel-polyfill',
+      'regenerator-runtime/runtime',
       './client/index.jsx',
     ],
     vendor: [
@@ -68,7 +69,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
-        'browser': JSON.stringify(true),
+        browser: JSON.stringify(true),
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
