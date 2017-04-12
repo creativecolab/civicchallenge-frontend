@@ -52,7 +52,7 @@ class Header extends Component {
         </div>
         <div className={styles.textContainer}>
           <section className={styles.text}>
-            <h1>Design San Diego</h1>
+            <h1>Design4SanDiego</h1>
             <h2>Design for the future of San Diego</h2>
             <div className={styles.buttonContainer}>
               <Link to="/placeholder">Get Involved</Link>
