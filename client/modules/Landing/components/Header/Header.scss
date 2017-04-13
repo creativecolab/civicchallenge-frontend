@@ -5,7 +5,7 @@ $navbar-height: 50px;
 $font-color: #fff;
 
 .header {
-  height: 40%;
+  height: 50%;
 
   position: relative;
 
@@ -80,6 +80,12 @@ $font-color: #fff;
 
         font-size: 1.1 * $font-size;
         font-weight: normal;
+      }
+
+      p {
+        opacity: 0.5;
+        font-size: 0.9em;
+        padding-bottom: 0.3em;
       }
 
       .button-container {
