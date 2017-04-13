@@ -35,7 +35,7 @@ class Footer extends Component {
             <a href="http://protolab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Protolab</a>
           </nav>
         </div>
-        <div className={styles.copyright}>Copyright &copy; {copyrightYear} {/* Group Name */}</div>
+        <div className={styles.copyright}>Copyright &copy; {copyrightYear}{/* Group Name */}. All Rights Reserved. This website is under construction and subject to change.</div>
       </footer>
     );
   }
