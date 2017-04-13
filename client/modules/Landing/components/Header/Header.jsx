@@ -55,7 +55,7 @@ class Header extends Component {
             <h1>Design4SanDiego</h1>
             <h2>Design for the future of San Diego</h2>
             <div className={styles.buttonContainer}>
-              <a href="mailto:design4sandeigo@gmail.com">Get Involved</a>
+              <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
               {false && <Link to="/placeholder">Get Involved</Link>}
             </div>
           </section>
