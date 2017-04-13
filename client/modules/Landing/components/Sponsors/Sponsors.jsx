@@ -22,7 +22,7 @@ class Sponsors extends Component {
     return (
       <section className={styles.sponsors} ref={(element) => { this.rootElement = element; }}>
         <h3>Sponsors</h3>
-        <p className={styles.placeholder}>We are currently putting together our sponsorship model. If you would like to be part of this initiative, please reach out to design4sandeigo at gmail dot com.</p>
+        <p className={styles.placeholder}>We are currently putting together our sponsorship model. If you would like to be part of this initiative, please reach out to <a href="mailto:design4sandeigo@gmail.com">design4sandeigo@gmail.com</a>.</p>
       </section>
     );
   }
