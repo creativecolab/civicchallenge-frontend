@@ -6,6 +6,8 @@ import styles from './Footer.scss';
  * Footer
  */
 
+const START_YEAR = 2017;
+
 class Footer extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +19,9 @@ class Footer extends Component {
   }
 
   render() {
+    const currentYear = (new Date()).getFullYear();
+    const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
+
     return (
       <footer className={styles.footer} ref={(element) => { this.rootElement = element; }}>
         <div className={styles.name}>D4SD</div>
@@ -30,7 +35,7 @@ class Footer extends Component {
             <a href="http://protolab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Protolab</a>
           </nav>
         </div>
-        <div className={styles.copyright}>Please do not steal things, you have no rights.</div>
+        <div className={styles.copyright}>Copyright &copy; {copyrightYear} {/* Group Name */}</div>
       </footer>
     );
   }
