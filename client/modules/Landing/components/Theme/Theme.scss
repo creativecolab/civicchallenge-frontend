@@ -65,6 +65,10 @@ $component-spacing: 3em;
       vertical-align: top;
       font-size: 0;
 
+      &.placeholder {
+        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      }
+
       &:hover {
         .text {
           background-color: rgba(0, 0, 0, 0.8);
@@ -109,12 +113,15 @@ $component-spacing: 3em;
         }
 
         .description {
-          margin: 1em 0.5em 0;
-          width: 100%;
+          $margin-lr: 5%;
+
+          margin: 0 $margin-lr;
+          width: 100% - (2 * $margin-lr);
 
           display: none;
 
-          text-align: center;
+          text-align: left;
+          font-size: 0.9em;
         }
       }
 

@@ -29,6 +29,14 @@
       text-align: center;
     }
   }
+
+  .placeholder {
+    color: rgb(99, 104, 139);
+
+    a {
+      color: rgb(99, 104, 139) !important;
+    }
+  }
 }
 
 @media (min-width: $desktop-min-width) {

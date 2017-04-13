@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
 import React, { Component, PropTypes } from 'react';
+import classNames from 'util/classNames';
 
 import LazyImage from 'components/LazyImage/LazyImage';
 
@@ -41,12 +42,12 @@ ChallengeBox.propTypes = {
 
 const CHALLENGES = [
   {
-    name: '14th Street Promenade',
+    name: 'Urban Planning',
     description: 'The 14th St Promenade in Downtown San Diego is in the process of  improving pedestrian and cyclist accessibility based on a newly approved plan for creating a sustainable streetscape design.',
     image: fourteenthStreetPromenade,
   },
   {
-    name: 'National City Traffic',
+    name: 'Traffic',
     description: 'Residents of National City deal with congested freeways going northbound in the morning, and even slower going southbound in the evening. Investigating the underlying causes of traffic as well as possible infrastructural, behavioral, or policy-wise changes can reduce the ever-present frustration of traffic and dependence on cars.',
     image: nationalCityTraffic,
   },
@@ -100,6 +101,12 @@ class Theme extends Component {
               {...challenge}
             />
           )}
+          <div className={classNames([styles.challenge, styles.placeholder])}>
+            <div className={styles.text}>
+              <span className={styles.name}>Suggest a Challenge</span>
+              <span className={styles.description}>Functionality coming soon</span>
+            </div>
+          </div>
         </div>
       </section>
     );
