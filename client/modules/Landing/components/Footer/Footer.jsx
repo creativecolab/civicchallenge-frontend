@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React, { Component, PropTypes } from 'react';
 
 import styles from './Footer.scss';
@@ -35,7 +37,7 @@ class Footer extends Component {
             <a href="http://protolab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Protolab</a>
           </nav>
         </div>
-        <div className={styles.copyright}>Copyright &copy; {copyrightYear}{/* Group Name */}. All Rights Reserved. This website is under construction and subject to change.</div>
+        <div className={styles.copyright}>Copyright &copy; {copyrightYear}{/* Group Name */}. All Rights Reserved. This website is under construction and is subject to change.</div>
       </footer>
     );
   }
