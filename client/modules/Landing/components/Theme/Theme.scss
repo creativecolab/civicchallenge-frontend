@@ -65,6 +65,10 @@ $component-spacing: 3em;
       vertical-align: top;
       font-size: 0;
 
+      &.placeholder {
+        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      }
+
       &:hover {
         .text {
           background-color: rgba(0, 0, 0, 0.8);

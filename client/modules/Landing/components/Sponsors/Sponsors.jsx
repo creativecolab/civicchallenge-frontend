@@ -20,7 +20,7 @@ class Sponsors extends Component {
     return (
       <section className={styles.sponsors} ref={(element) => { this.rootElement = element; }}>
         <h3>Sponsors</h3>
-        <p>TODO</p>
+        <p className={styles.placeholder}>We are currently gathering our list of sponsors, check back soon!</p>
       </section>
     );
   }
