@@ -33,6 +33,7 @@ class Footer extends Component {
         <div className={styles.affiliates}>
           <h4>Affiliates</h4>
           <nav>
+            <a href="http://designforwardsd.com/" target="_blank" rel="noopener noreferrer">Design Forward Alliance</a>
             <a href="http://designlab.ucsd.edu/" target="_blank" rel="noopener noreferrer">UC San Diego Design Lab</a>
             <a href="http://protolab.ucsd.edu/" target="_blank" rel="noopener noreferrer">Protolab</a>
           </nav>
