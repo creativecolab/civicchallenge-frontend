@@ -23,7 +23,6 @@ class Process extends Component {
   render() {
     return (
       <section className={styles.process} ref={(element) => { this.rootElement = element; }}>
-        <h3>Process</h3>
         <img src={timeline} alt="Timeline" className={styles.placeholderImg} />
       </section>
     );
