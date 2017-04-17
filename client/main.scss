@@ -12,6 +12,15 @@ html, body {
   font-family: Avenir, Helvetica, sans-serif;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
+
 div[data-reactmount],
 div[data-reactroot] {
   width: 100%;

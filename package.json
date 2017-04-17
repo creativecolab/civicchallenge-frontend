@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Built with the Mongo-Express-React-Node.js stack. Super WIP, name TBD.",
   "scripts": {
+    "/* Deploy Scripts */": "",
+    "deploy": "pm2 deploy ecosystem.config.js production",
     "/* Prod Scripts */": "",
     "heroku-postbuild": "yarn build:all",
     "start": "cross-env NODE_ENV=production node index.js",
