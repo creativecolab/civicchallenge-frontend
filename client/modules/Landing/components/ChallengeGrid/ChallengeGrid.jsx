@@ -7,12 +7,13 @@ import LazyImage from 'components/LazyImage/LazyImage';
 
 import styles from './ChallengeGrid.scss';
 
-import fourteenthStreetPromenade from './14th-street-promenade.png';
-import nationalCityTraffic from './national-city-traffic.png';
-import parking from './parking.png';
-import autonomousCars from './autonomous-cars.png';
+import publicTransit from './public-transit.png';
+import urbanPlanning from './urban-planning.png';
 import accessibility from './accessibility.png';
 import walking from './walking.png';
+import parking from './parking.png';
+import traffic from './traffic.png';
+import autonomousCars from './autonomous-cars.png';
 
 /**
  * Challenge Box
@@ -42,9 +43,14 @@ ChallengeBox.propTypes = {
 
 const CHALLENGES = [
   {
+    name: 'Public Transit',
+    description: 'The San Diego Metropolitan Transit System (MTS) services thousands of citizens over nearly 600 square miles through a robust bus and light rail system. The MTS system is continually expanding through various projects providing opportunity to better serve San Diego’s residents.',
+    image: publicTransit,
+  },
+  {
     name: 'Urban Planning',
     description: 'There are several new opportunities for urban planning innovation in San Diego. Creating a gateway for growth will help achieve sustainable development as well as fair socioeconomic distribution in many areas through better infrastructure and services.',
-    image: fourteenthStreetPromenade,
+    image: urbanPlanning,
   },
   {
     name: 'Accessibility',
@@ -64,7 +70,7 @@ const CHALLENGES = [
   {
     name: 'Traffic',
     description: 'Residents of San Diego deal with congested freeways going northbound in the morning, and even slower going southbound in the evening. Investigating the underlying causes of traffic as well as possible infrastructural, behavioral, or policy-wise changes can reduce the ever-present frustration of traffic and dependence on cars.',
-    image: nationalCityTraffic,
+    image: traffic,
   },
   {
     name: 'Autonomous Cars',
