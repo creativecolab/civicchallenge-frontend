@@ -5,8 +5,9 @@ import Helmet from 'react-helmet';
 import styles from './Landing.scss';
 
 import Header from './components/Header/Header';
+import ChallengeText from './components/ChallengeText/ChallengeText';
 import Process from './components/Process/Process';
-import Theme from './components/Theme/Theme';
+import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
 import Sponsors from './components/Sponsors/Sponsors';
 import Footer from './components/Footer/Footer';
 
@@ -38,10 +39,11 @@ class Landing extends Component {
           title="Landing"
         />
         <Header scrollElements={scrollElements} />
+        <ChallengeText />
         <Process ref={refHandler('process')} />
-        <Theme ref={refHandler('theme')} />
+        <ChallengeGrid ref={refHandler('challenges')} />
         <Sponsors ref={refHandler('sponsors')} />
-        <Footer ref={refHandler('footer')} />
+        <Footer ref={refHandler('contact')} />
       </div>
     );
   }

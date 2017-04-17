@@ -3,44 +3,34 @@
 $component-spacing: 3em;
 
 .process {
-  margin: 0 auto;
-  border-bottom: 1px solid #dfdfdf;
-  padding: $component-vertical-margin 0;
+  margin: $component-vertical-margin auto;
 
   text-align: center;
 
-  h3 {
-    $font-size: 1.5em;
+  .timeline {
+    $timeline-items: 4;
 
-    margin: 0;
-    margin-bottom: $component-spacing * (1em / $font-size);
+    display: flex;
 
-    display: inline-block;
+    .timeline-item {
+      margin: 0 1%;
 
-    text-align: center;
-    text-transform: uppercase;
-    font-size: $font-size;
-    font-weight: bold;
+      flex: 1;
 
-    &:after {
-      content: '';
+      .title {
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: rgb(69, 76, 119);
+      }
 
-      margin-top: 0.25em;
-      margin-left: 10%;
-      border-bottom: 4px solid rgb(112, 197, 213);
-      width: 80%;
-
-      display: block;
-
-      text-align: center;
+      .description {
+        text-align: left;
+        font-size: 0.8em;
+        color: rgb(69, 76, 119);
+      }
     }
-  }
-
-  .description {
-    margin: 0;
-    margin-bottom: 2em;
-
-    color: rgb(99, 104, 139);
   }
 
   .placeholder-img {

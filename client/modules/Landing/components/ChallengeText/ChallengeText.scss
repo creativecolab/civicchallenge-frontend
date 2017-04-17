@@ -1,0 +1,54 @@
+@import '~styles/variables';
+
+$component-spacing: 3em;
+
+.challenge-text {
+  margin: $component-vertical-margin auto;
+
+  .header {
+    margin-bottom: 2em;
+
+    display: flex;
+    align-items: center;
+
+    h3 {
+      $font-size: 1.5em;
+
+      margin: 0;
+      margin-right: 2em;
+
+      flex: 1 0 auto;
+
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: normal;
+
+      .text1 {
+        font-size: $font-size;
+      }
+
+      .text2 {
+        font-size: 1.75 * $font-size;
+        font-weight: bold;
+
+        color: rgb(117, 158, 211);
+      }
+    }
+
+    .description {
+      color: rgb(131, 131, 131);
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+.challenge-text {
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+.challenge-text {
+  width: $component-width-mobile;
+}
+}

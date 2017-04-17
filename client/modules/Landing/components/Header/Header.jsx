@@ -1,7 +1,11 @@
+/* eslint-disable max-len */
+
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 import styles from './Header.scss';
+
+import city from './city.png';
 
 let TweenLite = {};
 if (process.env.browser) {
@@ -12,6 +16,8 @@ if (process.env.browser) {
 /**
  * Header
  */
+
+const NAV_ITEMS = ['Process', 'Challenges', 'Sponsors', 'Contact'].map((item) => { return { key: item.toLowerCase(), name: item }; });
 
 class Header extends Component {
   constructor(props) {
@@ -44,22 +50,24 @@ class Header extends Component {
         <div className={styles.navbarContainer}>
           <div className={styles.logo}>D4SD</div>
           <nav className={styles.navbar}>
-            <button className={styles.navbarButton} onClick={clickHandler('process')}>Process</button>
-            <button className={styles.navbarButton} onClick={clickHandler('theme')}>Challenges</button>
-            <button className={styles.navbarButton} onClick={clickHandler('sponsors')}>Sponsors</button>
-            <button className={styles.navbarButton} onClick={clickHandler('footer')}>Contact</button>
+            {NAV_ITEMS.map(({ key, name }) => {
+              return (
+                <button key={key} className={styles.navbarButton} onClick={clickHandler(key)}>{name}</button>
+              );
+            })}
           </nav>
         </div>
         <div className={styles.textContainer}>
           <section className={styles.text}>
             <h1>Design for the future of San Diego</h1>
-            <p className={styles.description}>D4SD is an initiative led by researchers at UC San Diego that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges. This initiative provides a unique opportunity to collaborate between a diverse set of stakeholders, ranging from students to civic leaders.</p>
+            <p className={styles.description}>D4SD is an initiative led by researchers at UC San Diego that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges.</p>
             <div className={styles.buttonContainer}>
               <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
               {false && <Link to="/placeholder">Get Involved</Link>}
             </div>
           </section>
         </div>
+        <img src={city} alt="city" />
       </header>
     );
   }
@@ -67,10 +75,10 @@ class Header extends Component {
 
 Header.propTypes = {
   scrollElements: PropTypes.shape({
-    footer: PropTypes.element,
     process: PropTypes.element,
+    challenges: PropTypes.element,
     sponsors: PropTypes.element,
-    theme: PropTypes.element,
+    contact: PropTypes.element,
   }).isRequired,
 };
 
