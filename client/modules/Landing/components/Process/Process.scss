@@ -4,6 +4,7 @@ $component-spacing: 3em;
 
 .process {
   margin: $component-vertical-margin auto;
+  margin-top: $component-vertical-margin / 2;
 
   text-align: center;
 
@@ -19,14 +20,14 @@ $component-spacing: 3em;
 
       .title {
         text-transform: uppercase;
-        text-align: left;
+        text-align: center;
         font-size: 0.9em;
         font-weight: bold;
         color: rgb(69, 76, 119);
       }
 
       .description {
-        text-align: left;
+        text-align: center;
         font-size: 0.8em;
         color: rgb(69, 76, 119);
       }

@@ -4,6 +4,7 @@ $component-spacing: 3em;
 
 .challenge-text {
   margin: $component-vertical-margin auto;
+  margin-bottom: $component-vertical-margin / 2;
 
   .header {
     margin-bottom: 2em;

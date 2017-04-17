@@ -30,6 +30,10 @@ $component-spacing: 3em;
 
       &.placeholder {
         background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+        a {
+          color: #fff !important;
+        }
       }
 
       &:hover {

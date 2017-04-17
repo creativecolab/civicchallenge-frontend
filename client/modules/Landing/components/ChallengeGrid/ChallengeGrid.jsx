@@ -102,7 +102,7 @@ class ChallengeGrid extends Component {
           <div className={classNames([styles.challenge, styles.placeholder])}>
             <div className={styles.text}>
               <span className={styles.name}>Suggest a Challenge</span>
-              <span className={styles.description}>Functionality coming soon</span>
+              <span className={styles.description}>Please email <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>.</span>
             </div>
           </div>
         </div>

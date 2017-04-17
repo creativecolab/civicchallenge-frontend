@@ -59,7 +59,7 @@ class Header extends Component {
         </div>
         <div className={styles.textContainer}>
           <section className={styles.text}>
-            <h1>Design for the future of San Diego</h1>
+            <h1>Design for the Future of San Diego</h1>
             <p className={styles.description}>D4SD is an initiative led by researchers at UC San Diego that aims to engage citizens using methods from human-centered design and crowdsourcing to innovate solutions for civic challenges.</p>
             <div className={styles.buttonContainer}>
               <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
