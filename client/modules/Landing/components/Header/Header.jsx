@@ -5,6 +5,8 @@ import { Link } from 'react-router';
 
 import styles from './Header.scss';
 
+import city from './city.png';
+
 let TweenLite = {};
 if (process.env.browser) {
   TweenLite = require('gsap/TweenLite'); // eslint-disable-line global-require
@@ -65,6 +67,7 @@ class Header extends Component {
             </div>
           </section>
         </div>
+        <img src={city} alt="city" />
       </header>
     );
   }

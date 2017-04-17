@@ -113,6 +113,19 @@ $font-color: #fff;
       }
     }
   }
+
+  img {
+    $offset: 10px;
+
+    width: 100%;
+    height: calc(100% - #{$navbar-height} - 2 * #{$offset});
+
+    z-index: -1;
+    position: absolute;
+    top: $navbar-height + $offset;
+
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $desktop-min-width) {

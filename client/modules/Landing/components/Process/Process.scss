@@ -7,11 +7,30 @@ $component-spacing: 3em;
 
   text-align: center;
 
-  .description {
-    margin: 0;
-    margin-bottom: 2em;
+  .timeline {
+    $timeline-items: 4;
 
-    color: rgb(99, 104, 139);
+    display: flex;
+
+    .timeline-item {
+      margin: 0 1%;
+
+      flex: 1;
+
+      .title {
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: rgb(69, 76, 119);
+      }
+
+      .description {
+        text-align: left;
+        font-size: 0.8em;
+        color: rgb(69, 76, 119);
+      }
+    }
   }
 
   .placeholder-img {
