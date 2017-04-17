@@ -66,3 +66,6 @@ server-dist/
 
 # webpack-bundle-analyzer output
 bundle-report/
+
+# Secret deploy scripts
+ecosystem.config.js
