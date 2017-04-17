@@ -166,9 +166,9 @@ const renderFullPage = (req, res, initialView, initialState) => {
   lusca.csp({
     policy: {
       'default-src': '\'self\'',
-      'script-src': `'self' 'sha256-${manifestHash}' ${process.env.NODE_ENV === 'production' ? '' : '\'unsafe-eval\''}`.trim(),
+      'script-src': `'self' https://www.google-analytics.com https://stats.g.doubleclick.net 'sha256-${manifestHash}' ${process.env.NODE_ENV === 'production' ? '' : '\'unsafe-eval\''}`.trim(),
       'style-src': `'self' ${process.env.NODE_ENV === 'production' ? '' : 'blob:'}`.trim(),
-      'img-src': `'self' ${process.env.NODE_ENV === 'production' ? '' : 'data:'}`.trim(),
+      'img-src': `'self' https://www.google-analytics.com https://stats.g.doubleclick.net ${process.env.NODE_ENV === 'production' ? '' : 'data:'}`.trim(),
     },
   })(req, res, () => {});
 
