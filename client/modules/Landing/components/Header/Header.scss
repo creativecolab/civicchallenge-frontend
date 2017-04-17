@@ -70,7 +70,7 @@ $font-color: #fff;
 
         display: inline-block;
         
-        font-size: 2 * $font-size;
+        font-size: 2.5 * $font-size;
         font-weight: normal;
       }
 
@@ -131,7 +131,7 @@ $font-color: #fff;
 @media (min-width: $desktop-min-width) {
   .header {
     .text {
-      width: 60%;
+      width: $component-width-desktop;
 
       h1 {
         font-size: 3em;
@@ -143,7 +143,7 @@ $font-color: #fff;
 @media (max-width: $mobile-max-width) {
   .header {
     .text {
-      width: 90%;
+      width: $component-width-mobile;
 
       h1 {
         font-size: 2.5em;

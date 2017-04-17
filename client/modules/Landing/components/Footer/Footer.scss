@@ -16,10 +16,16 @@
       font-weight: bold;
     }
 
-    .navigate, .affiliates {
+    .navigate {
       margin: 0 1%;
-      width: 23%;
+      width: 20%;
+    }
 
+    .affiliates {
+      width: 58%;
+    }
+
+    .navigate, .affiliates {
       display: inline-block;
 
       vertical-align: top;
@@ -48,25 +54,40 @@
       nav {
         a {
           margin-bottom: 0.25em;
-          display: block;
+          max-width: 50%;
+
+          display: inline-block;
           cursor: pointer;
 
+          vertical-align: middle;
           text-decoration: none;
           color: rgb(178, 180, 189);
 
           &:hover {
+            cursor: pointer;
+
             text-decoration: underline;
+          }
+
+          img {
+            max-width: 100%;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
     }
 
     .copyright {
-      width: 30%;
-
-      display: inline-block;
+      margin-top: 1em;
 
       vertical-align: top;
+
+      text-align: center;
+      font-size: 0.8em;
+      color: rgb(178, 180, 189);
     }
   }
 
