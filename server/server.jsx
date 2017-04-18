@@ -11,7 +11,7 @@ import helmet from 'helmet';
 import lusca from 'lusca';
 
 import React from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
 import Helmet from 'react-helmet';
@@ -151,7 +151,7 @@ const renderFullPage = (req, res, initialView, initialState) => {
   const cssLinkString = process.env.NODE_ENV === 'production' ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : '';
 
   const manifestScript = `
-    window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
+    window.__INITIAL_STATE__ = ${JSON.stringify(initialState).replace(/</g, '\\u003c')};
     ${process.env.NODE_ENV === 'production' ?
       `//<![CDATA[
       window.webpackManifest = ${JSON.stringify(chunkManifest)};
@@ -195,7 +195,7 @@ const renderFullPage = (req, res, initialView, initialState) => {
     decodeEntities: true,
     minifyCSS: true,
     minifyJS: false,
-    removeComments: true,
+    removeComments: false,
     removeEmptyAttributes: true,
     removeRedundantAttributes: true,
     removeScriptTypeAttributes: true,
@@ -225,7 +225,7 @@ app.use((req, res, next) => {
 
     return fetchComponentData(store, renderProps.components, renderProps.params)
       .then(() => {
-        const initialView = renderToStaticMarkup(
+        const initialView = renderToString(
           <Provider store={store}>
             <RouterContext {...renderProps} />
           </Provider>
