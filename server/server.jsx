@@ -190,7 +190,7 @@ const renderFullPage = (req, res, initialView, initialState) => {
 
   const minifiedHtml = HtmlMinifier.minify(html, {
     collapseBooleanAttributes: true,
-    collapseInlineTagWhitespace: true,
+    collapseInlineTagWhitespace: false,
     collapseWhitespace: true,
     decodeEntities: true,
     minifyCSS: true,
