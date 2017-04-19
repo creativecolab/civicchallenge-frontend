@@ -41,6 +41,7 @@ module.exports = {
       'react-helmet',
       'react-redux',
       'react-router',
+      'react-ga',
       'redux',
     ],
   },
