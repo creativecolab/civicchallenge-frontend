@@ -12,14 +12,20 @@ if (typeof require.ensure !== 'function') {
 }
 
 const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Sponsors/Sponsors').default));
+const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default));
+const getProcess = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Process/Process').default));
 const getTeam = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Team/Team').default));
+
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default));
 
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={Landing} />
     <Route path="/sponsors" getComponent={getSponsors} />
+    <Route path="/about" getComponent={getAbout} />
+    <Route path="/process" getComponent={getProcess} />
     <Route path="/team" getComponent={getTeam} />
+
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );
