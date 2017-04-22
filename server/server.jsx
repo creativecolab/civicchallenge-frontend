@@ -1,3 +1,5 @@
+import React from 'react';
+
 import path from 'path';
 import crypto from 'crypto';
 
@@ -10,11 +12,10 @@ import sessions from 'client-sessions';
 import helmet from 'helmet';
 import lusca from 'lusca';
 
-import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import { Provider } from 'react-redux';
-import Helmet from 'react-helmet';
+import reactHelmet from 'react-helmet';
 
 import HtmlMinifier from 'html-minifier';
 import UglifyJS from 'uglify-js';
@@ -78,7 +79,8 @@ if (process.env.NODE_ENV === 'development') {
 app.use(compression());
 
 // Session
-const sessionsSecret = crypto.randomBytes(256).toString('base64');
+const secureProxy = process.env.NODE_ENV === 'production';
+const sessionsSecret = crypto.randomBytes(256).toString('base64'); // TODO Change this when hosting situation is finalized
 
 app.use(sessions({
   cookieName: 'session',
@@ -88,8 +90,7 @@ app.use(sessions({
   cookie: {
     ephemeral: false,
     httpOnly: true,
-    secure: false,
-    secureProxy: false,
+    secureProxy,
   },
 }));
 
@@ -109,6 +110,11 @@ app.use(lusca({
     policy: {
       'default-src': '\'self\'',
     },
+  },
+  hsts: {
+    maxAge: 31536000,
+    includeSubDomains: true,
+    preload: true,
   },
 
   // Also handled by Helmet
@@ -141,17 +147,30 @@ app.use(serveStatic(path.join(__dirname, '../public')));
  * Render Initial HTML
  */
 
+const generateCspString = strs => strs.filter(str => str).join(' ').trim();
+
+const cspStyleSrc = generateCspString([
+  '\'self\'',
+  process.env.NODE_ENV === 'production' ? '' : 'blob:',
+]);
+const cspImgSrc = generateCspString([
+  '\'self\'',
+  'https://www.google-analytics.com',
+  'https://stats.g.doubleclick.net',
+  process.env.NODE_ENV === 'production' ? '' : 'data:',
+]);
+
 const renderFullPage = (req, res, initialView, initialState) => {
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
 
-  const head = Helmet.renderStatic();
+  const head = reactHelmet.renderStatic();
 
   const headString = Object.keys(head).map(key => head[key].toString()).join('');
   const cssLinkString = process.env.NODE_ENV === 'production' ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : '';
 
   const manifestScript = `
-    window.__INITIAL_STATE__ = ${JSON.stringify(initialState).replace(/</g, '\\u003c')};
+    window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
     ${process.env.NODE_ENV === 'production' ?
       `//<![CDATA[
       window.webpackManifest = ${JSON.stringify(chunkManifest)};
@@ -166,9 +185,15 @@ const renderFullPage = (req, res, initialView, initialState) => {
   lusca.csp({
     policy: {
       'default-src': '\'self\'',
-      'script-src': `'self' https://www.google-analytics.com https://stats.g.doubleclick.net 'sha256-${manifestHash}' ${process.env.NODE_ENV === 'production' ? '' : '\'unsafe-eval\''}`.trim(),
-      'style-src': `'self' ${process.env.NODE_ENV === 'production' ? '' : 'blob:'}`.trim(),
-      'img-src': `'self' https://www.google-analytics.com https://stats.g.doubleclick.net ${process.env.NODE_ENV === 'production' ? '' : 'data:'}`.trim(),
+      'script-src': generateCspString([
+        '\'self\'',
+        'https://www.google-analytics.com',
+        'https://stats.g.doubleclick.net',
+        `'sha256-${manifestHash}'`,
+        process.env.NODE_ENV === 'production' ? '' : '\'unsafe-eval\'',
+      ]),
+      'style-src': cspStyleSrc,
+      'img-src': cspImgSrc,
     },
   })(req, res, () => {});
 
