@@ -207,8 +207,8 @@ const renderFullPage = (req, res, initialView, initialState) => {
     <body>
       <div id="root" data-reactmount>${initialView}</div>
       <script>${minifiedManifestScript}</script>
-      <script src="${process.env.NODE_ENV === 'production' ? assetsManifest['/vendor.js'] : './vendor.js'}"></script>
-      <script src="${process.env.NODE_ENV === 'production' ? assetsManifest['/app.js'] : './app.js'}"></script>
+      <script defer src="${process.env.NODE_ENV === 'production' ? assetsManifest['/vendor.js'] : './vendor.js'}"></script>
+      <script defer src="${process.env.NODE_ENV === 'production' ? assetsManifest['/app.js'] : './app.js'}"></script>
     </body>
     </html>
   `;

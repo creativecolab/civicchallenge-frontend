@@ -1,8 +1,9 @@
 const path = require('path');
 
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -76,10 +77,6 @@ module.exports = {
       minChunks: Infinity,
       filename: 'vendor.[chunkhash].js',
     }),
-    new ExtractTextPlugin({
-      filename: 'app.[chunkhash].css',
-      allChunks: true,
-    }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/,
       cssProcessor: cssnano,
@@ -90,12 +87,9 @@ module.exports = {
       },
       canPrint: true,
     }),
-    new ManifestPlugin({
-      basePath: '/',
-    }),
-    new ChunkManifestPlugin({
-      filename: 'chunk-manifest.json',
-      manifestVariable: 'webpackManifest',
+    new ExtractTextPlugin({
+      filename: 'app.[chunkhash].css',
+      allChunks: true,
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -107,6 +101,27 @@ module.exports = {
       },
       beautify: false,
       comments: false,
+    }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|gif|png|svg)$/i,
+      optipng: {
+        optimizationLevel: 7, // 3,
+      },
+      gifsicle: {
+        optimizationLevel: 3, // 1,
+      },
+      jpegtran: {
+        progressive: false,
+      },
+      svgo: {},
+      pngquant: null,
+    }),
+    new ManifestPlugin({
+      basePath: '/',
+    }),
+    new ChunkManifestPlugin({
+      filename: 'chunk-manifest.json',
+      manifestVariable: 'webpackManifest',
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',

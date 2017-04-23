@@ -1,7 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-// import classNames from 'util/classNames';
-
 import styles from './LazyImage.scss';
 
 /**
@@ -29,30 +27,17 @@ class LazyImage extends Component {
 
   render() {
     const { loaded } = this.state;
-    const { className, src, alt } = this.props;
+    const { src, alt } = this.props;
 
-    return (
-      <div className={className}>
-        {loaded &&
-          <img
-            src={loaded ? src : ''}
-            alt={alt}
-            className={styles.image}
-            ref={(el) => { this.img = el; }}
-          />
-        }
-        {!loaded &&
-          <div className={styles.loadingSpinner}>
-            <div className={styles.spinner} />
-          </div>
-        }
-      </div>
-    );
+    if (loaded) {
+      return <img src={loaded ? src : ''} alt={alt} className={styles.image} ref={(el) => { this.img = el; }} />;
+    }
+
+    return null;
   }
 }
 
 LazyImage.propTypes = {
-  className: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
 };

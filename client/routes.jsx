@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
+import ReactGA from 'react-ga';
 
 import App from './modules/App/App';
 import Landing from './modules/Landing/Landing';
@@ -18,8 +19,12 @@ const getTeam = (nextState, cb) => require.ensure([], require => cb(null, requir
 
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default));
 
+function onRouteChange(prev, next) {
+  ReactGA.pageview(next.location.pathname);
+}
+
 export default (
-  <Route path="/" component={App}>
+  <Route path="/" component={App} onChange={onRouteChange}>
     <IndexRoute component={Landing} />
     <Route path="/sponsors" getComponent={getSponsors} />
     <Route path="/about" getComponent={getAbout} />
