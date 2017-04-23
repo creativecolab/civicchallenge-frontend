@@ -88,7 +88,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "friendly-errors-webpack-plugin": "^1.6.1",
-    "image-webpack-loader": "^3.3.0",
+    "imagemin-webpack-plugin": "^1.4.4",
     "jsdom": "^9.12.0",
     "mock-css-modules": "^1.0.0",
     "node-sass": "^4.5.1",
