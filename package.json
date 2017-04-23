@@ -27,7 +27,8 @@
     "/* Lint + Test Scripts */": "",
     "lint": "eslint --ext .js --ext .jsx client server",
     "lint:webpack": "eslint --no-ignore webpack-modules webpack.config.babel.js webpack.config.dev.js webpack.config.prod.js webpack.config.server.js",
-    "lint:all": "yarn lint; yarn lint:webpack"
+    "lint:all": "yarn lint; yarn lint:webpack",
+    "test": "ava --verbose --color"
   },
   "repository": "git@github.com:davidcluu/mern-custom.git",
   "author": "David Luu <luu.david.c@gmail.com>",
@@ -60,6 +61,7 @@
     "uglify-js": "^2.8.15"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-webpack-loaders": "^0.9.0",
@@ -87,6 +89,8 @@
     "file-loader": "^0.10.1",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "image-webpack-loader": "^3.3.0",
+    "jsdom": "^9.12.0",
+    "mock-css-modules": "^1.0.0",
     "node-sass": "^4.5.1",
     "nodemon": "^1.11.0",
     "opn": "^4.0.2",
@@ -108,5 +112,18 @@
   },
   "engines": {
     "node": "7.8.0"
+  },
+  "ava": {
+    "files": [
+      "client/**/*.spec.js"
+    ],
+    "source": [
+      "client/**/*.js"
+    ],
+    "failFast": true,
+    "babel": "inherit",
+    "require": [
+      "./setup-test-env.js"
+    ]
   }
 }

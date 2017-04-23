@@ -1,8 +1,11 @@
 language: node_js
-
 node_js:
 - 7
-
+script:
+- yarn test
+- yarn build:all
+after_success:
+- echo "Build successful; Ready to deploy"
 notifications:
   email: false
   slack:
