@@ -101,7 +101,7 @@ $component-spacing: 3em;
         .connector-#{$i}-#{$j} {
           margin-left: 12.5% + ($i * 25%);
           width: 25%;
-          height: 25%;
+          height: 12.5%;
 
           position: absolute;
           top: 50%;
