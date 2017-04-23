@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Promise } from 'es6-promise';
 import ReactGA from 'react-ga';
+import { Promise } from 'es6-promise';
 
 import App from './App';
 import configureStore from './store';
@@ -12,7 +12,7 @@ if (!global.Promise) {
 }
 
 // Google Analytics
-ReactGA.initialize('UA-79713589-1', { debug: process.env.NODE_ENV === 'development' });
+ReactGA.initialize('UA-90860713-1', { debug: process.env.NODE_ENV === 'development' });
 ReactGA.pageview(window.location.pathname);
 
 const mountElement = document.getElementById('root');

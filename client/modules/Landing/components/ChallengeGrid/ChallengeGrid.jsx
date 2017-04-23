@@ -26,7 +26,7 @@ const ChallengeBox = (props) => {
         <span className={styles.name}>{props.name}</span>
         <span className={styles.description}>{props.description}</span>
       </div>
-      <LazyImage className={styles.image} src={props.image} alt={props.name} />
+      <LazyImage src={props.image} alt={props.name} />
     </div>
   );
 };
