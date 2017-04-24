@@ -49,7 +49,7 @@ class Footer extends Component {
             </a>
           </nav>
         </div>
-        <div className={styles.copyright}>Copyright &copy; {copyrightYear}{/* Group Name */}. All Rights Reserved. This website is under construction and is subject to change.</div>
+        <div className={styles.copyright}>Copyright &copy; {copyrightYear} Design 4 San Diego. All Rights Reserved. This website is under construction and is subject to change.</div>
       </footer>
     );
   }
