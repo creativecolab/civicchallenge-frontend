@@ -60,7 +60,8 @@ typings/
 # dotenv environment variables file
 .env
 
-# Build directories
+# Build directories/files
+public/humans.txt
 client-dist/
 server-dist/
 

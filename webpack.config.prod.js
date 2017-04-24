@@ -3,10 +3,11 @@ const path = require('path');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const AfterEmitPlugin = require('./webpack-modules/after-emit-webpack-plugin');
 
 const cssnano = require('cssnano');
 
@@ -128,5 +129,6 @@ module.exports = {
       reportFilename: '../bundle-report/bundle-report.html',
       openAnalyzer: true,
     }),
+    new AfterEmitPlugin(),
   ],
 };

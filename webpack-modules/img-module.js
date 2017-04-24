@@ -1,4 +1,4 @@
-module.exports = (prod) => {
+module.exports = () => {
   return {
     test: /\.(jpe?g|gif|png|svg)$/i,
     loader: 'file-loader',

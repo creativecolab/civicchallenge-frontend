@@ -52,9 +52,11 @@
       }
 
       nav {
+        display: flex;
+        align-items: center;
+
         a {
-          margin: 0 1%;
-          margin-bottom: 0.5 * $font-size;
+          margin: (0.5 * $font-size) 1%;
           max-width: 48%;
 
           display: inline-block;
@@ -73,7 +75,7 @@
 
           img {
             max-width: 100%;
-            max-height: 3 * $font-size;
+            max-height: 2 * $font-size;
 
             &:hover {
               cursor: pointer;
