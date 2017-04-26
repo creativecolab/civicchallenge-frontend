@@ -1,0 +1,68 @@
+@import '~styles/variables';
+
+$component-spacing: 3em;
+
+.challenge-text {
+  margin: $component-vertical-margin auto;
+  margin-bottom: $component-vertical-margin / 2;
+
+  .action {
+    margin-bottom: 2em;
+
+
+    h3 {
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      font-weight: bold;
+
+      &:after {
+        content: '';
+
+        margin-top: 0.25em;
+        margin-left: 42%;
+        border-bottom: 4px solid rgb(112, 197, 213);
+        width: 15%;
+
+        display: block;
+
+        text-align: center;
+      }
+    }
+
+    .description{
+      margin-bottom: 0;
+    }
+
+    .list{
+      margin-top: 0;
+      line-height: 1.5em;
+    }
+
+
+  }
+
+
+  .header{
+
+    .h3{
+      text-transform: uppercase;
+    }
+
+    .p{
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .challenge-text {
+    width: $component-width-desktop;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .challenge-text {
+    width: $component-width-mobile;
+  }
+}

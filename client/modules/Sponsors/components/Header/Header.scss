@@ -1,0 +1,119 @@
+@import '~styles/variables';
+
+$navbar-height: 50px;
+
+$font-color: #fff;
+
+.header {
+  height: 50%;
+
+  position: relative;
+
+  color: $font-color;
+
+  .background {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+
+    background-image: url("./freeway.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+  }
+
+  .navbar-container {
+    $border-width: 1px;
+
+    border-bottom: $border-width solid rgba(255, 255, 255, 0.5);
+    height: $navbar-height - $border-width;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      margin: 0 10px;
+    }
+
+    .navbar {
+      .navbar-button {
+        margin: 0 10px;
+        border: 0;
+        padding: 0;
+
+        cursor: pointer;
+        outline: none;
+
+        background-color: rgba(0,0,0,0);
+        font: inherit;
+        font-size: 0.8em;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: $font-color;
+      }
+    }
+  }
+
+  .text-container {
+    height: calc(100% - #{$navbar-height});
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      text-align: center;
+      h1 {
+        margin: 0;
+        margin-bottom: 0.25 * $font-size;
+
+        display: inline-block;
+        
+        font-size: 2.5 * $font-size;
+        text-weight: normal;
+        font-size: 4em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  img {
+    $offset: 10px;
+
+    width: 100%;
+    height: calc(100% - #{$navbar-height} - 2 * #{$offset});
+
+    z-index: -1;
+    position: absolute;
+    top: $navbar-height + $offset;
+
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .header {
+    .text {
+      width: $component-width-desktop;
+
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .header {
+    .text {
+      width: $component-width-mobile;
+
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
