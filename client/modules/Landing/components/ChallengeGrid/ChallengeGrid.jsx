@@ -91,7 +91,7 @@ class ChallengeGrid extends Component {
 
   render() {
     return (
-      <section className={styles.challengeGrid} ref={(element) => { this.rootElement = element; }}>
+      <section className={styles.challengeGrid}>
         <div className={styles.challenges}>
           {CHALLENGES.map(challenge =>
             <ChallengeBox

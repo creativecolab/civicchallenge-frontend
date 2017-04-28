@@ -100,7 +100,7 @@ class Process extends Component {
     );
 
     return (
-      <section className={styles.process} ref={(element) => { this.rootElement = element; }}>
+      <section className={styles.process}>
         <div className={styles.timeline}>
           <div className={styles.chart}>
             <div className={styles.circlesContainer}>{circles}</div>

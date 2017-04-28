@@ -20,7 +20,7 @@ class ChallengeText extends Component {
 
   render() {
     return (
-      <section className={styles.challengeText} ref={(element) => { this.rootElement = element; }}>
+      <section className={styles.challengeText}>
         <div className={styles.header}>
           <h3>
             <span className={styles.text1}>Civic Challenge:</span>

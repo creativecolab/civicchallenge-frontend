@@ -1,15 +1,21 @@
+/* eslint-disable max-len */
+
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+
 import styles from './Landing.scss';
 
-import Header from './components/Header/Header';
+// import Header from './components/Header/Header';
 import ChallengeText from './components/ChallengeText/ChallengeText';
 import Process from './components/Process/Process';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
 import Sponsors from './components/Sponsors/Sponsors';
-import Footer from './components/Footer/Footer';
+
+import headerBg from './header-bg.png';
 
 /**
  * Landing
@@ -26,24 +32,28 @@ class Landing extends Component {
   }
 
   render() {
-    const scrollElements = {};
-    const refHandler = key => (el) => {
-      if (el) {
-        scrollElements[key] = el.rootElement;
-      }
-    };
-
     return (
       <div className={styles.landing}>
         <Helmet
           title="Landing"
         />
-        <Header scrollElements={scrollElements} />
+        <Header
+          links={[
+            {
+              href: '/sponsors',
+              text: 'Sponsors',
+            },
+          ]}
+          backgroundImg={headerBg}
+          headerText={'Design for the Future of San Diego'}
+          subheaderText={'D4SD aims to engage San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. Our goal is to create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.'}
+          showButton
+        />
         <ChallengeText />
-        <Process ref={refHandler('process')} />
-        <ChallengeGrid ref={refHandler('challenges')} />
-        <Sponsors ref={refHandler('sponsors')} />
-        <Footer ref={refHandler('contact')} />
+        <Process />
+        <ChallengeGrid />
+        <Sponsors />
+        <Footer />
       </div>
     );
   }
