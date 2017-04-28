@@ -36,15 +36,8 @@ module.exports = {
       './client/index.jsx',
     ],
     vendor: [
-      'es6-promise',
-      'isomorphic-fetch',
       'react',
       'react-dom',
-      'react-helmet',
-      'react-redux',
-      'react-router',
-      'react-ga',
-      'redux',
     ],
   },
 
