@@ -14,3 +14,12 @@
 - Deployment Tools: pm2
 
 ## Lint/Build/Test/Deployment Info
+
+## Known Issues/Fixes
+
+- (4-28-2017) In development mode, the following is displayed on the console. This is related to [the way that hot module reloading is implemented](/client/index.jsx) and does not cause issues in development mode or persist in producton mode. ([solution source](https://github.com/Hashnode/mern-starter/issues/149), tested and confirmed)
+```
+Warning: React attempted to reuse markup in a container but the checksum was invalid. This generally means that you are using server rendering and the markup generated on the server was not what the client was expecting. React injected new markup to compensate which works but you have lost many of the benefits of server rendering. Instead, figure out why the markup being generated is different on the client or server:
+ (client) <!-- react-empty: 1 -
+ (server) <div data-reactid="1"
+```

@@ -28,10 +28,6 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   const { AppContainer } = require('react-hot-loader'); // eslint-disable-line global-require
 
-  // "Warning: React attempted to reuse markup in a container but the checksum was invalid."
-  // Only on async routes in development, it gets fixed in production
-  // https://github.com/Hashnode/mern-starter/issues/149
-
   rootElement = (
     <AppContainer>
       <App routerKey={routerKey} store={store} />
