@@ -18,7 +18,6 @@ import { Provider } from 'react-redux';
 import reactHelmet from 'react-helmet';
 
 import HtmlMinifier from 'html-minifier';
-import UglifyJS from 'uglify-js';
 
 import d from 'debug';
 
@@ -106,11 +105,6 @@ app.use(bodyParser.urlencoded({
 // Lusca
 app.use(lusca({
   csrf: true,
-  csp: {
-    policy: {
-      'default-src': '\'self\'',
-    },
-  },
   hsts: {
     maxAge: 31536000,
     includeSubDomains: true,
@@ -124,7 +118,51 @@ app.use(lusca({
 }));
 
 // Helmet
-app.use(helmet());
+app.use((req, res, next) => {
+  res.locals.nonce = crypto.randomBytes(128).toString('base64'); // eslint-disable-line no-param-reassign
+  next();
+});
+
+const defaultSrc = [
+  '\'self\'',
+];
+
+const scriptSrc = [
+  '\'self\'',
+  'https://www.google-analytics.com',
+  'https://stats.g.doubleclick.net',
+  (req, res) => { return `'nonce-${res.locals.nonce}'`; },
+];
+if (process.env.NODE_ENV !== 'production') {
+  scriptSrc.push('\'unsafe-eval\'');
+}
+
+const styleSrc = [
+  '\'self\'',
+];
+if (process.env.NODE_ENV !== 'production') {
+  styleSrc.push('blob:');
+}
+
+const imgSrc = [
+  '\'self\'',
+  'https://www.google-analytics.com',
+  'https://stats.g.doubleclick.net',
+];
+if (process.env.NODE_ENV !== 'production') {
+  imgSrc.push('data:');
+}
+
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc,
+      scriptSrc,
+      styleSrc,
+      imgSrc,
+    },
+  },
+}));
 
 
 /**
@@ -147,66 +185,31 @@ app.use(serveStatic(path.join(__dirname, '../public')));
  * Render Initial HTML
  */
 
-const generateCspString = strs => strs.filter(str => str).join(' ').trim();
-
-const cspStyleSrc = generateCspString([
-  '\'self\'',
-  process.env.NODE_ENV === 'production' ? '' : 'blob:',
-]);
-const cspImgSrc = generateCspString([
-  '\'self\'',
-  'https://www.google-analytics.com',
-  'https://stats.g.doubleclick.net',
-  process.env.NODE_ENV === 'production' ? '' : 'data:',
-]);
-
-const renderFullPage = (req, res, initialView, initialState) => {
+const renderFullPage = (initialView, initialState, scriptNonce) => {
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
 
   const head = reactHelmet.renderStatic();
-
   const headString = Object.keys(head).map(key => head[key].toString()).join('');
-  const cssLinkString = process.env.NODE_ENV === 'production' ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : '';
 
   const manifestScript = `
-    window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
-    ${process.env.NODE_ENV === 'production' ?
-      `//<![CDATA[
-      window.webpackManifest = ${JSON.stringify(chunkManifest)};
-      //]]>` : ''}
+window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
+${process.env.NODE_ENV === 'production' ?
+`//<![CDATA[
+window.webpackManifest = ${JSON.stringify(chunkManifest)};
+//]]>` : ''}
   `;
-
-  const minifiedManifestScript = UglifyJS.minify(manifestScript, {
-    fromString: true,
-  }).code;
-  const manifestHash = crypto.createHash('sha256').update(minifiedManifestScript).digest('base64');
-
-  lusca.csp({
-    policy: {
-      'default-src': '\'self\'',
-      'script-src': generateCspString([
-        '\'self\'',
-        'https://www.google-analytics.com',
-        'https://stats.g.doubleclick.net',
-        `'sha256-${manifestHash}'`,
-        process.env.NODE_ENV === 'production' ? '' : '\'unsafe-eval\'',
-      ]),
-      'style-src': cspStyleSrc,
-      'img-src': cspImgSrc,
-    },
-  })(req, res, () => {});
 
   const html = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
       ${headString}
-      ${cssLinkString}
+      ${process.env.NODE_ENV === 'production' ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : ''}
     </head>
     <body>
       <div id="root" data-reactmount>${initialView}</div>
-      <script>${minifiedManifestScript}</script>
+      <script nonce="${scriptNonce}">${manifestScript}</script>
       <script defer src="${process.env.NODE_ENV === 'production' ? assetsManifest['/vendor.js'] : './vendor.js'}"></script>
       <script defer src="${process.env.NODE_ENV === 'production' ? assetsManifest['/app.js'] : './app.js'}"></script>
     </body>
@@ -263,7 +266,7 @@ app.use((req, res, next) => {
         res
           .set('content-type', 'text/html')
           .status(200)
-          .end(renderFullPage(req, res, initialView, finalState));
+          .end(renderFullPage(initialView, finalState, res.locals.nonce));
       })
       .catch(fetchErr => next(fetchErr));
   });

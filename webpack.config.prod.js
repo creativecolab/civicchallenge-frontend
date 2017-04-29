@@ -106,10 +106,10 @@ module.exports = {
     new ImageminPlugin({
       test: /\.(jpe?g|gif|png|svg)$/i,
       optipng: {
-        optimizationLevel: 7, // 3,
+        optimizationLevel: 3,
       },
       gifsicle: {
-        optimizationLevel: 3, // 1,
+        optimizationLevel: 1,
       },
       jpegtran: {
         progressive: false,
