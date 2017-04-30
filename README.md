@@ -70,6 +70,10 @@ A barebones testing configuration with [AVA](https://github.com/avajs) for unit 
 
 `yarn test` (short for `yarn run test`)
 
+## People
+
+TODO :)
+
 ## Known Issues/Fixes
 
 - (4-28-2017) In development mode, an error message similar to the one copied below is displayed on the console. This is caused by [the way that hot module reloading is implemented](/client/index.jsx) and does not cause issues in development mode or persist in producton mode. ([source 1](https://github.com/Hashnode/mern-starter/issues/149), tested and confirmed)
@@ -78,7 +82,3 @@ Warning: React attempted to reuse markup in a container but the checksum was inv
  (client) <!-- react-empty: 1 -
  (server) <div data-reactid="1"
 ```
-
-## People
-
-TODO :)
