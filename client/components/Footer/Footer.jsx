@@ -29,7 +29,7 @@ class Footer extends Component {
     const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
 
     return (
-      <footer className={styles.footer} ref={(element) => { this.rootElement = element; }}>
+      <footer className={styles.footer}>
         <div className={styles.name}>D4SD</div>
         <div className={styles.navigate}>
           <h4>Navigate</h4>

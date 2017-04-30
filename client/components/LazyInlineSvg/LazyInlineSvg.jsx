@@ -85,12 +85,14 @@ class LazyInlineSvg extends React.Component {
     const { loaded, svgText } = this.state;
 
     if (loaded) {
+      const innerHtml = {
+        __html: this.processSVG(svgText),
+      };
+
       return (
         <div
           className={wrapperClassName}
-          dangerouslySetInnerHTML={{
-            __html: this.processSVG(svgText),
-          }}
+          dangerouslySetInnerHTML={innerHtml}
         />
       );
     }

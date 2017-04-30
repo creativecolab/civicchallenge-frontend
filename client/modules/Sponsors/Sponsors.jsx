@@ -28,13 +28,15 @@ class Sponsors extends Component {
   }
 
   render() {
+    const links = [];
+
     return (
       <div className={styles.sponsors}>
         <Helmet
           title="Sponsors"
         />
         <Header
-          links={[]}
+          links={links}
           backgroundImg={headerBg}
           headerText={'Sponsors'}
           subheaderText={''}
