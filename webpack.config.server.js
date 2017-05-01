@@ -14,6 +14,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'server-dist'),
     filename: 'server.bundle.js',
+    chunkFilename: 'server.[name].[id].js',
   },
 
   target: 'node',
