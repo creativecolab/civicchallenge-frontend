@@ -31,8 +31,6 @@ const rules = [
 module.exports = {
   entry: {
     app: [
-      // 'babel-polyfill',
-      'regenerator-runtime/runtime',
       './client/index.jsx',
     ],
     vendor: [
