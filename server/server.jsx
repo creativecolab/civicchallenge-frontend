@@ -78,7 +78,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(compression());
 
 // Session
-const secureProxy = process.env.NODE_ENV === 'production';
+const secure = process.env.NODE_ENV === 'production';
 const sessionsSecret = crypto.randomBytes(256).toString('base64'); // TODO Change this when hosting situation is finalized
 
 app.use(sessions({
@@ -89,7 +89,7 @@ app.use(sessions({
   cookie: {
     ephemeral: false,
     httpOnly: true,
-    secureProxy,
+    secure,
   },
 }));
 
@@ -186,6 +186,7 @@ app.use(serveStatic(path.join(__dirname, '../public')));
  */
 
 const renderFullPage = (initialView, initialState, scriptNonce) => {
+  const prod = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging';
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
 
@@ -194,7 +195,7 @@ const renderFullPage = (initialView, initialState, scriptNonce) => {
 
   const manifestScript = `
 window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
-${process.env.NODE_ENV === 'production' ?
+${prod ?
 `//<![CDATA[
 window.webpackManifest = ${JSON.stringify(chunkManifest)};
 //]]>` : ''}
@@ -205,13 +206,13 @@ window.webpackManifest = ${JSON.stringify(chunkManifest)};
     <html lang="en">
     <head>
       ${headString}
-      ${process.env.NODE_ENV === 'production' ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : ''}
+      ${prod ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : ''}
     </head>
     <body>
       <div id="root" data-reactmount>${initialView}</div>
       <script nonce="${scriptNonce}">${manifestScript}</script>
-      <script defer src="${process.env.NODE_ENV === 'production' ? assetsManifest['/vendor.js'] : './vendor.js'}"></script>
-      <script defer src="${process.env.NODE_ENV === 'production' ? assetsManifest['/app.js'] : './app.js'}"></script>
+      <script defer src="${prod ? assetsManifest['/vendor.js'] : './vendor.js'}"></script>
+      <script defer src="${prod ? assetsManifest['/app.js'] : './app.js'}"></script>
     </body>
     </html>
   `;

@@ -17,16 +17,13 @@ const jsPreModule = require('./webpack-modules/js-pre-module');
 const jsModule = require('./webpack-modules/js-module');
 const jsonModule = require('./webpack-modules/json-module');
 
-const env = process.env.NODE_ENV;
-const prod = env === 'production';
-
 const rules = [
   sassModule,
   imgModule,
   jsPreModule,
   jsModule,
   jsonModule,
-].map(module => module(prod));
+].map(module => module(true));
 
 module.exports = {
   entry: {
@@ -34,14 +31,10 @@ module.exports = {
       './client/index.jsx',
     ],
     vendor: [
-      'es6-promise',
-      'isomorphic-fetch',
       'react',
       'react-dom',
-      'react-helmet',
       'react-redux',
       'react-router',
-      'react-ga',
       'redux',
     ],
   },
