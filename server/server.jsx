@@ -78,7 +78,7 @@ if (process.env.NODE_ENV === 'development') {
 app.use(compression());
 
 // Session
-const secureProxy = process.env.NODE_ENV === 'production';
+const secure = process.env.NODE_ENV === 'production';
 const sessionsSecret = crypto.randomBytes(256).toString('base64'); // TODO Change this when hosting situation is finalized
 
 app.use(sessions({
@@ -89,7 +89,7 @@ app.use(sessions({
   cookie: {
     ephemeral: false,
     httpOnly: true,
-    secureProxy,
+    secure,
   },
 }));
 
