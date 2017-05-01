@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
@@ -19,7 +20,7 @@ import headerBg from './header-bg.png';
  * Landing
  */
 
-class Landing extends Component {
+class Landing extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './LazyImage.scss';
 
@@ -6,7 +7,7 @@ import styles from './LazyImage.scss';
  * LazyImage
  */
 
-class LazyImage extends Component {
+class LazyImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

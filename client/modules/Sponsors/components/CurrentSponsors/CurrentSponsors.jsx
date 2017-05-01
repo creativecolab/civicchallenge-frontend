@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
-
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './CurrentSponsors.scss';
 
@@ -10,7 +10,7 @@ import cisco from './cisco.png';
 import xfinity from './xfinity.png';
 
 
-class SponsorGrid extends Component {
+class SponsorGrid extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

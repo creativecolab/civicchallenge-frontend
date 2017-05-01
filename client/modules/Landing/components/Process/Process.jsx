@@ -1,8 +1,11 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
-import LazyInlineSvg from 'components/LazyInlineSvg/LazyInlineSvg';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import classNames from 'util/classNames';
+
+import LazyInlineSvg from 'components/LazyInlineSvg/LazyInlineSvg';
 
 import styles from './Process.scss';
 
@@ -62,7 +65,7 @@ const TIMELINE_ITEMS = [
   },
 ];
 
-class Process extends Component {
+class Process extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Footer.scss';
 
@@ -14,7 +15,7 @@ import protolabLogo from './protolab-logo.png';
 
 const START_YEAR = 2017;
 
-class Footer extends Component {
+class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

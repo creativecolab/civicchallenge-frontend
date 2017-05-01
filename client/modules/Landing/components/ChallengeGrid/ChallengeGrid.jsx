@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import classNames from 'util/classNames';
 
 import LazyImage from 'components/LazyImage/LazyImage';
@@ -79,7 +81,7 @@ const CHALLENGES = [
   },
 ];
 
-class ChallengeGrid extends Component {
+class ChallengeGrid extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

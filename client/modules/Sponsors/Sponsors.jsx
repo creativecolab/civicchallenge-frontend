@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import Helmet from 'react-helmet';
@@ -17,7 +18,7 @@ import headerBg from './header-bg.png';
  * Sponsors
  */
 
-class Sponsors extends Component {
+class Sponsors extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ChallengeText.scss';
 
@@ -8,7 +9,7 @@ import styles from './ChallengeText.scss';
  * ChallengeText
  */
 
-class ChallengeText extends Component {
+class ChallengeText extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

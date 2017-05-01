@@ -1,6 +1,7 @@
 /* eslint-disable max-len, react/no-danger */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import fetch from 'isomorphic-fetch';
 
 /**
@@ -102,8 +103,8 @@ class LazyInlineSvg extends React.Component {
 }
 
 LazyInlineSvg.propTypes = {
-  wrapperClassName: React.PropTypes.string.isRequired,
-  src: React.PropTypes.string.isRequired,
+  wrapperClassName: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 LazyInlineSvg.contextTypes = {

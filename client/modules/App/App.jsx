@@ -1,11 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 /**
  * App
  */
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

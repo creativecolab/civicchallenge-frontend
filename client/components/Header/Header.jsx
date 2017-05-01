@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
 import styles from './Header.scss';
@@ -7,7 +8,7 @@ import styles from './Header.scss';
  * Header
  */
 
-class Header extends Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };

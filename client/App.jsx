@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 
@@ -17,6 +18,6 @@ export default function App(props) {
 }
 
 App.propTypes = {
-  store: React.PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  routerKey: React.PropTypes.number.isRequired,
+  store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  routerKey: PropTypes.number.isRequired,
 };
