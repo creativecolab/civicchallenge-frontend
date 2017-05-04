@@ -54,18 +54,24 @@ const getHash = (str) => {
  * LazyInlineSvg
  */
 
+const propTypes = {
+  wrapperClassName: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+};
+
+const contextTypes = {};
+
+const defaultProps = {};
+
 class LazyInlineSvg extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMounted: false,
       loaded: false,
     };
   }
 
   componentDidMount() {
-    this.setState({ isMounted: true });
-
     const { src } = this.props;
 
     fetch(src, { method: 'GET' })
@@ -102,12 +108,8 @@ class LazyInlineSvg extends React.Component {
   }
 }
 
-LazyInlineSvg.propTypes = {
-  wrapperClassName: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-};
-
-LazyInlineSvg.contextTypes = {
-};
+LazyInlineSvg.propTypes = propTypes;
+LazyInlineSvg.contextTypes = contextTypes;
+LazyInlineSvg.defaultProps = defaultProps;
 
 export default LazyInlineSvg;

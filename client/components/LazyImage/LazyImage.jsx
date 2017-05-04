@@ -7,18 +7,24 @@ import styles from './LazyImage.scss';
  * LazyImage
  */
 
+const propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};
+
+const contextTypes = {};
+
+const defaultProps = {};
+
 class LazyImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMounted: false,
       loaded: false,
     };
   }
 
   componentDidMount() {
-    this.setState({ isMounted: true });
-
     const img = new Image();
     img.onload = () => {
       this.setState({ loaded: true });
@@ -38,12 +44,8 @@ class LazyImage extends React.Component {
   }
 }
 
-LazyImage.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-};
-
-LazyImage.contextTypes = {
-};
+LazyImage.propTypes = propTypes;
+LazyImage.contextTypes = contextTypes;
+LazyImage.defaultProps = defaultProps;
 
 export default LazyImage;

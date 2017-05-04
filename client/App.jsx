@@ -7,7 +7,12 @@ import routes from './routes';
 
 require('./main.scss');
 
-export default function App(props) {
+const propTypes = {
+  store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  routerKey: PropTypes.number.isRequired,
+};
+
+function App(props) {
   return (
     <Provider store={props.store}>
       <Router key={props.routerKey} history={browserHistory}>
@@ -17,7 +22,6 @@ export default function App(props) {
   );
 }
 
-App.propTypes = {
-  store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-  routerKey: PropTypes.number.isRequired,
-};
+App.propTypes = propTypes;
+
+export default App;
