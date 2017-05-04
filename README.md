@@ -64,6 +64,10 @@ To build the production version of the project, run this command:
 
 `yarn build:all` (short for `yarn run build:all`)
 
+**NOTE:** client-sessions will throw an error in production mode [if the connection is not secure](/server/server.jsx#L81). For local build testing, use this command:
+
+`yarn build:all:stage` (short for `yarn run build:all:stage`)
+
 ## Test Info
 
 A barebones testing configuration with [AVA](https://github.com/avajs) for unit testing is set up. [Nightwatch](http://nightwatchjs.org/) for browser testing will be set up. There are no substantial test cases written yet. To test the project, run this command:
