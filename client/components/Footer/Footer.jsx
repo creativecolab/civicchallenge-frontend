@@ -16,7 +16,7 @@ import protolabLogo from './protolab-logo.png';
 
 const START_YEAR = 2017;
 
-const LINKS = [
+const LOCAL_LINKS = [
   {
     href: '/',
     text: 'Home',
@@ -28,6 +28,24 @@ const LINKS = [
   {
     href: '/team',
     text: 'Team',
+  },
+];
+
+const AFFILIATE_LINKS = [
+  {
+    href: 'http://designlab.ucsd.edu/',
+    src: designLabLogo,
+    alt: 'UC San Diego Design Lab',
+  },
+  {
+    href: 'https://designforwardsd.com/',
+    src: designForwardLogo,
+    alt: 'Design Forward Alliance',
+  },
+  {
+    href: 'http://protolab.ucsd.edu/',
+    src: protolabLogo,
+    alt: 'Protolab',
   },
 ];
 
@@ -54,7 +72,7 @@ function Footer(props, { router }) {
       <div className={styles.navigate}>
         <h4>Navigate</h4>
         <nav>
-          {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
+          {LOCAL_LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
             <Link key={text} to={href}>{text}</Link>
           )}
         </nav>
@@ -62,15 +80,11 @@ function Footer(props, { router }) {
       <div className={styles.affiliates}>
         <h4>Affiliates</h4>
         <nav>
-          <a href="http://designlab.ucsd.edu/" target="_blank" rel="noopener noreferrer">
-            <img src={designLabLogo} alt="UC San Diego Design Lab" />
-          </a>
-          <a href="https://designforwardsd.com/" target="_blank" rel="noopener noreferrer">
-            <img src={designForwardLogo} alt="Design Forward Alliance" />
-          </a>
-          <a href="http://protolab.ucsd.edu/" target="_blank" rel="noopener noreferrer">
-            <img src={protolabLogo} alt="Protolab" />
-          </a>
+          {AFFILIATE_LINKS.map(({ href, src, alt }) => (
+            <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+              <img src={src} alt={alt} />
+            </a>
+          ))}
         </nav>
       </div>
       <div className={styles.copyright}>Copyright &copy; {copyrightYear} Design 4 San Diego. All Rights Reserved. This website is under construction and is subject to change.</div>
