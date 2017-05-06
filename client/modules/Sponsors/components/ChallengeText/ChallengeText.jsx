@@ -20,7 +20,7 @@ const defaultProps = {};
 
 function ChallengeText() {
   return (
-    <section className={styles.challengeText} ref={(element) => { this.rootElement = element; }}>
+    <section className={styles.challengeText}>
       <div className={styles.action}>
         <h3 className={globalStyles.ul}>Civic Challenge Sponsorship</h3>
         <p className={styles.description}>How can companies get onboard?</p>
