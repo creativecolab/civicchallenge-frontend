@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import globalStyles from 'main.scss';
 import styles from './ChallengeText.scss';
 
 /**
@@ -21,7 +22,7 @@ function ChallengeText() {
   return (
     <section className={styles.challengeText} ref={(element) => { this.rootElement = element; }}>
       <div className={styles.action}>
-        <h3> Civic Challenge Sponsorship</h3>
+        <h3 className={globalStyles.ul}>Civic Challenge Sponsorship</h3>
         <p className={styles.description}>How can companies get onboard?</p>
         <ul className={styles.list}>
           <li> <b>Shape a design brief: </b> help inform and craft a design brief related to the mobility theme </li>

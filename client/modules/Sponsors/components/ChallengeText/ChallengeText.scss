@@ -6,38 +6,33 @@ $component-spacing: 3em;
   margin: $component-vertical-margin auto;
   margin-bottom: $component-vertical-margin / 2;
 
+  text-align: center;
+
   .action {
     margin-bottom: 2em;
 
-
     h3 {
       margin: 0;
+
+      display: inline-block;
+
       text-align: center;
       text-transform: uppercase;
       font-size: 1.5em;
       font-weight: bold;
-
-      &:after {
-        content: '';
-
-        margin-top: 0.25em;
-        margin-left: 42%;
-        border-bottom: 4px solid rgb(112, 197, 213);
-        width: 15%;
-
-        display: block;
-
-        text-align: center;
-      }
     }
 
-    .description{
+    .description {
       margin-bottom: 0;
+
+      text-align: left;
     }
 
-    .list{
+    .list {
       margin-top: 0;
+
       line-height: 1.5em;
+      text-align: left;
     }
 
 
@@ -45,6 +40,7 @@ $component-spacing: 3em;
 
 
   .header{
+    text-align: left;
 
     .h3{
       text-transform: uppercase;

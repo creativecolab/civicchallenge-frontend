@@ -1,6 +1,12 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import Helmet from 'react-helmet';
+
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import TeamComponent from './components/Team/Team';
 
 import styles from './Team.scss';
 
@@ -16,12 +22,20 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Team(props, { router }) {
+function Team() {
   return (
     <div className={styles.team}>
-      Path: {router.location.pathname}
-      <br />
-      <Link to="/">Back to homepage</Link>
+      <Helmet
+        title="Team"
+      />
+      <Header
+        backgroundImg={''}
+        headerText={'Team'}
+        subheaderText={''}
+        showButton={false}
+      />
+      <TeamComponent />
+      <Footer />
     </div>
   );
 }

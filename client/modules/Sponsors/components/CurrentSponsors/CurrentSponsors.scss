@@ -3,27 +3,17 @@
 $component-spacing: 3em;
 
 .current {
-
+  text-align: center;
 
   h3 {
     margin: 0;
+
+    display: inline-block;
+
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5em;
     font-weight: bold;
-
-    &:after {
-      content: '';
-
-      margin-top: 0.25em;
-      margin-left: 47%;
-      border-bottom: 4px solid rgb(112, 197, 213);
-      width: 7%;
-
-      display: block;
-
-      text-align: center;
-    }
   }
 }
 

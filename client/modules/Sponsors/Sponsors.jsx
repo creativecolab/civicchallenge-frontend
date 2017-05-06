@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
-
-import styles from './Sponsors.scss';
-
 import ChallengeText from './components/ChallengeText/ChallengeText';
 import CurrentSponsors from './components/CurrentSponsors/CurrentSponsors';
+
+import styles from './Sponsors.scss';
 
 import headerBg from './header-bg.png';
 
@@ -26,15 +24,12 @@ const contextTypes = {
 const defaultProps = {};
 
 function Sponsors() {
-  const links = [];
-
   return (
     <div className={styles.sponsors}>
       <Helmet
         title="Sponsors"
       />
       <Header
-        links={links}
         backgroundImg={headerBg}
         headerText={'Sponsors'}
         subheaderText={''}
@@ -42,8 +37,6 @@ function Sponsors() {
       />
       <ChallengeText />
       <CurrentSponsors />
-      <br />
-      <Link to="/">Back to homepage</Link>
       <Footer />
     </div>
   );

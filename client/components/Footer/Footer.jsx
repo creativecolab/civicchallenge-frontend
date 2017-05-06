@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 import styles from './Footer.scss';
 
@@ -14,6 +15,21 @@ import protolabLogo from './protolab-logo.png';
  */
 
 const START_YEAR = 2017;
+
+const LINKS = [
+  {
+    href: '/',
+    text: 'Home',
+  },
+  {
+    href: '/sponsors',
+    text: 'Sponsors',
+  },
+  {
+    href: '/team',
+    text: 'Team',
+  },
+];
 
 
 /**
@@ -28,7 +44,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Footer() {
+function Footer(props, { router }) {
   const currentYear = (new Date()).getFullYear();
   const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
 
@@ -37,6 +53,11 @@ function Footer() {
       <div className={styles.name}>D4SD</div>
       <div className={styles.navigate}>
         <h4>Navigate</h4>
+        <nav>
+          {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
+            <Link key={text} to={href}>{text}</Link>
+          )}
+        </nav>
       </div>
       <div className={styles.affiliates}>
         <h4>Affiliates</h4>

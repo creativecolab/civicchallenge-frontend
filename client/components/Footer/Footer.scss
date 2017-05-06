@@ -50,7 +50,30 @@
           text-align: center;
         }
       }
+    }
 
+    .navigate {
+      nav {
+        a {
+          max-width: 48%;
+
+          display: block;
+          cursor: pointer;
+
+          vertical-align: middle;
+          text-decoration: none;
+          color: rgb(178, 180, 189);
+
+          &:hover {
+            cursor: pointer;
+
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .affiliates {
       nav {
         display: flex;
         align-items: center;
@@ -64,7 +87,7 @@
 
           vertical-align: middle;
           text-decoration: none;
-          font-size: 0;
+          // font-size: 0;
           color: rgb(178, 180, 189);
 
           &:hover {

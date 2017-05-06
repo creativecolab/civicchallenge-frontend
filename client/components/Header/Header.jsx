@@ -5,16 +5,26 @@ import { Link } from 'react-router';
 import styles from './Header.scss';
 
 /**
+ * Constants
+ */
+
+const LINKS = [
+  {
+    href: '/sponsors',
+    text: 'Sponsors',
+  },
+  {
+    href: '/team',
+    text: 'Team',
+  },
+];
+
+
+/**
  * Header
  */
 
 const propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      href: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-    })
-  ).isRequired,
   backgroundImg: PropTypes.string.isRequired,
   headerText: PropTypes.string.isRequired,
   subheaderText: PropTypes.string.isRequired,
@@ -27,7 +37,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Header({ links, backgroundImg, headerText, subheaderText, showButton }) {
+function Header({ backgroundImg, headerText, subheaderText, showButton }, { router }) {
   return (
     <header className={styles.header}>
       <div
@@ -38,7 +48,7 @@ function Header({ links, backgroundImg, headerText, subheaderText, showButton })
           <Link to="/">D4SD</Link>
         </div>
         <nav className={styles.navbar}>
-          {links.map(({ href, text }) =>
+          {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
             <Link key={text} to={href}>{text}</Link>
           )}
         </nav>
@@ -52,7 +62,7 @@ function Header({ links, backgroundImg, headerText, subheaderText, showButton })
           </div>}
         </section>
       </div>
-      <img src={backgroundImg} alt="Background" />
+      {backgroundImg && <img src={backgroundImg} alt="Background" />}
     </header>
   );
 }

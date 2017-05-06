@@ -1,0 +1,112 @@
+@import '~styles/variables';
+
+.team {
+  margin: $component-vertical-margin auto;
+
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 1em;
+
+    display: inline-block;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .profiles {
+    .profile {
+      margin: 10px;
+      width: 200px;
+      height: 225px;
+
+      display: inline-block;
+      position: relative;
+
+      background-color: red;
+
+      .default-text {
+        padding: 0.75em;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: left;
+        color: #fff;
+
+        .name {
+          font-weight: bold;
+        }
+
+        .position {
+          font-size: 0.8em;
+        }
+      }
+
+      .hover-text {
+        padding: 0.75em;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+
+        .flex-container {
+          .biography {
+            width: 100%;
+
+            font-size: 0.8em;
+            text-align: left;
+          }
+
+          a {
+            margin-top: 1em;
+            border: 2px solid #fff;
+            padding: 0.25em;
+
+            display: inline-block;
+
+            text-decoration: none !important;
+            font-size: 0.9em;
+            color: #fff !important;
+          }
+        }
+      }
+
+      &:hover {
+        .default-text {
+          display: none;
+        }
+
+        .hover-text {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+.team {
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+.team {
+  width: $component-width-mobile;
+}
+}

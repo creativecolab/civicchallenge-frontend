@@ -2,7 +2,7 @@
 
 > Currently hosted at https://d4sd.org/
 
-[![Build Status](https://travis-ci.org/davidcluu/civicchallenge-frontend.svg?branch=master)](https://travis-ci.org/davidcluu/civicchallenge-frontend) [![dependencies Status](https://david-dm.org/davidcluu/civicchallenge-frontend/status.svg)](https://david-dm.org/davidcluu/civicchallenge-frontend) [![devDependencies Status](https://david-dm.org/davidcluu/civicchallenge-frontend/dev-status.svg)](https://david-dm.org/davidcluu/civicchallenge-frontend?type=dev)
+[![Build Status](https://travis-ci.org/davidcluu/civicchallenge-frontend.svg?branch=master)](https://travis-ci.org/davidcluu/civicchallenge-frontend) [![dependencies Status](https://david-dm.org/davidcluu/civicchallenge-frontend/status.svg)](https://david-dm.org/davidcluu/civicchallenge-frontend) [![devDependencies Status](https://david-dm.org/davidcluu/civicchallenge-frontend/dev-status.svg)](https://david-dm.org/davidcluu/civicchallenge-frontend?type=dev) [![CodeClimate GPA](https://codeclimate.com/github/davidcluu/civicchallenge-frontend/badges/gpa.svg)](https://codeclimate.com/github/davidcluu/civicchallenge-frontend)
 
 <!--
 [![Node.js v7.8.0](https://img.shields.io/badge/Node.js-7.8.0-green.svg)](https://nodejs.org) [![Express v4.15.2](https://img.shields.io/badge/Express-4.15.2-lightgrey.svg)](https://expressjs.com/) [![React v15.5.4](https://img.shields.io/badge/React-15.5.4-blue.svg)](https://facebook.github.io/react/)

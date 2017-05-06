@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import globalStyles from 'main.scss';
 import styles from './CurrentSponsors.scss';
 
 import intel from './intel.png';
@@ -21,7 +22,7 @@ function CurrentSponsors() {
   return (
     <div>
       <div className={styles.current}>
-        <h3> Current Sponsors </h3>
+        <h3 className={globalStyles.ul}>Current Sponsors</h3>
       </div>
       <div className={styles.sponsors}>
         <img src={intel} alt="intel" className={styles.sponsorImage} />
