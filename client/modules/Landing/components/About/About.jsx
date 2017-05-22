@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withCollectRef } from 'util/RefCollector';
 
 import globalStyles from 'main.scss';
 import styles from './About.scss';
@@ -11,7 +12,9 @@ import styles from './About.scss';
  * About
  */
 
-const propTypes = {};
+const propTypes = {
+  componentRef: PropTypes.func.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -19,9 +22,9 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function About() {
+function About(props) {
   return (
-    <section id={styles.about}>
+    <section id={styles.about} ref={props.componentRef}>
       <div className={styles.textContainer}>
         <section className={styles.text}>
           <div className={styles.title}>
@@ -43,4 +46,4 @@ About.propTypes = propTypes;
 About.contextTypes = contextTypes;
 About.defaultProps = defaultProps;
 
-export default About;
+export default withCollectRef(About);

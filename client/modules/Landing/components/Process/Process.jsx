@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len, react/no-danger  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -29,11 +29,11 @@ const TIMELINE_ITEMS = [
     image: ideate,
     months: 'June - July',
     title: 'Ideate Solutions',
-    description: 'Generate multiple creative  solutions to address the\n key challenges',
+    description: 'Generate multiple creative  solutions to address the <br/> key challenges',
   },
   {
     image: propose,
-    months: 'August-September',
+    months: 'August - September',
     title: 'Prototype Concepts',
     description: 'Form teams to build mockups of solutions and get feedback',
   },
@@ -41,7 +41,7 @@ const TIMELINE_ITEMS = [
     image: implement,
     months: 'October -',
     title: 'Take Action',
-    description: 'Present best solutions to civic leaders and experts for implementation',
+    description: 'Present best solutions to <br/> civic leaders and experts for implementation',
   },
 ];
 
@@ -55,7 +55,12 @@ function TimelineText({ title, description, months }) {
     <div className={styles.timelineText}>
       <div className={styles.months}>{months}</div>
       <div className={styles.title}>{title}</div>
-      <div className={styles.description}>{description}</div>
+      <div
+        className={styles.description}
+        dangerouslySetInnerHTML={{
+          __html: description,
+        }}
+      />
     </div>
   );
 }

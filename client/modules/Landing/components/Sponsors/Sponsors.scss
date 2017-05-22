@@ -74,6 +74,28 @@
         color: #fff;
       }
     }
+
+    &.small {
+      img {
+        margin: 0 1em;
+        padding: 1em;
+        height: 2em;
+      }
+
+      .you {
+        .you-inner {
+          $border-width: 2px;
+
+          margin: 0 $font-size;
+          border: $border-width dashed #24487c;
+          padding: $font-size - ($border-width) 2 * $font-size;
+          height: 2 * $font-size;
+
+          font-size: 2em;
+          line-height: 2 * $font-size;
+        }
+      }
+    }
   }
 
   .placeholder {

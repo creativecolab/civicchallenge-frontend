@@ -34,11 +34,6 @@ function Landing() {
       />
       <Navbar />
       <ChallengeText />
-      <div className={styles.button}>
-        <div className={styles.buttonContainer}>
-          <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
-        </div>
-      </div>
       <Process />
       <ChallengeGrid />
       <About />

@@ -2,6 +2,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withCollectRef } from 'util/RefCollector';
+import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
 import styles from './Sponsors.scss';
@@ -40,7 +42,9 @@ const FRIENDS = [
  * Sponsors
  */
 
-const propTypes = {};
+const propTypes = {
+  componentRef: PropTypes.func.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -48,9 +52,9 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Sponsors() {
+function Sponsors(props) {
   return (
-    <section id={styles.sponsors}>
+    <section id={styles.sponsors} ref={props.componentRef}>
       <h3 className={globalStyles.ul}>Sponsors</h3>
       <h4 className={styles.tier}>Tier 1 Sponsors</h4>
       <div className={styles.sponsorList}>
@@ -74,7 +78,7 @@ function Sponsors() {
         If you are interested in learning more and to talk about the sponsorship model and the initiative in general, please reach out to <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>
       </div>
       <h4 className={styles.tier}>Friends of D4SD</h4>
-      <div className={styles.sponsorList}>
+      <div className={classNames([styles.sponsorList, styles.small])}>
         {FRIENDS.map(({ href, img, alt }) => (
           <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
             <img className={styles.backgroundFill} src={img} alt={alt} />
@@ -92,4 +96,4 @@ Sponsors.propTypes = propTypes;
 Sponsors.contextTypes = contextTypes;
 Sponsors.defaultProps = defaultProps;
 
-export default Sponsors;
+export default withCollectRef(Sponsors);
