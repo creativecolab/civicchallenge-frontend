@@ -9,16 +9,10 @@ $component-spacing: 3em;
   .header {
     margin-bottom: 2em;
 
-    display: flex;
-    align-items: center;
-
     h3 {
       $font-size: 1.5em;
 
       margin: 0;
-      margin-right: 2em;
-
-      flex: 1 0 auto;
 
       text-align: center;
       text-transform: uppercase;
@@ -79,6 +73,16 @@ $component-spacing: 3em;
 @media (min-width: $desktop-min-width) {
 .challenge-text {
   width: $component-width-desktop;
+  .header {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin-right: 2em;
+      flex: 1 0 auto;
+    }
+
+  }
 }
 }
 
