@@ -28,6 +28,7 @@ function ChallengeText(props) {
           <span className={styles.text1}>Civic Challenge:</span>
           <br />
           <span className={styles.text2}>Mobility</span>
+          <br />
           <div className={styles.button}>
             <div className={styles.buttonContainer}>
               <a href="mailto:design4sandiego@gmail.com">Get Involved</a>

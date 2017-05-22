@@ -4,7 +4,7 @@ $component-spacing: 3em;
 
 .challenge-text {
   margin: $component-vertical-margin auto;
-  margin-bottom: $component-vertical-margin / 2;
+  margin-bottom: $component-vertical-margin;
 
   .header {
     margin-bottom: 2em;
@@ -36,6 +36,7 @@ $component-spacing: 3em;
       }
 
       .button {
+        margin: 20px;
         font-size: 16px;
 
         .button-container {
@@ -70,6 +71,7 @@ $component-spacing: 3em;
 
     .description {
       color: rgb(131, 131, 131);
+      font-size: 0.9em;
     }
   }
 }

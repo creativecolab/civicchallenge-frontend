@@ -27,6 +27,7 @@ $font-color: #fff;
       text-decoration: none;
       text-transform: uppercase;
       color: $font-color;
+
     }
 
     button {
@@ -40,7 +41,7 @@ $font-color: #fff;
       text-decoration: none;
       text-transform: uppercase;
       background-color: transparent;
-      font-size: $font-size;
+      font-size: 0.75 * $font-size;
       color: $font-color;
     }
   }
