@@ -31,7 +31,7 @@ function About(props) {
             <h3 className={globalStyles.ul}>ABOUT</h3>
           </div>
           <h1>Design the Future of San Diego</h1>
-          <p className={styles.description}>D4SD is a non-profit organization that aims to engage San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We seek to create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.</p>
+          <p className={styles.description}>Design 4 San Diego (D4SD) is a non-profit organization that aims to engage San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We seek to create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.</p>
           <p className={styles.description}>Our Team: Steven Dow, Narges Mahyar, Ariel Weingarten, Brian McInnis, Lauren Liu, David Luu, Joanne Cho, Sanika Moharana, Eric Richards, Eric Tseng, Cody Pham, Alejandro Panduro, Joseph Le, Nancy Zheng, Catherine Kim, Lauren Gong, Anne Le, Diana Nguyen, Grant Chinn, Gobind Sethi, Karen Ma, Qin Zhuo, Nanna Inie, Donna Yee, Alvin Ho, Allen Lin, Akanksha Grover, Tara Nejad, Karthik Komatineni, Christopher Lim, Susan Lee, Mai Eguchi</p>
           {false && <div className={styles.buttonContainer}>
             <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
