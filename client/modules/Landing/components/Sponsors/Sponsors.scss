@@ -1,6 +1,6 @@
 @import '~styles/variables';
 
-.sponsors {
+#sponsors {
   margin: $component-vertical-margin auto;
 
   text-align: center;
@@ -14,18 +14,89 @@
     text-transform: uppercase;
     font-size: 1.5em;
     font-weight: bold;
+  }
 
-    &:after {
-      content: '';
+  h4.tier {
+    margin: 1em 0;
 
-      margin-top: 0.25em;
-      margin-left: 10%;
-      border-bottom: 4px solid rgb(112, 197, 213);
-      width: 80%;
+    font-size: 1.25em;
+  }
 
-      display: block;
+  .text {
+    margin: 2em 0;
 
-      text-align: center;
+    text-align: left;
+
+    font-size: 0.9em;
+
+    a {
+      color: #24487c;
+    }
+
+    a:hover {
+      color: #2d324d;
+    }
+  }
+
+  .sponsor-list {
+    img {
+      margin: 0 1em;
+      padding: 1em;
+      height: 3em;
+
+      cursor: pointer;
+
+      background-color: #24487c;
+    }
+
+    img:hover {
+      background-color: #2d324d;
+    }
+
+    .you {
+      .you-inner {
+        $border-width: 2px;
+
+        margin: 0 $font-size;
+        border: $border-width dashed #24487c;
+        padding: $font-size - ($border-width) 2 * $font-size;
+        height: 3 * $font-size;
+
+        display: inline-block;
+        vertical-align: top;
+
+        font-size: 2em;
+        line-height: 3 * $font-size;
+        color: #24487c;
+      }
+
+      .you-inner:hover {
+        background-color: #2d324d;
+
+        color: #fff;
+      }
+    }
+
+    &.small {
+      img {
+        margin: 0 1em;
+        padding: 1em;
+        height: 2em;
+      }
+
+      .you {
+        .you-inner {
+          $border-width: 2px;
+
+          margin: 0 $font-size;
+          border: $border-width dashed #24487c;
+          padding: $font-size - ($border-width) 2 * $font-size;
+          height: 2 * $font-size;
+
+          font-size: 2em;
+          line-height: 2 * $font-size;
+        }
+      }
     }
   }
 
@@ -39,13 +110,13 @@
 }
 
 @media (min-width: $desktop-min-width) {
-.sponsors {
+#sponsors {
   width: $component-width-desktop;
 }
 }
 
 @media (max-width: $mobile-max-width) {
-.sponsors {
+#sponsors {
   width: $component-width-mobile;
 }
 }

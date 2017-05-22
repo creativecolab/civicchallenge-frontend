@@ -1,62 +1,50 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+/* eslint-disable max-len */
+
+import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import styles from './Landing.scss';
-
-import Header from './components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
 import ChallengeText from './components/ChallengeText/ChallengeText';
 import Process from './components/Process/Process';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
+import About from './components/About/About';
 import Sponsors from './components/Sponsors/Sponsors';
-import Footer from './components/Footer/Footer';
+
+import styles from './Landing.scss';
 
 /**
  * Landing
  */
 
-class Landing extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isMounted: false };
-  }
+const propTypes = {};
 
-  componentDidMount() {
-    this.setState({ isMounted: true });
-  }
-
-  render() {
-    const scrollElements = {};
-    const refHandler = key => (el) => {
-      if (el) {
-        scrollElements[key] = el.rootElement;
-      }
-    };
-
-    return (
-      <div className={styles.landing}>
-        <Helmet
-          title="Landing"
-        />
-        <Header scrollElements={scrollElements} />
-        <ChallengeText />
-        <Process ref={refHandler('process')} />
-        <ChallengeGrid ref={refHandler('challenges')} />
-        <Sponsors ref={refHandler('sponsors')} />
-        <Footer ref={refHandler('contact')} />
-      </div>
-    );
-  }
-}
-
-function mapStateToProps() {
-  return {};
-}
-
-Landing.propTypes = {};
-
-Landing.contextTypes = {
+const contextTypes = {
   router: PropTypes.object,
 };
 
-export default connect(mapStateToProps)(Landing);
+const defaultProps = {};
+
+function Landing() {
+  return (
+    <div className={styles.landing}>
+      <Helmet
+        title="Landing"
+      />
+      <Navbar />
+      <ChallengeText />
+      <Process />
+      <ChallengeGrid />
+      <About />
+      <Sponsors />
+      <Footer />
+    </div>
+  );
+}
+
+Landing.propTypes = propTypes;
+Landing.contextTypes = contextTypes;
+Landing.defaultProps = defaultProps;
+
+export default Landing;

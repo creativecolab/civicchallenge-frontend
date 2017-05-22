@@ -4,6 +4,7 @@ $component-spacing: 3em;
 
 .challenge-grid {
   margin: $component-vertical-margin auto;
+  margin-bottom: 0; // TEMP
 
   .challenges {
     width: 100%;

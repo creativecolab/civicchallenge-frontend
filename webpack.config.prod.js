@@ -17,33 +17,24 @@ const jsPreModule = require('./webpack-modules/js-pre-module');
 const jsModule = require('./webpack-modules/js-module');
 const jsonModule = require('./webpack-modules/json-module');
 
-const env = process.env.NODE_ENV;
-const prod = env === 'production';
-
 const rules = [
   sassModule,
   imgModule,
   jsPreModule,
   jsModule,
   jsonModule,
-].map(module => module(prod));
+].map(module => module(true));
 
 module.exports = {
   entry: {
     app: [
-      // 'babel-polyfill',
-      'regenerator-runtime/runtime',
       './client/index.jsx',
     ],
     vendor: [
-      'es6-promise',
-      'isomorphic-fetch',
       'react',
       'react-dom',
-      'react-helmet',
       'react-redux',
       'react-router',
-      'react-ga',
       'redux',
     ],
   },
@@ -51,6 +42,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'client-dist'),
     filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[id].[chunkhash].js',
     publicPath: '/',
   },
 
@@ -106,10 +98,10 @@ module.exports = {
     new ImageminPlugin({
       test: /\.(jpe?g|gif|png|svg)$/i,
       optipng: {
-        optimizationLevel: 7, // 3,
+        optimizationLevel: 3,
       },
       gifsicle: {
-        optimizationLevel: 3, // 1,
+        optimizationLevel: 1,
       },
       jpegtran: {
         progressive: false,

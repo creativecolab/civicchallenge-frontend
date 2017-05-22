@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './LazyImage.scss';
 
@@ -6,18 +7,24 @@ import styles from './LazyImage.scss';
  * LazyImage
  */
 
-class LazyImage extends Component {
+const propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};
+
+const contextTypes = {};
+
+const defaultProps = {};
+
+class LazyImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMounted: false,
       loaded: false,
     };
   }
 
   componentDidMount() {
-    this.setState({ isMounted: true });
-
     const img = new Image();
     img.onload = () => {
       this.setState({ loaded: true });
@@ -37,12 +44,8 @@ class LazyImage extends Component {
   }
 }
 
-LazyImage.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-};
-
-LazyImage.contextTypes = {
-};
+LazyImage.propTypes = propTypes;
+LazyImage.contextTypes = contextTypes;
+LazyImage.defaultProps = defaultProps;
 
 export default LazyImage;

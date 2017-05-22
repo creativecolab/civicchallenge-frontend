@@ -1,6 +1,9 @@
 /* eslint-disable max-len */
 
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withCollectRef } from 'util/RefCollector';
+
 import classNames from 'util/classNames';
 
 import LazyImage from 'components/LazyImage/LazyImage';
@@ -16,29 +19,7 @@ import traffic from './traffic.png';
 import autonomousCars from './autonomous-cars.png';
 
 /**
- * Challenge Box
- */
-
-const ChallengeBox = (props) => {
-  return (
-    <div className={styles.challenge}>
-      <div className={styles.text}>
-        <span className={styles.name}>{props.name}</span>
-        <span className={styles.description}>{props.description}</span>
-      </div>
-      <LazyImage src={props.image} alt={props.name} />
-    </div>
-  );
-};
-
-ChallengeBox.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-};
-
-/**
- * ChallengeGrid
+ * Constants
  */
 
 const CHALLENGES = [
@@ -79,42 +60,67 @@ const CHALLENGES = [
   },
 ];
 
-class ChallengeGrid extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isMounted: false };
-  }
 
-  componentDidMount() {
-    this.setState({ isMounted: true });
-  }
+/**
+ * ChallengeBox
+ */
 
-  render() {
-    return (
-      <section className={styles.challengeGrid} ref={(element) => { this.rootElement = element; }}>
-        <div className={styles.challenges}>
-          {CHALLENGES.map(challenge =>
-            <ChallengeBox
-              key={challenge.name}
-              {...challenge}
-            />
-          )}
-          <div className={classNames([styles.challenge, styles.placeholder])}>
-            <div className={styles.text}>
-              <span className={styles.name}>Suggest a Challenge</span>
-              <span className={styles.description}>Please email <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+function ChallengeBox({ name, description, image }) {
+  return (
+    <div className={styles.challenge}>
+      <div className={styles.text}>
+        <span className={styles.name}>{name}</span>
+        <span className={styles.description}>{description}</span>
+      </div>
+      <LazyImage src={image} alt={name} />
+    </div>
+  );
 }
 
-ChallengeGrid.propTypes = {};
+ChallengeBox.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
-ChallengeGrid.contextTypes = {
+
+/**
+ * ChallengeGrid
+ */
+
+const propTypes = {
+  componentRef: PropTypes.func.isRequired,
+};
+
+const contextTypes = {
   router: PropTypes.object,
 };
 
-export default ChallengeGrid;
+const defaultProps = {};
+
+function ChallengeGrid(props) {
+  return (
+    <section className={styles.challengeGrid} ref={props.componentRef}>
+      <div className={styles.challenges}>
+        {CHALLENGES.map(challenge =>
+          <ChallengeBox
+            key={challenge.name}
+            {...challenge}
+          />
+        )}
+        <div className={classNames([styles.challenge, styles.placeholder])}>
+          <div className={styles.text}>
+            <span className={styles.name}>Suggest a Challenge</span>
+            <span className={styles.description}>Please email <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+ChallengeGrid.propTypes = propTypes;
+ChallengeGrid.contextTypes = contextTypes;
+ChallengeGrid.defaultProps = defaultProps;
+
+export default withCollectRef('Challenges')(ChallengeGrid);

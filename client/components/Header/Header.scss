@@ -1,0 +1,144 @@
+@import '~styles/variables';
+
+$navbar-height: 50px;
+
+$font-color: #fff;
+
+.header {
+  height: 50%;
+
+  position: relative;
+
+  color: $font-color;
+
+  .background {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    z-index: -1;
+
+    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
+  }
+
+  .navbar-container {
+    height: $navbar-height;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // background-color: #000;
+
+    .logo {
+    }
+
+    .navbar {
+    }
+
+    .logo, .navbar {
+      a {
+        margin: 0 10px;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $font-color;
+      }
+    }
+  }
+
+  .text-container {
+    height: calc(100% - #{$navbar-height});
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      text-align: center;
+
+      h1 {
+        margin: 0;
+
+        display: inline-block;
+        
+        font-size: 2.5 * $font-size;
+        font-weight: normal;
+      }
+
+      h2 {
+        margin: 0;
+        margin-bottom: 1.5 * $font-size;
+
+        font-size: 1.1 * $font-size;
+        font-weight: normal;
+      }
+
+      p {
+        opacity: 0.5;
+        font-size: 0.9em;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+
+        a {
+          margin: 0;
+          border: none;
+          border-top-left-radius: 10% 50%;
+          border-top-right-radius: 10% 50%;
+          border-bottom-left-radius: 10% 50%;
+          border-bottom-right-radius: 10% 50%;
+          padding: 0.5em 1.5em;
+
+          display: inline-block;
+          cursor: pointer;
+
+          background-color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: rgb(34, 78, 130);
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    // height: calc(100% - #{$navbar-height} - 2 * #{$offset});
+    height: calc(100% - #{$navbar-height});
+
+    z-index: -1;
+    position: absolute;
+    top: $navbar-height;
+
+    opacity: 0.1; // TEMP
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .header {
+    .text {
+      width: $component-width-desktop;
+
+      h1 {
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .header {
+    .text {
+      width: $component-width-mobile;
+
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  }
+}

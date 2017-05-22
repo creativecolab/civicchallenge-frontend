@@ -4,73 +4,31 @@ $navbar-height: 50px;
 
 $font-color: #fff;
 
-.header {
-  height: 50%;
-
+#about {
+  padding: 5em 0;
   position: relative;
 
+  background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
   color: $font-color;
 
-  .background {
-    height: 100%;
-    width: 100%;
-
-    position: absolute;
-    z-index: -1;
-
-    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
-  }
-
-  .navbar-container {
-    $border-width: 1px;
-
-    border-bottom: $border-width solid rgba(255, 255, 255, 0.5);
-    height: $navbar-height - $border-width;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .logo {
-      margin: 0 10px;
-    }
-
-    .navbar {
-      .navbar-button {
-        margin: 0 10px;
-        border: 0;
-        padding: 0;
-
-        cursor: pointer;
-        outline: none;
-
-        background-color: rgba(0,0,0,0);
-        font: inherit;
-        font-size: 0.8em;
-        font-weight: normal;
-        text-transform: uppercase;
-        color: $font-color;
-      }
-    }
-  }
-
   .text-container {
-    height: calc(100% - #{$navbar-height});
+    margin: 0 auto;
+    width: 750px;
+    height: 100%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
 
     .text {
-      text-align: center;
+      text-align: left;
 
       h1 {
         margin: 0;
-        margin-bottom: 0.25 * $font-size;
 
         display: inline-block;
         
-        font-size: 2.5 * $font-size;
+        font-size: $font-size;
         font-weight: normal;
       }
 
@@ -81,11 +39,17 @@ $font-color: #fff;
         font-size: 1.1 * $font-size;
         font-weight: normal;
       }
+      div.title {
+        text-align: center;
+        h3 {
+          font-size: 1.5em;
+          display: inline-block;
+        }
+      }
 
-      p {
-        opacity: 0.5;
+      .description {
+        opacity: 0.75;
         font-size: 0.9em;
-        padding-bottom: 0.3em;
       }
 
       .button-container {
@@ -113,20 +77,8 @@ $font-color: #fff;
       }
     }
   }
-
-  img {
-    $offset: 10px;
-
-    width: 100%;
-    height: calc(100% - #{$navbar-height} - 2 * #{$offset});
-
-    z-index: -1;
-    position: absolute;
-    top: $navbar-height + $offset;
-
-    opacity: 0.1;
-  }
 }
+
 
 @media (min-width: $desktop-min-width) {
   .header {

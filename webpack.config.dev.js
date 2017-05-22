@@ -31,26 +31,18 @@ module.exports = {
       'webpack-hot-middleware/client?timeout=2000&reload=true&noInfo=true',
       'webpack/hot/only-dev-server',
       'react-hot-loader/patch',
-      // 'babel-polyfill',
-      'regenerator-runtime/runtime',
       './client/index.jsx',
     ],
     vendor: [
-      'es6-promise',
-      'isomorphic-fetch',
       'react',
       'react-dom',
-      'react-helmet',
-      'react-redux',
-      'react-router',
-      'react-ga',
-      'redux',
     ],
   },
 
   output: {
     path: __dirname,
     filename: 'app.js',
+    chunkFilename: '[name].[id].js',
     publicPath: '/',
   },
 

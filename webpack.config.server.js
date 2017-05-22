@@ -14,6 +14,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'server-dist'),
     filename: 'server.bundle.js',
+    chunkFilename: 'server.[name].[id].js',
   },
 
   target: 'node',
@@ -61,7 +62,7 @@ module.exports = {
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       'process.env.browser': JSON.stringify(false),
     }),
     new ExternalsPlugin({
