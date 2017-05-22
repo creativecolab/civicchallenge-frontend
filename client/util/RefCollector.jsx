@@ -20,18 +20,16 @@ export function reset() {
  * withCollectRef
  */
 
-export function withCollectRef(ComposedComponent) {
-  const composedComponentDisplayName = getDisplayName(ComposedComponent);
-
+export const withCollectRef = name => (ComposedComponent) => {
   function CollectRefHOC(props) {
     return (
-      <ComposedComponent {...props} componentRef={(el) => { refs[composedComponentDisplayName] = el; }} />
+      <ComposedComponent {...props} componentRef={(el) => { refs[name] = el; }} />
     );
   }
 
-  CollectRefHOC.displayName = `withCollectRef(${composedComponentDisplayName})`;
+  CollectRefHOC.displayName = `withCollectRef(${getDisplayName(ComposedComponent)})`;
   return CollectRefHOC;
-}
+};
 
 
 /**

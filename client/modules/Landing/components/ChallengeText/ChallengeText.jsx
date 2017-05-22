@@ -44,4 +44,4 @@ ChallengeText.propTypes = propTypes;
 ChallengeText.contextTypes = contextTypes;
 ChallengeText.defaultProps = defaultProps;
 
-export default withCollectRef(ChallengeText);
+export default withCollectRef('Challenges')(ChallengeText);

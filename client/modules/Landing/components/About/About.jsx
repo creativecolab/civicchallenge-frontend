@@ -46,4 +46,4 @@ About.propTypes = propTypes;
 About.contextTypes = contextTypes;
 About.defaultProps = defaultProps;
 
-export default withCollectRef(About);
+export default withCollectRef('About')(About);

@@ -10,7 +10,7 @@
     "/* Dev Scripts */": "",
     "dev": "cross-env BABEL_DISABLE_CACHE=1 DEBUG=server:* NODE_ENV=development nodemon index.js",
     "/* Staging Scripts */": "",
-    "start:stage": "cross-env DEBUG=server:* NODE_ENV=production node index.js",
+    "start:stage": "cross-env DEBUG=server:* NODE_ENV=production PORT=8080 node index.js",
     "deploy:stage": "git push heroku dev:master",
     "heroku-postbuild": "yarn build:all",
     "/* Build Scripts */": "",

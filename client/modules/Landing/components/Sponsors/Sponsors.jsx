@@ -96,4 +96,4 @@ Sponsors.propTypes = propTypes;
 Sponsors.contextTypes = contextTypes;
 Sponsors.defaultProps = defaultProps;
 
-export default withCollectRef(Sponsors);
+export default withCollectRef('Sponsors')(Sponsors);

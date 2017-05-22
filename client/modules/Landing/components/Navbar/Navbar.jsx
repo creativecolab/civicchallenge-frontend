@@ -29,18 +29,9 @@ const LINKS = [
 */
 
 const NAVBAR_ITEMS = [
-  {
-    name: 'Challenges',
-    key: 'ChallengeText',
-  },
-  {
-    name: 'About',
-    key: 'About',
-  },
-  {
-    name: 'Sponsors',
-    key: 'Sponsors',
-  },
+  'Challenges',
+  'About',
+  'Sponsors',
 ];
 
 const LINKS = [];
@@ -97,14 +88,14 @@ class Navbar extends React.Component {
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
             <Link key={text} to={href}>{text}</Link>
           )}
-          {NAVBAR_ITEMS.map(({ name, key }) => (
+          {NAVBAR_ITEMS.map(key =>
             <button
               key={key}
               onClick={this._onNavbarItemClickGenerator(key)}
             >
-              {name}
+              {key}
             </button>
-          ))}
+          )}
         </nav>
       </div>
     );
