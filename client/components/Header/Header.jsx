@@ -8,6 +8,7 @@ import styles from './Header.scss';
  * Constants
  */
 
+/*
 const LINKS = [
   {
     href: '/sponsors',
@@ -18,6 +19,9 @@ const LINKS = [
     text: 'Team',
   },
 ];
+*/
+
+const LINKS = [];
 
 
 /**

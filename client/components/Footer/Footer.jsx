@@ -2,13 +2,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 
 import styles from './Footer.scss';
 
-import designLabLogo from './design-lab-logo.png';
-import designForwardLogo from './design-forward-logo.png';
-import protolabLogo from './protolab-logo.png';
+// import designLabLogo from './design-lab-logo.png';
+// import designForwardLogo from './design-forward-logo.png';
+// import protolabLogo from './protolab-logo.png';
 
 /**
  * Constants
@@ -16,6 +16,7 @@ import protolabLogo from './protolab-logo.png';
 
 const START_YEAR = 2017;
 
+/*
 const LOCAL_LINKS = [
   {
     href: '/',
@@ -48,6 +49,7 @@ const AFFILIATE_LINKS = [
     alt: 'Protolab',
   },
 ];
+*/
 
 
 /**
@@ -62,12 +64,18 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Footer(props, { router }) {
+// function Footer(props, { router }) {
+function Footer() {
   const currentYear = (new Date()).getFullYear();
   const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
 
   return (
     <footer className={styles.footer}>
+      <div className={styles.copyright}>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change.</div>
+    </footer>
+  );
+
+  /*
       <div className={styles.name}>D4SD</div>
       <div className={styles.navigate}>
         <h4>Navigate</h4>
@@ -87,9 +95,7 @@ function Footer(props, { router }) {
           ))}
         </nav>
       </div>
-      <div className={styles.copyright}>Copyright &copy; {copyrightYear} Design 4 San Diego. All Rights Reserved. This website is under construction and is subject to change.</div>
-    </footer>
-  );
+  */
 }
 
 Footer.propTypes = propTypes;

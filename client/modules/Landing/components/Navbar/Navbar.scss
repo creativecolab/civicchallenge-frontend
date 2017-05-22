@@ -1,0 +1,32 @@
+@import '~styles/variables';
+
+$navbar-height: 50px;
+
+$font-color: #fff;
+
+.navbar-container {
+  height: $navbar-height;
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgb(36, 72, 124);
+
+  .logo {
+  }
+
+  .navbar {
+  }
+
+  .logo, .navbar {
+    a {
+      margin: 0 10px;
+
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $font-color;
+    }
+  }
+}

@@ -6,6 +6,36 @@ import PropTypes from 'prop-types';
 import globalStyles from 'main.scss';
 import styles from './Sponsors.scss';
 
+import designLabLogo from './design-lab-logo.png';
+import designForwardLogo from './design-forward-logo.png';
+import protolabLogo from './protolab-logo.png';
+
+/**
+ * Constants
+ */
+
+const T1_SPONSORS = [
+  {
+    href: 'http://designlab.ucsd.edu/',
+    img: designLabLogo,
+    alt: 'UC San Diego Design Lab',
+  },
+];
+
+const FRIENDS = [
+  {
+    href: 'https://designforwardsd.com/',
+    img: designForwardLogo,
+    alt: 'Design Forward Alliance',
+  },
+  {
+    href: 'http://protolab.ucsd.edu/',
+    img: protolabLogo,
+    alt: 'Protolab',
+  },
+];
+
+
 /**
  * Sponsors
  */
@@ -20,9 +50,40 @@ const defaultProps = {};
 
 function Sponsors() {
   return (
-    <section className={styles.sponsors}>
+    <section id={styles.sponsors}>
       <h3 className={globalStyles.ul}>Sponsors</h3>
-      <p className={styles.placeholder}>We are currently putting together our sponsorship model. If you would like to be part of this initiative, please reach out to <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>.</p>
+      <h4 className={styles.tier}>Tier 1 Sponsors</h4>
+      <div className={styles.sponsorList}>
+        {T1_SPONSORS.map(({ href, img, alt }) => (
+          <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+            <img className={styles.backgroundFill} src={img} alt={alt} />
+          </a>
+        ))}
+        <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <div className={styles.youInner}>You?</div>
+        </a>
+      </div>
+      <div className={styles.text}>
+        We are currently seeking additional partners to sponsor our 2017 civic challenge around issues of mobility in San Diego. Key benefits include:
+        <ul>
+          <li>Access to top talent:  meet students, designers, and other local talent</li>
+          <li>Shape a design brief: help inform and craft a design brief related to mobility</li>
+          <li>Invitations to events: join us for local meetups with D4SD and Design Forward</li>
+        </ul>
+
+        If you are interested in learning more and to talk about the sponsorship model and the initiative in general, please reach out to <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>
+      </div>
+      <h4 className={styles.tier}>Friends of D4SD</h4>
+      <div className={styles.sponsorList}>
+        {FRIENDS.map(({ href, img, alt }) => (
+          <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+            <img className={styles.backgroundFill} src={img} alt={alt} />
+          </a>
+        ))}
+        <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <div className={styles.youInner}>You?</div>
+        </a>
+      </div>
     </section>
   );
 }

@@ -4,52 +4,17 @@ $navbar-height: 50px;
 
 $font-color: #fff;
 
-.header {
-  height: 50%;
-
+#about {
+  padding: 5em 0;
   position: relative;
 
+  background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
   color: $font-color;
 
-  .background {
-    height: 100%;
-    width: 100%;
-
-    position: absolute;
-    z-index: -1;
-
-    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
-  }
-
-  .navbar-container {
-    height: $navbar-height;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    // background-color: #000;
-
-    .logo {
-    }
-
-    .navbar {
-    }
-
-    .logo, .navbar {
-      a {
-        margin: 0 10px;
-
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $font-color;
-      }
-    }
-  }
-
   .text-container {
-    height: calc(100% - #{$navbar-height});
+    margin: 0 auto;
+    width: 750px;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -104,18 +69,6 @@ $font-color: #fff;
         }
       }
     }
-  }
-
-  img {
-    width: 100%;
-    // height: calc(100% - #{$navbar-height} - 2 * #{$offset});
-    height: calc(100% - #{$navbar-height});
-
-    z-index: -1;
-    position: absolute;
-    top: $navbar-height;
-
-    opacity: 0.1; // TEMP
   }
 }
 
