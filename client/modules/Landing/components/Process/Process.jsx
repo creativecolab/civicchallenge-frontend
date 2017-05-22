@@ -35,7 +35,7 @@ const TIMELINE_ITEMS = [
     image: propose,
     months: 'August - September',
     title: 'Prototype Concepts',
-    description: 'Form teams to build mockups of solutions and get feedback',
+    description: 'Form teams to build mockups of solutions and get feedback <br /> from stakeholders',
   },
   {
     image: implement,

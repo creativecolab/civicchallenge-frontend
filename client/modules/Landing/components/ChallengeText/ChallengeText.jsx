@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withCollectRef } from 'util/RefCollector';
 
 import styles from './ChallengeText.scss';
 
@@ -10,9 +9,7 @@ import styles from './ChallengeText.scss';
  * ChallengeText
  */
 
-const propTypes = {
-  componentRef: PropTypes.func.isRequired,
-};
+const propTypes = {};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -20,15 +17,14 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ChallengeText(props) {
+function ChallengeText() {
   return (
-    <section className={styles.challengeText} ref={props.componentRef}>
+    <section className={styles.challengeText}>
       <div className={styles.header}>
         <h3>
           <span className={styles.text1}>Civic Challenge:</span>
           <br />
           <span className={styles.text2}>Mobility</span>
-          <br />
           <div className={styles.button}>
             <div className={styles.buttonContainer}>
               <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
@@ -45,4 +41,4 @@ ChallengeText.propTypes = propTypes;
 ChallengeText.contextTypes = contextTypes;
 ChallengeText.defaultProps = defaultProps;
 
-export default withCollectRef('Challenges')(ChallengeText);
+export default ChallengeText;

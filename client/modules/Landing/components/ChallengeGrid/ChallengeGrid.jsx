@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withCollectRef } from 'util/RefCollector';
 
 import classNames from 'util/classNames';
 
@@ -87,7 +88,9 @@ ChallengeBox.propTypes = {
  * ChallengeGrid
  */
 
-const propTypes = {};
+const propTypes = {
+  componentRef: PropTypes.func.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -95,9 +98,9 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ChallengeGrid() {
+function ChallengeGrid(props) {
   return (
-    <section className={styles.challengeGrid}>
+    <section className={styles.challengeGrid} ref={props.componentRef}>
       <div className={styles.challenges}>
         {CHALLENGES.map(challenge =>
           <ChallengeBox
@@ -120,4 +123,4 @@ ChallengeGrid.propTypes = propTypes;
 ChallengeGrid.contextTypes = contextTypes;
 ChallengeGrid.defaultProps = defaultProps;
 
-export default ChallengeGrid;
+export default withCollectRef('Challenges')(ChallengeGrid);
