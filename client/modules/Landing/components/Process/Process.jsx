@@ -29,7 +29,7 @@ const TIMELINE_ITEMS = [
     image: ideate,
     months: 'June - July',
     title: 'Ideate Solutions',
-    description: 'Generate multiple creative  solutions to address the key challenges',
+    description: 'Generate multiple creative  solutions to address the\n key challenges',
   },
   {
     image: propose,
