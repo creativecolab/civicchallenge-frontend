@@ -10,6 +10,9 @@ import Footer from 'components/Footer/Footer';
 import globalStyles from 'main.scss';
 import styles from './Challenge.scss';
 
+import Questions from './components/Questions/Questions';
+import Resources from './components/Resources/Resources';
+
 /**
  * Challenge
  */
@@ -77,16 +80,8 @@ class Challenges extends Component {
           <p>{challenge.name}</p>
           <p>{challenge.phase}</p>
           <p>{challenge.description}</p>
-          <div>
-            {challenge.resources.map(resource =>
-              <a ref={resource.id} href={resource.url}>{resource.name}</a>
-            )}
-          </div>
-          <div>
-            {challenge.questions.map(question =>
-              <p>{question.text}</p>
-            )}
-          </div>
+          <Resources resources={challenge.resources} />
+          <Questions questions={challenge.questions} />
         </div>
         <Footer />
       </section>
