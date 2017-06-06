@@ -213,8 +213,8 @@ window.webpackManifest = ${JSON.stringify(chunkManifest)};
     <body>
       <div id="root" data-reactmount>${initialView}</div>
       <script nonce="${scriptNonce}">${manifestScript}</script>
-      <script defer src="${prod ? assetsManifest['/vendor.js'] : './vendor.js'}"></script>
-      <script defer src="${prod ? assetsManifest['/app.js'] : './app.js'}"></script>
+      <script defer src="${prod ? assetsManifest['/vendor.js'] : '/vendor.js'}"></script>
+      <script defer src="${prod ? assetsManifest['/app.js'] : '/app.js'}"></script>
     </body>
     </html>
   `;
