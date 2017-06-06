@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classNames from 'util/classNames';
-
 import globalStyles from 'main.scss';
-import styles from './Category.scss';
 
 /**
  * Challenge
@@ -42,7 +39,7 @@ const defaultProps = {};
 
 function Category(props) {
   return (
-    <section className={classNames([styles.category, globalStyles.textContainer])}>
+    <section className={globalStyles.textContainer}>
       <h3>{props.name}</h3>
       <p>{props.description}</p>
       <ul>
