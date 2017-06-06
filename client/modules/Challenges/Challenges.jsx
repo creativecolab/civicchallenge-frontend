@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
@@ -10,33 +10,6 @@ import Info from './components/Info/Info';
 import Category from './components/Category/Category';
 
 import styles from './Challenges.scss';
-
-const CATEGORIES = [
-  {
-    name: 'Urban Planning',
-    description: 'Description',
-    challenges: [
-      {
-        name: '14th Street',
-      },
-      {
-        name: 'Gaslamp',
-      },
-    ],
-  },
-  {
-    name: 'Category 2',
-    description: 'Description',
-    challenges: [
-      {
-        name: 'Challenge 1',
-      },
-      {
-        name: 'Challenge 2',
-      },
-    ],
-  },
-];
 
 /**
  * Challenges
@@ -50,27 +23,44 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Challenges() {
-  return (
-    <div className={styles.challenges}>
-      <Helmet
-        title="Challenges"
-      />
-      <Header
-        backgroundImg={''}
-        headerText={'Challenges'}
-        subheaderText={''}
-        showButton={false}
-      />
-      <Info />
-      <div>
-        {CATEGORIES.map(category =>
-          <Category key={category.name} {...category} />
-        )}
-      </div>
-      <Footer />
-    </div>
-  );
+class Challenges extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { categories: [] };
+  }
+
+  componentDidMount() {
+    fetch('https://d4sd-api.ucsd.edu/categories?challenges=true')
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({ categories: data.categories });
+      });
+  }
+
+  render() {
+    return (
+      <section className={styles.challenges}>
+        <Helmet
+          title="Challenges"
+        />
+        <Header
+          backgroundImg={''}
+          headerText={'Challenges'}
+          subheaderText={''}
+          showButton={false}
+        />
+        <Info />
+        <div>
+          {this.state.categories.map(category =>
+            <Category key={category.name} {...category} />
+          )}
+        </div>
+        <Footer />
+      </section>
+    );
+  }
 }
 
 Challenges.propTypes = propTypes;
