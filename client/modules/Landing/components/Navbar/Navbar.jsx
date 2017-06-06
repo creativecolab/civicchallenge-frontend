@@ -15,26 +15,17 @@ if (process.env.browser) {
  * Constants
  */
 
-/*
-const LINKS = [
-  {
-    href: '/sponsors',
-    text: 'Sponsors',
-  },
-  {
-    href: '/team',
-    text: 'Team',
-  },
-];
-*/
-
 const NAVBAR_ITEMS = [
-  'Challenges',
   'About',
   'Sponsors',
 ];
 
-const LINKS = [];
+const LINKS = [
+  {
+    href: '/challenges',
+    text: 'Challenges',
+  },
+];
 
 const SCROLL_PX_PER_MS = 1000;
 
