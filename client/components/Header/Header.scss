@@ -45,6 +45,25 @@ $font-color: #fff;
         text-transform: uppercase;
         color: $font-color;
       }
+
+      a,button {
+        margin: 0 10px;
+        border: none;
+        padding: 0;
+
+        outline: none;
+        cursor: pointer;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-size: 0.75 * $font-size;
+        color: $font-color;
+      }
+
+      .active {
+        border-bottom: 1px solid white;
+      }
     }
   }
 
