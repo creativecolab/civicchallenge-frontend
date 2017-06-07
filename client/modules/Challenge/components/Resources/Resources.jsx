@@ -3,12 +3,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './Resources.scss';
+
 /**
  * Resource
  */
 function Resource({ name, url }) {
   return (
-    <a href={url}>{name}</a>
+    <a href={url} rel="noopener noreferrer" target="_blank" className={styles.resource}>
+      {name}
+    </a>
   );
 }
 
@@ -28,7 +32,7 @@ Resource.defaultProps = {};
  */
 function Resources({ resources }) {
   return (
-    <div>
+    <div className={styles.resources}>
       {resources.map(resource => (
         <Resource key={resource.id} {...resource} />
       ))}

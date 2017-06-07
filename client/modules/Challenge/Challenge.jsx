@@ -45,6 +45,14 @@ class Challenges extends Component {
             type: 'link',
             phase: 0,
           },
+          {
+            id: 2,
+            name: 'Resource 2',
+            url: 'http://graham.net/voluptatibus-occaecati-similique-ut-omnis',
+            description: 'Resource description',
+            type: 'link',
+            phase: 0,
+          },
         ],
         questions: [
           {
