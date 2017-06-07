@@ -27,6 +27,14 @@ $component-spacing: 3em;
 
       text-align: center;
 
+      .inactive {
+        opacity: 0.5;
+      }
+
+      .past {
+        opacity: 1;
+      }
+
       .circles-container {
         display: flex;
 
@@ -141,6 +149,10 @@ $component-spacing: 3em;
           font-size: 0.8em;
           color: rgb(69, 76, 119);
         }
+      }
+
+      .inactive-text {
+        opacity: 0.5;
       }
     }
   }
