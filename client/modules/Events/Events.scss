@@ -2,46 +2,35 @@
 	height: 100%;
 	width: 100%;
 
-	header {
+	div.eventsGrid {
 		height: 30%;
-		width: 100%;
-		background-image: url("./header-bg.png");
-
-		display: flex;
-		align-items: center;
-
-		justify-content: center;
-
-		
-		div.headerText {
-			h3 {
-				margin: 0;
-				color: #fff;
-				font-size: 2em;
-			}
-		}
-	}
-	div.eventsGrid{
-		width: 80%;
-		height: 100%;
-
-		margin: 0 auto;
+		margin: 5% 20%;
 
 		div.eventsRow {
-			height: 30%;
-			background-color: blue;
-
-			margin: 20px 0;
-
+			width: 100%;
+			height: 300px;
 			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			div.eventsElement{
+			
+			div.eventsElement {
 				width: 30%;
-				height: 100%;
+				margin: 20px;
+				background-color: #4286f4;
 
-				background-color: red;
+				div.eventsContent {
+					height: 100%;
+					margin: 10%;
+
+					h4, p {
+						margin: 0;
+					}
+
+					div.eventsImg {
+						min-height: 70%;
+					}
+					div.eventsContent {
+						min-height: 50%;
+					}
+				}
 			}
 		}
 	}

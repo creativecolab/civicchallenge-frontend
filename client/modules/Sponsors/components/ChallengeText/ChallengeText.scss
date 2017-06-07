@@ -1,9 +1,18 @@
 @import '~styles/variables';
 
+$call-to-action-bckground: #ededed;
+
 #sponsors {
   margin: $component-vertical-margin auto;
 
-  text-align: center;
+
+  div.tierBlock {
+    hr {
+      margin: 30px;
+
+      opacity: 0.3;
+    }
+  }
 
   h3 {
     margin: 0;
@@ -20,6 +29,8 @@
     margin: 1em 0;
 
     font-size: 1.25em;
+
+    text-align: center;
   }
 
   .text {
@@ -39,6 +50,7 @@
   }
 
   .sponsor-list {
+    text-align: center;
     img {
       margin: 0 1em;
       padding: 1em;
@@ -47,6 +59,7 @@
       cursor: pointer;
 
       background-color: #24487c;
+
     }
 
     img:hover {
@@ -106,6 +119,17 @@
     a {
       color: rgb(99, 104, 139) !important;
     }
+  }
+  .callToAction {
+    background-color: $call-to-action-bckground;
+    padding: 20px 40px;
+  }
+  .sponsorEmail {
+    padding: 10px;
+    background-color: black;
+
+    text-decoration: none;
+    color: #fff;
   }
 }
 

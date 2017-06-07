@@ -9,6 +9,27 @@ import globalStyles from 'main.scss';
 import styles from './About.scss';
 
 import Team from './components/Team/Team';
+
+import designForwardLogo from './design-forward-logo.png';
+import protolabLogo from './protolab-logo.png';
+
+/**
+ * Constants
+ */
+
+const AFFILIATES = [
+  {
+    href: 'https://designforwardsd.com/',
+    img: designForwardLogo,
+    alt: 'Design Forward Alliance',
+  },
+  {
+    href: 'http://protolab.ucsd.edu/',
+    img: protolabLogo,
+    alt: 'Protolab',
+  },
+];
+
 /**
  * About
  */
@@ -52,7 +73,11 @@ function About() {
             <h3 className={globalStyles.ul}>Affiliaties</h3>
           </div>
           <div className={styles.affilities}>
-            to fill in
+            {AFFILIATES.map(({ href, img, alt }) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                <img className={styles.backgroundFill} src={img} alt={alt} />
+              </a>
+            ))}
           </div>
         </div>
         <div className={styles.titleText}>

@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Navbar from './components/Navbar/Navbar';
+import Helmet from 'react-helmet';
+
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 import styles from './Events.scss';
 
@@ -19,25 +22,41 @@ const defaultProps = {};
 function Events() {
   return (
     <div className={styles.events}>
-      <Navbar />
-      <header>
-        <div className={styles.headerText}>
-          <h3>Events</h3>
-        </div>
-      </header>
+      <Helmet
+        title="Events"
+      />
+      <Header
+        backgroundImg={''}
+        headerText="Events"
+        subheaderText={''}
+        showButton={false}
+      />
       <div className={styles.eventsGrid}>
         <div className={styles.eventsRow}>
           <div className={styles.eventsElement}>
-            <h3>Event</h3>
+            <div className={styles.eventsContent}>
+              <h3>Event</h3>
+              <h4>Date</h4>
+              <p>Description goes here</p>
+            </div>
           </div>
           <div className={styles.eventsElement}>
-            <h3>Event</h3>
+            <div className={styles.eventsContent}>
+              <h3>Event</h3>
+              <h4>Date</h4>
+              <p>Description goes here</p>
+            </div>
           </div>
           <div className={styles.eventsElement}>
-            <h3>Event</h3>
+            <div className={styles.eventsContent}>
+              <h3>Event</h3>
+              <h4>Date</h4>
+              <p>Description goes here</p>
+            </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
