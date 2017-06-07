@@ -22,23 +22,9 @@ Challenge.propTypes = {
 
 Challenge.defaultProps = {};
 
-
 /**
  * Category
  */
-
-const propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  challenges: PropTypes.array.isRequired,
-};
-
-const contextTypes = {
-  router: PropTypes.object,
-};
-
-const defaultProps = {};
-
 function Category(props) {
   return (
     <section className={globalStyles.textContainer}>
@@ -51,8 +37,27 @@ function Category(props) {
   );
 }
 
-Category.propTypes = propTypes;
-Category.contextTypes = contextTypes;
-Category.defaultProps = defaultProps;
+Category.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  challenges: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
-export default Category;
+/**
+ * Categories
+ */
+function Categories(props) {
+  return (
+    <div>
+      {props.categories.map(category =>
+        <Category key={category.id} {...category} />
+      )}
+    </div>
+  );
+}
+
+Categories.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+export default Categories;

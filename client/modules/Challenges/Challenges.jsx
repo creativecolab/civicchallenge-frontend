@@ -7,7 +7,7 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Info from './components/Info/Info';
-import Category from './components/Category/Category';
+import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
 
@@ -53,9 +53,7 @@ class Challenges extends Component {
         />
         <Info />
         <div>
-          {this.state.categories.map(category =>
-            <Category key={category.name} {...category} />
-          )}
+          <Categories categories={this.state.categories} />
         </div>
         <Footer />
       </section>
