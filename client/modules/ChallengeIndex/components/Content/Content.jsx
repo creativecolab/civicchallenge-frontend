@@ -32,9 +32,13 @@ function Content(props) {
         </p>
       </div>
 
-      <div className={styles.indexGrid}>
+      <div id="table-of-contents" className={styles.TOC}>
+        <a href="#microchallenge-x">MICROCHALLENGE X TITLE</a>
+      </div>
+
+      <div id="microchallenge-x" className={styles.indexGrid} >
         <div className={styles.indexTitle}>
-          <h3>MICROCHALLENGE TITLE</h3>
+          <h3>MICROCHALLENGE X TITLE</h3>
         </div>
 
         <div className={styles.indexRow}>
@@ -52,34 +56,11 @@ function Content(props) {
             </p>
             <h5>Questions:</h5>
             <ul>
-              <li>1. Question 1</li>
-              <li>2. Question 2</li>
-              <li>3. Question 3</li>
+              <li>1. <a href="">Question 1</a></li>
+              <li>2. <a href="">Question 2</a></li>
+              <li>3.<a href="">Question 3</a></li>
             </ul>
-            <button> Learn More </button>
-          </div>
-        </div>
-
-        <div className={styles.indexRow}>
-          <div className={styles.indexPic}>
-            <p>IMG goes here</p>
-          </div>
-          <div className={styles.indexContent}>
-            <div className={styles.indexTimeline}>
-              <p>TIMELINE GOES HERE</p>
-            </div>
-            <h4>Title of the Challenge</h4>
-            <p>San Diego is culturally and economically diverse, as well as geographical
-            dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility
-            challenges below.
-            </p>
-            <h5>Questions:</h5>
-            <ul>
-              <li>1. Question 1</li>
-              <li>2. Question 2</li>
-              <li>3. Question 3</li>
-            </ul>
-            <button> Learn More </button>
+            <a href=""> Learn More </a>
           </div>
         </div>
       </div>

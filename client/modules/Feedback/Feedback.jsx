@@ -5,12 +5,10 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
-import Content from './components/Content/Content';
-
-import styles from './ChallengeIndex.scss';
+import styles from './Feedback.scss';
 
 /**
- * Placeholder
+ * Feedback
  */
 
 const propTypes = {};
@@ -21,26 +19,30 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ChallengeIndex() {
+function Feedback() {
   return (
-    <div className={styles.placeholder}>
+    <section className={styles.feedback}>
       <Helmet
-        title="Microchallenge Index"
+        title="Feedback"
       />
       <Header
         backgroundImg={''}
-        headerText={'Microchallenge Index'}
+        headerText={'Feedback'}
         subheaderText={''}
         showButton={false}
       />
-      <Content />
+
+      <section className={styles.content}>
+        <p>This is the Feedback page, content will be inserted here.</p>
+      </section>
+
       <Footer />
-    </div>
+    </section>
   );
 }
 
-ChallengeIndex.propTypes = propTypes;
-ChallengeIndex.contextTypes = contextTypes;
-ChallengeIndex.defaultProps = defaultProps;
+Feedback.propTypes = propTypes;
+Feedback.contextTypes = contextTypes;
+Feedback.defaultProps = defaultProps;
 
-export default ChallengeIndex;
+export default Feedback;
