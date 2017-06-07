@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import Navbar from './components/Navbar/Navbar';
 
 import styles from './Placeholder.scss';
 
@@ -16,12 +16,11 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Placeholder(props, { router }) {
+function Placeholder() {
   return (
     <div className={styles.placeholder}>
-      Path: {router.location.pathname}
-      <br />
-      <Link to="/">Back to homepage</Link>
+      <Navbar />
+      <p>This is the placeholder page</p>
     </div>
   );
 }

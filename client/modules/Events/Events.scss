@@ -1,5 +1,4 @@
-.about {
-
+.events {
 	height: 100%;
 	width: 100%;
 
@@ -22,19 +21,28 @@
 			}
 		}
 	}
-	div.contentText{
+	div.eventsGrid{
 		width: 80%;
-		margin: 0 auto;
-		div.titleText{
-			padding-top: 5%;
-			h3 {
-				font-size: 1.5em;
-				text-align: center;
-			}
-		}
+		height: 100%;
 
-		div.affilities{
-			text-align: center;
+		margin: 0 auto;
+
+		div.eventsRow {
+			height: 30%;
+			background-color: blue;
+
+			margin: 20px 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			div.eventsElement{
+				width: 30%;
+				height: 100%;
+
+				background-color: red;
+			}
 		}
 	}
 }
