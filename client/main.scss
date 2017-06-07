@@ -24,8 +24,18 @@ div[data-reactroot] {
 }
 
 .text-container {
-  width: 90%;
-  margin: 1em auto;
+  margin: 0 auto;
+  max-width: 750px;
+  height: 100%;
+  padding: 1em;
+}
+
+.title {
+  text-align: center;
+  h3 {
+    font-size: 1.5em;
+    display: inline-block;
+  }
 }
 
 /**

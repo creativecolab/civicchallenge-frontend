@@ -77,11 +77,25 @@ class Challenges extends Component {
           showButton={false}
         />
         <div className={globalStyles.textContainer}>
-          <p>{challenge.name}</p>
           <p>{challenge.phase}</p>
-          <p>{challenge.description}</p>
-          <Resources resources={challenge.resources} />
-          <Questions questions={challenge.questions} />
+          <div>
+            <div className={globalStyles.title}>
+              <h3 className={globalStyles.ul}>Background</h3>
+            </div>
+            <p>{challenge.description}</p>
+          </div>
+          <div>
+            <div className={globalStyles.title}>
+              <h3 className={globalStyles.ul}>Learn More</h3>
+            </div>
+            <Resources resources={challenge.resources} />
+          </div>
+          <div>
+            <div className={globalStyles.title}>
+              <h3 className={globalStyles.ul}>Join the Conversation</h3>
+            </div>
+            <Questions questions={challenge.questions} />
+          </div>
         </div>
         <Footer />
       </section>
