@@ -18,7 +18,9 @@ import Process from '../Landing/components/Process/Process';
  * Challenge
  */
 
-const propTypes = {};
+const propTypes = {
+  params: PropTypes.object.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -30,67 +32,18 @@ class Challenges extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      challenge: {
-        id: 1,
-        name: 'Challenge 1',
-        description: 'Challenge description',
-        thumbnail: '',
-        phase: 0,
-        resources: [
-          {
-            id: 1,
-            name: 'Resource 1',
-            url: 'http://graham.net/voluptatibus-occaecati-similique-ut-omnis',
-            description: 'Resource description',
-            type: 'link',
-            phase: 0,
-          },
-          {
-            id: 2,
-            name: 'Resource 2',
-            url: 'http://graham.net/voluptatibus-occaecati-similique-ut-omnis',
-            description: 'Resource description',
-            type: 'link',
-            phase: 0,
-          },
-        ],
-        questions: [
-          {
-            id: 1,
-            text: 'Question 1',
-            insights: [
-              {
-                text: 'Insight 1',
-                type: 1,
-              },
-              {
-                text: 'Insight 2',
-                type: 1,
-              },
-              {
-                text: 'Insight 3',
-                type: 1,
-              },
-              {
-                text: 'Insight 4',
-                type: 2,
-              },
-              {
-                text: 'Insight 5',
-                type: 2,
-              },
-              {
-                text: 'Insight 6',
-                type: 2,
-              },
-            ],
-          },
-        ],
-      },
+      challenge: {},
     };
   }
 
   componentDidMount() {
+    fetch(`https://d4sd-api.ucsd.edu/challenges/${this.props.params.id}?resources=true&questions=true&insights=true&groupInsightsByQuestion=true`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({ challenge: data.challenge });
+      });
   }
 
   render() {
