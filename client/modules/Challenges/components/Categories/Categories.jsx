@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
+import LazyImage from 'components/LazyImage/LazyImage';
+
 import styles from './Categories.scss';
 
 /**
@@ -12,7 +14,7 @@ function Challenge(props) {
     <div>
       <div className={styles.indexRow}>
         <div className={styles.indexPic}>
-          <p>IMG goes here</p>
+          <LazyImage src={props.thumbnail} alt={name} />
         </div>
 
         <div className={styles.indexContent}>
@@ -20,10 +22,7 @@ function Challenge(props) {
             <p>TIMELINE GOES HERE</p>
           </div>
           <h4>{props.name}</h4>
-          <p>San Diego is culturally and economically diverse, as well as geographical
-            dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility
-            challenges below.
-          </p>
+          <p>{props.summary}</p>
           <h5>Questions:</h5>
           <ol>
             {props.questions.map(question =>
@@ -40,10 +39,13 @@ function Challenge(props) {
 Challenge.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string,
   questions: PropTypes.arrayOf(PropTypes.object),
 };
 
 Challenge.defaultProps = {
+  thumbnail: null,
   questions: [],
 };
 
