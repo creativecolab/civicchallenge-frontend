@@ -125,6 +125,7 @@ app.use((req, res, next) => {
 
 const defaultSrc = [
   '\'self\'',
+  'https://d4sd-api.ucsd.edu',
 ];
 
 const scriptSrc = [
@@ -151,6 +152,7 @@ const imgSrc = [
 ];
 if (process.env.NODE_ENV !== 'production') {
   imgSrc.push('data:');
+  imgSrc.push('http://lorempixel.com');
 }
 
 app.use(helmet({

@@ -18,6 +18,7 @@ const getProcess = (nextState, cb) => require.ensure([], require => cb(null, req
 const getTeam = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Team/Team').default), 'team');
 const getChallengeIndex = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/ChallengeIndex/ChallengeIndex').default), 'challenge-index');
 const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'events');
+const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
 
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
@@ -32,8 +33,12 @@ export default (
     <Route path="/about" getComponent={getAbout} />
     <Route path="/process" getComponent={getProcess} />
     <Route path="/team" getComponent={getTeam} />
+<<<<<<< HEAD
     <Route path="/challenge-index" getComponent={getChallengeIndex} />
     <Route path="/events" getComponent={getEvents} />
+=======
+    <Route path="/challenges" getComponent={getChallenges} />
+>>>>>>> e528f2da8588f90df76335bbd8b54a022435d734
 
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
