@@ -16,7 +16,6 @@ if (process.env.browser) {
  */
 
 const NAVBAR_ITEMS = [
-  'About',
   'Sponsors',
 ];
 
