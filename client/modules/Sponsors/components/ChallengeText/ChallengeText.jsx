@@ -2,15 +2,47 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'util/classNames';
 
-import globalStyles from 'main.scss';
 import styles from './ChallengeText.scss';
 
+import designLabLogo from './design-lab-logo.png';
+import designForwardLogo from './design-forward-logo.png';
+import protolabLogo from './protolab-logo.png';
+
 /**
- * ChallengeText
+ * Constants
  */
 
-const propTypes = {};
+const T1_SPONSORS = [
+  {
+    href: 'http://designlab.ucsd.edu/',
+    img: designLabLogo,
+    alt: 'UC San Diego Design Lab',
+  },
+];
+
+const FRIENDS = [
+  {
+    href: 'https://designforwardsd.com/',
+    img: designForwardLogo,
+    alt: 'Design Forward Alliance',
+  },
+  {
+    href: 'http://protolab.ucsd.edu/',
+    img: protolabLogo,
+    alt: 'Protolab',
+  },
+];
+
+
+/**
+ * Sponsors
+ */
+
+const propTypes = {
+  componentRef: PropTypes.func.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -18,23 +50,40 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ChallengeText() {
+function ChallengeText(props) {
   return (
-    <section className={styles.challengeText}>
-      <div className={styles.action}>
-        <h3 className={globalStyles.ul}>Civic Challenge Sponsorship</h3>
-        <p className={styles.description}>How can companies get onboard?</p>
-        <ul className={styles.list}>
-          <li> <b>Shape a design brief: </b> help inform and craft a design brief related to the mobility theme </li>
-          <li> <b> Ideation rewards: </b> provides incentives for online ideation competitions in July/August </li>
-          <li> <b> Prototyping team support: </b> support a team of creative and diverse thinkers, engineers, students, etc. to prototype and test promising concepts </li>
-          <li> <b> Prototype showcase: </b> sponsor the challenge showcase and competition at the summit </li>
-          <li> <b> Research: </b> provide support for Design Lab researchers investingating new approaches to problem-solving at scale </li>
-        </ul>
+    <section id={styles.sponsors} ref={props.componentRef}>
+      <h4 className={styles.tier}>Tier 1 Sponsors</h4>
+      <div className={styles.sponsorList}>
+        {T1_SPONSORS.map(({ href, img, alt }) => (
+          <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+            <img className={styles.backgroundFill} src={img} alt={alt} />
+          </a>
+        ))}
+        <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <div className={styles.youInner}>You?</div>
+        </a>
       </div>
-      <div className={styles.header}>
-        <h3> Header </h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit mauris, eu commodo libero tempus ac. Donec ligula ligula, sagittis sit amet pellentesque at, bibendum quis orci. Phasellus enim tortor, dictum nec quam in, iaculis facilisis libero. Etiam at aliquet neque. Pellentesque id pellentesque erat, et pulvinar ipsum. Maecenas aliquet mi vel nisl sollicitudin, semper ullamcorper est feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris hendrerit tincidunt bibendum. Nam gravida metus magna, et venenatis est pharetra vitae. In sem eros, luctus in ultrices ut, varius eget mauris. Nulla faucibus arcu urna, mollis semper odio pellentesque eu.</p>
+      <div className={styles.text}>
+        We are currently seeking additional partners to sponsor our 2017 civic challenge around issues of mobility in San Diego. Key benefits include:
+        <ul>
+          <li>Access to top talent:  meet students, designers, and other local talent</li>
+          <li>Shape a design brief: help inform and craft a design brief related to mobility</li>
+          <li>Invitations to events: join us for local meetups with D4SD and Design Forward</li>
+        </ul>
+
+        If you are interested in learning more and to talk about the sponsorship model and the initiative in general, please reach out to <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>
+      </div>
+      <h4 className={styles.tier}>Friends of D4SD</h4>
+      <div className={classNames([styles.sponsorList, styles.small])}>
+        {FRIENDS.map(({ href, img, alt }) => (
+          <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+            <img className={styles.backgroundFill} src={img} alt={alt} />
+          </a>
+        ))}
+        <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <div className={styles.youInner}>You?</div>
+        </a>
       </div>
     </section>
   );

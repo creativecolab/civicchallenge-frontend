@@ -117,6 +117,21 @@
       font-size: 0.8em;
       color: rgb(178, 180, 189);
     }
+
+    .footerlinks {
+      padding: 10px;
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      text-align: center;
+    }
   }
 
   @media (max-width: $mobile-max-width) {

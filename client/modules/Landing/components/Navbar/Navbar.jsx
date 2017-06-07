@@ -22,8 +22,16 @@ const NAVBAR_ITEMS = [
 
 const LINKS = [
   {
-    href: '/challenges',
+    href: '/challenge-index',
     text: 'Challenges',
+  },
+  {
+    href: '/about',
+    text: 'About',
+  },
+  {
+    href: '/',
+    text: 'Sponsors',
   },
 ];
 

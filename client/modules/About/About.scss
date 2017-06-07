@@ -3,38 +3,8 @@
 	height: 100%;
 	width: 100%;
 
-	header {
-		height: 30%;
-		width: 100%;
-		background-image: url("./header-bg.png");
-
-		display: flex;
-		align-items: center;
-
-		justify-content: center;
-
-		
-		div.headerText {
-			h3 {
-				margin: 0;
-				color: #fff;
-				font-size: 2em;
-			}
-		}
+	div.contentText {
+		margin: 5% 20%;
 	}
-	div.contentText{
-		width: 80%;
-		margin: 0 auto;
-		div.titleText{
-			padding-top: 5%;
-			h3 {
-				font-size: 1.5em;
-				text-align: center;
-			}
-		}
 
-		div.affilities{
-			text-align: center;
-		}
-	}
 }

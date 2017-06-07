@@ -56,11 +56,11 @@ function Content(props) {
             </p>
             <h5>Questions:</h5>
             <ul>
-              <li>1. <a href="">Question 1</a></li>
-              <li>2. <a href="">Question 2</a></li>
-              <li>3.<a href="">Question 3</a></li>
+              <li>1. <a href="/challenge#question">Question 1</a></li>
+              <li>2. <a href="/challenge#question">Question 2</a></li>
+              <li>3.<a href="/challenge#question">Question 3</a></li>
             </ul>
-            <a href=""> Learn More </a>
+            <a href="/challenge"> Learn More </a>
           </div>
         </div>
       </div>
