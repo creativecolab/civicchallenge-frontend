@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
 import fetch from 'isomorphic-fetch';
+import { Link } from 'react-router';
 
 import classNames from 'util/classNames';
 
@@ -25,13 +26,13 @@ function ChallengeBox({ name, description, thumbnail }) {
     image = <LazyImage src={thumbnail} alt={name} />;
   }
   return (
-    <div className={classNames(challengeClasses)}>
+    <Link to="/challenges" className={classNames(challengeClasses)}>
       <div className={styles.text}>
         <span className={styles.name}>{name}</span>
         <span className={styles.description}>{description}</span>
       </div>
       {image}
-    </div>
+    </Link>
   );
 }
 
