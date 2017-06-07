@@ -4,6 +4,20 @@
   width: 80%;
   margin: 0 auto;
 
+  div.TOC {
+    margin-top: 3em;
+    a {
+      font-weight: bolder;
+      size: 0.7em;
+      color: #4286f4;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
   div.indexGrid {
     div.indexTitle {
       padding-top: 5%;
