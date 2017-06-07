@@ -50,9 +50,14 @@ const TIMELINE_ITEMS = [
  * TimelineText
  */
 
-function TimelineText({ title, description, months }) {
+function TimelineText({ active, title, description, months }) {
+  const classes = [styles.timelineText];
+  if (!active) {
+    classes.push(styles.inactiveText);
+  }
+
   return (
-    <div className={styles.timelineText}>
+    <div className={classNames(classes)}>
       <div className={styles.months}>{months}</div>
       <div className={styles.title}>{title}</div>
       <div
@@ -66,9 +71,14 @@ function TimelineText({ title, description, months }) {
 }
 
 TimelineText.propTypes = {
+  active: PropTypes.bool,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   months: PropTypes.string.isRequired,
+};
+
+TimelineText.defaultProps = {
+  active: true,
 };
 
 
@@ -76,38 +86,70 @@ TimelineText.propTypes = {
  * Process
  */
 
-const propTypes = {};
+const propTypes = {
+  phase: PropTypes.number,
+};
 
 const contextTypes = {
   router: PropTypes.object,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  phase: null,
+};
 
-function Process() {
-  const circles = TIMELINE_ITEMS.map((item, i) => (
-    <div key={item.title} className={styles.circleContainer}>
-      <div className={classNames([styles.circle, styles[`circle${i}`]])} />
-      <div className={classNames([styles.circleOverlay, styles[`circleOverlay${i}`]])} />
-      <LazyInlineSvg wrapperClassName={styles.circleIcon} src={item.image} />
-    </div>
-  ));
+function Process({ phase }) {
+  const circles = TIMELINE_ITEMS.map((item, i) => {
+    const containerClasses = [styles.circleContainer];
+    if (phase !== null) {
+      if (i <= phase) {
+        containerClasses.push(styles.active);
+      } else {
+        containerClasses.push(styles.inactive);
+      }
+    }
+
+    return (
+      <div key={item.title} className={classNames(containerClasses)}>
+        <div className={classNames([styles.circle, styles[`circle${i}`]])} />
+        <div className={classNames([styles.circleOverlay, styles[`circleOverlay${i}`]])} />
+        <LazyInlineSvg wrapperClassName={styles.circleIcon} src={item.image} />
+      </div>
+    );
+  });
 
   const connectors = Array.apply(0, Array(TIMELINE_ITEMS.length - 1)).map((el, i) => {
     const j = i + 1;
     const key = `${i}${j}`;
+    const classes = [styles[`connector${key}`]];
+
+    if (phase !== null) {
+      if (i <= (phase - 1)) {
+        classes.push(styles.active);
+      } else {
+        classes.push(styles.inactive);
+      }
+    }
 
     return (
-      <div key={key} className={styles[`connector${key}`]} />
+      <div key={key} className={classNames(classes)} />
     );
   });
 
-  const timelineText = TIMELINE_ITEMS.map(item =>
-    <TimelineText
-      key={item.title}
-      {...item}
-    />
-  );
+  const timelineText = TIMELINE_ITEMS.map((item, i) => {
+    let isActive = true;
+    if (phase !== null) {
+      isActive = phase === i;
+    }
+
+    return (
+      <TimelineText
+        key={item.title}
+        active={isActive}
+        {...item}
+      />
+    );
+  });
 
   return (
     <section className={styles.process}>

@@ -19,6 +19,7 @@ const getTeam = (nextState, cb) => require.ensure([], require => cb(null, requir
 const getChallengeIndex = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/ChallengeIndex/ChallengeIndex').default), 'challenge-index');
 const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'events');
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
+const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
 
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
@@ -36,6 +37,7 @@ export default (
     <Route path="/challenge-index" getComponent={getChallengeIndex} />
     <Route path="/events" getComponent={getEvents} />
     <Route path="/challenges" getComponent={getChallenges} />
+    <Route path="/challenges/:id" getComponent={getChallenge} />
 
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
