@@ -33,12 +33,9 @@ export default (
     <Route path="/about" getComponent={getAbout} />
     <Route path="/process" getComponent={getProcess} />
     <Route path="/team" getComponent={getTeam} />
-<<<<<<< HEAD
     <Route path="/challenge-index" getComponent={getChallengeIndex} />
     <Route path="/events" getComponent={getEvents} />
-=======
     <Route path="/challenges" getComponent={getChallenges} />
->>>>>>> e528f2da8588f90df76335bbd8b54a022435d734
 
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
