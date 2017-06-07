@@ -15,7 +15,7 @@ function Challenge(props) {
     <div>
       <div className={styles.indexRow}>
         <div className={styles.indexPic}>
-          <LazyImage src={props.thumbnail} alt={name} />
+          <LazyImage src={props.thumbnail} alt={props.name} />
         </div>
 
         <div className={styles.indexContent}>
