@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 import globalStyles from 'main.scss';
 
@@ -8,13 +9,14 @@ import globalStyles from 'main.scss';
  */
 function Challenge(props) {
   return (
-    <li>
-      {props.name}
-    </li>
+    <div>
+      <Link to={`/challenges/${props.id}`}>{props.name}</Link>
+    </div>
   );
 }
 
 Challenge.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
 };
 
@@ -42,11 +44,9 @@ function Category(props) {
     <section className={globalStyles.textContainer}>
       <h3>{props.name}</h3>
       <p>{props.description}</p>
-      <ul>
-        {props.challenges.map(challenge =>
-          <Challenge key={challenge.name} {...challenge} />
-        )}
-      </ul>
+      {props.challenges.map(challenge =>
+        <Challenge key={challenge.name} {...challenge} />
+      )}
     </section>
   );
 }
