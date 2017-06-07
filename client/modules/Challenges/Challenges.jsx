@@ -10,6 +10,7 @@ import Info from './components/Info/Info';
 import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
+import headerBg from './header-bg.png';
 
 /**
  * Challenges
@@ -46,7 +47,7 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header
-          backgroundImg={''}
+          backgroundImg={headerBg}
           headerText={'Challenges'}
           subheaderText={''}
           showButton={false}
