@@ -39,7 +39,7 @@ export default (
     <Route path="/challenge-index" getComponent={getChallengeIndex} />
     <Route path="/events" getComponent={getEvents} />
     <Route path="/challenges" getComponent={getChallenges} />
-    <Route path="/challenge" getComponent={getChallenge} />
+    <Route path="/challenges/:id" getComponent={getChallenge} />
     <Route path="/rewards" getComponent={getRewards} />
     <Route path="/onboarding" getComponent={getOnboard} />
     <Route path="/feedback" getComponent={getFeedback} />
