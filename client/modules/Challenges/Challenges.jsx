@@ -30,7 +30,7 @@ class Challenges extends Component {
   }
 
   componentDidMount() {
-    fetch('https://d4sd-api.ucsd.edu/categories?challenges=true')
+    fetch('https://d4sd-api.ucsd.edu/categories?challenges=true&questions=true')
       .then((response) => {
         return response.json();
       })
@@ -52,9 +52,7 @@ class Challenges extends Component {
           showButton={false}
         />
         <Info />
-        <div>
-          <Categories categories={this.state.categories} />
-        </div>
+        <Categories categories={this.state.categories} />
         <Footer />
       </section>
     );

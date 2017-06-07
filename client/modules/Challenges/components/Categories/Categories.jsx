@@ -25,11 +25,11 @@ function Challenge(props) {
             challenges below.
           </p>
           <h5>Questions:</h5>
-          <ul>
-            <li>1. <a href="/challenge#question">Question 1</a></li>
-            <li>2. <a href="/challenge#question">Question 2</a></li>
-            <li>3.<a href="/challenge#question">Question 3</a></li>
-          </ul>
+          <ol>
+            {props.questions.map(question =>
+              <li key={question.id}><Link to={`/challenges/${props.id}`}>{question.text}</Link></li>
+            )}
+          </ol>
           <Link to={`/challenges/${props.id}`}>Learn More</Link>
         </div>
       </div>
@@ -40,9 +40,12 @@ function Challenge(props) {
 Challenge.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
+  questions: PropTypes.arrayOf(PropTypes.object),
 };
 
-Challenge.defaultProps = {};
+Challenge.defaultProps = {
+  questions: [],
+};
 
 /**
  * Category
