@@ -16,7 +16,7 @@ import styles from './ChallengeGrid.scss';
  * ChallengeBox
  */
 
-function ChallengeBox({ name, description, thumbnail }) {
+function ChallengeBox({ id, name, summary, thumbnail }) {
   const challengeClasses = [styles.challenge];
   let image;
   if (!thumbnail) {
@@ -26,10 +26,10 @@ function ChallengeBox({ name, description, thumbnail }) {
     image = <LazyImage src={thumbnail} alt={name} />;
   }
   return (
-    <Link to="/challenges" className={classNames(challengeClasses)}>
+    <Link to={`/challenges/${id}`} className={classNames(challengeClasses)}>
       <div className={styles.text}>
         <span className={styles.name}>{name}</span>
-        <span className={styles.description}>{description}</span>
+        <span className={styles.description}>{summary}</span>
       </div>
       {image}
     </Link>
@@ -41,8 +41,9 @@ ChallengeBox.defaultProps = {
 };
 
 ChallengeBox.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
   thumbnail: PropTypes.string,
 };
 
@@ -68,12 +69,12 @@ class ChallengeGrid extends Component {
   }
 
   componentDidMount() {
-    fetch('https://d4sd-api.ucsd.edu/categories')
+    fetch('https://d4sd-api.ucsd.edu/challenges')
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        this.setState({ challenges: data.categories });
+        this.setState({ challenges: data.challenges });
       });
   }
 
