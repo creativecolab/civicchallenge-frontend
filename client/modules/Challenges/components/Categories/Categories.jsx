@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-
 import LazyImage from 'components/LazyImage/LazyImage';
+
+import Process from '../../../Landing/components/Process/Process';
 
 import styles from './Categories.scss';
 
@@ -18,9 +19,7 @@ function Challenge(props) {
         </div>
 
         <div className={styles.indexContent}>
-          <div className={styles.indexTimeline}>
-            <p>TIMELINE GOES HERE</p>
-          </div>
+          <Process phase={props.phase} mini />
           <h4>{props.name}</h4>
           <p>{props.summary}</p>
           <h5>Questions:</h5>
@@ -41,6 +40,7 @@ Challenge.propTypes = {
   name: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   thumbnail: PropTypes.string,
+  phase: PropTypes.number.isRequired,
   questions: PropTypes.arrayOf(PropTypes.object),
 };
 

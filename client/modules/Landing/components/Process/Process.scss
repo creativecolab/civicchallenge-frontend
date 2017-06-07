@@ -17,10 +17,10 @@ $component-spacing: 3em;
 
     .chart {
       $colors: (
-        0: rgb(126, 146, 206),
-        1: rgb(148, 192, 227),
-        2: rgb(146, 214, 215),
-        3: rgb(165, 211, 172)
+              0: rgb(126, 146, 206),
+              1: rgb(148, 192, 227),
+              2: rgb(146, 214, 215),
+              3: rgb(165, 211, 172)
       );
 
       position: relative;
@@ -159,13 +159,21 @@ $component-spacing: 3em;
 }
 
 @media (min-width: $desktop-min-width) {
-.process {
-  width: $component-width-desktop;
-}
+  .process {
+    width: $component-width-desktop;
+
+    &.mini {
+      width: auto !important;
+    }
+  }
 }
 
 @media (max-width: $mobile-max-width) {
-.process {
-  width: $component-width-mobile;
-}
+  .process {
+    width: $component-width-mobile;
+
+    &.mini {
+      width: auto !important;
+    }
+  }
 }
