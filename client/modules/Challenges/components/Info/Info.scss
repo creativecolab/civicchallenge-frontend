@@ -2,5 +2,14 @@
 
 .info {
   position: relative;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
+
+  .titleText{
+    padding-top: 5%;
+    h3 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+  }
 }
