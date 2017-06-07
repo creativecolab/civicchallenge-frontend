@@ -53,6 +53,27 @@ class Challenges extends Component {
             insights: [
               {
                 text: 'Insight 1',
+                type: 1,
+              },
+              {
+                text: 'Insight 2',
+                type: 1,
+              },
+              {
+                text: 'Insight 3',
+                type: 1,
+              },
+              {
+                text: 'Insight 4',
+                type: 2,
+              },
+              {
+                text: 'Insight 5',
+                type: 2,
+              },
+              {
+                text: 'Insight 6',
+                type: 2,
               },
             ],
           },
@@ -91,12 +112,12 @@ class Challenges extends Component {
             </div>
             <Resources resources={challenge.resources} />
           </div>
-          <div>
-            <div className={globalStyles.title}>
-              <h3 className={globalStyles.ul}>Join the Conversation</h3>
-            </div>
-            <Questions questions={challenge.questions} />
+        </div>
+        <div>
+          <div className={globalStyles.title}>
+            <h3 className={globalStyles.ul}>Join the Conversation</h3>
           </div>
+          <Questions questions={challenge.questions} />
         </div>
         <Footer />
       </section>
