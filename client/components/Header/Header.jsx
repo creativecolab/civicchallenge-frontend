@@ -11,7 +11,7 @@ import styles from './Header.scss';
 // TODO: Make homepage links scroll to correct area
 const LINKS = [
   {
-    href: '/challenge-index',
+    href: '/challenges',
     text: 'Challenges',
   },
   {
@@ -53,11 +53,8 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }, { rout
           <Link to="/">D4SD</Link>
         </div>
         <nav className={styles.navbar}>
-          {LINKS.filter(({ href }) => href === router.location.pathname).map(({ href, text }) =>
-            <Link className={styles.active} key={text} to={href}>{text}</Link>
-          )}
-          {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
-            <Link key={text} to={href}>{text}</Link>
+          {LINKS.map(({ href, text }) =>
+            <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
           )}
         </nav>
       </div>

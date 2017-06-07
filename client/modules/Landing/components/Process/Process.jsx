@@ -88,6 +88,7 @@ TimelineText.defaultProps = {
 
 const propTypes = {
   phase: PropTypes.number,
+  mini: PropTypes.bool,
 };
 
 const contextTypes = {
@@ -96,9 +97,10 @@ const contextTypes = {
 
 const defaultProps = {
   phase: null,
+  mini: false,
 };
 
-function Process({ phase }) {
+function Process({ phase, mini }) {
   const circles = TIMELINE_ITEMS.map((item, i) => {
     const containerClasses = [styles.circleContainer];
     if (phase !== null) {
@@ -136,29 +138,36 @@ function Process({ phase }) {
     );
   });
 
-  const timelineText = TIMELINE_ITEMS.map((item, i) => {
-    let isActive = true;
-    if (phase !== null) {
-      isActive = phase === i;
-    }
+  let timelineText = null;
+  const processClass = [styles.process];
+  if (!mini) {
+    const timelineItems = TIMELINE_ITEMS.map((item, i) => {
+      let isActive = true;
+      if (phase !== null) {
+        isActive = phase === i;
+      }
 
-    return (
-      <TimelineText
-        key={item.title}
-        active={isActive}
-        {...item}
-      />
-    );
-  });
+      return (
+        <TimelineText
+          key={item.title}
+          active={isActive}
+          {...item}
+        />
+      );
+    });
+    timelineText = <div className={styles.timelineTextContainer}>{timelineItems}</div>;
+  } else {
+    processClass.push(styles.mini);
+  }
 
   return (
-    <section className={styles.process}>
+    <section className={classNames(processClass)}>
       <div className={styles.timeline}>
         <div className={styles.chart}>
           <div className={styles.circlesContainer}>{circles}</div>
           {connectors}
         </div>
-        <div className={styles.timelineTextContainer}>{timelineText}</div>
+        {timelineText}
       </div>
     </section>
   );

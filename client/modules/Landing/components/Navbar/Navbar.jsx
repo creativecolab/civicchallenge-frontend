@@ -16,13 +16,12 @@ if (process.env.browser) {
  */
 
 const NAVBAR_ITEMS = [
-  'About',
   'Sponsors',
 ];
 
 const LINKS = [
   {
-    href: '/challenge-index',
+    href: '/challenges',
     text: 'Challenges',
   },
   {

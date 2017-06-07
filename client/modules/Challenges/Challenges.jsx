@@ -7,9 +7,10 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Info from './components/Info/Info';
-import Category from './components/Category/Category';
+import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
+import headerBg from './header-bg.png';
 
 /**
  * Challenges
@@ -30,7 +31,7 @@ class Challenges extends Component {
   }
 
   componentDidMount() {
-    fetch('https://d4sd-api.ucsd.edu/categories?challenges=true')
+    fetch('https://d4sd-api.ucsd.edu/categories?challenges=true&questions=true')
       .then((response) => {
         return response.json();
       })
@@ -46,17 +47,13 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header
-          backgroundImg={''}
+          backgroundImg={headerBg}
           headerText={'Challenges'}
           subheaderText={''}
           showButton={false}
         />
         <Info />
-        <div>
-          {this.state.categories.map(category =>
-            <Category key={category.name} {...category} />
-          )}
-        </div>
+        <Categories categories={this.state.categories} />
         <Footer />
       </section>
     );
