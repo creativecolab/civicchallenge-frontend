@@ -22,7 +22,7 @@ const NAVBAR_ITEMS = [
 
 const LINKS = [
   {
-    href: '/challenge-index',
+    href: '/challenges',
     text: 'Challenges',
   },
   {

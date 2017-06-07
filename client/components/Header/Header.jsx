@@ -11,7 +11,7 @@ import styles from './Header.scss';
 // TODO: Make homepage links scroll to correct area
 const LINKS = [
   {
-    href: '/challenge-index',
+    href: '/challenges',
     text: 'Challenges',
   },
   {
