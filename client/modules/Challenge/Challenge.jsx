@@ -65,7 +65,7 @@ class Challenges extends Component {
             <div className={globalStyles.title}>
               <h3 className={globalStyles.ul}>Background</h3>
             </div>
-            <p className={styles.longDescription}>{challenge.long_description}</p>
+            <p className={styles.textContainer}>{challenge.long_description}</p>
           </div>
           <div>
             <div className={globalStyles.title}>
