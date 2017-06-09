@@ -31,7 +31,7 @@ class Challenges extends Component {
   }
 
   componentDidMount() {
-    fetch('https://d4sd-api.ucsd.edu/categories?challenges=true&questions=true')
+    fetch('https://d4sd-api.ucsd.edu/categories?challenges=1&questions=1')
       .then((response) => {
         return response.json();
       })
