@@ -33,7 +33,7 @@ function Rewards() {
       />
 
       <section className={styles.content}>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis metus porta erat tempor dignissim.
+        <p> ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis metus porta erat tempor dignissim.
         Etiam finibus, nibh at dictum commodo, diam mi rutrum nisi, et fringilla neque odio ut turpis. Vestibulum ante ipsum
         primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc at vehicula turpis, non fringilla mi. Ut consequat
         sollicitudin purus. Vestibulum sodales nisi odio, ut pretium neque tristique cursus. Suspendisse eget magna ante. Cras quis
