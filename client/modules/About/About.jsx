@@ -70,7 +70,7 @@ function About() {
         </div>
         <div className={styles.titleText}>
           <div className={globalStyles.title}>
-            <h3 className={globalStyles.ul}>Affiliaties</h3>
+            <h3 className={globalStyles.ul}>Affiliates</h3>
           </div>
           <div className={styles.affilities}>
             {AFFILIATES.map(({ href, img, alt }) => (

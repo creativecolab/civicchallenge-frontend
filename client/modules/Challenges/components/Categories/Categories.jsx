@@ -21,7 +21,7 @@ function Challenge(props) {
         <div className={styles.indexContent}>
           <Process phase={props.phase} mini />
           <h4>{props.name}</h4>
-          <p>{props.summary}</p>
+          <p>{props.description}</p>
           <h5>Questions:</h5>
           <ol>
             {props.questions.map(question =>
@@ -38,7 +38,7 @@ function Challenge(props) {
 Challenge.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   thumbnail: PropTypes.string,
   phase: PropTypes.number.isRequired,
   questions: PropTypes.arrayOf(PropTypes.object),

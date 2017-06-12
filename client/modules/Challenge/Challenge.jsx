@@ -37,7 +37,7 @@ class Challenges extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://d4sd-api.ucsd.edu/challenges/${this.props.params.id}?resources=true&questions=true&insights=true&groupInsightsByQuestion=true`)
+    fetch(`https://d4sd-api.ucsd.edu/challenges/${this.props.params.id}?resources=1&questions=1&insights=1&groupInsightsByQuestion=1`)
       .then((response) => {
         return response.json();
       })
@@ -65,7 +65,7 @@ class Challenges extends Component {
             <div className={globalStyles.title}>
               <h3 className={globalStyles.ul}>Background</h3>
             </div>
-            <p>{challenge.description}</p>
+            <p className={styles.textContainer}>{challenge.long_description}</p>
           </div>
           <div>
             <div className={globalStyles.title}>
