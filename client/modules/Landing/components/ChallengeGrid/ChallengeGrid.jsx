@@ -25,22 +25,22 @@ import autonomousCars from './autonomous-cars.png';
 const CHALLENGES = [
   {
     name: 'Public Transit',
-    description: 'The San Diego Metropolitan Transit System (MTS) services thousands of citizens over nearly 600 square miles through a robust bus and light rail system. The MTS system is continually expanding through various projects providing opportunity to better serve San Diego’s residents.',
+    description: 'The San Diego Metropolitan Transit System (MTS) services thousands of citizens over nearly 600 square miles through bus and light rail systems. MTS is continually expanding, but needs your thoughts about how to expand in ways that better serve San Diego’s culturally and economically diverse communities. What are your experiences with MTS? What matters most on your ride, whether on a bus or on the light rail system?',
     image: publicTransit,
   },
   {
     name: 'Urban Planning',
-    description: 'There are several new opportunities for urban planning innovation in San Diego. Creating a gateway for growth will help achieve sustainable development as well as fair socioeconomic distribution in many areas through better infrastructure and services.',
+    description: 'With an expanding population, there is a need for infrastructure and services to equally represent residents and promote diversity. How can we improve the city’s infrastructure to promote unity and interaction between residents?',
     image: urbanPlanning,
   },
   {
     name: 'Accessibility',
-    description: 'The San Diego community provides transportation services to elderly and disabled people through different organizations. By collaborating with these organizations, we can develop novel methods to help expand and improve upon existing accessibility for this population.',
+    description: 'Mobility should not be limited to a specific group of individuals. There is a growing population of the elderly and disabled. However, there are limited public transportation resources for the elderly and disabled. With a growing senior population and limited resources for disabled individuals, how can we make people aware of accessibility and improve outreach?',
     image: accessibility,
   },
   {
     name: 'Walking/Biking',
-    description: 'Reducing pedestrian and bicycle deaths, implementing safe walks to schools, and the push for more infrastructure and funding for pedestrian and bicycle spaces is a critical issue in San Diego as more citizens look for alternatives to driving.',
+    description: 'San Diego residents use walking and biking as alternative modes of transportation, but there is a need for safer routes and mores spaces designed to get around the city.',
     image: walking,
   },
   {
@@ -50,12 +50,12 @@ const CHALLENGES = [
   },
   {
     name: 'Traffic',
-    description: 'Residents of San Diego deal with congested freeways going northbound in the morning, and even slower going southbound in the evening. Investigating the underlying causes of traffic as well as possible infrastructural, behavioral, or policy-wise changes can reduce the ever-present frustration of traffic and dependence on cars.',
+    description: 'Residents of San Diego deal with congested freeways and lanes. There is a need to reduce traffic frustration and improve the experience for commuters.',
     image: traffic,
   },
   {
     name: 'Autonomous Cars',
-    description: 'As technology continues to revolutionize the dynamics of our everyday transportation, self-driving cars can be the key to decreasing accidents and building a more sustainable system. San Diego has been chosen as one of five cities to test autonomous cars, providing a prime opportunity to design a futuristic era of transportation.',
+    description: 'As technology continues to revolutionize the dynamics of our everyday transportation, self-driving cars can be the key to decreasing accidents and building a more sustainable system. San Diego has been chosen as one of five cities to test autonomous cars, however trust and safety are two important components in integrating autonomous cars as a widely accepted mode of transportation.',
     image: autonomousCars,
   },
 ];
