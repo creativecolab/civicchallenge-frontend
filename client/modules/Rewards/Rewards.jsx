@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import RewardTypes from './components/RewardTypes/RewardTypes';
 
 import styles from './Rewards.scss';
 
@@ -32,25 +33,14 @@ function Rewards() {
         showButton={false}
       />
 
+
       <section className={styles.content}>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis metus porta erat tempor dignissim.
-        Etiam finibus, nibh at dictum commodo, diam mi rutrum nisi, et fringilla neque odio ut turpis. Vestibulum ante ipsum
-        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc at vehicula turpis, non fringilla mi. Ut consequat
-        sollicitudin purus. Vestibulum sodales nisi odio, ut pretium neque tristique cursus. Suspendisse eget magna ante. Cras quis
-        vestibulum ipsum. Nulla placerat eros scelerisque, volutpat quam sed, elementum lacus. Sed varius est magna,
-        eu hendrerit urna consequat ut. Integer at ex id tellus suscipit ultrices.</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis metus porta erat tempor dignissim.
-        Etiam finibus, nibh at dictum commodo, diam mi rutrum nisi, et fringilla neque odio ut turpis. Vestibulum ante
-        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc at vehicula turpis, non fringilla mi.
-        Ut consequat sollicitudin purus. Vestibulum sodales nisi odio, ut pretium neque tristique cursus. Suspendisse ege
-        magna ante. Cras quis vestibulum ipsum. Nulla placerat eros scelerisque, volutpat quam sed, elementum lacus. Sed
-        varius est magna, eu hendrerit urna consequat ut. Integer at ex id tellus suscipit ultrices.</p>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis metus porta erat tempor dignissim.
-        Etiam finibus, nibh at dictum commodo, diam mi rutrum nisi, et fringilla neque odio ut turpis. Vestibulum ante ipsum
-        rimis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc at vehicula turpis, non fringilla mi. Ut consequ
-        t sollicitudin purus. Vestibulum sodales nisi odio, ut pretium neque tristique cursus. Suspendisse eget magna ante. Cras
-        quis vestibulum ipsum. Nulla placerat eros scelerisque, volutpat quam sed, elementum lacus. Sed varius est magna, eu hend
-        rerit urna consequat ut. Integer at ex id tellus suscipit ultrices.</p>
+        <div className={styles.titleText}>
+          <p>We are currently working with our sponsors to identify several prizes for D4SD participants. Check back soon for more details!</p>
+          <br />
+          <h3>Types of Rewards</h3>
+          <RewardTypes />
+        </div>
       </section>
       <Footer />
     </div>
