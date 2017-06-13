@@ -6,14 +6,14 @@
 	
 	.content {
 		margin: 5% 20%;
+		.titleText{
+			h3 {
+				font-size: 1.17em;
+				font-weight: bold;
+				text-align: left;
+			}
+		}
 	}
 }
 
-.content {
-  .titleText{
-    h3 {
-      font-size: 1.5em;
-      text-align: center;
-    }
-  }
-}
+
