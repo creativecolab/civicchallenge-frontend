@@ -33,6 +33,7 @@ function Rewards() {
         showButton={false}
       />
 
+
       <section className={styles.content}>
         <div className={styles.titleText}>
           <p>We are currently working with our sponsors to identify several prizes for D4SD participants. Check back soon for more details!</p>
