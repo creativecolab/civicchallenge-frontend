@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
 
 import styles from './ChallengeText.scss';
 
@@ -17,6 +18,14 @@ const contextTypes = {
 
 const defaultProps = {};
 
+function logClick() {
+  ReactGA.event({
+    category: 'Registration',
+    action: 'Clicked Register Today',
+    label: 'Challenge Text link',
+  });
+}
+
 function ChallengeText() {
   return (
     <section className={styles.challengeText}>
@@ -28,7 +37,7 @@ function ChallengeText() {
           <p className={styles.text4}><i>Build design skills as you turn your mobility challenges into civic innovations!</i></p>
           <div className={styles.button}>
             <div className={styles.buttonContainer}>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
+              <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
             </div>
           </div>
         </div>

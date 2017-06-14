@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
+import ReactGA from 'react-ga';
 
 import styles from './CivicFramework.scss';
 
@@ -21,6 +22,14 @@ const contextTypes = {
 
 const defaultProps = {};
 
+function logClick() {
+  ReactGA.event({
+    category: 'Registration',
+    action: 'Clicked Register Today',
+    label: 'Civic Framework link',
+  });
+}
+
 function CivicFramework(props) {
   return (
     <section id={styles.sponsors} ref={props.componentRef}>
@@ -34,7 +43,7 @@ function CivicFramework(props) {
           </div>
           <div className={styles.button}>
             <div className={styles.buttonContainer}>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
+              <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
             </div>
           </div>
         </div>
