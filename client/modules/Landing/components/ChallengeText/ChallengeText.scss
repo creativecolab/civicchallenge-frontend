@@ -104,5 +104,16 @@ $component-spacing: 3em;
 @media (max-width: $mobile-max-width) {
 .challenge-text {
   width: $component-width-mobile;
+
+  .header {
+    .main {
+      .text1 {
+        font-size: 1.5em;
+      }
+      .text2 {
+        font-size: 3em;
+      }
+    }
+  }
 }
 }
