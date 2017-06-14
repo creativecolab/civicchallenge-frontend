@@ -31,6 +31,13 @@ $component-spacing: 3em;
 
       &.placeholder {
         background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      }
+
+      &.moresoon {
+        background: url('./traffic.png');
+      }
+
+      &.placeholder, &.moresoon {
 
         a {
           color: #fff !important;
@@ -90,6 +97,16 @@ $component-spacing: 3em;
 
           text-align: left;
           font-size: 0.9em;
+
+          .descriptionElements {
+            p {
+              font-size: 1.4em;
+              text-align: center;
+              font-weight: 500;
+
+              margin: 5px;
+            }
+          }
         }
       }
     }

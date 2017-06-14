@@ -31,7 +31,7 @@ const LINKS = [
 const NAVBAR_CONTENT = [
   {
     keyName: 'Challenges',
-    displayName: 'Challenges',
+    displayName: 'Themes',
   },
   {
     keyName: 'GetInvolved',

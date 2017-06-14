@@ -15,8 +15,10 @@ import publicTransit from './public-transit.png';
 import accessibility from './accessibility.png';
 import walking from './walking.png';
 import parking from './parking.png';
-import traffic from './traffic.png';
 /*
+
+import traffic from './traffic.png';
+
 import urbanPlanning from './urban-planning.png';
 import autonomousCars from './autonomous-cars.png';*/
 
@@ -26,17 +28,17 @@ import autonomousCars from './autonomous-cars.png';*/
 
 const CHALLENGES = [
   {
-    name: 'Enhancing Rider Feedback Systems',
+    name: 'Enhancing Rider <br /> Feedback Systems',
     description: '<div className={styles.dscrptSummary}>The Metropolitan Transit System (MTS) provides around 310,000 passenger trips each week, but riders are not satisfied with the transit costs, availability, and cleanliness.</div> <br/> <div className={styles.dscrptQuestion}><b>As MTS adds new stations and trolleys to the fleet, how might we make it easier for riders to voice their concerns and for MTS to hear and address them?</b></div>',
     image: publicTransit,
   },
   {
-    name: 'Walking and Biking Safely',
+    name: 'Walking and <br /> Biking Safely',
     description: '<div className={styles.dscrptSummary}>As the city of San Diego grows in population, more residents are choosing to use walking and biking to avoid traffic congestion and parking. However, since walking and biking are not the norm they can be dangerous in a city built for cars.</div> <br /> <div className={styles.dscrptQuestion}> <b>How might we make walking and biking safer for San Diego citizens?</b></div>',
     image: walking,
   },
   {
-    name: 'Parking and Population Growth',
+    name: 'Parking and <br /> Population Growth',
     description: '<div className={styles.dscrptSummary}> In a city with over 2.2 million personal vehicles, parking is a problem. As more cars join the road each year, better systems are needed to manage and plan for new parking infrastructure. Drivers need information about where to find a spot and how much time they have left on the meter. City planners could also use real-time information from sensors or citizens to better understand parking demand.</div> <br /> <div className={styles.dscrptQuestion}> <b> How might we help drivers and planners navigate the challenge of parking in San Diego?</b> </div>',
     image: parking,
   },
@@ -45,12 +47,12 @@ const CHALLENGES = [
     description: '<div className={styles.dscrptSummary> The lack of convenient, accessible, and affordable transportation for citizens with a disability is a major problem in San Diego. Programs exist yet challenges persist around infrastructure and transit deficient areas.</div> <br /> <div className={styles.dscrptQuestion}> <b>How might we help those with a disability, who may also lack technology and a voice in the community, communicate their mobility challenges and gain independence?</b></div>',
     image: accessibility,
   },
-  {
+  /*  {
     name: 'More Coming Soon',
     description: '<p style="text-align: center;">Autonomous Vehicles<br /> Aging and Mobility<br />Traffic Congestion<br />Crossing the Border</p>',
     image: traffic,
   },
-  /* {
+   {
     name: 'Suggest a Challenge',
     description: 'Residents of San Diego deal with congested freeways and lanes. There is a need to reduce traffic frustration and improve the experience for commuters.',
     image: traffic,
@@ -71,7 +73,12 @@ function ChallengeBox({ name, description, image }) {
   return (
     <div className={styles.challenge}>
       <div className={styles.text}>
-        <span className={styles.name}>{name}</span>
+        <div
+          className={styles.name}
+          dangerouslySetInnerHTML={{
+            __html: name,
+          }}
+        />
         <div
           className={styles.description}
           dangerouslySetInnerHTML={{
@@ -115,6 +122,19 @@ function ChallengeGrid(props) {
             {...challenge}
           />
         )}
+        <div className={classNames([styles.challenge, styles.moresoon])}>
+          <div className={styles.text}>
+            <span className={styles.name}>More Coming Soon</span>
+            <span className={styles.description}>
+              <div className={styles.descriptionElements}>
+                <p>Autonomous Vehicles</p>
+                <p>Aging and Mobility</p>
+                <p>Traffic Congestion</p>
+                <p>Crossing the Border</p>
+              </div>
+            </span>
+          </div>
+        </div>
         <div className={classNames([styles.challenge, styles.placeholder])}>
           <div className={styles.text}>
             <span className={styles.name}>Suggest a Challenge</span>
