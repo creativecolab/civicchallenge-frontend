@@ -13,6 +13,11 @@ if (!global.Promise) {
 
 // Google Analytics
 ReactGA.initialize('UA-90860713-1', { debug: process.env.NODE_ENV === 'development' });
+
+if (process.env.NODE_ENV === 'development') {
+  ReactGA.ga('set', 'sendHitTask', null);
+}
+
 ReactGA.pageview(window.location.pathname);
 
 const mountElement = document.getElementById('root');
