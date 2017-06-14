@@ -26,7 +26,7 @@ function CivicFramework(props) {
     <section id={styles.sponsors} ref={props.componentRef}>
       <div className={styles.content}>
         <div className="{styles.sponsorsBox}">
-          <h1>Designing A Civic Challenge Framework</h1>
+          <h4>Designing A Civic Challenge Framework</h4>
           <div className={styles.description}>
             <p>Researchers on our team have published work around crowdsourcing and collaborative urban planning technologies. We have developed the four phase framework this challenge is built upon from this research and prominent theories in design thinking, organizational sensemaking, group deliberation, socialization, and crowdsourcing.</p>
             <br />
