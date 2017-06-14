@@ -30,12 +30,12 @@ function App({ children }) {
           { name: 'robots', content: 'index, follow' },
           { name: 'revisit-after', content: '1 days' },
           { name: 'theme-color', content: '#2d324d' },
-          { name: 'ms-application-TileColor', content: '#FFFFFF' },
-          { name: 'ms-application-TileImage', content: '#mstile-144x144.png' },
-          { name: 'ms-application-square70x70logo', content: '#mstile-70x70.png' },
-          { name: 'ms-application-square150x150logo', content: '#mstile-150x150.png' },
-          { name: 'ms-application-square310x150logo', content: '#mstile-310x150.png' },
-          { name: 'ms-application-square310x310logo', content: '#mstile-310x310.png' },
+          { name: 'ms-application-TileColor', content: 'FFFFFF' },
+          { name: 'ms-application-TileImage', content: 'mstile-144x144.png' },
+          { name: 'ms-application-square70x70logo', content: 'mstile-70x70.png' },
+          { name: 'ms-application-square150x150logo', content: 'mstile-150x150.png' },
+          { name: 'ms-application-wide310x150logo', content: 'mstile-310x150.png' },
+          { name: 'ms-application-square310x310logo', content: 'mstile-310x310.png' },
         ]}
         link={[
           { rel: 'author', href: '/humans.txt' },
