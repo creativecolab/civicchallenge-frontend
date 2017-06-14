@@ -2,27 +2,61 @@
 
 
 #sponsors {
-  margin: $component-vertical-margin auto;
+  margin: 0 auto;
   margin-bottom: $component-vertical-margin;
-  
+  padding: 0;
 
   .content {
+    .button {
+      margin: 20px;
+      font-size: 16px;
+
+      .buttonContainer {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        a {
+          margin: 0;
+          border: none;
+          border-radius: 30px;
+          padding: 0.8em 1.5em;
+
+          display: inline-block;
+          cursor: pointer;
+
+          background-color: #24487c;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: #fff;
+        }
+
+        a:hover {
+          background-color: #2d324d;
+        }
+      }
+    }
 
     .description {
       padding: 0;
-      margin-bottom: 4em;
+      margin: 0;
+      margin-bottom: 2em;
       p {
         font-size: 0.9em;
+        text-align: center;
+        margin: 0;
       }
 
       p.quote {
         font-size: 1.2em;
         text-align: center;
         font-weight: 600;
+        margin: .5em 0 0 0;
       }
     }
 
-    margin: 4em 0;
 
     div.title {
       text-align: center;

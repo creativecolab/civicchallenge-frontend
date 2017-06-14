@@ -29,7 +29,7 @@ import autonomousCars from './autonomous-cars.png';*/
 const CHALLENGES = [
   {
     name: 'Enhancing Rider <br /> Feedback Systems',
-    description: '<div className={styles.dscrptSummary}>The Metropolitan Transit System (MTS) provides around 310,000 passenger trips each week, but riders are not satisfied with the transit costs, availability, and cleanliness.</div> <br/> <div className={styles.dscrptQuestion}><b>As MTS adds new stations and trolleys to the fleet, how might we make it easier for riders to voice their concerns and for MTS to hear and address them?</b></div>',
+    description: '<div className={styles.dscrptSummary}>The Metropolitan Transit System (MTS) provides around 310,000 passenger trips each week, but riders are not satisfied with the transit costs, availability, and cleanliness.</div> <br/> <div className={styles.dscrptQuestion}><b>How might we make it easier for riders to voice their concerns and for MTS to hear and address them?</b></div>',
     image: publicTransit,
   },
   {
@@ -138,7 +138,7 @@ function ChallengeGrid(props) {
         <div className={classNames([styles.challenge, styles.placeholder])}>
           <div className={styles.text}>
             <span className={styles.name}>Suggest a Challenge</span>
-            <span className={styles.description}>Did we miss something? If there’s another mobility challenge San Diego faces that you don’t see here, toss us an email at <a href="mailto:spdow@ucsd.edu">spdow@ucsd.edu</a>.</span>
+            <span className={styles.description}>Did we miss something? If there’s another mobility challenge San Diego faces that you don’t see here, toss us an <a href="mailto:spdow@ucsd.edu">email</a>.</span>
           </div>
         </div>
       </div>

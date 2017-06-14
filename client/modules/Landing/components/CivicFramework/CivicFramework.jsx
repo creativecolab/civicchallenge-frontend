@@ -26,14 +26,16 @@ function CivicFramework(props) {
     <section id={styles.sponsors} ref={props.componentRef}>
       <div className={styles.content}>
         <div className="{styles.sponsorsBox}">
-          <h4>Designing A Civic Challenge Framework</h4>
           <div className={styles.description}>
-            <p>Researchers on our team have published work around crowdsourcing and collaborative urban planning technologies. We have developed the four phase framework this challenge is built upon from this research and prominent theories in design thinking, organizational sensemaking, group deliberation, socialization, and crowdsourcing.</p>
-            <br />
             <p className={styles.quote}><i>“Our research indicated a lack of clear framework to guide large-scale civic engagement throughout an entire process of exploring and executing on plans and policies of public concern.”</i></p>
-            <p className={styles.quote}><i>–Narges Mahyar</i></p>
+            <p className={styles.quote}><i>–Narges Mahyar, UCSD Design Fellow</i></p>
             <br />
-            <p>Our framework introduces a transparent process to motivate and manage broad participation through divergent and convergent stages of policy-making and planning. The divergent phase shows how people dynamically form groups, investigate issues, and generate vast numbers of diverse and inclusive perspectives. The convergent phase engages the public in collaborative sensemaking of gathered data and enables them to be part of the decision-making process.</p>
+            <p>Join below and we will add you to a discussion forum where you can contribute to each of the four phases!</p>
+          </div>
+          <div className={styles.button}>
+            <div className={styles.buttonContainer}>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
+            </div>
           </div>
         </div>
       </div>
