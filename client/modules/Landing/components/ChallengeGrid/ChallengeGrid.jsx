@@ -27,22 +27,22 @@ import autonomousCars from './autonomous-cars.png';*/
 const CHALLENGES = [
   {
     name: 'Enhancing Rider Feedback Systems',
-    description: 'The Metropolitan Transit System (MTS) provides around 310,000 passenger trips each week, but riders are not satisfied with the transit costs, availability, and cleanliness. As MTS adds new stations and trolleys to the fleet, how might we make it easier for riders to voice their concerns and for MTS to hear and address them?',
+    description: '<div className={styles.dscrptSummary}>The Metropolitan Transit System (MTS) provides around 310,000 passenger trips each week, but riders are not satisfied with the transit costs, availability, and cleanliness.</div> <br/> <div className={styles.dscrptQuestion}><b>As MTS adds new stations and trolleys to the fleet, how might we make it easier for riders to voice their concerns and for MTS to hear and address them?</b></div>',
     image: publicTransit,
   },
   {
     name: 'Walking and Biking Safely',
-    description: 'As the city of San Diego grows in population, more residents are choosing to use walking and biking to avoid traffic congestion and parking. However, since walking and biking are not the norm they can be dangerous in a city built for cars. How might we make walking and biking safer for San Diego citizens?',
+    description: '<div className={styles.dscrptSummary}>As the city of San Diego grows in population, more residents are choosing to use walking and biking to avoid traffic congestion and parking. However, since walking and biking are not the norm they can be dangerous in a city built for cars.</div> <br /> <div className={styles.dscrptQuestion}> <b>How might we make walking and biking safer for San Diego citizens?</b></div>',
     image: walking,
   },
   {
     name: 'Parking and Population Growth',
-    description: 'In a city with over 2.2 million personal vehicles, parking is a problem. As more cars join the road each year, better systems are needed to manage and plan for new parking infrastructure. Drivers need information about where to find a spot and how much time they have left on the meter. City planners could also use real-time information from sensors or citizens to better understand parking demand. How might we help drivers and planners navigate the challenge of parking in San Diego?',
+    description: '<div className={styles.dscrptSummary}> In a city with over 2.2 million personal vehicles, parking is a problem. As more cars join the road each year, better systems are needed to manage and plan for new parking infrastructure. Drivers need information about where to find a spot and how much time they have left on the meter. City planners could also use real-time information from sensors or citizens to better understand parking demand.</div> <br /> <div className={styles.dscrptQuestion}> <b> How might we help drivers and planners navigate the challenge of parking in San Diego?</b> </div>',
     image: parking,
   },
   {
     name: 'Accessibility',
-    description: 'The lack of convenient, accessible, and affordable transportation for citizens with a disability is a major problem in San Diego. Programs exist yet challenges persist around infrastructure and transit deficient areas. How might we help those with a disability, who may also lack technology and a voice in the community, communicate their mobility challenges and gain independence?',
+    description: '<div className={styles.dscrptSummary> The lack of convenient, accessible, and affordable transportation for citizens with a disability is a major problem in San Diego. Programs exist yet challenges persist around infrastructure and transit deficient areas.</div> <br /> <div className={styles.dscrptQuestion}> <b>How might we help those with a disability, who may also lack technology and a voice in the community, communicate their mobility challenges and gain independence?</b></div>',
     image: accessibility,
   },
   {
@@ -72,7 +72,12 @@ function ChallengeBox({ name, description, image }) {
     <div className={styles.challenge}>
       <div className={styles.text}>
         <span className={styles.name}>{name}</span>
-        <span className={styles.description}>{description}</span>
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{
+            __html: description,
+          }}
+        />
       </div>
       <LazyImage src={image} alt={name} />
     </div>
