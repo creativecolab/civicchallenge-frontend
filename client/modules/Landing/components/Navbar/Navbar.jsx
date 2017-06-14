@@ -89,8 +89,6 @@ class Navbar extends React.Component {
 
       const element = refs[key];
 
-      console.log(element);
-
       if (element) {
         const scrollTarget = element.offsetTop;
         const scrollDuration = Math.abs(scrollTop - scrollTarget) / SCROLL_PX_PER_MS;
