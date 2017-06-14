@@ -47,7 +47,7 @@ const CHALLENGES = [
   },
   {
     name: 'More Coming Soon',
-    description: 'Autonomous Vehicles, Aging and Mobility, Traffic Congestion, Crossing the Border',
+    description: '<p style="text-align: center;">Autonomous Vehicles<br /> Aging and Mobility<br />Traffic Congestion<br />Crossing the Border</p>',
     image: traffic,
   },
   /* {

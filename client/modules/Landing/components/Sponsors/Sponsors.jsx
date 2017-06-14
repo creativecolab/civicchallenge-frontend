@@ -32,7 +32,7 @@ function Sponsors(props) {
         <ChallengeText />
         <div className={styles.button}>
           <div className={styles.buttonContainer}>
-            <a href="/sponsors">Become a Sponsor now</a>
+            <a href="mailto:spdow@ucsd.edu">Become a Sponsor now</a>
           </div>
         </div>
       </div>

@@ -80,7 +80,7 @@ function ChallengeText(props) {
               <img className={styles.backgroundFill} src={img} alt={alt} />
             </a>
           ))}
-          <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <a className={styles.you} href="mailto:spdow@ucsd.edu">
             <div className={styles.youInner}>You?</div>
           </a>
         </div>
@@ -105,7 +105,7 @@ function ChallengeText(props) {
               <img className={styles.backgroundFill} src={img} alt={alt} />
             </a>
           ))}
-          <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <a className={styles.you} href="mailto:spdow@ucsd.edu">
             <div className={styles.youInner}>You?</div>
           </a>
         </div>
@@ -129,7 +129,7 @@ function ChallengeText(props) {
               <img className={styles.backgroundFill} src={img} alt={alt} />
             </a>
           ))}
-          <a className={styles.you} href="mailto:design4sandiego@gmail.com">
+          <a className={styles.you} href="mailto:spdow@ucsd.edu">
             <div className={styles.youInner}>You?</div>
           </a>
         </div>
