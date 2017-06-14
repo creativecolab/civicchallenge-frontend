@@ -28,8 +28,8 @@ function Sponsors(props) {
       <h3 className={globalStyles.ul}>Sponsors</h3>
       <div className="{styles.sponsorsBox}">
         <p>Here be the sponsor text</p>
-        <div className={globalStyles.button}>
-          <div className={globalStyles.buttonContainer}>
+        <div className={styles.button}>
+          <div className={styles.buttonContainer}>
             <a href="/sponsors">Become a Sponsor now</a>
           </div>
         </div>

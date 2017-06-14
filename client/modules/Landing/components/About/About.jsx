@@ -30,12 +30,13 @@ function About(props) {
           <div className={styles.title}>
             <h3 className={globalStyles.ul}>ABOUT</h3>
           </div>
-          <h1>Design the Future of San Diego</h1>
-          <p className={styles.description}>Design 4 San Diego (D4SD) is a non-profit organization that aims to engage San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We seek to create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.</p>
-          <p className={styles.description}>Our Team: Steven Dow, Narges Mahyar, Ariel Weingarten, Brian McInnis, Lauren Liu, David Luu, Joanne Cho, Sanika Moharana, Eric Richards, Eric Tseng, Cody Pham, Alejandro Panduro, Joseph Le, Nancy Zheng, Catherine Kim, Lauren Gong, Anne Le, Diana Nguyen, Grant Chinn, Gobind Sethi, Karen Ma, Qin Zhuo, Nanna Inie, Donna Yee, Alvin Ho, Allen Lin, Akanksha Grover, Tara Nejad, Karthik Komatineni, Christopher Lim, Susan Lee, Mai Eguchi</p>
-          {false && <div className={styles.buttonContainer}>
-            <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
-          </div>}
+          <p className={styles.description}>Design for San Diego (D4SD) is a non-profit organization that engages San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.</p>
+          <br />
+          <h1>Our Team</h1>
+          <p className={styles.description}>Director: Steven Dow</p>
+          <p className={styles.description}>Gabriel Amoako, Grant Chinn, Joanne Cho, Yujin Cho, Mai Eguchi, Allison Endo, Lauren Gong, Akanksha Grover, Alvin Ho, Brandon Hong, Nanna Inie, Michael James, Catherine Kim, Karthik Komatineni, Anne Le, Joseph Le, Susan Lee, Christopher Lim, Allen Lin, Lauren Liu, David Luu, Narges Mahyar, Brian McInnis, Sanika Moharana, Michelle Ng, Alejandro Panduro, Cody Pham, Karen Ma, Tara Nejad, Diana Nguyen, Eric Richards, Gobind Sethi, Eric Tseng, Ariel Weingarten, Donna Yee, Nancy Zheng, Qin Zhuo
+</p>
+          <p className={styles.description}>If you have a question about D4SD or the 2017 Mobility Challenge, send us an <a href="mailto:design4sandiego@gmail.com">email.</a></p>
         </section>
       </div>
     </section>

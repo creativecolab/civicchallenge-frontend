@@ -10,6 +10,7 @@ import ChallengeText from './components/ChallengeText/ChallengeText';
 import Process from './components/Process/Process';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
 import About from './components/About/About';
+import GetInvolved from './components/GetInvolved/GetInvolved';
 import Sponsors from './components/Sponsors/Sponsors';
 
 import styles from './Landing.scss';
@@ -34,8 +35,9 @@ function Landing() {
       />
       <Navbar />
       <ChallengeText />
-      <Process />
       <ChallengeGrid />
+      <GetInvolved />
+      <Process />
       <About />
       <Sponsors />
       <Footer />
