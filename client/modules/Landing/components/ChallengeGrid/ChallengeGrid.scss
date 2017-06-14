@@ -17,6 +17,7 @@ $component-spacing: 3em;
 
   .challenges {
     width: 100%;
+    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
 
     .challenge {
       $max-split: 5;
