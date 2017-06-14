@@ -12,9 +12,10 @@ if (!global.Promise) {
 }
 
 // Google Analytics
-ReactGA.initialize('UA-90860713-1', { debug: process.env.NODE_ENV === 'development' });
+const debugEnvs = ['development', 'staging'];
+ReactGA.initialize('UA-90860713-1', { debug: debugEnvs.includes(process.env.NODE_ENV) });
 
-if (process.env.NODE_ENV === 'development') {
+if (debugEnvs.includes(process.env.NODE_ENV)) {
   ReactGA.ga('set', 'sendHitTask', null);
 }
 
@@ -26,7 +27,7 @@ const store = configureStore(window.__INITIAL_STATE__);
 let routerKey = 0;
 let rootElement = null;
 
-if (process.env.NODE_ENV === 'production') {
+if (['production', 'staging'].includes(process.env.NODE_ENV)) {
   rootElement = (
     <App routerKey={routerKey} store={store} />
   );
