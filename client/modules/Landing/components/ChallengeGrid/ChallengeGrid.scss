@@ -6,6 +6,15 @@ $component-spacing: 3em;
   margin: $component-vertical-margin auto;
   margin-bottom: 0; // TEMP
 
+  .title {
+    text-align: center;
+    h3 {
+      font-size: 1.5em;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
+
   .challenges {
     width: 100%;
 
