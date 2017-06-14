@@ -20,7 +20,7 @@ function App({ children }) {
   return (
     <div>
       <Helmet
-        titleTemplate="%s - Design San Diego"
+        titleTemplate="%s - Design for San Diego"
         meta={[
           { charset: 'utf-8' },
           { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },

@@ -32,7 +32,7 @@ function Landing() {
   return (
     <div className={styles.landing}>
       <Helmet
-        title="Design for San Diego"
+        title="Home"
       />
       <Navbar />
       <ChallengeText />
