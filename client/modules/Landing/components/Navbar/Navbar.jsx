@@ -43,7 +43,7 @@ const NAVBAR_CONTENT = [
   },
   {
     keyName: 'Sponsors',
-    displayName: 'Sponsors',
+    displayName: 'Sponsor Us',
   },
 ];
 
