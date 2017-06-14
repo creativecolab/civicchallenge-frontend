@@ -27,7 +27,7 @@ function CivicFramework(props) {
       <div className={styles.content}>
         <div className="{styles.sponsorsBox}">
           <div className={styles.description}>
-            <p className={styles.quote}><i>“Our research indicated a lack of clear framework to guide large-scale civic engagement throughout an entire process of exploring and executing on plans and policies of public concern.”</i></p>
+            <p className={styles.quote}><i>"We designed the 2017 Civic Challenge to provide a collaborative process for civic engagement throughout the exploration and execution of plans and policies of public concern."</i></p>
             <p className={styles.quote}><i>–Narges Mahyar, UCSD Design Fellow</i></p>
             <br />
             <p>Join below and we will add you to a discussion forum where you can contribute to each of the four phases!</p>
