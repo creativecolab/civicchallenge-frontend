@@ -1,0 +1,153 @@
+@import '~styles/variables';
+
+$call-to-action-bckground: #ededed;
+
+#sponsors {
+  margin: $component-vertical-margin auto;
+
+
+  div.tierBlock {
+    hr {
+      margin: 30px;
+      opacity: 0.3;
+    }
+  }
+
+  p.description {
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+  h3 {
+    margin: 0;
+
+    display: inline-block;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  h4.tier {
+    margin: 1em 0;
+
+    font-size: 1.25em;
+
+    text-align: center;
+  }
+
+  .text {
+    margin: 2em 0;
+
+    text-align: left;
+
+    font-size: 0.9em;
+
+    a {
+      color: #24487c;
+    }
+
+    a:hover {
+      color: #2d324d;
+    }
+  }
+
+  .sponsor-list {
+    text-align: center;
+    img {
+      margin: 0 1em;
+      padding: 1em;
+      height: 3em;
+
+      cursor: pointer;
+
+      background-color: #24487c;
+
+    }
+
+    img:hover {
+      background-color: #2d324d;
+    }
+
+    .you {
+      .you-inner {
+        $border-width: 2px;
+
+        margin: 0 $font-size;
+        border: $border-width dashed #24487c;
+        padding: $font-size - ($border-width) 2 * $font-size;
+        height: 3 * $font-size;
+
+        display: inline-block;
+        vertical-align: top;
+
+        font-size: 2em;
+        line-height: 3 * $font-size;
+        color: #24487c;
+      }
+
+      .you-inner:hover {
+        background-color: #2d324d;
+
+        color: #fff;
+      }
+    }
+
+    &.small {
+      img {
+        margin: 0 1em;
+        padding: 1em;
+        height: 2em;
+      }
+
+      .you {
+        .you-inner {
+          $border-width: 2px;
+
+          margin: 0 $font-size;
+          border: $border-width dashed #24487c;
+          padding: $font-size - ($border-width) 2 * $font-size;
+          height: 2 * $font-size;
+
+          font-size: 2em;
+          line-height: 2 * $font-size;
+        }
+      }
+    }
+  }
+
+  .placeholder {
+    color: rgb(99, 104, 139);
+
+    a {
+      color: rgb(99, 104, 139) !important;
+    }
+  }
+  .callToAction {
+   /* background-color: $call-to-action-bckground;*/
+    /* padding: 20px 40px;*/
+    hr {
+      margin: 30px;
+      opacity: 0.3;
+    }
+  }
+  .sponsorEmail {
+    text-decoration: underline;
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  #sponsors {
+    width: $component-width-desktop;
+  }
+}
+
+  @media (max-width: $mobile-max-width) {
+  #sponsors {
+    width: $component-width-mobile;
+
+  }
+}

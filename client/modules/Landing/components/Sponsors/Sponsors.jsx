@@ -7,6 +7,8 @@ import { withCollectRef } from 'util/RefCollector';
 import globalStyles from 'main.scss';
 import styles from './Sponsors.scss';
 
+import ChallengeText from './components/ChallengeText/ChallengeText';
+
 
 /**
  * Sponsors
@@ -25,9 +27,9 @@ const defaultProps = {};
 function Sponsors(props) {
   return (
     <section id={styles.sponsors} ref={props.componentRef}>
-      <h3 className={globalStyles.ul}>Sponsors</h3>
+      <h3 className={globalStyles.ul}>Sponsor Us</h3>
       <div className="{styles.sponsorsBox}">
-        <p>Here be the sponsor text</p>
+        <ChallengeText />
         <div className={styles.button}>
           <div className={styles.buttonContainer}>
             <a href="/sponsors">Become a Sponsor now</a>

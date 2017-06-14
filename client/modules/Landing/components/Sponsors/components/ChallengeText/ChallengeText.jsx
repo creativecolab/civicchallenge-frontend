@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'util/classNames';
+/* import classNames from 'util/classNames';*/
 
 import styles from './ChallengeText.scss';
 
@@ -38,7 +38,7 @@ const T3_SPONSORS = [
   },
 ];
 
-const FRIENDS = [
+/* const FRIENDS = [
   {
     href: 'https://designforwardsd.com/',
     img: designForwardLogo,
@@ -49,7 +49,7 @@ const FRIENDS = [
     img: protolabLogo,
     alt: 'Protolab',
   },
-];
+];*/
 
 
 /**
@@ -69,12 +69,7 @@ const defaultProps = {};
 function ChallengeText(props) {
   return (
     <section id={styles.sponsors} ref={props.componentRef}>
-      <p>D4SD sponsors are committed to advancing innovation concepts aimed to improve Mobility
-      for the millions of residents in the San Diego region. Sponsorship may come in many forms.
-      In-kind sponsors can commit access to training and human resources, studio space, or technology.
-      Financial sponsorship will help provide incentives for challenge competitions and hackathons planned
-      throughout the Mobility challenge. Sponsorship will allow D4SD to offer design teams cash awards
-      for the best designs for improving Mobility in our city.</p>
+      <p className={styles.description}>D4SD sponsors are committed to advancing innovation concepts aimed to improve mobility for the millions of residents in the San Diego region. Sponsorship may come in many forms. Financial sponsors provide monetary incentives for challenge competitions and hackathons planned throughout the 2017 Civic Challenge. In-kind sponsors can provide gift incentives and access to training, human resources, studio space, or technology.</p>
 
       <div className={styles.tierBlock}>
         <hr />
@@ -147,24 +142,12 @@ function ChallengeText(props) {
         </div>
       </div>
 
-      <div className={styles.callToAction}>
-        <p>Contact Prof. Steven Dow to learn more about how you or your organization could contribute
-        to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
-        <a className={styles.sponsorEmail} href="mailto:spdow@ucsd.edu">
-          GET STARTED
-        </a>
-      </div>
-
-      <h4 className={styles.tier}>Friends of D4SD</h4>
-      <div className={classNames([styles.sponsorList, styles.small])}>
-        {FRIENDS.map(({ href, img, alt }) => (
-          <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-            <img className={styles.backgroundFill} src={img} alt={alt} />
-          </a>
-        ))}
-        <a className={styles.you} href="mailto:design4sandiego@gmail.com">
-          <div className={styles.youInner}>You?</div>
-        </a>
+      <div className={styles.tierBlock}>
+        <hr />
+        <div className={styles.text}>
+          <p>Contact <a className={styles.sponsorEmail} href="mailto:spdow@ucsd.edu">Dr. Steven Dow</a> to learn more about how you or your organization could contribute
+          to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
+        </div>
       </div>
     </section>
   );
