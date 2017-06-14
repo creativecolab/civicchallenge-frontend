@@ -134,7 +134,7 @@ function ChallengeText(props) {
           </a>
         </div>
         <div className={styles.text}>
-          <p>Benefits for in-kind sponsors</p>
+          <p>Benefits for in-kind sponsors:</p>
           <ul>
             <li>Promotion of organization’s logo and/or name promotion on the D4SD website.</li>
             <li>Tickets for up to two people to the Design Forward Summit.</li>
