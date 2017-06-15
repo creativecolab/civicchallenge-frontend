@@ -34,6 +34,20 @@ const LINKS = [
   },
 ];
 
+const NAVBAR_CONTENT = [
+  {
+    keyName: 'GetInvolved',
+  },
+    displayName: 'Get Involved',
+  {
+    keyName: 'About',
+    displayName: 'About Us',
+  },
+  {
+    keyName: 'Sponsors',
+    displayName: 'Sponsor Us',
+  },
+];
 const SCROLL_PX_PER_MS = 1000;
 
 
@@ -86,12 +100,12 @@ class Navbar extends React.Component {
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
             <Link key={text} to={href}>{text}</Link>
           )}
-          {NAVBAR_ITEMS.map(key =>
+          {NAVBAR_CONTENT.map(key =>
             <button
-              key={key}
-              onClick={this._onNavbarItemClickGenerator(key)}
+              key={key.keyName}
+              onClick={this._onNavbarItemClickGenerator(key.keyName)}
             >
-              {key}
+              {key.displayName}
             </button>
           )}
         </nav>

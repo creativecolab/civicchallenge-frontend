@@ -3,11 +3,11 @@
 $component-spacing: 3em;
 
 .process {
-  margin: $component-vertical-margin auto;
-  margin-top: $component-vertical-margin / 2;
+  margin: 0 auto;
+  padding: 0;
 
   text-align: center;
-
+  
   .timeline {
     $timeline-items: 4;
 

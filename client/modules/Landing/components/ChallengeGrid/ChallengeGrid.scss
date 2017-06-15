@@ -6,8 +6,18 @@ $component-spacing: 3em;
   margin: $component-vertical-margin auto;
   margin-bottom: 0; // TEMP
 
+  .title {
+    text-align: center;
+    h3 {
+      font-size: 1.5em;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+  }
+
   .challenges {
     width: 100%;
+    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
 
     .challenge {
       $max-split: 5;
@@ -31,6 +41,13 @@ $component-spacing: 3em;
 
       &.placeholder {
         background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+      }
+
+      &.moresoon {
+        background: url('./traffic.png');
+      }
+
+      &.placeholder, &.moresoon {
 
         a {
           color: #fff !important;
@@ -40,7 +57,7 @@ $component-spacing: 3em;
       &:hover {
         .text {
           background-color: rgba(0, 0, 0, 0.8);
-          box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.8);
+          /*box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.8);*/
 
           .name {
             display: none;
@@ -90,6 +107,16 @@ $component-spacing: 3em;
 
           text-align: left;
           font-size: 0.9em;
+
+          .descriptionElements {
+            p {
+              font-size: 1.4em;
+              text-align: center;
+              font-weight: 500;
+
+              margin: 5px;
+            }
+          }
         }
       }
     }

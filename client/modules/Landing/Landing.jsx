@@ -10,7 +10,9 @@ import ChallengeText from './components/ChallengeText/ChallengeText';
 import Process from './components/Process/Process';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
 import About from './components/About/About';
+import GetInvolved from './components/GetInvolved/GetInvolved';
 import Sponsors from './components/Sponsors/Sponsors';
+import CivicFramework from './components/CivicFramework/CivicFramework';
 
 import styles from './Landing.scss';
 
@@ -30,12 +32,14 @@ function Landing() {
   return (
     <div className={styles.landing}>
       <Helmet
-        title="Landing"
+        title="Home"
       />
       <Navbar />
       <ChallengeText />
-      <Process />
       <ChallengeGrid />
+      <GetInvolved />
+      <Process />
+      <CivicFramework />
       <About />
       <Sponsors />
       <Footer />

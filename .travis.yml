@@ -3,7 +3,7 @@ node_js:
 - 7.8.0
 script:
 - yarn test
-- yarn build:all
+- yarn build:staging
 after_success:
 - echo "Build successful; Ready to deploy"
 notifications:
