@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import ChallengeText from './components/ChallengeText/ChallengeText';
-import CurrentSponsors from './components/CurrentSponsors/CurrentSponsors';
 
 import styles from './Sponsors.scss';
 
@@ -36,7 +35,6 @@ function Sponsors() {
         showButton={false}
       />
       <ChallengeText />
-      <CurrentSponsors />
       <Footer />
     </div>
   );

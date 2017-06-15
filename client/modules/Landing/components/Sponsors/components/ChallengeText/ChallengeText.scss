@@ -9,9 +9,13 @@ $call-to-action-bckground: #ededed;
   div.tierBlock {
     hr {
       margin: 30px;
-
       opacity: 0.3;
     }
+  }
+
+  p.description {
+    text-align: left;
+    font-size: 0.9em;
   }
 
   h3 {
@@ -121,15 +125,17 @@ $call-to-action-bckground: #ededed;
     }
   }
   .callToAction {
-    background-color: $call-to-action-bckground;
-    padding: 20px 40px;
+   /* background-color: $call-to-action-bckground;*/
+    /* padding: 20px 40px;*/
+    hr {
+      margin: 30px;
+      opacity: 0.3;
+    }
   }
   .sponsorEmail {
-    padding: 10px;
-    background-color: black;
-
-    text-decoration: none;
+    text-decoration: underline;
     color: #fff;
+    font-weight: 600;
   }
 }
 

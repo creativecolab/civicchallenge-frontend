@@ -21,27 +21,27 @@ import implement from './implement.svg';
 const TIMELINE_ITEMS = [
   {
     image: diagnose,
-    months: 'April - May',
+    months: 'July',
     title: 'Discover Issues',
-    description: 'Discover issues and frame the most significant challenges around mobility in San Diego',
+    description: 'Identify citizens’ needs then frame the most significant challenges around mobility<br />in San Diego',
   },
   {
     image: ideate,
-    months: 'June - July',
+    months: 'July',
     title: 'Ideate Solutions',
-    description: 'Generate multiple creative  solutions to address the <br/> key challenges',
+    description: 'Generate many creative solutions to address<br />the key challenges',
   },
   {
     image: propose,
     months: 'August - September',
     title: 'Prototype Concepts',
-    description: 'Form teams to build mockups of solutions and get feedback <br /> from stakeholders',
+    description: 'Form teams and build<br />mockups of solutions',
   },
   {
     image: implement,
-    months: 'October -',
+    months: 'October - onward!',
     title: 'Take Action',
-    description: 'Present best solutions to <br/> civic leaders and experts for implementation',
+    description: 'Submit solutions for<br />judging by civic leaders<br />and experts',
   },
 ];
 
@@ -118,6 +118,7 @@ function Process() {
         </div>
         <div className={styles.timelineTextContainer}>{timelineText}</div>
       </div>
+      <br />
     </section>
   );
 }

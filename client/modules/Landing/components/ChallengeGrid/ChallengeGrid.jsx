@@ -8,15 +8,20 @@ import classNames from 'util/classNames';
 
 import LazyImage from 'components/LazyImage/LazyImage';
 
+import globalStyles from 'main.scss';
 import styles from './ChallengeGrid.scss';
 
 import publicTransit from './public-transit.png';
-import urbanPlanning from './urban-planning.png';
+
 import accessibility from './accessibility.png';
 import walking from './walking.png';
 import parking from './parking.png';
+/*
+
 import traffic from './traffic.png';
-import autonomousCars from './autonomous-cars.png';
+
+import urbanPlanning from './urban-planning.png';
+import autonomousCars from './autonomous-cars.png';*/
 
 /**
  * Constants
@@ -24,40 +29,40 @@ import autonomousCars from './autonomous-cars.png';
 
 const CHALLENGES = [
   {
-    name: 'Public Transit',
-    description: 'The San Diego Metropolitan Transit System (MTS) services thousands of citizens over nearly 600 square miles through a robust bus and light rail system. The MTS system is continually expanding through various projects providing opportunity to better serve San Diego’s residents.',
+    name: 'Enhancing Rider <br /> Feedback Systems',
+    description: '<div className={styles.dscrptSummary}>The Metropolitan Transit System (MTS) provides around 310,000 passenger trips each week, but riders are not satisfied with the transit costs, availability, and cleanliness.</div> <br/> <div className={styles.dscrptQuestion}><b>How might we make it easier for riders to voice their concerns and for MTS to hear and address them?</b></div>',
     image: publicTransit,
   },
   {
-    name: 'Urban Planning',
-    description: 'There are several new opportunities for urban planning innovation in San Diego. Creating a gateway for growth will help achieve sustainable development as well as fair socioeconomic distribution in many areas through better infrastructure and services.',
-    image: urbanPlanning,
-  },
-  {
-    name: 'Accessibility',
-    description: 'The San Diego community provides transportation services to elderly and disabled people through different organizations. By collaborating with these organizations, we can develop novel methods to help expand and improve upon existing accessibility for this population.',
-    image: accessibility,
-  },
-  {
-    name: 'Walking/Biking',
-    description: 'Reducing pedestrian and bicycle deaths, implementing safe walks to schools, and the push for more infrastructure and funding for pedestrian and bicycle spaces is a critical issue in San Diego as more citizens look for alternatives to driving.',
+    name: 'Walking and <br /> Biking Safely',
+    description: '<div className={styles.dscrptSummary}>As the city of San Diego grows in population, more residents are choosing to use walking and biking to avoid traffic congestion and parking. However, since walking and biking are not the norm they can be dangerous in a city built for cars.</div> <br /> <div className={styles.dscrptQuestion}> <b>How might we make walking and biking safer for San Diego citizens?</b></div>',
     image: walking,
   },
   {
-    name: 'Parking',
-    description: 'As the population of San Diego continues to grow, parking becomes a more pressing issue. This provides opportunity for innovative solutions to maximize existing parking infrastructure and generate more effective practices for future parking areas.',
+    name: 'Parking and <br /> Population Growth',
+    description: '<div className={styles.dscrptSummary}> In a city with over 2.2 million personal vehicles, parking is a problem. As more cars join the road each year, better systems are needed to manage and plan for new parking infrastructure. Drivers need information about where to find a spot and how much time they have left on the meter. City planners could also use real-time information from sensors or citizens to better understand parking demand.</div> <br /> <div className={styles.dscrptQuestion}> <b> How might we help drivers and planners navigate the challenge of parking in San Diego?</b> </div>',
     image: parking,
   },
   {
-    name: 'Traffic',
-    description: 'Residents of San Diego deal with congested freeways going northbound in the morning, and even slower going southbound in the evening. Investigating the underlying causes of traffic as well as possible infrastructural, behavioral, or policy-wise changes can reduce the ever-present frustration of traffic and dependence on cars.',
+    name: 'Accessibility',
+    description: '<div className={styles.dscrptSummary}> The lack of convenient, accessible, and affordable transportation for citizens with a disability is a major problem in San Diego. Programs exist yet challenges persist around infrastructure and transit deficient areas.</div> <br /> <div className={styles.dscrptQuestion}> <b>How might we help those with a disability, who may also lack technology and a voice in the community, communicate their mobility challenges and gain independence?</b></div>',
+    image: accessibility,
+  },
+  /*  {
+    name: 'More Coming Soon',
+    description: '<p style="text-align: center;">Autonomous Vehicles<br /> Aging and Mobility<br />Traffic Congestion<br />Crossing the Border</p>',
+    image: traffic,
+  },
+   {
+    name: 'Suggest a Challenge',
+    description: 'Residents of San Diego deal with congested freeways and lanes. There is a need to reduce traffic frustration and improve the experience for commuters.',
     image: traffic,
   },
   {
     name: 'Autonomous Cars',
-    description: 'As technology continues to revolutionize the dynamics of our everyday transportation, self-driving cars can be the key to decreasing accidents and building a more sustainable system. San Diego has been chosen as one of five cities to test autonomous cars, providing a prime opportunity to design a futuristic era of transportation.',
+    description: 'As technology continues to revolutionize the dynamics of our everyday transportation, self-driving cars can be the key to decreasing accidents and building a more sustainable system. San Diego has been chosen as one of five cities to test autonomous cars, however trust and safety are two important components in integrating autonomous cars as a widely accepted mode of transportation.',
     image: autonomousCars,
-  },
+  },*/
 ];
 
 
@@ -69,8 +74,18 @@ function ChallengeBox({ name, description, image }) {
   return (
     <div className={styles.challenge}>
       <div className={styles.text}>
-        <span className={styles.name}>{name}</span>
-        <span className={styles.description}>{description}</span>
+        <div
+          className={styles.name}
+          dangerouslySetInnerHTML={{
+            __html: name,
+          }}
+        />
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{
+            __html: description,
+          }}
+        />
       </div>
       <LazyImage src={image} alt={name} />
     </div>
@@ -101,6 +116,9 @@ const defaultProps = {};
 function ChallengeGrid(props) {
   return (
     <section className={styles.challengeGrid} ref={props.componentRef}>
+      <div className={styles.title}>
+        <h3 className={globalStyles.ul}>THEMES</h3>
+      </div>
       <div className={styles.challenges}>
         {CHALLENGES.map(challenge =>
           <ChallengeBox
@@ -108,10 +126,23 @@ function ChallengeGrid(props) {
             {...challenge}
           />
         )}
+        <div className={classNames([styles.challenge, styles.moresoon])}>
+          <div className={styles.text}>
+            <span className={styles.name}>More Coming Soon</span>
+            <span className={styles.description}>
+              <div className={styles.descriptionElements}>
+                <p>Autonomous Vehicles</p>
+                <p>Aging and Mobility</p>
+                <p>Traffic Congestion</p>
+                <p>Crossing the Border</p>
+              </div>
+            </span>
+          </div>
+        </div>
         <div className={classNames([styles.challenge, styles.placeholder])}>
           <div className={styles.text}>
             <span className={styles.name}>Suggest a Challenge</span>
-            <span className={styles.description}>Please email <a href="mailto:design4sandiego@gmail.com">design4sandiego@gmail.com</a>.</span>
+            <span className={styles.description}>Did we miss something? If there’s another mobility challenge San Diego faces that you don’t see here, toss us an <a href="mailto:spdow@ucsd.edu">email</a>.</span>
           </div>
         </div>
       </div>

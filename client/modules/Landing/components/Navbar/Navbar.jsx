@@ -28,11 +28,33 @@ const LINKS = [
 ];
 */
 
+const NAVBAR_CONTENT = [
+  {
+    keyName: 'Challenges',
+    displayName: 'Themes',
+  },
+  {
+    keyName: 'GetInvolved',
+    displayName: 'Get Involved',
+  },
+  {
+    keyName: 'About',
+    displayName: 'About Us',
+  },
+  {
+    keyName: 'Sponsors',
+    displayName: 'Sponsor Us',
+  },
+];
+
+/*
 const NAVBAR_ITEMS = [
   'Challenges',
+  'Get Involved',
   'About',
   'Sponsors',
 ];
+*/
 
 const LINKS = [];
 
@@ -88,12 +110,12 @@ class Navbar extends React.Component {
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
             <Link key={text} to={href}>{text}</Link>
           )}
-          {NAVBAR_ITEMS.map(key =>
+          {NAVBAR_CONTENT.map(key =>
             <button
-              key={key}
-              onClick={this._onNavbarItemClickGenerator(key)}
+              key={key.keyName}
+              onClick={this._onNavbarItemClickGenerator(key.keyName)}
             >
-              {key}
+              {key.displayName}
             </button>
           )}
         </nav>
