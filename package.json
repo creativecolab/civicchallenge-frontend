@@ -18,7 +18,7 @@
     "build:server": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=production webpack --progress --profile --colors --config webpack.config.server.js",
     "build:all": "yarn build:client; yarn build:server",
     "build:staging": "yarn build:staging:client; yarn build:staging:server",
-    "build:staging:client": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=staging webpack --progress --profile --colors --config webpack.config.prod.js",
+    "build:staging:client": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=staging webpack --progress --profile --colors --config webpack.config.staging.js",
     "build:staging:server": "cross-env BABEL_DISABLE_CACHE=1 NODE_ENV=staging webpack --progress --profile --colors --config webpack.config.server.js",
     "/* Cleanup Scripts */": "",
     "clean:dist": "yarn clean:dist:server; yarn clean:dist:client",
