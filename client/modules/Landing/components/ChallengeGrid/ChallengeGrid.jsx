@@ -10,7 +10,6 @@ import classNames from 'util/classNames';
 
 import LazyImage from 'components/LazyImage/LazyImage';
 
-import globalStyles from 'main.scss';
 import styles from './ChallengeGrid.scss';
 
 /**

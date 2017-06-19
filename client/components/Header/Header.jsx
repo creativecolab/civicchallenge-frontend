@@ -16,11 +16,15 @@ const LINKS = [
   },
   {
     href: '/about',
-    text: 'About',
+    text: 'About Us',
   },
   {
     href: '/sponsors',
     text: 'Sponsors',
+  },
+  {
+    href: '/',
+    text: 'Get Involved',
   },
 ];
 
