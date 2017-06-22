@@ -4,10 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
 
-import globalStyles from 'main.scss';
 import styles from './Sponsors.scss';
-
-import ChallengeText from './components/ChallengeText/ChallengeText';
 
 
 /**
@@ -27,13 +24,12 @@ const defaultProps = {};
 function Sponsors(props) {
   return (
     <section id={styles.sponsors} ref={props.componentRef}>
-      <h3 className={globalStyles.ul}>Sponsor Us</h3>
-      <div className="{styles.sponsorsBox}">
-        <ChallengeText />
-        <div className={styles.button}>
-          <div className={styles.buttonContainer}>
-            <a href="mailto:spdow@ucsd.edu">Become a Sponsor now</a>
-          </div>
+      <div id={styles.sponsorWrapper}>
+        <h1>Ready to Take on the Challenge?</h1>
+        <div id={styles.sponsorRow}>
+          <a href="" className={styles.solidBtn}>REGISTER NOW</a>
+          <span>or see</span>
+          <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
         </div>
       </div>
     </section>

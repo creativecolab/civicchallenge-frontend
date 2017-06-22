@@ -1,156 +1,70 @@
 @import '~styles/variables';
 
 #sponsors {
-  margin: $component-vertical-margin auto;
+  padding: 3em 0 4em 0;
+  position: relative;
 
-  text-align: center;
+  background-color: $theme-color-blue;
 
-  h3 {
-    margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: inline-block;
 
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  h4.tier {
-    margin: 1em 0;
-
-    font-size: 1.25em;
-  }
-
-  .text {
-    margin: 2em 0;
-
-    text-align: left;
-
-    font-size: 0.9em;
-
-    a {
-      color: #24487c;
+  #sponsorWrapper {
+    h1 {
+      color: $font-color-nonwhitebkgd;
     }
 
-    a:hover {
-      color: #2d324d;
-    }
-  }
-
-  .sponsor-list {
-    img {
-      margin: 0 1em;
-      padding: 1em;
-      height: 3em;
-
-      cursor: pointer;
-
-      background-color: #24487c;
-    }
-
-    img:hover {
-      background-color: #2d324d;
-    }
-
-    .you {
-      .you-inner {
-        $border-width: 2px;
-
-        margin: 0 $font-size;
-        border: $border-width dashed #24487c;
-        padding: $font-size - ($border-width) 2 * $font-size;
-        height: 3 * $font-size;
-
-        display: inline-block;
-        vertical-align: top;
-
-        font-size: 2em;
-        line-height: 3 * $font-size;
-        color: #24487c;
+    #sponsorRow {
+      span {
+        color: $font-color-nonwhitebkgd;
+        padding: 0 20px;
       }
 
-      .you-inner:hover {
-        background-color: #2d324d;
+      .solidBtn {
+        color: $theme-color-blue;
+        background-color: $font-color-nonwhitebkgd;
+        padding: 15px 30px;
+        border: 2px solid $font-color-nonwhitebkgd;
 
-        color: #fff;
-      }
-    }
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.7em;
 
-    &.small {
-      img {
-        margin: 0 1em;
-        padding: 1em;
-        height: 2em;
-      }
-
-      .you {
-        .you-inner {
-          $border-width: 2px;
-
-          margin: 0 $font-size;
-          border: $border-width dashed #24487c;
-          padding: $font-size - ($border-width) 2 * $font-size;
-          height: 2 * $font-size;
-
-          font-size: 2em;
-          line-height: 2 * $font-size;
+        &:hover {
+          color: $font-color-nonwhitebkgd;
+          background-color: $theme-color-blue;
+          border-color: $font-color-nonwhitebkgd;
         }
       }
-    }
 
-    
-  }
+      .outlineBtn {
+        color: $font-color-nonwhitebkgd;
+        padding: 15px 30px;
+        border: 2px solid $font-color-nonwhitebkgd;
+        
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.7em;
 
-.button {
-  margin: 20px;
-  font-size: 16px;
-
-  .buttonContainer {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
-    a {
-      margin: 0;
-      border: none;
-      border-radius: 30px;
-      padding: 0.8em 1.5em;
-
-      display: inline-block;
-      cursor: pointer;
-
-      background-color: #24487c;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    a:hover {
-      background-color: #2d324d;
-    }
-  }
-}
-
-  .placeholder {
-    color: rgb(99, 104, 139);
-
-    a {
-      color: rgb(99, 104, 139) !important;
+        &:hover {
+          color: $theme-color-blue;
+          background-color: $font-color-nonwhitebkgd;
+        }
+      }
     }
   }
 }
 
 @media (min-width: $desktop-min-width) {
-#sponsors {
-  width: $component-width-desktop;
+#sponsorsWrapper{
+  width: $component-width-desktop
 }
 }
 
 @media (max-width: $mobile-max-width) {
-#sponsors {
+#sponsorsWrapper {
   width: $component-width-mobile;
 
 }

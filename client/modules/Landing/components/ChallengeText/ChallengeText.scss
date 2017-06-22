@@ -1,59 +1,46 @@
 @import '~styles/variables';
 
 $component-spacing: 3em;
+$header-fcolor: rgb(255, 255, 255);
 
-.challenge-text {
-  margin: $component-vertical-margin auto;
-
-  .description {
-    padding: 0;
-    margin-bottom: 4em;
-    p {
-      font-size: 0.9em;
-    }
-  }
-
-  .header {
-    margin-top: 4em;
-    margin-bottom: 3em;
+#headerBackground {
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  background-color: #5eb7f2;
 
     .main {
+      display: flex;
+      justify-content: center;
       $font-size: 1.5em;
 
-      margin: 0;
+      margin: 0; 
 
       text-align: center;
       font-weight: normal;
 
-      .text1 {
-        font-size: 1.4 * $font-size;
-        padding: 0;
-        margin: 0;
-        text-transform: uppercase;
-      }
 
       .text2 {
         font-size: 3.8 * $font-size;
-        font-weight: bold;
+        font-weight: 500;
         padding: 15px 0 0 0;
         margin:0;
         line-height: 1em;
-        text-transform: uppercase;
-
-        color: rgb(117, 158, 211);
+        color: $header-fcolor;
       }
-      .text3 {
+      /*.text3 {
         font-size: .9 * $font-size;
-        font-weight: bold;
+        font-weight: 600;
         padding: 0;
         margin: 0;
-      }
+        color: $header-fcolor;
+      }*/
 
       .text4 {
         font-size: 18px;
-        font-weight: 600;
         padding: 10px 0;
         margin:0;
+        color: $header-fcolor;
       }
 
       .button {
@@ -69,13 +56,12 @@ $component-spacing: 3em;
           a {
             margin: 0;
             border: none;
-            border-radius: 30px;
             padding: 0.8em 1.5em;
 
             display: inline-block;
             cursor: pointer;
 
-            background-color: #24487c;
+            background-color: #FC6464;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 600;
@@ -83,14 +69,15 @@ $component-spacing: 3em;
           }
 
           a:hover {
-            background-color: #2d324d;
+            background-color: #d84949;
           }
         }
       }
     }
 
     
-  }
+
+  
 }
 
 
