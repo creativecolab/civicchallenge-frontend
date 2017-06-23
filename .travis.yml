@@ -20,6 +20,7 @@ deploy:
   app: d4sd-frontend
   env: staging
   bucket_name: elasticbeanstalk-us-west-2-709500077301
+  bucket_path: d4sd-frontend/staging
   on:
     branch: dev
     repo: creativecolab/civicchallenge-frontend
@@ -32,6 +33,7 @@ deploy:
   app: d4sd-frontend
   env: production
   bucket_name: elasticbeanstalk-us-west-2-709500077301
+  bucket_path: d4sd-frontend/production
   on:
     branch: master
     repo: creativecolab/civicchallenge-frontend
