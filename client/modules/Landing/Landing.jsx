@@ -6,9 +6,10 @@ import Helmet from 'react-helmet';
 
 import Footer from 'components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
-import ChallengeText from './components/ChallengeText/ChallengeText';
+import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
-import GetInvolved from './components/GetInvolved/GetInvolved';
+import WhyParticipate from './components/WhyParticipate/WhyParticipate';
+import Register from './components/Register/Register';
 import Sponsors from './components/Sponsors/Sponsors';
 
 import styles from './Landing.scss';
@@ -32,9 +33,10 @@ function Landing() {
         title="Home"
       />
       <Navbar />
-      <ChallengeText />
+      <LandingHeader />
       <ChallengeGrid />
-      <GetInvolved />
+      <WhyParticipate />
+      <Register />
       <Sponsors />
       <Footer />
     </div>

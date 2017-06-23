@@ -25,12 +25,7 @@ function Sponsors(props) {
   return (
     <section id={styles.sponsors} ref={props.componentRef}>
       <div id={styles.sponsorWrapper}>
-        <h1>Ready to Take on the Challenge?</h1>
-        <div id={styles.sponsorRow}>
-          <a href="" className={styles.solidBtn}>REGISTER NOW</a>
-          <span>or see</span>
-          <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
-        </div>
+        <p>TODO</p>
       </div>
     </section>
   );

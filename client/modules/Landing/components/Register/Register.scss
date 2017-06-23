@@ -1,10 +1,10 @@
 @import '~styles/variables';
 
-#sponsors {
+#register {
   padding: 3em 0 4em 0;
   position: relative;
 
-  background-color: $theme-color-medgrey;
+  background-color: $theme-color-blue;
 
   display: flex;
   align-items: center;
@@ -58,13 +58,13 @@
 }
 
 @media (min-width: $desktop-min-width) {
-#sponsorsWrapper{
+#registerWrapper{
   width: $component-width-desktop
 }
 }
 
 @media (max-width: $mobile-max-width) {
-#sponsorsWrapper {
+#registerWrapper {
   width: $component-width-mobile;
 
 }

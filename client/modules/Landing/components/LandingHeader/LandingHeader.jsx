@@ -4,10 +4,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
 
-import styles from './ChallengeText.scss';
+import styles from './LandingHeader.scss';
 
 /**
- * ChallengeText
+ * LandingHeader
  */
 
 const propTypes = {};
@@ -26,7 +26,7 @@ function logClick() {
   });
 }
 
-function ChallengeText() {
+function LandingHeader() {
   return (
     <section id={styles.headerBackground}>
       <div className={styles.main}>
@@ -45,8 +45,8 @@ function ChallengeText() {
   );
 }
 
-ChallengeText.propTypes = propTypes;
-ChallengeText.contextTypes = contextTypes;
-ChallengeText.defaultProps = defaultProps;
+LandingHeader.propTypes = propTypes;
+LandingHeader.contextTypes = contextTypes;
+LandingHeader.defaultProps = defaultProps;
 
-export default ChallengeText;
+export default LandingHeader;
