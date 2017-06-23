@@ -19,6 +19,7 @@ deploy:
   region: us-west-2
   app: d4sd-frontend
   env: staging
+  bucket_name: elasticbeanstalk-us-west-2-709500077301
   on:
     branch: dev
     repo: creativecolab/civicchallenge-frontend
@@ -30,6 +31,7 @@ deploy:
   region: us-west-2
   app: d4sd-frontend
   env: production
+  bucket_name: elasticbeanstalk-us-west-2-709500077301
   on:
     branch: master
     repo: creativecolab/civicchallenge-frontend
