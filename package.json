@@ -10,6 +10,7 @@
     "/* Dev Scripts */": "",
     "dev": "cross-env API_HOST=d4sd.dev BABEL_DISABLE_CACHE=1 DEBUG=server:* NODE_ENV=development nodemon index.js",
     "/* Staging Scripts */": "",
+    "prestart:stage": "yarn build:staging",
     "start:stage": "cross-env DEBUG=server:* NODE_ENV=staging node index.js",
     "deploy:stage": "git push heroku dev:master",
     "heroku-postbuild": "yarn build:staging",
@@ -120,7 +121,7 @@
     "webpack-manifest-plugin": "^1.1.0"
   },
   "engines": {
-    "node": "7.8.0"
+    "node": "7.6.0"
   },
   "ava": {
     "files": [
