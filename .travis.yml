@@ -21,6 +21,7 @@ deploy:
   env: staging
   bucket_name: elasticbeanstalk-us-west-2-709500077301
   bucket_path: d4sd-frontend/staging
+  skip_cleanup: true
   on:
     branch: dev
     repo: creativecolab/civicchallenge-frontend
@@ -34,6 +35,7 @@ deploy:
   env: production
   bucket_name: elasticbeanstalk-us-west-2-709500077301
   bucket_path: d4sd-frontend/production
+  skip_cleanup: true
   on:
     branch: master
     repo: creativecolab/civicchallenge-frontend
