@@ -4,6 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
 
+import InternalButton from 'components/InternalButton/InternalButton';
+
 import styles from './Register.scss';
 
 
@@ -27,7 +29,7 @@ function Register(props) {
       <div id={styles.sponsorWrapper}>
         <h1>Ready to Take on the Challenge?</h1>
         <div id={styles.sponsorRow}>
-          <a href="" className={styles.solidBtn}>REGISTER NOW</a>
+          <InternalButton />
           <span>or see</span>
           <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
         </div>

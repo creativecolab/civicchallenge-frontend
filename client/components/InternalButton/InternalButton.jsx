@@ -7,18 +7,22 @@ import styles from './InternalButton.scss';
  * InternalButton
  */
 
- const PropTypes = {};
+const propTypes = {};
 
- const contextTypes = {};
+const contextTypes = {
+  router: PropTypes.object,
+};
 
- const defaultProps = {};
+const defaultProps = {};
 
- function InternalButton() {
+function InternalButton() {
+  return (
+    <a href="" className={styles.solidBtn}>REGISTER NOW</a>
+  );
+}
 
- }
+InternalButton.propTypes = propTypes;
+InternalButton.contextTypes = contextTypes;
+InternalButton.defaultProps = defaultProps;
 
- InternalButton.propTypes = propTypes;
- InternalButton.contextTypes = contextTypes;
- InternalButton.defaultProps = defaultProps;
-
- export default InternalButton;
+export default InternalButton;
