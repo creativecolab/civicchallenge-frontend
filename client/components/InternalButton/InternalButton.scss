@@ -1,0 +1,21 @@
+#internalButton{
+	height: 100%;
+	width: 100%;
+
+	.solidBtn {
+	color: $theme-color-blue;
+	background-color: $font-color-nonwhitebkgd;
+	padding: 15px 30px;
+	border: 2px solid $font-color-nonwhitebkgd;
+
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.7em;
+
+		&:hover {
+		  color: $font-color-nonwhitebkgd;
+		  background-color: $theme-color-blue;
+		  border-color: $font-color-nonwhitebkgd;
+		}
+	}
+}
