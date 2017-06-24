@@ -10,6 +10,11 @@ notifications:
   email: false
   slack:
     secure: BFtW2prVs8d8O0jb/HVrzfNAy1i9J/TvmY37wZFvnRO4mfH9zlTAL+EQYu9WwmGsj/+p7bU5VexvaLsF/c4QB2WbyhNi0vbzP5h65Kkm+QoW1CUi54y4EzSWDwdv99jPUw8FGvs0t1dunkdFBabKcXV+2yg6o33cZagF7r+RNX+iGadmVjNJlEfoRxMcukhByWK3TvZ/r5AVM0UoDZa2NTx2vF5yUm20+9BisWnuARiHMsQdh3L+qYGoISLUpOSwzJ1BzWqfeujHnAfR68KsOJQO5M/nJNc4H6Eq3zqSl/CbL2GWLy3npCFr8HwwmiCm7dft5WOXa4yLjbXegleqhH8rlOCFcM6G//01GtJznNRKoeP8sG+UedGY0iLrLAu/WZby+kisR62undKs0gpJl4WRmEKKdmPjh843tDfztU88KcCkprF4MWsQnUHuXg8BRr18ffdjwqWCemF1cniSXMnd4/vpr5SRS2dBkRjXUbxI9tXz2c2nRdSd0fG4/jCz1YErnln2JzWvlCK0H3LHF1Ti9woEeVULWDOvVQ5GP9n90gd1wl5PMz6Y1Dearxaag0cPN133UezMYumemdEWsI+uuEwwAheEPUZ5wR4U39vLndv31w65AFFQabMIHoFpq46gqlm/6oU4ba0MTc+xsCo5bh/8WyccCN4z8yU5rMU=
+before_deploy:
+- git config user.email "travis-ci@d4sd.org"
+- git config user.name "Travis CI"
+- git add --force server-dist client-dist # To make sure our built files get deployed
+- git commit -m "BUILD - Add built files"
 deploy:
   provider: elasticbeanstalk
   access_key_id:
