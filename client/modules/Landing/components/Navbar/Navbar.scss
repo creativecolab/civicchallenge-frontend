@@ -5,19 +5,19 @@ $navbar-height: 50px;
 $font-color: #fff;
 
 .navbar-container {
+  position: fixed;
   height: $navbar-height;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 
-  background-color: rgb(36, 72, 124);
+  display: inline-block;
 
   .logo {
   }
 
   .navbar {
+    float: right;
   }
 
   .logo, .navbar {

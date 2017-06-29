@@ -11,7 +11,6 @@ $component-spacing: 3em;
     display: inline-block;
 
     text-align: center;
-    text-transform: uppercase;
     font-size: 1.5em;
     font-weight: bold;
   }
@@ -24,9 +23,15 @@ $component-spacing: 3em;
   vertical-align: middle;
   margin: auto;
 
+  h4 {
+    color: $theme-color-lightgrey;
+    text-transform: uppercase;
+  }
+
   .sponsorImage{
-    width: 30%;
+    max-width: 30%;
     vertical-align: middle;
+    max-height: 100px;
   }
 }
 

@@ -20,7 +20,7 @@ const getEvents = (nextState, cb) => require.ensure([], require => cb(null, requ
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
 const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
 const getRewards = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Rewards/Rewards').default), 'rewards');
-const getOnboard = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Onboarding/Onboarding').default), 'onbaording');
+const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
 const getFeedback = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Feedback/Feedback').default), 'feedback');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
@@ -39,7 +39,7 @@ export default (
     <Route path="/challenges" getComponent={getChallenges} />
     <Route path="/challenges/:id" getComponent={getChallenge} />
     <Route path="/rewards" getComponent={getRewards} />
-    <Route path="/onboarding" getComponent={getOnboard} />
+    <Route path="/resources" getComponent={getResources} />
     <Route path="/feedback" getComponent={getFeedback} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>

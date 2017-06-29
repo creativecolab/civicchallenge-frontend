@@ -1,19 +1,38 @@
 @import '~styles/variables'; 
 
+.solidBtn, .outlineBtn {
+  text-transform: uppercase;
+}
 
 .solidBtn {
-color: $theme-color-blue;
-background-color: $font-color-nonwhitebkgd;
-padding: 15px 30px;
-border: 2px solid $font-color-nonwhitebkgd;
+  color: $theme-color-blue;
+  background-color: $font-color-nonwhitebkgd;
+  padding: 15px 30px;
+  border: 2px solid $font-color-nonwhitebkgd;
 
-text-decoration: none;
-font-weight: bold;
-font-size: 0.7em;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.7em;
 
-	&:hover {
-	  color: $font-color-nonwhitebkgd;
-	  background-color: $theme-color-blue;
-	  border-color: $font-color-nonwhitebkgd;
-	}
+  &:hover {
+    color: $font-color-nonwhitebkgd;
+	background-color: $theme-color-blue;
+	border-color: $font-color-nonwhitebkgd;
+  }
+}
+
+
+.outlineBtn {
+  color: $font-color-nonwhitebkgd;
+  padding: 15px 30px;
+  border: 2px solid $font-color-nonwhitebkgd;
+
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.7em;
+
+  &:hover {
+    color: $theme-color-blue;
+    background-color: $font-color-nonwhitebkgd;
+  }
 }

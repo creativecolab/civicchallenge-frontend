@@ -7,7 +7,10 @@ import styles from './InternalButton.scss';
  * InternalButton
  */
 
-const propTypes = {};
+const propTypes = {
+  btnText: PropTypes.string.isRequired,
+  btnLink: PropTypes.string.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -15,9 +18,9 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function InternalButton() {
+function InternalButton({ btnText, btnLink }) {
   return (
-    <a href="" className={styles.solidBtn}>REGISTER NOW</a>
+    <a href={btnLink} className={styles.solidBtn}>{ btnText }</a>
   );
 }
 

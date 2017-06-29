@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
 
+import globalStyles from 'main.scss';
 import styles from './ChallengeDescription.scss';
 
 
@@ -24,7 +25,7 @@ const defaultProps = {};
 function ChallengeDescription(props) {
   return (
     <section id={styles.ChallengeDescription} ref={props.componentRef}>
-      <div id={styles.challengeDescWrapper}>
+      <div className={globalStyles.sectionTitle}>
         <h1>The Challenge</h1>
         <p>Let’s see what Chef Dee got that they don’t want us to eat. The key to more success is to have a lot of pillows.
         I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. Look at the sunset, life is amazing,

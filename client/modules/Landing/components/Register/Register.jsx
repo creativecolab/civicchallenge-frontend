@@ -29,7 +29,10 @@ function Register(props) {
       <div id={styles.sponsorWrapper}>
         <h1>Ready to Take on the Challenge?</h1>
         <div id={styles.sponsorRow}>
-          <InternalButton />
+          <InternalButton
+            btnText="Register Now"
+            btnLink=""
+          />
           <span>or see</span>
           <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
         </div>

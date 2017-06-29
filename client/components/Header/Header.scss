@@ -2,6 +2,7 @@
 
 $navbar-height: 50px;
 
+$nav-font-color: #000;
 $font-color: #fff;
 
 .header {
@@ -29,7 +30,7 @@ $font-color: #fff;
     align-items: center;
     justify-content: space-between;
 
-    // background-color: #000;
+    background-color: #fff;
 
     .logo {
     }
@@ -46,7 +47,6 @@ $font-color: #fff;
 
         text-decoration: none;
         text-transform: uppercase;
-        color: $font-color;
       }
 
       a,button {
@@ -60,8 +60,13 @@ $font-color: #fff;
         text-decoration: none;
         text-transform: uppercase;
         background-color: transparent;
-        font-size: 0.75 * $font-size;
-        color: $font-color;
+        font-size: 0.65 * $font-size;
+        font-weight: 500;
+        color: $nav-font-color;
+
+        &:hover {
+          opacity: 0.3;
+        }
       }
 
       .active {
@@ -86,8 +91,8 @@ $font-color: #fff;
 
         display: inline-block;
         
-        font-size: 2.5 * $font-size;
-        font-weight: normal;
+        font-size: 1.75 * $font-size;
+        font-weight: bold;
       }
 
       h2 {

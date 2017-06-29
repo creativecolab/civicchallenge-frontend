@@ -1,5 +1,8 @@
 @import '~styles/variables';
 
+$page-padding-width: 328px;
+$page-padding-height: 124px;
+
 /**
  * Global Styles
  */
@@ -35,6 +38,16 @@ div[data-reactroot] {
     font-size: 1.5em;
     display: inline-block;
   }
+}
+
+.sectionTitle, .sectionTitleWhite {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitleWhite {
+  color: #fff;
 }
 
 /**

@@ -11,20 +11,24 @@ import styles from './Header.scss';
 // TODO: Make homepage links scroll to correct area
 const LINKS = [
   {
-    href: '/challenges',
-    text: 'Challenges',
+    href: '',
+    text: 'How It Works',
   },
   {
-    href: '/about',
-    text: 'About Us',
+    href: '/challenges',
+    text: 'Design Briefs',
+  },
+  {
+    href: '',
+    text: 'Resources',
   },
   {
     href: '/sponsors',
     text: 'Sponsors',
   },
   {
-    href: '/',
-    text: 'Get Involved',
+    href: '/about',
+    text: 'About Us',
   },
 ];
 
