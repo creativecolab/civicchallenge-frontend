@@ -19,7 +19,7 @@ const LINKS = [
     text: 'Design Briefs',
   },
   {
-    href: '',
+    href: '/resources',
     text: 'Resources',
   },
   {

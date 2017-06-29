@@ -2,7 +2,7 @@
 
 $icon-height: 50px;
 $title-font-size: 1.2em;
-$paragraph-font-size: 0.9em;
+$answer-font-size: 0.8em;
 
 .QuestionBox {
   width: 100%;
@@ -12,12 +12,38 @@ $paragraph-font-size: 0.9em;
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
-      border: 2px solid red;
+      .qQuestion {
+        h3 {
+          color: $theme-color-blue;
+        }
+      }
       .qBtn {
-        border: 2px solid yellow;
         display: flex;
         justify-content: flex-end;
+
+        button {
+          width: 30px;
+          height: 30px;
+          border: 3px solid $theme-color-blue;
+          background-color: transparent;
+          border-radius: 40px;
+
+          color: $theme-color-blue;
+          font-size: 1em;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .questionText {
+      border-left: 1px solid $theme-color-lightgrey;
+      border-top: 1px solid $theme-color-lightgrey;
+
+      p {
+        margin: 20px;
+        font-size: $answer-font-size;
       }
     }
   }
