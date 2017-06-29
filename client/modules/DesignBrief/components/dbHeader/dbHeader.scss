@@ -1,0 +1,44 @@
+@import "~styles/variables.scss";
+
+$header-img-dim: 250px;
+
+.dbHeader {
+
+	height: 100%;
+	width: 100%;
+
+	.contentContainer {
+		width: 80%;
+		margin: 0 auto;
+
+		.dbHeader {
+			display: flex;
+			justify-content: space-around;
+
+			.dbHeaderText {
+				width: 60%;
+
+				h6 {
+					margin: 0;
+				}
+
+				h1 {
+					margin-top: 0;
+				}
+
+				p {
+					font-size: 0.9em;
+				}
+			}
+
+			.dbHeaderImg {
+				height: $header-img-dim;
+				width: $header-img-dim;
+
+				background-color: $theme-color-lightgrey;
+
+			}
+		}
+	}
+
+}

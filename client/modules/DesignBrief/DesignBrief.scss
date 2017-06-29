@@ -1,0 +1,79 @@
+@import "~styles/variables.scss";
+
+$header-img-dim: 250px;
+$right-side-width: 60%;
+
+.DesignBrief {
+
+	height: 100%;
+	width: 100%;
+
+	.contentContainer {
+		width: 80%;
+		margin: 0 auto;
+
+		.dbHeader {
+			display: flex;
+			justify-content: space-between;
+
+			.dbHeaderText {
+				width: $right-side-width;
+
+				h6 {
+					margin: 0;
+					
+				}
+
+				h1 {
+					margin-top: 0;
+				}
+
+				p {
+					font-size: 0.9em;
+				}
+			}
+
+			.dbHeaderImg {
+				height: $header-img-dim;
+				width: $header-img-dim;
+				
+				display: flex;
+				justify-content: flex-end;
+
+				background-color: $theme-color-lightgrey;
+
+			}
+		}
+
+		.dbNavBar {
+			width: 40%;
+			display: flex;
+			justify-content: space-between;
+
+			h3 {
+
+			}
+
+		}
+
+		.overview {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+
+			.overviewText {
+				width: $right-side-width;
+			}
+
+			.overviewSideBar {
+			}
+
+		}
+	}
+
+	hr{ 
+    margin: 0;
+    background-color: $theme-color-lightgrey;
+	}
+
+}
