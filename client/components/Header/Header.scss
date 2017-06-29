@@ -19,7 +19,7 @@ $font-color: #fff;
     position: absolute;
     z-index: -1;
 
-    background: linear-gradient(135deg, rgb(38, 113, 185) 0%, rgb(35, 55, 98) 100%);
+    background-color: $theme-color-blue;
   }
 
   .navbar-container {

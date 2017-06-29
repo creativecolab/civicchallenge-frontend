@@ -11,6 +11,7 @@ import pIcon from './placeholdericon.png';
 const propTypes = {
   resourceName: PropTypes.string.isRequired,
   resourceText: PropTypes.string.isRequired,
+  resourceLink: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -19,18 +20,20 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ResourceBox({ resourceName, resourceText }) {
+function ResourceBox({ resourceName, resourceText, resourceLink }) {
   return (
     <div className={styles.ResourceBox}>
-      <div className={styles.contentContainer}>
-        <div className={styles.iconContainer}>
-          <img className={styles.resourceIcon} src={pIcon} alt="icon" />
+      <a href={resourceLink}>
+        <div className={styles.contentContainer}>
+          <div className={styles.iconContainer}>
+            <img className={styles.resourceIcon} src={pIcon} alt="icon" />
+          </div>
+          <div className={styles.resourceText}>
+            <h2>{resourceName}</h2>
+            <p>{resourceText}</p>
+          </div>
         </div>
-        <div className={styles.resourceText}>
-          <h2>{resourceName}</h2>
-          <p>{resourceText}</p>
-        </div>
-      </div>
+      </a>
     </div>
   );
 }

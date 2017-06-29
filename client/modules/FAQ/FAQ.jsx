@@ -5,12 +5,12 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
-import ResourceBox from './components/ResourceBox/ResourceBox';
+import QuestionBox from './components/QuestionBox/QuestionBox';
 
-import styles from './Resources.scss';
+import styles from './FAQ.scss';
 
 /**
- * Resources
+ * FAQ
  */
 
 const propTypes = {};
@@ -21,35 +21,35 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Resources() {
+function FAQ() {
   return (
-    <div className={styles.resources}>
+    <div className={styles.Faq}>
       <Helmet
-        title="Resources"
+        title="FAQ"
       />
       <Header
         backgroundImg={''}
-        headerText={'Resources'}
+        headerText={'FAQ'}
         subheaderText={''}
         showButton={false}
       />
 
       <section className={styles.content}>
         <div className={styles.boxRow}>
-          <ResourceBox
+          <QuestionBox
             resourceName="The Process"
             resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
             resourceLink=""
           />
-          <ResourceBox
+          <QuestionBox
             resourceName="Challenge FAQ"
             resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
             resourceLink="/faq"
           />
-          <ResourceBox
+          <QuestionBox
             resourceName="Slack FAQ"
             resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
-            resourceLink="/faq"
+            resourceLink=""
           />
         </div>
       </section>
@@ -58,8 +58,8 @@ function Resources() {
   );
 }
 
-Resources.propTypes = propTypes;
-Resources.contextTypes = contextTypes;
-Resources.defaultProps = defaultProps;
+FAQ.propTypes = propTypes;
+FAQ.contextTypes = contextTypes;
+FAQ.defaultProps = defaultProps;
 
-export default Resources;
+export default FAQ;

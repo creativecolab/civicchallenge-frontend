@@ -1,0 +1,24 @@
+@import '~styles/variables.scss';
+
+$icon-height: 50px;
+$title-font-size: 1.2em;
+$paragraph-font-size: 0.9em;
+
+.QuestionBox {
+  width: 100%;
+  .content {
+    width: 100%;
+    .questionBar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      border: 2px solid red;
+      .qBtn {
+        border: 2px solid yellow;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

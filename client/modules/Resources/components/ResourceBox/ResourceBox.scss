@@ -11,9 +11,13 @@ $paragraph-font-size: 0.9em;
   border: 1px solid $theme-color-lightgrey;
   border-right-style: none;
   border-bottom-style: none;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
+  a {
+    text-decoration: none;
+    color: $theme-color-p-text;
+  }
   .contentContainer {
 
     .iconContainer {
@@ -42,6 +46,10 @@ $paragraph-font-size: 0.9em;
         margin: 0 auto;
         font-size: $paragraph-font-size;
     	}
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }

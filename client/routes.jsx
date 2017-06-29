@@ -22,6 +22,7 @@ const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, r
 const getRewards = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Rewards/Rewards').default), 'rewards');
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
 const getFeedback = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Feedback/Feedback').default), 'feedback');
+const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
 function onRouteChange(prev, next) {
@@ -41,6 +42,7 @@ export default (
     <Route path="/rewards" getComponent={getRewards} />
     <Route path="/resources" getComponent={getResources} />
     <Route path="/feedback" getComponent={getFeedback} />
+    <Route path="/faq" getComponent={getFAQ} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );
