@@ -178,12 +178,16 @@ $resource-content-width: 80%;
 		.resources {
 			height: 100%;
 			width: 100%;
+
+			margin: $spacing-margin 0;
 			
 			.resourcesContainer {
 
 				.resourcesBox {
 				  width: 80%;
+
 				  margin: 0 auto;
+				  padding: $spacing-margin;
 
 				  display: flex;
 				  justify-content: space-between;
@@ -198,6 +202,21 @@ $resource-content-width: 80%;
 
 				  .resourceText {
 				  	width: $resource-content-width;
+
+				  	h6 {
+				  		margin: 10px 0;
+				  		font-size: 0.9em;
+				  	}
+
+				  	p {
+				  		font-size: 0.9em;
+				  	}
+
+				  	a {
+				  		font-size: 0.9em;
+				  		text-decoration: none;
+				  		color: $theme-color-blue;
+				  	}
 				  }
 			  }
 			}
@@ -206,7 +225,7 @@ $resource-content-width: 80%;
 
 	hr{ 
     margin: 0;
-    background-color: $theme-color-lightgrey;
+    background-color: $theme-color-offwhite;
 	}
 
 }
