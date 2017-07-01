@@ -12,6 +12,9 @@ $slack-msgs-height: 500px;
 $border-margin: 20px;
 $spacing-margin: 40px;
 
+$resource-img-dim: 80px;
+$resource-content-width: 80%;
+
 .DesignBrief {
 
 	height: 100%;
@@ -22,6 +25,9 @@ $spacing-margin: 40px;
 		margin: 0 auto;
 
 		.dbHeader {
+
+			margin: $spacing-margin 0;
+
 			display: flex;
 			justify-content: space-between;
 
@@ -167,6 +173,33 @@ $spacing-margin: 40px;
 						}
 				  }
 				}
+			}
+		}
+		.resources {
+			height: 100%;
+			width: 100%;
+			
+			.resourcesContainer {
+
+				.resourcesBox {
+				  width: 80%;
+				  margin: 0 auto;
+
+				  display: flex;
+				  justify-content: space-between;
+				  align-items: center;
+
+				  .resourceImg {
+				  	height: $resource-img-dim;
+				  	width: $resource-img-dim;
+
+				  	background-color: $theme-color-lightgrey;
+				  }
+
+				  .resourceText {
+				  	width: $resource-content-width;
+				  }
+			  }
 			}
 		}
 	}
