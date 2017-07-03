@@ -1,0 +1,57 @@
+@import '~styles/variables';
+
+$imgBox-dim: 200px;
+$box-width-desktop: 500px;
+
+$button-size: 0.7em;
+
+.DBBox {
+  width: $box-width-desktop; 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid $theme-color-lightgrey;
+
+  .dbBoxImg {
+    height: $imgBox-dim;
+    width: $imgBox-dim;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $theme-color-lightgrey;
+
+    span {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .dbBoxText {
+    height: $imgBox-dim;
+    max-width: 50%;
+    padding: 0 20px;
+
+    p {
+      font-size: 0.9em;
+
+    }
+
+    a {
+      float: right;
+      padding: 5px 10px;
+
+      color: $theme-color-blue;
+      font-size: $button-size;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      border: 2px solid $theme-color-blue;
+
+    }
+  }
+}

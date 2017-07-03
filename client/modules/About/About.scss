@@ -1,14 +1,53 @@
+@import "~styles/variables.scss";
+
+$h2-text: 1.2em;
+$p-text: 0.9em;
+
+$container-width: 70%;
+$space-between: 10%;
+
+$button-size: 0.7em;
+
+$img-height: 500px;
+$img-width: 700px;
+
 .about {
 
 	height: 100%;
 	width: 100%;
 
-	div.contentText {
-		margin: 5% 20%;
+	.contentText {
+    width: $container-width;
+    margin: 0 auto;
 
-		div.affilities {
-			background-color: black;
-		}
-	}
+    .contentContainer {
+      text-align: center;
+
+      margin: $space-between 0;
+
+      h2 { 
+        padding: 20px 0;
+        font-size: $h2-text;
+      }
+
+      p {
+        font-size: $p-text;
+      }
+
+      span {
+        width: $img-width;
+      }
+
+      .fullWidthImg {
+        height: $img-height;
+        width: $img-width;
+
+        margin: 0 auto;
+
+        background-color: $theme-color-lightgrey;
+      }
+
+    }
+  }
 
 }
