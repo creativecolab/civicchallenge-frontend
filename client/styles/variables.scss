@@ -16,3 +16,20 @@ $theme-color-black: #212121;
 $theme-color-p-text: #212121;
 
 $font-color-nonwhitebkgd: rgb(255, 255, 255);
+
+
+/* spacing variables */
+$header-img-dim: 250px;
+$right-side-width: 60%;
+
+$slack-highlights-width: 30%;
+$slack-msgs-width: 90% - $slack-highlights-width;
+$slack-highlights-rmargin: 10%;
+
+$slack-msgs-height: 500px;
+
+$border-margin: 20px;
+$spacing-margin: 40px;
+
+$resource-img-dim: 80px;
+$resource-content-width: 80%;

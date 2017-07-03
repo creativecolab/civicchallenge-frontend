@@ -1,0 +1,93 @@
+@import "~styles/variables.scss";
+
+
+$header-img-dim: 250px;
+
+
+.discussion {
+  width: 100%;
+
+  .discussionBox {
+    .discussionQBar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .discussionQBarText {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+
+        h3, h5 {
+          color: $theme-color-blue;
+        }
+
+        h5 {
+          margin: $border-margin;
+        }
+      }
+
+      .discussionBtn {
+        button {
+          width: 30px;
+          height: 30px;
+          border: 3px solid $theme-color-blue;
+          background-color: transparent;
+          border-radius: 40px;
+
+          color: $theme-color-blue;
+          font-size: 1em;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .discussionAnswerBox {
+
+      border-left: 1px solid $theme-color-lightgrey;
+      border-top: 1px solid $theme-color-lightgrey;
+
+      .discussionContent {
+        margin: $spacing-margin $border-margin;
+
+        h4 {
+          color: $theme-color-lightgrey;
+          font-weight: 500;
+        } 
+
+        .discussionQuestion {
+
+        }
+        .discussionSlack {
+          width: 100%;
+
+          margin: $spacing-margin 0;
+
+          display: flex;
+          justify-content: flex-start;
+
+          .discussionHighlights {
+            width: $slack-highlights-width;
+
+            border-right: 1px solid black;
+            margin-right: $slack-highlights-rmargin;
+
+          }
+
+          .discussionExcerpts {
+            width: $slack-msgs-width;
+            height: $slack-msgs-height;
+
+            .discussionSlackMsgs {
+              height: 80%;
+              width: 100%;
+              background-color: $theme-color-lightgrey;
+            }
+          }
+        }
+      }
+    }
+  }
+}

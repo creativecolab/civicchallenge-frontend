@@ -1,20 +1,5 @@
 @import "~styles/variables.scss";
 
-$header-img-dim: 250px;
-$right-side-width: 60%;
-
-$slack-highlights-width: 30%;
-$slack-msgs-width: 90% - $slack-highlights-width;
-$slack-highlights-rmargin: 10%;
-
-$slack-msgs-height: 500px;
-
-$border-margin: 20px;
-$spacing-margin: 40px;
-
-$resource-img-dim: 80px;
-$resource-content-width: 80%;
-
 .DesignBrief {
 
 	height: 100%;
@@ -24,204 +9,12 @@ $resource-content-width: 80%;
 		width: 80%;
 		margin: 0 auto;
 
-		.dbHeader {
-
-			margin: $spacing-margin 0;
-
+		
+		.briefNavBar {
 			display: flex;
-			justify-content: space-between;
-
-			.dbHeaderText {
-				width: $right-side-width;
-
-				h6 {
-					margin: 0;
-					
-				}
-
-				h1 {
-					margin-top: 0;
-				}
-
-				p {
-					font-size: 0.9em;
-				}
-			}
-
-			.dbHeaderImg {
-				height: $header-img-dim;
-				width: $header-img-dim;
-				
-				display: flex;
-				justify-content: flex-end;
-
-				background-color: $theme-color-lightgrey;
-
-			}
-		}
-
-		.dbNavBar {
-			width: 40%;
-			display: flex;
-			justify-content: space-between;
-
-			h3 {
-
-			}
-
-		}
-
-		.overview {
-			width: 100%;
-
-			margin: $spacing-margin 0;
-
-			display: flex;
-			justify-content: space-between;
-
-			.overviewText {
-				width: $right-side-width;
-			}
-
-			.overviewSideBar {
-			}
-
-		}
-
-		.discussion {
-			width: 100%;
-
-			.discussionBox {
-				.discussionQBar {
-					width: 100%;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-
-					.discussionQBarText {
-						width: 100%;
-						display: flex;
-						justify-content: flex-start;
-						align-items: baseline;
-
-						h3, h5 {
-							color: $theme-color-blue;
-						}
-
-						h5 {
-							margin: $border-margin;
-						}
-					}
-
-					.discussionBtn {
-		        button {
-		          width: 30px;
-		          height: 30px;
-		          border: 3px solid $theme-color-blue;
-		          background-color: transparent;
-		          border-radius: 40px;
-
-		          color: $theme-color-blue;
-		          font-size: 1em;
-		          font-weight: bold;
-		        }
-	        }
-				}
-
-				.discussionAnswerBox {
-
-					border-left: 1px solid $theme-color-lightgrey;
-					border-top: 1px solid $theme-color-lightgrey;
-
-					.discussionContent {
-						margin: $spacing-margin $border-margin;
-
-						h4 {
-							color: $theme-color-lightgrey;
-							font-weight: 500;
-						} 
-
-						.discussionQuestion {
-
-						}
-						.discussionSlack {
-							width: 100%;
-
-							margin: $spacing-margin 0;
-
-							display: flex;
-							justify-content: flex-start;
-
-							.discussionHighlights {
-								width: $slack-highlights-width;
-
-								border-right: 1px solid black;
-								margin-right: $slack-highlights-rmargin;
-
-							}
-
-							.discussionExcerpts {
-								width: $slack-msgs-width;
-								height: $slack-msgs-height;
-
-								.discussionSlackMsgs {
-								  height: 80%;
-									width: 100%;
-								  background-color: $theme-color-lightgrey;
-							  }
-							}
-						}
-				  }
-				}
-			}
-		}
-		.resources {
-			height: 100%;
-			width: 100%;
-
-			margin: $spacing-margin 0;
-			
-			.resourcesContainer {
-
-				.resourcesBox {
-				  width: 80%;
-
-				  margin: 0 auto;
-				  padding: $spacing-margin;
-
-				  display: flex;
-				  justify-content: space-between;
-				  align-items: center;
-
-				  .resourceImg {
-				  	height: $resource-img-dim;
-				  	width: $resource-img-dim;
-
-				  	background-color: $theme-color-lightgrey;
-				  }
-
-				  .resourceText {
-				  	width: $resource-content-width;
-
-				  	h6 {
-				  		margin: 10px 0;
-				  		font-size: 0.9em;
-				  	}
-
-				  	p {
-				  		font-size: 0.9em;
-				  	}
-
-				  	a {
-				  		font-size: 0.9em;
-				  		text-decoration: none;
-				  		color: $theme-color-blue;
-				  	}
-				  }
-			  }
-			}
 		}
 	}
+	
 
 	hr{ 
     margin: 0;
@@ -229,3 +22,5 @@ $resource-content-width: 80%;
 	}
 
 }
+
+
