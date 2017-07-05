@@ -14,7 +14,7 @@ deploy:
   provider: heroku
   api_key:
     secure: K49rkVlo6Wxr50UaTDHMRhQkFENRFsmHSA5dBuOgkQ1a/le+ChcmwL3KNCOWVdyCfFuj0Y/Mqhp9/7u2SOOOjGsBuMZLHMH2VCCmjRoHfUk4hW1thU7qmON6oQDDBIuxgUzECCfNFkk0fH5C4xhvFAdR2EEc8Vs1uhK774PR+BCx/DBS1knQ+RId6ybKrg87XetBr7eBJJxD0X9AW7MQ1RsY7DSF+hVbJ9UoTQSdVZJIL6FsLmy30CnNNSmbCYNzTBv0gkNh23PWbnWsPrtfftk+J4NwDo4l4hx0tgdHqHw6dRI80gYelrkW4P+MnBld6FHL6X/3Uc1jmx8+AKIUUF+YZvA/brVnlXiBHP+63r/miPp5Zdr+PYB83ZpWGz6G2zvygKDm/Nv9zydHrGwLTTuKBgG7GTfRYvLoBZ9GYIYdH6DZr50sYiSzOdt/+MvCRuh0qH3E+izWlIEYQEM7N6T481LKf2WSEBN+cxZPFCgjttKnhrnD44ldH0xILVMrNu16rvMmWB7H6/oPXDbJIvAHBOOmuefHW0ri0JUInqaQl3TKbL29iJKfHtfBmwJG/50OpLbNvr8AAYdYESLvi9FrYhtUloQOm1M1Ilmlm6gg3QDTPLmjpBmZWoNyxCZbzAaAvql0JuoHBFalTab1Is2j/ceML1/9KQwVD02FtN8=
-  app: d4sd-staging
+  app: d4sd-staging-2
   on:
     repo: creativecolab/civicchallenge-frontend
-    branch: wednesday-changes
+    branch: sponsor-add
