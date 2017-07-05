@@ -142,7 +142,7 @@ function ChallengeGrid(props) {
         <div className={classNames([styles.challenge, styles.placeholder])}>
           <div className={styles.text}>
             <span className={styles.name}>Suggest a Challenge</span>
-            <span className={styles.description}>Did we miss something? If there’s another mobility challenge San Diego faces that you don’t see here, toss us an <a href="mailto:spdow@ucsd.edu">email</a>.</span>
+            <span className={styles.description}>Did we miss something? If there’s another mobility challenge San Diego faces that you don’t see here, toss us an <a href="mailto:team@d4sd.org">email</a>.</span>
           </div>
         </div>
       </div>

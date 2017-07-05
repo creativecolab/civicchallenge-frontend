@@ -93,7 +93,7 @@ function ChallengeText(props) {
               <img className={styles.backgroundFill} src={img} alt={alt} />
             </a>
           ))}
-          <a className={styles.you} href="mailto:spdow@ucsd.edu">
+          <a className={styles.you} href="mailto:team@d4sd.org">
             <div className={styles.youInner}>You?</div>
           </a>
         </div>
@@ -118,7 +118,7 @@ function ChallengeText(props) {
               <img className={styles.backgroundFill} src={img} alt={alt} />
             </a>
           ))}
-          <a className={styles.you} href="mailto:spdow@ucsd.edu">
+          <a className={styles.you} href="mailto:team@d4sd.org">
             <div className={styles.youInner}>You?</div>
           </a>
         </div>
@@ -142,7 +142,7 @@ function ChallengeText(props) {
               <img className={styles.backgroundFill} src={img} alt={alt} />
             </a>
           ))}
-          <a className={styles.you} href="mailto:spdow@ucsd.edu">
+          <a className={styles.you} href="mailto:team@d4sd.org">
             <div className={styles.youInner}>You?</div>
           </a>
         </div>
@@ -158,7 +158,7 @@ function ChallengeText(props) {
       <div className={styles.tierBlock}>
         <hr />
         <div className={styles.text}>
-          <p>Contact <a className={styles.sponsorEmail} href="mailto:spdow@ucsd.edu">Dr. Steven Dow</a> to learn more about how you or your organization could contribute
+          <p>Contact <a className={styles.sponsorEmail} href="mailto:team@d4sd.org">our team</a> to learn more about how you or your organization could contribute
           to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
         </div>
       </div>
