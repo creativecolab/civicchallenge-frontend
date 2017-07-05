@@ -58,7 +58,7 @@ $call-to-action-bckground: #ededed;
     img {
       margin: 0 1em;
       padding: 1em;
-      height: 3em;
+      height: 5em;
 
       cursor: pointer;
 
@@ -75,7 +75,7 @@ $call-to-action-bckground: #ededed;
 
         margin: 0 $font-size;
         border: $border-width dashed #24487c;
-        padding: $font-size - ($border-width) 2 * $font-size;
+        padding: 0.8em 3 * $font-size;
         height: 3 * $font-size;
 
         display: inline-block;
@@ -106,7 +106,7 @@ $call-to-action-bckground: #ededed;
 
           margin: 0 $font-size;
           border: $border-width dashed #24487c;
-          padding: $font-size - ($border-width) 2 * $font-size;
+          padding: 4em 4em;
           height: 2 * $font-size;
 
           font-size: 2em;
