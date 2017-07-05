@@ -10,6 +10,7 @@ import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
 import protolabLogo from './protolab-logo.png';
 import scaleSDLogo from './scale-sd-logo.png';
+import nsfLogo from './nsf-logo.png';
 
 /**
  * Constants
@@ -17,20 +18,11 @@ import scaleSDLogo from './scale-sd-logo.png';
 
 const T1_SPONSORS = [
   {
-    href: 'http://designlab.ucsd.edu/',
-    img: designLabLogo,
-    alt: 'UC San Diego Design Lab',
+    href: 'https://www.nsf.gov/',
+    img: nsfLogo,
+    alt: 'National Science Foundation',
   },
-  {
-    href: 'http://designforwardsd.com/',
-    img: designForwardLogo,
-    alt: 'Design Forward Alliance',
-  },
-  {
-    href: 'http://www.scalesd.com/',
-    img: scaleSDLogo,
-    alt: 'Scale SD',
-  },
+
 ];
 
 const T2_SPONSORS = [
@@ -41,6 +33,21 @@ const T3_SPONSORS = [
     href: 'http://protolab.ucsd.edu/',
     img: protolabLogo,
     alt: 'ProtoLab',
+  },
+  {
+    href: 'http://www.scalesd.com/',
+    img: scaleSDLogo,
+    alt: 'Scale SD',
+  },
+  {
+    href: 'http://designforwardsd.com/',
+    img: designForwardLogo,
+    alt: 'Design Forward Alliance',
+  },
+  {
+    href: 'http://designlab.ucsd.edu/',
+    img: designLabLogo,
+    alt: 'UC San Diego Design Lab',
   },
 ];
 
