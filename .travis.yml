@@ -17,4 +17,4 @@ deploy:
   app: d4sd-staging
   on:
     repo: creativecolab/civicchallenge-frontend
-    branch: dev
+    branch: splash
