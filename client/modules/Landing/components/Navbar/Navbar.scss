@@ -2,13 +2,12 @@
 
 $navbar-height: 50px;
 
-$font-color: #fff;
+$font-color: #000;
 
 .navbar-container {
-
-  position: fixed;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   height: $navbar-height;
-  background-color: #5eb7f2;
+  background-color: #fff;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
   width: 100%;
@@ -18,7 +17,6 @@ $font-color: #fff;
   padding-top: 20px;
   margin-bottom: 0;
 
-  z-index: 100000;
 
   .logo {
   }
@@ -52,8 +50,10 @@ $font-color: #fff;
 
       text-decoration: none;
       background-color: transparent;
-      font-size: 0.8 * $font-size;
+      font-size: 0.65 * $font-size;
       color: $font-color;
+
+      text-transform: uppercase;
     }
   }
 }

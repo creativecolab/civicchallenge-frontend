@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
 import { Link } from 'react-router';
 
 import styles from './Header.scss';
@@ -50,6 +51,14 @@ const contextTypes = {
 
 const defaultProps = {};
 
+function logClick() {
+  ReactGA.event({
+    category: 'Registration',
+    action: 'Clicked Register Today',
+    label: 'Challenge Text link',
+  });
+}
+
 function Header({ backgroundImg, headerText, subheaderText, showButton }, { router }) {
   return (
     <header className={styles.header}>
@@ -64,6 +73,7 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }, { rout
           {LINKS.map(({ href, text }) =>
             <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
           )}
+          <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register</a>
         </nav>
       </div>
       <div className={styles.textContainer}>
