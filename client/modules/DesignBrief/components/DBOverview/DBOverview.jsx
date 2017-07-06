@@ -38,7 +38,7 @@ function dbHeader() {
           <h2>Current Phase</h2>
           <div className={styles.timeLine} />
           <span>Phase 1: </span>
-          <span>Ideation</span>
+          <span className={styles.phaseName}>Ideation</span>
         </div>
         <div className={styles.currGoingOn}>
           <h2>What&#39;s Going On Now</h2>

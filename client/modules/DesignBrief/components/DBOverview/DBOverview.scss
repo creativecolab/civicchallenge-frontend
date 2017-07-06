@@ -16,6 +16,11 @@ $header-img-dim: 250px;
 	}
 
 	.overviewSideBar {
+    .currentPhase {
+      span.phaseName {
+        color: $theme-color-blue;
+      }
+    }
 	}
 
 }

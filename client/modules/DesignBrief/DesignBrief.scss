@@ -21,7 +21,7 @@
 			li {
 				display: inline;
 				padding: 10px 30px;
-				font-weight: bold;
+				font-weight: normal;
 			}
 			.react-tabs {
 			  &__tab-list {
@@ -80,8 +80,7 @@
 	}
 
 	hr{ 
-    margin: 0;
-    background-color: $theme-color-offwhite;
+    border-top: 1px solid #d4d4d4;
 	}
 
 }

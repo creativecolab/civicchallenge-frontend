@@ -38,8 +38,8 @@ $answer-font-size: 0.8em;
     }
 
     .questionText {
-      border-left: 1px solid $theme-color-lightgrey;
-      border-top: 1px solid $theme-color-lightgrey;
+      border: 1px solid $box-border-lightgrey;
+      background-color: $box-background-lightgrey;
 
       p {
         margin: 20px;

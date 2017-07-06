@@ -8,8 +8,12 @@ $header-img-dim: 250px;
   width: 100%;
 
   .discussionBox {
+    padding-top: 20px;
     .discussionQBar {
       width: 100%;
+
+      padding: 20px 0;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -46,8 +50,7 @@ $header-img-dim: 250px;
 
     .discussionAnswerBox {
 
-      border-left: 1px solid $theme-color-lightgrey;
-      border-top: 1px solid $theme-color-lightgrey;
+      border: 1px solid $theme-color-lightgrey;
 
       .discussionContent {
         margin: $spacing-margin $border-margin;
@@ -57,9 +60,6 @@ $header-img-dim: 250px;
           font-weight: 500;
         } 
 
-        .discussionQuestion {
-
-        }
         .discussionSlack {
           width: 100%;
 
@@ -83,10 +83,9 @@ $header-img-dim: 250px;
             .discussionSlackMsgs {
               height: 80%;
               width: 100%;
-              background-color: $theme-color-lightgrey;
 
               img {
-                height: 100%;
+                width: 100%;
               }
             }
           }
