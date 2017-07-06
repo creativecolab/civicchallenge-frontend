@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
-import Header from 'components/Header/Header';
+import Header from 'components/HeaderNoBanner/HeaderNoBanner';
 import Footer from 'components/Footer/Footer';
 
 import DBHeader from './components/DBHeader/DBHeader';
@@ -44,11 +44,9 @@ function DesignBrief() {
 
         <Tabs>
           <TabList>
-            <section className="briefNavBar">
-              <Tab><h4>Overview</h4></Tab>
-              <Tab><h4>Discussion</h4></Tab>
-              <Tab><h4>Resources</h4></Tab>
-            </section>
+            <Tab>Overview</Tab>
+            <Tab>Discussion</Tab>
+            <Tab>Resources</Tab>
           </TabList>
           <hr />
           <TabPanel>
