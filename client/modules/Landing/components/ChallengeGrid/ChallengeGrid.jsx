@@ -10,6 +10,7 @@ import classNames from 'util/classNames';
 
 import LazyImage from 'components/LazyImage/LazyImage';
 
+import globalStyles from 'main.scss';
 import styles from './ChallengeGrid.scss';
 
 /**
@@ -82,6 +83,10 @@ class ChallengeGrid extends Component {
     return (
       <section className={styles.challengeGrid} ref={this.props.componentRef}>
         <div className={styles.challenges}>
+          <div className={globalStyles.sectionTitle}>
+            <h1>Design Briefs</h1>
+            <p>HI</p>
+          </div>
           {this.state.challenges.map(challenge =>
             <ChallengeBox
               key={challenge.name}
