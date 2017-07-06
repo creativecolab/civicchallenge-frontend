@@ -21,6 +21,27 @@ $component-spacing: 3em;
 
     padding: 40px 0;
 
+    .challengeWrapper {
+      width: 80%;
+      margin: 0 auto;
+
+      .challengeRow {
+
+        display: flex;
+        justify-content: space-around;
+
+        .challengeElement {
+          width: 200px;
+          height: 200px;
+          background-color: $theme-color-lightgrey;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        } 
+      }
+    }
+
     .challenge {
       $max-split: 5;
       $split: 400px;
