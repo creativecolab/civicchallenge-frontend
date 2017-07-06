@@ -4,11 +4,11 @@ import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import CurrentSponsors from './components/CurrentSponsors/CurrentSponsors';
 import ChallengeText from './components/ChallengeText/ChallengeText';
 
-import styles from './Sponsors.scss';
 
-import headerBg from './header-bg.png';
+import styles from './Sponsors.scss';
 
 /**
  * Sponsors
@@ -29,11 +29,12 @@ function Sponsors() {
         title="Sponsors"
       />
       <Header
-        backgroundImg={headerBg}
+        backgroundImg={''}
         headerText={'Sponsors'}
         subheaderText={''}
         showButton={false}
       />
+      <CurrentSponsors />
       <ChallengeText />
       <Footer />
     </div>

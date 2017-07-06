@@ -1,0 +1,21 @@
+@import "~styles/variables.scss";
+
+
+$header-img-dim: 250px;
+
+.overview {
+	width: 100%;
+
+	margin: $spacing-margin 0;
+
+	display: flex;
+	justify-content: space-between;
+
+	.overviewText {
+		width: $right-side-width;
+	}
+
+	.overviewSideBar {
+	}
+
+}

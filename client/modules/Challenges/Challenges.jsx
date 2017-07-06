@@ -7,10 +7,10 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import Info from './components/Info/Info';
+import DBBox from './components/DBBox/DBBox';
 import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
-import headerBg from './header-bg.png';
 
 /**
  * Challenges
@@ -47,12 +47,24 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header
-          backgroundImg={headerBg}
+          backgroundImg={''}
           headerText={'Challenges'}
           subheaderText={''}
           showButton={false}
         />
         <Info />
+        <div className={styles.dbBoxRow}>
+          <DBBox />
+          <DBBox />
+        </div>
+        <div className={styles.dbBoxRow}>
+          <DBBox />
+          <DBBox />
+        </div>
+        <div className={styles.dbBoxRow}>
+          <DBBox />
+          <DBBox />
+        </div>
         <Categories categories={this.state.categories} />
         <Footer />
       </section>

@@ -3,12 +3,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import globalStyles from 'main.scss';
 import styles from './CurrentSponsors.scss';
 
-import intel from './intel.png';
-import cisco from './cisco.png';
-import xfinity from './xfinity.png';
+import nsfLogo from './nsf-logo.png';
+import designLabLogo from './design-lab-logo.png';
+import designForwardLogo from './design-forward-logo.png';
+import protolabLogo from './protolab-logo.png';
+import scaleSDLogo from './scale-sd-logo.png';
+
+/*
+ * Constants
+ */
+
+const T1_SPONSORS = [
+  {
+    href: 'https://www.nsf.gov/',
+    img: nsfLogo,
+    alt: 'NSF',
+  },
+];
+
+const T3_SPONSORS = [
+  {
+    href: 'http://designlab.ucsd.edu/',
+    img: designLabLogo,
+    alt: 'UC San Diego Design Lab',
+  },
+  {
+    href: 'http://designforwardsd.com/',
+    img: designForwardLogo,
+    alt: 'Design Forward Alliance',
+  },
+  {
+    href: 'http://www.scalesd.com/',
+    img: scaleSDLogo,
+    alt: 'Scale SD',
+  },
+  {
+    href: 'http://protolab.ucsd.edu/',
+    img: protolabLogo,
+    alt: 'ProtoLab',
+  },
+];
+
+/*
+ * Current Sponsors
+ */
 
 const propTypes = {};
 
@@ -22,12 +62,30 @@ function CurrentSponsors() {
   return (
     <div>
       <div className={styles.current}>
-        <h3 className={globalStyles.ul}>Current Sponsors</h3>
+        <h3 className={styles.sectionTitle}>Current Sponsors</h3>
       </div>
       <div className={styles.sponsors}>
-        <img src={intel} alt="intel" className={styles.sponsorImage} />
-        <img src={cisco} alt="cisco" className={styles.sponsorImage} />
-        <img src={xfinity} alt="xfinity" className={styles.sponsorImage} />
+        <h4>Tier 1</h4>
+        <div className={styles.sponsorContainer}>
+          <div className={styles.sponsorList}>
+            {T1_SPONSORS.map(({ href, img, alt }) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                <img className={styles.backgroundFill} src={img} alt={alt} />
+              </a>
+            ))}
+          </div>
+        </div>
+        <h4>Tier 3</h4>
+        <div className={styles.sponsorContainer}>
+          <div className={styles.sponsorList}>
+            {T3_SPONSORS.map(({ href, img, alt }) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                <img className={styles.backgroundFill} src={img} alt={alt} />
+              </a>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );

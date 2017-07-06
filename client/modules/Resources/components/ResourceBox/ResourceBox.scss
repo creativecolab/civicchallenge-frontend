@@ -1,0 +1,55 @@
+@import '~styles/variables.scss';
+
+$icon-height: 50px;
+$title-font-size: 1.2em;
+$paragraph-font-size: 0.9em;
+
+.ResourceBox {
+  height: 300px;
+  width: 300px;
+
+  border: 1px solid $theme-color-lightgrey;
+  border-right-style: none;
+  border-bottom-style: none;
+  display: flex;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $theme-color-p-text;
+  }
+  .contentContainer {
+
+    .iconContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  		 
+    	.resourceIcon {
+    	  height: $icon-height;
+    	}
+    }
+
+    .resourceText {
+
+      h2, p {
+    	  text-align: center;
+    	}
+
+    	h2 {
+    	  font-size: $title-font-size;
+    	  font-weight: 500;
+    	}
+
+    	p {
+        width: 70%;
+        margin: 0 auto;
+        font-size: $paragraph-font-size;
+    	}
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

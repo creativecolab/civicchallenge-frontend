@@ -2,7 +2,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
 
 import styles from './Footer.scss';
 
@@ -72,13 +71,6 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change.</div>
-
-      <div className={styles.footerlinks}>
-        <Link to="/rewards"> rewards </Link>
-        <Link to="/events"> events </Link>
-        <Link to="/onboarding"> get involved </Link>
-      </div>
-
     </footer>
   );
 

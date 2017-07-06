@@ -1,0 +1,50 @@
+@import '~styles/variables.scss';
+
+$icon-height: 50px;
+$title-font-size: 1.2em;
+$answer-font-size: 0.8em;
+
+.QuestionBox {
+  width: 100%;
+  .content {
+    width: 100%;
+    .questionBar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .qQuestion {
+        h3 {
+          color: $theme-color-blue;
+        }
+      }
+      .qBtn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          width: 30px;
+          height: 30px;
+          border: 3px solid $theme-color-blue;
+          background-color: transparent;
+          border-radius: 40px;
+
+          color: $theme-color-blue;
+          font-size: 1em;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .questionText {
+      border-left: 1px solid $theme-color-lightgrey;
+      border-top: 1px solid $theme-color-lightgrey;
+
+      p {
+        margin: 20px;
+        font-size: $answer-font-size;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "~styles/variables.scss";
+
+
+$header-img-dim: 250px;
+
+
+.resourcesContainer {
+
+  .resourcesBox {
+    width: 80%;
+
+    margin: 0 auto;
+    padding: $spacing-margin;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .resourceImg {
+      height: $resource-img-dim;
+      width: $resource-img-dim;
+
+      background-color: $theme-color-lightgrey;
+    }
+
+    .resourceText {
+      width: $resource-content-width;
+
+      h6 {
+        margin: 10px 0;
+        font-size: 0.9em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+
+      a {
+        font-size: 0.9em;
+        text-decoration: none;
+        color: $theme-color-blue;
+      }
+    }
+  }
+}

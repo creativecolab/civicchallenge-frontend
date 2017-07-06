@@ -1,156 +1,38 @@
 @import '~styles/variables';
 
 #sponsors {
-  margin: $component-vertical-margin auto;
+  width: 100%;
+  padding: 3em 0 4em 0;
+  position: relative;
 
-  text-align: center;
+  background-color: $theme-color-medgrey;
 
-  h3 {
-    margin: 0;
+  display: flex;
+  align-items: center;
 
-    display: inline-block;
 
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  h4.tier {
-    margin: 1em 0;
-
-    font-size: 1.25em;
-  }
-
-  .text {
-    margin: 2em 0;
-
-    text-align: left;
-
-    font-size: 0.9em;
-
-    a {
-      color: #24487c;
-    }
-
-    a:hover {
-      color: #2d324d;
-    }
-  }
-
-  .sponsor-list {
-    img {
-      margin: 0 1em;
-      padding: 1em;
-      height: 3em;
-
-      cursor: pointer;
-
-      background-color: #24487c;
-    }
-
-    img:hover {
-      background-color: #2d324d;
-    }
-
-    .you {
-      .you-inner {
-        $border-width: 2px;
-
-        margin: 0 $font-size;
-        border: $border-width dashed #24487c;
-        padding: $font-size - ($border-width) 2 * $font-size;
-        height: 3 * $font-size;
-
-        display: inline-block;
-        vertical-align: top;
-
-        font-size: 2em;
-        line-height: 3 * $font-size;
-        color: #24487c;
-      }
-
-      .you-inner:hover {
-        background-color: #2d324d;
-
-        color: #fff;
-      }
-    }
-
-    &.small {
-      img {
-        margin: 0 1em;
-        padding: 1em;
-        height: 2em;
-      }
-
-      .you {
-        .you-inner {
-          $border-width: 2px;
-
-          margin: 0 $font-size;
-          border: $border-width dashed #24487c;
-          padding: $font-size - ($border-width) 2 * $font-size;
-          height: 2 * $font-size;
-
-          font-size: 2em;
-          line-height: 2 * $font-size;
-        }
-      }
-    }
-
-    
-  }
-
-.button {
-  margin: 20px;
-  font-size: 16px;
-
-  .buttonContainer {
+  #sponsorWrapper {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-
+    justify-content: space-around;
     a {
-      margin: 0;
-      border: none;
-      border-radius: 30px;
-      padding: 0.8em 1.5em;
+      .backgroundFill {
+        height: 75px;
 
-      display: inline-block;
-      cursor: pointer;
 
-      background-color: #24487c;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    a:hover {
-      background-color: #2d324d;
-    }
-  }
-}
-
-  .placeholder {
-    color: rgb(99, 104, 139);
-
-    a {
-      color: rgb(99, 104, 139) !important;
+      }
     }
   }
 }
 
 @media (min-width: $desktop-min-width) {
-#sponsors {
-  width: $component-width-desktop;
+#sponsorsWrapper{
+  width: $component-width-desktop
 }
 }
 
 @media (max-width: $mobile-max-width) {
-#sponsors {
+#sponsorsWrapper {
   width: $component-width-mobile;
 
 }

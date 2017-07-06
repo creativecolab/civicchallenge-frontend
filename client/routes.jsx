@@ -16,12 +16,14 @@ const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, re
 const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default), 'about');
 const getProcess = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Process/Process').default), 'process');
 const getTeam = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Team/Team').default), 'team');
-const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'events');
+const getHowItWorks = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/HowItWorks/HowItWorks').default), 'howitworks');
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
 const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
 const getRewards = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Rewards/Rewards').default), 'rewards');
-const getOnboard = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Onboarding/Onboarding').default), 'onbaording');
+const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
 const getFeedback = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Feedback/Feedback').default), 'feedback');
+const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
+const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
 function onRouteChange(prev, next) {
@@ -35,12 +37,14 @@ export default (
     <Route path="/about" getComponent={getAbout} />
     <Route path="/process" getComponent={getProcess} />
     <Route path="/team" getComponent={getTeam} />
-    <Route path="/events" getComponent={getEvents} />
+    <Route path="/howitworks" getComponent={getHowItWorks} />
     <Route path="/challenges" getComponent={getChallenges} />
     <Route path="/challenges/:id" getComponent={getChallenge} />
     <Route path="/rewards" getComponent={getRewards} />
-    <Route path="/onboarding" getComponent={getOnboard} />
+    <Route path="/resources" getComponent={getResources} />
     <Route path="/feedback" getComponent={getFeedback} />
+    <Route path="/faq" getComponent={getFAQ} />
+    <Route path="/designbrief" getComponent={getDesignBrief} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );

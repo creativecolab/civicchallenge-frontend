@@ -2,22 +2,34 @@
 
 $navbar-height: 50px;
 
-$font-color: #fff;
+$font-color: #000;
 
 .navbar-container {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   height: $navbar-height;
+  background-color: #fff;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 
-  background-color: rgb(36, 72, 124);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: 0;
+
 
   .logo {
   }
 
   .navbar {
+
+    button {
+      padding: 0px 20px;
+    }
+    
+    a {
+      border: 1px solid #fff;
+    }
   }
 
   .logo, .navbar {
@@ -25,9 +37,7 @@ $font-color: #fff;
       margin: 0 10px;
 
       text-decoration: none;
-      text-transform: uppercase;
       color: $font-color;
-
     }
 
     a,button {
@@ -39,10 +49,11 @@ $font-color: #fff;
       cursor: pointer;
 
       text-decoration: none;
-      text-transform: uppercase;
       background-color: transparent;
-      font-size: 0.75 * $font-size;
+      font-size: 0.65 * $font-size;
       color: $font-color;
+
+      text-transform: uppercase;
     }
   }
 }

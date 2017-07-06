@@ -1,0 +1,26 @@
+@import "~styles/variables.scss";
+
+.DesignBrief {
+
+	height: 100%;
+	width: 100%;
+
+	.contentContainer {
+		width: 80%;
+		margin: 0 auto;
+
+		
+		.briefNavBar {
+			display: flex;
+		}
+	}
+	
+
+	hr{ 
+    margin: 0;
+    background-color: $theme-color-offwhite;
+	}
+
+}
+
+

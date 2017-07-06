@@ -1,0 +1,107 @@
+@import '~styles/variables';
+
+$component-spacing: 3em;
+$header-fcolor: rgb(255, 255, 255);
+
+#headerBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  //background-color: #5eb7f2;
+  background: url("./header-img.png");
+
+    .main {
+      display: flex;
+      justify-content: center;
+      $font-size: 1.5em;
+
+      margin: 0; 
+
+      text-align: center;
+      font-weight: normal;
+
+
+      .text2 {
+        font-size: 3.8 * $font-size;
+        font-weight: 600;
+        padding: 15px 0 0 0;
+        margin:0;
+        line-height: 1em;
+        color: $header-fcolor;
+      }
+      .text3 {
+        font-size: 1em;
+        padding: 10px 0;
+        margin:0;
+        color: $header-fcolor;
+      }
+
+      .text4 {
+        font-size: 18px;
+        padding: 10px 0;
+        margin:0;
+        color: $header-fcolor;
+      }
+
+      .button {
+        margin: 20px;
+        font-size: 16px;
+
+        .buttonContainer {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+
+          a {
+            margin: 0;
+            border: none;
+            padding: 1.2em 3em;
+
+            display: inline-block;
+            cursor: pointer;
+
+            background-color: #FC6464;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: #fff;
+          }
+
+          a:hover {
+            background-color: #d84949;
+          }
+        }
+      }
+    }
+
+    
+
+  
+}
+
+
+@media (min-width: $desktop-min-width) {
+.challenge-text {
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+.challenge-text {
+  width: $component-width-mobile;
+
+  .header {
+    .main {
+      .text1 {
+        font-size: 1.5em;
+      }
+      .text2 {
+        font-size: 3em;
+      }
+    }
+  }
+}
+}

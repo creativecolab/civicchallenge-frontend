@@ -1,0 +1,46 @@
+@import '~styles/variables';
+
+#participate {
+  margin: $component-vertical-margin auto;
+
+  text-align: center;
+
+
+  div.contentContainer {
+
+    display: flex;
+    justify-content: center;
+
+    div.contentElement {
+
+      padding: 0 2%;
+
+      width: 150px;
+
+      div.contentImg {
+
+      height: 150px;
+      background-color: $theme-color-lightgrey;
+      border-radius: 50%;
+
+      }
+
+      div.contentText {
+
+      }
+    }
+  }
+  
+}
+
+@media (min-width: $desktop-min-width) {
+#sponsors {
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+#sponsors {
+  width: $component-width-mobile;
+}
+}

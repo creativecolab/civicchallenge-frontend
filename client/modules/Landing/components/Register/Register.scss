@@ -1,0 +1,54 @@
+@import '~styles/variables';
+
+#register {
+  padding: 5em 0 7em 0;
+
+  background-color: $theme-color-blue;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  #sponsorWrapper {
+    h1 {
+      color: $font-color-nonwhitebkgd;
+      padding-bottom: 20px;
+    }
+
+    #sponsorRow {
+      span {
+        color: $font-color-nonwhitebkgd;
+        padding: 0 20px;
+      }
+
+      .outlineBtn {
+        color: $font-color-nonwhitebkgd;
+        padding: 15px 30px;
+        border: 2px solid $font-color-nonwhitebkgd;
+        
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.7em;
+
+        &:hover {
+          color: $theme-color-blue;
+          background-color: $font-color-nonwhitebkgd;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+#registerWrapper{
+  width: $component-width-desktop
+}
+}
+
+@media (max-width: $mobile-max-width) {
+#registerWrapper {
+  width: $component-width-mobile;
+
+}
+}
