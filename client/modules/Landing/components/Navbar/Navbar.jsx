@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga';
 import { Link } from 'react-router';
 import { withProvideRefs } from 'util/RefCollector';
 
@@ -17,25 +18,28 @@ if (process.env.browser) {
 
 const LINKS = [
   {
-    href: '/challenges',
-    text: 'Challenges',
+    href: '/howitworks',
+    text: 'How It Works',
   },
   {
-    href: '/about',
-    text: 'About Us',
+    href: '/challenges',
+    text: 'Design Briefs',
+  },
+  {
+    href: '/resources',
+    text: 'Resources',
   },
   {
     href: '/sponsors',
     text: 'Sponsors',
   },
+  {
+    href: '/about',
+    text: 'About Us',
+  },
+
 ];
 
-const NAVBAR_CONTENT = [
-  {
-    keyName: 'GetInvolved',
-    displayName: 'Get Involved',
-  },
-];
 const SCROLL_PX_PER_MS = 1000;
 
 
@@ -52,6 +56,14 @@ const contextTypes = {
 };
 
 const defaultProps = {};
+
+function logClick() {
+  ReactGA.event({
+    category: 'Registration',
+    action: 'Clicked Register Today',
+    label: 'Challenge Text link',
+  });
+}
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -88,14 +100,7 @@ class Navbar extends React.Component {
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
             <Link key={text} to={href}>{text}</Link>
           )}
-          {NAVBAR_CONTENT.map(key =>
-            <button
-              key={key.keyName}
-              onClick={this._onNavbarItemClickGenerator(key.keyName)}
-            >
-              {key.displayName}
-            </button>
-          )}
+          <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
         </nav>
       </div>
     );

@@ -6,12 +6,13 @@ $component-spacing: 3em;
   text-align: center;
 
   h3 {
+    padding-top: 5%;
     margin: 0;
 
     display: inline-block;
 
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
   }
 }
@@ -26,12 +27,22 @@ $component-spacing: 3em;
   h4 {
     color: $theme-color-lightgrey;
     text-transform: uppercase;
+    padding-top: 20px;
+    margin: 0;
   }
 
-  .sponsorImage{
-    max-width: 30%;
-    vertical-align: middle;
-    max-height: 100px;
+  .sponsorContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .backgroundFill {
+      max-width: 200px;
+      max-height: 100px;
+
+      padding: 10px 30px;
+
+    }
   }
 }
 

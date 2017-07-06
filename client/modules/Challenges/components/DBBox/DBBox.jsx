@@ -20,7 +20,7 @@ function DBBox() {
   return (
     <section className={styles.DBBox}>
       <div className={styles.dbBoxImg}>
-        <span>Accessibility</span>
+        <span>Theme Name</span>
       </div>
       <div className={styles.dbBoxText} >
         <p>The lack of convenient, accessible, and affordable transportation for citizens witha  disability

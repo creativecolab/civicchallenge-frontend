@@ -10,8 +10,6 @@ import ChallengeText from './components/ChallengeText/ChallengeText';
 
 import styles from './Sponsors.scss';
 
-import headerBg from './header-bg.png';
-
 /**
  * Sponsors
  */
@@ -31,7 +29,7 @@ function Sponsors() {
         title="Sponsors"
       />
       <Header
-        backgroundImg={headerBg}
+        backgroundImg={''}
         headerText={'Sponsors'}
         subheaderText={''}
         showButton={false}

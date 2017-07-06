@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './DBDiscussion.scss';
+import slackTemp from './slack-APi-temp.png';
 
 /**
  * DBDiscussion
@@ -32,27 +33,27 @@ function DBDiscussion() {
           <div className={styles.discussionContent}>
             <div className={styles.discussionQuestion}>
               <h4>Discussion Question</h4>
-              <p>To succeed you must believe. When you believe, you will succeed. Bless up.
-              Congratulations, you played yourself. You smart, you loyal, you a genius. They
-              never said winning was easy. Some people can’t handle success, I can. Lion!
-              The key is to enjoy life, because they don’t want you to enjoy life. I promise
-              you, they don’t want you to jetski, they don’t want you to smile. You see the
-              hedges, how I got it shaped up? It’s important to shape up your hedges, it’s like
-              getting a haircut, stay fresh. Learning is cool, but knowing is better, and I know
-              the key to success.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
+              massa nisl commodo dui, quis gravida enim eros ut enim. Sed rutrum ornare quam, nec suscipit nulla pulvinar
+              sollicitudin. Aenean dignissim mi augue,
+              id lobortis mauris scelerisque quis. Nam pellentesque et nulla eu egestas. Suspendisse elit ex, lobortis etå
+              pharetra facilisis, sagittis eget mi. Fusce lobortis, quam id sollicitudin imperdiet, felis sem viverra tellus,
+               at porttitor elit enim quis diam. Ut pellentesque dui ac interdum dictum.</p>
             </div>
             <div className={styles.discussionSlack}>
               <div className={styles.discussionHighlights}>
                 <h4>Highlights from Slack</h4>
                 <ul>
-                  <li>Point 1</li>
-                  <li>Point 2</li>
-                  <li>Pointe 3</li>
+                  <li>Highlight 1</li>
+                  <li>Highlight 2</li>
+                  <li>Highlight 3</li>
                 </ul>
               </div>
               <div className={styles.discussionExcerpts}>
                 <h4>Selected Messages from Slack</h4>
-                <div className={styles.discussionSlackMsgs} />
+                <div className={styles.discussionSlackMsgs}>
+                  <img src={slackTemp} alt="slack temp" />
+                </div>
               </div>
             </div>
           </div>

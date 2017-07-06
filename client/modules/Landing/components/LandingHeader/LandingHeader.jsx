@@ -33,7 +33,7 @@ function LandingHeader() {
         <div className={styles.mainContent}>
           <p className={styles.text4}>Design for San Diego&#39;s 2017 Civic Challenge</p>
           <h1 className={styles.text2}>Mobility</h1>
-          <p className={styles.text4}>Build design skills as you turn your mobility challenges into civic innovations!</p>
+          <p className={styles.text3}>Build design skills as you imagine a San Diego where we all move freely</p>
           <div className={styles.button}>
             <div className={styles.buttonContainer}>
               <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>

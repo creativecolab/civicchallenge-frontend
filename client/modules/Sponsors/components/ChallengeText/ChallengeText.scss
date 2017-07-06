@@ -2,119 +2,62 @@
 
 $call-to-action-bckground: #ededed;
 
-#sponsors {
+$button-size: 0.7em;
+
+#challengeText {
   margin: $component-vertical-margin auto;
 
-
-  div.tierBlock {
-    hr {
-      margin: 30px;
-
-      opacity: 0.3;
-    }
-  }
-
-  h3 {
-    margin: 0;
-
-    display: inline-block;
-
+  width: 60%;
+  margin: 0 auto;
+  .sectionTitle {
     text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  h4.tier {
-    margin: 1em 0;
-
-    font-size: 1.25em;
-
-    text-align: center;
-  }
-
-  .text {
-    margin: 2em 0;
-
-    text-align: left;
-
-    font-size: 0.9em;
-
-    a {
-      color: #24487c;
+    padding: 60px 0;
+    h3 {
+      font-size: 1.2em;
     }
-
-    a:hover {
-      color: #2d324d;
+    p {
+      font-size: 0.9em;
     }
   }
 
-  .sponsor-list {
-    text-align: center;
-    img {
-      margin: 0 1em;
-      padding: 1em;
-      height: 3em;
-
-      cursor: pointer;
-
-      background-color: #24487c;
-
+  .tierBlock {
+    h3 {
+      font-size: 1.2em;
+      text-align: center;
+    }
+    h4 {
+      text-align: center;
     }
 
-    img:hover {
-      background-color: #2d324d;
+    padding: 15px 0;
+  }
+
+  .sponsorCallout {
+    padding: 60px 0;
+    h3 {
+      text-align: center;
+      padding-bottom: 40px;
     }
-
-    .you {
-      .you-inner {
-        $border-width: 2px;
-
-        margin: 0 $font-size;
-        border: $border-width dashed #24487c;
-        padding: $font-size - ($border-width) 2 * $font-size;
-        height: 3 * $font-size;
-
-        display: inline-block;
-        vertical-align: top;
-
-        font-size: 2em;
-        line-height: 3 * $font-size;
-        color: #24487c;
-      }
-
-      .you-inner:hover {
-        background-color: #2d324d;
+    .sponsorBtn {
+      display: flex;
+      justify-content: center;
+      a.salmon {
+        text-decoration: none;
+        padding: 10px 30px;
 
         color: #fff;
-      }
-    }
+        font-size: $button-size;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
 
-    &.small {
-      img {
-        margin: 0 1em;
-        padding: 1em;
-        height: 2em;
-      }
+        background-color: $theme-color-red;
+        border: 2px solid $theme-color-red;
 
-      .you {
-        .you-inner {
-          $border-width: 2px;
-
-          margin: 0 $font-size;
-          border: $border-width dashed #24487c;
-          padding: $font-size - ($border-width) 2 * $font-size;
-          height: 2 * $font-size;
-
-          font-size: 2em;
-          line-height: 2 * $font-size;
-        }
-      }
+     } 
     }
   }
 
-  #sponsorCallout {
-    margin: 0 auto;
-  }
 }
 
 @media (min-width: $desktop-min-width) {

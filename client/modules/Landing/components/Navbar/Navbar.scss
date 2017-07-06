@@ -5,19 +5,33 @@ $navbar-height: 50px;
 $font-color: #fff;
 
 .navbar-container {
+
   position: fixed;
   height: $navbar-height;
+  background-color: #5eb7f2;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
   width: 100%;
 
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: 0;
+
+  z-index: 100000;
 
   .logo {
   }
 
   .navbar {
-    float: right;
+
+    button {
+      padding: 0px 20px;
+    }
+    
+    a {
+      border: 1px solid #fff;
+    }
   }
 
   .logo, .navbar {
@@ -25,9 +39,7 @@ $font-color: #fff;
       margin: 0 10px;
 
       text-decoration: none;
-      text-transform: uppercase;
       color: $font-color;
-
     }
 
     a,button {
@@ -39,9 +51,8 @@ $font-color: #fff;
       cursor: pointer;
 
       text-decoration: none;
-      text-transform: uppercase;
       background-color: transparent;
-      font-size: 0.75 * $font-size;
+      font-size: 0.8 * $font-size;
       color: $font-color;
     }
   }

@@ -24,10 +24,11 @@ function DBResources() {
           <div className={styles.resourceImg} />
           <div className={styles.resourceText}>
             <h6>Title of Resource</h6>
-            <p>To succeed you must believe. When you believe, you will succeed. Bless up.
-            Congratulations, you played yourself. You smart, you loyal, you a genius. They
-            never said winning was easy. Some people can’t handle success, I can. Lion!
-            The key is to enjoy life, because they don’t want you to enjoy life.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
+            massa nisl commodo dui, quis gravida enim eros ut enim. Sed rutrum ornare quam, nec suscipit nulla pulvinar
+            sollicitudin. Aenean dignissim mi augue, id lobortis mauris scelerisque quis. Nam pellentesque et nulla eu egestas.
+            Suspendisse elit ex, lobortis et pharetra facilisis, sagittis eget mi. Fusce lobortis, quam id sollicitudin imperdiet,
+            sem viverra tellus, at porttitor elit enim quis diam. Ut pellentesque dui ac interdum dictum.</p>
             <a href="">Link to Resource</a>
           </div>
         </div>
@@ -36,10 +37,11 @@ function DBResources() {
           <div className={styles.resourceImg} />
           <div className={styles.resourceText}>
             <h6>Title of Resource</h6>
-            <p>To succeed you must believe. When you believe, you will succeed. Bless up.
-            Congratulations, you played yourself. You smart, you loyal, you a genius. They
-            never said winning was easy. Some people can’t handle success, I can. Lion!
-            The key is to enjoy life, because they don’t want you to enjoy life.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
+            massa nisl commodo dui, quis gravida enim eros ut enim. Sed rutrum ornare quam, nec suscipit nulla pulvinar
+            sollicitudin. Aenean dignissim mi augue, id lobortis mauris scelerisque quis. Nam pellentesque et nulla eu egestas.
+            Suspendisse elit ex, lobortis et pharetra facilisis, sagittis eget mi. Fusce lobortis, quam id sollicitudin imperdiet,
+            sem viverra tellus, at porttitor elit enim quis diam. Ut pellentesque dui ac interdum dictum.</p>
             <a href="">Link to Resource</a>
           </div>
         </div>
@@ -48,10 +50,11 @@ function DBResources() {
           <div className={styles.resourceImg} />
           <div className={styles.resourceText}>
             <h6>Title of Resource</h6>
-            <p>To succeed you must believe. When you believe, you will succeed. Bless up.
-            Congratulations, you played yourself. You smart, you loyal, you a genius. They
-            never said winning was easy. Some people can’t handle success, I can. Lion!
-            The key is to enjoy life, because they don’t want you to enjoy life.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
+            massa nisl commodo dui, quis gravida enim eros ut enim. Sed rutrum ornare quam, nec suscipit nulla pulvinar
+            sollicitudin. Aenean dignissim mi augue, id lobortis mauris scelerisque quis. Nam pellentesque et nulla eu egestas.
+            Suspendisse elit ex, lobortis et pharetra facilisis, sagittis eget mi. Fusce lobortis, quam id sollicitudin imperdiet,
+            sem viverra tellus, at porttitor elit enim quis diam. Ut pellentesque dui ac interdum dictum.</p>
             <a href="">Link to Resource</a>
           </div>
         </div>

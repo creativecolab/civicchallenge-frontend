@@ -21,14 +21,9 @@ function dbHeader() {
       <div className={styles.dbHeaderText}>
         <h6>Design Brief</h6>
         <h1>Design Brief Title</h1>
-        <p>The first of the month is coming, we have to get money, we have no choice.
-        It cost money to eat and they don’t want you to eat. They key is to have every
-        key, the key to open every door. You see the hedges, how I got it shaped up
-        It’s important to shape up your hedges, it’s like getting a haircut, stay fresh.
-        Look at the sunset, life is amazing, life is beautiful, life is what you make
-        it. Bless up. I told you all this before, when you have a swimming pool, do
-        not use chlorine, use salt water, the healing, salt water is the healing. The
-        ladies always say Khaled you smell good, I use no cologne. Cocoa butter is the key.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
+         massa nisl commodo dui, quis gravida enim eros ut enim. Sed rutrum ornare quam, nec suscipit nulla pulvinar sollicitudin. Aenean dignissim mi augue, id lobortis mauris scelerisque quis. Nam pellentesque et nulla eu egestas. Suspendisse elit ex, lobortis et pharetra facilisis, sagittis eget mi. Fusce lobortis, quam id sollicitudin imperdiet, felis sem viverra tellus, at porttitor elit enim quis diam. Ut pellentesque dui ac interdum dictum.
+        Aenean malesuada, turpis ut porta tempor, urna lorem eleifend neque, vel porta ante ipsum sed nisl.</p>
         <a className={styles.salmon} href="">Join the Discussion</a>
       </div>
       <div className={styles.dbHeaderImg} />

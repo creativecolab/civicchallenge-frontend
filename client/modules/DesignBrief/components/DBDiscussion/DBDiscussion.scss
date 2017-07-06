@@ -84,6 +84,10 @@ $header-img-dim: 250px;
               height: 80%;
               width: 100%;
               background-color: $theme-color-lightgrey;
+
+              img {
+                height: 100%;
+              }
             }
           }
         }

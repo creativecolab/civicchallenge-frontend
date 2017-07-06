@@ -16,7 +16,9 @@ $button-size: 0.7em;
 
 		h6 {
 			margin: 0;
-			
+      font-size: 0.8em;
+      font-weight: normal;
+			color: $theme-color-lightgrey;
 		}
 
 		h1 {
@@ -25,6 +27,7 @@ $button-size: 0.7em;
 
 		p {
 			font-size: 0.9em;
+      padding-bottom: 20px;
 		}
 
     a.salmon {

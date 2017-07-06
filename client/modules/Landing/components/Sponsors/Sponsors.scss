@@ -1,6 +1,7 @@
 @import '~styles/variables';
 
 #sponsors {
+  width: 100%;
   padding: 3em 0 4em 0;
   position: relative;
 
@@ -8,50 +9,17 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
 
   #sponsorWrapper {
-    h1 {
-      color: $font-color-nonwhitebkgd;
-    }
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    a {
+      .backgroundFill {
+        height: 75px;
 
-    #sponsorRow {
-      span {
-        color: $font-color-nonwhitebkgd;
-        padding: 0 20px;
-      }
 
-      .solidBtn {
-        color: $theme-color-blue;
-        background-color: $font-color-nonwhitebkgd;
-        padding: 15px 30px;
-        border: 2px solid $font-color-nonwhitebkgd;
-
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.7em;
-
-        &:hover {
-          color: $font-color-nonwhitebkgd;
-          background-color: $theme-color-blue;
-          border-color: $font-color-nonwhitebkgd;
-        }
-      }
-
-      .outlineBtn {
-        color: $font-color-nonwhitebkgd;
-        padding: 15px 30px;
-        border: 2px solid $font-color-nonwhitebkgd;
-        
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.7em;
-
-        &:hover {
-          color: $theme-color-blue;
-          background-color: $font-color-nonwhitebkgd;
-        }
       }
     }
   }

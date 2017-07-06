@@ -1,8 +1,7 @@
 @import '~styles/variables';
 
 #register {
-  padding: 3em 0 4em 0;
-  position: relative;
+  padding: 5em 0 7em 0;
 
   background-color: $theme-color-blue;
 
@@ -14,6 +13,7 @@
   #sponsorWrapper {
     h1 {
       color: $font-color-nonwhitebkgd;
+      padding-bottom: 20px;
     }
 
     #sponsorRow {

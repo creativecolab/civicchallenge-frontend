@@ -11,7 +11,6 @@ import DBBox from './components/DBBox/DBBox';
 import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
-import headerBg from './header-bg.png';
 
 /**
  * Challenges
@@ -48,7 +47,7 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header
-          backgroundImg={headerBg}
+          backgroundImg={''}
           headerText={'Challenges'}
           subheaderText={''}
           showButton={false}
