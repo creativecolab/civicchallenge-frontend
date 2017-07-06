@@ -44,9 +44,11 @@ function DesignBrief() {
 
         <Tabs>
           <TabList>
-            <Tab>Overview</Tab>
-            <Tab>Discussion</Tab>
-            <Tab>Resources</Tab>
+            <div className={styles.briefNavBar}>
+              <Tab>Overview</Tab>
+              <Tab>Discussion</Tab>
+              <Tab>Resources</Tab>
+            </div>
           </TabList>
           <hr />
           <TabPanel>
