@@ -24,7 +24,9 @@ $font-color: #fff;
 
   .navbar-container {
     height: $navbar-height;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
+    //border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
+
+    padding: 0 1%;
 
     display: flex;
     align-items: center;
@@ -33,6 +35,9 @@ $font-color: #fff;
     background-color: #fff;
 
     .logo {
+      img {
+        width: 80px;
+      }
     }
 
     .navbar {
@@ -134,17 +139,7 @@ $font-color: #fff;
     }
   }
 
-  img {
-    width: 100%;
-    // height: calc(100% - #{$navbar-height} - 2 * #{$offset});
-    height: calc(100% - #{$navbar-height});
 
-    z-index: -1;
-    position: absolute;
-    top: $navbar-height;
-
-    opacity: 0.1; // TEMP
-  }
 }
 
 @media (min-width: $desktop-min-width) {

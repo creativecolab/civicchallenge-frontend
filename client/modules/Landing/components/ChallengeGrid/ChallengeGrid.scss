@@ -22,10 +22,12 @@ $component-spacing: 3em;
     padding: 40px 0;
 
     .challengeWrapper {
-      width: 80%;
+      width: 75%;
       margin: 0 auto;
 
       .challengeRow {
+
+        padding: 20px 0;
 
         display: flex;
         justify-content: space-around;
@@ -38,6 +40,11 @@ $component-spacing: 3em;
           display: flex;
           justify-content: center;
           align-items: center;
+
+          p {
+            color: #fff;
+            font-weight: bold;
+          }
         } 
       }
     }
@@ -151,6 +158,36 @@ $component-spacing: 3em;
   margin: 0 auto;
   width: $component-width-desktop;
 }
+}
+
+@media (min-width: 1000px) {
+  .challengeWrapper {
+    width: 80%;
+    margin: 0 auto;
+
+    .challengeRow {
+
+      padding: 20px 0;
+
+      display: flex;
+      justify-content: space-around;
+
+      .challengeElement {
+        width: 150px;
+        height: 150px;
+        background-color: $theme-color-lightgrey;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          color: #fff;
+          font-weight: bold;
+        }
+      } 
+    }
+  }
 }
 
 @media (max-width: $mobile-max-width) {

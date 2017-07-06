@@ -108,6 +108,20 @@ class ChallengeGrid extends Component {
                 <p>Challenge name</p>
               </div>
             </div>
+            <div className={styles.challengeRow}>
+              <div className={styles.challengeElement}>
+                <p>Challenge name</p>
+              </div>
+              <div className={styles.challengeElement}>
+                <p>Challenge name</p>
+              </div>
+              <div className={styles.challengeElement}>
+                <p>Challenge name</p>
+              </div>
+              <div className={styles.challengeElement}>
+                <p>Challenge name</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

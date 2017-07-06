@@ -6,6 +6,8 @@ import { withProvideRefs } from 'util/RefCollector';
 
 import styles from './Navbar.scss';
 
+import d4sdLogo from './logo_black.png';
+
 let TweenLite = {};
 if (process.env.browser) {
   TweenLite = require('gsap/TweenLite'); // eslint-disable-line global-require
@@ -94,7 +96,7 @@ class Navbar extends React.Component {
     return (
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
-          <Link to="/">D4SD</Link>
+          <Link to="/"><img className="theLogo" src={d4sdLogo} alt="logo" /></Link>
         </div>
         <nav className={styles.navbar}>
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>

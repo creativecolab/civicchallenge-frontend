@@ -4,6 +4,7 @@ import ReactGA from 'react-ga';
 import { Link } from 'react-router';
 
 import styles from './Header.scss';
+import landingLogo from './logo_black.png';
 
 /**
  * Constants
@@ -67,7 +68,7 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }, { rout
       />
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
-          <Link to="/">D4SD</Link>
+          <Link to="/"><img className="theLogo" src={landingLogo} alt="logo" /></Link>
         </div>
         <nav className={styles.navbar}>
           {LINKS.map(({ href, text }) =>

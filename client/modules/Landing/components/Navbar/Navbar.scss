@@ -5,12 +5,13 @@ $navbar-height: 50px;
 $font-color: #000;
 
 .navbar-container {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   height: $navbar-height;
   background-color: #fff;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
@@ -19,6 +20,9 @@ $font-color: #000;
 
 
   .logo {
+    img {
+      width: 80px;
+    }
   }
 
   .navbar {
