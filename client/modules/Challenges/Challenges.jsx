@@ -48,7 +48,7 @@ class Challenges extends Component {
         />
         <Header
           backgroundImg={''}
-          headerText={'Challenges'}
+          headerText={'Design Briefs'}
           subheaderText={''}
           showButton={false}
         />

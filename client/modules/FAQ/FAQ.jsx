@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from 'components/Header/Header';
+import Header from 'components/HeaderNoBanner/HeaderNoBanner';
 import Footer from 'components/Footer/Footer';
 
 import QuestionBox from './components/QuestionBox/QuestionBox';
@@ -33,6 +33,10 @@ function FAQ() {
         subheaderText={''}
         showButton={false}
       />
+
+      <div className={styles.faqHeader}>
+        <h1>FAQ</h1>
+      </div>
 
       <section className={styles.content}>
         <div className={styles.boxRow}>
