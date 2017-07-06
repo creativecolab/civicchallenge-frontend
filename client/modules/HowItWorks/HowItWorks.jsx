@@ -71,7 +71,7 @@ function HowItWorks() {
         </div>
         <div id="registerCallout" className={styles.contentContainer}>
           <h2>Ready to take on the challenge?</h2>
-          <p>Ready to take on the challenge tagline here</p>
+          <p>Ready to take on the challenge tagline goes here</p>
           <div className={styles.sectionBtn}>
             <a className={styles.salmon} href="">REGISTER TODAY</a>
           </div>
