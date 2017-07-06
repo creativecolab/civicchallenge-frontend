@@ -27,25 +27,35 @@ function WhyParticipate(props) {
     <section id={styles.participate} ref={props.componentRef}>
       <div className={globalStyles.sectionTitle}>
         <h1>Why Participate?</h1>
-        <p>Lorem Khaled Ipsum is a major key to success. Mogul talk. They key is to have every key, the key to open every door. I told you all thwhen you have a swimming pool, do not use chlorine, use salt water, the healing, salt water is the healing. The weather is amazing, walk with me through the pathway of more. </p>
+        <p>Participating in the 2017 Civic Design Challenge gives you a forum to voice your concerns
+        and vision for mobility in San Diego. It also provides hands-on experience with research and
+        design, a network of people who are also interested in improving our city and a platform
+        to share your proposal. If your prototype is a finalist in the contest, you may earn cash
+        or facetime with city leaders and innovation incubators.</p>
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.contentElement}>
           <div className={styles.contentImg} />
           <div className={styles.contentText}>
-            <p>Find peace, life is like a water fall, you’ve gotta flow.</p>
+            <h4>Learn Design</h4>
+            <p>Build an understand of the design thinking process by discussing it with
+            your peers and putting it to use</p>
           </div>
         </div>
         <div className={styles.contentElement}>
           <div className={styles.contentImg} />
           <div className={styles.contentText}>
-            <p>The key is to drink coconut, fresh coconut, trust me.</p>
+            <h4>15 Minutes of Fame</h4>
+            <p>We will post all qualitfying submission on our website. The finalists
+            will be showcased at the Design Forward Summit.</p>
           </div>
         </div>
         <div className={styles.contentElement}>
           <div className={styles.contentImg} />
           <div className={styles.contentText}>
-            <p>The key to success is to keep your head above the water.</p>
+            <h4>Win Prizes</h4>
+            <p>Earn cash or have the opportunity to meet with public and private leaders
+            Check back soon for the official prizes.</p>
           </div>
         </div>
       </div>

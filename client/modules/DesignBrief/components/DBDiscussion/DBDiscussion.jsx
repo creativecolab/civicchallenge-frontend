@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './DBDiscussion.scss';
-import slackTemp from './slack-API-temp.png'; 
+import slackTemp from './slack-API-temp.png';
 
 /**
  * DBDiscussion

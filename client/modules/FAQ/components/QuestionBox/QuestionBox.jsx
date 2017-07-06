@@ -29,11 +29,11 @@ function QuestionBox() {
           </div>
         </div>
         <div className={styles.questionText}>
-          <p>Surround yourself with angels. Fan luv. Stay focused. Egg whites, turkey sausage, wheat toast,
-           water. Of course they don’t want us to eat our breakfast, so we are going to enjoy our breakfast.
-           The key to more success is to get a massage once a week, very important, major key, cloth talk.
-           You smart, you loyal, you a genius. A major key, never panic. Don’t panic, when it gets crazy.
-           and rough, don’t panic, stay calm.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam.
+          Praesent pretium mi vitae ipsum tristique, sit amet tempor ligula auctor. Sed nisl velit, tincidunt eget eleifend id, lacinia a metus.
+          Sed hendrerit accumsan ipsum. Nunc lacinia massa sit amet mi fermentum, id gravida purus ornare. Aenean ac libero tincidunt,
+          bibendum ipsum non, congue nisi. Proin urna quam, sollicitudin fermentum blandit ut, congue in odio. In mauris diam, facilisis
+          et volutpat sed, sodales ac libero. Sed convallis sagittis luctus..</p>
         </div>
       </div>
     </div>

@@ -38,17 +38,17 @@ function FAQ() {
         <div className={styles.boxRow}>
           <QuestionBox
             resourceName="The Process"
-            resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
+            resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam."
             resourceLink=""
           />
           <QuestionBox
-            resourceName="Challenge FAQ"
-            resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
-            resourceLink="/faq"
+            resourceName="The Process"
+            resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam."
+            resourceLink=""
           />
           <QuestionBox
-            resourceName="Slack FAQ"
-            resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
+            resourceName="The Process"
+            resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam."
             resourceLink=""
           />
         </div>

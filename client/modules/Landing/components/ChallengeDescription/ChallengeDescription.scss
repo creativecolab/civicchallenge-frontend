@@ -1,11 +1,31 @@
 @import '~styles/variables';
 
+$button-size: 0.7em;
+
 #ChallengeDescription {
   padding: 3em 0 4em 0;
   position: relative;
 
   display: flex;
   text-align: center;
+  
+  p {
+    padding-bottom: 30px;
+  }
+
+  a.blueOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    color: $theme-color-blue;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-blue;
+
+  }
 
 }
 

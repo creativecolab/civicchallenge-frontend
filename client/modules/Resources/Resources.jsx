@@ -38,17 +38,17 @@ function Resources() {
         <div className={styles.boxRow}>
           <ResourceBox
             resourceName="The Process"
-            resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
+            resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam."
             resourceLink=""
           />
           <ResourceBox
             resourceName="Challenge FAQ"
-            resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
+            resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam"
             resourceLink="/faq"
           />
           <ResourceBox
             resourceName="Slack FAQ"
-            resourceText="Lorem Khaled Ipsum is a major key to success. Wraith talk. Mogul talk. In life you have to take the trash out, if you have trash in your life."
+            resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam"
             resourceLink="/faq"
           />
         </div>

@@ -85,7 +85,12 @@ class ChallengeGrid extends Component {
         <div className={styles.challenges}>
           <div className={globalStyles.sectionTitle}>
             <h1>Design Briefs</h1>
-            <p>HI</p>
+            <p>We all have places to go and people to see. Whetehr ofr work or play--and by car, bike
+            train, bus, boat, or foot--mobility significantly affects millions on a daily basis. San
+            Diego is culturalyl and economically diverse, as well as geographically dispersed,
+            which makes getting around the city a rich issue to explore. The design briefs below
+            investigate concerns currently facing San Diegans while looking towards the
+            future of urban transportation.</p>
           </div>
           {this.state.challenges.map(challenge =>
             <ChallengeBox

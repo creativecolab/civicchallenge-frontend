@@ -27,10 +27,14 @@ function ChallengeDescription(props) {
     <section id={styles.ChallengeDescription} ref={props.componentRef}>
       <div className={globalStyles.sectionTitle}>
         <h1>The Challenge</h1>
-        <p>Let’s see what Chef Dee got that they don’t want us to eat. The key to more success is to have a lot of pillows.
-        I’m giving you cloth talk, cloth. Special cloth alert, cut from a special cloth. Look at the sunset, life is amazing,
-        life is beautiful, life is what you make it. You do know, you do know that they don’t want you to have lunch. I’m
-        keeping it real with you, so what you going do is have lunch. Congratulations, you played yourself.</p>
+        <p>The people of San Diego know the citys treasures and frustrations firsthand and have the passion
+        to shape its future. D4SD and Design Forward want to hear from you! This year, for the first time,
+        we are hosting a city-wide design challenge to amplify your voices and ideas. We invite you to share
+        your experiences, learn about htose of your neighbor and work together to propose answers for some
+        of San Diegos toughest questions. The challenge is structure around design thinking--a human-centered
+        approach to innovation--and offers prizes for the brightest solutions .Join us for the 2017 Civic
+        Design Challenge to tackle the complex issue of mobility.</p>
+        <a className={styles.blueOutline} href="/howitworks">LEARN MORE</a>
       </div>
     </section>
   );
