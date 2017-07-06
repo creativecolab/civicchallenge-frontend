@@ -4,14 +4,14 @@ $header-img-dim: 250px;
 
 $button-size: 0.7em;
 
-.dbHeader {
+.DBHeader {
 
 	margin: $spacing-margin 0;
 
 	display: flex;
 	justify-content: space-between;
 
-	.dbHeaderText {
+	.DBHeaderText {
 		width: $right-side-width;
 
 		h6 {
@@ -46,7 +46,7 @@ $button-size: 0.7em;
     }
 	}
 
-	.dbHeaderImg {
+	.DBHeaderImg {
 		height: $header-img-dim;
 		width: $header-img-dim;
 		

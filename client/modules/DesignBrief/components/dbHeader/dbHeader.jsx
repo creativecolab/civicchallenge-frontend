@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './DBHeader.scss';
 
 /**
- * dbHeader
+ * DBHeader
  */
 
 const propTypes = {};
@@ -15,10 +15,10 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function dbHeader() {
+function DBHeader() {
   return (
-    <section className={styles.dbHeader}>
-      <div className={styles.dbHeaderText}>
+    <section className={styles.DBHeader}>
+      <div className={styles.DBHeaderText}>
         <h6>Design Brief</h6>
         <h1>Design Brief Title</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
@@ -26,13 +26,13 @@ function dbHeader() {
         Aenean malesuada, turpis ut porta tempor, urna lorem eleifend neque, vel porta ante ipsum sed nisl.</p>
         <a className={styles.salmon} href="">Join the Discussion</a>
       </div>
-      <div className={styles.dbHeaderImg} />
+      <div className={styles.DBHeaderImg} />
     </section>
   );
 }
 
-dbHeader.propTypes = propTypes;
-dbHeader.contextTypes = contextTypes;
-dbHeader.defaultProps = defaultProps;
+DBHeader.propTypes = propTypes;
+DBHeader.contextTypes = contextTypes;
+DBHeader.defaultProps = defaultProps;
 
-export default dbHeader;
+export default DBHeader;
