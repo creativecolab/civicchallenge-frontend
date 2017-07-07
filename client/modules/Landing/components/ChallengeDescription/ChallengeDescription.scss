@@ -10,7 +10,6 @@ $button-size: 0.7em;
   text-align: center;
   
   p {
-    padding-bottom: 30px;
   }
 
   a.blueOutline {
@@ -24,6 +23,8 @@ $button-size: 0.7em;
     text-transform: uppercase;
 
     border: 2px solid $theme-color-blue;
+
+    margin: 30px 0;
 
   }
 

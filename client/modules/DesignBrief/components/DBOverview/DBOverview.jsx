@@ -29,7 +29,7 @@ function dbHeader() {
         Certain geographic areas in the San Diego County have lesser forms of public transportation than
         others. Many of the transit systems are far a walking distances away, making it difficult
         for people to access them if they are immobile. And even when they gain access to these transit
-          systems, they may find themselves posed with other problems. How can we help this group by
+        systems, they may find themselves posed with other problems. How can we help this group by
         easing their mobility across the city? How can we get their input about specific spots that
         needs improvement? Even the communication involved in accessibility may need to be improved.</p>
       </div>

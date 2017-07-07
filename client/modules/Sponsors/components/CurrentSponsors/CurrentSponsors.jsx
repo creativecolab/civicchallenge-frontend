@@ -25,6 +25,14 @@ const T1_SPONSORS = [
 
 const T3_SPONSORS = [
   {
+    href: 'http://protolab.ucsd.edu/',
+    img: protolabLogo,
+    alt: 'ProtoLab',
+  },
+];
+
+const PARTNERS = [
+  {
     href: 'http://designlab.ucsd.edu/',
     img: designLabLogo,
     alt: 'UC San Diego Design Lab',
@@ -38,11 +46,6 @@ const T3_SPONSORS = [
     href: 'http://www.scalesd.com/',
     img: scaleSDLogo,
     alt: 'Scale SD',
-  },
-  {
-    href: 'http://protolab.ucsd.edu/',
-    img: protolabLogo,
-    alt: 'ProtoLab',
   },
 ];
 
@@ -85,7 +88,16 @@ function CurrentSponsors() {
             ))}
           </div>
         </div>
-
+        <h4>Partners</h4>
+        <div className={styles.sponsorContainer}>
+          <div className={styles.sponsorList}>
+            {PARTNERS.map(({ href, img, alt }) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                <img className={styles.backgroundFill} src={img} alt={alt} />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
