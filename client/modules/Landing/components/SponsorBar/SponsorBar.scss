@@ -1,0 +1,39 @@
+@import '~styles/variables';
+
+#SponsorBar {
+  width: 100%;
+  padding: 3em 0 4em 0;
+  position: relative;
+
+  background-color: $theme-color-medgrey;
+
+  display: flex;
+  align-items: center;
+
+
+  #sponsorWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    a {
+      .backgroundFill {
+        height: 75px;
+
+
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+#sponsorsWrapper{
+  width: $component-width-desktop
+}
+}
+
+@media (max-width: $mobile-max-width) {
+#sponsorsWrapper {
+  width: $component-width-mobile;
+
+}
+}

@@ -6,10 +6,7 @@ import PropTypes from 'prop-types';
 
 import styles from './ChallengeText.scss';
 
-import designLabLogo from './design-lab-logo.png';
-import designForwardLogo from './design-forward-logo.png';
 import protolabLogo from './protolab-logo.png';
-import scaleSDLogo from './scale-sd-logo.png';
 import nsfLogo from './nsf-logo.png';
 
 /**
@@ -33,21 +30,6 @@ const T3_SPONSORS = [
     href: 'http://protolab.ucsd.edu/',
     img: protolabLogo,
     alt: 'ProtoLab',
-  },
-  {
-    href: 'http://www.scalesd.com/',
-    img: scaleSDLogo,
-    alt: 'Scale SD',
-  },
-  {
-    href: 'http://designforwardsd.com/',
-    img: designForwardLogo,
-    alt: 'Design Forward Alliance',
-  },
-  {
-    href: 'http://designlab.ucsd.edu/',
-    img: designLabLogo,
-    alt: 'UC San Diego Design Lab',
   },
 ];
 

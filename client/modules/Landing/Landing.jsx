@@ -12,6 +12,7 @@ import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
 import About from './components/About/About';
 import GetInvolved from './components/GetInvolved/GetInvolved';
 import Sponsors from './components/Sponsors/Sponsors';
+import SponsorBar from './components/SponsorBar/SponsorBar';
 import CivicFramework from './components/CivicFramework/CivicFramework';
 
 import styles from './Landing.scss';
@@ -42,6 +43,7 @@ function Landing() {
       <CivicFramework />
       <About />
       <Sponsors />
+      <SponsorBar />
       <Footer />
     </div>
   );
