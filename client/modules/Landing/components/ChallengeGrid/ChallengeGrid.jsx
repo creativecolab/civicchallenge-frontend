@@ -83,48 +83,52 @@ class ChallengeGrid extends Component {
     return (
       <section className={styles.challengeGrid} ref={this.props.componentRef}>
         <div className={styles.challenges}>
-          <div className={globalStyles.sectionTitle}>
-            <h1>Design Briefs</h1>
-            <p>We all have places to go and people to see. Whetehr ofr work or play--and by car, bike
-            train, bus, boat, or foot--mobility significantly affects millions on a daily basis. San
-            Diego is culturalyl and economically diverse, as well as geographically dispersed,
-            which makes getting around the city a rich issue to explore. The design briefs below
-            investigate concerns currently facing San Diegans while looking towards the
-            future of urban transportation.</p>
-          </div>
-          {this.state.challenges.map(challenge =>
-            <ChallengeBox
-              key={challenge.name}
-              {...challenge}
-            />
-          )}
-          <div className={styles.challengeWrapper}>
-            <div className={styles.challengeRow}>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
-              </div>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
-              </div>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
-              </div>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
+          <div className={styles.content}>
+            <div className={globalStyles.sectionTitle}>
+              <h1>Design Briefs</h1>
+              <div className={styles.descr}>
+                <p>We all have places to go and people to see. Whetehr ofr work or play--and by car, bike
+                train, bus, boat, or foot--mobility significantly affects millions on a daily basis. San
+                Diego is culturalyl and economically diverse, as well as geographically dispersed,
+                which makes getting around the city a rich issue to explore. The design briefs below
+                investigate concerns currently facing San Diegans while looking towards the
+                future of urban transportation.</p>
               </div>
             </div>
-            <div className={styles.challengeRow}>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
+            {this.state.challenges.map(challenge =>
+              <ChallengeBox
+                key={challenge.name}
+                {...challenge}
+              />
+            )}
+            <div className={styles.challengeWrapper}>
+              <div className={styles.challengeRow}>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
               </div>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
-              </div>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
-              </div>
-              <div className={styles.challengeElement}>
-                <p>Challenge name</p>
+              <div className={styles.challengeRow}>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
+                <div className={styles.challengeElement}>
+                  <p>Challenge name</p>
+                </div>
               </div>
             </div>
           </div>

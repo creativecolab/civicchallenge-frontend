@@ -40,10 +40,9 @@ $button-size: 0.7em;
   
   .button {
     a.blueOutline {
-      text-decoration: none;
-      padding: 1.2em 3.2em;
-
       color: $theme-color-blue;
+
+      padding: 1.2em 3.2em;
       font-size: 14px;
       font-family: 'Open Sans';
       font-weight: 600;
