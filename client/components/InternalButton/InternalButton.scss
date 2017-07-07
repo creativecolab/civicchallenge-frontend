@@ -7,29 +7,34 @@
 .solidBtn {
   color: $theme-color-blue;
   background-color: $font-color-nonwhitebkgd;
-  padding: 15px 30px;
   border: 2px solid $font-color-nonwhitebkgd;
 
+  padding: 1.2em 3.2em;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.7em;
+  text-transform: uppercase;
 
   &:hover {
     color: $font-color-nonwhitebkgd;
-	background-color: $theme-color-blue;
-	border-color: $font-color-nonwhitebkgd;
+    background-color: $theme-color-blue;
+    border-color: $font-color-nonwhitebkgd;
   }
 }
 
 
 .outlineBtn {
   color: $font-color-nonwhitebkgd;
-  padding: 15px 30px;
+  
   border: 2px solid $font-color-nonwhitebkgd;
 
+  padding: 1.2em 3.2em;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.7em;
+  text-transform: uppercase;
 
   &:hover {
     color: $theme-color-blue;
