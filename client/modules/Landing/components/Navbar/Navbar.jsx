@@ -92,7 +92,6 @@ class Navbar extends React.Component {
 
   render() {
     const { router } = this.context;
-
     return (
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
