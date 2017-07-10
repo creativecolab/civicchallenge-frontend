@@ -1,13 +1,14 @@
 @import '~styles/variables';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 
-
+$source-sans: 'Open Sans';
 $button-size: 0.7em;
 
 #ChallengeDescription {
   padding: 90px 0;
   position: relative;
 
+  font-family: 'Source Sans Pro';
   //display: flex;
   //text-align: center;
   color: #212121;
@@ -21,7 +22,7 @@ $button-size: 0.7em;
   .descr {
     margin: 30px 60px 0px 60px;
     p {
-      font-family: 'Open Sans';
+      font-family: $source-sans;
       font-weight: 300;
       margin: 0;
       padding: 0;
