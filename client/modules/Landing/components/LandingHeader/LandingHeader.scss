@@ -1,77 +1,82 @@
 @import '~styles/variables';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 
 $component-spacing: 3em;
 $header-fcolor: rgb(255, 255, 255);
 
 #headerBackground {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60%;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  height: 75%;
   //background-color: #5eb7f2;
-  background: url("./header-img.png");
+  background-image: url("./header-img.png");
+  background-size: 100% 100%;
 
     .main {
-      display: flex;
-      justify-content: center;
       $font-size: 1.5em;
-
-      margin: 0; 
-
       text-align: center;
       font-weight: normal;
 
+      .mainContent {
+        padding: 150px;
 
-      .text2 {
-        font-size: 3.8 * $font-size;
-        font-weight: 600;
-        padding: 15px 0 0 0;
-        margin:0;
-        line-height: 1em;
-        color: $header-fcolor;
-      }
-      .text3 {
-        font-size: 1em;
-        padding: 10px 0;
-        margin:0;
-        color: $header-fcolor;
-      }
+        .text2 { // "Mobility"
+          //font-size: 3.8 * $font-size;
+          font-size: 120px;
+          font-weight: 550;
+          padding: 10px;
+          margin:0;
+          line-height: 1em;
+          color: $header-fcolor;
+        }
 
-      .text4 {
-        font-size: 18px;
-        padding: 10px 0;
-        margin:0;
-        color: $header-fcolor;
-      }
+        .text3 { // "Build design..." 
+          font-size: 18px;
+          padding: 10px 0;
+          margin:0;
+          color: $header-fcolor;
+          font-family: 'Open Sans';
+        }
 
-      .button {
-        margin: 20px;
-        font-size: 16px;
+        .text4 { // "Design for San..."
+          font-size: 24px;
+          font-weight: 300;
+          margin:0;
+          color: $header-fcolor;
+        }
 
-        .buttonContainer {
-          display: flex;
-          justify-content: center;
-          margin: 0;
-          padding: 0;
+        .button {
+          margin: 20px;
+          font-size: 16px;
 
-          a {
+          .buttonContainer {
+            display: flex;
+            justify-content: center;
             margin: 0;
-            border: none;
-            padding: 1.2em 3em;
+            padding: 0;
 
-            display: inline-block;
-            cursor: pointer;
+            a {
+              margin: 0;
+              border: none;
+              padding: 1.2em 3.2em;
 
-            background-color: #FC6464;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.7em;
-            font-weight: 600;
-            color: #fff;
-          }
+              display: inline-block;
+              cursor: pointer;
+              
+              background-color: #FC6464;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-size: 14px;
+              font-family: 'Open Sans';
+              font-weight: 600;
+              color: #fff;
+            }
 
-          a:hover {
-            background-color: #d84949;
+            a:hover {
+              background-color: #d84949;
+            }
           }
         }
       }

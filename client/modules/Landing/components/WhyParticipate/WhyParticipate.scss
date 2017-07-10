@@ -1,10 +1,26 @@
 @import '~styles/variables';
 
 #participate {
-  margin: $component-vertical-margin auto;
-
+  padding: 90px 0;
   text-align: center;
+  color: #212121;
 
+  .descr {
+    margin: 30px 60px;
+    p {
+      
+      font-family: 'Open Sans';
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+  }
 
   div.contentContainer {
 
@@ -13,20 +29,35 @@
 
     div.contentElement {
 
-      padding: 0 2%;
+      padding: 0 5%;
 
-      width: 150px;
+      width: 200px;
 
-      div.contentImg {
+      div.imgCont {
+        margin-bottom: 20px;
+        div.contentImg {
 
-      height: 150px;
-      background-color: $theme-color-lightgrey;
-      border-radius: 50%;
-
+          height: 200px;
+          background-color: $theme-color-lightgrey;
+          border-radius: 50%;
+        }
       }
 
       div.contentText {
+        h4 {
+          font-weight: 500;
+          margin: 0;
+          padding: 0;
+          font-size: 18px;
+        }
 
+        p {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+        }
       }
     }
   }

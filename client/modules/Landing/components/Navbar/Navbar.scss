@@ -1,4 +1,5 @@
 @import '~styles/variables';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 
 $navbar-height: 50px;
 
@@ -7,7 +8,8 @@ $font-color: #000;
 .navbar-container {
   //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   height: $navbar-height;
-  background-color: #fff;
+  background-color: none;
+  position: fixed;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
   width: 98%;
@@ -15,25 +17,65 @@ $font-color: #000;
 
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 10px;
   margin-bottom: 0;
 
+  .registerButton {
+      font-size: 16px;
+      display: flex;
+      
+
+      .buttonContainer {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        a {
+          margin: 0;
+          border-style: solid;
+          border-width: 1.5px;
+          padding: .4em 1em;
+
+          display: inline-block;
+          cursor: pointer;
+
+          background-color: none;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 600;
+          color: #fff;
+          font-family: 'Open Sans';
+        }
+
+        a:hover {
+          background-color: #fff;
+          color: #4496FF;
+          border-color: #fff;
+        }
+      }
+    }
 
   .logo {
     img {
       width: 80px;
     }
+    padding: 10px 20px;
   }
 
   .navbar {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
     button {
       padding: 0px 20px;
     }
     
-    a {
-      border: 1px solid #fff;
-    }
+    //a {
+      //border: 1px solid #fff;
+    //}
   }
 
   .logo, .navbar {
@@ -51,13 +93,16 @@ $font-color: #000;
 
       outline: none;
       cursor: pointer;
+      font-family: 'Open Sans';
+
 
       text-decoration: none;
       background-color: transparent;
-      font-size: 0.65 * $font-size;
-      color: $font-color;
+      //font-size: 0.65 * $font-size;
+      font-size: 14px;
+      color: #fff;
 
-      text-transform: uppercase;
+      text-transform: none;
     }
   }
 }

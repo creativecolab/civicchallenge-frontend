@@ -1,35 +1,52 @@
 @import '~styles/variables';
 
 #register {
-  padding: 5em 0 7em 0;
+  padding: 90px;
+  position: relative;
+  color: #212121;
 
   background-color: $theme-color-blue;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
 
+      
 
-  #sponsorWrapper {
-    h1 {
-      color: $font-color-nonwhitebkgd;
-      padding-bottom: 20px;
-    }
+  #sponsorRow {
+    margin: 40px 0px;
+    display: flex;
+    align-content: center;
 
-    #sponsorRow {
-      span {
-        color: $font-color-nonwhitebkgd;
-        padding: 0 20px;
+      #or {
+        padding: 10px;
+        p {
+          font-family: 'Open Sans';
+          font-weight: 300;
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+          color: #fff;
+        }
       }
-
+    
+    .button {
+      padding: 10px;
       .outlineBtn {
         color: $font-color-nonwhitebkgd;
-        padding: 15px 30px;
         border: 2px solid $font-color-nonwhitebkgd;
         
+        padding: 1.2em 3.2em;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        font-weight: 600;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 0.7em;
+        text-transform: uppercase;
 
         &:hover {
           color: $theme-color-blue;
@@ -37,6 +54,8 @@
         }
       }
     }
+    
+    
   }
 }
 

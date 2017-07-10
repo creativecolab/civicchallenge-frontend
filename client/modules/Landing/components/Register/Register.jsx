@@ -6,6 +6,7 @@ import { withCollectRef } from 'util/RefCollector';
 
 import InternalButton from 'components/InternalButton/InternalButton';
 
+import globalStyles from 'main.scss';
 import styles from './Register.scss';
 
 
@@ -26,15 +27,19 @@ const defaultProps = {};
 function Register(props) {
   return (
     <section id={styles.register} ref={props.componentRef}>
-      <div id={styles.sponsorWrapper}>
+      <div className={globalStyles.sectionTitle}>
         <h1>Ready to Take on the Challenge?</h1>
         <div id={styles.sponsorRow}>
-          <InternalButton
-            btnText="Register Now"
-            btnLink=""
-          />
-          <span>or see</span>
-          <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
+          <div className={styles.button}>
+            <InternalButton
+              btnText="Register Now"
+              btnLink=""
+            />
+          </div>
+          <div id={styles.or}><p>or see</p></div>
+          <div className={styles.button}>
+            <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
+          </div>
         </div>
       </div>
     </section>

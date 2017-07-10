@@ -1,10 +1,15 @@
 @import '~styles/variables';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 
 $component-spacing: 3em;
 
 .challenge-grid {
-  margin: $component-vertical-margin auto;
-  margin-bottom: 0; // TEMP
+
+  //display: flex;
+  //text-align: center;
+  color: #212121;
+
 
   .title {
     text-align: center;
@@ -15,11 +20,27 @@ $component-spacing: 3em;
     }
   }
 
+  h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .descr {
+    margin: 30px 60px;
+    p {
+      font-family: 'Open Sans';
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   .challenges {
     width: 100%;
     background: #EFEFEF;
 
-    padding: 40px 0;
+    padding: 90px 0;
 
     .challengeWrapper {
       width: 75%;
@@ -43,7 +64,8 @@ $component-spacing: 3em;
 
           p {
             color: #fff;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 18px;
           }
         } 
       }
