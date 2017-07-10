@@ -1,0 +1,112 @@
+@import '~styles/variables';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
+
+$component-spacing: 3em;
+$header-fcolor: rgb(255, 255, 255);
+
+#headerBackground {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  height: 75%;
+  //background-color: #5eb7f2;
+  background-image: url("./header-img.png");
+  background-size: 100% 100%;
+
+    .main {
+      $font-size: 1.5em;
+      text-align: center;
+      font-weight: normal;
+
+      .mainContent {
+        padding: 150px;
+
+        .text2 { // "Mobility"
+          //font-size: 3.8 * $font-size;
+          font-size: 120px;
+          font-weight: 550;
+          padding: 10px;
+          margin:0;
+          line-height: 1em;
+          color: $header-fcolor;
+        }
+
+        .text3 { // "Build design..." 
+          font-size: 18px;
+          padding: 10px 0;
+          margin:0;
+          color: $header-fcolor;
+          font-family: Avenir;
+        }
+
+        .text4 { // "Design for San..."
+          font-size: 24px;
+          font-weight: 300;
+          margin:0;
+          color: $header-fcolor;
+        }
+
+        .button {
+          margin: 20px;
+          font-size: 16px;
+
+          .buttonContainer {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            a {
+              margin: 0;
+              border: none;
+              padding: 1.2em 3.2em;
+
+              display: inline-block;
+              cursor: pointer;
+              
+              background-color: #FC6464;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-size: 14px;
+              font-family: Avenir;
+              font-weight: 600;
+              color: #fff;
+            }
+
+            a:hover {
+              background-color: #d84949;
+            }
+          }
+        }
+      }
+    }
+
+    
+
+  
+}
+
+
+@media (min-width: $desktop-min-width) {
+.challenge-text {
+  width: $component-width-desktop;
+}
+}
+
+@media (max-width: $mobile-max-width) {
+.challenge-text {
+  width: $component-width-mobile;
+
+  .header {
+    .main {
+      .text1 {
+        font-size: 1.5em;
+      }
+      .text2 {
+        font-size: 3em;
+      }
+    }
+  }
+}
+}
