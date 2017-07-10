@@ -85,7 +85,6 @@ function ChallengeText(props) {
             <li>Exclusive opportunities to interact with world-renowned designer, Don Norman, Director of the Design Lab.</li>
             <li>Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors. </li>
             <li>Meetings with D4SD organizers before and during the Mobility challenge to provide opinions and ideas on matters of challenge design and implementation.</li>
-            <li>Opportunities to showcase your organization at the Design Forward Summit 2017.</li>
             <li>Benefits from Tier 2 and 3 sponsors are included at this level.</li>
           </ul>
         </div>

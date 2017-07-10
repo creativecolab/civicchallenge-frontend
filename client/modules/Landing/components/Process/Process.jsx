@@ -27,13 +27,13 @@ const TIMELINE_ITEMS = [
   },
   {
     image: ideate,
-    months: 'July',
+    months: 'August',
     title: 'Ideate Solutions',
     description: 'Generate many creative solutions to address<br />the key challenges',
   },
   {
     image: propose,
-    months: 'August - September',
+    months: 'September',
     title: 'Prototype Concepts',
     description: 'Form teams and build<br />mockups of solutions',
   },
