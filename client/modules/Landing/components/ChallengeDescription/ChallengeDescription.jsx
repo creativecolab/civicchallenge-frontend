@@ -27,7 +27,7 @@ function ChallengeDescription(props) {
     <section id={styles.ChallengeDescription} ref={props.componentRef}>
       <div className={globalStyles.sectionTitle}>
         <h1>The Challenge</h1>
-        <p>D4SD has partnered with the <a href="http://designlab.ucsd.edu/>">UC San Diego Design Lab</a>, <a href="http://www.designforwardsd.com/">the Design Forward Summit</a>, <a href="http://www.scalesd.com/">SCALE SD</a> to
+        <p>D4SD has partnered with the <a href="http://designlab.ucsd.edu/">UC San Diego Design Lab</a>, <a href="http://www.designforwardsd.com/">the Design Forward Summit</a>, <a href="http://www.scalesd.com/">SCALE SD</a> to
         host an inaugural design challenge to engage San Diego residents in human-centered design. This year’s Civic Challenge focuses on the complex issue of mobility.</p>
         <p>The people of San Diego know the citys treasures and frustrations firsthand and have the passion
         to shape its future. D4SD and Design Forward want to hear from you! This year, for the first time,
