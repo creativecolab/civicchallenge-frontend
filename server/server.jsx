@@ -118,53 +118,7 @@ app.use(lusca({
 }));
 
 // Helmet
-app.use((req, res, next) => {
-  res.locals.nonce = crypto.randomBytes(128).toString('base64'); // eslint-disable-line no-param-reassign
-  next();
-});
-
-const defaultSrc = [
-  '\'self\'',
-  'https://d4sd-api.ucsd.edu',
-];
-
-const scriptSrc = [
-  '\'self\'',
-  'https://www.google-analytics.com',
-  'https://stats.g.doubleclick.net',
-  (req, res) => { return `'nonce-${res.locals.nonce}'`; },
-];
-if (process.env.NODE_ENV !== 'production') {
-  scriptSrc.push('\'unsafe-eval\'');
-}
-
-const styleSrc = [
-  '\'self\'',
-];
-if (process.env.NODE_ENV !== 'production') {
-  styleSrc.push('blob:');
-}
-
-const imgSrc = [
-  '\'self\'',
-  'https://www.google-analytics.com',
-  'https://stats.g.doubleclick.net',
-];
-if (process.env.NODE_ENV !== 'production') {
-  imgSrc.push('data:');
-  imgSrc.push('http://lorempixel.com');
-}
-
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc,
-      scriptSrc,
-      styleSrc,
-      imgSrc,
-    },
-  },
-}));
+app.use(helmet());
 
 
 /**
@@ -187,7 +141,7 @@ app.use(serveStatic(path.join(__dirname, '../public')));
  * Render Initial HTML
  */
 
-const renderFullPage = (initialView, initialState, scriptNonce) => {
+const renderFullPage = (initialView, initialState) => {
   const prod = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging';
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
@@ -212,7 +166,7 @@ window.webpackManifest = ${JSON.stringify(chunkManifest)};
     </head>
     <body>
       <div id="root" data-reactmount>${initialView}</div>
-      <script nonce="${scriptNonce}">${manifestScript}</script>
+      <script>${manifestScript}</script>
       <script defer src="${prod ? assetsManifest['/vendor.js'] : '/vendor.js'}"></script>
       <script defer src="${prod ? assetsManifest['/app.js'] : '/app.js'}"></script>
     </body>
@@ -269,7 +223,7 @@ app.use((req, res, next) => {
         res
           .set('content-type', 'text/html')
           .status(200)
-          .end(renderFullPage(initialView, finalState, res.locals.nonce));
+          .end(renderFullPage(initialView, finalState));
       })
       .catch(fetchErr => next(fetchErr));
   });

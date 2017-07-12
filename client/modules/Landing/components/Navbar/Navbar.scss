@@ -1,5 +1,4 @@
 @import '~styles/variables';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 
 $navbar-height: 50px;
 
@@ -12,13 +11,32 @@ $font-color: #000;
   position: fixed;
   // border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
 
-  width: 98%;
+  width: 100%;
   margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
   margin-bottom: 0;
+
+  z-index: 100000;
+
+  &.post {
+    background-color: white;
+    .registerButton{
+      .buttonContainer {
+        a{
+          color: black;
+        }
+      }
+    }
+
+    .navbar {
+      a {
+        color: black;
+      }
+    }
+  }
 
   .registerButton {
       font-size: 16px;
@@ -46,7 +64,7 @@ $font-color: #000;
           font-size: 14px;
           font-weight: 600;
           color: #fff;
-          font-family: 'Open Sans';
+          font-family: '';
         }
 
         a:hover {
@@ -93,7 +111,7 @@ $font-color: #000;
 
       outline: none;
       cursor: pointer;
-      font-family: 'Open Sans';
+      font-family: 'Muli';
 
 
       text-decoration: none;

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
 import { Link } from 'react-router';
+import withWindowDimensions from 'util/withWindowDimensions';
 import { withProvideRefs } from 'util/RefCollector';
 
 import styles from './Navbar.scss';
@@ -51,6 +52,7 @@ const SCROLL_PX_PER_MS = 1000;
 
 const propTypes = {
   refs: PropTypes.object.isRequired,
+  windowHeight: PropTypes.number.isRequired,
 };
 
 const contextTypes = {
@@ -71,7 +73,43 @@ class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
+    // Set intiail state variable by directly assigning to this.state
+    this.state = {
+      navbarPost: false,
+    };
+
+    // Bind "this" in onWindowScroll to this (the component)
+    this._onWindowScroll = this.onWindowScroll.bind(this);
     this._onNavbarItemClickGenerator = this.onNavbarItemClickGenerator.bind(this);
+  }
+
+  componentDidMount() {
+    // Run _onWindowScroll once to set initial state
+    this._onWindowScroll();
+    // Add _onWindowScroll as an event listener
+    window.addEventListener('scroll', this._onWindowScroll);
+  }
+
+  componentWillUnmount() {
+    // Remove _onWindowScroll as an event listener
+    window.removeEventListener('scroll', this._onWindowScroll);
+  }
+
+  onWindowScroll() {
+    const { windowHeight } = this.props;
+    const { navbarPost } = this.state;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Navbar should be a different color if scroll is past 1/10 of the page height
+    const newNavbarPost = scrollTop > windowHeight / 10;
+
+    // Only set state if there will be a visual difference
+    if (navbarPost !== newNavbarPost) {
+      // Change state using this.setState as opposed to setting this.state directly
+      this.setState({
+        navbarPost: newNavbarPost,
+      });
+    }
   }
 
   onNavbarItemClickGenerator(key) {
@@ -92,8 +130,10 @@ class Navbar extends React.Component {
 
   render() {
     const { router } = this.context;
+    const { navbarPost } = this.state;
+
     return (
-      <div className={styles.navbarContainer}>
+      <div className={navbarPost ? `${styles.navbarContainer} ${styles.post}` : styles.navbarContainer}>
         <div className={styles.logo}>
           <Link to="/"><img className="theLogo" src={d4sdLogo} alt="logo" /></Link>
         </div>
@@ -116,4 +156,4 @@ Navbar.propTypes = propTypes;
 Navbar.contextTypes = contextTypes;
 Navbar.defaultProps = defaultProps;
 
-export default withProvideRefs(Navbar);
+export default withWindowDimensions(withProvideRefs(Navbar));
