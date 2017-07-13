@@ -6,6 +6,8 @@ import Helmet from 'react-helmet';
 
 import Footer from 'components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
+
+import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeText from './components/ChallengeText/ChallengeText';
 import Process from './components/Process/Process';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
@@ -36,6 +38,7 @@ function Landing() {
         title="Home"
       />
       <Navbar />
+      <LandingHeader />
       <ChallengeText />
       <ChallengeGrid />
       <GetInvolved />
