@@ -13,7 +13,7 @@ notifications:
 before_deploy:
 - git config user.email "travis-ci@d4sd.org"
 - git config user.name "Travis CI"
-- git add --force server-dist client-dist # To make sure our built files get deployed
+- git add --force server-dist client-dist
 - git commit -m "BUILD - Add built files"
 deploy:
   provider: elasticbeanstalk
@@ -30,12 +30,6 @@ deploy:
   on:
     branch: dev
     repo: creativecolab/civicchallenge-frontend
-deploy:
   provider: heroku
   api_key:
-    secure: K49rkVlo6Wxr50UaTDHMRhQkFENRFsmHSA5dBuOgkQ1a/le+ChcmwL3KNCOWVdyCfFuj0Y/Mqhp9/7u2SOOOjGsBuMZLHMH2VCCmjRoHfUk4hW1thU7qmON6oQDDBIuxgUzECCfNFkk0fH5C4xhvFAdR2EEc8Vs1uhK774PR+BCx/DBS1knQ+RId6ybKrg87XetBr7eBJJxD0X9AW7MQ1RsY7DSF+hVbJ9UoTQSdVZJIL6FsLmy30CnNNSmbCYNzTBv0gkNh23PWbnWsPrtfftk+J4NwDo4l4hx0tgdHqHw6dRI80gYelrkW4P+MnBld6FHL6X/3Uc1jmx8+AKIUUF+YZvA/brVnlXiBHP+63r/miPp5Zdr+PYB83ZpWGz6G2zvygKDm/Nv9zydHrGwLTTuKBgG7GTfRYvLoBZ9GYIYdH6DZr50sYiSzOdt/+MvCRuh0qH3E+izWlIEYQEM7N6T481LKf2WSEBN+cxZPFCgjttKnhrnD44ldH0xILVMrNu16rvMmWB7H6/oPXDbJIvAHBOOmuefHW0ri0JUInqaQl3TKbL29iJKfHtfBmwJG/50OpLbNvr8AAYdYESLvi9FrYhtUloQOm1M1Ilmlm6gg3QDTPLmjpBmZWoNyxCZbzAaAvql0JuoHBFalTab1Is2j/ceML1/9KQwVD02FtN8=
-  app: d4sd-staging-3
-  on:
-    repo: creativecolab/civicchallenge-frontend
-    branch: yml
-
+    secure: ga1dZjc/mumB8Wi+ReotjHJcdoLx4zks501+i2e5oPDZVYoXI+sgWRiDDpef/NsBJuKYVI/Lr9LZNO/89ip2VW5bwVwUcReE6xkiw9crkhe5rWHFMlDxYfY0FP2Go5b2FiMVsys9FaQNliGsD4APtWQFfXzKwBAmjuXWPSw/iTIYzFHs+MEv70yNJuZJE7grliNK5CKGd/nFglvkhVrxfbG/OAtZYeF5D44YEi9FmjII7Daa7wO38536KMmfm0oClnpbmE75RYiLDPo//rV3HQ7ZyOS/bf2tAGhWz7c+PaE+yfpNXRagTi+8DIEktchN3YKeq8BWYFk+3qGD2MbPrwKChxls/DqZvsXR7IQ4Wob/2Cos3Eqq4h9C6TjHvUYnlh9pU18kk7SD09qXXTjXapLy3iqbWQHhRt8ep3qkvAobQI1IBq4uAh5VzGwuCa4YIXD6YG0BYwAxL48ynp7ukoOKrQKH712EHpw4in0SeFF9bmn7Gf9R34BoKhuhUg2tEBoqd6pOXzu/tGDkV3BkVKu+3vPjlhrNfsmcLQDtZRLD3qazHZ56/NjaaUgCYeYpStCNEAVLHejQJELkTogTcyrMSQowpcLk3FmalhSseWWip2RJleiSHvfeGba2jiW3hRhVCWQeaGgSks7e7KrBvXMcdGGqGQiTPw2qfIWA7sk=
