@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { withProvideRefs } from 'util/RefCollector';
+import d4sdLogo from './logo_white.png';
 
 import styles from './Navbar.scss';
 
@@ -104,7 +105,7 @@ class Navbar extends React.Component {
     return (
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
-          <Link to="/">D4SD</Link>
+          <Link to="/"><img src={d4sdLogo} alt="D4SD" /></Link>
         </div>
         <nav className={styles.navbar}>
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>

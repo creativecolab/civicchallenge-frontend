@@ -15,6 +15,10 @@ $font-color: #fff;
   background-color: rgb(36, 72, 124);
 
   .logo {
+    img {
+      width: 80px;
+    }
+    padding: 10px 20px;
   }
 
   .navbar {
