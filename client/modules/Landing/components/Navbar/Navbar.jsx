@@ -8,6 +8,7 @@ import { withProvideRefs } from 'util/RefCollector';
 import styles from './Navbar.scss';
 
 import d4sdLogo from './logo_white.png';
+import d4sdLogoBlack from './logo_black.png';
 
 let TweenLite = {};
 if (process.env.browser) {
@@ -135,7 +136,7 @@ class Navbar extends React.Component {
     return (
       <div className={navbarPost ? `${styles.navbarContainer} ${styles.post}` : styles.navbarContainer}>
         <div className={styles.logo}>
-          <Link to="/"><img className="theLogo" src={d4sdLogo} alt="logo" /></Link>
+          <Link to="/"><img className="theLogo" src={navbarPost ? d4sdLogoBlack : d4sdLogo} alt="logo" /></Link>
         </div>
         <nav className={styles.navbar}>
           {LINKS.filter(({ href }) => href !== router.location.pathname).map(({ href, text }) =>
