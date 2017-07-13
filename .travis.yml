@@ -23,7 +23,7 @@ deploy:
     secure: Ja71DfX2C7Zb/cqMX7Dq5KILeiHUC9U4tH3Hr2xuIXulhkkVC9Ib5IJUiYS9vppX+xEugNTKBCq4p52qg79z9ukD5GnufK88Etvlb7QtAPrtqWQlaBl9J1EuXahQcKJuixFThUJlmj2HcotcLAIk7Sk6Vlp7gP3eZR8DWa7VSZXLOfqn/u3O87Qv0VfmdKR7O+CWjcyNOQsXAcNWfEGQhT2YrSEtzwjKMDjJuhofnz6FMj0wwc7BZ+mP86KA5hfy3DjPNU4Ue47TEILy6KJxy2RPvnLvNhCSYBoapfA93tXamQbjlxWI5DcQklrjAjU3Blyb19ffwd8MwGCnC8ZmwFmG5AUzf9xkMHqnT5QuC9gEFlw0pDB+IgLq9M0sqyBQv4fBJWIBFbsygh2rrHY0nj3NOTS8VDDkpk4O/+9h/4NRb72/oI6WHVOyb19HE4/kmb8grEgMbS3kuVg9zF42sAso1kvvEmOtDySrw3UGJpX34DEELwJlPjSyvbXltmxYGYQRb308Ahyf8kCN6NJqP9PhvcZ8knSr8Trb74zgsyGkj83hQz/nGRD4Hb6CHT0hUqTjspEQzCBb/j4ED15psnvV4srDCgH+UJ9+G1+MQmREtNt48yeLgJZW772Lqwhr6jb1ZoJkFNKvpSG7LPJFhqKsd7OdGA3hZtGCM39099w=
   region: us-west-2
   app: d4sd-frontend
-  env: d4sd-fe-staging
+  env: d4sd-frontend-staging
   bucket_name: elasticbeanstalk-us-west-2-709500077301
   bucket_path: d4sd-frontend/staging
   skip_cleanup: true
