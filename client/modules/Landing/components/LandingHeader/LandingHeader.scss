@@ -1,18 +1,20 @@
 @import '~styles/variables';
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
 
-
 $component-spacing: 3em;
 $header-fcolor: rgb(255, 255, 255);
 
 #headerBackground {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-  height: 75%;
-  //background-color: #5eb7f2;
-  background-image: url("./header-img.png");
-  background-size: 100% 100%;
+  margin: $component-vertical-margin auto;
+  margin-bottom: $component-vertical-margin;
+  padding-top: 20px;
+  .description {
+    padding: 0;
+    margin-bottom: 4em;
+    p {
+      font-size: 0.9em;
+    }
+  }
 
     .main {
       $font-size: 1.5em;
@@ -20,65 +22,63 @@ $header-fcolor: rgb(255, 255, 255);
       font-weight: normal;
 
       .mainContent {
-        padding: 150px;
 
-        .text2 { // "Mobility"
-          //font-size: 3.8 * $font-size;
-          font-size: 120px;
-          font-weight: 550;
-          padding: 10px;
-          margin:0;
-          line-height: 1em;
-          color: $header-fcolor;
-        }
+      .text1 {
+        font-size: 1.4 * $font-size;
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+      }
 
-        .text3 { // "Build design..." 
-          font-size: 18px;
-          padding: 10px 0;
-          margin:0;
-          color: $header-fcolor;
-          font-family: Avenir;
-        }
+      .text2 {
+        font-size: 3.8 * $font-size;
+        font-weight: bold;
+        padding: 15px 0 0 0;
+        margin:0;
+        line-height: 1em;
+        text-transform: uppercase;
 
-        .text4 { // "Design for San..."
-          font-size: 24px;
-          font-weight: 300;
-          margin:0;
-          color: $header-fcolor;
-        }
+        color: rgb(117, 158, 211);
+      }
 
-        .button {
-          margin: 20px;
-          font-size: 16px;
+      .text3 {
+        font-size: .9 * $font-size;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+      }
 
-          .buttonContainer {
-            display: flex;
-            justify-content: center;
+      .button {
+        margin: 20px;
+        font-size: 16px;
+
+        .buttonContainer {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+
+          a {
             margin: 0;
-            padding: 0;
+            border: none;
+            border-radius: 30px;
+            padding: 0.8em 1.5em;
 
-            a {
-              margin: 0;
-              border: none;
-              padding: 1.2em 3.2em;
+            display: inline-block;
+            cursor: pointer;
 
-              display: inline-block;
-              cursor: pointer;
-              
-              background-color: #FC6464;
-              text-decoration: none;
-              text-transform: uppercase;
-              font-size: 14px;
-              font-family: Avenir;
-              font-weight: 600;
-              color: #fff;
-            }
+            background-color: #24487c;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+          }
 
-            a:hover {
-              background-color: #d84949;
-            }
+          a:hover {
+            background-color: #2d324d;
           }
         }
+      }
       }
     }
 
