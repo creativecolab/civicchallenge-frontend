@@ -33,3 +33,7 @@ deploy:
   provider: heroku
   api_key:
     secure: ga1dZjc/mumB8Wi+ReotjHJcdoLx4zks501+i2e5oPDZVYoXI+sgWRiDDpef/NsBJuKYVI/Lr9LZNO/89ip2VW5bwVwUcReE6xkiw9crkhe5rWHFMlDxYfY0FP2Go5b2FiMVsys9FaQNliGsD4APtWQFfXzKwBAmjuXWPSw/iTIYzFHs+MEv70yNJuZJE7grliNK5CKGd/nFglvkhVrxfbG/OAtZYeF5D44YEi9FmjII7Daa7wO38536KMmfm0oClnpbmE75RYiLDPo//rV3HQ7ZyOS/bf2tAGhWz7c+PaE+yfpNXRagTi+8DIEktchN3YKeq8BWYFk+3qGD2MbPrwKChxls/DqZvsXR7IQ4Wob/2Cos3Eqq4h9C6TjHvUYnlh9pU18kk7SD09qXXTjXapLy3iqbWQHhRt8ep3qkvAobQI1IBq4uAh5VzGwuCa4YIXD6YG0BYwAxL48ynp7ukoOKrQKH712EHpw4in0SeFF9bmn7Gf9R34BoKhuhUg2tEBoqd6pOXzu/tGDkV3BkVKu+3vPjlhrNfsmcLQDtZRLD3qazHZ56/NjaaUgCYeYpStCNEAVLHejQJELkTogTcyrMSQowpcLk3FmalhSseWWip2RJleiSHvfeGba2jiW3hRhVCWQeaGgSks7e7KrBvXMcdGGqGQiTPw2qfIWA7sk=
+  app: d4sd-staging-3
+  on: 
+    branch: yml
+    repo: creativecolab/civicchallenge-frontend
