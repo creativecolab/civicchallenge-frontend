@@ -8,7 +8,10 @@ import styles from './DBBox.scss';
  * DBBox
  */
 
-const propTypes = {};
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -16,19 +19,17 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function DBBox() {
+function DBBox({ title, desc }) {
   return (
-    <section className={styles.DBBox}>
-      <div className={styles.dbBoxImg}>
-        <span>Theme Name</span>
-      </div>
-      <div className={styles.dbBoxText} >
-        <p>The lack of convenient, accessible, and affordable transportation for citizens witha  disability
-        is a major problem in SD. Programs exist yet challenges persist around infrastructure and transit
-        deficient areas.</p>
-        <a href="/designbrief">Learn More</a>
-      </div>
-
+    <section className={styles.sectionWrapper}>
+      <section className={styles.DBBox}>
+        <div className={styles.dbBoxImg}>
+          <span>{title}</span>
+        </div>
+        <div className={styles.dbBoxText} >
+          <p>{desc}</p>
+        </div>
+      </section>
     </section>
   );
 }
