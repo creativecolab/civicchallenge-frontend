@@ -44,7 +44,7 @@ const DESIGN_BRIEFS = [
   },
   {
     id: '',
-    name: 'Balancing/Understanding Parking Demand',
+    name: 'Balancing Parking Demand',
     summary: 'In a city with over 2.2 million personal vehicles, parking is a widespread problem. As the population increases more cars join the road each year, better systems are needed to manage and plan for new parking infrastructure. How might we help drivers and planners navigate the challenge of parking in San Diego?',
     thumbnail: parking,
   },
@@ -65,12 +65,6 @@ const DESIGN_BRIEFS = [
     name: 'Accommodating Aging',
     summary: 'Mobility for seniors is not only about getting around, it is also about physical and social well-being. Seniors who are physically active and able to get around independently have greater flexibility, muscle strength, balance, and bone density---all of which help them recover more rapidly from illness and injuries, and live longer, healthier lives. What transportation services or initiatives might we imagine for our cities senior residents?',
     thumbnail: aging,
-  },
-  {
-    id: '',
-    name: 'Balancing Parking Demand',
-    summary: 'The lack of convenient, accessible, and affordable transportation for citizens with a disability is a major problem in San Diego. Programs exist yet challenges persist around infrastructure and transit deficient areas. How might we help those with a disability, who may also lack technology and a voice in the community, communicate their mobility challenges and gain independence?',
-    thumbnail: parking,
   },
 ];
 
