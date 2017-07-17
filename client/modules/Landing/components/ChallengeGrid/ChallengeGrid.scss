@@ -72,7 +72,7 @@ $component-spacing: 3em;
     }
 
     .challenge {
-      $max-split: 5;
+      $max-split: 4;
       $split: 400px;
 
       width: (1 / $max-split) * 100%;
@@ -92,7 +92,7 @@ $component-spacing: 3em;
       font-size: 0;
 
       &.placeholder {
-        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+        background: $theme-color-blue;
       }
 
       &.moresoon {
