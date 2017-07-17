@@ -70,7 +70,7 @@ const CHALLENGES = [
   },
   {
     id: '',
-    name: 'Balancing/Understanding Parking Demand',
+    name: 'Understanding Parking Demand',
     summary: 'The lack of convenient, accessible, and affordable transportation for citizens with a disability is a major problem in San Diego. Programs exist yet challenges persist around infrastructure and transit deficient areas. How might we help those with a disability, who may also lack technology and a voice in the community, communicate their mobility challenges and gain independence?',
     thumbnail: parking,
   },
