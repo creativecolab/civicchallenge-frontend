@@ -30,6 +30,21 @@ $button-size: 0.7em;
         font-size: $p-text;
       }
 
+      ol {
+        text-align: left;
+        font-size: 14px;
+        padding-top: 20px;
+      }
+
+      .list {
+        text-align: left;
+      }
+
+      .details {
+        text-align: left;
+        padding-top: 30px;
+      }
+
       .sectionBtn {
 
         margin: 40px 0;

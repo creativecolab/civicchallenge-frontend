@@ -7,10 +7,34 @@ import { withCollectRef } from 'util/RefCollector';
 import globalStyles from 'main.scss';
 import styles from './WhyParticipate.scss';
 
+import learnAndPractice from './learn-and-practice.png';
+import fame from './fame.png';
+import winPrizes from './win-prizes.png';
 
 /**
  * Get Involved
  */
+
+const PARTICIPATE = [
+  {
+    title: 'Learn and Practice Design',
+    img: learnAndPractice,
+    alt: 'Learn and Practice Icon',
+    desc: 'Are you new to human-centered design? The Mobility challenges provide a great opportunity to practice design on real-world problems and to get mentorship from domain experts.  Teams that submit eligible prototypes will receive free admission to the Design Forward Summit in October.',
+  },
+  {
+    title: '15 Minutes of Fame',
+    img: fame,
+    alt: '15 Minutes Icon',
+    desc: 'Want to share your solution with civic and business leaders in San Diego? We will post all qualifying submissions on our website and showcase finalists at the Design Forward Summit, an event committed to strengthening our community through human-centered design.',
+  },
+  {
+    title: 'Win Prizes',
+    img: winPrizes,
+    alt: 'Win Prizes Icon',
+    desc: 'Through our generous sponsors and connections, we are proud to offer a wide range of support for the prototypes with the most potential to improve the experience of mobility in our city. This support is in cash prizes and opportunities to rub elbows with influential city leaders, venture capitalists, and technologists as well as access to cutting edge design resources. More information coming soon.',
+  },
+];
 
 const propTypes = {
   componentRef: PropTypes.func.isRequired,
@@ -36,36 +60,19 @@ function WhyParticipate(props) {
         </div>
       </div>
       <div className={styles.contentContainer}>
-        <div className={styles.contentElement}>
-          <div className={styles.imgCont}>
-            <div className={styles.contentImg} />
+        {PARTICIPATE.map(({ title, img, alt, desc }) => (
+          <div className={styles.contentElement}>
+            <div className={styles.imgCont}>
+              <div className={styles.contentImg}>
+                <img src={img} alt={alt} />
+              </div>
+            </div>
+            <div className={styles.contentText}>
+              <h4>{title}</h4>
+              <p>{desc}</p>
+            </div>
           </div>
-          <div className={styles.contentText}>
-            <h4>Learn Design</h4>
-            <p>Build an understand of the design thinking process by discussing it with
-            your peers and putting it to use</p>
-          </div>
-        </div>
-        <div className={styles.contentElement}>
-          <div className={styles.imgCont}>
-            <div className={styles.contentImg} />
-          </div>
-          <div className={styles.contentText}>
-            <h4>15 Minutes of Fame</h4>
-            <p>We will post all qualitfying submission on our website. The finalists
-            will be showcased at the Design Forward Summit.</p>
-          </div>
-        </div>
-        <div className={styles.contentElement}>
-          <div className={styles.imgCont}>
-            <div className={styles.contentImg} />
-          </div>
-          <div className={styles.contentText}>
-            <h4>Win Prizes</h4>
-            <p>Earn cash or have the opportunity to meet with public and private leaders
-            Check back soon for the official prizes.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
