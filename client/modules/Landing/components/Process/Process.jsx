@@ -22,25 +22,25 @@ const TIMELINE_ITEMS = [
   {
     image: diagnose,
     months: 'July',
-    title: 'Discover Issues',
+    title: 'Discover',
     description: 'Identify citizens’ needs then frame the most significant challenges around mobility<br />in San Diego',
   },
   {
     image: ideate,
     months: 'July',
-    title: 'Ideate Solutions',
+    title: 'Ideate',
     description: 'Generate many creative solutions to address<br />the key challenges',
   },
   {
     image: propose,
     months: 'August - September',
-    title: 'Prototype Concepts',
+    title: 'Prototype',
     description: 'Form teams and build<br />mockups of solutions',
   },
   {
     image: implement,
     months: 'October - onward!',
-    title: 'Take Action',
+    title: 'Implement',
     description: 'Submit solutions for<br />judging by civic leaders<br />and experts',
   },
 ];

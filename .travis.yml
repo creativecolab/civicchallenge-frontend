@@ -44,3 +44,4 @@ deploy:
   on:
     branch: master
     repo: creativecolab/civicchallenge-frontend
+

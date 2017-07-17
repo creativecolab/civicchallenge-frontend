@@ -21,27 +21,27 @@ import implement from './implement.svg';
 const TIMELINE_ITEMS = [
   {
     image: diagnose,
-    months: 'July',
-    title: 'Discover Issues',
+    months: '',
+    title: 'Discover',
     description: 'Identify citizens’ needs then frame the most significant challenges around mobility<br />in San Diego',
   },
   {
     image: ideate,
-    months: 'July',
-    title: 'Ideate Solutions',
+    months: '',
+    title: 'Ideate',
     description: 'Generate many creative solutions to address<br />the key challenges',
   },
   {
     image: propose,
-    months: 'August - September',
-    title: 'Prototype Concepts',
+    months: '',
+    title: 'Prototype',
     description: 'Form teams and build<br />mockups of solutions',
   },
   {
     image: implement,
-    months: 'October - onward!',
-    title: 'Take Action',
-    description: 'Submit solutions for<br />judging by civic leaders<br />and experts',
+    months: '',
+    title: 'Implement',
+    description: 'Submit solutions for<br />judging by civic leaders<br />and business investors',
   },
 ];
 
