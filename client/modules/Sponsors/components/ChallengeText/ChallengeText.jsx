@@ -53,13 +53,7 @@ function ChallengeText(props) {
   return (
     <section id={styles.challengeText} ref={props.componentRef}>
       <div id="sponsor-description" className={styles.sectionTitle}>
-        <h3>What Our Sponsors Do</h3>
-        <p>D4SD sponsors are committed to advancing innovation concepts aimed to improve Mobility
-        for the millions of residents in the San Diego region. Sponsorship may come in many forms.
-        In-kind sponsors can commit access to training and human resources, studio space, or technology.
-        Financial sponsorship will help provide incentives for challenge competitions and hackathons planned
-        throughout the Mobility challenge. Sponsorship will allow D4SD to offer design teams cash awards
-        for the best designs for improving Mobility in our city.</p>
+        <h2>Benefits</h2>
       </div>
       {SPONSOR_INFO.map(({ title, benefits }) => (
         <div className={styles.tierBlock}>
@@ -72,9 +66,10 @@ function ChallengeText(props) {
         </div>
       ))}
       <div className={styles.sponsorCallout}>
-        <h3>Interested in Becoming a Sponsor?</h3>
+        <h2>Support Us Now</h2>
+        <p>Contact our team to learn more about how you or your organization could contribute to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
         <div className={styles.sponsorBtn}>
-          <a className={styles.salmon} href="mailto:team@d4sd.org">SPONSOR US</a>
+          <a className={styles.salmon} href="mailto:team@d4sd.org">BECOME A SPONSOR NOW</a>
         </div>
       </div>
 

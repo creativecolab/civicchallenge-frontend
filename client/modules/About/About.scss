@@ -45,6 +45,11 @@ $img-width: 700px;
         margin: 0 auto;
 
         background-color: $theme-color-lightgrey;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
       }
 
     }

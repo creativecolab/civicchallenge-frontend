@@ -17,6 +17,18 @@ $component-spacing: 3em;
   }
 }
 
+.sectionTitle {
+  width: 60%; 
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0;
+  h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+}
 .sponsors {
   text-align: center;
   width: 60%;

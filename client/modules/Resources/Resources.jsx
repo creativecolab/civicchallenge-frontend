@@ -37,14 +37,14 @@ function Resources() {
       <section className={styles.content}>
         <div className={styles.boxRow}>
           <ResourceBox
-            resourceName="The Process"
+            resourceName="Design Tools and Tips"
             resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam."
             resourceLink=""
           />
           <ResourceBox
-            resourceName="Challenge FAQ"
+            resourceName="News About Mobility Solutions"
             resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam"
-            resourceLink="/faq"
+            resourceLink=""
           />
           <ResourceBox
             resourceName="Slack FAQ"

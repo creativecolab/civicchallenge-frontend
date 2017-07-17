@@ -17,10 +17,6 @@ const LINKS = [
     text: 'How It Works',
   },
   {
-    href: '/challenges',
-    text: 'Design Briefs',
-  },
-  {
     href: '/resources',
     text: 'Resources',
   },

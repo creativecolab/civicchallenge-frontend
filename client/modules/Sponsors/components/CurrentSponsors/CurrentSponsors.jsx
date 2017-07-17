@@ -64,8 +64,16 @@ const defaultProps = {};
 function CurrentSponsors() {
   return (
     <div>
+      <div id="sponsor-description" className={styles.sectionTitle}>
+        <p>D4SD sponsors are committed to advancing innovation concepts aimed to improve Mobility
+        for the millions of residents in the San Diego region. Sponsorship may come in many forms.
+        In-kind sponsors can commit access to training and human resources, studio space, or technology.
+        Financial sponsorship will help provide incentives for challenge competitions and hackathons planned
+        throughout the Mobility challenge. Sponsorship will allow D4SD to offer design teams cash awards
+        for the best designs for improving Mobility in our city.</p>
+      </div>
       <div className={styles.current}>
-        <h3 className={styles.sectionTitle}>Current Sponsors</h3>
+        <h2 className={styles.sectionTitle}>Current Sponsors</h2>
       </div>
       <div className={styles.sponsors}>
         <h4>Tier 1</h4>
