@@ -34,6 +34,12 @@ const CHALLENGES = [
   },
   {
     id: '',
+    name: 'Accommodating Aging',
+    summary: 'Mobility for seniors is not only about getting around, it is also about physical and social well-being. Seniors who are physically active and able to get around independently have greater flexibility, muscle strength, balance, and bone density---all of which help them recover more rapidly from illness and injuries, and live longer, healthier lives. What transportation services or initiatives might we imagine for our cities senior residents?',
+    thumbnail: aging,
+  },
+  {
+    id: '',
     name: 'Mitigating Traffic',
     summary: 'Residents of San Diego deal with congested freeways every day---northbound in the morning, and even slower southbound in the evening. Why is it this way? Could we make changes to the infrastructure, traffic behavior, or policy-wise to reduce our dependence on cars? Our dependence on cars is not only bad for traffic and congestion, but also our health and the environment.',
     thumbnail: traffic,
@@ -61,12 +67,6 @@ const CHALLENGES = [
     name: 'Improving Accessibility',
     summary: 'People with disabilities face unique challenges when getting around the city. The lack of convenient, accessible, and affordable mobility for disabled people is a major problem in San Diego: How might we imagine improving access to our community for people with disabilities?',
     thumbnail: accessibility,
-  },
-  {
-    id: '',
-    name: 'Accommodating Aging',
-    summary: 'Mobility for seniors is not only about getting around, it is also about physical and social well-being. Seniors who are physically active and able to get around independently have greater flexibility, muscle strength, balance, and bone density---all of which help them recover more rapidly from illness and injuries, and live longer, healthier lives. What transportation services or initiatives might we imagine for our cities senior residents?',
-    thumbnail: aging,
   },
 ];
 

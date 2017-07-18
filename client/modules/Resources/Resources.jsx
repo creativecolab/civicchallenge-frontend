@@ -47,7 +47,7 @@ function Resources() {
             resourceLink=""
           />
           <ResourceBox
-            resourceName="Slack FAQ"
+            resourceName="FAQ"
             resourceText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam"
             resourceLink="/faq"
           />
