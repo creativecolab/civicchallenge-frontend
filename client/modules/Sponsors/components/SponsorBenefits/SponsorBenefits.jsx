@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './ChallengeText.scss';
+import styles from './SponsorBenefits.scss';
 
 
 /**
@@ -49,9 +49,9 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ChallengeText(props) {
+function SponsorBenefits(props) {
   return (
-    <section id={styles.challengeText} ref={props.componentRef}>
+    <section id={styles.SponsorBenefits} ref={props.componentRef}>
       <div id="sponsor-description" className={styles.sectionTitle}>
         <h2>Benefits</h2>
       </div>
@@ -77,8 +77,8 @@ function ChallengeText(props) {
   );
 }
 
-ChallengeText.propTypes = propTypes;
-ChallengeText.contextTypes = contextTypes;
-ChallengeText.defaultProps = defaultProps;
+SponsorBenefits.propTypes = propTypes;
+SponsorBenefits.contextTypes = contextTypes;
+SponsorBenefits.defaultProps = defaultProps;
 
-export default ChallengeText;
+export default SponsorBenefits;

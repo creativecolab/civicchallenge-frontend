@@ -4,10 +4,10 @@ $call-to-action-bckground: #ededed;
 
 $button-size: 0.7em;
 
-#challengeText {
+#SponsorBenefits {
   margin: $component-vertical-margin auto;
+  width: $component-width-desktop;
 
-  width: 60%;
   margin: 0 auto;
   .sectionTitle {
     text-align: center;
@@ -65,13 +65,13 @@ $button-size: 0.7em;
 }
 
 @media (min-width: $desktop-min-width) {
-  #sponsors {
+  #SponsorBenefits {
     width: $component-width-desktop;
   }
 }
 
   @media (max-width: $mobile-max-width) {
-  #sponsors {
+  #SponsorBenefits {
     width: $component-width-mobile;
 
   }
