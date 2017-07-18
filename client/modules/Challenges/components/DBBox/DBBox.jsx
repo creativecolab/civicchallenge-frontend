@@ -11,6 +11,7 @@ import styles from './DBBox.scss';
 const propTypes = {
   title: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -19,12 +20,14 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function DBBox({ title, desc }) {
+function DBBox({ title, desc, thumbnail }) {
   return (
     <section className={styles.sectionWrapper}>
       <section className={styles.DBBox}>
         <div className={styles.dbBoxImg}>
+          <div className={styles.blackBox} />
           <span>{title}</span>
+          <img src={thumbnail} alt={title} />
         </div>
         <div className={styles.dbBoxText} >
           <p>{desc}</p>

@@ -106,10 +106,11 @@ class Challenges extends Component {
         />
         <Info />
         <div className={styles.DBBoxGrid}>
-          {DESIGN_BRIEFS.map(({ name, summary }) => (
+          {DESIGN_BRIEFS.map(({ name, summary, thumbnail }) => (
             <DBBox
               title={name}
               desc={summary}
+              thumbnail={thumbnail}
             />
           ))}
         </div>

@@ -1,6 +1,7 @@
 @import '~styles/variables';
 
-$imgBox-dim: 200px;
+$stroke-size: 1px;
+$imgBox-dim: 200px + ($stroke-size * 2);
 $box-width-desktop: 500px;
 
 $button-size: 0.7em;
@@ -28,14 +29,29 @@ $button-size: 0.7em;
       justify-content: center;
       align-items: center;
 
-      background-color: $theme-color-lightgrey;
+      .blackBox {
+        height: $imgBox-dim;
+        width: $imgBox-dim;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        position: absolute;
+
+      }
 
       span {
         color: white;
         font-weight: bold;
 
         display: flex;
-        text-align: center;
+        justify-content: center;
+        position: absolute;
+        width: $imgBox-dim - ($imgBox-dim * 0.1);
+
+      }
+
+      img {
+        height: $imgBox-dim;
+        width: $imgBox-dim;
       }
     }
 
