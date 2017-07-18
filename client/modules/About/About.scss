@@ -65,7 +65,7 @@ $img-width: 700px;
   }
 }
 
-  @media (max-width: $mobile-max-width) {
+@media (max-width: $mobile-max-width) {
   .about {
     .contentText {
       width: $component-width-mobile;

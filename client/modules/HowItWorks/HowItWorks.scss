@@ -14,7 +14,7 @@ $button-size: 0.7em;
 	width: 100%;
 
 	.contentText {
-    width: $container-width;
+    width: $component-width-desktop;
     margin: 0 auto;
 
     .contentContainer {
@@ -81,4 +81,28 @@ $button-size: 0.7em;
     }
   }
 
+}
+
+@media (min-width: $desktop-min-width) {
+  .HowItWorks {
+    .contentText {
+      width: $component-width-desktop;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .about {
+    .contentText {
+      width: $component-width-mobile;
+
+      .contentContainer {
+        .fullWidthImg {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+
+  }
 }
