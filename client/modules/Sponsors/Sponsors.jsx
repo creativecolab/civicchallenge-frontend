@@ -34,8 +34,10 @@ function Sponsors() {
         subheaderText={''}
         showButton={false}
       />
-      <CurrentSponsors />
-      <SponsorBenefits />
+      <div className={styles.contentWrapper}>
+        <CurrentSponsors />
+        <SponsorBenefits />
+      </div>
       <Footer />
     </div>
   );

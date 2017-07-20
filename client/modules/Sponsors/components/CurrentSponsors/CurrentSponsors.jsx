@@ -64,7 +64,7 @@ const defaultProps = {};
 function CurrentSponsors() {
   return (
     <div>
-      <div id="sponsor-description" className={styles.sectionTitle}>
+      <div id="sponsor-description" className={styles.contentContainer}>
         <p>D4SD sponsors are committed to advancing innovation concepts aimed to improve Mobility
         for the millions of residents in the San Diego region. Sponsorship may come in many forms.
         In-kind sponsors can commit access to training and human resources, studio space, or technology.
@@ -72,38 +72,38 @@ function CurrentSponsors() {
         throughout the Mobility challenge. Sponsorship will allow D4SD to offer design teams cash awards
         for the best designs for improving Mobility in our city.</p>
       </div>
-      <div className={styles.current}>
-        <h2 className={styles.sectionTitle}>Current Sponsors</h2>
-      </div>
-      <div className={styles.sponsors}>
-        <h4>Tier 1</h4>
-        <div className={styles.sponsorContainer}>
-          <div className={styles.sponsorList}>
-            {T1_SPONSORS.map(({ href, img, alt }) => (
-              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-                <img className={styles.backgroundFill} src={img} alt={alt} />
-              </a>
-            ))}
+      <div className={styles.contentContainer}>
+        <h2>Current Sponsors</h2>
+        <div className={styles.sponsors}>
+          <h3>Tier 1</h3>
+          <div className={styles.sponsorContainer}>
+            <div className={styles.sponsorList}>
+              {T1_SPONSORS.map(({ href, img, alt }) => (
+                <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                  <img className={styles.backgroundFill} src={img} alt={alt} />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-        <h4>Tier 3</h4>
-        <div className={styles.sponsorContainer}>
-          <div className={styles.sponsorList}>
-            {T3_SPONSORS.map(({ href, img, alt }) => (
-              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-                <img className={styles.backgroundFill} src={img} alt={alt} />
-              </a>
-            ))}
+          <h3>Tier 3</h3>
+          <div className={styles.sponsorContainer}>
+            <div className={styles.sponsorList}>
+              {T3_SPONSORS.map(({ href, img, alt }) => (
+                <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                  <img className={styles.backgroundFill} src={img} alt={alt} />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-        <h4>Partners</h4>
-        <div className={styles.sponsorContainer}>
-          <div className={styles.sponsorList}>
-            {PARTNERS.map(({ href, img, alt }) => (
-              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-                <img className={styles.backgroundFill} src={img} alt={alt} />
-              </a>
-            ))}
+          <h3>Partners</h3>
+          <div className={styles.sponsorContainer}>
+            <div className={styles.sponsorList}>
+              {PARTNERS.map(({ href, img, alt }) => (
+                <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                  <img className={styles.backgroundFill} src={img} alt={alt} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>

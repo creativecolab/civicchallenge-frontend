@@ -18,10 +18,7 @@ $component-spacing: 3em;
 }
 
 .sectionTitle {
-  width: 60%; 
-  margin: 0 auto;
   text-align: center;
-  padding: 60px 0;
   h3 {
     font-size: 1.2em;
   }
@@ -29,9 +26,9 @@ $component-spacing: 3em;
     font-size: 0.9em;
   }
 }
+
 .sponsors {
   text-align: center;
-  width: 60%;
   max-height: 50%;
   vertical-align: middle;
   margin: auto;
@@ -39,7 +36,6 @@ $component-spacing: 3em;
   h4 {
     color: $theme-color-lightgrey;
     text-transform: uppercase;
-    padding-top: 20px;
     margin: 0;
   }
 

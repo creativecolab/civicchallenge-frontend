@@ -24,7 +24,7 @@ const defaultProps = {};
 
 function About() {
   return (
-    <div className={styles.about}>
+    <section className={styles.about}>
       <Helmet
         title="About"
       />
@@ -34,7 +34,7 @@ function About() {
         subheaderText={''}
         showButton={false}
       />
-      <div className={styles.contentText}>
+      <div className={styles.contentWrapper}>
         <div id="whatWeDo" className={styles.contentContainer}>
           <h2>Mission</h2>
           <p>Design for San Diego is a non-profit organization that engages San Diegans in the process
@@ -42,7 +42,7 @@ function About() {
           opportunities for government, academia, and industry to collaboratively design innovative
           civic solutions.</p>
         </div>
-        <div id="whatWeDo" className={styles.contentContainer}>
+        <div id="ourTeam" className={styles.contentContainer}>
           <h2>Our Team</h2>
           <div id="imgPlaceholder" className={styles.fullWidthImg}>
             <img src={team} alt="team" />
@@ -51,7 +51,7 @@ function About() {
         </div>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 }
 
