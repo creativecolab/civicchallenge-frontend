@@ -16,12 +16,6 @@ $img-width: 700px;
 	height: 100%;
 	width: 100%;
 
-	.contentWrapper {
-    width: $component-width-desktop;
-    margin: 0 auto;
-
-  }
-
   .fullWidthImg {
     height: $img-height;
     width: $img-width;
@@ -36,25 +30,6 @@ $img-width: 700px;
 
 }
 
-.contentContainer {
-  text-align: center;
-
-  margin: $space-between 0;
-
-  h2 { 
-    padding: 20px 0;
-    font-size: $h2-text;
-  }
-
-  p {
-    font-size: $p-text;
-  }
-
-  span {
-    width: $img-width;
-  }
-
-}
 
 @media (min-width: $desktop-min-width) {
   .about {
@@ -66,14 +41,9 @@ $img-width: 700px;
 
 @media (max-width: $mobile-max-width) {
   .about {
-    .contentText {
-      width: $component-width-mobile;
-    }
-
     .fullWidthImg {
       width: 90%;
       height: auto;
     }
-
   }
 }

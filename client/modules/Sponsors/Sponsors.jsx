@@ -4,9 +4,11 @@ import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+
+import globalStyles from 'main.scss';
+
 import CurrentSponsors from './components/CurrentSponsors/CurrentSponsors';
 import SponsorBenefits from './components/SponsorBenefits/SponsorBenefits';
-
 
 import styles from './Sponsors.scss';
 
@@ -34,7 +36,7 @@ function Sponsors() {
         subheaderText={''}
         showButton={false}
       />
-      <div className={styles.contentWrapper}>
+      <div className={globalStyles.contentWrapper}>
         <CurrentSponsors />
         <SponsorBenefits />
       </div>

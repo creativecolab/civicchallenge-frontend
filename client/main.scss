@@ -38,9 +38,17 @@ div[data-reactroot] {
   padding: 1em;
 }
 
+
+/* current */
 .contentWrapper {
   width: $component-width-desktop;
   margin: 0 auto; 
+}
+
+@media(max-width: $mobile-max-width) {
+  .contentWrapper {
+    width: $component-width-mobile;
+  }
 }
 
 .contentContainer {
@@ -63,11 +71,7 @@ div[data-reactroot] {
 
 }
 
-@media(max-width: $mobile-max-width) {
-  .contentWrapper {
-    width: $component-width-mobile;
-  }
-}
+/* current */
 
 .title {
   text-align: center;

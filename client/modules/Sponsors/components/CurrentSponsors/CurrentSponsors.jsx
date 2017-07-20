@@ -3,6 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
+import globalStyles from 'main.scss';
+
 import styles from './CurrentSponsors.scss';
 
 import nsfLogo from './nsf-logo.png';
@@ -49,6 +52,13 @@ const PARTNERS = [
   },
 ];
 
+const INTRO = [
+  {
+    sectionTitle: '',
+    text: 'D4SD sponsors are committed to advancing innovation concepts aimed to improve Mobility for the millions of residents in the San Diego region. Sponsorship may come in many forms. In-kind sponsors can commit access to training and human resources, studio space, or technology. Financial sponsorship will help provide incentives for challenge competitions and hackathons planned throughout the Mobility challenge. Sponsorship will allow D4SD to offer design teams cash awards for the best designs for improving Mobility in our city.',
+  },
+];
+
 /*
  * Current Sponsors
  */
@@ -64,15 +74,13 @@ const defaultProps = {};
 function CurrentSponsors() {
   return (
     <div>
-      <div id="sponsor-description" className={styles.contentContainer}>
-        <p>D4SD sponsors are committed to advancing innovation concepts aimed to improve Mobility
-        for the millions of residents in the San Diego region. Sponsorship may come in many forms.
-        In-kind sponsors can commit access to training and human resources, studio space, or technology.
-        Financial sponsorship will help provide incentives for challenge competitions and hackathons planned
-        throughout the Mobility challenge. Sponsorship will allow D4SD to offer design teams cash awards
-        for the best designs for improving Mobility in our city.</p>
-      </div>
-      <div className={styles.contentContainer}>
+      {INTRO.map(({ sectionTitle, text }) => (
+        <StandardSectionBox
+          sectionTitle={sectionTitle}
+          text={text}
+        />
+      ))}
+      <div className={globalStyles.contentContainer}>
         <h2>Current Sponsors</h2>
         <div className={styles.sponsors}>
           <h3>Tier 1</h3>

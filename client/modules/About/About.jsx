@@ -47,12 +47,10 @@ function About() {
       />
       <div className={globalStyles.contentWrapper}>
         {ABOUT.map(({ sectionTitle, text }) => (
-          <div id="whatWeDo" className={globalStyles.contentContainer}>
-            <StandardSectionBox
-              sectionTitle={sectionTitle}
-              text={text}
-            />
-          </div>
+          <StandardSectionBox
+            sectionTitle={sectionTitle}
+            text={text}
+          />
         ))}
         <div id="ourTeam" className={globalStyles.contentContainer}>
           <h2>Our Team</h2>
