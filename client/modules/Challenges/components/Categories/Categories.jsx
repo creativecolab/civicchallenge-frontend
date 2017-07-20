@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import LazyImage from 'components/LazyImage/LazyImage';
 
-import Process from '../../../Landing/components/Process/Process';
-
 import styles from './Categories.scss';
 
 /**
@@ -19,7 +17,6 @@ function Challenge(props) {
         </div>
 
         <div className={styles.indexContent}>
-          <Process phase={props.phase} mini />
           <h4>{props.name}</h4>
           <p>{props.description}</p>
           <h5>Questions:</h5>

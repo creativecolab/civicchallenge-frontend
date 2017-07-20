@@ -12,7 +12,6 @@ import styles from './Challenge.scss';
 
 import Questions from './components/Questions/Questions';
 import Resources from './components/Resources/Resources';
-import Process from '../Landing/components/Process/Process';
 
 /**
  * Challenge
@@ -60,7 +59,6 @@ class Challenges extends Component {
           showButton={false}
         />
         <div className={globalStyles.textContainer}>
-          <Process phase={challenge.phase} />
           <div>
             <div className={globalStyles.title}>
               <h3 className={globalStyles.ul}>Background</h3>
