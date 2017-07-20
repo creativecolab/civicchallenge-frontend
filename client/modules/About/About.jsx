@@ -4,7 +4,9 @@ import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
 
+import globalStyles from 'main.scss';
 import styles from './About.scss';
 
 import team from './team.jpg';
@@ -13,6 +15,15 @@ import team from './team.jpg';
 /**
  * About
  */
+
+const ABOUT = [
+  {
+    sectionTitle: 'Mission',
+    text: [
+      'Design for San Diego is a non-profit organization that engages San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.',
+    ],
+  },
+];
 
 const propTypes = {};
 
@@ -34,15 +45,16 @@ function About() {
         subheaderText={''}
         showButton={false}
       />
-      <div className={styles.contentWrapper}>
-        <div id="whatWeDo" className={styles.contentContainer}>
-          <h2>Mission</h2>
-          <p>Design for San Diego is a non-profit organization that engages San Diegans in the process
-          of solving complex civic challenges using human-centered design and crowdsourcing. We create
-          opportunities for government, academia, and industry to collaboratively design innovative
-          civic solutions.</p>
-        </div>
-        <div id="ourTeam" className={styles.contentContainer}>
+      <div className={globalStyles.contentWrapper}>
+        {ABOUT.map(({ sectionTitle, text }) => (
+          <div id="whatWeDo" className={globalStyles.contentContainer}>
+            <StandardSectionBox
+              sectionTitle={sectionTitle}
+              text={text}
+            />
+          </div>
+        ))}
+        <div id="ourTeam" className={globalStyles.contentContainer}>
           <h2>Our Team</h2>
           <div id="imgPlaceholder" className={styles.fullWidthImg}>
             <img src={team} alt="team" />

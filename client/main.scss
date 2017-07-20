@@ -23,6 +23,7 @@ html, body {
   p {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
   }
+
 }
 
 div[data-reactmount],
@@ -35,6 +36,37 @@ div[data-reactroot] {
   margin: 1.5em auto;
   max-width: 750px;
   padding: 1em;
+}
+
+.contentWrapper {
+  width: $component-width-desktop;
+  margin: 0 auto; 
+}
+
+.contentContainer {
+  text-align: center;
+
+  margin: $space-between 0;
+
+  h2 { 
+    padding: 20px 0;
+    font-size: $h2-text;
+  }
+
+  p {
+    font-size: $p-text;
+  }
+
+  span {
+    width: $img-width;
+  } 
+
+}
+
+@media(max-width: $mobile-max-width) {
+  .contentWrapper {
+    width: $component-width-mobile;
+  }
 }
 
 .title {
@@ -105,3 +137,4 @@ div[data-reactroot] {
     }
   } 
 }
+

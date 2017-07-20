@@ -37,7 +37,6 @@ Challenge.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   thumbnail: PropTypes.string,
-  phase: PropTypes.number.isRequired,
   questions: PropTypes.arrayOf(PropTypes.object),
 };
 
