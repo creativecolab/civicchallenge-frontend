@@ -7,6 +7,8 @@ import Footer from 'components/Footer/Footer';
 
 import globalStyles from 'main.scss';
 
+import GetInvolvedHeader from './components/GetInvolvedHeader/GetInvolvedHeader';
+
 import styles from './GetInvolved.scss';
 
 /**
@@ -35,7 +37,7 @@ function GetInvolved() {
       />
       <div className={globalStyles.contentWrapper}>
         <div className={globalStyles.placeholderWrapper}>
-          <p>Content Coming Soon</p>
+          <GetInvolvedHeader />
         </div>
       </div>
       <div className={globalStyles.placeholderFooter}>
