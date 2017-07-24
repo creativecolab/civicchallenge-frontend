@@ -39,8 +39,8 @@ function ChallengeDescription(props) {
           for solutions with the greatest potential to improve mobility in San Diego.
             Register now and participant in discussions, meetups, and design sprints!</p>
         </div>
-        <div className={styles.button}>
-          <a className={styles.blueOutline} href="/howitworks">HOW IT WORKS</a>
+        <div className={globalStyles.sectionBtn}>
+          <a className={globalStyles.blueOutline} href="/howitworks">HOW IT WORKS</a>
         </div>
       </div>
     </section>

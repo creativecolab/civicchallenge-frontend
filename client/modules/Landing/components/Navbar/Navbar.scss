@@ -124,10 +124,9 @@ $font-color: #000;
   }
 }
 
-@media (min-width: 1000px) {
-  .navbar {
-    a, button {
-      font-size: 12px;
-    }
+@media (max-width: $mobile-max-width) {
+  a, button {
+    font-size: 10px;
   }
 }
+
