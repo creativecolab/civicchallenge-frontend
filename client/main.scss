@@ -45,6 +45,12 @@ div[data-reactroot] {
   margin: 0 auto; 
 }
 
+.contentWrapperGrid {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
 @media(max-width: $mobile-max-width) {
   .contentWrapper {
     width: $component-width-mobile;

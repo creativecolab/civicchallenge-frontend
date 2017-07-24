@@ -114,13 +114,15 @@ class Challenges extends Component {
           subheaderText={''}
           showButton={false}
         />
-        <div className={globalStyles.contentWrapper}>
-          {INFO.map(({ sectionTitle, text }) => (
-            <StandardSectionBox
-              sectionTitle={sectionTitle}
-              text={text}
-            />
-          ))}
+        <div className={globalStyles.contentWrapperGrid}>
+          <div className={styles.info}>
+            {INFO.map(({ sectionTitle, text }) => (
+              <StandardSectionBox
+                sectionTitle={sectionTitle}
+                text={text}
+              />
+            ))}
+          </div>
           <div className={styles.DBBoxGrid}>
             {DESIGN_BRIEFS.map(({ name, summary, thumbnail }) => (
               <DBBox
