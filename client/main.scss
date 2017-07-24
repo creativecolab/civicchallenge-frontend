@@ -87,13 +87,18 @@ div[data-reactroot] {
 }
 
 .contentContainer {
-  text-align: center;
 
   margin: $space-between 0;
 
   h2 { 
     padding: 20px 0;
     font-size: $h2-text;
+    text-align: center;
+  }
+
+  h4 {
+    font-weight: 600;
+    text-align: center;
   }
 
   p {

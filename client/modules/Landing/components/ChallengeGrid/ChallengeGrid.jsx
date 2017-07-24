@@ -24,6 +24,12 @@ import aging from './aging.jpg';
  * ChallengeBox
  */
 
+const CHALLENGES_INFO = [
+  {
+    title: 'Challenges',
+    description: 'We all have places to go and people to see. Whether for work or play—and by car, bike, train, bus, boat, or foot—mobility significantly affects millions on a daily basis. San Diego is culturally and economically diverse, as well as spread out,which makes getting around the city an important issue to explore. The design briefs below explore the concerns currently facing San Diegans while also looking towardsthe future of transportation. Join a conversation about the issue that concerns you most and find teammates to submit a proposal!',
+  },
+];
 
 const CHALLENGES = [
   {
@@ -156,18 +162,15 @@ class ChallengeGrid extends Component {
       <section className={styles.challengeGrid} ref={this.props.componentRef}>
         <div className={styles.challenges}>
           <div className={styles.content}>
-            <div className={globalStyles.sectionTitle}>
-              <h1>Design Briefs</h1>
-              <div className={styles.descr}>
-                <p>We all have places to go and people to see. Whether for work or play—and by car,
-                bike, train, bus, boat, or foot—mobility significantly affects millions on a daily
-                basis. San Diego is culturally and economically diverse, as well as spread out,
-                which makes getting around the city an important issue to explore. The design briefs
-                below explore the concerns currently facing San Diegans while also looking towards
-                the future of transportation. Join a conversation about the issue that concerns
-                you most and find teammates to submit a proposal!</p>
+
+            {CHALLENGES_INFO.map(({ title, description }) => (
+              <div className={globalStyles.sectionTitle}>
+                <h1>{title}</h1>
+                <div className={styles.descr}>
+                  <p>{description}</p>
+                </div>
               </div>
-            </div>
+            ))}
             <div className={styles.challengeGrid}>
               {CHALLENGES.map(challenge =>
                 <ChallengeBox

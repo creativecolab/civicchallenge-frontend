@@ -25,7 +25,7 @@ const defaultProps = {
 function StandardSectionBox({ sectionTitle, text }) {
   return (
     <div className={globalStyles.contentContainer}>
-      <h2>{sectionTitle}</h2>
+      {sectionTitle && <h2>{sectionTitle}</h2>}
       <p>{text}</p>
     </div>
   );
