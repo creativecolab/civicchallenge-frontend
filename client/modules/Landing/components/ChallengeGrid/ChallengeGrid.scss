@@ -11,8 +11,13 @@ $component-spacing: 3em;
     width: 100%;
     background: #EFEFEF;
 
-    padding: 90px 0;
-
+    padding-top: 90px;
+    
+    .content {
+      .descr {
+        padding-bottom: $landing-inter-spacing;
+      }
+    }
     .challengeWrapper {
       width: 75%;
       margin: 0 auto;

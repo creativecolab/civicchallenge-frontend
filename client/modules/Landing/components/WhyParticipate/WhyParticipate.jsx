@@ -15,6 +15,13 @@ import winPrizes from './win-prizes.png';
  * Get Involved
  */
 
+const PARTICIPATE_INFO = [
+  {
+    title: 'Why Participate?',
+    description: 'Participating in the 2017 Civic Design Challenge gives you a forum to voice your concerns and vision for mobility in San Diego. It also provides hands-on experience with research and design, a network of people who are also interested in improving our city and a platform to share your proposal. If your prototype is a finalist in the contest, you may earn cash or facetime with city leaders and innovation incubators.',
+  },
+];
+
 const PARTICIPATE = [
   {
     title: 'Learn and Practice Design',
@@ -49,16 +56,15 @@ const defaultProps = {};
 function WhyParticipate(props) {
   return (
     <section id={styles.participate} ref={props.componentRef}>
-      <div className={globalStyles.sectionTitle}>
-        <h1>Why Participate?</h1>
-        <div className={styles.descr}>
-          <p>Participating in the 2017 Civic Design Challenge gives you a forum to voice your concerns
-          and vision for mobility in San Diego. It also provides hands-on experience with research and
-          design, a network of people who are also interested in improving our city and a platform
-          to share your proposal. If your prototype is a finalist in the contest, you may earn cash
-          or facetime with city leaders and innovation incubators.</p>
+
+      {PARTICIPATE_INFO.map(({ title, description }) => (
+        <div className={globalStyles.sectionTitle}>
+          <h1>{title}</h1>
+          <div className={styles.descr}>
+            <p>{description}</p>
+          </div>
         </div>
-      </div>
+      ))}
       <div className={styles.contentContainer}>
         {PARTICIPATE.map(({ title, img, alt, desc }) => (
           <div className={styles.contentElement}>
