@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from 'components/Header/Header';
+import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 
 import globalStyles from 'main.scss';
@@ -68,7 +68,7 @@ function GetInvolved() {
       <Helmet
         title="GetInvolved"
       />
-      <Header
+      <Navbar
         backgroundImg={''}
         headerText={'Get Involved'}
         subheaderText={''}

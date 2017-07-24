@@ -26,10 +26,6 @@ const LINKS = [
     text: 'Challenges',
   },
   {
-    href: '/press-and-events',
-    text: 'Press & Events'
-  },
-  {
     href: '/resources',
     text: 'Resources',
   },
@@ -148,7 +144,7 @@ class Navbar extends React.Component {
           )}
           <div className={styles.registerButton}>
             <div className={styles.buttonContainer}>
-              <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Participate Now</a>
+              <a onClick={logClick} href="/getinvolved">PARTICIPATE NOW</a>
             </div>
           </div>
         </nav>

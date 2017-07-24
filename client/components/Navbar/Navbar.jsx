@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
 import { Link } from 'react-router';
 
-import styles from './Header.scss';
+import styles from './Navbar.scss';
 import landingLogo from './logo_black.png';
 
 /**
@@ -33,7 +33,7 @@ const LINKS = [
 /*  ,./
 
 /**
- * Header
+ * Navbar
  */
 
 const propTypes = {
@@ -57,12 +57,9 @@ function logClick() {
   });
 }
 
-function Header({ backgroundImg, headerText, subheaderText, showButton }, { router }) {
+function Navbar({ backgroundImg, headerText, subheaderText, showButton }, { router }) {
   return (
-    <header className={styles.header}>
-      <div
-        className={styles.background}
-      />
+    <header className={styles.navbar}>
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
           <Link to="/"><img className="theLogo" src={landingLogo} alt="logo" /></Link>
@@ -73,27 +70,17 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }, { rout
           )}
           <div className={styles.registerButton}>
             <div className={styles.buttonContainer}>
-              <a onClick={logClick} href="/getinvolved">PARTICIPATE NOW</a>
+              <a onClick={logClick} href="/getinvolved">Participate Now</a>
             </div>
           </div>
         </nav>
       </div>
-      <div className={styles.textContainer}>
-        <section className={styles.text}>
-          {headerText && <h1>{headerText}</h1>}
-          {subheaderText && <p className={styles.description}>{subheaderText}</p>}
-          {showButton && <div className={styles.buttonContainer}>
-            <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
-          </div>}
-        </section>
-      </div>
-      {backgroundImg && <img src={backgroundImg} alt="Background" />}
     </header>
   );
 }
 
-Header.propTypes = propTypes;
-Header.contextTypes = contextTypes;
-Header.defaultProps = defaultProps;
+Navbar.propTypes = propTypes;
+Navbar.contextTypes = contextTypes;
+Navbar.defaultProps = defaultProps;
 
-export default Header;
+export default Navbar;

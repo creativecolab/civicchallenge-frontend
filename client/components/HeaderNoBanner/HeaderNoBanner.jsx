@@ -74,7 +74,7 @@ function HeaderNoBanner({ backgroundImg, headerText, subheaderText, showButton }
           {LINKS.map(({ href, text }) =>
             <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
           )}
-          <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register</a>
+          <a onClick={logClick} href="/getinvolved">PARTICIPATE NOW</a>
         </nav>
       </div>
     </header>
