@@ -1,5 +1,5 @@
 $font-size: 16px;
-$navbar-font-size: 12px;
+$navbar-font-size: 14px;
 $component-vertical-margin: 3em;
 $component-width-mobile: 90%;
 $component-width-desktop: 750px;
@@ -7,6 +7,9 @@ $component-width-desktop: 750px;
 $mobile-max-width: 768px;
 $desktop-min-width: $mobile-max-width + 1px;
 
+
+/* navbar stuff */
+$navbar-width: 40%;
 
 $h2-text: 1.5em;
 $p-text: 0.9em;
