@@ -1,9 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
 
 import globalStyles from 'main.scss';
 
@@ -13,7 +9,12 @@ import styles from './GetInvolvedBox.scss';
  * GetInvolvedBox
  */
 
-const propTypes = {};
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -21,10 +22,19 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function GetInvolvedBox() {
+function GetInvolvedBox({ title, text, buttonText, icon }) {
   return (
     <div className={styles.getInvolvedBox}>
-      <p>hello</p>
+      <div className={styles.boxWrapper}>
+        <div className={styles.boxContent}>
+          <img src={icon} alt={title} />
+          <h2>{title}</h2>
+          <p>{text}</p>
+          <div className={globalStyles.sectionBtn}>
+            <a className={globalStyles.blueOutline} href="">{buttonText}</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

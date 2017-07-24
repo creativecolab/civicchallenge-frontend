@@ -50,6 +50,12 @@ div[data-reactroot] {
   margin: 0 auto;
 }
 
+.contentWrapperGridGI {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
 .placeholderWrapper {
   width: 100%;;
   height: 100%;
@@ -64,6 +70,13 @@ div[data-reactroot] {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.paragraphLink{
+  a {
+    text-decoration: none;
+    color: $theme-color-blue;
+  }
 }
 
 @media(max-width: $mobile-max-width) {
@@ -161,5 +174,39 @@ div[data-reactroot] {
       background-color: #2d324d;
     }
   } 
+}
+
+.sectionBtn {
+
+  margin: 40px 0 0 0;
+
+  a.blueOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    color: $theme-color-blue;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-blue;
+
+  }
+
+  a.salmon {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $theme-color-red;
+    border: 2px solid $theme-color-red;
+
+  }
 }
 
