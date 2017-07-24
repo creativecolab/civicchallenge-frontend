@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -9,7 +11,7 @@ import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox
 import globalStyles from 'main.scss';
 import styles from './About.scss';
 
-import team from './team.jpg';
+import team from './team.png';
 
 
 /**
@@ -24,6 +26,47 @@ const ABOUT = [
     ],
   },
 ];
+
+const PEOPLE = [
+  'Gabriel Amoako',
+  'Grant Chinn',
+  'Joanne Cho',
+  'Yujin Cho',
+  'Mai Eguchi',
+  'Allison Endo',
+  'Lauren Gong',
+  'Akanksha Grover',
+  'Alvin Ho',
+  'Brandon Hong',
+  'Nanna Inie',
+  'Michael James',
+  'Catherine Kim',
+  'Karthik Komatineni',
+  'Anne Le',
+  'Joseph Le',
+  'Susan Lee',
+  'Christopher Lim',
+  'Allen Lin',
+  'Lauren Liu',
+  'David Luu',
+  'Narges Mahyar',
+  'Brian McInnis',
+  'Sanika Moharana',
+  'Michelle Ng',
+  'Alejandro Panduro',
+  'Cody Pham',
+  'Karen Ma',
+  'Tara Nejad',
+  'Diana Nguyen',
+  'Eric Richards',
+  'Gobind Sethi',
+  'Eric Tseng',
+  'Ariel Weingarten',
+  'Donna Yee',
+  'Nancy Zheng',
+  'Qin Zhuo',
+];
+
 
 const propTypes = {};
 
@@ -57,7 +100,10 @@ function About() {
           <div id="imgPlaceholder" className={styles.fullWidthImg}>
             <img src={team} alt="team" />
           </div>
-          <p>Pictured (from left to right) Vestibulum eu nunc congue, aliquam velit et, aliquam nisl. Proin vel rhoncus enim, a tempus neque. Nam commodo gravida pharetra. Curabitur ligula metus, congue quis leo in, convallis cursus tortor. Fusce a est in urna aliquam vestibulum sit amet fringilla tortor. Nulla sit amet sapien in orci interdum maximus. Integer ut congue quam.</p>
+          <h4>Team Members</h4>
+          <div className={styles.people}>
+            <span>{PEOPLE.join(', ')}</span>
+          </div>
         </div>
       </div>
       <Footer />
