@@ -17,6 +17,10 @@ const LINKS = [
     text: 'Challenges',
   },
   {
+    href: '/press-and-events',
+    text: 'Press & Events',
+  },
+  {
     href: '/resources',
     text: 'Resources',
   },

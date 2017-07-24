@@ -23,7 +23,10 @@ const getRewards = (nextState, cb) => require.ensure([], require => cb(null, req
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
 const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
+const getGetInvolved = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/GetInvolved/GetInvolved').default), 'getinvolved');
+const getPressEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PressEvents/PressEvents').default), 'pressevents');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
+
 
 function onRouteChange(prev, next) {
   ReactGA.pageview(next.location.pathname);
@@ -43,6 +46,8 @@ export default (
     <Route path="/resources" getComponent={getResources} />
     <Route path="/faq" getComponent={getFAQ} />
     <Route path="/designbrief" getComponent={getDesignBrief} />
+    <Route path="/getinvolved" getComponent={getGetInvolved} />
+    <Route path="/press-and-events" getComponent={getPressEvents} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );
