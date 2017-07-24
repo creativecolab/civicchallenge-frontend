@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import globalStyles from 'main.scss';
 import styles from './SponsorBenefits.scss';
 
 
@@ -52,24 +53,24 @@ const defaultProps = {};
 function SponsorBenefits(props) {
   return (
     <section id={styles.SponsorBenefits} ref={props.componentRef}>
-      <div id="sponsor-description" className={styles.sectionTitle}>
+      <div id="sponsor-description" className={globalStyles.contentContainer}>
         <h2>Benefits</h2>
-      </div>
-      {SPONSOR_INFO.map(({ title, benefits }) => (
-        <div className={styles.tierBlock}>
-          <h4>{title}</h4>
-          <ul>
-            {benefits.map(benefit =>
-              <li key={benefit}>{benefit}</li>
-              )}
-          </ul>
-        </div>
-      ))}
-      <div className={styles.sponsorCallout}>
-        <h2>Support Us Now</h2>
-        <p>Contact our team to learn more about how you or your organization could contribute to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
-        <div className={styles.sponsorBtn}>
-          <a className={styles.salmon} href="mailto:team@d4sd.org">BECOME A SPONSOR NOW</a>
+        {SPONSOR_INFO.map(({ title, benefits }) => (
+          <div className={styles.tierBlock}>
+            <h4>{title}</h4>
+            <ul>
+              {benefits.map(benefit =>
+                <li key={benefit}>{benefit}</li>
+                )}
+            </ul>
+          </div>
+        ))}
+        <div className={styles.sponsorCallout}>
+          <h2>Support Us Now</h2>
+          <p>Contact our team to learn more about how you or your organization could contribute to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
+          <div className={styles.sponsorBtn}>
+            <a className={styles.salmon} href="mailto:team@d4sd.org">BECOME A SPONSOR NOW</a>
+          </div>
         </div>
       </div>
 

@@ -13,12 +13,8 @@ import landingLogo from './logo_black.png';
 // TODO: Make homepage links scroll to correct area
 const LINKS = [
   {
-    href: '/howitworks',
-    text: 'How It Works',
-  },
-  {
     href: '/challenges',
-    text: 'Design Briefs',
+    text: 'Challenges',
   },
   {
     href: '/resources',
@@ -30,7 +26,7 @@ const LINKS = [
   },
   {
     href: '/about',
-    text: 'About Us',
+    text: 'About',
   },
 ];
 
@@ -75,7 +71,7 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }, { rout
           {LINKS.map(({ href, text }) =>
             <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
           )}
-          <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register</a>
+          <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Participate Now</a>
         </nav>
       </div>
       <div className={styles.textContainer}>

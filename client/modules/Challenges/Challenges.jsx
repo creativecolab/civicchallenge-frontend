@@ -6,7 +6,10 @@ import Helmet from 'react-helmet';
 
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
-import Info from './components/Info/Info';
+import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
+
+import globalStyles from 'main.scss';
+
 import DBBox from './components/DBBox/DBBox';
 import Categories from './components/Categories/Categories';
 
@@ -68,6 +71,13 @@ const DESIGN_BRIEFS = [
   },
 ];
 
+const INFO = [
+  {
+    sectionTitle: 'What is a Design Brief?',
+    text: 'D4SD is collaborating with the Design Forward Alliance to host a 2017 large-scale human-centered design challenge around the complex civic issue of Mobility. People need to move around a city. Whether for work or play—and by car, bike, train, bus, boat, or foot— mobility significant affects the daily lives of millions. San Diego is culturally and economically diverse, as well as geographical dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility challenges below investigate concerns currently facing San Diegans, as well as take a look to future transportation systems.',
+  },
+];
+
 const propTypes = {};
 
 const contextTypes = {
@@ -104,17 +114,24 @@ class Challenges extends Component {
           subheaderText={''}
           showButton={false}
         />
-        <Info />
-        <div className={styles.DBBoxGrid}>
-          {DESIGN_BRIEFS.map(({ name, summary, thumbnail }) => (
-            <DBBox
-              title={name}
-              desc={summary}
-              thumbnail={thumbnail}
+        <div className={globalStyles.contentWrapper}>
+          {INFO.map(({ sectionTitle, text }) => (
+            <StandardSectionBox
+              sectionTitle={sectionTitle}
+              text={text}
             />
           ))}
+          <div className={styles.DBBoxGrid}>
+            {DESIGN_BRIEFS.map(({ name, summary, thumbnail }) => (
+              <DBBox
+                title={name}
+                desc={summary}
+                thumbnail={thumbnail}
+              />
+            ))}
+          </div>
+          <Categories categories={this.state.categories} />
         </div>
-        <Categories categories={this.state.categories} />
         <Footer />
       </section>
     );

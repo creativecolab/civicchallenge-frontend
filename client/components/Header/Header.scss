@@ -51,7 +51,6 @@ $font-color: #fff;
         margin: 0 10px;
 
         text-decoration: none;
-        text-transform: uppercase;
       }
 
       a,button {
@@ -63,9 +62,8 @@ $font-color: #fff;
         cursor: pointer;
 
         text-decoration: none;
-        text-transform: uppercase;
         background-color: transparent;
-        font-size: 0.65 * $font-size;
+        font-size: $navbar-font-size;
         font-weight: 500;
         color: $nav-font-color;
 
@@ -131,7 +129,6 @@ $font-color: #fff;
 
           background-color: #fff;
           text-decoration: none;
-          text-transform: uppercase;
           font-weight: 600;
           color: rgb(34, 78, 130);
         }
