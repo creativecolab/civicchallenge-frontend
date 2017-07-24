@@ -5,6 +5,8 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
+import globalStyles from 'main.scss';
+
 import ResourceBox from './components/ResourceBox/ResourceBox';
 
 import styles from './Resources.scss';
@@ -53,7 +55,9 @@ function Resources() {
           />
         </div>
       </section>
-      <Footer />
+      <div className={globalStyles.placeholderFooter}>
+        <Footer />
+      </div>
     </div>
   );
 }
