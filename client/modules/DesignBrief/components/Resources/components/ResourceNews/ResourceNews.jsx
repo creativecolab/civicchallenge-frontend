@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import globalStyles from 'main.scss';
 import styles from './ResourceNews.scss';
+
+/**
+ * Constants
+ */
+
+const articleLinkText = 'View Article';
 
 /**
  * ResourceNews
@@ -9,20 +16,32 @@ import styles from './ResourceNews.scss';
 
 const propTypes = {
   headline: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  articleImage: PropTypes.string,
+  articleLink: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
   router: PropTypes.object,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  articleImage: '',
+};
 
-function ResourceNews({ headline, description }) {
+function ResourceNews({ headline, date, articleImage, articleLink }) {
   return (
     <div className={styles.resourceNews}>
-      <h3>{headline}</h3>
-      <p>{description}</p>
+      <div className={styles.articleImage}>
+        <img src={articleImage} alt={headline} />
+      </div>
+      <div className={styles.articleText}>
+        <p>{date}</p>
+        <h3>{headline}</h3>
+        <div className={globalStyles.paragraphLink}>
+          <a href={articleLink}>{articleLinkText}</a>
+        </div>
+      </div>
     </div>
   );
 }

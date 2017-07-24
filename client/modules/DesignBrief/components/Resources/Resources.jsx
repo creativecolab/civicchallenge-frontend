@@ -41,11 +41,11 @@ function Resources({ title, external, news }) {
 
         <div className={styles.externalResources}>
           <h3>News about {title}</h3>
-          {news.map(({ headline, description }) => (
+          {news.map(({ headline, date }) => (
             <div className={styles.resourcesComponentWrapper}>
               <ResourceNews
-                resourceTitle={headline}
-                description={description}
+                headline={headline}
+                date={date}
               />
             </div>
           ))}
