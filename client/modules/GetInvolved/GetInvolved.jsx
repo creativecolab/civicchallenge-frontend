@@ -68,12 +68,7 @@ function GetInvolved() {
       <Helmet
         title="GetInvolved"
       />
-      <Navbar
-        backgroundImg={''}
-        headerText={'Get Involved'}
-        subheaderText={''}
-        showButton={false}
-      />
+      <Navbar />
       <div className={globalStyles.contentWrapperGridGI}>
         <div className={globalStyles.placeholderWrapper}>
           <GetInvolvedHeader />

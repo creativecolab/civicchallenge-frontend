@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 import styles from './ResourceBox.scss';
-import pIcon from './placeholdericon.png';
 
 /**
  * ResourceBox
  */
 
 const propTypes = {
-  resourceName: PropTypes.string.isRequired,
-  resourceText: PropTypes.string.isRequired,
-  resourceLink: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -20,20 +20,16 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ResourceBox({ resourceName, resourceText, resourceLink }) {
+function ResourceBox({ title, text, icon }) {
   return (
-    <div className={styles.ResourceBox}>
-      <a href={resourceLink}>
-        <div className={styles.contentContainer}>
-          <div className={styles.iconContainer}>
-            <img className={styles.resourceIcon} src={pIcon} alt="icon" />
-          </div>
-          <div className={styles.resourceText}>
-            <h2>{resourceName}</h2>
-            <p>{resourceText}</p>
-          </div>
+    <div className={styles.resourceBox}>
+      <div className={styles.boxWrapper}>
+        <div className={styles.boxContent}>
+          <img src={icon} alt={title} />
+          <h2>{title}</h2>
+          <p>{text}</p>
         </div>
-      </a>
+      </div>
     </div>
   );
 }

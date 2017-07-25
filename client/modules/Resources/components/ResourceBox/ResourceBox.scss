@@ -1,53 +1,45 @@
-@import '~styles/variables.scss';
+@import '~styles/variables';
 
-$icon-height: 50px;
-$title-font-size: 1.2em;
-$paragraph-font-size: 0.9em;
+$box-dim-width: 250px;
+$box-dim-height: $box-dim-width * 1.3;
 
-.ResourceBox {
-  height: 300px;
-  width: 300px;
+$icon-dim: 60px;
 
-  border: 1px solid $theme-color-lightgrey;
-  display: flex;
-  align-items: center;
+.resourceBox{
+  width: $box-dim-width;
+  height: $box-dim-height;
 
-  a {
-    text-decoration: none;
-    color: $theme-color-p-text;
+  padding: 20px;
+  margin: 10px;
+
+  box-shadow: $theme-boxshadow;
+
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: $theme-color-box-lightgrey;
+  .boxWrapper {
+    height: 100%; 
+    display: flex;
+    align-items: center;
+
+    .boxContent{
+      text-align: left;
+
+      img {
+        margin: 20px 10px;
+        width: auto;
+        height: $icon-dim;
+     }  
+
+     h2 {
+      color: $theme-color-red;
+     }
+
+     p {
+      color: $theme-color-lightgrey;
+     }
+    }
+
   }
-  .contentContainer {
 
-    .iconContainer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-  		 
-    	.resourceIcon {
-    	  height: $icon-height;
-    	}
-    }
-
-    .resourceText {
-
-      h2, p {
-    	  text-align: center;
-    	}
-
-    	h2 {
-    	  font-size: $title-font-size;
-    	  font-weight: 500;
-    	}
-
-    	p {
-        width: 70%;
-        margin: 0 auto;
-        font-size: $paragraph-font-size;
-    	}
-    }
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
 }
