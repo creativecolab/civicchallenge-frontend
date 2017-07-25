@@ -31,6 +31,12 @@ const BOX_TEXT = [
     icon: slack,
   },
   {
+    title: 'Learn More',
+    description: ' Nunc eleifend tempus ligula, eget ullamcorper tellus faucibus at. Suspendisse ultricies sapien in nibh volutpat, et iaculis neque sodales. Duis hendrerit tellus vitae lacus accumsan vestibulum. Nulla at accumsan leo. Donec malesuada aliquet luctus. Vivamus suscipit et tortor non tempor.',
+    buttonText: 'Join Slack Discussion',
+    icon: slack,
+  },
+  {
     title: 'Become a Mentor',
     description: ' Nunc eleifend tempus ligula, eget ullamcorper tellus faucibus at. Suspendisse ultricies sapien in nibh volutpat, et iaculis neque sodales. Duis hendrerit tellus vitae lacus accumsan vestibulum. Nulla at accumsan leo. Donec malesuada aliquet luctus. Vivamus suscipit et tortor non tempor.',
     buttonText: 'Sign Up',
