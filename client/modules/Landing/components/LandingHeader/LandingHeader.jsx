@@ -10,6 +10,8 @@ import styles from './LandingHeader.scss';
  * LandingHeader
  */
 
+const ButtonText = 'Participate Now';
+
 const propTypes = {};
 
 const contextTypes = {
@@ -36,7 +38,7 @@ function LandingHeader() {
           <p className={styles.text3}>Sharpen your design skills while solving mobility challenges for the city.</p>
           <div className={styles.button}>
             <div className={styles.buttonContainer}>
-              <a onClick={logClick} href="https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform?usp=sf_link" rel="noopener noreferrer" target="_blank">Register Today</a>
+              <a onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">{ButtonText}</a>
             </div>
           </div>
         </div>

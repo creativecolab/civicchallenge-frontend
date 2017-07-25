@@ -66,19 +66,21 @@ function WhyParticipate(props) {
         </div>
       ))}
       <div className={styles.contentContainer}>
-        {PARTICIPATE.map(({ title, img, alt, desc }) => (
-          <div className={styles.contentElement}>
-            <div className={styles.imgCont}>
-              <div className={styles.contentImg}>
-                <img src={img} alt={alt} />
+        <div className={styles.participateIconsWrapper}>
+          {PARTICIPATE.map(({ title, img, alt, desc }) => (
+            <div className={styles.contentElement}>
+              <div className={styles.imgCont}>
+                <div className={styles.contentImg}>
+                  <img src={img} alt={alt} />
+                </div>
+              </div>
+              <div className={styles.contentText}>
+                <h4>{title}</h4>
+                <p>{desc}</p>
               </div>
             </div>
-            <div className={styles.contentText}>
-              <h4>{title}</h4>
-              <p>{desc}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

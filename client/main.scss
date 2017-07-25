@@ -93,7 +93,6 @@ div[data-reactroot] {
   h2 { 
     padding: 20px 0;
     font-size: $h2-text;
-    text-align: center;
   }
 
   h4 {
@@ -122,7 +121,7 @@ div[data-reactroot] {
 }
 
 .sectionTitle, .sectionTitleWhite {
-  width: 70%;
+  width: $component-width-desktop; /* WIDTH OF THE LANDING PAGE INFO PARAGRAPHS */
   margin: 0 auto;
 
   p {
@@ -188,6 +187,10 @@ div[data-reactroot] {
 
   margin: 40px 0 0 0;
 
+  @media (max-width: $mobile-max-width) {
+    margin: 30px 0 0 0;
+  }
+
   a.blueOutline {
     text-decoration: none;
     padding: 10px 30px;
@@ -199,6 +202,20 @@ div[data-reactroot] {
     text-transform: uppercase;
 
     border: 2px solid $theme-color-blue;
+
+  }
+
+  a.salmonOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    color: $theme-color-red;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-red;
 
   }
 
@@ -214,7 +231,8 @@ div[data-reactroot] {
 
     background-color: $theme-color-red;
     border: 2px solid $theme-color-red;
-
   }
+
+
 }
 

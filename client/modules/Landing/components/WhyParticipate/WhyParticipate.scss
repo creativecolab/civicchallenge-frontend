@@ -1,6 +1,9 @@
 @import '~styles/variables';
 
 $icon-dim: 100px;
+$item-font-size: 12px;
+$h4-font-size: 15px;
+$content-element-width: 30%;
 
 #participate {
   padding: 90px 0;
@@ -17,44 +20,48 @@ $icon-dim: 100px;
   }
 
   div.contentContainer {
-    width: 70%;
+    width: $component-width-desktop;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    
+    div.participateIconsWrapper {
+      display: flex;
+      justify-content: space-between;
 
-    div.contentElement {
+      div.contentElement {
 
-      padding: 0 5%;
-      width: 30%;
+        width: $content-element-width;
 
-      div.imgCont {
-        margin: $landing-inter-spacing 0;
-        div.contentImg {
-          display: flex;
-          justify-content: center;
-          img {
-            height: $icon-dim;
+        div.imgCont {
+          margin: $landing-inter-spacing 0;
+          div.contentImg {
+            display: flex;
+            justify-content: center;
+            img {
+              height: $icon-dim;
+            }
           }
-        }
-        padding-bottom: 20px;
-      }
-
-      div.contentText {
-        h4 {
-          font-weight: 600;
-          margin-bottom: 0px;
-          padding: 0;
-          font-size: 18px;
-          text-align: center;
+          padding-bottom: 20px;
         }
 
-        p {
-          font-family: 'Open Sans';
-          font-weight: 300;
-          margin: 0;
-          padding: 0;
-          font-size: 14px;
+        div.contentText {
+          h4 {
+            font-weight: 600;
+            margin-bottom: 0px;
+            padding: 0;
+            font-size: $h4-font-size;
+          }
+
+          p {
+            font-family: 'Open Sans';
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            font-size: $item-font-size;
+            text-align: left;
+          }
         }
       }
     }

@@ -1,42 +1,33 @@
 @import '~styles/variables';
 
 $stroke-size: 1px;
-$imgBox-dim: 200px + ($stroke-size * 2);
-$box-width-desktop: 500px;
+$imgBox-dim: 300px + ($stroke-size * 2);
+$imgBox-dim-height: 200px + ($stroke-size * 2);
 
 $button-size: 0.7em;
+$h2-mobile: 1.2em;
+
+$margin-inbetween: 40px;
+$padding-mobile: $margin-inbetween / 2;
+
 
 
 .sectionWrapper {
   display: inline-block;
   vertical-align: bottom;
   .DBBox {
-    width: $box-width-desktop; 
+    width: $component-width-desktop; 
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border: 1px solid $theme-color-lightgrey;
+    box-shadow: $theme-boxshadow;
 
     margin: 20px;
 
+    display: flex;
+    align-items: center;
+
     .dbBoxImg {
-      height: $imgBox-dim;
+      height: $imgBox-dim-height;
       width: $imgBox-dim;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .blackBox {
-        height: $imgBox-dim;
-        width: $imgBox-dim;
-        background-color: rgba(0, 0, 0, 0.4);
-
-        position: absolute;
-
-      }
 
       span {
         color: white;
@@ -48,37 +39,72 @@ $button-size: 0.7em;
         width: $imgBox-dim - ($imgBox-dim * 0.1);
 
       }
-
       img {
-        height: $imgBox-dim;
+        height: $imgBox-dim-height;
         width: $imgBox-dim;
+        vertical-align: bottom;
       }
+
     }
 
     .dbBoxText {
-      height: $imgBox-dim;
       max-width: 50%;
-      padding: 0 20px;
+      padding: 0 $margin-inbetween;
+      text-align: left;
 
-      display: flex;
-      align-items: center;
+      h4 {
+        text-transform: uppercase;
+        color: $theme-color-lightgrey;
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+      
       p {
         font-size: 0.72em;
 
       }
 
-      a {
-        float: right;
-        padding: 5px 10px;
 
-        color: $theme-color-blue;
-        font-size: $button-size;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
+    }
+  }
+}
 
-        border: 2px solid $theme-color-blue;
+@media (min-width: $desktop-min-width) {
+  
+}
 
+@media (max-width: $mobile-max-width) {
+  .sectionWrapper {
+    .DBBox {
+      display: block;
+      margin: 10px 0;
+
+      width: 100%; 
+
+      .dbBoxImg {
+        width: 100%;
+        height: 150px;
+        img {
+          width: 100%;
+          height:  150px;
+        }
+      }
+
+      .dbBoxText {
+        max-width: 100%;
+        padding: $padding-mobile*2 $padding-mobile;
+
+        h4 {
+          font-size: $h2-mobile * 0.7;
+        }
+
+        h2 {
+          font-size: $h2-mobile;
+        }
       }
     }
   }

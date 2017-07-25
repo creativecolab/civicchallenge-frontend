@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from 'components/Header/Header';
+import Header from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
 
@@ -109,12 +109,7 @@ class Challenges extends Component {
         <Helmet
           title="Challenges"
         />
-        <Header
-          backgroundImg={''}
-          headerText={'Challenges'}
-          subheaderText={''}
-          showButton={false}
-        />
+        <Header />
         <div className={globalStyles.contentWrapperGrid}>
           <div className={styles.info}>
             {INFO.map(({ sectionTitle, text }) => (

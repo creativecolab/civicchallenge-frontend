@@ -36,12 +36,8 @@ function Register(props) {
             <div className={styles.button}>
               <InternalButton
                 btnText="Register Now"
-                btnLink=""
+                btnLink="/getinvolved"
               />
-            </div>
-            <div id={styles.or}><p>or see</p></div>
-            <div className={styles.button}>
-              <a href="" className={styles.outlineBtn}>HOW IT WORKS</a>
             </div>
           </div>
         </div>

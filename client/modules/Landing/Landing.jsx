@@ -3,9 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Navbar from 'components/Navbar/Navbar';
+
 
 import Footer from 'components/Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
 import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';

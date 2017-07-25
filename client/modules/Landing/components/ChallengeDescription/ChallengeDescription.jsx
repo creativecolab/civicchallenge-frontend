@@ -12,6 +12,7 @@ import styles from './ChallengeDescription.scss';
  * ChallengeDescription
  */
 
+
 const propTypes = {
   componentRef: PropTypes.func.isRequired,
 };
@@ -26,7 +27,7 @@ function ChallengeDescription(props) {
   return (
     <section id={styles.ChallengeDescription} ref={props.componentRef}>
       <div className={globalStyles.sectionTitle}>
-        <h1>The Challenge</h1>
+        <h1>We want your voice to be heard.</h1>
         <div className={styles.descr}>
           <p>We are excited to announce that Design for San Diego (D4SD) is partnering with
           the <a href="http://designlab.ucsd.edu/">UC San Diego Design Lab</a>, <a href="http://www.designforwardsd.com/">the Design Forward Summit</a>, <a href="http://www.scalesd.com/">SCALE SD</a> to
