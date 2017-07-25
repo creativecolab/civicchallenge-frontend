@@ -1,37 +1,11 @@
 @import '~styles/variables';
 
 $component-spacing: 3em;
-
-.current {
-  text-align: center;
-
-  h3 {
-    padding-top: 5%;
-    margin: 0;
-
-    display: inline-block;
-
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-}
-
-.sectionTitle {
-  text-align: center;
-  h3 {
-    font-size: 1.2em;
-  }
-  p {
-    font-size: 0.9em;
-  }
-}
+$top-padding: 20px;
 
 .sponsors {
-  text-align: center;
   max-height: 50%;
   vertical-align: middle;
-  margin: auto;
 
   h4 {
     color: $theme-color-lightgrey;
@@ -41,7 +15,7 @@ $component-spacing: 3em;
 
   .sponsorContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     .backgroundFill {
@@ -50,6 +24,10 @@ $component-spacing: 3em;
 
       padding: 10px 30px;
 
+    }
+
+    .sponsorList {
+      padding: $top-padding 0;
     }
   }
 }

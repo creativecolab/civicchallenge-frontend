@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import globalStyles from 'main.scss';
-
-/* import styles from './StandardSectionBox.scss'; */
+import styles from './StandardSectionBox.scss';
 
 /**
  * StandardSectionBox
@@ -24,8 +23,8 @@ const defaultProps = {
 
 function StandardSectionBox({ sectionTitle, text }) {
   return (
-    <div className={globalStyles.contentContainer}>
-      {sectionTitle && <h2>{sectionTitle}</h2>}
+    <div className={`${globalStyles.contentContainer} ${styles.sectionBox}`}>
+      {sectionTitle && <h1>{sectionTitle}</h1>}
       <p>{text}</p>
     </div>
   );

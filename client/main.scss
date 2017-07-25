@@ -99,9 +99,23 @@ div[data-reactroot] {
     font-size: $h2-text;
   }
 
+  h2.sponsorBenefits {
+    font-size: 1.3em;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+  }
+
   h4 {
     font-weight: 600;
     text-align: center;
+  }
+
+  h4.block-style {
+    text-align: left;
+    text-transform: uppercase;
+    color: $theme-color-lightgrey;
+    font-size: 0.9em;
   }
 
   p {

@@ -20,7 +20,7 @@ const SUBMIT_LINK = [
   {
     submitText: 'Submission Rules and Guidelines PDF',
     link: '',
-  }
+  },
 ];
 
 /**

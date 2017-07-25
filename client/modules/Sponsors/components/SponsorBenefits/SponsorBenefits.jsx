@@ -11,6 +11,8 @@ import styles from './SponsorBenefits.scss';
  * Sponsors
  */
 
+const ButtonText = 'Become a Sponsor Today';
+
 const SPONSOR_INFO = [
   {
     title: 'Tier 1 Partner Sponsors',
@@ -54,7 +56,7 @@ function SponsorBenefits(props) {
   return (
     <section id={styles.SponsorBenefits} ref={props.componentRef}>
       <div id="sponsor-description" className={globalStyles.contentContainer}>
-        <h2>Benefits</h2>
+        <h2 className={globalStyles.sponsorBenefits}>Sponsor Benefits</h2>
         {SPONSOR_INFO.map(({ title, benefits }) => (
           <div className={styles.tierBlock}>
             <h4>{title}</h4>
@@ -65,12 +67,8 @@ function SponsorBenefits(props) {
             </ul>
           </div>
         ))}
-        <div className={styles.sponsorCallout}>
-          <h2>Support Us Now</h2>
-          <p>Contact our team to learn more about how you or your organization could contribute to D4SD’s 2017 design challenges to improve Mobility in San Diego.</p>
-          <div className={styles.sponsorBtn}>
-            <a className={styles.salmon} href="mailto:team@d4sd.org">BECOME A SPONSOR NOW</a>
-          </div>
+        <div className={globalStyles.sectionBtn}>
+          <a className={globalStyles.blueOutline} href="mailto:team@d4sd.org">{ButtonText}</a>
         </div>
       </div>
 

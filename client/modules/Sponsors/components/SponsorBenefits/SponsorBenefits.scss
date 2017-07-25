@@ -9,25 +9,17 @@ $button-size: 0.7em;
   width: $component-width-desktop;
 
   margin: 0 auto;
-  .sectionTitle {
-    text-align: center;
-    padding: 60px 0;
-    h3 {
-      font-size: 1.2em;
-    }
-    p {
-      font-size: 0.9em;
-    }
-  }
 
   .tierBlock {
     text-align: left;
     h3 {
       font-size: 1.2em;
-      text-align: center;
     }
     h4 {
-      text-align: center;
+      text-align: left;
+      text-transform: uppercase;
+      color: $theme-color-lightgrey;
+      font-size: 0.9em;
     }
 
     padding: 15px 0;
@@ -35,11 +27,7 @@ $button-size: 0.7em;
 
   .sponsorCallout {
     padding: 60px 0;
-    h2 {
-      text-align: center;
-    }
     p {
-      text-align: center;
       font-size: 0.9em;
       padding-bottom: 40px;
     }

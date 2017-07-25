@@ -1,9 +1,11 @@
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from 'components/Header/Header';
+import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
+import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
 
 import globalStyles from 'main.scss';
 
@@ -11,6 +13,14 @@ import CurrentSponsors from './components/CurrentSponsors/CurrentSponsors';
 import SponsorBenefits from './components/SponsorBenefits/SponsorBenefits';
 
 import styles from './Sponsors.scss';
+
+
+/**
+ * Constants
+ */
+
+const sectionTitle = 'Sponsors';
+const description = 'D4SD sponsors are committed to advancing innovation concepts aimed to improve mobility for the millions of residents in the San Diego region. Sponsorship may come in many forms. Financial sponsors provide monetary incentives for challenge competitions and hackathons planned throughout the 2017 Civic Challenge. In-kind sponsors can provide gift incentives and access to training, human resources, studio space, or technology.';
 
 /**
  * Sponsors
@@ -30,12 +40,13 @@ function Sponsors() {
       <Helmet
         title="Sponsors"
       />
-      <Header
-        backgroundImg={''}
-        headerText={'Sponsors'}
-        subheaderText={''}
-        showButton={false}
-      />
+      <Navbar />
+      <div className={globalStyles.contentWrapper}>
+        <StandardSectionBox
+          sectionTitle={sectionTitle}
+          text={description}
+        />
+      </div>
       <div className={globalStyles.contentWrapper}>
         <CurrentSponsors />
         <SponsorBenefits />

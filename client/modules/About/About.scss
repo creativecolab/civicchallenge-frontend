@@ -1,12 +1,4 @@
-@import "~styles/variables.scss";
-
-$h2-text: 1.2em;
-$p-text: 0.9em;
-
-$container-width: 70%;
-$space-between: 10%;
-
-$button-size: 0.7em;
+@import "~styles/variables";
 
 $img-height: 500px;
 $img-width: 700px;
@@ -16,11 +8,61 @@ $img-width: 700px;
 	height: 100%;
 	width: 100%;
 
-  .fullWidthImg {
-    height: $img-height;
-    width: $img-width;
+  .sponsorContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    margin: 0 auto;
+    .background-fill {
+      max-width: 200px;
+      max-height: 100px;
+
+      padding: 10px 30px;
+
+    }
+
+    .sponsorList {
+      // padding: $top-padding 0;
+    }
+  }
+
+  h2 {
+    color: rgb(32, 32, 32);
+    font-weight: 500;
+  }
+
+  .partners {
+    width: 100%;
+
+    display: flex;
+
+    a {
+      margin: 0 1.5%;
+      height: 10em;
+
+      display: flex;
+      flex-basis: 100%;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      line-height: 100%;
+
+      .sponsor-image {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  $team-width: 75%;
+
+  .fullWidthImg {
+    // height: $img-height;
+    // width: $img-width;
+    width: $team-width;
+
+    font-size: 0;
 
     img {
       height: 100%;
@@ -29,10 +71,12 @@ $img-width: 700px;
   }
 
   .people {
-    span {
-      font-size: 14px
-    }
+    margin: 3em 0;
+    width: $team-width;
 
+    font-size: 0.9em;
+    font-weight: 700;
+    color: rgb(82, 82, 82);
   }
 
 }
