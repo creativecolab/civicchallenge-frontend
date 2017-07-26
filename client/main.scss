@@ -21,26 +21,59 @@ html, body {
   font-size: $font-size;
   font-family: 'Montserrat', Helvetica, sans-serif;
   text-align: left;
+  color: $theme-color-black;
 
   p, span {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
   }
 
-  h2 {
+  h1 {
+    font-size: 2.25em; /* 36pt */
     padding: 0;
-    margin: 0;
-    font-size: 1.3em;
+    margin: 0; 
   }
 
-  h3.grey {
+  h2 {
+    font-size: 1.3em; /* 24pt */
+    padding: 0;
+    margin: 0; 
+  }
+
+  h3 {
+    font-size: 1em; /* 18pt */
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 1em;
+  }
+
+  h4 {
+    font-size: 0.875em; /* 14pt */
+    padding: 0;
+    margin: 0; 
+  }
+
+  h5 { /* labels */
+    font-size: 0.875em; /* 10pt */
+    padding: 0;
+    margin: 0; 
+  }
+
+  .orange {
+    color: $theme-color-orange;
+  }
+  
+  .grey {
     color: $theme-color-medgrey;
   }
 
+  .blue {
+    color: $theme-color-blue;
+  }
+
+  .white {
+    color: $theme-color-white;
+  }
 
 }
 
