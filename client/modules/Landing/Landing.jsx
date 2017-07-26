@@ -9,6 +9,7 @@ import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
+import TimeLineBox from './components/TimelineBox/TimelineBox';
 import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
 import WhyParticipate from './components/WhyParticipate/WhyParticipate';
 import Register from './components/Register/Register';
@@ -37,6 +38,7 @@ function Landing() {
       <Navbar />
       <LandingHeader />
       <ChallengeDescription />
+      <TimeLineBox />
       <WhyParticipate />
       <ChallengeGrid />
       <Register />

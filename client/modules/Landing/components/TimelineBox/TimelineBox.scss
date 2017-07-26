@@ -1,0 +1,30 @@
+@import '~styles/variables';
+
+$icon-dim: 100px;
+
+#TimelineBox {
+  padding: 90px 0;
+
+  background-color: $theme-color-blue;
+
+  color: #fff;
+
+  span.underline {
+    text-decoration: underline;
+    font-weight: 800;
+  }
+ 
+}
+
+@media (min-width: $desktop-min-width) {
+#ChallengeDescriptionWrapper{
+  width: $component-width-desktop
+}
+}
+
+@media (max-width: $mobile-max-width) {
+#ChallengeDescriptionWrapper {
+  width: $component-width-mobile;
+
+}
+}
