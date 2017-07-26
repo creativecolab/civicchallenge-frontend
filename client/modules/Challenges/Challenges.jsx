@@ -93,26 +93,24 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header />
-        <div className={globalStyles.contentWrapperGrid}>
-          <div className={styles.info}>
-            {INFO.map(({ sectionTitle, text }) => (
-              <StandardSectionBox
-                sectionTitle={sectionTitle}
-                text={text}
+        <div className={globalStyles.contentWrapper}>
+          {INFO.map(({ sectionTitle, text }) => (
+            <StandardSectionBox
+              sectionTitle={sectionTitle}
+              text={text}
+            />
+          ))}
+          <div className={globalStyles.gridStyle}>
+            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
+              <DBBox
+                title={title}
+                subtitle={subtitle}
+                thumbnail={thumbnail}
               />
             ))}
-            <div className={styles.DBBoxGrid}>
-              {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
-                <DBBox
-                  title={title}
-                  subtitle={subtitle}
-                  thumbnail={thumbnail}
-                />
-              ))}
-            </div>
           </div>
-          <Categories categories={this.state.categories} />
         </div>
+        <Categories categories={this.state.categories} />
         <Footer />
       </section>
     );

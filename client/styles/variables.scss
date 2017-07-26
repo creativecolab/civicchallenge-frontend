@@ -2,9 +2,12 @@ $font-size: 18px;
 $navbar-font-size: 14px;
 $component-vertical-margin: 3em;
 $component-width-mobile: 90%;
-$component-width-desktop: 750px;
+/*$component-width-desktop: 750px;*/
+$component-width-desktop: 960px;
+$component-width-desktopHD: 960px;
 
 $button-size: 0.75em;
+$button-padding: 15px 35px;
 
 $mobile-max-width: 768px;
 $desktop-min-width: $mobile-max-width + 1px;

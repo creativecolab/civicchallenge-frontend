@@ -40,7 +40,7 @@ function GetInvolvedHeader() {
     <div className={styles.getInvolvedHeader}>
       {HEADER_TEXT.map(({ sectionTitle, text }) => (
         <div className={styles.headerWrapper}>
-          <h2>{sectionTitle}</h2>
+          <h1>{sectionTitle}</h1>
           <p>{text}</p>
         </div>
       ))}

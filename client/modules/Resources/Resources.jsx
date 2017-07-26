@@ -86,9 +86,6 @@ function Resources() {
           sectionTitle={sectionTitle}
           text={description}
         />
-      </div>
-
-      <div className={globalStyles.contentWrapperGridGI}>
         <div className={globalStyles.gridStyle}>
           {RESOURCE_CONTENT.map(({ title, text, icon }) => (
             <ResourceBox
