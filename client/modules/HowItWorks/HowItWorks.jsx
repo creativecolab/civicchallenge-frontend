@@ -5,8 +5,6 @@ import Helmet from 'react-helmet';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
-import Timeline from './components/Process/Process';
-
 import styles from './HowItWorks.scss';
 
 
@@ -141,7 +139,6 @@ function HowItWorks() {
           a 3D model, etc. — anything that makes your idea concrete and testable.  In the <b>Implement</b> phase, selected teams will
           have opportunities to partner with City of San Diego to move forward on their civic proposals or with SCALE to explore
           funding options for an early-stage startup.</p>
-          <Timeline />
           {PROCESS_DETAILS.map(({ title, phaseNum, desc, activities }) => (
             <div className={styles.details}>
               <h3>{title}</h3>
