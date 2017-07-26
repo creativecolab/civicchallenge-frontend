@@ -1,36 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactGA from 'react-ga';
-import { Link } from 'react-router';
+
+import Navbar from 'components/Navbar/Navbar';
 
 import styles from './Header.scss';
-import landingLogo from './logo_black.png';
 
 /**
  * Constants
  */
-
-// TODO: Make homepage links scroll to correct area
-const LINKS = [
-  {
-    href: '/challenges',
-    text: 'Challenges',
-  },
-  {
-    href: '/resources',
-    text: 'Resources',
-  },
-  {
-    href: '/sponsors',
-    text: 'Sponsors',
-  },
-  {
-    href: '/about',
-    text: 'About',
-  },
-];
-
-/*  ,./
 
 /**
  * Header
@@ -49,35 +26,13 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function logClick() {
-  ReactGA.event({
-    category: 'Registration',
-    action: 'Clicked Register Today',
-    label: 'Challenge Text link',
-  });
-}
-
-function Header({ backgroundImg, headerText, subheaderText, showButton }, { router }) {
+function Header({ backgroundImg, headerText, subheaderText, showButton }) {
   return (
     <header className={styles.header}>
+      <Navbar />
       <div
         className={styles.background}
       />
-      <div className={styles.navbarContainer}>
-        <div className={styles.logo}>
-          <Link to="/"><img className="theLogo" src={landingLogo} alt="logo" /></Link>
-        </div>
-        <nav className={styles.navbar}>
-          {LINKS.map(({ href, text }) =>
-            <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
-          )}
-          <div className={styles.registerButton}>
-            <div className={styles.buttonContainer}>
-              <a onClick={logClick} href="/getinvolved">PARTICIPATE NOW</a>
-            </div>
-          </div>
-        </nav>
-      </div>
       <div className={styles.textContainer}>
         <section className={styles.text}>
           {headerText && <h1>{headerText}</h1>}
