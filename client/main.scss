@@ -108,7 +108,15 @@ div[data-reactroot] {
 }
 
 .gridStyle {
-  text-align: center;
+  text-align: left;
+}
+
+.sectionWrapper {
+  box-shadow: $theme-boxshadow;
+  width: 450px;
+  margin: 0 20px 20px 0;
+  vertical-align: bottom;
+  display: inline-block;
 }
 
 .placeholderWrapper {
@@ -145,6 +153,7 @@ div[data-reactroot] {
 
   margin: $space-between 0;
 
+  /*
   h2 { 
     padding: 20px 0;
     font-size: $h2-text;
@@ -174,7 +183,7 @@ div[data-reactroot] {
 
   span {
     width: $img-width;
-  } 
+  } */
 
 }
 

@@ -24,18 +24,20 @@ const defaultProps = {};
 
 function GetInvolvedBox({ title, text, buttonText, icon }) {
   return (
-    <div className={styles.getInvolvedBox}>
-      <div className={styles.boxWrapper}>
-        <div className={styles.boxContent}>
-          <img src={icon} alt={title} />
-          <h2>{title}</h2>
-          <p>{text}</p>
-          <div className={globalStyles.sectionBtn}>
-            <a className={globalStyles.blueOutline} href="">{buttonText}</a>
+    <section className={globalStyles.sectionWrapper}>
+      <div className={styles.getInvolvedBox}>
+        <div className={styles.boxWrapper}>
+          <div className={styles.boxContent}>
+            <img src={icon} alt={title} />
+            <h2>{title}</h2>
+            <p>{text}</p>
+            <div className={globalStyles.sectionBtn}>
+              <a className={globalStyles.blueOutline} href="">{buttonText}</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -29,7 +29,7 @@ const defaultProps = {};
 
 function DBBox({ title, subtitle, thumbnail }) {
   return (
-    <section className={styles.sectionWrapper}>
+    <section className={globalStyles.sectionWrapper}>
       <div className={styles.boxWrapper}>
         <section className={styles.DBBox}>
           <div className={styles.dbBoxImg}>
