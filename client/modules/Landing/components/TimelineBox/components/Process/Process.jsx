@@ -9,10 +9,10 @@ import LazyInlineSvg from 'components/LazyInlineSvg/LazyInlineSvg';
 
 import styles from './Process.scss';
 
-import diagnose from './diagnose.svg';
-import ideate from './ideate.svg';
-import propose from './propose.svg';
-import implement from './implement.svg';
+import diagnose from './discover.svg';
+import ideate from './ideateOrange.svg';
+import propose from './action.svg';
+import implement from './prototype.svg';
 
 /**
  * Constants

@@ -31,43 +31,41 @@ const OVERVIEW = [
   },
 ];
 
-const RESOURCES = [
-  {
-    challengeName: 'Accesibility',
-    external: [
-      {
-        resourceTitle: 'Resource Title',
-        description: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae',
-      },
-      {
-        resourceTitle: 'Resource Title',
-        description: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae',
-      },
-      {
-        resourceTitle: 'Resource Title',
-        description: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae',
-      },
-    ],
-    news: [
-      {
-        headline: 'News Article Headline',
-        date: 'August 9',
-      },
-      {
-        headline: 'News Article Headline',
-        date: 'August 9',
-      },
-      {
-        headline: 'News Article Headline',
-        date: 'August 9',
-      },
-      {
-        headline: 'News Article Headline',
-        date: 'August 9',
-      },
-    ],
-  },
-];
+const RESOURCES = {
+  challengeName: 'Accesibility',
+  external: [
+    {
+      resourceTitle: 'Resource Title',
+      description: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae',
+    },
+    {
+      resourceTitle: 'Resource Title',
+      description: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae',
+    },
+    {
+      resourceTitle: 'Resource Title',
+      description: 'Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae',
+    },
+  ],
+  news: [
+    {
+      headline: 'News Article Headline',
+      date: 'August 9',
+    },
+    {
+      headline: 'News Article Headline',
+      date: 'August 9',
+    },
+    {
+      headline: 'News Article Headline',
+      date: 'August 9',
+    },
+    {
+      headline: 'News Article Headline',
+      date: 'August 9',
+    },
+  ],
+};
 
 /**
  * DesignBrief
@@ -82,47 +80,113 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function DesignBrief() {
-  return (
-    <div className={styles.DesignBrief}>
-      <Helmet
-        title="Accessibility"
-      />
-      <Header
-        backgroundImg={''}
-        headerText={'Design Brief'}
-        subheaderText={''}
-        showButton={false}
-      />
-      <section className={styles.contentContainer}>
+class DesignBrief extends React.PureComponent {
+  static CURRENTSECTION_HEADER = 'header';
+  static CURRENTSECTION_OVERVIEW_BASE = 'overview';
+  static CURRENTSECTION_RESOURCES = 'resources';
 
-        <DBHeader />
+  static SCROLL_PX_PER_MS = 1000;
 
-        {OVERVIEW.map(({ title, text, link, linkText }) => (
-          <div className={styles.contentWrapper}>
-            <DBOverview
-              title={title}
-              text={text}
-              link={link}
-              linkText={linkText}
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentSection: DesignBrief.CURRENTSECTION_HEADER,
+    };
+  }
+
+  componentDidMount() {
+    this._onWindowScroll();
+    window.addEventListener('scroll', this._onWindowScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onWindowScroll);
+  }
+
+  _onWindowScroll = () => {
+    const { currentSection } = this.state;
+
+    let newCurrentSection = DesignBrief.CURRENTSECTION_HEADER;
+
+    if (this.resources.getBoundingClientRect().top <= 10) {
+      newCurrentSection = DesignBrief.CURRENTSECTION_RESOURCES;
+    } else {
+      for (let i = this.overviews.length - 1; i >= 0; i -= 1) {
+        if (this.overviews[i].getBoundingClientRect().top <= 10) {
+          newCurrentSection = `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}`;
+          break;
+        }
+      }
+    }
+
+    if (newCurrentSection !== currentSection) {
+      this.setState({
+        currentSection: newCurrentSection,
+      });
+    }
+  }
+
+  render() {
+    const { currentSection } = this.state;
+
+    return (
+      <div className={styles.DesignBrief}>
+        <Helmet
+          title="Accessibility"
+        />
+        <Header
+          backgroundImg={''}
+          headerText={'Design Brief'}
+          subheaderText={''}
+          showButton={false}
+        />
+        <section className={styles.contentContainer}>
+
+          <ul className={styles.sidebar}>
+            <a href="#introduction">
+              <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}>Introduction</li>
+            </a>
+            {OVERVIEW.map(({ title }, i) => (
+              <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
+                <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
+              </a>
+            ))}
+            <a href="#learningresources">
+              <li className={currentSection === DesignBrief.CURRENTSECTION_RESOURCES ? styles.current : ''}>Learning Resources</li>
+            </a>
+          </ul>
+
+          <div id={'introduction'} ref={(el) => { this.header = el; }}>
+            <DBHeader />
+          </div>
+
+          {OVERVIEW.map(({ title, text, link, linkText }, i) => (
+            <div id={title.replace(/( |\W)/g, '').toLowerCase()} className={styles.contentWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}>
+              <DBOverview
+                title={title}
+                text={text}
+                link={link}
+                linkText={linkText}
+              />
+            </div>
+          ))}
+
+          <div id={'learningresources'} ref={(el) => { this.resources = el; }}>
+            <Resources
+              title={RESOURCES.challengeName}
+              external={RESOURCES.external}
+              news={RESOURCES.news}
             />
           </div>
-        ))}
 
-        {RESOURCES.map(({ challengeName, external, news }) => (
-          <Resources
-            title={challengeName}
-            external={external}
-            news={news}
-          />
-        ))}
+        </section>
 
-      </section>
+        <Footer />
 
-      <Footer />
-
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 DesignBrief.propTypes = propTypes;

@@ -2,6 +2,10 @@
 
 $component-spacing: 3em;
 
+$TL-bg-color: #fff;
+
+$crc-margin: 50px;
+
 .process {
   margin: 0 auto;
   padding: 0;
@@ -36,7 +40,6 @@ $component-spacing: 3em;
       }
 
       .circles-container {
-        display: flex;
 
         .circle-container {
           $radius: 2.5 * $font-size;
@@ -48,18 +51,15 @@ $component-spacing: 3em;
 
           font-size: 0;
 
+          margin: $crc-margin;
+
           .circle {
             border-radius: 50%;
             width: $diameter;
             height: $diameter;
 
             display: inline-block;
-          }
-
-          @each $index, $color in $colors {
-            .circle-#{$index} {
-              background-color: $color;
-            }
+            background-color: $TL-bg-color;
           }
 
           .circle-overlay {
@@ -71,12 +71,6 @@ $component-spacing: 3em;
             position: absolute;
             left: 50%;
             display: inline-block;
-          }
-
-          @each $index, $color in $colors {
-            .circle-overlay-#{$index} {
-              background-color: darken-right($color);
-            }
           }
 
           .circle-icon {
@@ -98,6 +92,7 @@ $component-spacing: 3em;
             svg {
               width: $diameter;
               height: $diameter;
+              fill: $theme-color-orange;
             }
           }
         }
@@ -107,27 +102,29 @@ $component-spacing: 3em;
         $i: $j - 1;
 
         .connector-#{$i}-#{$j} {
-          margin-left: 12.5% + ($i * 25%);
-          width: 25%;
-          height: 12.5%;
+          display: block;
+          margin-top: 50px;;
+          width: 10px;
+          height: 50px;
 
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
           z-index: 1;
 
-          background: linear-gradient(to right, darken-right(map-get($colors, $i)), map-get($colors, $j));
+          background: $TL-bg-color;
         }
       }
     }
 
     .timeline-text-container {
-      display: flex;
 
       .timeline-text {
         flex: 1;
 
         text-align: center;
+
+        color: #fff;
 
         .months {
           margin-top: 1em;
@@ -135,19 +132,17 @@ $component-spacing: 3em;
 
           font-size: 0.7em;
           font-weight: bold;
-          color: rgb(189, 191, 201);
         }
 
         .title {
           text-transform: uppercase;
           font-size: 0.9em;
           font-weight: bold;
-          color: rgb(69, 76, 119);
         }
 
         .description {
           font-size: 0.8em;
-          color: rgb(69, 76, 119);
+          opacity: 0.7;
         }
       }
 
