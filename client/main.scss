@@ -1,5 +1,6 @@
 @import '~styles/variables';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 $page-padding-width: 328px;
 $page-padding-height: 124px;
@@ -18,7 +19,7 @@ html, body {
   position: relative;
 
   font-size: $font-size;
-  font-family: Avenir, Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
 
   p, span {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
@@ -106,9 +107,12 @@ div[data-reactroot] {
     margin: 0;
   }
 
+  h3 {
+
+  }
   h4 {
     font-weight: 600;
-    text-align: center;
+    text-align: left;
   }
 
   h4.block-style {
@@ -234,6 +238,20 @@ div[data-reactroot] {
     text-transform: uppercase;
 
     border: 2px solid $theme-color-red;
+
+  }
+
+  a.orangeOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    color: $theme-color-orange;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-orange;
 
   }
 

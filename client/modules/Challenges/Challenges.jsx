@@ -15,20 +15,21 @@ import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
 
-import publicTransit from './public-transit.png';
+/* import publicTransit from './public-transit.png';
 import accessibility from './accessibility.png';
-import walking from './walking.png';
-import parking from './parking.png';
+import parking from './parking.png'; */
 import traffic from './traffic.jpg';
 import autonomousCars from './autonomous-cars.png';
 import aging from './aging.jpg';
+import walking from './walking.png';
+
 /**
  * Challenges
  */
 
 const INFO = [
   {
-    sectionTitle: 'What is a Challenge?',
+    sectionTitle: 'The Challenge Briefs',
     text: 'D4SD is collaborating with the Design Forward Alliance to host a 2017 large-scale human-centered design challenge around the complex civic issue of Mobility. People need to move around a city. Whether for work or play—and by car, bike, train, bus, boat, or foot— mobility significant affects the daily lives of millions. San Diego is culturally and economically diverse, as well as geographical dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility challenges below investigate concerns currently facing San Diegans, as well as take a look to future transportation systems.',
   },
 ];
@@ -36,46 +37,28 @@ const INFO = [
 const DESIGN_BRIEFS = [
   {
     id: '',
-    name: 'Safer Walking and Biking',
-    summary: 'What can be done to improve pedestrian and bicycle safety in San Diego? Since 2001, more than 8,000 pedestrians have been injured and 270 killed in San Diego to to traffic accidents.',
+    subtitle: 'Promoting Walkable and Bikeable Communities',
+    title: 'How can we avoid dangerous bike accidents?',
     thumbnail: walking,
   },
   {
     id: '',
-    name: 'Accommodating Aging',
-    summary: 'Mobility for seniors is not only about getting around, it is also about physical and social well-being. Seniors who are physically active and able to get around independently have greater flexibility, muscle strength, balance, and bone density---all of which help them recover more rapidly from illness and injuries, and live longer, healthier lives. What transportation services or initiatives might we imagine for our cities senior residents?',
+    subtitle: 'Improving Accessibility',
+    title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
   },
   {
     id: '',
-    name: 'Mitigating Traffic',
-    summary: 'Residents of San Diego deal with congested freeways every day---northbound in the morning, and even slower southbound in the evening. Why is it this way? Could we make changes to the infrastructure, traffic behavior, or policy-wise to reduce our dependence on cars? Our dependence on cars is not only bad for traffic and congestion, but also our health and the environment.',
+    subtitle: 'Enhancing the Commuter Experience',
+    title: 'How can we make commuting bearable (and maybe even fun)?',
     thumbnail: traffic,
   },
   {
     id: '',
-    name: 'Facilitating Public Transit Feedback',
-    summary: 'Users of public transport in San Diego have recently reported increased dissatisfaction with transit costs, public transit availability, and cleanliness at the public transit areas. The Metropolitan Transit System (MTS) and North Country Transit District (NCTD) need better ways of hearing and responding to public transit riders.',
-    thumbnail: publicTransit,
-  },
-  {
-    id: '',
-    name: 'Balancing Parking Demand',
-    summary: 'In a city with over 2.2 million personal vehicles, parking is a widespread problem. As the population increases more cars join the road each year, better systems are needed to manage and plan for new parking infrastructure. How might we help drivers and planners navigate the challenge of parking in San Diego?',
-    thumbnail: parking,
-  },
-  {
-    id: '',
-    name: 'Preparing for Autonomous Vehicles',
-    summary: 'San Diego is one of 10 cities selected to test self-driving cars. Although there are risks to inviting Autonomous Vehicles onto our city streets, highways and byways. How might we prepare for this major advance in transportation?',
+    subtitle: 'Preparing for Autonomous Vehicles',
+    title: 'Driverless cars? How will this change the experience?',
     thumbnail: autonomousCars,
-  },
-  {
-    id: '',
-    name: 'Improving Accessibility',
-    summary: 'People with disabilities face unique challenges when getting around the city. The lack of convenient, accessible, and affordable mobility for disabled people is a major problem in San Diego: How might we imagine improving access to our community for people with disabilities?',
-    thumbnail: accessibility,
-  },
+  }
 ];
 
 
@@ -120,10 +103,10 @@ class Challenges extends Component {
             ))}
           </div>
           <div className={styles.DBBoxGrid}>
-            {DESIGN_BRIEFS.map(({ name, summary, thumbnail }) => (
+            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
               <DBBox
-                title={name}
-                desc={summary}
+                title={title}
+                subtitle={subtitle}
                 thumbnail={thumbnail}
               />
             ))}

@@ -10,9 +10,37 @@ $h2-mobile: 1.2em;
 $margin-inbetween: 40px;
 $padding-mobile: $margin-inbetween / 2;
 
-
-
 .sectionWrapper {
+  box-shadow: $theme-boxshadow;
+  width: 50%;
+  .DBBox {
+    margin: 10px 0;
+
+    .dbBoxImg {
+      /*width: $imgBox-dim;
+      height: $imgBox-dim-height;*/
+      img {
+        width: 100%;
+        height:  auto;
+      }
+    }
+
+    .dbBoxText {
+      max-width: 100%;
+      padding: $padding-mobile*2 $padding-mobile;
+
+      h4 {
+        font-size: $h2-mobile * 0.7;
+      }
+
+      h2 {
+        font-size: $h2-mobile;
+      }
+    }
+  }
+}
+
+/*.sectionWrapper {
   display: inline-block;
   vertical-align: bottom;
   .DBBox {
@@ -72,6 +100,7 @@ $padding-mobile: $margin-inbetween / 2;
     }
   }
 }
+*/
 
 @media (min-width: $desktop-min-width) {
   
