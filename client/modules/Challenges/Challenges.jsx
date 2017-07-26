@@ -37,25 +37,25 @@ const INFO = [
 const DESIGN_BRIEFS = [
   {
     id: '',
-    subtitle: 'Promoting Walkable and Bikeable Communities',
+    subtitle: 'PROMOTING WALKABLE AND BIKEABLE COMMUNITIES',
     title: 'How can we avoid dangerous bike accidents?',
     thumbnail: walking,
   },
   {
     id: '',
-    subtitle: 'Improving Accessibility',
+    subtitle: 'IMPROVING ACCESSIBILITY',
     title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
   },
   {
     id: '',
-    subtitle: 'Enhancing the Commuter Experience',
+    subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
     title: 'How can we make commuting bearable (and maybe even fun)?',
     thumbnail: traffic,
   },
   {
     id: '',
-    subtitle: 'Preparing for Autonomous Vehicles',
+    subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
     title: 'Driverless cars? How will this change the experience?',
     thumbnail: autonomousCars,
   }
@@ -101,15 +101,15 @@ class Challenges extends Component {
                 text={text}
               />
             ))}
-          </div>
-          <div className={styles.DBBoxGrid}>
-            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
-              <DBBox
-                title={title}
-                subtitle={subtitle}
-                thumbnail={thumbnail}
-              />
-            ))}
+            <div className={styles.DBBoxGrid}>
+              {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
+                <DBBox
+                  title={title}
+                  subtitle={subtitle}
+                  thumbnail={thumbnail}
+                />
+              ))}
+            </div>
           </div>
           <Categories categories={this.state.categories} />
         </div>

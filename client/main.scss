@@ -20,10 +20,27 @@ html, body {
 
   font-size: $font-size;
   font-family: 'Montserrat', Helvetica, sans-serif;
+  text-align: left;
 
   p, span {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
   }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.3em;
+  }
+
+  h3.grey {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: $theme-color-medgrey;
+  }
+
 
 }
 
@@ -107,12 +124,8 @@ div[data-reactroot] {
     margin: 0;
   }
 
-  h3 {
-
-  }
   h4 {
     font-weight: 600;
-    text-align: left;
   }
 
   h4.block-style {
@@ -207,7 +220,8 @@ div[data-reactroot] {
 
 .sectionBtn {
 
-  margin: 40px 0 0 0;
+  margin: 10px 0;
+  font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
 
   @media (max-width: $mobile-max-width) {
     margin: 30px 0 0 0;
@@ -244,7 +258,7 @@ div[data-reactroot] {
   a.orangeOutline {
     text-decoration: none;
     padding: 10px 30px;
-
+    margin: 0;
     color: $theme-color-orange;
     font-size: $button-size;
     font-weight: bold;

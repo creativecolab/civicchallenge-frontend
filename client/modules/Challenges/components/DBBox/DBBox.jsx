@@ -38,10 +38,12 @@ function DBBox({ title, subtitle, thumbnail }) {
           </div>
         </div>
         <div className={styles.dbBoxText} >
-          <h3>{subtitle}</h3>
+          <h3 className={globalStyles.grey}>{subtitle}</h3>
           <h2>{title}</h2>
-          <div className={globalStyles.sectionBtn}>
-            <a className={globalStyles.orangeOutline} href="">{ButtonText}</a>
+          <div className={styles.button}>
+            <div className={globalStyles.sectionBtn}>
+              <a className={globalStyles.orangeOutline} href="">{ButtonText}</a>
+            </div>
           </div>
         </div>
       </section>
