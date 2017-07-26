@@ -30,23 +30,27 @@ const defaultProps = {};
 function DBBox({ title, subtitle, thumbnail }) {
   return (
     <section className={styles.sectionWrapper}>
-      <section className={styles.DBBox}>
-        <div className={styles.dbBoxImg}>
-          <div className={styles.blackBox} />
-          <div className={styles.thumbnailImg}>
-            <img src={thumbnail} alt={title} />
-          </div>
-        </div>
-        <div className={styles.dbBoxText} >
-          <h3 className={globalStyles.grey}>{subtitle}</h3>
-          <h2>{title}</h2>
-          <div className={styles.button}>
-            <div className={globalStyles.sectionBtn}>
-              <a className={globalStyles.orangeOutline} href="">{ButtonText}</a>
+      <div className={styles.boxWrapper}>
+        <section className={styles.DBBox}>
+          <div className={styles.dbBoxImg}>
+            <div className={styles.blackBox} />
+            <div className={styles.thumbnailImg}>
+              <img src={thumbnail} alt={title} />
             </div>
           </div>
-        </div>
-      </section>
+          <div className={styles.dbBoxTextWrapper}>
+            <div className={styles.dbBoxText}>
+              <h3 className={globalStyles.grey}>{subtitle}</h3>
+              <h2>{title}</h2>
+              <div className={styles.button}>
+                <div className={globalStyles.sectionBtn}>
+                  <a className={globalStyles.orangeOutline} href="">{ButtonText}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
   );
 }

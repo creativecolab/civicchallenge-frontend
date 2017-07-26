@@ -7,12 +7,12 @@
   .info {
     width: $component-width-desktop;
     margin: 0 auto;
-
     @media (max-width: $mobile-max-width) {
       width: $component-width-mobile;
     }
     .DBBoxGrid {
       margin: 0 auto;
+      text-align: center;
     }
   }
 
