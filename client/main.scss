@@ -274,6 +274,27 @@ div[data-reactroot] {
 
   }
 
+  a.whiteOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid #fff;
+
+    &:hover {
+      transition: background-color 1s ease;
+      transition: color 0.5s ease;
+      color: $theme-color-blue;
+      background-color: #fff;
+    }
+
+  }
+
   a.salmonOutline {
     text-decoration: none;
     padding: 10px 30px;

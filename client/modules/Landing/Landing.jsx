@@ -37,8 +37,8 @@ function Landing() {
       <Navbar />
       <LandingHeader />
       <ChallengeDescription />
-      <ChallengeGrid />
       <WhyParticipate />
+      <ChallengeGrid />
       <Register />
       <Sponsors />
       <Footer />

@@ -1,10 +1,23 @@
 @import '~styles/variables';
 
-$source-sans: 'Open Sans';
-$button-size: 0.7em;
+$icon-dim: 100px;
 
 #ChallengeDescription {
   padding: 90px 0;
+
+  .challengeRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .textWrapper {
+      width: 80%;
+    }
+
+    img {
+      height: $icon-dim;
+    }
+  }
  
 }
 

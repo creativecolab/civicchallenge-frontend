@@ -4,11 +4,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
 
-import InternalButton from 'components/InternalButton/InternalButton';
-
 import globalStyles from 'main.scss';
 import styles from './Register.scss';
 
+/**
+ * Constants
+ */
+
+const sectionTitle = 'Ready to Get Started?';
+const description = 'Learn how you can get involved in the D4SD Mobility Challenge.';
+const btnLink = '/getinvolved';
+const btnText = 'Get Involved';
 
 /**
  * Register
@@ -27,18 +33,12 @@ const defaultProps = {};
 function Register(props) {
   return (
     <section id={styles.register} ref={props.componentRef}>
-      <div className={globalStyles.sectionTitle}>
-        <div className={styles.registerWrapper}>
-          <div className={styles.registerStatement}>
-            <h1>Ready to Take on the Challenge?</h1>
-          </div>
-          <div id={styles.sponsorRow}>
-            <div className={styles.button}>
-              <InternalButton
-                btnText="Register Now"
-                btnLink="/getinvolved"
-              />
-            </div>
+      <div className={globalStyles.componentWrapper}>
+        <div className={globalStyles.contentContainer}>
+          <h1>{sectionTitle}</h1>
+          <p>{description}</p>
+          <div className={globalStyles.sectionBtn}>
+            <a className={globalStyles.whiteOutline} href={btnLink}>{btnText}</a>
           </div>
         </div>
       </div>
