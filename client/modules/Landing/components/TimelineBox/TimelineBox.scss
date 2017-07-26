@@ -2,21 +2,16 @@
 
 $icon-dim: 100px;
 
-#ChallengeDescription {
+#TimelineBox {
   padding: 90px 0;
 
-  .challengeRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: $theme-color-blue;
 
-    .textWrapper {
-      width: 80%;
-    }
+  color: #fff;
 
-    img {
-      height: $icon-dim;
-    }
+  span.underline {
+    text-decoration: underline;
+    font-weight: 800;
   }
  
 }
