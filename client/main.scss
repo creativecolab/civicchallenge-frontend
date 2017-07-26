@@ -271,7 +271,7 @@ div[data-reactroot] {
 
   a.blueOutline {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
 
     color: $theme-color-blue;
     font-size: $button-size;
@@ -285,7 +285,7 @@ div[data-reactroot] {
 
   a.salmonOutline {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
 
     color: $theme-color-red;
     font-size: $button-size;
@@ -299,7 +299,7 @@ div[data-reactroot] {
 
   a.orangeOutline {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
     margin: 0;
     color: $theme-color-orange;
     font-size: $button-size;
@@ -313,7 +313,7 @@ div[data-reactroot] {
 
   a.salmon {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
 
     color: #fff;
     font-size: $button-size;
