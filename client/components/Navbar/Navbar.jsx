@@ -70,7 +70,7 @@ function Navbar({ backgroundImg, headerText, subheaderText, showButton }, { rout
           )}
           <div className={styles.registerButton}>
             <div className={styles.buttonContainer}>
-              <a onClick={logClick} href="/getinvolved">Participate Now</a>
+              <a onClick={logClick} href="/getinvolved">Get Involved</a>
             </div>
           </div>
         </nav>

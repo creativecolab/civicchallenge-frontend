@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import globalStyles from 'main.scss';
+
 import DBResources from './components/DBResources/DBResources';
 import ResourceNews from './components/ResourceNews/ResourceNews';
 
@@ -39,7 +41,7 @@ function Resources({ title, external, news }) {
           ))}
         </div>
 
-        <div className={styles.externalResources}>
+        <div className={globalStyles.contentWrapperGridGI}>
           <h3>News about {title}</h3>
           {news.map(({ headline, date }) => (
             <div className={styles.resourcesComponentWrapper}>

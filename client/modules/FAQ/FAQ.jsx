@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from 'components/HeaderNoBanner/HeaderNoBanner';
+import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 
 import QuestionBox from './components/QuestionBox/QuestionBox';
@@ -90,12 +90,7 @@ function FAQ() {
       <Helmet
         title="FAQ"
       />
-      <Header
-        backgroundImg={''}
-        headerText={'FAQ'}
-        subheaderText={''}
-        showButton={false}
-      />
+      <Navbar />
 
       <div className={styles.faqHeader}>
         <h1>FAQ</h1>
