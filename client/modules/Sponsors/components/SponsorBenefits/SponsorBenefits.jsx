@@ -26,7 +26,6 @@ const SPONSOR_INFO = [
   {
     title: 'Tier 2 VIP Sponsors',
     benefits: [
-      'VIP Access for up to two people to the Design Forward Summit, including access to top students, designers, business leaders and other local talent.',
       'Opportunity to sponsor, mentor, and work directly with a design team that enters this year’s Mobility Challenge.',
       'Invitation to join the D4SD Executive Planning Committee for next year.',
       'Benefits from Tier 3 sponsors are included at this level.',
@@ -36,7 +35,6 @@ const SPONSOR_INFO = [
     title: 'Tier 3 In-Kind Sponsors',
     benefits: [
       'Promotion of organization’s logo and/or name promotion on the D4SD website.',
-      'Tickets for up to two people to the Design Forward Summit.',
     ],
   },
 ];

@@ -21,12 +21,7 @@ function DBHeader() {
     <section className={styles.DBHeader}>
       <div className={styles.DBHeaderText}>
         <h2>Introduction</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, lorem sit amet pellentesque accumsan,
-         massa nisl commodo dui, quis gravida enim eros ut enim. Sed rutrum ornare quam, nec suscipit nulla pulvinar
-         sollicitudin. Aenean dignissim mi augue, id lobortis mauris scelerisque quis. Nam pellentesque et nulla eu egestas.
-         Suspendisse elit ex, lobortis et pharetra facilisis, sagittis eget mi. Fusce lobortis, quam id sollicitudin imperdiet, felis sem viverra tellus,
-         at porttitor elit enim quis diam. Ut pellentesque dui ac interdum dictum.
-        Aenean malesuada, turpis ut porta tempor, urna lorem eleifend neque, vel porta ante ipsum sed nisl.</p>
+        <p>Many people face challenges getting around. Mobility can be difficult for any combination of physical, sensory, mental, or cognitive impairments. Approximately 17% of San Diegans have some form of impairment that affects mobility. Individuals older than 60 represent the fastest growing segment of the population, with the number of senior residents expected to double by 2030 [cite]. These challenges are worsened by the sprawling nature of our region compared to other cities, since people often go farther to reach their destination.</p>
         <div className={globalStyles.sectionBtn}>
           <a className={globalStyles.blueOutline} href="">Take the challenge</a>
         </div>

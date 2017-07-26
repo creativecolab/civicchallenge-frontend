@@ -40,7 +40,7 @@ const RESOURCE_CONTENT = [
     icon: latestIcon,
   },
   {
-    title: 'FAQ',
+    title: 'FAQs',
     text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
     icon: faqIcon,
   },
