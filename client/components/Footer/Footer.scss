@@ -1,7 +1,7 @@
 @import '~styles/variables';
 
 .footer {
-  background-color: rgb(45, 50, 77);
+  background-color: $theme-color-medgrey;
   color: #fff;
 
   @media (min-width: $desktop-min-width) {

@@ -14,6 +14,9 @@ const propTypes = {
   text: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  boxColor: PropTypes.string.isRequired,
+  textColor: PropTypes.string.isRequired,
+  button: PropTypes.string.isRequired
 };
 
 const contextTypes = {
@@ -22,9 +25,10 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function GetInvolvedBox({ title, text, buttonText, icon }) {
+function GetInvolvedBox({ title, text, buttonText, icon, boxColor, textColor, button }) {
+  const sectStyle = { backgroundColor: boxColor, color: textColor };
   return (
-    <section className={globalStyles.sectionWrapper}>
+    <section className={globalStyles.sectionWrapper} style={sectStyle}>
       <div className={styles.getInvolvedBox}>
         <div className={styles.boxWrapper}>
           <div className={styles.boxContent}>
@@ -32,7 +36,7 @@ function GetInvolvedBox({ title, text, buttonText, icon }) {
             <h2>{title}</h2>
             <p>{text}</p>
             <div className={globalStyles.sectionBtn}>
-              <a className={globalStyles.blueOutline} href="">{buttonText}</a>
+              <a className={button} href="">{buttonText}</a>
             </div>
           </div>
         </div>
