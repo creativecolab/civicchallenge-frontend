@@ -18,47 +18,29 @@ import styles from './Resources.scss';
 import toolsIcon from './icon-tools.png';
 import latestIcon from './icon-latest.png';
 import faqIcon from './icon-faq.png';
-import networkIcon from './icon-resources.png';
-import techIcon from './icon-tech.png';
-import resourceIcon from './icon-resource.png';
 
 /**
  * Constants
  */
 
 const sectionTitle = 'Resources';
-const description = 'There are multiple ways you can get involved in the D4SD Mobility Challenge. Check out how you can make an impact below! Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.';
+const description = 'This page provides a wealth of resources to help you learn methods for human-centered design, find about the latest technology related to mobility, and get answers to your frequently asked questions.';
 
 const RESOURCE_CONTENT = [
   {
     title: 'Design Tools & Tips',
-    text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
+    text: 'The human-centered design process involves discovering needs through user research methods, brainstorming ideas, prototyping the best ideas, and testing your solutions with real users.',
     icon: toolsIcon,
   },
   {
     title: 'Latest in Mobility',
-    text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
+    text: 'Cities across the globe grapple with many of the mobility issues in San Diego, click here for a list of research papers and popular articles that we have found useful.',
     icon: latestIcon,
   },
   {
     title: 'FAQs',
-    text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
+    text: 'Got questions? We’ve got answers! Click here for information about the competition, to how to find a team, submit your design concepts and access the D4SD Slack discussions.',
     icon: faqIcon,
-  },
-  {
-    title: 'Resource',
-    text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
-    icon: networkIcon,
-  },
-  {
-    title: 'Technology',
-    text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
-    icon: techIcon,
-  },
-  {
-    title: 'Resource',
-    text: 'Maecenas mattis posuere purus nec fringilla. Nullam a gravida quam lorem ipsum dolor lorem ipsum dolor',
-    icon: resourceIcon,
   },
 ];
 

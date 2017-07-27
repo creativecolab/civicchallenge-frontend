@@ -17,7 +17,7 @@ import styles from './TimelineBox.scss';
  */
 
 const sectionTitle = 'We challenge <u>YOU</u> to design solutions that improve the experience of moving around in San Diego.';
-const description = 'This year’s theme for D4SD’s inaugural Challenge is mobility. We want YOU to develop solutions for the city’s most pressing mobility challenges using design thinking methodologies… needs revision';
+const description = 'This year’s theme for D4SD’s inaugural Challenge is mobility. We want YOU to develop solutions for the city’s most pressing mobility challenges using human-centered design.';
 
 /**
  * TimelineBox
@@ -46,7 +46,7 @@ function TimelineBox(props) {
             />
             <p>{description}</p>
           </div>
-          <div classsName={styles.timeline}>
+          <div className={styles.timeline}>
             <Timeline />
           </div>
         </div>
