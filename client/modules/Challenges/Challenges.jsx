@@ -24,10 +24,12 @@ import walking from './biking.png';
  * Challenges
  */
 
+const dummyLink = '';
+
 const INFO = [
   {
     sectionTitle: 'Challenge Briefs',
-    text: 'The challenges below explore the concerns currently facing San Diegans while also looking towards the future of transportation. Join a conversation about the issue that concerns you most and find teammates to submit a proposal! ',
+    text: 'D4SD is collaborating with the Design Forward Alliance to host a 2017 large-scale human-centered design challenge around the complex civic issue of Mobility. People need to move around a city. Whether for work or play—and by car, bike, train, bus, boat, or foot— mobility significant affects the daily lives of millions. San Diego is culturally and economically diverse, as well as geographical dispersed, which makes it a ripe topic for exploring issues around transportation. The mobility challenges below investigate concerns currently facing San Diegans, as well as take a look to future transportation systems.',
   },
 ];
 
@@ -40,22 +42,22 @@ const DESIGN_BRIEFS = [
   },
   {
     id: '',
-    name: 'Enhancing the Commuter Experience',
-    summary: 'How can we make commuting bearable (and maybe even fun)?',
+    subtitle: 'IMPROVING ACCESSIBILITY',
+    title: 'How do we help everyone reach their destination?',
+    thumbnail: aging,
+  },
+  {
+    id: '',
+    subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
+    title: 'How can we make commuting bearable (and maybe even fun)?',
     thumbnail: traffic,
   },
   {
     id: '',
-    name: 'Preparing for Autonomous Vehicles',
-    summary: 'Driverless cars? How will this change the experience?',
+    subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
+    title: 'Driverless cars? How will this change the experience?',
     thumbnail: autonomousCars,
-  },
-  {
-    id: '',
-    name: 'Improving Accessibility',
-    summary: 'How do we help everyone reach their destination?',
-    thumbnail: aging,
-  },
+  }
 ];
 
 
@@ -90,26 +92,25 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header />
-        <div className={globalStyles.contentWrapperGrid}>
-          <div className={styles.info}>
-            {INFO.map(({ sectionTitle, text }) => (
-              <StandardSectionBox
-                sectionTitle={sectionTitle}
-                text={text}
-              />
-            ))}
-          </div>
-          <div className={styles.DBBoxGrid}>
-            {DESIGN_BRIEFS.map(({ name, summary, thumbnail }) => (
+        <div className={globalStyles.contentWrapper}>
+          {INFO.map(({ sectionTitle, text }) => (
+            <StandardSectionBox
+              sectionTitle={sectionTitle}
+              text={text}
+            />
+          ))}
+          <div className={globalStyles.gridStyle}>
+            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
               <DBBox
-                title={name}
-                desc={summary}
+                title={title}
+                subtitle={subtitle}
                 thumbnail={thumbnail}
+                linkUrl={dummyLink}
               />
             ))}
           </div>
-          <Categories categories={this.state.categories} />
         </div>
+        <Categories categories={this.state.categories} />
         <Footer />
       </section>
     );

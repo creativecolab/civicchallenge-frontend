@@ -9,7 +9,7 @@ import styles from './DBBox.scss';
  * Constants
  */
 
-const ButtonText = 'Learn More';
+const ButtonText = 'Coming Soon';
 
 /**
  * DBBox
