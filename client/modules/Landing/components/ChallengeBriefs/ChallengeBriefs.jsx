@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withCollectRef } from 'util/RefCollector';
+import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
 
@@ -69,7 +70,11 @@ function ChallengeBriefs(props) {
     <section id={styles.ChallengeBriefs} ref={props.componentRef}>
       <div className={styles.contentWrapper}>
         <div className={styles.contentRow}>
-          <div className={globalStyles.gridStyle}>
+          <div className={styles.textWrapper}>
+            <h1>{sectionTitle}</h1>
+            <p>{description}</p>
+          </div>
+          <div className={classNames([globalStyles.gridStyle, styles.briefsWrapper])}>
             {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
               <DBBox
                 title={title}
@@ -78,10 +83,6 @@ function ChallengeBriefs(props) {
                 linkUrl={dummyLink}
               />
             ))}
-          </div>
-          <div className={styles.textWrapper}>
-            <h1>{sectionTitle}</h1>
-            <p>{description}</p>
           </div>
         </div>
         {/* <div className={styles.challengeRow}>
