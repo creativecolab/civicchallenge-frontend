@@ -27,6 +27,8 @@ import walking from './walking.png';
  * Challenges
  */
 
+const dummyLink = 'designbrief';
+
 const INFO = [
   {
     sectionTitle: 'Challenge Briefs',
@@ -106,6 +108,7 @@ class Challenges extends Component {
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}
+                linkUrl={dummyLink}
               />
             ))}
           </div>

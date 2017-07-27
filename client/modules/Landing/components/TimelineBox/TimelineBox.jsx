@@ -35,9 +35,9 @@ const defaultProps = {};
 
 function TimelineBox(props) {
   return (
-    <section id={styles.TimelineBox} ref={props.componentRef}>
+    <section id={styles.timelineBox} ref={props.componentRef}>
       <div className={globalStyles.contentWrapper}>
-        <div className={styles.challengeRow}>
+        <div className={styles.timelineWrapper}>
           <div className={styles.textWrapper}>
             <h1
               dangerouslySetInnerHTML={{
@@ -46,7 +46,9 @@ function TimelineBox(props) {
             />
             <p>{description}</p>
           </div>
-          <Timeline />
+          <div classsName={styles.timeline}>
+            <Timeline />
+          </div>
         </div>
       </div>
     </section>

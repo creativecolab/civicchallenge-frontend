@@ -23,25 +23,25 @@ const TIMELINE_ITEMS = [
     image: diagnose,
     months: '',
     title: 'Discover',
-    description: 'Identify citizens’ needs then frame the most significant challenges around mobility<br />in San Diego',
+    description: 'Identify citizens’ needs then frame the most significant challenges around mobility in San Diego',
   },
   {
     image: ideate,
     months: '',
     title: 'Ideate',
-    description: 'Generate many creative solutions to address<br />the key challenges',
+    description: 'Generate many creative solutions <br />to address the key challenges',
   },
   {
     image: propose,
     months: '',
     title: 'Prototype',
-    description: 'Form teams and build<br />mockups of solutions',
+    description: 'Form teams and build <br />mockups of solutions',
   },
   {
     image: implement,
     months: '',
     title: 'Implement',
-    description: 'Submit solutions for<br />judging by civic leaders<br />and business investors',
+    description: 'Submit solutions for<br />judging by civic leaders and business investors',
   },
 ];
 
@@ -50,8 +50,8 @@ const TIMELINE_ITEMS = [
  * TimelineText
  */
 
-function TimelineText({ active, title, description, months }) {
-  const classes = [styles.timelineText];
+function TimelineText({ active, title, description, i, months }) {
+  const classes = [styles.timelineText, styles[`timelineText${i}`]];
   if (!active) {
     classes.push(styles.inactiveText);
   }
@@ -74,6 +74,7 @@ TimelineText.propTypes = {
   active: PropTypes.bool,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  i: PropTypes.number.isRequired,
   months: PropTypes.string.isRequired,
 };
 
@@ -151,6 +152,7 @@ function Process({ phase, mini }) {
         <TimelineText
           key={item.title}
           active={isActive}
+          i={i}
           {...item}
         />
       );

@@ -39,6 +39,7 @@ $theme-color-offwhite: #EFEFEF;
 $theme-color-lightgrey: #838383;
 $theme-color-box-lightgrey: #F9F9F9;
 
+$theme-color-callout-grey: #E6E6E6;
 
 $theme-color-p-text: #212121;
 
@@ -52,6 +53,8 @@ $font-color-nonwhitebkgd: rgb(255, 255, 255);
 
 
 /* spacing variables */
+$icon-right-margin: 10px;
+
 $header-img-dim: 250px;
 $right-side-width: 60%;
 
@@ -68,3 +71,5 @@ $spacing-margin: 40px;
 
 $resource-img-dim: 80px;
 $resource-content-width: 80%;
+
+$resource-padding: 50px;
