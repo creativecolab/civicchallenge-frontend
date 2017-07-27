@@ -8,9 +8,11 @@ $radius: 2 * $font-size;
 $diameter: 2 * $radius;
 $crc-margin: 50px;
 
+$text-width-desktop: 350px;
+
 .process {
   padding: 0;
-  width: 400px;
+  width: $text-width-desktop;
   display: inline-block;
 
   vertical-align: middle;
