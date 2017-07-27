@@ -11,6 +11,8 @@ $font-color: #fff;
 
   color: $font-color;
 
+  z-index: 9999;
+
   .navbar-container {
     height: $navbar-height;
     //border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP

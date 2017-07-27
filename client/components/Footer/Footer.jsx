@@ -70,7 +70,9 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change.</div>
+      <div className={styles.copyright}>
+        <p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change.</p>
+      </div>
     </footer>
   );
 
