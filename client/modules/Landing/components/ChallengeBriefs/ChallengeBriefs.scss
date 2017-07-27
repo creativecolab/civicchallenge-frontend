@@ -1,0 +1,45 @@
+@import '~styles/variables';
+
+$icon-dim: 100px;
+
+#ChallengeBriefs {
+  padding: 90px 0;
+  background-color: $theme-color-lightblue;
+
+  .contentWrapper {
+    width: 1200px;
+    margin: 0 auto; 
+
+    @media (max-width: $mobile-max-width) {
+      width: $component-width-mobile;
+    }
+  }
+
+  .contentRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .briefsWrapper {
+      width: 66%;
+    }
+
+    .textWrapper {
+      width: 33%;
+    }
+  }
+ 
+}
+
+@media (min-width: $desktop-min-width) {
+#ChallengeDescriptionWrapper{
+  width: $component-width-desktop
+}
+}
+
+@media (max-width: $mobile-max-width) {
+#ChallengeDescriptionWrapper {
+  width: $component-width-mobile;
+
+}
+}

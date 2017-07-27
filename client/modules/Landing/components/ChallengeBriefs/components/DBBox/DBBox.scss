@@ -10,8 +10,14 @@ $h2-mobile: 1.2em;
 $margin-inbetween: 40px;
 $padding-mobile: $margin-inbetween / 2;
 
+.sectionWrapper {
+  box-shadow: $theme-boxshadow;
+  width: 390px;
+  margin: 0 20px 20px 0;
+  vertical-align: bottom;
+  display: inline-block;
 
-.boxWrapper {
+  .boxWrapper {
   height: 100%;
 
   .DBBox {
@@ -30,13 +36,14 @@ $padding-mobile: $margin-inbetween / 2;
         height:  auto;
       }
     }
+
     .dbBoxTextWrapper {
       background-color: #fff;
       margin: 0;
       padding: 0;
       .dbBoxText {
         text-align: left;
-        padding: 25px 30px 35px 30px;
+        padding: 20px 25px 30px 25px;
         max-width: 100%;
         /*padding: $padding-mobile*2 $padding-mobile;*/
         .button {
@@ -45,7 +52,11 @@ $padding-mobile: $margin-inbetween / 2;
       }
     }
   }
+
 }
+
+}
+
 
 /*.sectionWrapper {
   display: inline-block;

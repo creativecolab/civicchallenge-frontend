@@ -10,10 +10,11 @@ import Footer from 'components/Footer/Footer';
 import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
 import TimeLineBox from './components/TimelineBox/TimelineBox';
-import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid';
+import ChallengeBriefs from './components/ChallengeBriefs/ChallengeBriefs';
 import WhyParticipate from './components/WhyParticipate/WhyParticipate';
 import Register from './components/Register/Register';
 import Sponsors from './components/Sponsors/Sponsors';
+/* import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid'; */
 
 import styles from './Landing.scss';
 
@@ -40,7 +41,7 @@ function Landing() {
       <ChallengeDescription />
       <TimeLineBox />
       <WhyParticipate />
-      <ChallengeGrid />
+      <ChallengeBriefs />
       <Register />
       <Sponsors />
       <Footer />

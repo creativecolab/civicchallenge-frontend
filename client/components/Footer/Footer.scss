@@ -4,6 +4,10 @@
   background-color: $theme-color-medgrey;
   color: #fff;
 
+  a {
+    color: #fff;
+  }
+
   @media (min-width: $desktop-min-width) {
     padding: 3%;
 

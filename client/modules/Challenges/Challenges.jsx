@@ -15,13 +15,10 @@ import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
 
-/* import publicTransit from './public-transit.png';
-import accessibility from './accessibility.png';
-import parking from './parking.png'; */
-import traffic from './traffic.jpg';
-import autonomousCars from './autonomous-cars.png';
-import aging from './aging.jpg';
-import walking from './walking.png';
+import traffic from './traffic.png';
+import autonomousCars from './autonomous.png';
+import aging from './accessibility_2.jpg';
+import walking from './biking.png';
 
 /**
  * Challenges
@@ -39,7 +36,7 @@ const INFO = [
 const DESIGN_BRIEFS = [
   {
     id: '',
-    subtitle: 'PROMOTING WALKABLE AND BIKEABLE COMMUNITIES',
+    subtitle: 'PROMOTING WALKING AND BIKING',
     title: 'How can we avoid dangerous bike accidents?',
     thumbnail: walking,
   },

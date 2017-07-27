@@ -40,6 +40,7 @@ html, body {
     font-size: 1.3em; /* 24pt */
     padding: 0;
     margin: 0; 
+    font-weight: 100;
   }
 
   h3 {
@@ -168,38 +169,6 @@ div[data-reactroot] {
 .contentContainer {
 
   margin: $header-space;
-
-  /*
-  h2 { 
-    padding: 20px 0;
-    font-size: $h2-text;
-  }
-
-  h2.sponsorBenefits {
-    font-size: 1.3em;
-    font-weight: 500;
-    padding: 0;
-    margin: 0;
-  }
-
-  h4 {
-    font-weight: 600;
-  }
-
-  h4.block-style {
-    text-align: left;
-    text-transform: uppercase;
-    color: $theme-color-lightgrey;
-    font-size: 0.9em;
-  }
-
-  p {
-    font-size: $p-text;
-  }
-
-  span {
-    width: $img-width;
-  } */
 
 }
 

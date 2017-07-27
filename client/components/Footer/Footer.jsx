@@ -67,10 +67,11 @@ const defaultProps = {};
 function Footer() {
   const currentYear = (new Date()).getFullYear();
   const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
-
+  const flickrLink = 'https://www.flickr.com/photos/vxla/8726075399';
+  const flickr = 'https://www.flickr.com/';
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change.</div>
+      <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change. Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p></div>
     </footer>
   );
 
