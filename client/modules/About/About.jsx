@@ -16,8 +16,6 @@ import team from './team.png';
 import scaleSDLogo from './scale-sd-logo.png';
 import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
-import facebookIcon from './facebook-icon.png';
-import twitterIcon from './twitter-icon.png';
 /**
  * About
  */
@@ -32,6 +30,7 @@ const ABOUT = [
 ];
 
 const p1 = 'D4SD comprises an interdisciplinary group of designers, researchers, and developers led by UC San Diego professor, <a href="http://spdow.ucsd.edu/">Steven Dow</a>. By combining our team’s diverse talents in computer science, cognitive science, and interaction design, we have worked tirelessly to create a website and discussion platform, to provide educational resources on design and technology, and to partner with SCALE SD and the Design Forward Summit to host a series of exciting events.';
+const newp = 'Reach out to us at <a href="mailto:team@d4sd.org">team@d4sd.org</a> to give us feedback on the site or to share ideas or problems related to mobility in San Diego.';
 const p2 = 'D4SD strives to create a platform that demonstrates the value of human-centered design and produces solutions that could incubate into companies or longer-term projects that foster economic activity in the City of San Diego and beyond.';
 const p3 = 'Behind the scenes, the D4SD conducts research on design process. Our team investigates how best to obtain design feedback from many stakeholders, how to asks crowds to generate novels ideas, and how to improve online forums for civic discussions.';
 const p4 = 'All of us have the common goal of making this first ever city-wide design challenge a raving success for both the city and our research, but most of all for the citizens of San Diego!';
@@ -40,6 +39,8 @@ const p6 = 'Spring 2017 team:  Alejandro Panduro, Ariel Weingarten, Alvin Ho, An
 const p7 = 'Special thanks Michele Morris and Don Norman in the UCSD Design Lab, and to our partners at Design Forward Summit (Scott Robinson, James White, and Bobby Buchanan) and SCALE SD (Daniel Obodovski, Greg Hoover, and Marc Bielas).';
 const p8 = 'D4SD also wants to acknowledge the early need finding efforts by UC San Diego undergraduates in DSGN100 who surveyed residents, attended local meetups with city and community leaders, and conducted targeted interviews. Their efforts led to important insights that helped us understand the city’s unique mobility needs.';
 
+const flickrLink = 'https://www.flickr.com/photos/vxla/8726075399';
+const flickr = 'https://www.flickr.com/';
 const PARTNERS = [
   {
     href: 'http://designlab.ucsd.edu/',
@@ -92,10 +93,6 @@ function About() {
           ))}
         </div>
         <h2>Our Team</h2>
-        <div className={styles.mediaIcons}>
-          <img src={facebookIcon} alt="facebookIcon" />
-          <img src={twitterIcon} alt="twitterIcon" />
-        </div>
         <div className={styles.fullWidthImg}>
           <img src={team} alt="team" />
         </div>
@@ -105,7 +102,11 @@ function About() {
               __html: p1,
             }}
           />
-          <p>{p1}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: newp,
+            }}
+          />
           <p>{p2}</p>
           <p>{p3}</p>
           <p>{p4}</p>
@@ -114,6 +115,10 @@ function About() {
           <p>{p7}</p>
           <p>{p8}</p>
         </div>
+      </div>
+      <div className={globalStyles.contentWrapper}>
+        <h2>Acknowledgements</h2>
+        <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
       </div>
       <Footer />
     </section>

@@ -1,7 +1,7 @@
 @import "~styles/variables";
 
 $img-height: 500px;
-$img-width: 700px;
+$img-width: 960px;
 
 .about {
 
@@ -57,7 +57,7 @@ $img-width: 700px;
     }
   }
 
-  $team-width: 75%;
+  $team-width: 100%;
 
   .fullWidthImg {
     // height: $img-height;
@@ -69,13 +69,6 @@ $img-width: 700px;
     img {
       height: 100%;
       width: 100%;
-    }
-  }
-
-  .mediaIcons {
-    img {
-      height: 15px;
-      width: 15px;
     }
   }
 

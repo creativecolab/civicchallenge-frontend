@@ -2,7 +2,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import facebookIcon from './facebook-icon.png';
+import twitterIcon from './twitter-icon.png';
 import styles from './Footer.scss';
 
 // import designLabLogo from './design-lab-logo.png';
@@ -67,12 +68,18 @@ const defaultProps = {};
 function Footer() {
   const currentYear = (new Date()).getFullYear();
   const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
-  const flickrLink = 'https://www.flickr.com/photos/vxla/8726075399';
-  const flickr = 'https://www.flickr.com/';
   return (
     <footer className={styles.footer}>
+      <div className={styles.mediaIcons}>
+        <a href="https://www.facebook.com/DesignForSanDiego/">
+          <img src={facebookIcon} alt="facebookIcon" />
+        </a>
+        <a href="https://twitter.com/Design4SD">
+          <img src={twitterIcon} alt="twitterIcon" />
+        </a>
+      </div>
       <div className={styles.copyright}>
-        <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change. Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p></div>
+        <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to team@d4sd.org!</p></div>
       </div>
     </footer>
   );
