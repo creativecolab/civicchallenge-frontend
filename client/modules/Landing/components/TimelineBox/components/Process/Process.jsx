@@ -24,41 +24,25 @@ const TIMELINE_ITEMS = [
     image: diagnose,
     months: '',
     title: 'Discover',
-<<<<<<< Updated upstream
-    description: 'Frame the most significant challenges around mobility in San Diego',
-=======
     description: 'Frame the most significant<br />challenges around mobility<br />in San Diego',
->>>>>>> Stashed changes
   },
   {
     image: ideate,
     months: '',
     title: 'Ideate',
-<<<<<<< Updated upstream
-    description: 'Generate many creative solutions to address the key challenges',
-=======
     description: 'Generate many creative<br />solutions to address the key<br />challenges',
->>>>>>> Stashed changes
   },
   {
     image: propose,
     months: '',
     title: 'Prototype',
-<<<<<<< Updated upstream
-    description: 'Form teams and build mockups of solutions',
-=======
     description: 'Form teams and build<br />mockups of solutions',
->>>>>>> Stashed changes
   },
   {
     image: implement,
     months: '',
     title: 'Implement',
-<<<<<<< Updated upstream
-    description: 'Submit solutions for judging by civic leaders and experts',
-=======
     description: 'Submit solutions for <br />judging by civic leaders<br />and experts',
->>>>>>> Stashed changes
   },
 ];
 
