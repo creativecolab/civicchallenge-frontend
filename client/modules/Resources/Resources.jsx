@@ -18,9 +18,6 @@ import styles from './Resources.scss';
 import toolsIcon from './icon-tools.png';
 import latestIcon from './icon-latest.png';
 import faqIcon from './icon-faq.png';
-import networkIcon from './icon-resources.png';
-import techIcon from './icon-tech.png';
-import resourceIcon from './icon-resource.png';
 
 /**
  * Constants

@@ -31,7 +31,7 @@ import submit from './submit-icon.png';
 const sectionTitle = 'Ready to get Involved?';
 const description = 'Jump in now to the online discussion or read more details about the four mobility challenges.  Check back later for more activities!';
 
-/*const BOX_TEXT = [
+/* const BOX_TEXT = [
   {
     title: 'Explore the Challenge Briefs',
     text: 'Take an in-depth look at the challenge briefs that we assembled based on early user research with San Diego residents. Read the briefs to learn background information, empathize with the range of challenges, and join discussions in Slack about the topics that interest you. Get to know people and form a team with other innovators!',
@@ -68,7 +68,7 @@ const description = 'Jump in now to the online discussion or read more details a
     textColor: '#fff',
     button: 'globalStyles.orangeOutline'
   }
-];*/
+]; */
 
 /**
  * GetInvolved
@@ -90,18 +90,15 @@ function GetInvolved() {
       />
       <Navbar />
       {<div className={globalStyles.contentWrapper}>
-        <div className={globalStyles.placeholderWrapper}>
-          <GetInvolvedHeader />
-        </div>
         <div className={styles.gridStyle}>
-          {/*BOX_TEXT.map(({ title, description, buttonText, icon }) => (
+          {/* BOX_TEXT.map(({ title, description, buttonText, icon }) => (
             <GetInvolvedBox
               title={title}
               text={description}
               buttonText={buttonText}
               icon={icon}
             />
-          ))*/}
+          )) */}
         </div>
       </div>}
       <div className={globalStyles.contentWrapper}>
@@ -166,7 +163,7 @@ function GetInvolved() {
               </div>
             </div>
           </section>
-          {/*{BOX_TEXT.map(({ title, text, buttonText, icon, boxColor, textColor, button }) => (
+          {/* {BOX_TEXT.map(({ title, text, buttonText, icon, boxColor, textColor, button }) => (
             <GetInvolvedBox
               title={title}
               text={text}
@@ -176,7 +173,7 @@ function GetInvolved() {
               textColor={textColor}
               button={button}
             />
-          ))}*/}
+          ))} */}
           <GetInvolvedCallout />
         </div>
       </div>

@@ -18,7 +18,6 @@ import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
 import facebookIcon from './facebook-icon.png';
 import twitterIcon from './twitter-icon.png';
-import protolabLogo from './protolab-logo.png';
 /**
  * About
  */
@@ -101,11 +100,11 @@ function About() {
           <img src={team} alt="team" />
         </div>
         <div className={globalStyles.contentWrapper}>
-          <p>
+          <p
             dangerouslySetInnerHTML={{
-            __html: p1,
+              __html: p1,
             }}
-          </p>
+          />
           <p>{p1}</p>
           <p>{p2}</p>
           <p>{p3}</p>
