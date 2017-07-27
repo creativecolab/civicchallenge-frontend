@@ -31,7 +31,7 @@ function logClick() {
 
 function LandingHeader() {
   return (
-    <section id={styles.LandingHeader}>
+    <section id={styles.landingHeader}>
       <div className={styles.layer} />
       <div className={globalStyles.contentWrapper}>
         <div className={styles.content}>
@@ -39,6 +39,16 @@ function LandingHeader() {
             <h2 className={globalStyles.white}>Design for San Diego&#39;s 2017 Civic Challenge</h2>
             <h1 className={styles.title}>How do we create a San Diego where we all move freely?</h1>
           </div>
+          <div className={styles.buttonWrapper}>
+            <div className={globalStyles.sectionBtn}>
+              <a className={globalStyles.whiteOutline} onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">Get Involved</a>
+            </div>
+            <p className={styles.or}>OR</p>
+            <div className={globalStyles.sectionBtn}>
+              <a className={globalStyles.blue} onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">Learn More</a>
+            </div>
+          </div>
+
           <div className={styles.buttonWrapper}>
             <div className={globalStyles.sectionBtn}>
               <a className={globalStyles.whiteOutline} onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">Get Involved</a>
