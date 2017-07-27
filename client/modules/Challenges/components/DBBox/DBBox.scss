@@ -113,6 +113,13 @@ $padding-mobile: $margin-inbetween / 2;
   
 }
 
+@media(max-width: $mobile-max-width) {
+  .wrapper {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
 
 
 /* @media (max-width: $mobile-max-width) {

@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import classNames from 'util/classNames';
 
 import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
@@ -86,7 +87,7 @@ function Resources() {
           sectionTitle={sectionTitle}
           text={description}
         />
-        <div className={globalStyles.gridStyle}>
+        <div className={classNames([globalStyles.gridStyle, styles.gridWrapper])}>
           {RESOURCE_CONTENT.map(({ title, text, icon }) => (
             <ResourceBox
               title={title}

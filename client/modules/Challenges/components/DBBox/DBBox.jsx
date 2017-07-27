@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
 import styles from './DBBox.scss';
@@ -30,7 +31,7 @@ const defaultProps = {};
 
 function DBBox({ title, subtitle, thumbnail, linkUrl }) {
   return (
-    <section className={globalStyles.sectionWrapper}>
+    <section className={classNames([globalStyles.sectionWrapper, styles.wrapper])}>
       <div className={styles.boxWrapper}>
         <section className={styles.DBBox}>
           <div className={styles.dbBoxImg}>
