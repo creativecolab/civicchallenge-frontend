@@ -15,24 +15,33 @@ $icon-dim: 100px;
   }
 
   .text-wrapper {
+    width: $component-width-mobile;
+
     $base-width: 60%;
     $margin-left: 5%;
     $inner-padding: 5%;
 
-    width: $base-width - $margin-left - (2* $inner-padding);
+    width: $component-width-mobile;
 
     vertical-align: middle;
 
+     
   }
- 
 }
 
 @media (min-width: $desktop-min-width) {
 #timeline-box{
 
   .timelineWrapper {
+
+    $base-width: 60%;
+    $margin-left: 5%;
+    $inner-padding: 5%;
+
     display: flex;
     justify-content: space-between;
+
+    width: $base-width - $margin-left - (2* $inner-padding);
   }
 }
 }

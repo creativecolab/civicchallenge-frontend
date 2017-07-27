@@ -183,7 +183,8 @@ $text-width-desktop: 350px;
 
 @media (max-width: $mobile-max-width) {
   .process {
-    // width: $component-width-mobile;
+    width: $component-width-mobile;
+    padding-top: $landing-inter-spacing;
 
     &.mini {
       width: auto !important;
