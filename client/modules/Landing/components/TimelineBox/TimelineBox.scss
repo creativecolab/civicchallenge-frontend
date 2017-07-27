@@ -2,7 +2,7 @@
 
 $icon-dim: 100px;
 
-#TimelineBox {
+#timeline-box {
   padding: 90px 0;
 
   background-color: $theme-color-blue;
@@ -19,29 +19,28 @@ $icon-dim: 100px;
     $margin-left: 5%;
     $inner-padding: 5%;
 
-    margin-left: $margin-left;
     width: $base-width - $margin-left - (2* $inner-padding);
-    padding: 0 $inner-padding;
-
-    display: inline-block;
 
     vertical-align: middle;
 
-    h1 {
-      font-size: 1.5em;
-    }
   }
  
 }
 
 @media (min-width: $desktop-min-width) {
-#ChallengeDescriptionWrapper{
-  width: $component-width-desktop;
+#timeline-box{
+
+  .timelineWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 }
 
 @media (max-width: $mobile-max-width) {
-#ChallengeDescriptionWrapper {
-  width: $component-width-mobile;
+#timeline-box {
+  .text-wrapper {
+    width: $component-width-mobile;
+  }
 }
 }
