@@ -1,0 +1,22 @@
+@import '~styles/variables';
+
+.get-involved-callout {
+  width: 100%;
+  margin-bottom: 110px;
+
+  .jankyBox {
+    padding: $resource-padding 0;
+    margin-right: 40px;
+    background-color: $theme-color-callout-grey;
+    .calloutWrapper {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+
+      img.icon {
+        margin-right: $icon-right-margin;
+      }
+    }
+  }
+
+}

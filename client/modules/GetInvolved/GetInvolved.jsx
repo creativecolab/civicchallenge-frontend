@@ -12,6 +12,8 @@ import globalStyles from 'main.scss';
 /* import GetInvolvedHeader from './components/GetInvolvedHeader/GetInvolvedHeader'; */
 /* import GetInvolvedBox from './components/GetInvolvedBox/GetInvolvedBox'; */
 
+import GetInvolvedCallout from './components/GetInvolvedCallout/GetInvolvedCallout';
+
 import styles from './GetInvolved.scss';
 
 /* icons */
@@ -62,7 +64,7 @@ const defaultProps = {};
 
 function GetInvolved() {
   return (
-    <div className={styles.GetInvolved}>
+    <div className={styles.getInvolved}>
       <Helmet
         title="GetInvolved"
       />
@@ -127,6 +129,7 @@ function GetInvolved() {
               button={button}
             />
           ))} */}
+          <GetInvolvedCallout />
         </div>
       </div>
       <Footer />
