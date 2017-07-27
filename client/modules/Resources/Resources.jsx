@@ -69,6 +69,7 @@ function Resources() {
           sectionTitle={sectionTitle}
           text={description}
         />
+        <p>Coming Soon!</p>
         <div className={classNames([globalStyles.gridStyle, styles.gridWrapper])}>
           {RESOURCE_CONTENT.map(({ title, text, icon }) => (
             <ResourceBox
