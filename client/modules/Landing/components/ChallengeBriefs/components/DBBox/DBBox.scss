@@ -15,6 +15,10 @@ $padding-mobile: $margin-inbetween / 2;
   vertical-align: bottom;
   display: inline-block;
 
+  a {
+    cursor: default;
+  }
+
   .boxWrapper {
   height: 100%;
 

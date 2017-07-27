@@ -20,7 +20,7 @@ import walking from './biking.png';
  * Constants
  */
 
-const dummyLink = '';
+/* const dummyLink = ''; */
 const sectionTitle = 'Challenge Briefs';
 const description = 'Mobility is really about people’s everyday problems and pleasures with transportation.  The D4SD Mobility Challenges aims to solve the issues most important to San Diego residents by focusing on four broad areas: promoting walkable and bikeable communities, enhancing the commuter experience, improving accessibility, and preparing for autonomous vehicles. To get involved and submit your own innovations, first read more about the specific challenges.';
 
@@ -80,7 +80,7 @@ function ChallengeBriefs(props) {
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}
-                linkUrl={dummyLink}
+                /* linkUrl={dummyLink} */
               />
             ))}
           </div>

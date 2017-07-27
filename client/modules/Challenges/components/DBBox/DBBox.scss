@@ -13,6 +13,10 @@ $padding-mobile: $margin-inbetween / 2;
 
 .boxWrapper {
   height: 100%;
+  
+  a {
+    cursor: default;
+  }
 
   .DBBox {
     margin: 0;
