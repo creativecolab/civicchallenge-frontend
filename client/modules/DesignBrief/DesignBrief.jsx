@@ -138,7 +138,7 @@ class DesignBrief extends React.PureComponent {
         />
         <Header
           backgroundImg={''}
-          headerText={'Design Brief'}
+          headerText={'Design Brief aodsi alsdfjlsd sd ldkfsdalas  lk'}
           subheaderText={dummyTopText}
           showButton={false}
         />
@@ -153,9 +153,6 @@ class DesignBrief extends React.PureComponent {
                 <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
               </a>
             ))}
-            <a href="#learningresources">
-              <li className={currentSection === DesignBrief.CURRENTSECTION_RESOURCES ? styles.current : ''}>Learning Resources</li>
-            </a>
           </ul>
 
           <div id={'introduction'} ref={(el) => { this.header = el; }}>
