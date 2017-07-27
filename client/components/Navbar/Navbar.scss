@@ -1,6 +1,7 @@
 @import '~styles/variables';
 
 $navbar-height: 50px;
+$navbar-vpadding: 10px;
 
 $nav-font-color: #000;
 $font-color: #fff;
@@ -18,7 +19,7 @@ $font-color: #fff;
     //border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 
-    padding: 10px 20px;
+    padding: $navbar-vpadding 20px;
 
     display: flex;
     align-items: center;
@@ -27,20 +28,13 @@ $font-color: #fff;
     background-color: #fff;
 
     .logo {
+      flex: 1;
+
       img {
         width: 80px;
       }
       padding: 10px 0px;
     }
-
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: $navbar-width;
-      a, button {
-        opacity: 0.7;
-      }
 
     .registerButton {
       border: 1.5px solid $theme-color-blue;
@@ -58,9 +52,7 @@ $font-color: #fff;
       }
     }
 
-  }
-
-    .logo, .navbar {
+    .logo, .navbar-inner {
       a {
         margin: 0 10px;
 
@@ -131,24 +123,97 @@ $font-color: #fff;
 }
 
 @media (min-width: $desktop-min-width) {
-  .header {
-    .text {
-      width: $component-width-desktop;
+  .navbar {
+    .navbar-container {
+      .navbar-inner {
+        width: $navbar-width;
 
-      h1 {
-        font-size: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        a, button {
+          opacity: 0.7;
+        }
+      }
+
+      .mobile-navbar {
+        display: none;
       }
     }
   }
 }
 
 @media (max-width: $mobile-max-width) {
-  .header {
-    .text {
-      width: $component-width-mobile;
+  .navbar {
+    .navbar-container {
+      .navbar-inner {
+        width: 100%;
 
-      h1 {
-        font-size: 2.5em;
+        position: absolute;
+        left: 100%;
+        top: $navbar-height + (2 * $navbar-vpadding);
+
+        .navbar-link-container {
+          width: 100%;
+
+          position: relative;
+          left: 0;
+
+          a {
+            margin: 0;
+            border-top: 1px solid #4496ff;
+            padding: 1em 2em;
+            width: 100%;
+
+            display: block;
+
+            background-color: #4496ff;
+            color: #fff;
+          }
+        }
+      }
+
+      $margin: 25px;
+      $dim: $navbar-height - $margin;
+      $burger-height: 5px;
+
+      .mobile-navbar {
+        margin: 0;
+        margin-left: $margin;
+        border: none;
+        padding: 0;
+        width: 1.25 * $dim;
+        height: $dim;
+
+        position: relative;
+        outline: none;
+
+        background-color: inherit;
+
+        .burger {
+          width: 100%;
+          height: $burger-height;
+
+          position: absolute;
+          left: 0;
+          display: inline-block;
+
+          background-color: #000;
+          font-size: 0;
+        }
+
+        .burger1 {
+          top: 0;
+        }
+
+        .burger2 {
+          top: ($dim / 2) - ($burger-height / 2);
+        }
+
+        .burger3 {
+          bottom: 0;
+        }
       }
     }
   }
