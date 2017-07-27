@@ -1,7 +1,7 @@
 @import '~styles/variables';
 
 #register {
-  padding: 45px;
+  padding: $landing-padding-d 0;
 
   display: flex;
   justify-content: center;
@@ -9,21 +9,24 @@
   text-align: center;
 
   background-color: $theme-color-blue;
-
-  h1, p {
-    color: #fff;
+  .content {
+    p {
+      padding-bottom: 25px;
+    }
   }
 }
 
 @media (min-width: $desktop-min-width) {
-#registerWrapper{
-  width: $component-width-desktop
-}
+  
+  #register {
+    width: $component-width-desktop
+  }
 }
 
 @media (max-width: $mobile-max-width) {
-#registerWrapper {
-  width: $component-width-mobile;
+  padding: $landing-padding-m 0;
+  #register {
+    width: $component-width-mobile;
 
-}
+  }
 }
