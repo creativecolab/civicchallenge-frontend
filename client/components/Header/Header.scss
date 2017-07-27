@@ -6,158 +6,42 @@ $nav-font-color: #000;
 $font-color: #fff;
 
 .header {
-  height: 30%;
+  height: 25%;
+
+  margin-bottom: $spacing-margin;
 
   position: relative;
 
   color: $font-color;
 
-  .background {
-    height: 100%;
-    width: 100%;
+  .headerWrapper {
+    margin-top: 20px;
+    .background {
+      height: 100%;
+      width: 100%;
 
-    position: absolute;
-    z-index: -1;
+      position: absolute;
+      z-index: 0;
 
-    background-color: $theme-color-blue;
-  }
-
-  .navbar-container {
-    height: $navbar-height;
-    //border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
-
-    padding: 10px 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: #fff;
-
-    .logo {
-      img {
-        width: 80px;
-      }
-      padding: 10px 0px;
+      background-color: $theme-color-blue;
     }
 
-    .navbar {
+    .text-container {
+      height: calc(100% - #{$navbar-height});
+
+      position: relative;
+
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      width: $navbar-width;
-      a, button {
-        opacity: 0.7;
-      }
-
-    .registerButton {
-      border: 1.5px solid $theme-color-red;
-      padding: 0.4em 1em;
-      margin: 0;
-      font-size: $navbar-font-size;
-      a {
-        margin: 0;
+      justify-content: center;
+      
+      h3.description{
         text-transform: uppercase;
-        color: $theme-color-red;
-
-        font-weight: 600;
-
-      }
-    }
-
-  }
-
-    .logo, .navbar {
-      a {
-        margin: 0 10px;
-
-        text-decoration: none;
       }
 
-      a,button {
-        margin: 0 10px;
-        border: none;
-        padding: 0;
 
-        outline: none;
-        cursor: pointer;
-
-        text-decoration: none;
-        background-color: transparent;
-        font-size: $navbar-font-size;
-        font-weight: 500;
-        color: $nav-font-color;
-
-        &:hover {
-          opacity: 0.3;
-        }
-      }
-
-      .active {
-        font-weight: 700;
-        opacity: 1;
-      }
     }
   }
-
-  .text-container {
-    height: calc(100% - #{$navbar-height});
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .text {
-      text-align: center;
-
-      h1 {
-        margin: 0;
-
-        display: inline-block;
-        
-        font-size: 1.75 * $font-size;
-        font-weight: bold;
-      }
-
-      h2 {
-        margin: 0;
-        margin-bottom: 1.5 * $font-size;
-
-        font-size: 1.1 * $font-size;
-        font-weight: normal;
-      }
-
-      p {
-        opacity: 0.5;
-        font-size: 0.9em;
-      }
-
-      .button-container {
-        display: flex;
-        justify-content: center;
-
-        a {
-          margin: 0;
-          border: none;
-          border-top-left-radius: 10% 50%;
-          border-top-right-radius: 10% 50%;
-          border-bottom-left-radius: 10% 50%;
-          border-bottom-right-radius: 10% 50%;
-          padding: 0.5em 1.5em;
-
-          display: inline-block;
-          cursor: pointer;
-
-          background-color: #fff;
-          text-decoration: none;
-          font-weight: 600;
-          color: $theme-color-blue;
-        }
-      }
-    }
-  }
-
-
 }
 
 @media (min-width: $desktop-min-width) {

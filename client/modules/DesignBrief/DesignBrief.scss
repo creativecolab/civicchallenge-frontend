@@ -26,28 +26,28 @@
 		.sidebar {
 			margin: 0;
 			padding: 0;
-			width: (strip-unit($content-width) / 100) * 35%;
+			width: (strip-unit($content-width) / 100) * 20%;
 
 			position: fixed;
 			right: (100% - $content-width) / 2;
 
 			list-style: none;
 
+			background-color: #fff;
+			box-shadow: $theme-boxshadow; 
+
 			a {
+				$border-width-base: 1px;
+				$border-width-current: 5px;
+				$padding-base: 0.5em;
 				text-decoration: none;
 				color: inherit;
-
 				li {
-					$border-width-base: 1px;
-					$border-width-current: 5px;
-					$padding-base: 0.5em;
-
-					border: $border-width-base solid #aaa;
-					padding: 0.5em;
+					padding: 1em;
 					padding-left: calc(#{$padding-base} + #{$border-width-current} - #{$border-width-base});
 
 					font-size: 0.7em;
-
+					border-bottom: $border-width-base solid rgb(215, 215, 215);
 					&:not(:first-child) {
 						border-top: none;
 					}

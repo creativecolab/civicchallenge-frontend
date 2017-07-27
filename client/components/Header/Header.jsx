@@ -30,19 +30,21 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }) {
   return (
     <header className={styles.header}>
       <Navbar />
-      <div
-        className={styles.background}
-      />
-      <div className={styles.textContainer}>
-        <section className={styles.text}>
-          {headerText && <h1>{headerText}</h1>}
-          {subheaderText && <p className={styles.description}>{subheaderText}</p>}
-          {showButton && <div className={styles.buttonContainer}>
-            <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
-          </div>}
-        </section>
+      <div className={styles.headerWrapper}>
+        <div
+          className={styles.background}
+        />
+        <div className={styles.textContainer}>
+          <div className={styles.text}>
+            {subheaderText && <h3 className={styles.description}>{subheaderText}</h3>}
+            {headerText && <h1>{headerText}</h1>}
+            {showButton && <div className={styles.buttonContainer}>
+              <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
+            </div>}
+          </div>
+        </div>
+        {backgroundImg && <img src={backgroundImg} alt="Background" />}
       </div>
-      {backgroundImg && <img src={backgroundImg} alt="Background" />}
     </header>
   );
 }

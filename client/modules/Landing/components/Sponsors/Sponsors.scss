@@ -32,8 +32,19 @@
 }
 
 @media (max-width: $mobile-max-width) {
-#sponsorsWrapper {
-  width: $component-width-mobile;
+#sponsors {
+  width: 100%;
+  #sponsorWrapper {
+
+    width: $component-width-mobile;
+    margin: 0 auto;
+    
+    a {
+      .backgroundFill {
+        height: 25px;
+      } 
+    }
+  }
 
 }
 }

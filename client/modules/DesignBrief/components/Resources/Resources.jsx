@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import globalStyles from 'main.scss';
-
 import DBResources from './components/DBResources/DBResources';
-import ResourceNews from './components/ResourceNews/ResourceNews';
 
 import styles from './Resources.scss';
 
@@ -13,9 +10,7 @@ import styles from './Resources.scss';
  */
 
 const propTypes = {
-  title: PropTypes.string.isRequired,
   external: PropTypes.array.isRequired,
-  news: PropTypes.array.isRequired,
 };
 
 const contextTypes = {
@@ -24,7 +19,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Resources({ title, external, news }) {
+function Resources({ external }) {
   return (
     <div className={styles.resources}>
       <h2>Learning Resources</h2>
@@ -36,18 +31,6 @@ function Resources({ title, external, news }) {
               <DBResources
                 resourceTitle={resourceTitle}
                 description={description}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className={globalStyles.contentWrapperGridGI}>
-          <h3>News about {title}</h3>
-          {news.map(({ headline, date }) => (
-            <div className={styles.resourcesComponentWrapper}>
-              <ResourceNews
-                headline={headline}
-                date={date}
               />
             </div>
           ))}
