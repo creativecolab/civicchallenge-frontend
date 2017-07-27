@@ -3,6 +3,8 @@
   height: 100%;
   width: 100%;
 
+  overflow-x: hidden;
+
   .faqHeader {
     padding: 40px 0;
     display: flex;
@@ -15,7 +17,5 @@
     margin: 0 auto;
     padding-bottom: 40px;
   }
-
-  overflow: hidden;
 
 }

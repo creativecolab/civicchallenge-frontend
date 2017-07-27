@@ -1,6 +1,7 @@
 .resources {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 
   .content {
   	width: 80%;
@@ -16,6 +17,4 @@
       justify-content: space-around;
     }
   }
-
-  overflow: hidden;
 }
