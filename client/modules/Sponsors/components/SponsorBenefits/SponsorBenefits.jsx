@@ -60,7 +60,7 @@ function SponsorBenefits(props) {
             <h4>{title}</h4>
             <ul>
               {benefits.map(benefit =>
-                <li key={benefit}>{benefit}</li>
+                <li key={benefit}><span>{benefit}</span></li>
                 )}
             </ul>
           </div>
