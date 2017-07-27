@@ -19,7 +19,7 @@ import walking from './biking.png';
  * Constants
  */
 
-const dummyLink = 'designbrief';
+const dummyLink = '';
 const sectionTitle = 'Challenge Briefs';
 const description = 'We all have places to go and people to see. Whether for work or play—and by car, bike, train, bus, boat, or foot—mobility significantly affects millions on a daily basis. San Diego is culturally and economically diverse, as well as spread out, which makes getting around the city an important issue to explore.';
 
