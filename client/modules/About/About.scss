@@ -73,8 +73,10 @@ $img-width: 700px;
   }
 
   .mediaIcons {
-    height: 15px;
-    width: 15px;
+    img {
+      height: 15px;
+      width: 15px;
+    }
   }
 
   .people {
