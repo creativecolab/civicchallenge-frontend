@@ -15,13 +15,12 @@ $icon-dim: 100px;
   }
 
   .text-wrapper {
-    width: $component-width-mobile;
 
     $base-width: 60%;
     $margin-left: 5%;
     $inner-padding: 5%;
 
-    width: $component-width-mobile;
+    width: $base-width - $margin-left - (2* $inner-padding);
 
     vertical-align: middle;
 
@@ -41,7 +40,7 @@ $icon-dim: 100px;
     display: flex;
     justify-content: space-between;
 
-    width: $base-width - $margin-left - (2* $inner-padding);
+
   }
 }
 }
