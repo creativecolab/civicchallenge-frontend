@@ -19,14 +19,14 @@ const SPONSOR_INFO = [
     benefits: [
       'Exclusive opportunities to interact with world-renowned designer, Don Norman, Director of the Design Lab.',
       'Promotion of organization’s logo and/or name promotion on the D4SD website and on any outward facing documents and press. Potential co-branding opportunities with other named partner sponsors.',
-      'Meetings with D4SD organizers before and during the Mobility challenge to provide opinions and ideas on matters of challenge design and implementation.',
+      'Meetings with D4SD organizers before and during the Mobility Challenges to provide opinions and ideas on matters of challenge design and implementation.',
       'Benefits from Tier 2 and 3 sponsors are included at this level.',
     ],
   },
   {
     title: 'Tier 2 VIP Sponsors',
     benefits: [
-      'Opportunity to sponsor, mentor, and work directly with a design team that enters this year’s Mobility Challenge.',
+      'Opportunity to sponsor, mentor, and work directly with a design team that enters this year’s Mobility Challenges.',
       'Invitation to join the D4SD Executive Planning Committee for next year.',
       'Benefits from Tier 3 sponsors are included at this level.',
     ],

@@ -16,6 +16,8 @@ import team from './team.png';
 import scaleSDLogo from './scale-sd-logo.png';
 import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
+import facebookIcon from './facebook-icon.png';
+import twitterIcon from './twitter-icon.png';
 import protolabLogo from './protolab-logo.png';
 /**
  * About
@@ -25,50 +27,19 @@ const ABOUT = [
   {
     sectionTitle: 'About D4SD',
     text: [
-      'Design for San Diego is a non-profit organization that engages San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We create opportunities for government, academia, and industry to collaboratively design innovative civic solutions. This year, D4SD has partnered with UC San Diego’s Design Lab, the Design Forward Summit, and SCALE SD to organize our challenges around the topic of mobility.',
+      'Design for San Diego (D4SD) is a new initiative created by the UC San Diego Design Lab and supported by the National Science Foundation that seeks to engage San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We create opportunities for government, academia, and industry to collaboratively design innovative civic solutions. This year, D4SD has partnered with the Design Forward Summit and SCALE SD to organize our challenges around the topic of mobility.',
     ],
   },
 ];
 
-const PEOPLE = [
-  'Gabriel Amoako',
-  'Grant Chinn',
-  'Joanne Cho',
-  'Yujin Cho',
-  'Mai Eguchi',
-  'Allison Endo',
-  'Lauren Gong',
-  'Akanksha Grover',
-  'Alvin Ho',
-  'Brandon Hong',
-  'Nanna Inie',
-  'Michael James',
-  'Catherine Kim',
-  'Karthik Komatineni',
-  'Anne Le',
-  'Joseph Le',
-  'Susan Lee',
-  'Christopher Lim',
-  'Allen Lin',
-  'Lauren Liu',
-  'David Luu',
-  'Narges Mahyar',
-  'Brian McInnis',
-  'Sanika Moharana',
-  'Michelle Ng',
-  'Alejandro Panduro',
-  'Cody Pham',
-  'Karen Ma',
-  'Tara Nejad',
-  'Diana Nguyen',
-  'Eric Richards',
-  'Gobind Sethi',
-  'Eric Tseng',
-  'Ariel Weingarten',
-  'Donna Yee',
-  'Nancy Zheng',
-  'Qin Zhuo',
-];
+const p1 = 'D4SD comprises an interdisciplinary group of designers, researchers, and developers led by UC San Diego professor, <a href="http://spdow.ucsd.edu/">Steven Dow</a>. By combining our team’s diverse talents in computer science, cognitive science, and interaction design, we have worked tirelessly to create a website and discussion platform, to provide educational resources on design and technology, and to partner with SCALE SD and the Design Forward Summit to host a series of exciting events.';
+const p2 = 'D4SD strives to create a platform that demonstrates the value of human-centered design and produces solutions that could incubate into companies or longer-term projects that foster economic activity in the City of San Diego and beyond.';
+const p3 = 'Behind the scenes, the D4SD conducts research on design process. Our team investigates how best to obtain design feedback from many stakeholders, how to asks crowds to generate novels ideas, and how to improve online forums for civic discussions.';
+const p4 = 'All of us have the common goal of making this first ever city-wide design challenge a raving success for both the city and our research, but most of all for the citizens of San Diego!';
+const p5 = 'Summer 2017 team:  Alejandro Panduro, Allison Endo, Brandon Hong, Brian McInnis, Gabriel Amoako, Joseph Le, Lauren Liu, Michael James, Michelle Ng, Nancy Zhang, Nanna Inie, Narges Mahyar, Reggie Wu, Sanika Moharana, Shawn Kang, and Yujin Cho';
+const p6 = 'Spring 2017 team:  Alejandro Panduro, Ariel Weingarten, Alvin Ho, Anna Le, Catherine Kim, Chris Lim, Cody Pham, David Luu, Diana Nguyen, Donna Yee, Eric Richards, Eric Tseng, Gobind Sethi, Grant Chinn, Joanne Cho, Joseph Le, Karen Ma, Karthik Komatinei, Lauren Gong, Lauren Liu, Mai Eguchi, Nancy Zheng, Narges Mahyar, Qinzhuo Gong, Sanika Moharana, Tara Nejad, and Susan Lee.';
+const p7 = 'Special thanks Michele Morris and Don Norman in the UCSD Design Lab, and to our partners at Design Forward Summit (Scott Robinson, James White, and Bobby Buchanan) and SCALE SD (Daniel Obodovski, Greg Hoover, and Marc Bielas).';
+const p8 = 'D4SD also wants to acknowledge the early need finding efforts by UC San Diego undergraduates in DSGN100 who surveyed residents, attended local meetups with city and community leaders, and conducted targeted interviews. Their efforts led to important insights that helped us understand the city’s unique mobility needs.';
 
 const PARTNERS = [
   {
@@ -85,11 +56,6 @@ const PARTNERS = [
     href: 'http://www.scalesd.com/',
     img: scaleSDLogo,
     alt: 'Scale SD',
-  },
-  {
-    href: 'http://protolab.ucsd.edu/',
-    img: protolabLogo,
-    alt: 'ProtoLab',
   },
 ];
 
@@ -127,11 +93,27 @@ function About() {
           ))}
         </div>
         <h2>Our Team</h2>
+        <div className={styles.mediaIcons}>
+          <img src={facebookIcon} alt="facebookIcon" />
+          <img src={twitterIcon} alt="twitterIcon" />
+        </div>
         <div className={styles.fullWidthImg}>
           <img src={team} alt="team" />
         </div>
-        <div className={styles.people}>
-          <p>{PEOPLE.join(', ')}</p>
+        <div className={globalStyles.contentWrapper}>
+          <p>
+            dangerouslySetInnerHTML={{
+            __html: p1,
+            }}
+          </p>
+          <p>{p1}</p>
+          <p>{p2}</p>
+          <p>{p3}</p>
+          <p>{p4}</p>
+          <p>{p5}</p>
+          <p>{p6}</p>
+          <p>{p7}</p>
+          <p>{p8}</p>
         </div>
       </div>
       <Footer />

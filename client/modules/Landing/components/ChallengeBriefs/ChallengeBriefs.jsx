@@ -22,7 +22,7 @@ import walking from './biking.png';
 
 const dummyLink = '';
 const sectionTitle = 'Challenge Briefs';
-const description = 'We all have places to go and people to see. Whether for work or play—and by car, bike, train, bus, boat, or foot—mobility significantly affects millions on a daily basis. San Diego is culturally and economically diverse, as well as spread out, which makes getting around the city an important issue to explore.';
+const description = 'Mobility is really about people’s everyday problems and pleasures with transportation.  The D4SD Mobility Challenges aims to solve the issues most important to San Diego residents by focusing on four broad areas: promoting walkable and bikeable communities, enhancing the commuter experience, improving accessibility, and preparing for autonomous vehicles. To get involved and submit your own innovations, first read more about the specific challenges.';
 
 const DESIGN_BRIEFS = [
   {
