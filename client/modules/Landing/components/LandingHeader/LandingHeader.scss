@@ -5,90 +5,81 @@
 $component-spacing: 3em;
 $header-fcolor: rgb(255, 255, 255);
 
-#headerBackground {
+.headerBackground {
   //display: flex;
   //justify-content: center;
   //align-items: center;
-  height: 75%;
-  background-image: url("./header-img.png");
-  background-size: 100% 100%;
+  width: 100%;
+  height: 450px;
+  background: #fff url("./alt1_cropped3.jpg") no-repeat top center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
 
-    .main {
-      $font-size: 1.5em;
-      text-align: center;
-      font-weight: normal;
+  .layer {
+    position: relative;
+    background-color: rgba(33, 33, 33, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .main {
+    position: relative;
+    text-align: center;
+    font-weight: normal;
+    z-index: 1;
 
-      .mainContent {
-        padding: 150px;
+    .mainContent {
+      padding: auto 0;
+      
+      .title { // "Mobility"
+        //font-size: 3.8 * $font-size;
+        font-size: 2.8em;
+        font-weight: 700;
+        line-height: 1.3em;
+        padding: 10px;
+        margin:0;
+        color: $header-fcolor;
+      }
 
-        p, h1 {
-          text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
-        }
+      .button {
+        margin: 20px;
+        font-size: 16px;
 
+        .buttonContainer {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
 
-        .text2 { // "Mobility"
-          //font-size: 3.8 * $font-size;
-          font-size: 120px;
-          font-weight: 550;
-          padding: 10px;
-          margin:0;
-          line-height: 1em;
-          color: $header-fcolor;
-        }
-
-        .text3 { // "Build design..." 
-          font-size: 18px;
-          padding: 10px 0;
-          margin:0;
-          color: $header-fcolor;
-          font-family: 'Open Sans';
-        }
-
-        .text4 { // "Design for San..."
-          font-size: 24px;
-          font-weight: 300;
-          margin:0;
-          color: $header-fcolor;
-        }
-
-        .button {
-          margin: 20px;
-          font-size: 16px;
-
-          .buttonContainer {
-            display: flex;
-            justify-content: center;
+          a {
             margin: 0;
-            padding: 0;
+            border: none;
+            padding: 1.2em 3.2em;
 
-            a {
-              margin: 0;
-              border: none;
-              padding: 1.2em 3.2em;
+            display: inline-block;
+            cursor: pointer;
+            
+            background-color: #FC6464;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: 'Open Sans';
+            font-weight: 600;
+            color: #fff;
+          }
 
-              display: inline-block;
-              cursor: pointer;
-              
-              background-color: #FC6464;
-              text-decoration: none;
-              text-transform: uppercase;
-              font-size: 14px;
-              font-family: 'Open Sans';
-              font-weight: 600;
-              color: #fff;
-            }
-
-            a:hover {
-              background-color: #d84949;
-            }
+          a:hover {
+            background-color: #d84949;
           }
         }
       }
     }
-
-    
-
-  
+  }
 }
 
 
