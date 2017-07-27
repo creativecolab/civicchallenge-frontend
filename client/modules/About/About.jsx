@@ -25,7 +25,7 @@ const ABOUT = [
   {
     sectionTitle: 'About D4SD',
     text: [
-      'Design for San Diego is a non-profit organization that engages San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.',
+      'Design for San Diego is a non-profit organization that engages San Diegans in the process of solving complex civic challenges using human-centered design and crowdsourcing. We create opportunities for government, academia, and industry to collaboratively design innovative civic solutions. This year, D4SD has partnered with UC San Diego’s Design Lab, the Design Forward Summit, and SCALE SD to organize our challenges around the topic of mobility.',
     ],
   },
 ];

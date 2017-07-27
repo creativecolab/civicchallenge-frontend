@@ -19,22 +19,22 @@ const sectionTitle = 'Why Participate?';
 
 const PARTICIPATE = [
   {
-    title: 'Learn and Practice Design',
+    title: 'Learn Design',
     img: learnAndPractice,
     alt: 'Learn and Practice Icon',
-    desc: 'Are you new to human-centered design? The Mobility challenges provide a great opportunity to practice design on real-world problems and to get mentorship from domain experts.  Teams that submit eligible prototypes will receive free admission to the Design Forward Summit in October.',
+    desc: 'The Mobility challenges provide a great opportunity to practice design on real-world problems and to get mentorship from domain experts.',
   },
   {
     title: '15 Minutes of Fame',
     img: fame,
     alt: '15 Minutes Icon',
-    desc: 'Want to share your solution with civic and business leaders in San Diego? We will post all qualifying submissions on our website and showcase finalists at the Design Forward Summit, an event committed to strengthening our community through human-centered design.',
+    desc: 'Qualifying submissions will be showcased on our website and finalists at the Design Forward Summit.',
   },
   {
     title: 'Win Prizes',
     img: winPrizes,
     alt: 'Win Prizes Icon',
-    desc: 'Through our generous sponsors and connections, we are proud to offer a wide range of support for the prototypes with the most potential to improve the experience of mobility in our city. This support is in cash prizes and opportunities to rub elbows with influential city leaders, venture capitalists, and technologists as well as access to cutting edge design resources. More information coming soon.',
+    desc: 'Submissions judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.',
   },
 ];
 

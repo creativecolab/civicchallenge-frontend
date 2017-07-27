@@ -71,7 +71,9 @@ function Footer() {
   const flickr = 'https://www.flickr.com/';
   return (
     <footer className={styles.footer}>
-      <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change. Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p></div>
+      <div className={styles.copyright}>
+        <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. The D4SD platform is under construction and subject to change. Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p></div>
+      </div>
     </footer>
   );
 

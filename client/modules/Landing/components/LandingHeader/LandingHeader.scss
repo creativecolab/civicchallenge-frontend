@@ -5,11 +5,11 @@
 $component-spacing: 3em;
 $header-fcolor: rgb(255, 255, 255);
 
-#LandingHeader {
+#landing-header {
   background: #fff url("./alt1_cropped3.jpg") no-repeat top center fixed;
   position: relative;
   padding: 130px 0;
-  z-index: -1;
+  z-index: 0;
 
   .layer {
     position: relative;
@@ -19,12 +19,12 @@ $header-fcolor: rgb(255, 255, 255);
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
   }
 
   .content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
 
     .textWrapper {
@@ -45,6 +45,28 @@ $header-fcolor: rgb(255, 255, 255);
       }
     }
 
+    .desktop {
+      .buttonWrapper {
+        margin: 0 auto;
+        width: 430px;
+        .or {
+          padding-top: 10px;
+          font-size: 0.75em;
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+
+  }
+}
+
+
+@media (min-width: $desktop-min-width) {
+#landing-header {
+
+  .desktop {
+    display: inline-block;
     .buttonWrapper {
       display: flex;
       justify-content: space-between;
@@ -66,21 +88,24 @@ $header-fcolor: rgb(255, 255, 255);
 @media (min-width: $desktop-min-width) {
 .challenge-text {
   width: $component-width-desktop;
+  }
+
 }
 }
 
 @media (max-width: $mobile-max-width) {
-.challenge-text {
-  width: $component-width-mobile;
+#landing-header {
+  width: 100%;
 
-  .header {
-    .main {
-      .text1 {
-        font-size: 1.5em;
-      }
-      .text2 {
-        font-size: 3em;
-      }
+  .buttonWrapper {
+    display: inline;
+    margin: 0 auto;
+    width: $component-width-mobile;;
+
+    .or {
+      font-size: 0.75em;
+      color: #fff;
+      font-weight: 600;
     }
   }
 }

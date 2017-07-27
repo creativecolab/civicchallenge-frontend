@@ -137,7 +137,14 @@
       text-align: center;
     }
   }
+}
 
-  @media (max-width: $mobile-max-width) {
+@media (max-width: $mobile-max-width) {
+  footer {
+    .copyright {
+      padding: 10%;
+      font-size: 0.6em;
+      text-align: center;
+    }
   }
 }
