@@ -121,7 +121,7 @@ class Navbar extends React.PureComponent {
           <nav className={styles.navbarInner} ref={(el) => { this.navbar = el; }}>
             {LINKS.map(({ href, text }, i) => (
               <div className={styles.navbarLinkContainer} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
-                <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
+                <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}><p>{text}</p></Link>
               </div>
             ))}
           </nav>
