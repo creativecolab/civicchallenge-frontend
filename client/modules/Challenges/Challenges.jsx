@@ -24,7 +24,7 @@ import walking from './biking.png';
  * Challenges
  */
 
-const dummyLink = '';
+/* const dummyLink = ''; */
 
 const INFO = [
   {
@@ -105,7 +105,7 @@ class Challenges extends Component {
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}
-                linkUrl={dummyLink}
+                /* linkUrl={dummyLink} */
               />
             ))}
           </div>
