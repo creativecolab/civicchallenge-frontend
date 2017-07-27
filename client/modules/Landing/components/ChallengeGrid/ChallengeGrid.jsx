@@ -16,10 +16,8 @@ import styles from './ChallengeGrid.scss';
 import publicTransit from './public-transit.png';
 import accessibility from './accessibility.png';
 import walking from './walking.png';
-import parking from './parking.png';
-import traffic from './traffic.jpg';
 import autonomousCars from './autonomous-cars.png';
-import aging from './aging.jpg';
+
 /**
  * ChallengeBox
  */
