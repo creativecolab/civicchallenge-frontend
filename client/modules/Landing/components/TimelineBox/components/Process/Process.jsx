@@ -50,8 +50,8 @@ const TIMELINE_ITEMS = [
  * TimelineText
  */
 
-function TimelineText({ active, title, description, months }) {
-  const classes = [styles.timelineText];
+function TimelineText({ active, title, description, i, months }) {
+  const classes = [styles.timelineText, styles[`timelineText${i}`]];
   if (!active) {
     classes.push(styles.inactiveText);
   }
@@ -74,6 +74,7 @@ TimelineText.propTypes = {
   active: PropTypes.bool,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  i: PropTypes.number.isRequired,
   months: PropTypes.string.isRequired,
 };
 
@@ -151,6 +152,7 @@ function Process({ phase, mini }) {
         <TimelineText
           key={item.title}
           active={isActive}
+          i={i}
           {...item}
         />
       );

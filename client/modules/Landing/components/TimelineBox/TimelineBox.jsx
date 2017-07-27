@@ -37,17 +37,15 @@ function TimelineBox(props) {
   return (
     <section id={styles.TimelineBox} ref={props.componentRef}>
       <div className={globalStyles.contentWrapper}>
-        <div className={styles.challengeRow}>
-          <div className={styles.textWrapper}>
-            <h1
-              dangerouslySetInnerHTML={{
-                __html: sectionTitle,
-              }}
-            />
-            <p>{description}</p>
-          </div>
-          <Timeline />
+        <div className={styles.textWrapper}>
+          <h1
+            dangerouslySetInnerHTML={{
+              __html: sectionTitle,
+            }}
+          />
+          <p>{description}</p>
         </div>
+        <Timeline />
       </div>
     </section>
   );

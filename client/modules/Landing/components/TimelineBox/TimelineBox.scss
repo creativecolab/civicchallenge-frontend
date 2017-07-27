@@ -13,18 +13,35 @@ $icon-dim: 100px;
     text-decoration: underline;
     font-weight: 800;
   }
+
+  .text-wrapper {
+    $base-width: 60%;
+    $margin-left: 5%;
+    $inner-padding: 5%;
+
+    margin-left: $margin-left;
+    width: $base-width - $margin-left - (2* $inner-padding);
+    padding: 0 $inner-padding;
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    h1 {
+      font-size: 1.5em;
+    }
+  }
  
 }
 
 @media (min-width: $desktop-min-width) {
 #ChallengeDescriptionWrapper{
-  width: $component-width-desktop
+  width: $component-width-desktop;
 }
 }
 
 @media (max-width: $mobile-max-width) {
 #ChallengeDescriptionWrapper {
   width: $component-width-mobile;
-
 }
 }
