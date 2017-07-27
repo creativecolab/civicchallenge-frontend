@@ -21,7 +21,7 @@ if (process.env.browser) {
 const LINKS = [
   {
     href: '/challenges',
-    text: 'Challenges',
+    text: 'Challenge Briefs',
   },
   {
     href: '/resources',
@@ -127,7 +127,7 @@ class Navbar extends React.PureComponent {
           </nav>
           <div className={styles.registerButton}>
             <div className={styles.buttonContainer}>
-              <Link onClick={logClick} to="/getinvolved">Get Involved</Link>
+              <Link onClick={logClick} to="/getinvolved"><p>Get Involved</p></Link>
             </div>
           </div>
           <button className={styles.mobileNavbar} onClick={this._mobileNavbarOnClick}>

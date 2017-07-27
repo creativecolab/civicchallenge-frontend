@@ -37,27 +37,26 @@ $font-color: #fff;
     }
 
     .registerButton {
-      border: 1.5px solid $theme-color-blue;
-      padding: 0.4em 0.8em;
-      margin: 0;
-      font-size: $navbar-font-size;
-      a {
+      border: 2px solid $theme-color-blue;
+      padding: 0;
+      margin: 0 0 0 35px;
+      font-size: $button-size;
+      p {
         margin: 0;
+        padding: 8px 15px;
         text-transform: uppercase;
-        opacity: 1;
         color: $theme-color-blue;
-
-        font-weight: 600;
-
+        font-weight: bold;
         text-decoration: none;
-
+      }
+      a{
+        text-decoration: none;
       }
     }
 
     .logo, .navbar-inner {
       a {
         margin: 0 10px;
-
         text-decoration: none;
       }
 
@@ -76,7 +75,7 @@ $font-color: #fff;
         color: $nav-font-color;
 
         &:hover {
-          opacity: 0.3;
+          opacity: 0.8;
         }
       }
 

@@ -4,10 +4,8 @@
   padding: $landing-padding-d 0;
 
   display: flex;
-  justify-content: center;
 
   text-align: center;
-
   background-color: $theme-color-blue;
   .content {
     p {
@@ -16,12 +14,12 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+/* @media (min-width: $desktop-min-width) {
   
   #register {
-    width: $component-width-desktop
+    width: $desktop-min-width;
   }
-}
+} */
 
 @media (max-width: $mobile-max-width) {
   padding: $landing-padding-m 0;
