@@ -1,64 +1,17 @@
 @import '~styles/variables';
 
 #register {
-  padding: 90px;
-  position: relative;
-  color: #212121;
+  padding: 45px;
 
-  margin: auto 0;
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
 
   background-color: $theme-color-blue;
-  
-  .registerWrapper {
-    margin: auto 0;
-    .registerStatement {
-      h1 {
-        text-align: center;
-        font-weight: 500;
-        margin: 0;
-        padding: 0;
-        color: #fff;
-      } 
-    }
-     
-    #sponsorRow {
-      margin: 40px 0px;
-      display: flex;
-      align-content: center;
-      justify-content: center;
 
-        #or {
-          padding: 10px;
-          p {
-            font-family: 'Open Sans';
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-            color: #fff;
-          }
-        }
-      
-      .button {
-        padding: 10px;
-        .outlineBtn {
-          color: $font-color-nonwhitebkgd;
-          border: 2px solid $font-color-nonwhitebkgd;
-          
-          padding: 1.2em 3.2em;
-          font-size: 14px;
-          font-family: 'Open Sans';
-          font-weight: 600;
-          text-decoration: none;
-          text-transform: uppercase;
-
-          &:hover {
-            color: $theme-color-blue;
-            background-color: $font-color-nonwhitebkgd;
-          }
-        }
-      }
-    }
+  h1, p {
+    color: #fff;
   }
 }
 

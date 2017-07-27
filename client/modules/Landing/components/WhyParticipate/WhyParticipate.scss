@@ -3,11 +3,14 @@
 $icon-dim: 100px;
 $item-font-size: 12px;
 $h4-font-size: 15px;
-$content-element-width: 30%;
+$content-element-width-mobile: 90%;
+$content-element-width-desktop: 30%;
 
 #participate {
   padding: 90px 0;
   color: #212121;
+
+  margin: 0 auto;
 
   .descr {
     p {
@@ -20,19 +23,17 @@ $content-element-width: 30%;
   }
 
   div.contentContainer {
-    width: $component-width-desktop;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     padding-top: 30px;
     
     div.participateIconsWrapper {
-      display: flex;
-      justify-content: space-between;
 
       div.contentElement {
-
-        width: $content-element-width;
+        display: inline-block;
+        width: $content-element-width-mobile;
 
         div.imgCont {
           margin: $landing-inter-spacing 0;
@@ -52,6 +53,7 @@ $content-element-width: 30%;
             margin-bottom: 0px;
             padding: 0;
             font-size: $h4-font-size;
+            color: $theme-color-orange;
           }
 
           p {
@@ -70,13 +72,26 @@ $content-element-width: 30%;
 }
 
 @media (min-width: $desktop-min-width) {
-#sponsors {
+#participate {
   width: $component-width-desktop;
+
+  div.contentContainer {
+    width: $component-width-desktop;
+
+    div.participateIconsWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      div.contentElement {
+        width: $content-element-width-desktop;
+      }
+
+    }
+  }
 }
 }
 
 @media (max-width: $mobile-max-width) {
-#sponsors {
-  width: $component-width-mobile;
+#participate {
 }
 }

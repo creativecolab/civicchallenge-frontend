@@ -1,0 +1,26 @@
+<svg viewBox="0 0 190 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>diagnose</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M190.365726,62.0881767 C172.970801,96.4469342 137.327389,120 96.1828631,120 C53.3916794,120 16.5507438,94.5239598 0,57.9118233 C17.394925,23.5530658 53.0383374,0 94.1828631,0 C136.974047,0 173.814982,25.4760402 190.365726,62.0881767 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="190.365726" height="120" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M90.5690809,47.0333796 C90.5690809,46.2049525 91.0696628,45.0821447 91.7134314,44.5506704 C91.7134314,44.5506704 97.6252782,38.6267124 107.483234,39.1328709 C117.34119,39.6390294 122.424584,44.5913067 122.424584,44.5913067 C123.056672,45.1115992 123.569081,46.1991768 123.569081,47.0333796 L123.569081,47.0333796 C123.569081,47.8618067 123.052686,48.1102226 122.394047,47.6102437 C122.394047,47.6102437 116.592267,42.3924552 107.62201,42.1328709 C98.6517521,41.8732865 91.7689557,47.6383475 91.7689557,47.6383475 C91.1062831,48.1326601 90.5690809,47.8675823 90.5690809,47.0333796 L90.5690809,47.0333796 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="37" height="12.784479">
+            <rect x="88.5690809" y="37.102189" width="37" height="12.784479" fill="white"></rect>
+            <use xlink:href="#path-3" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="diagnose">
+            <use id="Combined-Shape" stroke="#fff" mask="url(#mask-2)" stroke-width="14" xlink:href="#path-1"></use>
+            <ellipse id="Oval-2" stroke="#fff" stroke-width="7" cx="95.5767673" cy="59.5767673" rx="36.5767673" ry="36.5767673"></ellipse>
+            <g id="Rectangle-11" transform="translate(107.069081, 43.494428) rotate(35.000000) translate(-107.069081, -43.494428) ">
+                <use fill="#fff" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use stroke="#fff" mask="url(#mask-4)" stroke-width="4" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

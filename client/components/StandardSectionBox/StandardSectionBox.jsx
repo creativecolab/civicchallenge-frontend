@@ -23,9 +23,11 @@ const defaultProps = {
 
 function StandardSectionBox({ sectionTitle, text }) {
   return (
-    <div className={`${globalStyles.contentContainer} ${styles.sectionBox}`}>
-      {sectionTitle && <h1>{sectionTitle}</h1>}
-      <p>{text}</p>
+    <div className={globalStyles.contentContainer}>
+      <div className={styles.sectionBox}>
+        <h1>{sectionTitle}</h1>
+        <p>{text}</p>
+      </div>
     </div>
   );
 }

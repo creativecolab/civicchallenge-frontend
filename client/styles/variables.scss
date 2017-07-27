@@ -1,12 +1,15 @@
-$font-size: 16px;
+$font-size: 18px;
 $navbar-font-size: 14px;
 $component-vertical-margin: 3em;
 $component-width-mobile: 90%;
-$component-width-desktop: 750px;
+/*$component-width-desktop: 750px;*/
+$component-width-desktop: 960px;
+$component-width-desktopHD: 960px;
 
-$button-size: 0.7em;
+$button-size: 0.75em;
+$button-padding: 15px 45px;
 
-$mobile-max-width: 768px;
+$mobile-max-width: 960px;
 $desktop-min-width: $mobile-max-width + 1px;
 
 
@@ -18,19 +21,25 @@ $h2-text: 1.5em;
 $p-text: 0.9em;
 
 $container-width: 70%;
-$space-between: 10%;
+$header-space: 110px 0 80px 0;
 
 $img-height: 500px;
 $img-width: 700px;
 
 /* colors */
 $theme-color-blue: #4496FF;
+$theme-color-orange: #FF7900;
+$theme-color-black: #212121;
+$theme-color-white: #fff;
+$theme-color-medgrey: #505050;
+
 $theme-color-red: #FC6464;
+
 $theme-color-offwhite: #EFEFEF;
 $theme-color-lightgrey: #838383;
-$theme-color-medgrey: #575757;
-$theme-color-black: #212121;
 $theme-color-box-lightgrey: #F9F9F9;
+
+$theme-color-callout-grey: #E6E6E6;
 
 $theme-color-p-text: #212121;
 
@@ -44,6 +53,8 @@ $font-color-nonwhitebkgd: rgb(255, 255, 255);
 
 
 /* spacing variables */
+$icon-right-margin: 10px;
+
 $header-img-dim: 250px;
 $right-side-width: 60%;
 
@@ -60,3 +71,5 @@ $spacing-margin: 40px;
 
 $resource-img-dim: 80px;
 $resource-content-width: 80%;
+
+$resource-padding: 50px;

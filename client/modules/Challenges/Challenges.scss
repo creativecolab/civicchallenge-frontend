@@ -5,17 +5,17 @@
   height: 100%;
 
   .info {
-    width: $component-width-desktop;
+    width: 80%;
     margin: 0 auto;
-
     @media (max-width: $mobile-max-width) {
       width: $component-width-mobile;
     }
+    .DBBoxGrid {
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+    }
   }
 
-  .DBBoxGrid {
-    margin: 0 auto;
-    text-align: center;
-    
-  }
+  
 }

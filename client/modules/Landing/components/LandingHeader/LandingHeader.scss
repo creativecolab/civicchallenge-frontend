@@ -5,90 +5,114 @@
 $component-spacing: 3em;
 $header-fcolor: rgb(255, 255, 255);
 
-#headerBackground {
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
-  height: 75%;
-  background-image: url("./header-img.png");
-  background-size: 100% 100%;
+#LandingHeader {
+  background: #fff url("./alt1_cropped3.jpg") no-repeat top center fixed;
+  position: relative;
+  padding: 130px 0;
+  z-index: -1;
 
-    .main {
-      $font-size: 1.5em;
-      text-align: center;
-      font-weight: normal;
+  .layer {
+    position: relative;
+    background-color: rgba(33, 33, 33, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 
-      .mainContent {
-        padding: 150px;
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
 
-        p, h1 {
-          text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
-        }
+    .textWrapper {
+      width: 80%;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
 
-
-        .text2 { // "Mobility"
-          //font-size: 3.8 * $font-size;
-          font-size: 120px;
-          font-weight: 550;
-          padding: 10px;
-          margin:0;
-          line-height: 1em;
-          color: $header-fcolor;
-        }
-
-        .text3 { // "Build design..." 
-          font-size: 18px;
-          padding: 10px 0;
-          margin:0;
-          color: $header-fcolor;
-          font-family: 'Open Sans';
-        }
-
-        .text4 { // "Design for San..."
-          font-size: 24px;
-          font-weight: 300;
-          margin:0;
-          color: $header-fcolor;
-        }
-
-        .button {
-          margin: 20px;
-          font-size: 16px;
-
-          .buttonContainer {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-
-            a {
-              margin: 0;
-              border: none;
-              padding: 1.2em 3.2em;
-
-              display: inline-block;
-              cursor: pointer;
-              
-              background-color: #FC6464;
-              text-decoration: none;
-              text-transform: uppercase;
-              font-size: 14px;
-              font-family: 'Open Sans';
-              font-weight: 600;
-              color: #fff;
-            }
-
-            a:hover {
-              background-color: #d84949;
-            }
-          }
-        }
+      .title { // "Mobility"
+        //font-size: 3.8 * $font-size;
+        font-size: 2.6em;
+        font-weight: 600;
+        line-height: 1.3em;
+        margin: 10px 0 30px 0px;
+        color: $header-fcolor;
       }
     }
 
-    
+    .buttonWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: 430px;
 
+      .or {
+        font-size: 0.75em;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+
+  /*
+  width: 100%;
+  height: 450px;
+  background: #fff url("./alt1_cropped3.jpg") no-repeat top center fixed;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+
+  .layer {
+    position: relative;
+    background-color: rgba(33, 33, 33, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
   
+  .main {
+    position: relative;
+    text-align: center;
+    font-weight: normal;
+    z-index: 1;
+    margin: auto;
+    width: 100%;
+
+    .mainContent {
+      padding: auto 0;
+      
+      .title { // "Mobility"
+        //font-size: 3.8 * $font-size;
+        font-size: 2.6em;
+        font-weight: 600;
+        line-height: 1.3em;
+        padding: 10px;
+        margin:0;
+        color: $header-fcolor;
+      }
+
+      .buttonWrapper {
+        display: flex;
+        .button {
+
+        }
+
+      }
+    }
+  }*/
 }
 
 

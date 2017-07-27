@@ -1,15 +1,63 @@
 @import "~styles/variables.scss";
 
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
 .DesignBrief {
 
 	height: 100%;
 	width: 100%;
 
 	.contentContainer {
-		width: 80%;
+		$content-width: 80%;
+
+		width: $content-width;
 		margin: 0 auto;
 
-		
+		position: relative;
+
+		.sidebar {
+			margin: 0;
+			padding: 0;
+			width: (strip-unit($content-width) / 100) * 35%;
+
+			position: fixed;
+			right: (100% - $content-width) / 2;
+
+			list-style: none;
+
+			a {
+				text-decoration: none;
+				color: inherit;
+
+				li {
+					$border-width-base: 1px;
+					$border-width-current: 5px;
+					$padding-base: 0.5em;
+
+					border: $border-width-base solid #aaa;
+					padding: 0.5em;
+					padding-left: calc(#{$padding-base} + #{$border-width-current} - #{$border-width-base});
+
+					font-size: 0.7em;
+
+					&:not(:first-child) {
+						border-top: none;
+					}
+
+					&.current {
+						padding-left: $padding-base;
+						border-left: $border-width-current solid #4496ff;
+					}
+				}
+			}
+		}
+
 		.briefNavBar {
 
 			ul {

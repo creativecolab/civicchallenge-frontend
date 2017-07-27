@@ -1,5 +1,6 @@
 @import '~styles/variables';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 $page-padding-width: 328px;
 $page-padding-height: 124px;
@@ -17,11 +18,64 @@ html, body {
 
   position: relative;
 
+  font-weight: 100;
   font-size: $font-size;
-  font-family: Avenir, Helvetica, sans-serif;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  text-align: left;
+  color: $theme-color-black;
 
   p, span {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
+    font-weight: 100;
+  }
+
+  h1 {
+    font-size: 2em; /* 36pt */
+    font-weight: 300;
+    padding: 0;
+    margin: 0; 
+  }
+
+  h2 {
+    font-size: 1.3em; /* 24pt */
+    padding: 0;
+    margin: 0; 
+  }
+
+  h3 {
+    font-size: 0.9em; /* 18pt */
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 0.875em; /* 14pt */
+    padding: 0;
+    margin: 0; 
+  }
+
+  h5 { /* labels */
+    font-size: 0.875em; /* 10pt */
+    padding: 0;
+    margin: 0; 
+  }
+
+  .orange {
+    color: $theme-color-orange;
+  }
+  
+  .grey {
+    color: $theme-color-medgrey;
+  }
+
+  .blue {
+    color: $theme-color-blue;
+  }
+
+  .white {
+    color: $theme-color-white;
   }
 
 }
@@ -43,6 +97,10 @@ div[data-reactroot] {
 .contentWrapper {
   width: $component-width-desktop;
   margin: 0 auto; 
+
+  @media (max-width: $mobile-max-width) {
+    width: $component-width-mobile;
+  }
 }
 
 .contentWrapperGrid {
@@ -57,7 +115,24 @@ div[data-reactroot] {
 }
 
 .gridStyle {
-  text-align: center;
+  text-align: left;
+}
+
+.sectionWrapper {
+  box-shadow: $theme-boxshadow;
+  width: 450px;
+  margin: 0 20px 20px 0;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.sectionWrapperBlue {
+  background-color: $theme-color-blue;
+  box-shadow: $theme-boxshadow;
+  width: 450px;
+  margin: 0 20px 20px 0;
+  vertical-align: bottom;
+  display: inline-block;
 }
 
 .placeholderWrapper {
@@ -92,8 +167,9 @@ div[data-reactroot] {
 
 .contentContainer {
 
-  margin: $space-between 0;
+  margin: $header-space;
 
+  /*
   h2 { 
     padding: 20px 0;
     font-size: $h2-text;
@@ -108,7 +184,6 @@ div[data-reactroot] {
 
   h4 {
     font-weight: 600;
-    text-align: center;
   }
 
   h4.block-style {
@@ -124,7 +199,7 @@ div[data-reactroot] {
 
   span {
     width: $img-width;
-  } 
+  } */
 
 }
 
@@ -203,7 +278,8 @@ div[data-reactroot] {
 
 .sectionBtn {
 
-  margin: 40px 0 0 0;
+  margin: 10px 0;
+  font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
 
   @media (max-width: $mobile-max-width) {
     margin: 30px 0 0 0;
@@ -211,7 +287,7 @@ div[data-reactroot] {
 
   a.blueOutline {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
 
     color: $theme-color-blue;
     font-size: $button-size;
@@ -223,9 +299,45 @@ div[data-reactroot] {
 
   }
 
+  a.blue {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $theme-color-blue;
+    border: 2px solid $theme-color-blue;
+    box-shadow: $theme-boxshadow;
+  }
+
+  a.whiteOutline {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid #fff;
+
+    &:hover {
+      transition: background-color 1s ease;
+      transition: color 0.5s ease;
+      color: $theme-color-blue;
+      background-color: #fff;
+    }
+
+  }
+
   a.salmonOutline {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
 
     color: $theme-color-red;
     font-size: $button-size;
@@ -237,9 +349,23 @@ div[data-reactroot] {
 
   }
 
+  a.orangeOutline {
+    text-decoration: none;
+    padding: $button-padding;
+    margin: 0;
+    color: $theme-color-orange;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-orange;
+
+  }
+
   a.salmon {
     text-decoration: none;
-    padding: 10px 30px;
+    padding: $button-padding;
 
     color: #fff;
     font-size: $button-size;

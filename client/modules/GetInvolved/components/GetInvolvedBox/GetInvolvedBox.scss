@@ -5,13 +5,9 @@ $box-dim: 400px;
 $icon-dim: 60px;
 
 .get-involved-box {
-  width: $box-dim;
   height: $box-dim;
-
-  padding: 20px;
-  margin: 10px;
-
-  box-shadow: $theme-boxshadow;
+  padding: 40px;
+  margin: 0;
 
   display: inline-block;
   vertical-align: bottom;

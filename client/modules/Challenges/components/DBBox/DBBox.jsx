@@ -17,7 +17,9 @@ const ButtonText = 'Learn More';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   thumbnail: PropTypes.string.isRequired,
+  linkUrl: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -26,24 +28,30 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function DBBox({ title, thumbnail }) {
+function DBBox({ title, subtitle, thumbnail, linkUrl }) {
   return (
-    <section className={styles.sectionWrapper}>
-      <section className={styles.DBBox}>
-        <div className={styles.dbBoxImg}>
-          <div className={styles.blackBox} />
-          <div className={styles.thumbnailImg}>
-            <img src={thumbnail} alt={title} />
+    <section className={globalStyles.sectionWrapper}>
+      <div className={styles.boxWrapper}>
+        <section className={styles.DBBox}>
+          <div className={styles.dbBoxImg}>
+            <div className={styles.blackBox} />
+            <div className={styles.thumbnailImg}>
+              <img src={thumbnail} alt={title} />
+            </div>
           </div>
-        </div>
-        <div className={styles.dbBoxText} >
-          <h4>Improving Accessibility</h4>
-          <h2>{title}</h2>
-          <div className={globalStyles.sectionBtn}>
-            <a className={globalStyles.salmonOutline} href="">{ButtonText}</a>
+          <div className={styles.dbBoxTextWrapper}>
+            <div className={styles.dbBoxText}>
+              <h3 className={globalStyles.grey}>{subtitle}</h3>
+              <h2>{title}</h2>
+              <div className={styles.button}>
+                <div className={globalStyles.sectionBtn}>
+                  <a className={globalStyles.orangeOutline} href={linkUrl}>{ButtonText}</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </section>
   );
 }
