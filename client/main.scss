@@ -31,7 +31,7 @@ html, body {
 
   h1 {
     font-size: 2em; /* 36pt */
-    font-weight: 100;
+    font-weight: 300;
     padding: 0;
     margin: 0; 
   }
@@ -293,6 +293,21 @@ div[data-reactroot] {
 
     border: 2px solid $theme-color-blue;
 
+  }
+
+  a.blue {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $theme-color-blue;
+    border: 2px solid $theme-color-blue;
+    box-shadow: $theme-boxshadow;
   }
 
   a.whiteOutline {

@@ -11,7 +11,7 @@ import styles from './LandingHeader.scss';
  * LandingHeader
  */
 
-const ButtonText = 'Participate Now';
+/* const ButtonText = 'Participate Now'; */
 
 const propTypes = {};
 
@@ -31,17 +31,21 @@ function logClick() {
 
 function LandingHeader() {
   return (
-    <section className={styles.headerBackground}>
+    <section id={styles.LandingHeader}>
       <div className={styles.layer} />
-      <div className={styles.main}>
-        <div className={styles.mainContent}>
-          <div className={globalStyles.contentWrapper}>
+      <div className={globalStyles.contentWrapper}>
+        <div className={styles.content}>
+          <div className={styles.textWrapper}>
             <h2 className={globalStyles.white}>Design for San Diego&#39;s 2017 Civic Challenge</h2>
             <h1 className={styles.title}>How do we create a San Diego where we all move freely?</h1>
+          </div>
+          <div className={styles.buttonWrapper}>
             <div className={globalStyles.sectionBtn}>
-              <div className={globalStyles.whiteOutline}>
-                <a onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">{ButtonText}</a>
-              </div>
+              <a className={globalStyles.whiteOutline} onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">Get Involved</a>
+            </div>
+            <p className={styles.or}>OR</p>
+            <div className={globalStyles.sectionBtn}>
+              <a className={globalStyles.blue} onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">Learn More</a>
             </div>
           </div>
         </div>
