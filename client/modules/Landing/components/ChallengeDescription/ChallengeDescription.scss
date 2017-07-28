@@ -4,10 +4,13 @@ $icon-dim-d: 100px;
 $icon-dim-m: 75px;
 $text-width: 80%;
 .challenge-description {
-  padding: $landing-padding-m 0;
+  padding: $landing-section-padding-d;
+  @media (max-width: $mobile-max-width) {
+    padding: $landing-section-padding-m;
+  }
 
   .challengeRow { 
-    width: $component-width-mobile;
+    width: 100%;
     margin: 0 auto;
 
     .challenge-img {
@@ -46,7 +49,7 @@ $text-width: 80%;
 
 @media (max-width: $mobile-max-width) {
   .challenge-description {
-    width: $component-width-mobile;
+    width: 100%;
 
   }
 }
