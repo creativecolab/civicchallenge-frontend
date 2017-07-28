@@ -53,7 +53,7 @@ const defaultProps = {};
 function SponsorBenefits(props) {
   return (
     <section id={styles.SponsorBenefits} ref={props.componentRef}>
-      <div id="sponsor-description" className={globalStyles.contentContainer}>
+      <div id="sponsor-description" className={styles.content}>
         <h2 className={globalStyles.sponsorBenefits}>Sponsor Benefits</h2>
         {SPONSOR_INFO.map(({ title, benefits }) => (
           <div className={styles.tierBlock}>

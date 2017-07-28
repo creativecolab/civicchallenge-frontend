@@ -8,7 +8,8 @@ $font-color: #fff;
 
 .navbar {
   height: $navbar-height;
-  position: fixed;
+  /* position: fixed; */
+  position: relative;
   width: 100%;
 
   color: $font-color;

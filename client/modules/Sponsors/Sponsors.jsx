@@ -41,13 +41,11 @@ function Sponsors() {
         title="Sponsors"
       />
       <Navbar />
-      <div className={globalStyles.contentWrapper}>
+      <div className={globalStyles.pageWrapper}>
         <StandardSectionBox
           sectionTitle={sectionTitle}
           text={description}
         />
-      </div>
-      <div className={globalStyles.contentWrapper}>
         <CurrentSponsors />
         <SponsorBenefits />
       </div>

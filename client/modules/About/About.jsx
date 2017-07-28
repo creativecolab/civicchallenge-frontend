@@ -75,15 +75,13 @@ function About() {
         title="About"
       />
       <Navbar />
-      <div className={globalStyles.contentWrapper}>
+      <div className={globalStyles.pageWrapper}>
         {ABOUT.map(({ sectionTitle, text }) => (
           <StandardSectionBox
             sectionTitle={sectionTitle}
             text={text}
           />
         ))}
-      </div>
-      <div className={globalStyles.contentWrapper}>
         <h2>Partners</h2>
         <div className={styles.partners}>
           {PARTNERS.map(({ href, img, alt }) => (
@@ -115,8 +113,6 @@ function About() {
           <p>{p7}</p>
           <p>{p8}</p>
         </div>
-      </div>
-      <div className={globalStyles.contentWrapper}>
         <h2>Acknowledgements</h2>
         <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
       </div>

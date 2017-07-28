@@ -1,28 +1,20 @@
 @import '~styles/variables';
 
 $component-spacing: 3em;
-$top-padding: 20px;
+$top-padding: 30px;
 
 .sponsors {
-  max-height: 50%;
-  vertical-align: middle;
-
-  h4 {
-    color: $theme-color-lightgrey;
-    text-transform: uppercase;
-    margin: 0;
-  }
-
+  padding: 0;
   .sponsorContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .backgroundFill {
-      max-width: 200px;
-      max-height: 100px;
+      max-width: 130px;
+      max-height: 130px;
 
-      padding: 10px 30px;
+      padding: 10px;
 
     }
 
