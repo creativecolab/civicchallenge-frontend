@@ -235,8 +235,8 @@ class DesignBrief extends React.PureComponent {
                 <DBOverview
                   title={title}
                   text={text}
-                  link={link}
-                  linkText={linkText}
+                  /* link={link}
+                  linkText={linkText} */
                 />
               </div>
             ))}

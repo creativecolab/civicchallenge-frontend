@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import globalStyles from 'main.scss';
+/* import globalStyles from 'main.scss'; */
 import styles from './DBOverview.scss';
 
 /**
@@ -11,8 +11,8 @@ import styles from './DBOverview.scss';
 const propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  linkText: PropTypes.string,
+/* link: PropTypes.string,
+  linkText: PropTypes.string, */
 };
 
 const contextTypes = {
@@ -24,16 +24,17 @@ const defaultProps = {
   linkText: '',
 };
 
-function dbHeader({ title, text, link, linkText }) {
+/* function dbHeader({ title, text, link, linkText }) { */
+function dbHeader({ title, text }) {
   return (
     <div className={styles.overview}>
       <div className={styles.overviewText}>
         <h2>{title}</h2>
         <p>{text}</p>
       </div>
-      <div className={globalStyles.paragraphLink}>
+      {/* <div className={globalStyles.paragraphLink}>
         <a href={link}>{linkText}</a>
-      </div>
+      </div> */}
     </div>
   );
 }
