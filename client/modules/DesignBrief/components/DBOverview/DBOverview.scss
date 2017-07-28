@@ -16,6 +16,44 @@ $header-img-dim: 250px;
     @media (min-width: $desktop-min-width) {
       width: $right-side-width;
     }
+
+    overflow: auto;
+    p {
+      clear: both;
+    }
+    .fA {
+      margin: 30px 0;
+      background-color: $theme-color-medgrey;
+      height: 200px;
+      width: 100%;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+
+    .fB {
+      margin-left: 20px;
+      float: right;
+      background-color: $theme-color-medgrey;
+      height: 200px;
+      width: 300px;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+
+    .fC {
+      margin-top: 20px;
+      background-color: $theme-color-medgrey;
+      height: 100px;
+      width: 100%;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
   }
 
   .overviewSideBar {
