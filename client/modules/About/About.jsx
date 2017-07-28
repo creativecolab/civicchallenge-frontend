@@ -82,39 +82,45 @@ function About() {
             text={text}
           />
         ))}
-        <h2>Partners</h2>
-        <div className={styles.partners}>
-          {PARTNERS.map(({ href, img, alt }) => (
-            <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-              <img className={styles.sponsorImage} src={img} alt={alt} />
-            </a>
-          ))}
+        <div className={styles.partnersWrapper}>
+          <h2 className={globalStyles.grey}>Partners</h2>
+          <div className={styles.partners}>
+            {PARTNERS.map(({ href, img, alt }) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                <img className={styles.sponsorImage} src={img} alt={alt} />
+              </a>
+            ))}
+          </div>
         </div>
-        <h2>Our Team</h2>
-        <div className={styles.fullWidthImg}>
-          <img src={team} alt="team" />
+        <div className={styles.teamWrapper}>
+          <h2 className={globalStyles.grey}>Our Team</h2>
+          <div className={styles.fullWidthImg}>
+            <img src={team} alt="team" />
+          </div>
+          <div className={globalStyles.contentWrapper}>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: p1,
+              }}
+            />
+            <p
+              dangerouslySetInnerHTML={{
+                __html: newp,
+              }}
+            />
+            <p>{p2}</p>
+            <p>{p3}</p>
+            <p>{p4}</p>
+            <p>{p5}</p>
+            <p>{p6}</p>
+            <p>{p7}</p>
+            <p>{p8}</p>
+          </div>
         </div>
-        <div className={globalStyles.contentWrapper}>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: p1,
-            }}
-          />
-          <p
-            dangerouslySetInnerHTML={{
-              __html: newp,
-            }}
-          />
-          <p>{p2}</p>
-          <p>{p3}</p>
-          <p>{p4}</p>
-          <p>{p5}</p>
-          <p>{p6}</p>
-          <p>{p7}</p>
-          <p>{p8}</p>
+        <div className={styles.ackWrapper}>
+          <h2 className={globalStyles.grey}>Acknowledgements</h2>
+          <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
         </div>
-        <h2>Acknowledgements</h2>
-        <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
       </div>
       <Footer />
     </section>
