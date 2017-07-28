@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 
+import globalStyles from 'main.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import facebookIcon from './facebook-icon.png';
@@ -70,17 +71,19 @@ function Footer() {
   const copyrightYear = START_YEAR === currentYear ? currentYear : `${START_YEAR}-${currentYear}`;
   return (
     <footer className={styles.footer}>
-      <div className={styles.mediaIcons}>
-        <a href="https://www.facebook.com/DesignForSanDiego/">
-          <img src={facebookIcon} alt="facebookIcon" />
-        </a>
-        <a href="https://twitter.com/Design4SD">
-          <img src={twitterIcon} alt="twitterIcon" />
-        </a>
-      </div>
-      <div className={styles.copyright}>
-        <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to team@d4sd.org!</p></div>
-      </div>
+      <section className={globalStyles.contentWrapper}>
+        <div className={styles.mediaIcons}>
+          <a href="https://www.facebook.com/DesignForSanDiego/">
+            <img src={facebookIcon} alt="facebookIcon" />
+          </a>
+          <a href="https://twitter.com/Design4SD">
+            <img src={twitterIcon} alt="twitterIcon" />
+          </a>
+        </div>
+        <div className={styles.copyright}>
+          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href="mailto:team@d4sd.org">team@d4sd.org</a>! Header image by <a href="https://www.flickr.com/photos/vxla/8726075399">vxla</a> hosted on <a href="https://www.flickr.com">Flickr</a>.</p></div>
+        </div>
+      </section>
     </footer>
   );
 
