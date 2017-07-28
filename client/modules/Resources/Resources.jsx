@@ -64,7 +64,7 @@ function Resources() {
       />
       <Navbar />
 
-      <div className={globalStyles.contentWrapper}>
+      <div className={globalStyles.pageWrapper}>
         <StandardSectionBox
           sectionTitle={sectionTitle}
           text={description}
