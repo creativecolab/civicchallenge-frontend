@@ -17,6 +17,31 @@ import styles from './DesignBrief.scss';
  */
 
 const CHALLENGE_INFO = {
+  walking: {
+    challengeTitle: 'Walkable and Bikeable Communities',
+    question: 'How might we improve safety on the street?',
+    intro: 'What can be done to improve pedestrian and bicycle safety in San Diego? “There is a latent demand in the public to walk and bike more, but many people, out of a lack of safe routes, choose not to,” said Kathleen Ferrier, Circulate San Diego’s Director of Advocacy. As the city of San Diego grows in population, more residents are choosing to use walking and biking to avoid traffic congestion and parking. However, since walking and biking are not the norm they can be dangerous in a city built for cars. In response, city leaders have adopted the “Vision Zero” program. Its goal is to eliminate all traffic deaths in the city by 2025, through enforcement, education and street engineering. But what does that mean in practice? How might we realistically redesign our city so that it is more safe for bicycles and pedestrians?',
+    overview: [
+      {
+        title: 'The Fatal 15: What makes these intersections dangerous?',
+        text: 'The Fatal 15 is the name given to 15 intersections in the San Diego area that have the highest number of pedestrian deaths and injuries since 2001. Is it possible that these intersections, like Mission Blvd. and Garnet Ave., have something in common that is causing this lack of safety? Circulate San Diego, a local non-profit devoted to promoting safe neighborhoods, streets and intersections compiled the list and estimates the cost to address these dangers at approximately $200,000. Addressing these dangerous spots is important, as is understanding how a spot becomes dangerous over time. What are the early warning signs that an intersection might be deadly, before someone is actually killed in a traffic accident? The Fatal 15 aren’t the only intersections in San Diego though, there are many intersections that are safe and provide a great experience for bikers riding through. What is the difference between these safe intersections and the dangerous ones? What kinds of intersections provide more safety for pedestrians and bikers (e.g. roundabouts and t-junctions)? It’s also imperative that we educate the public about these intersections, and pedestrian safety in general. Education is an effective tool that can be used to give pedestrians alternate routes or even alternate forms of transportation. However, providing education requires some amount of time (rather asking a person to read a pamphlet or listen to a public service announcement), and may not be applied at the appropriate time to encourage someone to alter their behaviors. How might we share information about Circulate San Diego’s research on the Fatal 15 with pedestrians, bikers and drivers as they cruise through these spaces?',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'The Biker Impact: How could “bike-friendly” benefit business and community?',
+        text: 'Bike lanes are an essential element of safe roadways, but safety isn’t the only consideration, though they also take up space that could be used for parking, and can reduce access to certain businesses. Some of business owners contend that by taking away parking to make room for bike paths, there is a significant loss of profit because their customers don’t come by bike. Two camps have formed, one that prioritizes the safety of bicyclists on the busy roads in the city, and another that instead prioritizes the economy by encouraging business and having customers park right in front of the businesses. What might we do to make streets more “bike-friendly” while ensuring that the local businesses in our city thrive?',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'Raising Awareness: Is biker and walker visibility on the road really the problem?',
+        text: 'Everyday car-bike collisions result in injury, if not the death of a cyclist. Though is making the cyclist more visible the core design challenge? On the one hand, there are 217,000 trees adjacent to streets in the city of San Diego. This foliage may be concealing cyclists and pedestrians from the view of drivers. On the other hand, 45% of bike accidents that involve a car happen at intersections, moments when a driver needs to make a quick and complex series of decisions. It may be that drivers need different forms of assistance to account for pedestrians and bikers at various points along their drive home.',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+    ],
+  },
   improvingaccessibility: {
     challengeTitle: 'Improving Accesibility',
     question: 'How do you move around if you cannot see or hear?',
@@ -31,6 +56,31 @@ const CHALLENGE_INFO = {
       {
         title: 'How do you navigate stairs in a wheelchair?',
         text: 'Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas. Nullam rhoncus lacus non odio luctus, eu condimentum mauris ultrices. Praesent blandit, augue a posuere aliquam, arcu tortor feugiat turpis, quis lacinia augue sapien at tellus. Cras ut erat magna. Morbi nibh ante, condimentum vestibulum tempus a, tristique et velit. Sed semper aliquet ante. Quisque tempus arcu sapien, id convallis turpis dictum quis. Nunc commodo vitae risus sit amet sollicitudin. Sed id facilisis sem.',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+    ],
+  },
+  traffic: {
+    challengeTitle: 'Enhancing the Commuter Experience',
+    question: 'What would make your commute relaxing?',
+    intro: 'San Diego has one of the shortest commutes in the U.S. (at an average of 23 minutes), but an accident or highway repair can add stressful-frustrating hours. There must be some way to reduce the effects of this stress (e.g. higher blood pressure, higher weight, and lower fitness levels). Although leaving traffic isn’t any relaxing. Parking can also be a problem, making the entire commute an ordeal. Often, drivers don’t even know where to park because of the small print and confusing rules on parking signage. Many avoid driving themselves altogether and instead commute by public transit. However, the public transit system could use several improvements. Feedback and communication with riders is an interesting one:  Information transfer and communication is an important part of the commuter experience, without feedback and communication it can be difficult to improve the experience, a problem that is faced by the public transit system.',
+    overview: [
+      {
+        title: 'Dynamic Parking: How might we route cars to the just-open spaces?',
+        text: 'In a large city like San Diego, parking is a widespread problem. As the population increases each year more cars join the road and better systems are needed to manage and plan for new parking infrastructure. How might we help drivers and planners navigate the challenge of parking in San Diego? The city of San Diego is broken down into six community parking districts: Downtown, La Jolla, Midtown, Old Town, Pacific Beach, and Uptown, and further into residential and business parking. The challenge at hand is to figure out the most efficient parking plan possible for the areas where parking is deemed “bad”. Drivers need information about where to find a spot and how much time they have left on the meter. The city currently operates with a basic website that only offers static parking information, while a real-time solution might be considered more ideal. “How do we get information to the public?” is a question continually asked by city officials. “It’s not a shortage of parking. It’s a matter of having the parking where people want to go, and having the parking work correctly.” says Gary Smith from San Diego’s Downtown Parking Management Group.',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'Transit: How could we communicate with commuters?',
+        text: 'Users of public transit in San Diego have recently reported increased dissatisfaction with transit costs, public transit availability, and cleanliness at public transit areas. The Metropolitan Transit System (MTS) and North County Transit District (NCTD) need better ways of hearing and responding to public transit riders. San Diego’s public transit infrastructure is extensive. MTS is currently working on the Mid-Coast Trolley Project, which will increase accessibility to public transit in San Diego. Improvements designed with public transportation users in mind can motivate them to continue using public transportation, which ultimately benefits San Diego residents and businesses financially, and it helps San Diego to be more environmentally-friendly. What are the best ways to connect with this population of riders, and actively get their input about specific spots that need improvement? Even the design of that “feedback” may need improvement.',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'Traffic: Could an hour in commute be more enjoyable?',
+        text: 'Residents of San Diego deal with congested freeways every day---northbound in the morning, and even slower southbound in the evening. Why is it this way? Could we make changes to the infrastructure, traffic behavior, or policy-wise to reduce our dependence on cars? Our dependence on cars is not only bad for traffic and congestion, but also our health and the environment. By definition, traffic congestion is a function of too many cars trying to occupy the same restricted space at the same time. The stop and start to traffic can be maddening. The frustration to being in traffic can easily morph into stress, which has recently come to be referred to as the "car effect." The challenge remains on whether to invest in improving driving experience, such as better roads and education in merging techniques etc., or whether to invest in promoting other means of transportation. It is clear though, that something must be done to mitigate some of these effects.',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
       },
@@ -125,7 +175,7 @@ class DesignBrief extends React.PureComponent {
       pageInfo = CHALLENGE_INFO.error;
     }
 
-    const { challengeTitle, intro, question, overview } = pageInfo;
+    const { backgroundImg, challengeTitle, intro, question, overview } = pageInfo;
 
     return (
       <div className={styles.DesignBrief}>
@@ -133,7 +183,7 @@ class DesignBrief extends React.PureComponent {
           title={challengeTitle}
         />
         <Header
-          backgroundImg={''}
+          backgroundImg={backgroundImg}
           headerText={question}
           subheaderText={challengeTitle}
           showButton={false}
