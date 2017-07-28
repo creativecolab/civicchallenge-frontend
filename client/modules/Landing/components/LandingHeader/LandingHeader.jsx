@@ -47,6 +47,7 @@ class LandingHeader extends React.PureComponent {
     const scrollDuration = Math.abs(scrollTop - scrollTarget) / LandingHeader.SCROLL_PX_PER_MS;
 
     TweenLite.to(window, scrollDuration, { scrollTo: scrollTarget });
+    console.log(window);
   }
 
   render() {
@@ -66,7 +67,7 @@ class LandingHeader extends React.PureComponent {
                 </div>
                 <p className={styles.or}>OR</p>
                 <div className={globalStyles.sectionBtn}>
-                  <a className={globalStyles.blue} onClick={() => { logClick(); this._onLearnMoreClicked(); }}>Learn More</a>
+                  <a className={globalStyles.blue} href="#challengeDescription">Learn More</a>
                 </div>
               </div>
             </div>
