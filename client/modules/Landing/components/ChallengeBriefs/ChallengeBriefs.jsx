@@ -30,25 +30,29 @@ const DESIGN_BRIEFS = [
     subtitle: 'PROMOTING WALKING AND BIKING',
     title: 'How can we avoid dangerous bike accidents?',
     thumbnail: walking,
+    linkKey: 'challenges/walking',
   },
   {
     id: '',
     subtitle: 'IMPROVING ACCESSIBILITY',
     title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
+    linkKey: 'challenges/improvingaccessibility',
   },
   {
     id: '',
     subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
-    title: 'Stuck in traffic? How can we make commuting fun?',
+    title: 'How can we make commuting bearable (and maybe even fun)?',
     thumbnail: traffic,
+    linkKey: 'challenges/traffic',
   },
   {
     id: '',
     subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
     title: 'Driverless cars? How will this change the experience?',
     thumbnail: autonomousCars,
-  }
+    linkKey: 'challenges/autonomousvehicles',
+  },
 ];
 
 /**
@@ -75,12 +79,12 @@ function ChallengeBriefs(props) {
             <p>{description}</p>
           </div>
           <div className={classNames([globalStyles.gridStyle, styles.briefsWrapper])}>
-            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
+            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail, linkKey }) => (
               <DBBox
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}
-                /* linkUrl={dummyLink} */
+                linkUrl={linkKey}
               />
             ))}
           </div>

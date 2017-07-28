@@ -101,7 +101,7 @@ function GetInvolved() {
         title="GetInvolved"
       />
       <Navbar />
-      {<div className={globalStyles.contentWrapper}>
+      <div className={globalStyles.pageWrapper}>
         <div className={styles.gridStyle}>
           {/* BOX_TEXT.map(({ title, description, buttonText, icon }) => (
             <GetInvolvedBox
@@ -112,8 +112,6 @@ function GetInvolved() {
             />
           )) */}
         </div>
-      </div>}
-      <div className={globalStyles.contentWrapper}>
         <StandardSectionBox
           sectionTitle={sectionTitle}
           text={description}

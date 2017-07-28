@@ -44,7 +44,7 @@ html, body {
   }
 
   h3 {
-    font-size: 0.9em; /* 18pt */
+    font-size: 1em; /* 18pt */
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
@@ -95,6 +95,16 @@ div[data-reactroot] {
 
 
 /* current */
+
+.pageWrapper {
+  width: $component-width-desktop;
+  margin: $page-margins; 
+
+  @media (max-width: $mobile-max-width) {
+    width: $component-width-mobile;
+  }
+}
+
 .contentWrapper {
   width: $component-width-desktop;
   margin: 0 auto; 
@@ -167,8 +177,8 @@ div[data-reactroot] {
 }
 
 .contentContainer {
-
-  margin: $header-space;
+  /* StandardSectionBox, margin under header sections */
+  margin-bottom: $subsection-padding;
 
 }
 

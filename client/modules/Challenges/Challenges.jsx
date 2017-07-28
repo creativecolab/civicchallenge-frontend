@@ -96,7 +96,7 @@ class Challenges extends Component {
           title="Challenges"
         />
         <Header />
-        <div className={globalStyles.contentWrapper}>
+        <div className={globalStyles.pageWrapper}>
           {INFO.map(({ sectionTitle, text }) => (
             <StandardSectionBox
               sectionTitle={sectionTitle}
