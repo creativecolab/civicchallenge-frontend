@@ -97,25 +97,23 @@ function About() {
           <div className={styles.fullWidthImg}>
             <img src={team} alt="team" />
           </div>
-          <div className={globalStyles.contentWrapper}>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: p1,
-              }}
-            />
-            <p
-              dangerouslySetInnerHTML={{
-                __html: newp,
-              }}
-            />
-            <p>{p2}</p>
-            <p>{p3}</p>
-            <p>{p4}</p>
-            <p>{p5}</p>
-            <p>{p6}</p>
-            <p>{p7}</p>
-            <p>{p8}</p>
-          </div>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: p1,
+            }}
+          />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: newp,
+            }}
+          />
+          <p>{p2}</p>
+          <p>{p3}</p>
+          <p>{p4}</p>
+          <p>{p5}</p>
+          <p>{p6}</p>
+          <p>{p7}</p>
+          <p>{p8}</p>
         </div>
         <div className={styles.ackWrapper}>
           <h2 className={globalStyles.grey}>Acknowledgements</h2>
