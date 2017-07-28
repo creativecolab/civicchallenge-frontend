@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
+import { Link } from 'react-router';
 import { withProvideRefs } from 'util/RefCollector';
 
 import globalStyles from 'main.scss';
@@ -63,7 +64,7 @@ class LandingHeader extends React.PureComponent {
             <div className={styles.desktop}>
               <div className={styles.buttonWrapper}>
                 <div className={globalStyles.sectionBtn}>
-                  <a className={globalStyles.whiteOutline} onClick={logClick} href="/getinvolved" rel="noopener noreferrer" target="_blank">Get Involved</a>
+                  <Link to="/getinvolved" className={globalStyles.whiteOutline} onClick={logClick}>Get Involved</Link>
                 </div>
                 <p className={styles.or}>OR</p>
                 <div className={globalStyles.sectionBtn}>

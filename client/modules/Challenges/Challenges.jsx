@@ -39,28 +39,28 @@ const DESIGN_BRIEFS = [
     subtitle: 'Walkable and Bikeable Communities',
     title: 'How might we improve safety on the street?',
     thumbnail: walking,
-    linkKey: 'challenges/walking',
+    linkKey: 'walking',
   },
   {
     id: '',
     subtitle: 'IMPROVING ACCESSIBILITY',
     title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
-    linkKey: 'challenges/improvingaccessibility',
+    linkKey: 'improvingaccessibility',
   },
   {
     id: '',
     subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
     title: 'What would make your commute relaxing?',
     thumbnail: traffic,
-    linkKey: 'challenges/traffic',
+    linkKey: 'traffic',
   },
   {
     id: '',
     subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
     title: 'How do we take our hands off the wheel?',
     thumbnail: autonomousCars,
-    linkKey: 'challenges/autonomousvehicles',
+    linkKey: 'autonomousvehicles',
   },
 ];
 
