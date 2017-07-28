@@ -71,7 +71,9 @@ $font-color: #fff;
         text-transform: uppercase;
       }
       width: 80%;
-
+      @media (max-width: $mobile-max-width) {
+        width: 100%;
+      }
     }
   }
 }
