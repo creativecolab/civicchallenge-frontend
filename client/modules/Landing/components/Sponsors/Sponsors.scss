@@ -4,8 +4,9 @@
   width: 100%;
   padding: 3em 0;
   position: relative;
-  margin: 0 auto;
   background-color: $theme-color-medgrey;
+  display: flex;
+  justify-content: center;
   align-items: center;
 
   #sponsorWrapper {
