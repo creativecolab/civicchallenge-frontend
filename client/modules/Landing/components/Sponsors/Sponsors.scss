@@ -2,24 +2,22 @@
 
 #sponsors {
   width: 100%;
-  padding: 3em 0;
+  padding: 3em 0 0 0;
   position: relative;
   background-color: $theme-color-medgrey;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 
   #sponsorWrapper {
     margin: 0 50px;
     width: 100%;
-    align-items: center;
 
     a {
       position: relative;
       .backgroundFill {
         height: 75px;
         display: inline-block;
-        padding: 10px;
+        padding: 20px;
       }
     }
   }
