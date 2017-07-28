@@ -211,16 +211,18 @@ class DesignBrief extends React.PureComponent {
         />
         <section className={styles.contentContainer}>
           <div className={globalStyles.contentWrapper}>
-            <ul className={styles.sidebar}>
-              <a href="#introduction">
-                <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}>Introduction</li>
-              </a>
-              {overview.map(({ title }, i) => (
-                <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
-                  <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
+            <div className={styles.menu}>
+              <ul className={styles.sidebar}>
+                <a href="#introduction">
+                  <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}>Introduction</li>
                 </a>
-              ))}
-            </ul>
+                {overview.map(({ title }, i) => (
+                  <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
+                    <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
+                  </a>
+                ))}
+              </ul>
+            </div>
 
             <div id={'introduction'} ref={(el) => { this.header = el; }}>
               <DBHeader

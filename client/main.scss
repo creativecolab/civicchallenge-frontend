@@ -117,8 +117,8 @@ div[data-reactroot] {
 
 .contentWrapper {
   width: $component-width-desktop;
+  position: relative;
   margin: 0 auto; 
-
   @media (max-width: $mobile-max-width) {
     width: $component-width-mobile;
   }

@@ -9,50 +9,55 @@
 }
 
 .DesignBrief {
-
 	height: 100%;
 	width: 100%;
 
 	.contentContainer {
-		$content-width: 80%;
+
+		margin: $subsection-padding auto 110px auto;
+		@media (max-width: $mobile-max-width) {
+			margin-bottom: 60px;
+		}
 		position: relative;
-		width: $content-width;
-		margin: $subsection-padding auto;
+		.menu {
+			z-index: 1;
+			$content-width: 70%;
+			width: $content-width;
+			.sidebar {
+				text-align: left;
+				margin: 0;
+				padding: 0;
+				/* width: (strip-unit($content-width) / 100) * 20%;*/
 
-		position: relative;
+				width: 200px;
+				position: fixed;
+				right: (100% - $content-width) / 2;
 
-		.sidebar {
-			margin: 0;
-			padding: 0;
-			width: (strip-unit($content-width) / 100) * 20%;
+				list-style: none;
 
-			position: fixed;
-			right: (100% - $content-width) / 2;
+				background-color: #fff;
+				box-shadow: $theme-boxshadow; 
 
-			list-style: none;
+				a {
+					$border-width-base: 1px;
+					$border-width-current: 5px;
+					$padding-base: 0.5em;
+					text-decoration: none;
+					color: inherit;
+					li {
+						padding: 1em;
+						padding-left: calc(#{$padding-base} + #{$border-width-current} - #{$border-width-base});
 
-			background-color: #fff;
-			box-shadow: $theme-boxshadow; 
+						font-size: 0.7em;
+						border-bottom: $border-width-base solid rgb(215, 215, 215);
+						&:not(:first-child) {
+							border-top: none;
+						}
 
-			a {
-				$border-width-base: 1px;
-				$border-width-current: 5px;
-				$padding-base: 0.5em;
-				text-decoration: none;
-				color: inherit;
-				li {
-					padding: 1em;
-					padding-left: calc(#{$padding-base} + #{$border-width-current} - #{$border-width-base});
-
-					font-size: 0.7em;
-					border-bottom: $border-width-base solid rgb(215, 215, 215);
-					&:not(:first-child) {
-						border-top: none;
-					}
-
-					&.current {
-						padding-left: $padding-base;
-						border-left: $border-width-current solid #4496ff;
+						&.current {
+							padding-left: $padding-base;
+							border-left: $border-width-current solid #4496ff;
+						}
 					}
 				}
 			}
@@ -136,7 +141,6 @@
 @media (max-width: $mobile-max-width) {
 	.DesignBrief {
 		overflow-x: hidden;
-
 		.sidebar {
 			display: none;
 		}

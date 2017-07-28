@@ -17,6 +17,9 @@ $font-color: #fff;
   background-color: $theme-color-blue;
   text-align: left;
   padding: 90px 0 80px 0;
+  @media (max-width: $mobile-max-width) {
+    padding: 80px 0 70px
+  }
 
   .headerWrapper {
     /* height: 100%;
