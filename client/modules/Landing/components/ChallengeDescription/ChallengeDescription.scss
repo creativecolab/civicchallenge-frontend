@@ -3,7 +3,7 @@
 $icon-dim-d: 100px;
 $icon-dim-m: 75px;
 $text-width: 80%;
-#challenge-description {
+.challenge-description {
   padding: $landing-padding-m 0;
 
   .challengeRow { 
@@ -23,7 +23,7 @@ $text-width: 80%;
 }
 
 @media (min-width: $desktop-min-width) {
-  #challenge-description { 
+  .challenge-description { 
     padding: $landing-padding-d 0;
     .challengeRow {
       display: flex;
@@ -45,7 +45,7 @@ $text-width: 80%;
 }
 
 @media (max-width: $mobile-max-width) {
-  #challenge-description {
+  .challenge-description {
     width: $component-width-mobile;
 
   }
