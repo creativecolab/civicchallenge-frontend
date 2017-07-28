@@ -1,12 +1,13 @@
 @import '~styles/variables';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 $component-spacing: 3em;
 
 $TL-bg-color: #fff;
 
 $radius: 2 * $font-size;
-$diameter: 2 * $radius;
-$crc-margin: 50px;
+$diameter: 2.5 * $radius;
+$crc-margin: 75px;
 
 $text-width-desktop: 350px;
 
@@ -84,10 +85,10 @@ $text-width-desktop: 350px;
           .circle-icon {
             $icon-size-ratio: 1 / 2;
 
-            $margin: $diameter * (1 - $icon-size-ratio) / 2;
+            $margin: $diameter * (1 - $icon-size-ratio) / 3.2;
             $circle-diameter: $diameter * $icon-size-ratio;
 
-            margin-top: $margin;
+            margin-top: $margin * 1.5;
             margin-left: $margin;
             width: $circle-diameter;
             height: $circle-diameter;
@@ -110,7 +111,7 @@ $text-width-desktop: 350px;
         $i: $j - 1;
 
         .connector-#{$i}-#{$j} {
-          $width: 10px;
+          $width: 8px;
 
           margin-left: -$width / 2;
           width: $width;
@@ -133,7 +134,7 @@ $text-width-desktop: 350px;
       flex: 1;
 
       .timeline-text {
-        margin-left: 5%;
+        margin-left: 15%;
         width: 95%;
 
         position: absolute;
@@ -148,13 +149,12 @@ $text-width-desktop: 350px;
 
         .title {
           text-transform: uppercase;
-          font-size: 0.9em;
-          font-weight: bold;
+          font-weight: 100;
         }
 
         .description {
-          font-size: 0.8em;
-          opacity: 0.7;
+          font-size: 16px;
+          font-family: 'Open Sans';
         }
       }
 

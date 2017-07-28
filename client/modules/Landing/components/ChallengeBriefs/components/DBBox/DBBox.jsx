@@ -9,7 +9,7 @@ import styles from './DBBox.scss';
  * Constants
  */
 
-const ButtonText = 'Coming Soon';
+const ButtonText = 'Learn More';
 
 /**
  * DBBox
@@ -28,6 +28,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
+/* function DBBox({ title, subtitle, thumbnail, linkUrl }) { */
 function DBBox({ title, subtitle, thumbnail, linkUrl }) {
   return (
     <section className={styles.sectionWrapper}>

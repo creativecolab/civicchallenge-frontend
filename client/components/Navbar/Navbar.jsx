@@ -21,7 +21,7 @@ if (process.env.browser) {
 const LINKS = [
   {
     href: '/challenges',
-    text: 'Challenges',
+    text: 'Challenge Briefs',
   },
   {
     href: '/resources',
@@ -121,13 +121,13 @@ class Navbar extends React.PureComponent {
           <nav className={styles.navbarInner} ref={(el) => { this.navbar = el; }}>
             {LINKS.map(({ href, text }, i) => (
               <div className={styles.navbarLinkContainer} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
-                <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}>{text}</Link>
+                <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}><p>{text}</p></Link>
               </div>
             ))}
           </nav>
           <div className={styles.registerButton}>
             <div className={styles.buttonContainer}>
-              <Link onClick={logClick} to="/getinvolved">Get Involved</Link>
+              <Link onClick={logClick} to="/getinvolved"><p>Get Involved</p></Link>
             </div>
           </div>
           <button className={styles.mobileNavbar} onClick={this._mobileNavbarOnClick}>

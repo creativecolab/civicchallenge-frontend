@@ -75,28 +75,28 @@ function About() {
         title="About"
       />
       <Navbar />
-      <div className={globalStyles.contentWrapper}>
+      <div className={globalStyles.pageWrapper}>
         {ABOUT.map(({ sectionTitle, text }) => (
           <StandardSectionBox
             sectionTitle={sectionTitle}
             text={text}
           />
         ))}
-      </div>
-      <div className={globalStyles.contentWrapper}>
-        <h2>Partners</h2>
-        <div className={styles.partners}>
-          {PARTNERS.map(({ href, img, alt }) => (
-            <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
-              <img className={styles.sponsorImage} src={img} alt={alt} />
-            </a>
-          ))}
+        <div className={styles.partnersWrapper}>
+          <h2 className={globalStyles.grey}>Partners</h2>
+          <div className={styles.partners}>
+            {PARTNERS.map(({ href, img, alt }) => (
+              <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
+                <img className={styles.sponsorImage} src={img} alt={alt} />
+              </a>
+            ))}
+          </div>
         </div>
-        <h2>Our Team</h2>
-        <div className={styles.fullWidthImg}>
-          <img src={team} alt="team" />
-        </div>
-        <div className={globalStyles.contentWrapper}>
+        <div className={styles.teamWrapper}>
+          <h2 className={globalStyles.grey}>Our Team</h2>
+          <div className={styles.fullWidthImg}>
+            <img src={team} alt="team" />
+          </div>
           <p
             dangerouslySetInnerHTML={{
               __html: p1,
@@ -115,10 +115,10 @@ function About() {
           <p>{p7}</p>
           <p>{p8}</p>
         </div>
-      </div>
-      <div className={globalStyles.contentWrapper}>
-        <h2>Acknowledgements</h2>
-        <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
+        <div className={styles.ackWrapper}>
+          <h2 className={globalStyles.grey}>Acknowledgements</h2>
+          <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
+        </div>
       </div>
       <Footer />
     </section>

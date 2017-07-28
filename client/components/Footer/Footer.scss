@@ -2,14 +2,36 @@
 
 .footer {
   background-color: $theme-color-medgrey;
-  color: #fff;
+  color: $theme-color-lightgrey;
+  padding: 50px 0;
 
-  a {
-    color: #fff;
+  .mediaIcons {
+    text-align: center;
+    img {
+      height: 30px;
+      width: 30px;
+      padding: 5px;
+    }
+  }
+
+  .copyright {
+    margin-top: 1em;
+    vertical-align: top;
+    text-align: center;
+    font-size: 0.8em;
+    color: $theme-color-lightgrey;
+
+    a {
+      color: rgb(178, 180, 189);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   @media (min-width: $desktop-min-width) {
-    padding: 3%;
 
     .name {
       width: 20%;
@@ -77,14 +99,6 @@
       }
     }
 
-    .mediaIcons {
-      text-align: center;
-      img {
-        height: 30px;
-        width: 30px;
-      }
-    }
-
     .affiliates {
       nav {
         display: flex;
@@ -120,16 +134,6 @@
       }
     }
 
-    .copyright {
-      margin-top: 1em;
-
-      vertical-align: top;
-
-      text-align: center;
-      font-size: 0.8em;
-      color: rgb(178, 180, 189);
-    }
-
     .footerlinks {
       padding: 10px;
       a {
@@ -148,11 +152,10 @@
 }
 
 @media (max-width: $mobile-max-width) {
-  footer {
+  /*footer {
     .copyright {
-      padding: 10%;
-      font-size: 0.6em;
+
       text-align: center;
     }
-  }
+  }*/
 }

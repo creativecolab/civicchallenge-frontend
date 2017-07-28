@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'util/classNames';
+import { Link } from 'react-router';
 
 import globalStyles from 'main.scss';
 import styles from './DBBox.scss';
@@ -10,7 +11,7 @@ import styles from './DBBox.scss';
  * Constants
  */
 
-const ButtonText = 'Coming Soon';
+const ButtonText = 'Learn More';
 
 /**
  * DBBox
@@ -46,7 +47,8 @@ function DBBox({ title, subtitle, thumbnail, linkUrl }) {
               <h2>{title}</h2>
               <div className={styles.button}>
                 <div className={globalStyles.sectionBtn}>
-                  <a className={globalStyles.orangeOutline} href={linkUrl}>{ButtonText}</a>
+                  <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
+                  {/* <a className={globalStyles.orangeOutline} href={linkUrl}>{ButtonText}</a> */}
                 </div>
               </div>
             </div>

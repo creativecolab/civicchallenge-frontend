@@ -1,6 +1,6 @@
 @import '~styles/variables';
 
-$icon-dim: 100px;
+$icon-dim: 150px;
 $item-font-size: 14px;
 $h4-font-size: 15px;
 $content-element-width-mobile: 90%;
@@ -44,11 +44,10 @@ $content-element-width-desktop: 30%;
               height: $icon-dim;
             }
           }
-          padding-bottom: 20px;
         }
 
         div.contentText {
-          h4 {
+          /* h4 {
             font-weight: 600;
             margin-bottom: 0px;
             padding: 0;
@@ -63,7 +62,7 @@ $content-element-width-desktop: 30%;
             padding: 0;
             font-size: $item-font-size;
             text-align: left;
-          }
+          } */
         }
       }
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
+import globalStyles from 'main.scss';
 import styles from './ResourceBox.scss';
 
 /**
@@ -26,8 +26,8 @@ function ResourceBox({ title, text, icon }) {
       <div className={styles.boxWrapper}>
         <div className={styles.boxContent}>
           <img src={icon} alt={title} />
-          <h2>{title}</h2>
-          <p>{text}</p>
+          <h2 className={globalStyles.orange}>{title}</h2>
+          <p className={globalStyles.grey}>{text}</p>
         </div>
       </div>
     </div>

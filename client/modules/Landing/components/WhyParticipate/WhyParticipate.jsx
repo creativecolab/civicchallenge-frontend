@@ -63,7 +63,7 @@ function WhyParticipate(props) {
                   </div>
                 </div>
                 <div className={styles.contentText}>
-                  <h4>{title}</h4>
+                  <h2 className={globalStyles.orange}>{title}</h2>
                   <p>{desc}</p>
                 </div>
               </div>

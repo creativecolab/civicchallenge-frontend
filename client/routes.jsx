@@ -18,7 +18,8 @@ const getProcess = (nextState, cb) => require.ensure([], require => cb(null, req
 const getTeam = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Team/Team').default), 'team');
 const getHowItWorks = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/HowItWorks/HowItWorks').default), 'howitworks');
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
-const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
+// const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
+// const getChallengeBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'challengebrief');
 const getRewards = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Rewards/Rewards').default), 'rewards');
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
@@ -41,7 +42,7 @@ export default (
     <Route path="/team" getComponent={getTeam} />
     <Route path="/howitworks" getComponent={getHowItWorks} />
     <Route path="/challenges" getComponent={getChallenges} />
-    <Route path="/challenges/:id" getComponent={getChallenge} />
+    <Route path="/challenges/:id" getComponent={getDesignBrief} />
     <Route path="/rewards" getComponent={getRewards} />
     <Route path="/resources" getComponent={getResources} />
     <Route path="/faq" getComponent={getFAQ} />

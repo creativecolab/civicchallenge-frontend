@@ -5,23 +5,14 @@ $call-to-action-bckground: #ededed;
 $button-size: 0.7em;
 
 #SponsorBenefits {
-  margin: $component-vertical-margin auto;
+    
   width: $component-width-desktop;
-
-  margin: 0 auto;
 
   .tierBlock {
     text-align: left;
     h3 {
-      font-size: 1.2em;
-    }
-    h4 {
-      text-align: left;
       text-transform: uppercase;
-      color: $theme-color-lightgrey;
-      font-size: 0.9em;
     }
-
     padding: 15px 0;
   }
 

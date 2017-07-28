@@ -7,6 +7,7 @@ import classNames from 'util/classNames';
 
 import LazyInlineSvg from 'components/LazyInlineSvg/LazyInlineSvg';
 
+import globalStyles from 'main.scss';
 import styles from './Process.scss';
 
 import diagnose from './discover.svg';
@@ -23,25 +24,25 @@ const TIMELINE_ITEMS = [
     image: diagnose,
     months: '',
     title: 'Discover',
-    description: 'Frame the most significant challenges around mobility in San Diego',
+    description: 'Frame the most significant<br />challenges around mobility<br />in San Diego',
   },
   {
     image: ideate,
     months: '',
     title: 'Ideate',
-    description: 'Generate many creative solutions to address the key challenges',
+    description: 'Generate many creative<br />solutions to address the key<br />challenges',
   },
   {
     image: propose,
     months: '',
     title: 'Prototype',
-    description: 'Form teams and build mockups of solutions',
+    description: 'Form teams and build<br />mockups of solutions',
   },
   {
     image: implement,
     months: '',
     title: 'Implement',
-    description: 'Submit solutions for judging by civic leaders and experts',
+    description: 'Submit solutions for <br />judging by civic leaders<br />and experts',
   },
 ];
 
@@ -59,7 +60,7 @@ function TimelineText({ active, title, description, i, months }) {
   return (
     <div className={classNames(classes)}>
       <div className={styles.months}>{months}</div>
-      <div className={styles.title}>{title}</div>
+      <div className={styles.title}><h2 className={globalStyles.white}>{title}</h2></div>
       <div
         className={styles.description}
         dangerouslySetInnerHTML={{

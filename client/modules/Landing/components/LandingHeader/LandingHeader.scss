@@ -8,7 +8,7 @@ $header-fcolor: rgb(255, 255, 255);
 #landing-header {
   background: #fff url("./alt1_cropped3.jpg") no-repeat top center fixed;
   position: relative;
-  padding: 130px 0;
+  padding: 130px 0 120px 0;
   z-index: 0;
 
   .layer {
@@ -49,6 +49,7 @@ $header-fcolor: rgb(255, 255, 255);
       .buttonWrapper {
         margin: 0 auto;
         width: 430px;
+        z-index: 100000;
         .or {
           padding-top: 10px;
           font-size: 0.75em;

@@ -15,6 +15,7 @@ const buttonText = 'Coming soon';
  */
 
 const propTypes = {
+  intro: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -23,12 +24,12 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function DBHeader() {
+function DBHeader({ intro }) {
   return (
     <section className={styles.DBHeader}>
       <div className={styles.DBHeaderText}>
         <h2>Introduction</h2>
-        <p>Many people face challenges getting around. Mobility can be difficult for any combination of physical, sensory, mental, or cognitive impairments. Approximately 17% of San Diegans have some form of impairment that affects mobility. Individuals older than 60 represent the fastest growing segment of the population, with the number of senior residents expected to double by 2030 [cite]. These challenges are worsened by the sprawling nature of our region compared to other cities, since people often go farther to reach their destination.</p>
+        <p>{intro}</p>
         <div className={globalStyles.sectionBtn}>
           <a className={globalStyles.blueOutline} href="">{buttonText}</a>
         </div>

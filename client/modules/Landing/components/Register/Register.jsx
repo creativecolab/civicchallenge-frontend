@@ -33,10 +33,10 @@ const defaultProps = {};
 function Register(props) {
   return (
     <section id={styles.register} ref={props.componentRef}>
-      <div className={globalStyles.componentWrapper}>
-        <div className={globalStyles.contentContainer}>
-          <h1>{sectionTitle}</h1>
-          <p>{description}</p>
+      <div className={globalStyles.contentWrapper}>
+        <div className={styles.content}>
+          <h1 className={globalStyles.white}>{sectionTitle}</h1>
+          <p className={globalStyles.white}>{description}</p>
           <div className={globalStyles.sectionBtn}>
             <a className={globalStyles.whiteOutline} href={btnLink}>{btnText}</a>
           </div>

@@ -3,7 +3,7 @@
 $icon-dim-d: 100px;
 $icon-dim-m: 75px;
 $text-width: 80%;
-#challenge-description {
+.challenge-description {
   padding: $landing-padding-m 0;
 
   .challengeRow { 
@@ -23,30 +23,30 @@ $text-width: 80%;
 }
 
 @media (min-width: $desktop-min-width) {
-#challenge-description { 
-  padding: $landing-padding-d 0;
-  .challengeRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .challenge-description { 
+    padding: $landing-padding-d 0;
+    .challengeRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    width: $component-width-desktop;
+      width: $component-width-desktop;
 
-    .text-wrapper {
-      width: $text-width;
-    }
-    .challenge-img {
-      img {
-        height: $icon-dim-d;
+      .text-wrapper {
+        width: $text-width;
+      }
+      .challenge-img {
+        img {
+          height: $icon-dim-d;
+        }
       }
     }
   }
 }
-}
 
 @media (max-width: $mobile-max-width) {
-#challenge-description {
-  width: $component-width-mobile;
+  .challenge-description {
+    width: $component-width-mobile;
 
-}
+  }
 }
