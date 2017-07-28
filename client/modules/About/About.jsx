@@ -29,7 +29,7 @@ const ABOUT = [
   },
 ];
 
-const p1 = 'D4SD comprises an interdisciplinary group of designers, researchers, and developers led by UC San Diego professor, <a href="http://spdow.ucsd.edu/">Steven Dow</a>. By combining our team’s diverse talents in computer science, cognitive science, and interaction design, we have worked tirelessly to create a website and discussion platform, to provide educational resources on design and technology, and to partner with SCALE SD and the Design Forward Summit to host a series of exciting events.';
+const p1 = 'D4SD comprises an interdisciplinary group of designers, researchers, and developers led by UC San Diego professor, <a href="http://spdow.ucsd.edu/" rel="noopener noreferrer" target="_blank">Steven Dow</a>. By combining our team’s diverse talents in computer science, cognitive science, and interaction design, we have worked tirelessly to create a website and discussion platform, to provide educational resources on design and technology, and to partner with <a href="http://www.scalesd.com/" rel="noopener noreferrer" target="_blank">SCALE SD</a> and the <a href="http://www.designforwardsd.com/" rel="noopener noreferrer" target="_blank">Design Forward Alliance</a> to host a series of exciting events.';
 const newp = 'Reach out to us at <a href=“mailto:spdow@ucsd.edu”>spdow@ucsd.edu</a> to give us feedback on the site or to share ideas or problems related to mobility in San Diego.';
 const p2 = 'D4SD strives to create a platform that demonstrates the value of human-centered design and produces solutions that could incubate into companies or longer-term projects that foster economic activity in the City of San Diego and beyond.';
 const p3 = 'Behind the scenes, the D4SD conducts research on design process. Our team investigates how best to obtain design feedback from many stakeholders, how to asks crowds to generate novels ideas, and how to improve online forums for civic discussions.';
@@ -84,7 +84,6 @@ function About() {
         ))}
       </div>
       <div className={globalStyles.contentWrapper}>
-        <h2>Partners</h2>
         <div className={styles.partners}>
           {PARTNERS.map(({ href, img, alt }) => (
             <a key={alt} href={href} target="_blank" rel="noopener noreferrer">
