@@ -44,18 +44,30 @@ const CHALLENGE_INFO = {
   },
   improvingaccessibility: {
     challengeTitle: 'Improving Accesibility',
-    question: 'How do you move around if you cannot see or hear?',
+    question: ' How do we help everyone reach their destination?',
     intro: 'Many people face challenges getting around. Mobility can be difficult for any combination of physical, sensory, mental, or cognitive impairments. Approximately 17% of San Diegans have some form of impairment that affects their mobility. Individuals older than 60 represent the fastest growing segment of the population, with the number of senior residents expected to double by 2030. The sprawling nature of our region also makes it harder for people to reach their destination compared to other cities.',
     overview: [
       {
-        title: 'How do you move around if you cannot see?',
-        text: 'Most of us take our eyes and ears for granted. For those with sensory disabilities, navigating the city presents a major challenge. For the blind and those with poor vision, it can be difficult to walk through urban environments and to take public transit. San Diego’s Metropolitan Transit System has outfitted all stations with raised letters and braille plates identifying the route and direction (North, South, East, West), but challenges remain. For example, even the step onto a train can be intimidating. What are other mobility challenges faced by the visually impaired? For individuals who are deaf or hearing impaired, the biggest challenge is lack of auditory cues. For example, a deaf individual cannot hear a big truck bearing down or loud sirens from an ambulance. How might we create services and products that help hearing-impaired individuals stay aware of their surroundings?',
+        title: 'Visual impairments: How do you move around if you cannot see or hear?',
+        text: 'Most of us take our eyes and ears for granted. For those with sensory disabilities, navigating the city can be a challenge. For people who are blind and others with poor vision, it can be difficult to walk through urban environments and to take public transit.  San Diego’s Metropolitan Transit System has outfitted all stations with raised letters and braille plates identifying the route and direction (North/South/East/West), but challenges remain. For example, even the step onto a train can be intimidating. How do people with sensory impairments overcome these everyday barriers? How can the signage at our metro stations be improved? For individuals who are deaf or hearing impaired, the challenge may be a lack of auditory cues. For example, a deaf individual might not hear a big truck bearing down or loud sirens from an ambulance. However, people with partial hearing may have difficulty crowded or loud environments, where the background noise can drown out important messages. How might we improve safety when auditory clues are not available?',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
       },
       {
-        title: 'How do you navigate stairs in a wheelchair?',
-        text: 'Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas. Nullam rhoncus lacus non odio luctus, eu condimentum mauris ultrices. Praesent blandit, augue a posuere aliquam, arcu tortor feugiat turpis, quis lacinia augue sapien at tellus. Cras ut erat magna. Morbi nibh ante, condimentum vestibulum tempus a, tristique et velit. Sed semper aliquet ante. Quisque tempus arcu sapien, id convallis turpis dictum quis. Nunc commodo vitae risus sit amet sollicitudin. Sed id facilisis sem.',
+        title: 'Wheelchair obstacles: How do you navigate stairs in a wheelchair?',
+        text: 'A person with a mobility impairment (e.g., requiring crutches, a cane, or a wheelchair) often has difficulty with stairways and high curbs, and avoiding these physical barriers may take them in circuitous routes, which might even be more treacherous in rainy and winter conditions. The lack of convenient, accessible, and affordable forms of transportation for disabled people is a major problem in San Diego. How might we improve access to our city for people with mobility impairments? Though before reinventing the wheel for this Mobility Challenge, it is important to note that there are several existing services in San Diego available to people with mobility impairments. These services include the San Diego Volunteer Drivers Coalition and the ADA Paratransit shuttles. Ride sharing applications, like Lyft’s Accessible Vehicle Dispatch service, have made it relatively easy to plan trips across town. How might we improve this existing infrastructure to better serve people with physical impairments?',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'Aging and technology: How might we help seniors order a Lyft?',
+        text: 'Mobile phone based applications have made it easy to reserve a ride, order a meal, and find the hottest events happening right now. But, seniors are often the last demographic to adopt these new technologies. Though there has been progress, these services simply have not been adapted to cater to older populations.  Uber and Lyft are transportation/rideshare companies that have been growing at an incredible rate in recent years. They take advantage of the convenience of technology and make travel much easier to arrange, but if our seniors don’t think it’s approachable, their mobility options will be severely limited. How might we adapt ride-sharing and other applications—or ordering meals or finding events and volunteer opportunities—to make them more approachable and enjoyable for seniors?',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'Active lifestyles: How could we help older residents feel fit and energized?',
+        text: 'Seniors who are physically active and able to get around independently have greater flexibility, muscle strength, balance, and bone density—all of which help them recover more rapidly from illness and injuries, and live longer, healthier lives. What transportation services or initiatives might we imagine for our cities senior residents? Staying active is an important part of staying healthy, but it can be difficult even for those of us who don’t contend with some of the consequences of old age. Without access to reliable transportation, the elderly may have reduced options for mobility and as a result be less inclined to stay active and social. In order to encourage active and social behaviour from our elderly population, it’s important to identify some of the challenges that are posed to them, such as disabilities, or even lack of understanding of the available technology. What kind of challenges might arise while working to provide accommodations to an aging population?',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
       },
@@ -88,12 +100,18 @@ const CHALLENGE_INFO = {
   },
   autonomousvehicles: {
     challengeTitle: 'Preparing for Autonomous Vehicles',
-    question: 'Driverless cars? How will this change the experience?',
+    question: 'How do we take our hands off the wheel?',
     intro: 'An autonomous vehicle (self-driving car) is a vehicle that can drive itself without human guidance. These vehicles are arriving faster than most people have anticipated. How might we prepare for this major advance in transportation? An important concern about adding Autonomous Vehicles (AVs) is the effect of “driverless” on the industries that hire drivers, as well as the drivers themselves. There are also policy questions about Autonomous Vehicles such as, determining fault in the case of an accident (e.g., passenger, manufacturer, designer). However, a related concern is how other drivers will engage with AVs—there is some concern that other drivers might cut off, chase down, or otherwise aggressively engage with AVs. Lastly, it may be easy to hack an AV, as they are designed to continuously receive information from other cars and sensors on the road through a “WiFi like” transmission system. Preparing for AVs may also mean rethinking the design of our existing roadways and signage. If AVs can monitor the speed and distance of other AVs, that means that cars can potentially travel at far faster speeds and in very close proximity. Will stop lights be necessary in this not-so-distant future?',
     overview: [
       {
-        title: 'What kinds of experiences can we create for people when the car drives itself?',
+        title: 'User experience inside autonomous cars: Can we be more productive?',
         text: 'The experience of riding in an autonomous vehicle (AV) may be very different than driving. Driving may no longer be about keeping your eyes on the road and hands at 10 and 2. Moving around, dancing, even singing karaoke are all possibilities when driverless cars are involved. Several automotive companies have made a pledge to have AVs on the road before 2020. As one example of how AVs might offer a radically new experience, think about what work might be like while riding in an AV. Many cars are already WiFi-enabled and wired for conference calls. Without needing to focus on the road, a rider could focus on that pressing report and why keep the meeting in the office conference room, if we could set a course and sit around a table while cruising down La Jolla’s Scenic Drive?',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+      },
+      {
+        title: 'Future jobs for professional drivers: What gig does an Uber driver pick up next?',
+        text: 'San Diego is already beginning to test out autonomous vehicles under the direction of SANDAG. As autonomous vehicles begin to rise in popularity and use, professions and labor markets that depend on cars will transform. For example, Uber, Lyft, and other ride sharing companies may switch over completely and change their platforms to reflect the changes in the use of the roads. Thinking about the thousands of people who work in this gig market, what will they do next? In the past, such technology shifts have been accompanied by job retraining and transition periods that help the labor force adapt—though it is unclear what such professional development might look like as these gig economies evolve. As might other industries related to human driven vehicles, e.g., vehicle insurance, container shipping, and the traffic engineering profession. What kinds of changes need to be made to accommodate the job training or potential spike in unemployment if industries rapidly adopt AVs?',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
       },
