@@ -54,10 +54,10 @@ function SponsorBenefits(props) {
   return (
     <section id={styles.SponsorBenefits} ref={props.componentRef}>
       <div id="sponsor-description" className={styles.content}>
-        <h2 className={globalStyles.sponsorBenefits}>Sponsor Benefits</h2>
+        <h2 className={globalStyles.grey}>Sponsor Benefits</h2>
         {SPONSOR_INFO.map(({ title, benefits }) => (
           <div className={styles.tierBlock}>
-            <h4>{title}</h4>
+            <h3 className={globalStyles.grey}>{title}</h3>
             <ul>
               {benefits.map(benefit =>
                 <li key={benefit}><span>{benefit}</span></li>
