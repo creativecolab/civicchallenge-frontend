@@ -2,33 +2,32 @@
 
 #sponsors {
   width: 100%;
-  padding: 3em 0 4em 0;
+  padding: 3em 0;
   position: relative;
-
+  margin: 0 auto;
   background-color: $theme-color-medgrey;
-
-  display: flex;
   align-items: center;
 
-
   #sponsorWrapper {
+    margin: 0 50px;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    align-items: center;
+
     a {
+      position: relative;
       .backgroundFill {
         height: 75px;
-
-
+        display: inline-block;
+        padding: 10px;
       }
     }
   }
 }
 
 @media (min-width: $desktop-min-width) {
-#sponsorsWrapper{
-  width: $component-width-desktop
-}
+  #sponsorsWrapper{
+    width: $component-width-desktop
+  }
 }
 
 @media (max-width: $mobile-max-width) {
@@ -41,7 +40,7 @@
     
     a {
       .backgroundFill {
-        height: 25px;
+        height: 50px;
       } 
     }
   }
