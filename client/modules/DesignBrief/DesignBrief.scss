@@ -13,8 +13,6 @@
 	height: 100%;
 	width: 100%;
 
-	overflow-x: hidden;
-
 	.contentContainer {
 		$content-width: 80%;
 
@@ -135,4 +133,12 @@
 
 }
 
+@media (max-width: $mobile-max-width) {
+	.DesignBrief {
+		overflow-x: hidden;
 
+		.sidebar {
+			display: none;
+		}
+	}
+}

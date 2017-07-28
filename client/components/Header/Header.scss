@@ -41,9 +41,7 @@ $font-color: #fff;
       padding-top: 2%;
 
       display: flex;
-      h1 {
-        font-size: 2em;
-      }
+
       h3.description{
         text-transform: uppercase;
       }
@@ -59,7 +57,7 @@ $font-color: #fff;
       width: $component-width-desktop;
 
       h1 {
-        font-size: 3em;
+        font-size: 2em;
       }
     }
   }
@@ -71,7 +69,11 @@ $font-color: #fff;
       width: $component-width-mobile;
 
       h1 {
-        font-size: 2.5em;
+        font-size: 1.5em;
+      }
+
+      h3 {
+        font-size: 1em;
       }
     }
   }

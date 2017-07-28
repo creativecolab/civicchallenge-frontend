@@ -4,21 +4,26 @@
 $header-img-dim: 250px;
 
 .overview {
-	width: 100%;
+  width: 100%;
 
-	margin: $spacing-margin 0;
+  margin: $spacing-margin 0;
 
 
-	.overviewText {
-		width: $right-side-width;
-	}
+  .overviewText {
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+    @media (min-width: $desktop-min-width) {
+      width: $right-side-width;
+    }
+  }
 
-	.overviewSideBar {
+  .overviewSideBar {
     .currentPhase {
       span.phaseName {
         color: $theme-color-blue;
       }
     }
-	}
+  }
 
 }
