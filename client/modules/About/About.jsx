@@ -82,8 +82,6 @@ function About() {
             text={text}
           />
         ))}
-      </div>
-      <div className={globalStyles.contentWrapper}>
         <div className={styles.partnersWrapper}>
           <div className={styles.partners}>
             {PARTNERS.map(({ href, img, alt }) => (
