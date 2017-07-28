@@ -33,10 +33,14 @@ $img-width: 960px;
 
   .partnersWrapper {
     padding-bottom: $subsection-padding;
+    $partners-width: 80%;
     .partners {
-      width: 100%;
-
+      width: $partners-width;
       display: flex;
+
+      @media (max-width: $mobile-max-width) {
+        width: 100%;
+      }
 
       a {
         margin: 0 1.5%;
@@ -58,22 +62,23 @@ $img-width: 960px;
     }
   }
 
+  $team-width: 80%;
   .teamWrapper {
+    width: $team-width;
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
     padding-bottom: $subsection-padding;
     h2 {
       margin-bottom: 30px;
     }
   }
 
-  $team-width: 100%;
+
 
   .fullWidthImg {
     // height: $img-height;
     // width: $img-width;
-    width: $team-width;
-
-    font-size: 0;
-
     img {
       height: 100%;
       width: 100%;
@@ -101,10 +106,5 @@ $img-width: 960px;
 }
 
 @media (max-width: $mobile-max-width) {
-  .about {
-    .fullWidthImg {
-      width: 90%;
-      height: auto;
-    }
-  }
+
 }
