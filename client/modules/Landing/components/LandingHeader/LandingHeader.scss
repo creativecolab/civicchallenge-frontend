@@ -49,6 +49,7 @@ $header-fcolor: rgb(255, 255, 255);
       .buttonWrapper {
         margin: 0 auto;
         width: 430px;
+        z-index: 100000;
         .or {
           padding-top: 10px;
           font-size: 0.75em;

@@ -8,13 +8,15 @@ $font-color: #fff;
 .header {
   height: 25%;
 
-  margin-bottom: $spacing-margin;
+  margin-bottom: 100px;
 
   position: relative;
 
   color: $font-color;
 
   .headerWrapper {
+    height: 100%;
+    width: 100%;
     margin-top: 20px;
     .background {
       height: 100%;
@@ -27,14 +29,21 @@ $font-color: #fff;
     }
 
     .text-container {
+      width: 100%;
+      height: 100%;
+      
       height: calc(100% - #{$navbar-height});
 
       position: relative;
-
-      display: flex;
       align-items: center;
       justify-content: center;
-      
+
+      padding-top: 2%;
+
+      display: flex;
+      h1 {
+        font-size: 2em;
+      }
       h3.description{
         text-transform: uppercase;
       }
