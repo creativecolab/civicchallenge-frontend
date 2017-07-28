@@ -69,7 +69,7 @@ const BOX_TEXT = [
     button: 'globalStyles.blueOutline',
   },
   {
-    title: 'Prototype submissions are due October 16th',
+    title: 'Prototype submissions are due in October',
     text: 'Check back here in September to get all the details about contest rules and submission guidelines.',
     buttonText: 'Coming soon!',
     linkUrl: '',

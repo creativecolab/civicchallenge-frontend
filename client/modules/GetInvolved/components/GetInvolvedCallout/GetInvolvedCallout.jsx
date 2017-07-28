@@ -12,7 +12,7 @@ import downloadIcon from './download_icon.png';*/
  * Constants
  */
 
-const sectionTitle = 'Prototype submissions are due October 16th';
+const sectionTitle = 'Prototype submissions are due in October';
 const description = 'Check back here in September to get all the details about contest rules and submission guidelines.';
 
 const pdfText = 'Submissions Rules & Guidelines PDF (Coming Soon)';
