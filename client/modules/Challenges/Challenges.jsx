@@ -39,24 +39,28 @@ const DESIGN_BRIEFS = [
     subtitle: 'PROMOTING WALKING AND BIKING',
     title: 'How can we avoid dangerous bike accidents?',
     thumbnail: walking,
+    linkKey: 'walking',
   },
   {
     id: '',
     subtitle: 'IMPROVING ACCESSIBILITY',
     title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
+    linkKey: 'improvingaccessibility',
   },
   {
     id: '',
     subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
     title: 'How can we make commuting bearable (and maybe even fun)?',
     thumbnail: traffic,
+    linkKey: 'traffic',
   },
   {
     id: '',
     subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
     title: 'Driverless cars? How will this change the experience?',
     thumbnail: autonomousCars,
+    linkKey: 'autonomousvehicles',
   }
 ];
 
@@ -100,12 +104,12 @@ class Challenges extends Component {
             />
           ))}
           <div className={globalStyles.gridStyle}>
-            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
+            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail, linkKey }) => (
               <DBBox
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}
-                /* linkUrl={dummyLink} */
+                linkUrl={`/challenges/${linkKey}`}
               />
             ))}
           </div>
