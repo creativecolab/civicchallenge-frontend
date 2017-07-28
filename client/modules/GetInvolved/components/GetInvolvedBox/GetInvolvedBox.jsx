@@ -34,12 +34,17 @@ function GetInvolvedBox({ title, text, buttonText, linkUrl, rel, target, icon, b
       <div className={styles.getInvolvedBox}>
         <div className={styles.boxWrapper}>
           <div className={styles.boxContent}>
-            <img src={icon} alt={title} />
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <br />
-            <div className={globalStyles.sectionBtn}>
-              <a className={globalStyles.blueOutline} href={linkUrl} rel={rel} target={target}>{buttonText}</a>
+            <div className={styles.imgIcon}>
+              <img src={icon} alt={title} />
+            </div>
+            <div className={styles.text}>
+              <h2>{title}</h2>
+              <p>{text}</p>
+            </div>
+            <div className={styles.button}>
+              <div className={globalStyles.sectionBtn}>
+                <a className={globalStyles.blueOutline} href={linkUrl} rel={rel} target={target}>{buttonText}</a>
+              </div>
             </div>
           </div>
         </div>
