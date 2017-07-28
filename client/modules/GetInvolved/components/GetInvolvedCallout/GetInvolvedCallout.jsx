@@ -12,10 +12,10 @@ import downloadIcon from './download_icon.png';*/
  * Constants
  */
 
-const sectionTitle = 'Prototype submissions are due October 16th';
-const description = 'Check back here in September to get all the details about contest rules and submission guidelines.';
+const sectionTitle = 'Challenge submissions are due in October 2017';
+const description = 'Check back here in September to get all the details about dates, contest rules, and submission guidelines.';
 
-const pdfText = 'Submissions Rules & Guidelines PDF (Coming Soon)';
+const pdfText = 'Submissions Rules & Guidelines PDF (COMING SOON)';
 /**
  * GetInvolvedCallout
  */
@@ -35,11 +35,11 @@ function GetInvolvedCallout() {
         <div className={globalStyles.contentWrapper}>
           <div className={styles.calloutWrapper}>
             <h2 className={globalStyles.grey}>{sectionTitle}</h2>
-            <p>{description}</p>
+            <p className={globalStyles.grey}>{description}</p>
             <div className={globalStyles.paragraphLink}>
               {/* <img className={styles.icon} src={downloadIcon} alt="downlaod symbol" />
               <a href="">{pdfText}</a> */}
-              <p>{pdfText}</p>
+              <p className={globalStyles.grey}>{pdfText}</p>
             </div>
           </div>
         </div>
