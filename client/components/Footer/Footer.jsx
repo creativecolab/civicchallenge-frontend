@@ -79,7 +79,7 @@ function Footer() {
         </a>
       </div>
       <div className={styles.copyright}>
-        <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to team@d4sd.org!</p></div>
+        <div className={styles.copyright}><p>Copyright © 2017 D4SD. All Rights Reserved. Send feedback to <a href='spdow@ucsd.edu'>spdow@ucsd.edu</a>!</p></div>
       </div>
     </footer>
   );

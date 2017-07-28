@@ -126,7 +126,7 @@ class DesignBrief extends React.PureComponent {
         currentSection: newCurrentSection,
       });
     }
-  }
+  };
 
   render() {
     const { currentSection } = this.state;

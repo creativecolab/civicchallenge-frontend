@@ -39,7 +39,7 @@ const contextTypes = {
 const defaultProps = {};
 
 class LandingHeader extends React.PureComponent {
-  static SCROLL_PX_PER_MS = 1000
+  static SCROLL_PX_PER_MS = 1000;
 
   _onLearnMoreClicked = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -47,7 +47,7 @@ class LandingHeader extends React.PureComponent {
     const scrollDuration = Math.abs(scrollTop - scrollTarget) / LandingHeader.SCROLL_PX_PER_MS;
 
     TweenLite.to(window, scrollDuration, { scrollTo: scrollTarget });
-  }
+  };
 
   render() {
     return (

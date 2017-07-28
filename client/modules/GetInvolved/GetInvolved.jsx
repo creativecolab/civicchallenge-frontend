@@ -34,7 +34,7 @@ const description = 'Jump in now to the online discussion or read more details a
 const BOX_TEXT = [
   {
     title: 'Explore the Challenge Briefs',
-    text: 'Read the briefs to learn background information and to empathize with particular mobility challenges that San Diego residents face. Each brief includes links to discussions in Slack. Join the discussions that interest you and get to know other innovators!',
+    text: 'Read the briefs to learn background information and to empathize with particular Mobility Challenges that San Diego residents face. Each brief includes links to discussions in Slack. Join the discussions that interest you and get to know other innovators!',
     buttonText: 'View the Briefs',
     linkUrl: '/challenges',
     rel: '',
@@ -46,7 +46,7 @@ const BOX_TEXT = [
   },
   {
     title: 'Sign up for the Newsletter',
-    text: 'Fill out this simple online form with your Name and email address so we can keep you in the loop about the D4SD Mobility Challenges.',
+    text: 'Fill out this simple online form with your Name and email address so we can keep you in the loop about the D4SD Civic Design Challenges on Mobility.',
     buttonText: 'Sign up for emails',
     linkUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform',
     rel: 'noopener noreferrer',
