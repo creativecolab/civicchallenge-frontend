@@ -29,7 +29,7 @@
 				padding: 0;
 				/* width: (strip-unit($content-width) / 100) * 20%;*/
 
-				width: 200px;
+				width: 250px;
 				position: fixed;
 				right: (100% - $content-width) / 2;
 
@@ -38,23 +38,28 @@
 				background-color: #fff;
 				box-shadow: $theme-boxshadow; 
 
+				p {
+					
+				}
 				a {
 					$border-width-base: 1px;
 					$border-width-current: 5px;
-					$padding-base: 0.5em;
+					$padding-base: 1em;
 					text-decoration: none;
 					color: inherit;
+					font-weight: lighter;
 					li {
-						padding: 1em;
+						padding: .2em;
 						padding-left: calc(#{$padding-base} + #{$border-width-current} - #{$border-width-base});
 
-						font-size: 0.7em;
+						font-size: 0.75em;
 						border-bottom: $border-width-base solid rgb(215, 215, 215);
 						&:not(:first-child) {
 							border-top: none;
 						}
 
 						&.current {
+							font-weight: bolder;
 							padding-left: $padding-base;
 							border-left: $border-width-current solid #4496ff;
 						}

@@ -214,11 +214,11 @@ class DesignBrief extends React.PureComponent {
             <div className={styles.menu}>
               <ul className={styles.sidebar}>
                 <a href="#introduction">
-                  <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}>Introduction</li>
+                  <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}><p>Introduction</p></li>
                 </a>
                 {overview.map(({ title }, i) => (
                   <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
-                    <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
+                    <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}><p>{title}</p></li>
                   </a>
                 ))}
               </ul>
