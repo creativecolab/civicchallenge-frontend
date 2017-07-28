@@ -26,7 +26,11 @@ function StandardSectionBox({ sectionTitle, text }) {
     <div className={globalStyles.contentContainer}>
       <div className={styles.sectionBox}>
         <h1>{sectionTitle}</h1>
-        <p>{text}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: text,
+          }}
+        />
       </div>
     </div>
   );

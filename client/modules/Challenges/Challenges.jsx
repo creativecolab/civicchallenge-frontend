@@ -29,7 +29,7 @@ import walking from './biking.png';
 const INFO = [
   {
     sectionTitle: 'Challenge Briefs',
-    text: 'The challenges below explore the concerns currently facing San Diegans while also looking towards the future of transportation. Join a conversation about the issue that concerns you most and find teammates to submit a proposal. In addition to the Grand prize, at the Design Forward Summit we will award prizes for the best prototype in each of the four challenge categories.',
+    text: 'The challenges below explore the concerns currently facing San Diegans while also looking towards the future of transportation. Join a conversation about the issue that concerns you most and find teammates to submit a proposal. In addition to the Grand prize, at the Design Forward Alliance we will award prizes for the best prototype in each of the four challenge categories.',
   },
 ];
 
