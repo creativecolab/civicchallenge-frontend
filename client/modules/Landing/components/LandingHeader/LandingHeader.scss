@@ -9,6 +9,9 @@ $header-fcolor: rgb(255, 255, 255);
   background: #fff url("./alt1_cropped3.jpg") no-repeat top center fixed;
   position: relative;
   padding: 130px 0 120px 0;
+  @media (max-width: $mobile-max-width) {
+    padding: 100px 0 90px
+  }
   z-index: 0;
 
   .layer {
