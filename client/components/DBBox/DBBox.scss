@@ -47,6 +47,13 @@ $padding-mobile: $margin-inbetween / 2;
           padding: 20px 0 0 0;
         }
 
+        @media(max-width: $mobile-max-width) {
+          padding: 15px 20px 25px 20px;
+          .button {
+            padding: 15px 0 0 0;
+          }
+        }
+
         h3 {
           text-transform: uppercase;
         }
