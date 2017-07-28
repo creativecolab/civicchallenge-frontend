@@ -28,6 +28,7 @@ function ResourceBox({ title, text, icon }) {
           <img src={icon} alt={title} />
           <h2 className={globalStyles.orange}>{title}</h2>
           <p className={globalStyles.grey}>{text}</p>
+          <p className={styles.orange}>Coming Soon</p>
         </div>
       </div>
     </div>

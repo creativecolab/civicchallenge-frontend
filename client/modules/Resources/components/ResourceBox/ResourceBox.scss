@@ -30,6 +30,11 @@ $icon-dim: 60px;
         width: auto;
         height: $icon-dim;
      }  
+
+     .orange {
+       text-transform: uppercase;
+       color: $theme-color-orange;
+     }
     }
 
   }
