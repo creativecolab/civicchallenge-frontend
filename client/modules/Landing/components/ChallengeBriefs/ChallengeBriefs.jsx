@@ -27,8 +27,8 @@ const description = 'Mobility is really about people’s everyday problems and p
 const DESIGN_BRIEFS = [
   {
     id: '',
-    subtitle: 'PROMOTING WALKING AND BIKING',
-    title: 'How can we avoid dangerous bike accidents?',
+    subtitle: 'Walkable & Bikeable Communities',
+    title: 'How might we improve safety on the street?',
     thumbnail: walking,
     linkKey: 'challenges/walking',
   },
@@ -42,14 +42,14 @@ const DESIGN_BRIEFS = [
   {
     id: '',
     subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
-    title: 'How can we make commuting bearable (and maybe even fun)?',
+    title: 'What would make your commute relaxing?',
     thumbnail: traffic,
     linkKey: 'challenges/traffic',
   },
   {
     id: '',
     subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
-    title: 'Driverless cars? How will this change the experience?',
+    title: 'How do we take our hands off the wheel?',
     thumbnail: autonomousCars,
     linkKey: 'challenges/autonomousvehicles',
   },
