@@ -12,7 +12,7 @@ import styles from './Register.scss';
  */
 
 const sectionTitle = 'Ready to Get Started?';
-const description = 'Learn how you can get involved in the D4SD Mobility Challenges.';
+const description = 'Learn how you can get involved in the D4SD Civic Design Challenge on Mobility';
 const btnLink = '/getinvolved';
 const btnText = 'Get Involved';
 

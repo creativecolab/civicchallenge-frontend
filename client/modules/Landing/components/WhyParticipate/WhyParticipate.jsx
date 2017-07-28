@@ -22,13 +22,13 @@ const PARTICIPATE = [
     title: 'Learn Design',
     img: learnAndPractice,
     alt: 'Learn and Practice Icon',
-    desc: 'The Mobility challenges provide a great opportunity to practice design on real-world problems and to get mentorship from domain experts.',
+    desc: 'The D4SD <a href=“https://d4sd.org/challenges” rel=“noopener noreferrer” target=“_blank”>Civic Design Challenge on Mobility</a> provides a great opportunity to practice design on real-world problems and to get mentorship from domain experts.',
   },
   {
     title: '15 Minutes of Fame',
     img: fame,
     alt: '15 Minutes Icon',
-    desc: 'Qualifying submissions will be showcased on our website and finalists at the Design Forward Summit.',
+    desc: 'We will showcase qualifying submissions on our website and finalists at the Design Forward Alliance Summit <a href=“http://www.designforwardsd.com/the-summit/” rel=“noopener noreferrer” target=“_blank”>on Oct 26</a>.',
   },
   {
     title: 'Win Prizes',
@@ -64,7 +64,11 @@ function WhyParticipate(props) {
                 </div>
                 <div className={styles.contentText}>
                   <h2 className={globalStyles.orange}>{title}</h2>
-                  <p>{desc}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: desc,
+                    }}
+                  />
                 </div>
               </div>
             ))}
