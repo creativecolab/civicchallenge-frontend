@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 import globalStyles from 'main.scss';
 import styles from './GetInvolvedCallout.scss';
 
-/* images */
+/* images
 
-import downloadIcon from './download_icon.png';
+import downloadIcon from './download_icon.png';*/
 /**
  * Constants
  */
 
 const sectionTitle = 'Prototype submissions are due October 16th';
-const description = 'Open for submission on some date as part of the PROTOTYPE phase. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.';
+const description = 'Check back here in September to get all the details about contest rules and submission guidelines.';
 
-const pdfText = 'Submission Rules & Guidelines PDF';
+const pdfText = 'Submissions Rules & Guidelines PDF (Coming Soon)';
 /**
  * GetInvolvedCallout
  */
@@ -37,8 +37,9 @@ function GetInvolvedCallout() {
             <h2 className={globalStyles.grey}>{sectionTitle}</h2>
             <p>{description}</p>
             <div className={globalStyles.paragraphLink}>
-              <img className={styles.icon} src={downloadIcon} alt="downlaod symbol" />
-              <a href="">{pdfText}</a>
+              {/* <img className={styles.icon} src={downloadIcon} alt="downlaod symbol" />
+              <a href="">{pdfText}</a> */}
+              <p>{pdfText}</p>
             </div>
           </div>
         </div>

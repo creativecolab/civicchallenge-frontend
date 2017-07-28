@@ -32,7 +32,7 @@ const CHALLENGES_INFO = [
 const CHALLENGES = [
   {
     id: '',
-    name: 'Promoting Walkable and Bikeable Communities',
+    name: 'Promoting Walkable & Bikeable Communities',
     summary: 'How can we avoid dangerous bike accidents?',
     thumbnail: walking,
   },

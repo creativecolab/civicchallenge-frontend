@@ -81,7 +81,7 @@ function Footer() {
           </a>
         </div>
         <div className={styles.copyright}>
-          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href="mailto:team@d4sd.org">team@d4sd.org</a>! Header image by <a href="https://www.flickr.com/photos/vxla/8726075399">vxla</a> hosted on <a href="https://www.flickr.com">Flickr</a>.</p></div>
+          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href="mailto:spdow@ucsd.edu">spdow@ucsd.edu</a>! Header image by <a href="https://www.flickr.com/photos/vxla/8726075399">vxla</a> hosted on <a href="https://www.flickr.com">Flickr</a>.</p></div>
         </div>
       </section>
     </footer>

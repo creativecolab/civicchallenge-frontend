@@ -29,39 +29,39 @@ import walking from './biking.png';
 const INFO = [
   {
     sectionTitle: 'Challenge Briefs',
-    text: 'The challenges below explore the concerns currently facing San Diegans while also looking towards the future of transportation. Join a conversation about the issue that concerns you most and find teammates to submit a proposal. In addition to the Grand prize, at the Design Forward Summit we will award prizes for the best prototype in each of the four challenge categories.',
+    text: 'The challenges below explore the concerns currently facing San Diegans while also looking towards the future of transportation. Join a conversation about the issue that concerns you most and find teammates to submit a proposal. In addition to the Grand prize, at the Design Forward Alliance we will award prizes for the best prototype in each of the four challenge categories.',
   },
 ];
 
 const DESIGN_BRIEFS = [
   {
     id: '',
-    subtitle: 'PROMOTING WALKING AND BIKING',
-    title: 'How can we avoid dangerous bike accidents?',
+    subtitle: 'Walkable and Bikeable Communities',
+    title: 'How might we improve safety on the street?',
     thumbnail: walking,
-    linkKey: 'walking',
+    linkKey: 'challenges/walking',
   },
   {
     id: '',
     subtitle: 'IMPROVING ACCESSIBILITY',
     title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
-    linkKey: 'improvingaccessibility',
+    linkKey: 'challenges/improvingaccessibility',
   },
   {
     id: '',
     subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
-    title: 'How can we make commuting bearable (and maybe even fun)?',
+    title: 'What would make your commute relaxing?',
     thumbnail: traffic,
-    linkKey: 'traffic',
+    linkKey: 'challenges/traffic',
   },
   {
     id: '',
     subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
-    title: 'Driverless cars? How will this change the experience?',
+    title: 'How do we take our hands off the wheel?',
     thumbnail: autonomousCars,
-    linkKey: 'autonomousvehicles',
-  }
+    linkKey: 'challenges/autonomousvehicles',
+  },
 ];
 
 

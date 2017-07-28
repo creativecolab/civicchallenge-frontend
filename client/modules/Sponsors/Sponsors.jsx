@@ -20,7 +20,7 @@ import styles from './Sponsors.scss';
  */
 
 const sectionTitle = 'Sponsors';
-const description = 'D4SD sponsors are committed to advancing innovative concepts aimed to improve mobility for the millions of residents in the San Diego region. Sponsorship may come in many forms. Financial sponsors provide monetary incentives for challenge competitions and hackathons planned throughout the 2017 Mobility Challenges. In-kind sponsors can provide gift incentives and access to training, human resources, studio space, or technology.';
+const description = 'D4SD sponsors are committed to advancing innovative concepts aimed to improve mobility for the millions of residents in the San Diego region. Sponsorship may come in many forms. Financial sponsors provide monetary incentives for challenge competitions and hackathons planned throughout the 2017 Civic Design Challenge on Mobility. In-kind sponsors can provide gift incentives and access to training, human resources, studio space, or technology.';
 
 /**
  * Sponsors

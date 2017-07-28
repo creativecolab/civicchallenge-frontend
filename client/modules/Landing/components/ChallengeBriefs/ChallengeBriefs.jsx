@@ -22,33 +22,37 @@ import walking from './biking.png';
 
 /* const dummyLink = ''; */
 const sectionTitle = 'Challenge Briefs';
-const description = 'Mobility is really about people’s everyday problems and pleasures with transportation.  The D4SD Mobility Challenges aims to solve the issues most important to San Diego residents by focusing on four broad areas: promoting walkable and bikeable communities, enhancing the commuter experience, improving accessibility, and preparing for autonomous vehicles. To get involved and submit your own innovations, first read more about the specific challenges.';
+const description = 'Mobility is about the everyday problems and pleasures to transportation and being transported.  The aim of the D4SD Mobility Challenge is to solve the issues most important to San Diego residents by focusing on four broad areas: promoting walking and biking, enhancing the commuter experience, improving accessibility, and preparing for autonomous vehicles. To get involved and submit your own innovations, first read more about the specific challenges.';
 
 const DESIGN_BRIEFS = [
   {
     id: '',
-    subtitle: 'PROMOTING WALKING AND BIKING',
-    title: 'How can we avoid dangerous bike accidents?',
+    subtitle: 'Walkable & Bikeable Communities',
+    title: 'How might we improve safety on the street?',
     thumbnail: walking,
+    linkKey: 'challenges/walking',
   },
   {
     id: '',
     subtitle: 'IMPROVING ACCESSIBILITY',
     title: 'How do we help everyone reach their destination?',
     thumbnail: aging,
+    linkKey: 'challenges/improvingaccessibility',
   },
   {
     id: '',
     subtitle: 'ENHANCING THE COMMUTER EXPERIENCE',
-    title: 'Stuck in traffic? How can we make commuting fun?',
+    title: 'What would make your commute relaxing?',
     thumbnail: traffic,
+    linkKey: 'challenges/traffic',
   },
   {
     id: '',
     subtitle: 'PREPARING FOR AUTONOMOUS VEHICLES',
-    title: 'Driverless cars? How will this change the experience?',
+    title: 'How do we take our hands off the wheel?',
     thumbnail: autonomousCars,
-  }
+    linkKey: 'challenges/autonomousvehicles',
+  },
 ];
 
 /**
@@ -75,12 +79,12 @@ function ChallengeBriefs(props) {
             <p>{description}</p>
           </div>
           <div className={classNames([globalStyles.gridStyle, styles.briefsWrapper])}>
-            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail }) => (
+            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail, linkKey }) => (
               <DBBox
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}
-                /* linkUrl={dummyLink} */
+                linkUrl={linkKey}
               />
             ))}
           </div>
