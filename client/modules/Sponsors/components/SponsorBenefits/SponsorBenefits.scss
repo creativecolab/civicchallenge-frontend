@@ -6,42 +6,51 @@ $button-size: 0.7em;
 
 #SponsorBenefits {
     
-  width: $component-width-desktop;
-
-  .tierBlock {
-    text-align: left;
-    h3 {
-      text-transform: uppercase;
+  
+  .content {
+    width: 80%;
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
     }
-    padding: 15px 0;
-  }
-
-  .sponsorCallout {
-    padding: 60px 0;
-    p {
-      font-size: 0.9em;
+    .sponBenefits {
       padding-bottom: 40px;
+      .tierBlock {
+        text-align: left;
+        h3 {
+          text-transform: uppercase;
+          padding: 30px 0 10px 0;
+        }
+        ul {
+          margin: 0;
+        }
+      }
     }
-    .sponsorBtn {
-      display: flex;
-      justify-content: center;
-      a.salmon {
-        text-decoration: none;
-        padding: 10px 30px;
 
-        color: #fff;
-        font-size: $button-size;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
+    /* .sponsorCallout {
+      padding: 60px 0;
+      p {
+        font-size: 0.9em;
+      }
+      .sponsorBtn {
+        display: flex;
+        justify-content: center;
+        a.salmon {
+          text-decoration: none;
+          padding: 10px 30px;
 
-        background-color: $theme-color-red;
-        border: 2px solid $theme-color-red;
+          color: #fff;
+          font-size: $button-size;
+          font-weight: bold;
+          text-decoration: none;
+          text-transform: uppercase;
 
-     } 
-    }
+          background-color: $theme-color-red;
+          border: 2px solid $theme-color-red;
+
+      } 
+      }
+    } */
   }
-
 }
 
 @media (min-width: $desktop-min-width) {
@@ -50,9 +59,9 @@ $button-size: 0.7em;
   }
 }
 
-  @media (max-width: $mobile-max-width) {
+@media (max-width: $mobile-max-width) {
   #SponsorBenefits {
-    width: $component-width-mobile;
+    width: 100%;
 
   }
 }
