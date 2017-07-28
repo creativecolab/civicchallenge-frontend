@@ -44,7 +44,7 @@ html, body {
   }
 
   h3 {
-    font-size: 0.9em; /* 18pt */
+    font-size: 1em; /* 18pt */
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
@@ -178,7 +178,7 @@ div[data-reactroot] {
 
 .contentContainer {
   /* StandardSectionBox, margin under header sections */
-  margin-bottom: $header-space;
+  margin-bottom: $subsection-padding;
 
 }
 
