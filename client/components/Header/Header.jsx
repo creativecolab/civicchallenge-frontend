@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Navbar from 'components/Navbar/Navbar';
+/* import Navbar from 'components/Navbar/Navbar'; */
 
+import globalStyles from 'main.scss';
 import styles from './Header.scss';
 
 /**
@@ -29,18 +30,20 @@ const defaultProps = {};
 function Header({ backgroundImg, headerText, subheaderText, showButton }) {
   return (
     <header className={styles.header}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles.headerWrapper}>
-        <div
+        {/* <div
           className={styles.background}
-        />
-        <div className={styles.textContainer}>
-          <div className={styles.text}>
-            {subheaderText && <h3 className={styles.description}>{subheaderText}</h3>}
-            {headerText && <h1>{headerText}</h1>}
-            {showButton && <div className={styles.buttonContainer}>
-              <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
-            </div>}
+        /> */}
+        <div className={globalStyles.contentWrapper}>
+          <div className={styles.textContainer}>
+            <div className={styles.text}>
+              {subheaderText && <h3 className={globalStyles.white}>{subheaderText}</h3>}
+              {headerText && <h1 className={globalStyles.white}>{headerText}</h1>}
+              {showButton && <div className={styles.buttonContainer}>
+                <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
+              </div>}
+            </div>
           </div>
         </div>
         {backgroundImg && <img src={backgroundImg} alt="Background" />}

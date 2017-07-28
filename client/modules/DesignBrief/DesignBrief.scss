@@ -15,9 +15,9 @@
 
 	.contentContainer {
 		$content-width: 80%;
-
+		position: relative;
 		width: $content-width;
-		margin: 0 auto;
+		margin: $subsection-padding auto;
 
 		position: relative;
 

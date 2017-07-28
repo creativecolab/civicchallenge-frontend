@@ -6,19 +6,24 @@ $nav-font-color: #000;
 $font-color: #fff;
 
 .header {
-  height: 25%;
+  /* height: 25%;
 
   margin-bottom: 100px;
 
   position: relative;
 
-  color: $font-color;
+  color: $font-color; */
+
+  background-color: $theme-color-blue;
+  text-align: left;
+  padding: 90px 0 80px 0;
 
   .headerWrapper {
-    height: 100%;
+    /* height: 100%;
     width: 100%;
     margin-top: 20px;
-    .background {
+    */
+    /* .background {
       height: 100%;
       width: 100%;
 
@@ -26,26 +31,25 @@ $font-color: #fff;
       z-index: 0;
 
       background-color: $theme-color-blue;
-    }
+    } */
 
     .text-container {
-      width: 100%;
-      height: 100%;
+      /* width: 100%;
+      height: 100%; 
       
-      height: calc(100% - #{$navbar-height});
+      height: calc(100% - #{$navbar-height}); */
 
       position: relative;
-      align-items: center;
-      justify-content: center;
-
+      /* align-items: center;
+      justify-content: center; 
       padding-top: 2%;
 
-      display: flex;
+      display: flex; */
 
-      h3.description{
+      h3 {
         text-transform: uppercase;
       }
-
+      width: 80%;
 
     }
   }
@@ -53,28 +57,16 @@ $font-color: #fff;
 
 @media (min-width: $desktop-min-width) {
   .header {
-    .text {
+    /* .text {
       width: $component-width-desktop;
-
-      h1 {
-        font-size: 2em;
-      }
-    }
+    } */
   }
 }
 
 @media (max-width: $mobile-max-width) {
-  .header {
+  /* .header {
     .text {
       width: $component-width-mobile;
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      h3 {
-        font-size: 1em;
-      }
     }
-  }
+  } */
 }

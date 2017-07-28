@@ -3,8 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import globalStyles from 'main.scss';
 
 import DBHeader from './components/DBHeader/DBHeader';
 import DBOverview from './components/DBOverview/DBOverview';
@@ -200,6 +202,7 @@ class DesignBrief extends React.PureComponent {
         <Helmet
           title={challengeTitle}
         />
+        <Navbar />
         <Header
           backgroundImg={backgroundImg}
           headerText={question}
@@ -207,45 +210,44 @@ class DesignBrief extends React.PureComponent {
           showButton={false}
         />
         <section className={styles.contentContainer}>
-
-          <ul className={styles.sidebar}>
-            <a href="#introduction">
-              <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}>Introduction</li>
-            </a>
-            {overview.map(({ title }, i) => (
-              <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
-                <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
+          <div className={globalStyles.contentWrapper}>
+            <ul className={styles.sidebar}>
+              <a href="#introduction">
+                <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}>Introduction</li>
               </a>
-            ))}
-          </ul>
+              {overview.map(({ title }, i) => (
+                <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
+                  <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}>{title}</li>
+                </a>
+              ))}
+            </ul>
 
-          <div id={'introduction'} ref={(el) => { this.header = el; }}>
-            <DBHeader
-              intro={intro}
-            />
-          </div>
-
-          {overview.map(({ title, text, link, linkText }, i) => (
-            <div id={title.replace(/( |\W)/g, '').toLowerCase()} className={styles.contentWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}>
-              <DBOverview
-                title={title}
-                text={text}
-                link={link}
-                linkText={linkText}
+            <div id={'introduction'} ref={(el) => { this.header = el; }}>
+              <DBHeader
+                intro={intro}
               />
             </div>
-          ))}
 
-          {/* <div id={'learningresources'} ref={(el) => { this.resources = el; }}>
-            <Resources
-              title={RESOURCES.challengeName}
-              external={RESOURCES.external}
-              news={RESOURCES.news}
-            />
-          </div> */}
+            {overview.map(({ title, text, link, linkText }, i) => (
+              <div id={title.replace(/( |\W)/g, '').toLowerCase()} className={styles.contentWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}>
+                <DBOverview
+                  title={title}
+                  text={text}
+                  link={link}
+                  linkText={linkText}
+                />
+              </div>
+            ))}
 
+            {/* <div id={'learningresources'} ref={(el) => { this.resources = el; }}>
+              <Resources
+                title={RESOURCES.challengeName}
+                external={RESOURCES.external}
+                news={RESOURCES.news}
+              />
+            </div> */}
+          </div>
         </section>
-
         <Footer />
 
       </div>
