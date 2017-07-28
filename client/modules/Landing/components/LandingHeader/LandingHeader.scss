@@ -34,6 +34,10 @@ $header-fcolor: rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
 
+      @media (max-width: $mobile-max-width) {
+        width: 100%;
+      }
+
       .title { // "Mobility"
         //font-size: 3.8 * $font-size;
         font-size: 2.6em;
@@ -42,6 +46,9 @@ $header-fcolor: rgb(255, 255, 255);
         margin: 10px 0 30px 0px;
         color: $header-fcolor;
         letter-spacing: 2px;
+        @media (max-width: $mobile-max-width) {
+          font-size: 1.8em;
+        }
       }
     }
 
@@ -55,6 +62,9 @@ $header-fcolor: rgb(255, 255, 255);
           font-size: 0.75em;
           color: #fff;
           font-weight: 600;
+          @media (max-width: $mobile-max-width) {
+            padding-top: 20px;
+          }
         }
       }
     }
@@ -87,27 +97,26 @@ $header-fcolor: rgb(255, 255, 255);
 
 
 @media (min-width: $desktop-min-width) {
-.challenge-text {
-  width: $component-width-desktop;
-  }
-
-}
-}
-
-@media (max-width: $mobile-max-width) {
-#landing-header {
-  width: 100%;
-
-  .buttonWrapper {
-    display: inline;
-    margin: 0 auto;
-    width: $component-width-mobile;;
-
-    .or {
-      font-size: 0.75em;
-      color: #fff;
-      font-weight: 600;
+  .challenge-text {
+    width: $component-width-desktop;
     }
   }
 }
+
+@media (max-width: $mobile-max-width) {
+  #landing-header {
+    width: 100%;
+
+    .buttonWrapper {
+      display: inline;
+      margin: 0 auto;
+
+      .or {
+        font-size: 0.75em;
+        color: #fff;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+    }
+  }
 }

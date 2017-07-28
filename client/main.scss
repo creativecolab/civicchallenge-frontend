@@ -34,6 +34,9 @@ html, body {
     font-weight: 300;
     padding: 0;
     margin: 0; 
+    @media (max-width: $mobile-max-width) {
+      font-size: 1.5em;
+    }
   }
 
   h2 {
@@ -41,6 +44,9 @@ html, body {
     padding: 0;
     margin: 0; 
     font-weight: 100;
+    @media (max-width: $mobile-max-width) {
+      font-size: 1.1em;
+    }
   }
 
   h3 {
@@ -49,6 +55,9 @@ html, body {
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-weight: 600;
+    @media (max-width: $mobile-max-width) {
+      font-size: 1em;
+    }
   }
 
   h4 {
@@ -98,10 +107,11 @@ div[data-reactroot] {
 
 .pageWrapper {
   width: $component-width-desktop;
-  margin: $page-margins; 
+  margin: $page-margins-d; 
 
   @media (max-width: $mobile-max-width) {
     width: $component-width-mobile;
+    margin: $page-margins-m;
   }
 }
 
