@@ -36,7 +36,7 @@ const defaultProps = {};
 
 function ChallengeDescription(props) {
   return (
-    <section id={styles.challengeDescription} ref={props.componentRef}>
+    <section id="challengeDescription" className={styles.challengeDescription} ref={props.componentRef}>
       <div className={globalStyles.contentWrapper}>
         <div className={styles.challengeRow}>
           <div className={styles.challengeImg}>
