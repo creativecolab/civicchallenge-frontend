@@ -10,10 +10,18 @@ $img-width: 960px;
     color: $theme-color-blue;
   }
 
+  h3 {
+    text-transform: uppercase;
+  }
+
 	height: 100%;
 	width: 100%;
 
   overflow-x: hidden;
+
+  .section {
+    padding-bottom: 30px;
+  }
 
   .sponsorContainer {
     display: flex;
