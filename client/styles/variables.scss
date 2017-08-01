@@ -7,7 +7,9 @@ $component-width-desktop: 960px;
 $component-width-desktopHD: 960px;
 
 $button-size: 0.75em;
-$button-padding: 15px 45px;
+$button-height-padding: 15px;
+$button-width-padding: 45px;
+$button-padding: $button-height-padding $button-width-padding;
 
 $mobile-max-width: 960px;
 $desktop-min-width: $mobile-max-width + 1px;
@@ -83,3 +85,4 @@ $landing-padding-m: 50px;
 $landing-padding-d: 90px;
 
 $numberSpons: 5%;
+

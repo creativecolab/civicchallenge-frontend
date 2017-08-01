@@ -232,43 +232,14 @@ div[data-reactroot] {
 }
 
 
-.button {
-  margin: 20px;
-  font-size: 16px;
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-
-    a {
-      margin: 0;
-      border: none;
-      border-top-left-radius: 10% 50%;
-      border-top-right-radius: 10% 50%;
-      border-bottom-left-radius: 10% 50%;
-      border-bottom-right-radius: 10% 50%;
-      padding: 0.5em 1.5em;
-
-      display: inline-block;
-      cursor: pointer;
-
-      background-color: #24487c;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    a:hover {
-      background-color: #2d324d;
-    }
-  } 
-}
-
 .sectionBtn {
 
   margin: 10px 0;
   font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
+  display: block;
+
+  $ease-time: 0.5s;
+  $color-delay: 0.2s;
 
   a.blueOutline {
     text-decoration: none;
@@ -281,7 +252,13 @@ div[data-reactroot] {
     text-transform: uppercase;
 
     border: 2px solid $theme-color-blue;
+  }
 
+  a.blueOutline:hover {
+    transition: color $ease-time ease $color-delay;
+    color: #fff;
+    transition: background-color $ease-time ease;
+    background-color: $theme-color-blue;
   }
 
   a.blue {
@@ -299,6 +276,14 @@ div[data-reactroot] {
     box-shadow: $theme-boxshadow;
   }
 
+    a.blue:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-blue;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
   a.whiteOutline {
     text-decoration: none;
     padding: $button-padding;
@@ -308,15 +293,16 @@ div[data-reactroot] {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    background-color: none;
 
     border: 2px solid #fff;
 
-    /* &:hover {
-      transition: background-color 1s ease;
-      transition: color 0.5s ease;
+    &:hover {
+      transition: color $ease-time ease $color-delay;
       color: $theme-color-blue;
+      transition: background-color $ease-time ease;
       background-color: #fff;
-    } */
+    }
 
   }
 
@@ -332,6 +318,13 @@ div[data-reactroot] {
 
     border: 2px solid $theme-color-red;
 
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-red;
+    }
+
   }
 
   a.orangeOutline {
@@ -345,6 +338,13 @@ div[data-reactroot] {
     text-transform: uppercase;
 
     border: 2px solid $theme-color-orange;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-orange;
+    }
 
   }
 
@@ -361,7 +361,13 @@ div[data-reactroot] {
     background-color: $theme-color-red;
     border: 2px solid $theme-color-red;
   }
-
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-red;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+      border-color: #fff;
+    }
 
 }
 

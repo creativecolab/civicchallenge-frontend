@@ -52,6 +52,19 @@ const AFFILIATE_LINKS = [
 ];
 */
 
+const SOCIAL_MEDIA = [
+  {
+    mediaLink: 'https://www.facebook.com/DesignForSanDiego/',
+    imgSrc: facebookIcon,
+    imgAlt: 'facebookIcon',
+  },
+  {
+    mediaLink: 'https://twitter.com/Design4SD',
+    imgSrc: twitterIcon,
+    imgAlt: 'twitterIcon',
+  },
+];
+
 
 /**
  * Footer
@@ -73,15 +86,14 @@ function Footer() {
     <footer className={styles.footer}>
       <section className={globalStyles.contentWrapper}>
         <div className={styles.mediaIcons}>
-          <a href="https://www.facebook.com/DesignForSanDiego/">
-            <img src={facebookIcon} alt="facebookIcon" />
-          </a>
-          <a href="https://twitter.com/Design4SD">
-            <img src={twitterIcon} alt="twitterIcon" />
-          </a>
+          {SOCIAL_MEDIA.map(({ mediaLink, imgSrc, imgAlt }) => (
+            <a href={mediaLink} target="_blank" rel="noopener noreferrer">
+              <img src={imgSrc} alt={imgAlt} />
+            </a>
+          ))}
         </div>
         <div className={styles.copyright}>
-          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href="mailto:spdow@ucsd.edu">spdow@ucsd.edu</a>! Header image by <a href="https://www.flickr.com/photos/vxla/8726075399">vxla</a> hosted on <a href="https://www.flickr.com">Flickr</a>.</p></div>
+          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href="mailto:spdow@ucsd.edu">spdow@ucsd.edu</a>.</p></div>
         </div>
       </section>
     </footer>
