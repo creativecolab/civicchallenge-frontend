@@ -189,6 +189,18 @@ const CHALLENGE_INFO = {
         figureC: '',
         figureCLink: '',
       },
+      {
+        title: 'Preparing the city: Are stop signs a relic of the past?',
+        text: 'San Diego is one of the 10 cities that has been selected by the Department of Transportation to test introducing autonomous vehicles (AVs) to city streets. Though it’s important to note that AVs not only ride on the streets, they might also talk with the street, the light signals and all other sensors even miles down the road. AVs use onboard sensors to detect potential immediate hazards, but also integrate with other cars and sensors in a communication network that connects them to potential dangers miles ahead.For passengers, these safety precautions add to a relaxing experience of being chauffeured, but for walkers, bikers and others’ on the road, negotiating traffic with an AV may be a stressful experience. How might an AV signal to a walker or biker that they have been “seen” and accounted for in the navigation routing system, and that it’s actually safe to walk?other concern is that computing systems can be hacked. To communicate with other cars and sensors along the drive, AVs access part of the radio frequency spectrum set aside explicitly for cars, and called “Dedicated Short-Range Communication.” AVs can use this frequency to communicate with other sensors within a 1,000 foot range. However, because AVs are open to receive signals it leaves them vulnerable to hacking. Hacking a car is somewhat different than breaking in and stealing the vehicle—hacked cars might be rerouted, used to reroute other vehicles, or hacking might simply be to delete the car’s log files. All frightening possibilities that need design solutions.',
+        link: '',
+        linkText: 'Discuss this in Slack (coming soon)',
+        figureA: '',
+        figureALink: '',
+        figureB: '',
+        figureBLink: '',
+        figureC: '',
+        figureCLink: '',
+      },
     ],
   },
   error: {
