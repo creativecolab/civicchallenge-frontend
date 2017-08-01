@@ -46,8 +46,8 @@ function Sponsors() {
           sectionTitle={sectionTitle}
           text={description}
         />
-        <CurrentSponsors />
         <SponsorBenefits />
+        <CurrentSponsors />
       </div>
       <Footer />
     </div>

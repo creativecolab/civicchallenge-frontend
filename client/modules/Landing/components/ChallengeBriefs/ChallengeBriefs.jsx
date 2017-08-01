@@ -7,7 +7,7 @@ import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
 
-import DBBox from './components/DBBox/DBBox';
+import DBBox from 'components/DBBox/DBBox';
 
 import styles from './ChallengeBriefs.scss';
 

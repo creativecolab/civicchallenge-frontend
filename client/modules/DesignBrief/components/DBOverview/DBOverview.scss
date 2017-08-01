@@ -6,7 +6,7 @@ $header-img-dim: 250px;
 .overview {
   width: 100%;
 
-  margin: $spacing-margin 0;
+  margin: $subsection-padding 0;
 
 
   .overviewText {
@@ -15,6 +15,53 @@ $header-img-dim: 250px;
     }
     @media (min-width: $desktop-min-width) {
       width: $right-side-width;
+    }
+
+    overflow: auto;
+    p {
+      clear: both;
+    }
+    
+    .fA {
+      margin: 30px 0;
+      background-color: $theme-color-medgrey;
+      height: 200px;
+      width: 100%;
+      img {
+        height: auto;
+        width: auto;
+      }
+      @media (max-width: $mobile-max-width) {
+        margin: 30px 0 20px 0;
+      }
+    }
+
+    .fB {
+      margin-left: 20px;
+      float: right;
+      background-color: $theme-color-medgrey;
+      height: 200px;
+      width: 300px;
+      img {
+        height: auto;
+        width: auto;
+      }
+      @media (max-width: $mobile-max-width) {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    .fC {
+      margin-top: 20px;
+      background-color: $theme-color-medgrey;
+      height: 100px;
+      width: 100%;
+      img {
+        height: auto;
+        width: auto;
+      }
     }
   }
 

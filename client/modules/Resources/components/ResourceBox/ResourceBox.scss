@@ -29,7 +29,12 @@ $icon-dim: 60px;
         margin: 20px 10px;
         width: auto;
         height: $icon-dim;
-     }  
+      }  
+
+     .orange {
+       text-transform: uppercase;
+       color: $theme-color-orange;
+     }
     }
 
   }
@@ -39,5 +44,6 @@ $icon-dim: 60px;
 @media (max-width: $mobile-max-width) {
   .resource-box {
     margin-right: 0;
+    width: 90%;
   }
 }

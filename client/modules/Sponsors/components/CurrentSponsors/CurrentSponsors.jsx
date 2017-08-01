@@ -13,7 +13,6 @@ import nsfLogo from './nsf-logo.png';
  * Constants
  */
 
-const ButtonText = 'Become a Sponsor Today';
 
 const T1_SPONSORS = [
   {
@@ -47,9 +46,6 @@ function CurrentSponsors() {
             </a>
           ))}
         </div>
-      </div>
-      <div className={globalStyles.sectionBtn}>
-        <a className={globalStyles.blueOutline} href="mailto:team@d4sd.org">{ButtonText}</a>
       </div>
     </div>
   );

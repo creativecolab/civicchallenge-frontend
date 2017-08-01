@@ -40,6 +40,8 @@ $font-color: #fff;
     }
 
     .registerButton {
+      $ease-time: 0.5s;
+      $color-delay: 0.2s;
       border: 2px solid $theme-color-blue;
       padding: 0;
       margin: 0 0 0 25px;
@@ -54,6 +56,14 @@ $font-color: #fff;
       }
       a {
         text-decoration: none;
+      }
+      &:hover {
+        transition: background-color $ease-time ease;
+        background-color: $theme-color-blue;
+        p {
+          transition: color $ease-time ease $color-delay;
+          color: #fff;
+        }
       }
     }
 
@@ -153,15 +163,18 @@ $font-color: #fff;
       .navbar-inner {
         width: 100%;
 
+        overflow: hidden;
+
         position: absolute;
-        left: 101%;
+        left: 0;
         top: $navbar-height + (2 * $navbar-vpadding);
 
         .navbar-link-container {
-          width: 100%;
+          width: 0;
 
           position: relative;
-          left: 0;
+          left: 100%;
+          overflow: hidden;
 
           a {
             margin: 0;
@@ -171,6 +184,7 @@ $font-color: #fff;
 
             display: block;
 
+            white-space: nowrap;
             background-color: #4496ff;
             color: #fff;
           }
