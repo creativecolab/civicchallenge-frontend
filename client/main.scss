@@ -236,7 +236,6 @@ div[data-reactroot] {
 
   margin: 10px 0;
   font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
-  display: block;
 
   $ease-time: 0.5s;
   $color-delay: 0.2s;
@@ -360,7 +359,6 @@ div[data-reactroot] {
 
     background-color: $theme-color-red;
     border: 2px solid $theme-color-red;
-  }
     &:hover {
       transition: color $ease-time ease $color-delay;
       color: $theme-color-red;
@@ -368,6 +366,7 @@ div[data-reactroot] {
       background-color: #fff;
       border-color: #fff;
     }
+  }
 
 }
 
