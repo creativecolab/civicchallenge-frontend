@@ -163,15 +163,18 @@ $font-color: #fff;
       .navbar-inner {
         width: 100%;
 
+        overflow: hidden;
+
         position: absolute;
-        left: 101%;
+        left: 0;
         top: $navbar-height + (2 * $navbar-vpadding);
 
         .navbar-link-container {
-          width: 100%;
+          width: 0;
 
           position: relative;
-          left: 0;
+          left: 100%;
+          overflow: hidden;
 
           a {
             margin: 0;
@@ -181,6 +184,7 @@ $font-color: #fff;
 
             display: block;
 
+            white-space: nowrap;
             background-color: #4496ff;
             color: #fff;
           }

@@ -99,7 +99,8 @@ class Navbar extends React.PureComponent {
 
     this.navbarItems.forEach((navbarItem, i) => {
       tl.to(navbarItem, Navbar.ANIMATION_DURATION, {
-        left: mobileNavbarOpen ? 0 : '-101%',
+        left: mobileNavbarOpen ? '100%' : 0,
+        width: mobileNavbarOpen ? 0 : '100%',
       }, i * (Navbar.ANIMATION_DURATION / 4));
     });
 
