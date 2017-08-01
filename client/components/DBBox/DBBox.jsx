@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'util/classNames';
+import { Link } from 'react-router';
 
 import globalStyles from 'main.scss';
 import styles from './DBBox.scss';
@@ -30,7 +32,7 @@ const defaultProps = {};
 
 function DBBox({ title, subtitle, thumbnail, linkUrl }) {
   return (
-    <section className={globalStyles.sectionWrapper}>
+    <section className={classNames([globalStyles.sectionWrapper, styles.wrapper])}>
       <div className={styles.boxWrapper}>
         <section className={styles.DBBox}>
           <div className={styles.dbBoxImg}>
@@ -45,7 +47,8 @@ function DBBox({ title, subtitle, thumbnail, linkUrl }) {
               <h2>{title}</h2>
               <div className={styles.button}>
                 <div className={globalStyles.sectionBtn}>
-                  <a className={globalStyles.orangeOutline} href={linkUrl}>{ButtonText}</a>
+                  <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
+                  {/* <a className={globalStyles.orangeOutline} href={linkUrl}>{ButtonText}</a> */}
                 </div>
               </div>
             </div>

@@ -44,7 +44,11 @@ function TimelineBox(props) {
                 __html: sectionTitle,
               }}
             />
-            <p>{description}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: description,
+              }}
+            />
           </div>
           <div className={styles.timeline}>
             <Timeline />

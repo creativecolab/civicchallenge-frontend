@@ -35,6 +35,7 @@ function Header({ backgroundImg, headerText, subheaderText, showButton }) {
         {/* <div
           className={styles.background}
         /> */}
+        <div className={styles.layer} />
         <div className={globalStyles.contentWrapper}>
           <div className={styles.textContainer}>
             <div className={styles.text}>

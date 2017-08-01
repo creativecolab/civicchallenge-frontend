@@ -55,21 +55,22 @@ function SponsorBenefits(props) {
     <section id={styles.SponsorBenefits} ref={props.componentRef}>
       <div id="sponsor-description" className={styles.content}>
         <h2 className={globalStyles.grey}>Sponsor Benefits</h2>
-        {SPONSOR_INFO.map(({ title, benefits }) => (
-          <div className={styles.tierBlock}>
-            <h3 className={globalStyles.grey}>{title}</h3>
-            <ul>
-              {benefits.map(benefit =>
-                <li key={benefit}><span>{benefit}</span></li>
-                )}
-            </ul>
-          </div>
-        ))}
+        <div className={styles.sponBenefits}>
+          {SPONSOR_INFO.map(({ title, benefits }) => (
+            <div className={styles.tierBlock}>
+              <h3 className={globalStyles.grey}>{title}</h3>
+              <ul>
+                {benefits.map(benefit =>
+                  <li key={benefit}><span>{benefit}</span></li>
+                  )}
+              </ul>
+            </div>
+          ))}
+        </div>
         <div className={globalStyles.sectionBtn}>
           <a className={globalStyles.blueOutline} href="mailto:team@d4sd.org">{ButtonText}</a>
         </div>
       </div>
-
     </section>
   );
 }

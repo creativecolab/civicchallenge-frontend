@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import classNames from 'util/classNames';
+/* import classNames from 'util/classNames'; */
 
 import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
@@ -69,8 +69,7 @@ function Resources() {
           sectionTitle={sectionTitle}
           text={description}
         />
-        <p>Coming Soon!</p>
-        <div className={classNames([globalStyles.gridStyle, styles.gridWrapper])}>
+        <div className={globalStyles.gridStyle}>
           {RESOURCE_CONTENT.map(({ title, text, icon }) => (
             <ResourceBox
               title={title}

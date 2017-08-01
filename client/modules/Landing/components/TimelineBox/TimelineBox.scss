@@ -3,7 +3,10 @@
 $icon-dim: 100px;
 
 #timeline-box {
-  padding: 90px 0;
+  padding: $landing-section-padding-d;
+  @media (max-width: $mobile-max-width) {
+    padding: $landing-section-padding-m;
+  }
 
   background-color: $theme-color-blue;
 
@@ -19,7 +22,6 @@ $icon-dim: 100px;
     $base-width: 70%;
     $margin-left: 5%;
     $inner-padding: 5%;
-
     width: $base-width - $margin-left - (2* $inner-padding);
 
     vertical-align: middle;
@@ -48,7 +50,7 @@ $icon-dim: 100px;
 @media (max-width: $mobile-max-width) {
 #timeline-box {
   .text-wrapper {
-    width: $component-width-mobile;
+    width: 100%;
   }
 }
 }

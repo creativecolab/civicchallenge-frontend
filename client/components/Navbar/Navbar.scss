@@ -40,6 +40,8 @@ $font-color: #fff;
     }
 
     .registerButton {
+      $ease-time: 0.5s;
+      $color-delay: 0.2s;
       border: 2px solid $theme-color-blue;
       padding: 0;
       margin: 0 0 0 25px;
@@ -54,6 +56,14 @@ $font-color: #fff;
       }
       a {
         text-decoration: none;
+      }
+      &:hover {
+        transition: background-color $ease-time ease;
+        background-color: $theme-color-blue;
+        p {
+          transition: color $ease-time ease $color-delay;
+          color: #fff;
+        }
       }
     }
 

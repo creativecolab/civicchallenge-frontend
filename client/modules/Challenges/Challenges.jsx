@@ -10,7 +10,7 @@ import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox
 
 import globalStyles from 'main.scss';
 
-import DBBox from './components/DBBox/DBBox';
+import DBBox from 'components/DBBox/DBBox';
 import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';

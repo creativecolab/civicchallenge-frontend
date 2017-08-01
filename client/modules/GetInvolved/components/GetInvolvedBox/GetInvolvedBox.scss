@@ -8,24 +8,47 @@ $icon-dim: 60px;
   height: $box-dim;
   padding: 40px;
   margin: 0;
-
-  display: inline-block;
-  vertical-align: bottom;
+  
+  @media(max-width: $mobile-max-width) {
+    padding: 30px;
+    height: $box-dim * 1.1;
+  }
 
   .boxWrapper {
     height: 100%; 
     display: flex;
-    align-items: center;
+    position: relative;
     .boxContent{
-
       text-align: left;
+      .imgIcon {
+        img {
+          width: $icon-dim;
+          height: $icon-dim;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
 
-      img {
-        width: $icon-dim;
-        height: $icon-dim;
-     }  
+      .text {
+        position: relative;
+        margin-top: 100px;
+      }
+
+      .button {
+        position: absolute;
+        bottom: 5px;
+        left:0;
+      }
     }
 
   }
 
+}
+
+@media(max-width: $mobile-max-width) {
+  .wrapper {
+    margin-right: 0;
+    width: 100%;
+  }
 }

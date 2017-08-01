@@ -3,8 +3,14 @@
 $icon-dim: 100px;
 
 #ChallengeBriefs {
-  padding: 90px 0;
+  padding: $landing-section-padding-d;
+  @media (max-width: $mobile-max-width) {
+    padding: $landing-section-padding-m;
+  }
   background-color: $theme-color-lightblue;
+  .text-wrapper {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: $desktop-min-width) {
@@ -20,13 +26,11 @@ $icon-dim: 100px;
 
       .briefs-wrapper {
         width: 100%;
-
-        text-align: center;
+        text-align: left;
       }
 
       .text-wrapper {
-        margin: 0 auto 40px;
-        width: 800px;
+        width: 80%;
       }
     }
   }
@@ -34,16 +38,10 @@ $icon-dim: 100px;
 }
 
 @media (max-width: $mobile-max-width) {
-#ChallengeBriefs {
-  .content-wrapper {
-    margin: 0 auto;
-    width: $component-width-mobile;
-
-    .content-row {
-      .text-wrapper {
-        margin-bottom: 40px;
-      }
+  #ChallengeBriefs {
+    .content-wrapper {
+      margin: 0 auto;
+      width: $component-width-mobile;
     }
   }
-}
 }

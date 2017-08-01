@@ -17,8 +17,6 @@ html, body {
   height: 100%;
 
   position: relative;
-
-  font-weight: 100;
   font-size: $font-size;
   font-family: 'Montserrat', Helvetica, sans-serif;
   text-align: left;
@@ -26,7 +24,6 @@ html, body {
 
   p, span {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
-    font-weight: 100;
   }
 
   h1 {
@@ -117,8 +114,8 @@ div[data-reactroot] {
 
 .contentWrapper {
   width: $component-width-desktop;
+  position: relative;
   margin: 0 auto; 
-
   @media (max-width: $mobile-max-width) {
     width: $component-width-mobile;
   }
@@ -145,6 +142,10 @@ div[data-reactroot] {
   margin: 0 20px 20px 0;
   vertical-align: bottom;
   display: inline-block;
+  @media(max-width: $mobile-max-width) {
+    margin-right: 0;
+    width: 100%;
+  }
 }
 
 .sectionWrapperBlue {
@@ -189,7 +190,6 @@ div[data-reactroot] {
 .contentContainer {
   /* StandardSectionBox, margin under header sections */
   margin-bottom: $subsection-padding;
-
 }
 
 /* current */
@@ -232,47 +232,13 @@ div[data-reactroot] {
 }
 
 
-.button {
-  margin: 20px;
-  font-size: 16px;
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-
-    a {
-      margin: 0;
-      border: none;
-      border-top-left-radius: 10% 50%;
-      border-top-right-radius: 10% 50%;
-      border-bottom-left-radius: 10% 50%;
-      border-bottom-right-radius: 10% 50%;
-      padding: 0.5em 1.5em;
-
-      display: inline-block;
-      cursor: pointer;
-
-      background-color: #24487c;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    a:hover {
-      background-color: #2d324d;
-    }
-  } 
-}
-
 .sectionBtn {
 
   margin: 10px 0;
   font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
 
-  @media (max-width: $mobile-max-width) {
-    margin: 30px 0 0 0;
-  }
+  $ease-time: 0.5s;
+  $color-delay: 0.2s;
 
   a.blueOutline {
     text-decoration: none;
@@ -285,7 +251,13 @@ div[data-reactroot] {
     text-transform: uppercase;
 
     border: 2px solid $theme-color-blue;
+  }
 
+  a.blueOutline:hover {
+    transition: color $ease-time ease $color-delay;
+    color: #fff;
+    transition: background-color $ease-time ease;
+    background-color: $theme-color-blue;
   }
 
   a.blue {
@@ -303,6 +275,14 @@ div[data-reactroot] {
     box-shadow: $theme-boxshadow;
   }
 
+    a.blue:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-blue;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
   a.whiteOutline {
     text-decoration: none;
     padding: $button-padding;
@@ -312,15 +292,16 @@ div[data-reactroot] {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    background-color: none;
 
     border: 2px solid #fff;
 
-    /* &:hover {
-      transition: background-color 1s ease;
-      transition: color 0.5s ease;
+    &:hover {
+      transition: color $ease-time ease $color-delay;
       color: $theme-color-blue;
+      transition: background-color $ease-time ease;
       background-color: #fff;
-    } */
+    }
 
   }
 
@@ -336,6 +317,13 @@ div[data-reactroot] {
 
     border: 2px solid $theme-color-red;
 
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-red;
+    }
+
   }
 
   a.orangeOutline {
@@ -349,6 +337,13 @@ div[data-reactroot] {
     text-transform: uppercase;
 
     border: 2px solid $theme-color-orange;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-orange;
+    }
 
   }
 
@@ -364,8 +359,14 @@ div[data-reactroot] {
 
     background-color: $theme-color-red;
     border: 2px solid $theme-color-red;
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-red;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+      border-color: #fff;
+    }
   }
-
 
 }
 
