@@ -22,6 +22,7 @@ const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, 
 // const getChallengeBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'challengebrief');
 const getRewards = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Rewards/Rewards').default), 'rewards');
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
+const getDesignTools = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignTools/DesignTools').default), 'designtoolsandtips');
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
 const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
 const getGetInvolved = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/GetInvolved/GetInvolved').default), 'getinvolved');
@@ -45,6 +46,7 @@ export default (
     <Route path="/challenges/:id" getComponent={getDesignBrief} />
     <Route path="/rewards" getComponent={getRewards} />
     <Route path="/resources" getComponent={getResources} />
+    <Route path="/resources/designtoolsandtips" getComponent={getDesignTools} />
     <Route path="/faq" getComponent={getFAQ} />
     <Route path="/designbrief" getComponent={getDesignBrief} />
     <Route path="/getinvolved" getComponent={getGetInvolved} />

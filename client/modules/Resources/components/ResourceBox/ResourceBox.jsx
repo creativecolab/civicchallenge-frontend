@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 import globalStyles from 'main.scss';
 import styles from './ResourceBox.scss';
@@ -8,10 +9,13 @@ import styles from './ResourceBox.scss';
  * ResourceBox
  */
 
+const ButtonText = 'Learn More';
+
 const propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  linkUrl: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -20,7 +24,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ResourceBox({ title, text, icon }) {
+function ResourceBox({ title, text, icon, linkUrl }) {
   return (
     <div className={styles.resourceBox}>
       <div className={styles.boxWrapper}>
@@ -28,7 +32,11 @@ function ResourceBox({ title, text, icon }) {
           <img src={icon} alt={title} />
           <h2 className={globalStyles.orange}>{title}</h2>
           <p className={globalStyles.grey}>{text}</p>
-          <p className={styles.orange}>Coming Soon</p>
+          <div className={styles.button}>
+            <div className={globalStyles.sectionBtn}>
+              <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -31,16 +31,19 @@ const RESOURCE_CONTENT = [
     title: 'Design Tools & Tips',
     text: 'The human-centered design process involves discovering needs through user research methods, brainstorming ideas, prototyping the best ideas, and testing your solutions with real users.',
     icon: toolsIcon,
+    linkKey: 'designtoolsandtips',
   },
   {
     title: 'Latest in Mobility',
     text: 'Cities across the globe grapple with many of the mobility issues in San Diego, click here for a list of research papers and popular articles that we have found useful.',
     icon: latestIcon,
+    linkKey: 'latestinmobility',
   },
   {
     title: 'FAQs',
     text: 'Got questions? We’ve got answers! Click here for information about the competition, to how to find a team, submit your design concepts and access the D4SD Slack discussions.',
     icon: faqIcon,
+    linkKey: 'faqs',
   },
 ];
 
@@ -70,11 +73,12 @@ function Resources() {
           text={description}
         />
         <div className={globalStyles.gridStyle}>
-          {RESOURCE_CONTENT.map(({ title, text, icon }) => (
+          {RESOURCE_CONTENT.map(({ title, text, icon, linkKey }) => (
             <ResourceBox
               title={title}
               text={text}
               icon={icon}
+              linkUrl={`/resources/${linkKey}`}
             />
           ))}
         </div>
