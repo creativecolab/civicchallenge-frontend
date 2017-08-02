@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
 import styles from './ToolBox.scss';
 
+import tabIcon from './newtab_icon.png';
 
 /**
  * Constants
@@ -12,8 +12,8 @@ import styles from './ToolBox.scss';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
   linkUrl: PropTypes.string.isRequired,
 };
 
@@ -27,23 +27,21 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function ToolBox() {
+function ToolBox({ title, text, icon, linkUrl }) {
   return (
-    <section className={classNames([globalStyles.sectionWrapper, styles.wrapper])}>
+    <div className={styles.toolBox}>
       <div className={styles.boxWrapper}>
-        <section className={styles.DBBox}>
-          <div className={styles.dbBoxImg}>
-            <div className={styles.blackBox} />
+        <div className={styles.boxContent}>
+          <p>{icon}</p>
+          {/* <img src={icon} alt={title} className={styles.icon} /> */}
+          <div className={styles.title}>
+            <a href={linkUrl}><h3 className={globalStyles.blue}>{title}</h3></a>
+            <img src={tabIcon} alt={title} />
           </div>
-          <div className={styles.dbBoxTextWrapper}>
-            <div className={styles.dbBoxText}>
-              <h3 className={globalStyles.grey}>subtitle</h3>
-              <h2>Title</h2>
-            </div>
-          </div>
-        </section>
+          <h4>{text}</h4>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 

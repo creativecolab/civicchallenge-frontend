@@ -12,14 +12,38 @@ import globalStyles from 'main.scss';
 
 import styles from './DesignTools.scss';
 import ToolBox from './components/ToolBox/ToolBox';
+import SectionHeader from './components/SectionHeader/SectionHeader';
+import discover from './discover.png';
 
 /**
  * Constants
  */
+const TOOLS_CONTENT = [
+  {
+    title: 'Resource Title',
+    text: 'Resource description',
+    icon: 'icon',
+    linkKey: 'external url',
+  },
+  {
+    title: 'Resource Title',
+    text: 'Resource description',
+    icon: 'icon',
+    linkKey: 'external url',
+  },
+  {
+    title: 'Resource Title',
+    text: 'Resource description',
+    icon: 'icon',
+    linkKey: 'external url',
+  },
+];
 
 const sectionTitle = 'Design Tools & Tips';
 const description = 'Learn about design. Some intro text about what people should be able to find here.';
 
+const s1Title = 'Discover';
+const s1Text = 'blurb';
 
 /**
  * Resources
@@ -46,8 +70,20 @@ function DesignTools() {
           sectionTitle={sectionTitle}
           text={description}
         />
+        <SectionHeader
+          sectionTitle={s1Title}
+          text={s1Text}
+          icon={discover}
+        />
         <div className={globalStyles.gridStyle}>
-          <ToolBox />
+          {TOOLS_CONTENT.map(({ title, text, icon, linkKey }) => (
+            <ToolBox
+              title={title}
+              text={text}
+              icon={icon}
+              linkUrl={linkKey}
+            />
+          ))}
         </div>
       </div>
       <Footer />
