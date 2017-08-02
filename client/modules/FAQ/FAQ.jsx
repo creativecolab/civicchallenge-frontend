@@ -5,8 +5,10 @@ import Helmet from 'react-helmet';
 import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 
-import QuestionBox from './components/QuestionBox/QuestionBox';
+import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
+import globalStyles from 'main.scss';
 
+import QuestionBox from './components/QuestionBox/QuestionBox';
 import styles from './FAQ.scss';
 
 /**
@@ -76,6 +78,9 @@ const FAQ_CONTENT = [
   },
 ];
 
+const sectionTitle = 'FAQs';
+const description = '';
+
 const propTypes = {};
 
 const contextTypes = {
@@ -92,8 +97,11 @@ function FAQ() {
       />
       <Navbar />
 
-      <div className={styles.faqHeader}>
-        <h1>FAQ</h1>
+      <div className={globalStyles.pageWrapper}>
+        <StandardSectionBox
+          sectionTitle={sectionTitle}
+          text={description}
+        />
       </div>
 
       <section className={styles.content}>
