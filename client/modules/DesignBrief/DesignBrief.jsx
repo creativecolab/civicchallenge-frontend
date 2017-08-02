@@ -19,18 +19,18 @@ import fatal15 from './imgs/walking/walking-f15.jpg';
 import bikerImpact from './imgs/walking/walking-biker-impact.jpg';
 import pedestVisible from './imgs/walking/walking-visibility.jpg';
 
-import visualImpair from './imgs/accessibility/accessibility-visual.jpg';
+import visualImpair from './imgs/accessibility/accessibility-braille.jpg';
 import stairs from './imgs/accessibility/accessibility-stairs.jpg';
 import lyft from './imgs/accessibility/accessibility-lyft.jpg';
-import olderActive from './imgs/accessibility/accessibility-older-active.jpg';
+import olderActive from './imgs/accessibility/accessibility-active-2.jpg';
 
 import parkingDynamic from './imgs/parking/Parking-dynamic.jpg';
 import communicate from './imgs/parking/transit-1.jpg';
-import enjoy from './imgs/parking/commuter-enhance.jpg';
+import enjoy from './imgs/parking/commuter-experience.jpg';
 
 import productive from './imgs/av/AV-productive.jpg';
+import whatsNext from './imgs/av/AV-truck.jpeg';
 import stopSigns from './imgs/av/AV-stopsigns.jpg';
-import whatsNext from './imgs/av/AV-whatsnext.jpg';
 
 /**
  * Constants
@@ -110,7 +110,7 @@ const CHALLENGE_INFO = {
         figureCLink: '',
       },
       {
-        title: 'Aging and technology: How might we help seniors order a Lyft?',
+        title: 'Aging and technology: How might we help seniors order a Lyft or Uber?',
         text: 'Mobile phone based applications have made it easy to reserve a ride, order a meal, and find the hottest events happening right now. But, seniors are often the last demographic to adopt these new technologies. Though there has been progress, these services simply have not been adapted to cater to older populations.  Uber and Lyft are transportation/rideshare companies that have been growing at an incredible rate in recent years. They take advantage of the convenience of technology and make travel much easier to arrange, but if our seniors don’t think it’s approachable, their mobility options will be severely limited. How might we adapt ride-sharing and other applications—or ordering meals or finding events and volunteer opportunities—to make them more approachable and enjoyable for seniors?',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
@@ -196,12 +196,12 @@ const CHALLENGE_INFO = {
         figureCLink: '',
       },
       {
-        title: 'Future jobs for professional drivers: What gig does an Uber driver pick up next?',
+        title: 'Future jobs for professional drivers: What gig can they pick up next?',
         text: 'San Diego is already beginning to test out autonomous vehicles under the direction of SANDAG. As autonomous vehicles begin to rise in popularity and use, professions and labor markets that depend on cars will transform. For example, Uber, Lyft, and other ride sharing companies may switch over completely and change their platforms to reflect the changes in the use of the roads. Thinking about the thousands of people who work in this gig market, what will they do next? In the past, such technology shifts have been accompanied by job retraining and transition periods that help the labor force adapt—though it is unclear what such professional development might look like as these gig economies evolve. As might other industries related to human driven vehicles, e.g., vehicle insurance, container shipping, and the traffic engineering profession. What kinds of changes need to be made to accommodate the job training or potential spike in unemployment if industries rapidly adopt AVs?',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
-        figureA: stopSigns,
-        figureALink: 'hand on wheel of car',
+        figureA: whatsNext,
+        figureALink: 'autonomous car',
         figureB: '',
         figureBLink: '',
         figureC: '',
@@ -212,8 +212,8 @@ const CHALLENGE_INFO = {
         text: 'San Diego is one of the 10 cities that has been selected by the Department of Transportation to test introducing autonomous vehicles (AVs) to city streets. Though it’s important to note that AVs not only ride on the streets, they might also talk with the street, the light signals and all other sensors even miles down the road. AVs use onboard sensors to detect potential immediate hazards, but also integrate with other cars and sensors in a communication network that connects them to potential dangers miles ahead.For passengers, these safety precautions add to a relaxing experience of being chauffeured, but for walkers, bikers and others’ on the road, negotiating traffic with an AV may be a stressful experience. How might an AV signal to a walker or biker that they have been “seen” and accounted for in the navigation routing system, and that it’s actually safe to walk?other concern is that computing systems can be hacked. To communicate with other cars and sensors along the drive, AVs access part of the radio frequency spectrum set aside explicitly for cars, and called “Dedicated Short-Range Communication.” AVs can use this frequency to communicate with other sensors within a 1,000 foot range. However, because AVs are open to receive signals it leaves them vulnerable to hacking. Hacking a car is somewhat different than breaking in and stealing the vehicle—hacked cars might be rerouted, used to reroute other vehicles, or hacking might simply be to delete the car’s log files. All frightening possibilities that need design solutions.',
         link: '',
         linkText: 'Discuss this in Slack (coming soon)',
-        figureA: whatsNext,
-        figureALink: 'autonomous car',
+        figureA: stopSigns,
+        figureALink: 'hand on wheel of car',
         figureB: '',
         figureBLink: '',
         figureC: '',
