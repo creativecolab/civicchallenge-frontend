@@ -2,16 +2,16 @@
 
 $box-dim: 400px;
 
-$icon-dim: 60px;
+$icon-dim: 50px;
 
 .get-involved-box {
-  height: $box-dim;
+  height: $box-dim*0.85;
   padding: 40px;
   margin: 0;
   
   @media(max-width: $mobile-max-width) {
     padding: 30px;
-    height: $box-dim * 1.1;
+    height: $box-dim*0.8;
   }
 
   .boxWrapper {
@@ -31,8 +31,12 @@ $icon-dim: 60px;
       }
 
       .text {
+        $margin-top: 100px;
         position: relative;
-        margin-top: 100px;
+        margin-top: $margin-top;
+        @media(max-width: $mobile-max-width) {
+          margin-top: $margin-top * 0.7;
+        }
       }
 
       .button {

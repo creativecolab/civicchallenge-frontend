@@ -24,7 +24,7 @@ import stairs from './imgs/accessibility/accessibility-stairs.jpg';
 import lyft from './imgs/accessibility/accessibility-lyft.jpg';
 import olderActive from './imgs/accessibility/accessibility-older-active.jpg';
 
-import parkingDynamic from './imgs/parking/parking-dynamic.jpg';
+import parkingDynamic from './imgs/parking/Parking-dynamic.jpg';
 import communicate from './imgs/parking/transit-1.jpg';
 import enjoy from './imgs/parking/commuter-enhance.jpg';
 
