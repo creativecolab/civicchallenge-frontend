@@ -11,13 +11,14 @@ import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox
 import globalStyles from 'main.scss';
 
 import styles from './DesignTools.scss';
+import ToolBox from './components/ToolBox/ToolBox';
 
 /**
  * Constants
  */
 
 const sectionTitle = 'Design Tools & Tips';
-const description = 'Design tools and tips.';
+const description = 'Learn about design. Some intro text about what people should be able to find here.';
 
 
 /**
@@ -45,6 +46,9 @@ function DesignTools() {
           sectionTitle={sectionTitle}
           text={description}
         />
+        <div className={globalStyles.gridStyle}>
+          <ToolBox />
+        </div>
       </div>
       <Footer />
     </div>
