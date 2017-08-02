@@ -29,7 +29,7 @@ const description = 'This page provides a wealth of resources to help you learn 
 const RESOURCE_CONTENT = [
   {
     title: 'Design Tools & Tips',
-    text: 'The human-centered design process involves discovering needs through user research methods, brainstorming ideas, prototyping the best ideas, and testing your solutions with real users.',
+    text: 'New to human-centered design? Click below for a curated list of resources to help you learn and get started on learning human-centered design today.',
     icon: toolsIcon,
   },
   {
