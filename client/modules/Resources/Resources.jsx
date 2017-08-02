@@ -39,7 +39,7 @@ const RESOURCE_CONTENT = [
   },
   {
     title: 'FAQs',
-    text: 'Got questions? We’ve got answers! Click here for information about the competition, to how to find a team, submit your design concepts and access the D4SD Slack discussions.',
+    text: 'Got questions? Click here for information about the competition, to how to find a team, submit your design concepts and access the D4SD Slack discussions.',
     icon: faqIcon,
   },
 ];
