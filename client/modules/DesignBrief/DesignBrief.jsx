@@ -1,7 +1,8 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len, jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import classNames from 'util/classNames';
 
 import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
@@ -15,22 +16,28 @@ import DBOverview from './components/DBOverview/DBOverview';
 import styles from './DesignBrief.scss';
 
 /* images */
-import fatal15 from './imgs/walking/walking-f15.jpg';
-import bikerImpact from './imgs/walking/walking-biker-impact.jpg';
-import pedestVisible from './imgs/walking/walking-visibility.jpg';
+import fatal15 from './imgs/walking/min/walking-f15-min.jpg';
+import bikerImpact from './imgs/walking/min/walking-biker-impact-min.jpg';
+import pedestVisible from './imgs/walking/min/walking-visibility-min.jpg';
 
 import visualImpair from './imgs/accessibility/accessibility-braille.jpg';
 import stairs from './imgs/accessibility/accessibility-stairs.jpg';
 import lyft from './imgs/accessibility/accessibility-lyft.jpg';
 import olderActive from './imgs/accessibility/accessibility-active-2.jpg';
 
-import parkingDynamic from './imgs/parking/Parking-dynamic.jpg';
-import communicate from './imgs/parking/transit-1.jpg';
-import enjoy from './imgs/parking/commuter-experience.jpg';
+import parkingDynamic from './imgs/parking/min/Parking-dynamic-min.jpg';
+import communicate from './imgs/parking/min/transit-1-min.jpg';
+import enjoy from './imgs/parking/min/commuter-experience-min.jpg';
 
 import productive from './imgs/av/AV-productive.jpg';
 import whatsNext from './imgs/av/av-truck.jpeg';
 import stopSigns from './imgs/av/AV-stopsigns.jpg';
+
+let TweenLite = {};
+if (process.env.browser) {
+  TweenLite = require('gsap/TweenLite'); // eslint-disable-line global-require
+  require('gsap/ScrollToPlugin'); // eslint-disable-line global-require
+}
 
 /**
  * Constants
@@ -257,6 +264,7 @@ class DesignBrief extends React.PureComponent {
 
     this.state = {
       currentSection: DesignBrief.CURRENTSECTION_HEADER,
+      post: false,
     };
   }
 
@@ -270,12 +278,19 @@ class DesignBrief extends React.PureComponent {
   }
 
   _onWindowScroll = () => {
-    const { currentSection } = this.state;
+    const { currentSection, post } = this.state;
+
+    const newPost = this.contentContainer.getBoundingClientRect().top < 0;
+    if (newPost !== post) {
+      this.setState({
+        post: newPost,
+      });
+    }
 
     let newCurrentSection = DesignBrief.CURRENTSECTION_HEADER;
 
     for (let i = this.overviews.length - 1; i >= 0; i -= 1) {
-      if (this.overviews[i].getBoundingClientRect().top <= 10) {
+      if (this.overviews[i].getBoundingClientRect().top <= 30) {
         newCurrentSection = `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}`;
         break;
       }
@@ -288,8 +303,20 @@ class DesignBrief extends React.PureComponent {
     }
   }
 
+  _onNavItemClicked = id => () => {
+    const target = document.getElementById(id);
+
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const bodyTop = document.body.getBoundingClientRect().top;
+    const targetTop = target.getBoundingClientRect().top;
+    const scrollTarget = targetTop - bodyTop;
+    const scrollDuration = Math.abs(scrollTop - scrollTarget) / DesignBrief.SCROLL_PX_PER_MS;
+
+    TweenLite.to(window, scrollDuration, { scrollTo: scrollTarget });
+  }
+
   render() {
-    const { currentSection } = this.state;
+    const { currentSection, post } = this.state;
 
     let pageInfo = CHALLENGE_INFO[this.props.params.id];
 
@@ -311,16 +338,26 @@ class DesignBrief extends React.PureComponent {
           subheaderText={challengeTitle}
           showButton={false}
         />
-        <section className={styles.contentContainer}>
+        <section className={classNames([styles.contentContainer, post && styles.post])} ref={(el) => { this.contentContainer = el; }}>
           <div className={globalStyles.contentWrapper}>
             <div className={styles.menu}>
               <ul className={styles.sidebar}>
-                <a href="#introduction">
-                  <li className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}><p>Introduction</p></li>
+                <a>
+                  <li
+                    className={currentSection === DesignBrief.CURRENTSECTION_HEADER ? styles.current : ''}
+                    onClick={this._onNavItemClicked('introduction')}
+                  >
+                    <p>Introduction</p>
+                  </li>
                 </a>
                 {overview.map(({ title }, i) => (
-                  <a href={`#${title.replace(/( |\W)/g, '').toLowerCase()}`}>
-                    <li className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}><p>{title}</p></li>
+                  <a>
+                    <li
+                      className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}
+                      onClick={this._onNavItemClicked(title.replace(/( |\W)/g, '').toLowerCase())}
+                    >
+                      <p>{title}</p>
+                    </li>
                   </a>
                 ))}
               </ul>
@@ -366,3 +403,4 @@ DesignBrief.contextTypes = contextTypes;
 DesignBrief.defaultProps = defaultProps;
 
 export default DesignBrief;
+

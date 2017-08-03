@@ -14,11 +14,23 @@
 
 	.contentContainer {
 
-		margin: $subsection-padding auto 110px auto;
+		// margin: $subsection-padding auto 110px auto;
+		padding: $subsection-padding 0 110px 0;
 		@media (max-width: $mobile-max-width) {
-			margin-bottom: 60px;
+			padding-bottom: 60px;
 		}
-		position: relative;
+		// position: relative;
+
+		&.post {
+			.menu {
+				.sidebar {
+					position: fixed;
+					top: $subsection-padding;
+					left: 70%;
+				}
+			}
+		}
+
 		.menu {
 			z-index: 1;
 			$content-width: 70%;
@@ -30,8 +42,9 @@
 				/* width: (strip-unit($content-width) / 100) * 20%;*/
 
 				width: 250px;
-				position: fixed;
+				position: absolute;
 				left: 70%;
+				left: calc(70vw - ((100vw - 960px) / 2)); // 960px = width of the globalStyles.contentWrapper class, need to make into a variable
 
 				list-style: none;
 
