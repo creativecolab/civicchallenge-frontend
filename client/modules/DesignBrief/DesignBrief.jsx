@@ -29,7 +29,7 @@ import communicate from './imgs/parking/transit-1.jpg';
 import enjoy from './imgs/parking/commuter-experience.jpg';
 
 import productive from './imgs/av/AV-productive.jpg';
-import whatsNext from './imgs/av/AV-truck.jpeg';
+import whatsNext from './imgs/av/av-truck.jpeg';
 import stopSigns from './imgs/av/AV-stopsigns.jpg';
 
 /**
