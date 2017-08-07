@@ -22,18 +22,39 @@ const LINKS = [
   {
     href: '/challenges',
     text: 'Challenge Briefs',
+    dropDown: [
+      {
+        dHref: '/challenges/walking',
+        dText: 'Walking and Biking',
+      },
+      {
+        dHref: '/challenges/improvingaccessibility',
+        dText: 'Accessibility',
+      },
+      {
+        dHref: '/challenges/traffic',
+        dText: 'Commuter Experience',
+      },
+      {
+        dHref: '/challenges/autonomousvehicles',
+        dText: 'Autonomous Vehicles',
+      },
+    ],
   },
   {
     href: '/resources',
     text: 'Resources',
+    dropDown: [],
   },
   {
     href: '/sponsors',
     text: 'Sponsors',
+    dropDown: [],
   },
   {
     href: '/about',
     text: 'About',
+    dropDown: [],
   },
 ];
 
@@ -120,7 +141,7 @@ class Navbar extends React.PureComponent {
             <Link to="/"><img className="theLogo" src={landingLogo} alt="logo" /></Link>
           </div>
           <nav className={styles.navbarInner} ref={(el) => { this.navbar = el; }}>
-            {LINKS.map(({ href, text }, i) => (
+            {LINKS.map(({ href, text, dropDown }, i) => (
               <div className={styles.navbarLinkContainer} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
                 <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}><p>{text}</p></Link>
               </div>

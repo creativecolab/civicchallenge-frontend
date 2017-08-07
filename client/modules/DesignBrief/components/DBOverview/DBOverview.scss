@@ -28,8 +28,8 @@ $header-img-dim: 250px;
       height: 200px;
       width: 100%;
       img {
-        height: auto;
-        width: auto;
+        height: 100%;
+        width: 100%;
       }
       @media (max-width: $mobile-max-width) {
         margin: 30px 0 20px 0;
@@ -43,8 +43,8 @@ $header-img-dim: 250px;
       height: 200px;
       width: 300px;
       img {
-        height: auto;
-        width: auto;
+        height: 100%;
+        width: 100%;
       }
       @media (max-width: $mobile-max-width) {
         float: none;
@@ -59,8 +59,8 @@ $header-img-dim: 250px;
       height: 100px;
       width: 100%;
       img {
-        height: auto;
-        width: auto;
+        height: 100%;
+        width: 100%;
       }
     }
   }

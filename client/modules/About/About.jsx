@@ -66,8 +66,22 @@ const p5 = 'Spring 2017 team:  Alejandro Panduro, Ariel Weingarten, Alvin Ho, An
 const p6 = 'Special thanks Michele Morris and Don Norman in the <a href="http://designlab.ucsd.edu/" rel="noopener noreferrer" target="_blank">UC San Diego\'s Design Lab</a>, and to our partners at <a href="http://www.designforwardsd.com/" rel="noopener noreferrer" target="_blank">Design Forward Alliance</a> (Scott Robinson, James White, and Bobby Buchanan) and <a href="http://www.scalesd.com/" rel="noopener noreferrer" target="_blank">SCALE SD</a> (Daniel Obodovski, Greg Hoover, and Marc Bielas)';
 const p7 = 'D4SD also wants to acknowledge the early need finding efforts by UC San Diego undergraduates in DSGN100 who surveyed residents, attended local meetups with city and community leaders, and conducted targeted interviews. Their efforts led to important insights that helped us understand the city’s unique mobility needs.';
 */
-const flickrLink = 'https://www.flickr.com/photos/vxla/8726075399';
-const flickr = 'https://www.flickr.com/';
+
+const CREDITS = [
+  {
+    name: 'vxla',
+    photoUsed: 'Landing header',
+    profileLink: 'https://www.flickr.com/photos/vxla/8726075399',
+    websiteName: 'Flickr',
+  },
+  {
+    name: 'Steven Vance',
+    photoUsed: 'Challenge Brief Fatal 15',
+    profileLink: 'https://www.flickr.com/photos/jamesbondsv/',
+    websiteName: 'Flickr',
+  },
+];
+
 const PARTNERS = [
   {
     href: 'http://designlab.ucsd.edu/',
@@ -147,7 +161,12 @@ function About() {
         </div>
         <div className={styles.ackWrapper}>
           <h2 className={globalStyles.grey}>Acknowledgements</h2>
-          <p>Header image by <a href={flickrLink}>vxla</a> on <a href={flickr}>Flickr</a>.</p>
+          {CREDITS.map(({ name, photoUsed, profileLink, websiteName }) => (
+            <div className={styles.creditsWrapper}>
+              <span>{photoUsed} image by <a href={profileLink}>{name}</a> on {websiteName}.</span>
+              <br />
+            </div>
+          ))}
         </div>
       </div>
       <Footer />
