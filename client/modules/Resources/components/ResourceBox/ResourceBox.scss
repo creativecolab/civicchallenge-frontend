@@ -1,6 +1,6 @@
 @import '~styles/variables';
 
-$box-dim-width: 250px;
+$box-dim-width: 300px;
 $box-dim-height: $box-dim-width * 1.4;
 
 $icon-dim: 60px;
@@ -8,8 +8,7 @@ $icon-dim: 60px;
 .resource-box {
   width: $box-dim-width;
   height: $box-dim-height;
-
-  padding: 25px;
+  position: relative;
   margin: 0 20px 20px 0;
 
   box-shadow: $theme-boxshadow;
@@ -23,18 +22,24 @@ $icon-dim: 60px;
     align-items: center;
 
     .boxContent{
+      margin: 30px;
       text-align: left;
-      p {
-        margin: 5px 0 0 0;
+      .text {
+        p {
+          margin: 5px 0 0 0;
+        }
+        img {
+          margin: 0 10px 15px 10px;
+          width: auto;
+          height: $icon-dim;
+        }  
+        margin-bottom: 50px;
       }
-      img {
-        margin: 0 10px 15px 10px;
-        width: auto;
-        height: $icon-dim;
-      }  
 
       .button {
-        margin-top: 30px;
+        margin-bottom: 30px;
+        position: absolute;
+        bottom: 0;
       }
     }
 

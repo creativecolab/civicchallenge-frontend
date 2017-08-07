@@ -29,9 +29,11 @@ function ResourceBox({ title, text, icon, linkUrl }) {
     <div className={styles.resourceBox}>
       <div className={styles.boxWrapper}>
         <div className={styles.boxContent}>
-          <img src={icon} alt={title} />
-          <h2 className={globalStyles.orange}>{title}</h2>
-          <p className={globalStyles.grey}>{text}</p>
+          <div className={styles.text}>
+            <img src={icon} alt={title} />
+            <h2 className={globalStyles.orange}>{title}</h2>
+            <p className={globalStyles.grey}>{text}</p>
+          </div>
           <div className={styles.button}>
             <div className={globalStyles.sectionBtn}>
               <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
