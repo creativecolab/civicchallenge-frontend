@@ -5,6 +5,12 @@
   width: 100%;
   overflow-x: hidden;
 
+  .challenge {
+    h2 {
+      padding-bottom: 30px;
+    }
+    margin-bottom: 30px;
+  }
   .content {
     width: 80%;
     margin: 0 auto;
