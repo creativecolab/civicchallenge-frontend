@@ -403,4 +403,3 @@ DesignBrief.contextTypes = contextTypes;
 DesignBrief.defaultProps = defaultProps;
 
 export default DesignBrief;
-

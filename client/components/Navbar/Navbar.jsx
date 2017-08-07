@@ -44,17 +44,14 @@ const LINKS = [
   {
     href: '/resources',
     text: 'Resources',
-    dropDown: [],
   },
   {
     href: '/sponsors',
     text: 'Sponsors',
-    dropDown: [],
   },
   {
     href: '/about',
     text: 'About',
-    dropDown: [],
   },
 ];
 
@@ -65,10 +62,10 @@ const LINKS = [
  */
 
 const propTypes = {
-  backgroundImg: PropTypes.string.isRequired,
-  headerText: PropTypes.string.isRequired,
-  subheaderText: PropTypes.string.isRequired,
-  showButton: PropTypes.bool.isRequired,
+  // backgroundImg: PropTypes.string.isRequired,
+  // headerText: PropTypes.string.isRequired,
+  // subheaderText: PropTypes.string.isRequired,
+  // showButton: PropTypes.bool.isRequired,
 };
 
 const contextTypes = {
@@ -96,24 +93,40 @@ class Navbar extends React.PureComponent {
     };
   }
 
+  componentDidMount() {
+    this.navbarDropdownHeights = [];
+  }
+
   _mobileNavbarOnClick = () => {
     const { mobileNavbarOpen } = this.state;
 
+    let offset = 0;
+
+    if (mobileNavbarOpen) {
+      this.navbarDropdowns.forEach((_, i) => {
+        if (this.state[`dropdown${i}Open`]) {
+          this._openDropdownOnClick(i)();
+          offset = Navbar.ANIMATION_DURATION;
+        }
+      });
+    } else {
+      // Make the dropdown disappear (height 0)
+      this.navbarDropdowns.forEach((el, i) => {
+        this.navbarDropdownHeights[i] = this.navbarDropdownHeights[i] || el.clientHeight;
+        el.style.height = 0; // eslint-disable-line no-param-reassign
+      });
+    }
+
     const tl = new TimelineLite()
-      /*
-      .to(this.navbar, Navbar.ANIMATION_DURATION, {
-        left: mobileNavbarOpen ? '100%' : 0,
-      }, 0)
-      */
-      .to(this.burger1, Navbar.ANIMATION_DURATION, {
+      .to(this.burger1, Navbar.ANIMATION_DURATION + offset, {
         y: mobileNavbarOpen ? 0 : 10,
         rotation: mobileNavbarOpen ? 0 : '45deg',
       }, 0)
-      .to(this.burger2, Navbar.ANIMATION_DURATION, {
+      .to(this.burger2, Navbar.ANIMATION_DURATION + offset, {
         width: mobileNavbarOpen ? '100%' : 0,
         left: mobileNavbarOpen ? 0 : '50%',
       }, 0)
-      .to(this.burger3, Navbar.ANIMATION_DURATION, {
+      .to(this.burger3, Navbar.ANIMATION_DURATION + offset, {
         y: mobileNavbarOpen ? 0 : -10,
         rotation: mobileNavbarOpen ? 0 : '-45deg',
       }, 0);
@@ -122,11 +135,40 @@ class Navbar extends React.PureComponent {
       tl.to(navbarItem, Navbar.ANIMATION_DURATION, {
         left: mobileNavbarOpen ? '100%' : 0,
         width: mobileNavbarOpen ? 0 : '100%',
-      }, i * (Navbar.ANIMATION_DURATION / 4));
+      }, (i * (Navbar.ANIMATION_DURATION / 4)) + offset);
+    });
+
+    this.dropDownButtons.forEach((button, i) => {
+      if (button) {
+        tl.to(button, mobileNavbarOpen ? Navbar.ANIMATION_DURATION / 2 : Navbar.ANIMATION_DURATION, {
+          opacity: mobileNavbarOpen ? 0 : 1,
+        }, (mobileNavbarOpen ? 0 : Navbar.ANIMATION_DURATION + (i * (Navbar.ANIMATION_DURATION / 4))) + offset);
+      }
     });
 
     this.setState({
       mobileNavbarOpen: !mobileNavbarOpen,
+    });
+  }
+
+  _openDropdownOnClick = i => () => {
+    const flagName = `dropdown${i}Open`;
+    const dropdownOpen = this.state[flagName];
+
+    const el = this.navbarDropdowns[i];
+    const targetHeight = this.navbarDropdownHeights[i];
+    const button = this.dropDownButtons[i];
+
+    new TimelineLite()
+      .to(el, Navbar.ANIMATION_DURATION, {
+        height: dropdownOpen ? 0 : targetHeight,
+      }, 0)
+      .to(button, Navbar.ANIMATION_DURATION, {
+        rotation: dropdownOpen ? 0 : '180deg',
+      }, 0);
+
+    this.setState({
+      [flagName]: !dropdownOpen,
     });
   }
 
@@ -142,8 +184,22 @@ class Navbar extends React.PureComponent {
           </div>
           <nav className={styles.navbarInner} ref={(el) => { this.navbar = el; }}>
             {LINKS.map(({ href, text, dropDown }, i) => (
-              <div className={styles.navbarLinkContainer} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
+              <div key={text} className={styles.navbarLinkContainer} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
                 <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}><p>{text}</p></Link>
+                {dropDown &&
+                  <button
+                    className={styles.dropDownButton}
+                    onClick={this._openDropdownOnClick(i)}
+                    ref={(el) => { this.dropDownButtons = this.dropDownButtons || []; this.dropDownButtons[i] = el; }}
+                  >
+                  ↓
+                  </button>
+                }
+                <div className={styles.dropDown} ref={(el) => { this.navbarDropdowns = this.navbarDropdowns || []; this.navbarDropdowns[i] = el; }}>
+                  {dropDown && dropDown.map(({ dHref, dText }) => (
+                    <Link key={dText} to={dHref}>{dText}</Link>
+                  ))}
+                </div>
               </div>
             ))}
           </nav>
