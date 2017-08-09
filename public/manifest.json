@@ -1,18 +1,20 @@
 {
-    "name": "Design 4 San Diego",
+    "name": "D4SD",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/android-chrome-192x192.png?v=Nm5EJq5nq2",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-384x384.png",
-            "sizes": "384x384",
+            "src": "/android-chrome-256x256.png?v=Nm5EJq5nq2",
+            "sizes": "256x256",
             "type": "image/png"
         }
     ],
-    "theme_color": "#2d324d",
-    "background_color": "#2d324d",
-    "display": "standalone"
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "https://d4sd.org/",
+    "display": "standalone",
+    "orientation": "landscape"
 }
