@@ -69,11 +69,6 @@ $font-color: #fff;
 
     .logo, .navbar-inner {
       a {
-        margin: 0 5px;
-        text-decoration: none;
-      }
-
-      a,button {
         border: none;
         padding: 0;
 
@@ -81,14 +76,24 @@ $font-color: #fff;
         cursor: pointer;
 
         text-decoration: none;
-        background-color: transparent;
         font-size: $navbar-font-size;
         font-weight: 100;
         color: $nav-font-color;
+      }
 
-        &:hover {
-          opacity: 0.8;
+      .navbar-link-container {
+        & > a {
+          margin: 0 5px;
+
+          background-color: transparent;
         }
+      }
+
+      .drop-down {
+        background-color: #fff;
+        font-size: $navbar-font-size;
+        font-weight: 100;
+        color: $nav-font-color;
       }
 
       .active {
@@ -145,8 +150,39 @@ $font-color: #fff;
         align-items: center;
         justify-content: space-around;
 
-        a, button {
-          opacity: 0.7;
+        .navbar-link-container {
+          &:hover {
+            .drop-down {
+              visibility: visible;
+            }
+          }
+
+          a {
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+
+          .drop-down-button {
+            display: none;
+          }
+
+          .drop-down {
+            position: absolute;
+            top: $navbar-height + (2 * $navbar-vpadding);
+
+            visibility: hidden;
+
+            background-color: $theme-color-blue;
+
+            a {
+              padding: 2 * $navbar-vpadding;
+
+              display: block;
+
+              color: #fff;
+            }
+          }
         }
       }
 
@@ -176,9 +212,26 @@ $font-color: #fff;
           left: 100%;
           overflow: hidden;
 
-          a {
+          .drop-down-button {
             margin: 0;
-            border-top: 1px solid #4496ff;
+            border: 0;
+            padding: 0 0.5em;
+            width: auto;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            display: inline-block;
+            outline: none;
+            opacity: 0;
+
+            background-color: transparent;
+            font-size: 1.5em;
+          }
+
+          a, button {
+            margin: 0;
             padding: 1em 2em;
             width: 100%;
 
@@ -189,8 +242,10 @@ $font-color: #fff;
             color: #fff;
           }
 
-          .navbar-link-dropdown {
-            background-color: red;
+          .drop-down {
+            a {
+              padding-left: 3em;
+            }
           }
         }
       }

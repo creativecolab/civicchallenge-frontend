@@ -20,6 +20,10 @@ AfterEmitPlugin.prototype.apply = (compiler) => {
       fs.writeFileSync(path.join(publicPath, 'humans.txt'),
 `*** ABOUT ***
 
+Developer: Lauren Liu
+Contact: laurenmliu at google dot com
+Website: https://laurenliu.me/
+
 Developer: David Luu
 Contact: luu dot david dot c at google dot com
 Website: https://davidluu.me/

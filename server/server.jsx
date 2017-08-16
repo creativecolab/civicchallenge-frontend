@@ -146,8 +146,8 @@ const renderFullPage = (initialView, initialState) => {
   const assetsManifest = process.env.webpackAssets && JSON.parse(process.env.webpackAssets);
   const chunkManifest = process.env.webpackChunkAssets && JSON.parse(process.env.webpackChunkAssets);
 
-  const head = reactHelmet.renderStatic();
-  const headString = Object.keys(head).map(key => head[key].toString()).join('');
+  const renderedHelmet = reactHelmet.renderStatic();
+  // const headString = Object.keys(head).map(key => head[key].toString()).join('');
 
   const manifestScript = `
 window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
@@ -159,12 +159,15 @@ window.webpackManifest = ${JSON.stringify(chunkManifest)};
 
   const html = `
     <!DOCTYPE html>
-    <html lang="en">
+    <html ${renderedHelmet.htmlAttributes.toString()}>
     <head>
-      ${headString}
+      ${renderedHelmet.meta.toString()}
+      ${renderedHelmet.link.toString()}
+      ${renderedHelmet.title.toString()}
+      ${renderedHelmet.style.toString()}
       ${prod ? `<link rel="stylesheet" href="${assetsManifest['/app.css']}" />` : ''}
     </head>
-    <body>
+    <body ${renderedHelmet.bodyAttributes.toString()}>
       <div id="root" data-reactmount>${initialView}</div>
       <script>${manifestScript}</script>
       <script defer src="${prod ? assetsManifest['/vendor.js'] : '/vendor.js'}"></script>
