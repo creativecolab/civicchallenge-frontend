@@ -70,6 +70,8 @@ const SOCIAL_MEDIA = [
  * Footer
  */
 
+const email = 'team@d4sd.org';
+
 const propTypes = {};
 
 const contextTypes = {
@@ -93,7 +95,7 @@ function Footer() {
           ))}
         </div>
         <div className={styles.copyright}>
-          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href="mailto:spdow@ucsd.edu">spdow@ucsd.edu</a>.</p></div>
+          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href={`mailto:${email}`}>{email}</a>.</p></div>
         </div>
       </section>
     </footer>
