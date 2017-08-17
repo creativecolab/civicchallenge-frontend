@@ -44,33 +44,10 @@ img.headerImage {
 
   .headerWrapper {
     height: 25%;
-    /* height: 100%;
-    width: 100%;
-    margin-top: 20px;
-    */
-    /* .background {
-      height: 100%;
-      width: 100%;
-
-      position: absolute;
-      z-index: 0;
-
-      background-color: $theme-color-blue;
-    } */
 
     .text-container {
-      /* width: 100%;
-      height: 100%; 
-      
-      height: calc(100% - #{$navbar-height}); */
-
       position: relative;
       z-index: 1;
-      /* align-items: center;
-      justify-content: center; 
-      padding-top: 2%;
-
-      display: flex; */
 
       h3 {
         text-transform: uppercase;
