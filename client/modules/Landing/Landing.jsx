@@ -9,6 +9,7 @@ import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
+// import NewsEvents from './components/NewsEvents/NewsEvents';
 import TimeLineBox from './components/TimelineBox/TimelineBox';
 import ChallengeBriefs from './components/ChallengeBriefs/ChallengeBriefs';
 import WhyParticipate from './components/WhyParticipate/WhyParticipate';
