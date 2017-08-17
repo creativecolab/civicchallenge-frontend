@@ -31,19 +31,19 @@ const RESOURCE_CONTENT = [
     title: 'Design Tools & Tips',
     text: 'New to human-centered design? Click below for a curated list of resources to help you learn and get started on learning human-centered design today.',
     icon: toolsIcon,
-    linkKey: 'designtoolsandtips',
+    linkKey: '',
   },
   {
     title: 'Latest in Mobility',
     text: 'Cities across the globe grapple with many of the mobility issues in San Diego, click here for a list of research papers and popular articles that we have found useful.',
     icon: latestIcon,
-    linkKey: 'latestinmobility',
+    linkKey: '',
   },
   {
     title: 'FAQs',
     text: 'Got questions? Click here for information about the competition, to how to find a team, submit your design concepts and access the D4SD Slack discussions.',
     icon: faqIcon,
-    linkKey: 'faqs',
+    linkKey: '',
   },
 ];
 

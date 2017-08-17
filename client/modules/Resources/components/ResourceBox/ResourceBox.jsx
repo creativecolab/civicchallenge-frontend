@@ -9,7 +9,7 @@ import styles from './ResourceBox.scss';
  * ResourceBox
  */
 
-const ButtonText = 'Learn More';
+const ButtonText = 'COMING SOON';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
