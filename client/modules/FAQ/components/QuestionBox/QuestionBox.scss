@@ -4,6 +4,43 @@ $icon-height: 50px;
 $title-font-size: 1.2em;
 $answer-font-size: 0.8em;
 
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+  
 .QuestionBox {
   width: 100%;
   .content {
@@ -13,12 +50,7 @@ $answer-font-size: 0.8em;
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .qQuestion {
-        h3 {
-          color: $theme-color-blue;
-        }
-      }
+      padding: 25px 0;
       .qBtn {
         display: flex;
         justify-content: flex-end;
@@ -29,7 +61,7 @@ $answer-font-size: 0.8em;
           border: 3px solid $theme-color-blue;
           background-color: transparent;
           border-radius: 40px;
-
+          content: '\02795'; /* Unicode character for "plus" sign (+) */
           color: $theme-color-blue;
           font-size: 1em;
           font-weight: bold;
