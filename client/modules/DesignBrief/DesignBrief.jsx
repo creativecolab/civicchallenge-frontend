@@ -16,19 +16,23 @@ import DBOverview from './components/DBOverview/DBOverview';
 import styles from './DesignBrief.scss';
 
 /* images */
+import headerWalking from './imgs/headers/biking.png';
 import fatal15 from './imgs/walking/min/walking-f15-min.jpg';
 import bikerImpact from './imgs/walking/min/walking-biker-impact-min.jpg';
 import pedestVisible from './imgs/walking/min/walking-visibility-min.jpg';
 
+import headerAccess from './imgs/headers/accessibility_2.jpg';
 import visualImpair from './imgs/accessibility/accessibility-braille.jpg';
 import stairs from './imgs/accessibility/accessibility-stairs.jpg';
 import lyft from './imgs/accessibility/accessibility-lyft.jpg';
 import olderActive from './imgs/accessibility/accessibility-active-2.jpg';
 
+import headerTraffic from './imgs/headers/traffic.png';
 import parkingDynamic from './imgs/parking/min/Parking-dynamic-min.jpg';
 import communicate from './imgs/parking/min/transit-1-min.jpg';
 import enjoy from './imgs/parking/min/commuter-experience-min.jpg';
 
+import headerAV from './imgs/headers/autonomous.png';
 import productive from './imgs/av/AV-productive.jpg';
 import whatsNext from './imgs/av/av-truck.jpeg';
 import stopSigns from './imgs/av/AV-stopsigns.jpg';
@@ -46,6 +50,7 @@ if (process.env.browser) {
 const CHALLENGE_INFO = {
   walking: {
     challengeTitle: 'Walkable and Bikeable Communities',
+    headerImg: headerWalking,
     question: 'How might we improve safety on the street?',
     intro: 'What can be done to improve pedestrian and bicycle safety in San Diego? “There is a latent demand in the public to walk and bike more, but many people, out of a lack of safe routes, choose not to,” said Kathleen Ferrier, Circulate San Diego’s Director of Advocacy. As the city of San Diego grows in population, more residents are choosing to use walking and biking to avoid traffic congestion and parking. However, since walking and biking are not the norm they can be dangerous in a city built for cars. In response, city leaders have adopted the “Vision Zero” program. Its goal is to eliminate all traffic deaths in the city by 2025, through enforcement, education and street engineering. But what does that mean in practice? How might we realistically redesign our city so that it is more safe for bicycles and pedestrians?',
     overview: [
@@ -89,6 +94,7 @@ const CHALLENGE_INFO = {
   },
   improvingaccessibility: {
     challengeTitle: 'Improving Accesibility',
+    headerImg: headerAccess,
     question: ' How do we help everyone reach their destination?',
     intro: 'Many people face challenges getting around. Mobility can be difficult for any combination of physical, sensory, mental, or cognitive impairments. Approximately 17% of San Diegans have some form of impairment that affects their mobility. Individuals older than 60 represent the fastest growing segment of the population, with the number of senior residents expected to double by 2030. The sprawling nature of our region also makes it harder for people to reach their destination compared to other cities.',
     overview: [
@@ -144,6 +150,7 @@ const CHALLENGE_INFO = {
   },
   traffic: {
     challengeTitle: 'Enhancing the Commuter Experience',
+    headerImg: headerTraffic,
     question: 'What would make your commute relaxing?',
     intro: 'San Diego has one of the shortest commutes in the U.S. (at an average of 23 minutes), but an accident or highway repair can add stressful-frustrating hours. There must be some way to reduce the effects of this stress (e.g. higher blood pressure, higher weight, and lower fitness levels). Although leaving traffic isn’t any relaxing. Parking can also be a problem, making the entire commute an ordeal. Often, drivers don’t even know where to park because of the small print and confusing rules on parking signage. Many avoid driving themselves altogether and instead commute by public transit. However, the public transit system could use several improvements. Feedback and communication with riders is an interesting one:  Information transfer and communication is an important part of the commuter experience, without feedback and communication it can be difficult to improve the experience, a problem that is faced by the public transit system.',
     overview: [
@@ -187,6 +194,7 @@ const CHALLENGE_INFO = {
   },
   autonomousvehicles: {
     challengeTitle: 'Preparing for Autonomous Vehicles',
+    headerImg: headerAV,
     question: 'How do we take our hands off the wheel?',
     intro: 'An autonomous vehicle (self-driving car) is a vehicle that can drive itself without human guidance. These vehicles are arriving faster than most people have anticipated. How might we prepare for this major advance in transportation? An important concern about adding Autonomous Vehicles (AVs) is the effect of “driverless” on the industries that hire drivers, as well as the drivers themselves. There are also policy questions about Autonomous Vehicles such as, determining fault in the case of an accident (e.g., passenger, manufacturer, designer). However, a related concern is how other drivers will engage with AVs—there is some concern that other drivers might cut off, chase down, or otherwise aggressively engage with AVs. Lastly, it may be easy to hack an AV, as they are designed to continuously receive information from other cars and sensors on the road through a “WiFi like” transmission system. Preparing for AVs may also mean rethinking the design of our existing roadways and signage. If AVs can monitor the speed and distance of other AVs, that means that cars can potentially travel at far faster speeds and in very close proximity. Will stop lights be necessary in this not-so-distant future?',
     overview: [
@@ -324,7 +332,7 @@ class DesignBrief extends React.PureComponent {
       pageInfo = CHALLENGE_INFO.error;
     }
 
-    const { backgroundImg, challengeTitle, intro, question, overview } = pageInfo;
+    const { headerImg, challengeTitle, intro, question, overview } = pageInfo;
 
     return (
       <div className={styles.DesignBrief}>
@@ -333,7 +341,7 @@ class DesignBrief extends React.PureComponent {
         />
         <Navbar />
         <Header
-          backgroundImg={backgroundImg}
+          backgroundImg={headerImg}
           headerText={question}
           subheaderText={challengeTitle}
           showButton={false}
