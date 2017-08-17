@@ -76,6 +76,10 @@ const FAQ_CONTENT = [
     question: 'I forgot my password? What do I do?',
     answer: 'https://get.slack.help/hc/en-us/articles/201909068-Manage-your-password',
   },
+  {
+    question: 'I forgot my password? What do I do?',
+    answer: 'Our (D4SD\'s) objective for your participation is that you contribute to a rich discussion about mobility challenges in San Diego, that leads to potential solutions, design considerations, and ways to evaluate a solutions success. Your thoughts and conversations with others\' through the D4SD Slack Team will help to identify these barriers and opportunities, but we ask that you raise your thoughts with civility and respect for others\' in the discussion. To help identify good ideas, please use the :bulb: reaction to mark contributions that you think are headed in the right direction. Moderation rules: As the intent of this discussion is to foster creative ideas, profanity and personal attacks against other participants will not be tolerated by the D4SD moderators. Please adhere to the following rules: 1. Respect for other participants 2. No profanity 3. Do not share illegal or illicit material To help identify trolling behavior, please message the D4SD Team @d4sd Identification policy: Following the recommendations of DeCindio et al., (2003, 2012), we ask that your online identity reflect your offline identity, by logging in with your first and last name, and adding information about your interest in mobility issues to your D4SD Slack Team profile. While you have provided your email address to log-in, to protect your privacy we will not share your email address beyond the D4SD Team. When you want to raise a question privately, please message the D4SD Team @d4sd and we will add your question to the discussion through a moderator post to the group. Thank you for your participation. If you have any questions or concerns, please contact one of the moderators @d4sd. Otherwise, we hope that you find these discussions useful and engaging, as we work together through some of San Diego\'s toughest challenges.',
+  },
 ];
 
 const sectionTitle = 'FAQs';
@@ -102,19 +106,13 @@ function FAQ() {
           sectionTitle={sectionTitle}
           text={description}
         />
+        {FAQ_CONTENT.map(({ question, answer }) => (
+          <QuestionBox
+            question={question}
+            answer={answer}
+          />
+        ))}
       </div>
-
-      <section className={styles.content}>
-        <div className={styles.boxRow}>
-          {FAQ_CONTENT.map(({ question, answer }) => (
-            <QuestionBox
-              question={question}
-              answer={answer}
-            />
-          ))}
-
-        </div>
-      </section>
       <Footer />
     </div>
   );
