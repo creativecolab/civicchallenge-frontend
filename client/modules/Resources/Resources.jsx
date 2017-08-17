@@ -11,6 +11,7 @@ import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox
 import globalStyles from 'main.scss';
 
 import ResourceBox from './components/ResourceBox/ResourceBox';
+import LatestInMobility from '../LatestInMobility/LatestInMobility';
 
 import styles from './Resources.scss';
 
@@ -28,13 +29,13 @@ const description = 'This page provides a wealth of resources to help you learn 
 
 const RESOURCE_CONTENT = [
   {
-    title: 'Design Tools & Tips',
+    title: 'UCSD Civic Challenge',
     text: 'New to human-centered design? Click below for a curated list of resources to help you learn and get started on learning human-centered design today.',
     icon: toolsIcon,
     linkKey: 'designtoolsandtips',
   },
   {
-    title: 'Latest in Mobility',
+    title: 'SAP Build.me',
     text: 'Cities across the globe grapple with many of the mobility issues in San Diego, click here for a list of research papers and popular articles that we have found useful.',
     icon: latestIcon,
     linkKey: 'latestinmobility',
@@ -72,6 +73,8 @@ function Resources() {
           sectionTitle={sectionTitle}
           text={description}
         />
+        <h2>Design Tools and Tips</h2>
+        <p> description goes here </p>
         <div className={globalStyles.gridStyle}>
           {RESOURCE_CONTENT.map(({ title, text, icon, linkKey }) => (
             <ResourceBox
@@ -82,6 +85,7 @@ function Resources() {
             />
           ))}
         </div>
+        <LatestInMobility />
       </div>
       <Footer />
     </div>
