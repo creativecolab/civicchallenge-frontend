@@ -41,6 +41,9 @@ $box-dim-height: $box-dim-width * 1.2;
             }
           }
           .name {
+            h4 {
+              color: #cccccc;
+            }
             h5 {
               color: #999999;
             }
@@ -51,15 +54,12 @@ $box-dim-height: $box-dim-width * 1.2;
           text-align: left;
           max-width: 100%;
           position: relative;
-          
-          /*padding: $padding-mobile*2 $padding-mobile;*/
-          .tweet {
+          span {
+            font-size: .7em;
+            line-height: 100%;
             padding-top: 3px;
             color: #cccccc;
             padding-bottom: 5px;
-            h5 {
-              font-size: 5px;
-            }
           }
         }
       }

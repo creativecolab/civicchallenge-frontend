@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import globalStyles from 'main.scss';
+// import globalStyles from 'main.scss';
 import styles from './TwitterBox.scss';
 
 import twitterIcon from './twitter_icon.png';
@@ -36,12 +36,12 @@ function TwitterBox({ tweet }) {
                 <img src={twitterIcon} alt="twitter" />
               </div>
               <div className={styles.name}>
-                <h4 className={globalStyles.white}>D4SD Official</h4>
-                <h5>@d4sd</h5>
+                <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h4>Design for San Diego</h4></a>
+                <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h5>@Design4SD</h5></a>
               </div>
             </div>
             <div className={styles.tweetText}>
-              <h5 className={styles.tweet}>{tweet}</h5>
+              <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><span>{tweet}</span></a>
             </div>
           </div>
         </section>

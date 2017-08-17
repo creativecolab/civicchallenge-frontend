@@ -8,6 +8,7 @@ import globalStyles from 'main.scss';
 
 import styles from './NewsEvents.scss';
 import EventBox from './components/EventBox/EventBox';
+import EventBoxNull from './components/EventBoxNull/EventBoxNull';
 import TwitterBox from './components/TwitterBox/TwitterBox';
 
 /* images */
@@ -23,8 +24,7 @@ const twitterSectionTitle = 'LATEST TWEETS';
  * NewsEvents
  */
 
-
-const EVENTS = [
+const NULL_EVENTS = [
   {
     id: '',
     date: 'Sept 12 • More information coming soon!',
@@ -37,6 +37,9 @@ const EVENTS = [
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
   },
+];
+
+const EVENTS = [
   {
     id: '',
     date: 'Oct 26',
@@ -48,7 +51,7 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'This is a tweet! Tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet.',
+    tweet: 'Announced by our great ambassador James White of @freshform at the @DesignForwardSD event on Thursday',
   },
 ];
 
@@ -70,6 +73,12 @@ function NewsEvents(props) {
           <div className={styles.news}>
             <h4 className={styles.sectionTitle}>{newsSectionTitle}</h4>
             <div className={styles.newsBoxes}>
+              {NULL_EVENTS.map(({ title, date }) => (
+                <EventBoxNull
+                  title={title}
+                  date={date}
+                />
+              ))}
               {EVENTS.map(({ title, date, link }) => (
                 <EventBox
                   title={title}
