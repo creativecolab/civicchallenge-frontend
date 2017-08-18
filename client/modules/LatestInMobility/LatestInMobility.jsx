@@ -15,7 +15,7 @@ import walking from './biking.png';
  */
 
 const sectionTitle = 'Latest In Mobility';
-const description = 'Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.';
+const description = 'Cities across the globe grapple with many of the mobility issues in San Diego, click here for a list of research papers and popular articles that we have found useful.';
 
 
 /**
@@ -27,30 +27,30 @@ const propTypes = {};
 const NEWS_ARTICLES = [
   {
     id: '',
-    date: 'AUGUST 9',
-    source: 'Chicago News Tribune',
-    title: 'News Article Title',
+    date: 'JUNE 30',
+    source: 'The Kansas City Star',
+    title: 'Can Google-glass help the blind come close to seeing again?',
     thumbnail: walking,
-    linkKey: 'walking',
-    descr: 'This is a description In hac habitasse platea dictumst. Vivamus adipiscing fermentum adipiscing fermentum fermentum…',
+    linkKey: 'http://www.kansascity.com/news/local/article158958379.html',
+    descr: 'Google glasses designed for blind people connects those with disabilities to a live person who describes the surroundings of the person while viewing through the glasses camera.',
   },
   {
     id: '',
-    date: 'AUGUST 9',
-    source: 'Chicago News Tribune',
-    title: 'News Article Title',
+    date: 'JULY 13',
+    source: 'CBCNews',
+    title: 'Sometimes all sign language needs is a helping glove that translates their words into text.',
     thumbnail: walking,
-    linkKey: 'walking',
-    descr: 'This is a description In hac habitasse platea dictumst. Vivamus adipiscing fermentum adipiscing fermentum fermentum…',
+    linkKey: 'http://www.cbc.ca/news/technology/wearable-tech-asl-glove-1.4195429',
+    descr: 'Wearable tech gloves that can sense sign language and translate the movements into text that can be read, making communication between those with speaking disabilities and others much better.',
   },
   {
     id: '',
-    date: 'AUGUST 9',
-    source: 'Chicago News Tribune',
-    title: 'News Article Title',
+    date: 'MARCH 23',
+    source: 'Citylab',
+    title: 'How can we actually know who needs our seat on transit?',
     thumbnail: walking,
-    linkKey: 'walking',
-    descr: 'This is a description In hac habitasse platea dictumst. Vivamus adipiscing fermentum adipiscing fermentum fermentum…',
+    linkKey: 'https://www.citylab.com/life/2017/03/riding-the-subway-with-an-invisible-illness/520503/',
+    descr: 'This article raises the question of who deserves to be given priority on transit seats, considering the number of people who have disabilities that may not be visually identifiable.',
   },
 ];
 

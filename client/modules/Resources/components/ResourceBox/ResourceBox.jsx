@@ -36,7 +36,7 @@ function ResourceBox({ title, text, icon, linkUrl }) {
           </div>
           <div className={styles.button}>
             <div className={globalStyles.sectionBtn}>
-              <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
+              <a href={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</a>
             </div>
           </div>
         </div>

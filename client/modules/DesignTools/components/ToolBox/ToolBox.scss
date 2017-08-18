@@ -1,39 +1,40 @@
 @import '~styles/variables';
 
-$box-dim-width: 260px;
-$box-dim-height: $box-dim-width * 1.3;
+$box-dim-width: 300px;
+$box-dim-height: $box-dim-width * 1.4;
 $icon-dim: 60px;
 
 .tool-box {
   width: $box-dim-width;
   height: $box-dim-height;
 
-  padding: 20px;
   margin: 0 20px 20px 0;
 
   box-shadow: $theme-boxshadow;
 
   display: inline-block;
   vertical-align: bottom;
-  
+
+  .icon {
+    width: 100%;
+  }
+
   .boxWrapper {
     height: auto;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
 
     .boxContent{
       text-align: left;
-
-      .icon {
-        margin: 20px 10px;
-        width: auto;
-        height: $icon-dim;
-      }
       
       .title {
         h3 {
           display: inline-block;
+
+          &:after {
+            content:url('./newtab_icon.png');
+          }
         }
         img {
           display: inline-block;

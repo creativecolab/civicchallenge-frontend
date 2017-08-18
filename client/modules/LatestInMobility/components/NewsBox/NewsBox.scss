@@ -61,9 +61,13 @@ $box-dim-height: $box-dim-width * 1.2;
             padding-bottom: 5px;
             margin: 0;
             font-weight: bold;
+            text-decoration: none;
+            span:after {
+              content:url('./newtab_icon.png');
+            }
           }
           .descr {
-
+            font-size: 14px;
           }
 
           .button {
