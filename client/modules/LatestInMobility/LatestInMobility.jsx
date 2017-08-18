@@ -1,12 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 /* import classNames from 'util/classNames'; */
-
-import Navbar from 'components/Navbar/Navbar';
-import Footer from 'components/Footer/Footer';
-import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
 
 import globalStyles from 'main.scss';
 
@@ -29,7 +24,6 @@ const description = 'Curabitur lobortis id lorem id bibendum. Ut id consectetur 
 
 const propTypes = {};
 
-const challengeOne = 'How can we avoid dangerous bike accidents?';
 const NEWS_ARTICLES = [
   {
     id: '',
@@ -69,33 +63,24 @@ const defaultProps = {};
 function LatestInMobility() {
   return (
     <div className={styles.resources}>
-      <Helmet
-        title="LatestInMobility"
-      />
-      <Navbar />
-
-      <div className={globalStyles.pageWrapper}>
-        <StandardSectionBox
-          sectionTitle={sectionTitle}
-          text={description}
-        />
-        <div className={styles.challenge}>
-          <h2 className={globalStyles.grey}>{challengeOne}</h2>
-          <div className={globalStyles.gridStyle}>
-            {NEWS_ARTICLES.map(({ title, date, thumbnail, linkKey, descr, source }) => (
-              <NewsBox
-                title={title}
-                date={date}
-                thumbnail={thumbnail}
-                descr={descr}
-                source={source}
-                linkUrl={`/challenges/${linkKey}`}
-              />
-            ))}
-          </div>
+      <div className={styles.headerText}>
+        <h2>{sectionTitle}</h2>
+        <p>{description}</p>
+      </div>
+      <div className={styles.challenge}>
+        <div className={globalStyles.gridStyle}>
+          {NEWS_ARTICLES.map(({ title, date, thumbnail, linkKey, descr, source }) => (
+            <NewsBox
+              title={title}
+              date={date}
+              thumbnail={thumbnail}
+              descr={descr}
+              source={source}
+              linkUrl={`/challenges/${linkKey}`}
+            />
+          ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

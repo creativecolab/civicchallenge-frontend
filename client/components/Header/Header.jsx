@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Parallax, Background } from 'react-parallax';
 
 /* import Navbar from 'components/Navbar/Navbar'; */
 
@@ -18,7 +19,6 @@ const propTypes = {
   backgroundImg: PropTypes.string.isRequired,
   headerText: PropTypes.string.isRequired,
   subheaderText: PropTypes.string.isRequired,
-  showButton: PropTypes.bool.isRequired,
 };
 
 const contextTypes = {
@@ -27,29 +27,33 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Header({ backgroundImg, headerText, subheaderText, showButton }) {
+function Header({ backgroundImg, headerText, subheaderText }) {
   return (
-    <header className={styles.header}>
-      {/* <Navbar /> */}
-      <div className={styles.headerWrapper}>
-        {/* <div
-          className={styles.background}
-        /> */}
-        <div className={styles.layer} />
-        <div className={globalStyles.contentWrapper}>
-          <div className={styles.textContainer}>
-            <div className={styles.text}>
-              {subheaderText && <h3 className={globalStyles.white}>{subheaderText}</h3>}
-              {headerText && <h1 className={globalStyles.white}>{headerText}</h1>}
-              {showButton && <div className={styles.buttonContainer}>
-                <a href="mailto:design4sandiego@gmail.com">Get Involved</a>
-              </div>}
+    <Parallax strength={400}>
+      <Background>
+        <img className={styles.headerImage} src={backgroundImg} alt="header" />
+        <div
+          style={{
+            width: 1440,
+            height: 300,
+            backgroundColor: '#450093',
+          }}
+        />
+      </Background>
+      <header className={styles.header}>
+        <div className={styles.headerWrapper}>
+          <div className={styles.layer} />
+          <div className={globalStyles.contentWrapper}>
+            <div className={styles.textContainer}>
+              <div className={styles.text}>
+                {subheaderText && <h3 className={globalStyles.white}>{subheaderText}</h3>}
+                {headerText && <h1 className={globalStyles.white}>{headerText}</h1>}
+              </div>
             </div>
           </div>
         </div>
-        {backgroundImg && <img src={backgroundImg} alt="Background" />}
-      </div>
-    </header>
+      </header>
+    </Parallax>
   );
 }
 
