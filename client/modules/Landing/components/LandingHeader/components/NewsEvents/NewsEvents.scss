@@ -13,6 +13,7 @@ $text-width: 80%;
 
   @media (max-width: $mobile-max-width) {
     margin-top: 90px;
+    padding: 30px 0;
   }
   position: relative;
   z-index: 2;
@@ -29,7 +30,7 @@ $text-width: 80%;
       }
     }
     .news {
-      padding-top: 10px;
+      padding-top: 1px;
       .newsBoxes {
         text-align: left;
         margin-top: 20px;
@@ -37,14 +38,14 @@ $text-width: 80%;
     }
 
     .twitter {
-      padding-top: 10px;
       margin-left: 30px;
       @media (max-width: $mobile-max-width) {
         margin-left: 15px;
       }
+      padding-top: 1px;
       .newsBoxes {
         text-align: left;
-        margin-top: 20px;
+        margin-top: 15px;
       }
     }
   }
