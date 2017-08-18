@@ -8,6 +8,7 @@ import { withProvideRefs } from 'util/RefCollector';
 
 import globalStyles from 'main.scss';
 import styles from './LandingHeader.scss';
+import NewsEvents from './components/NewsEvents/NewsEvents';
 
 let TweenLite = {};
 if (process.env.browser) {
@@ -71,6 +72,7 @@ class LandingHeader extends React.PureComponent {
             </div>
           </div>
         </div>
+        <NewsEvents />
       </section>
     );
   }
