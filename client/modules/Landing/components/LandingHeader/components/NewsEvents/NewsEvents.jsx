@@ -18,8 +18,8 @@ import TwitterBox from './components/TwitterBox/TwitterBox';
  * Constants
  */
 
-const newsSectionTitle = 'UPCOMING EVENTS';
-const twitterSectionTitle = 'LATEST TWEETS';
+const newsSectionTitle = '2017 EVENTS';
+const twitterSectionTitle = 'LATEST TWEET';
 /**
  * NewsEvents
  */
@@ -27,13 +27,13 @@ const twitterSectionTitle = 'LATEST TWEETS';
 const NULL_EVENTS = [
   {
     id: '',
-    date: 'Sept 12 • More information coming soon!',
+    date: 'Details coming soon!',
     title: 'D4SD Information Session',
     link: '',
   },
   {
     id: '',
-    date: 'Sept 22 - 24 • More information coming soon!',
+    date: 'Details coming soon!',
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
   },
@@ -42,7 +42,7 @@ const NULL_EVENTS = [
 const EVENTS = [
   {
     id: '',
-    date: 'Oct 26',
+    date: 'Oct 26 • Liberty Station',
     title: 'Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
   },
