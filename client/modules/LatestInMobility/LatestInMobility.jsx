@@ -50,7 +50,7 @@ const NEWS_ARTICLES = [
     title: 'Researchers Create Glove that Translates ASL into Text',
     thumbnail: signLang,
     linkKey: 'http://www.cbc.ca/news/technology/wearable-tech-asl-glove-1.4195429',
-    descr: 'A new project out of the University of California San Diego shows how wearable technology could more easily integrate with the way people live — and that high-tech does not have to come with a high cost.',
+    descr: 'A new project out of the University of California San Diego shows how wearable technology could improve the lives of people with hearing impairments, by translating sign language into text.',
   },
   {
     id: '',
@@ -59,7 +59,7 @@ const NEWS_ARTICLES = [
     title: 'Improving Transit for Those with Invisible Illnesses',
     thumbnail: seats,
     linkKey: 'https://www.citylab.com/life/2017/03/riding-the-subway-with-an-invisible-illness/520503/',
-    descr: 'A London agency is developing a campaign for destigmatizing the usage of disabled seating by individuals with illnesses that are not visibly identifiable by others, such as neurological disorders, chronic pain, or fatigue.',
+    descr: 'A London agency developed an ad campaign for destigmatizing the usage of disabled seating by individuals with illnesses that are not visibly identifiable by others, such as neurological disorders, chronic pain, or fatigue.',
   },
   {
     id: '',
@@ -95,7 +95,7 @@ const NEWS_ARTICLES = [
     title: 'Groups Ideate Solutions for Unsafe Parking Situation',
     thumbnail: communityParking,
     linkKey: 'http://www.sandiegouniontribune.com/ramona-sentinel/news/local-news/sd-cm-ram-mt-woodson-mtg-0713-story.html',
-    descr: 'Hikers are currently endangering themselves by parking along Highway 67 in Ramona to access a popular trail. A local supervisor hosted a community meeting to hammer out details with local officials and other groups.',
+    descr: 'Hikers are currently endangering themselves by parking along Highway 67 to access a popular trail in Ramona. A local supervisor hosted a community meeting to hammer out details with local officials and other groups.',
   },
   {
     id: '',
