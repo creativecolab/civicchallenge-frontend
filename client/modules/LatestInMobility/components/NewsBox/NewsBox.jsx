@@ -38,7 +38,7 @@ function NewsBox({ title, date, thumbnail, linkUrl, descr, source }) {
           <div className={styles.newsTextWrapper}>
             <div className={styles.newsText}>
               <h5 className={styles.date}>{date} • {source}</h5>
-              <a className={styles.title} href={linkUrl}><span className={globalStyles.blue}>{title}&nbsp;&nbsp;</span></a>
+              <a className={styles.title} href={linkUrl} target="_blank" rel="noopener noreferrer"><span className={globalStyles.blue}>{title}&nbsp;&nbsp;</span></a>
               <p className={styles.descr}>{descr}</p>
             </div>
           </div>

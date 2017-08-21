@@ -38,55 +38,55 @@ const NEWS_ARTICLES = [
     id: '',
     date: 'JUNE 30',
     source: 'The Kansas City Star',
-    title: 'Can Google-glass help the blind come close to seeing again?',
+    title: 'Helping the Blind Experience World with Google Glass',
     thumbnail: googleGlass,
     linkKey: 'http://www.kansascity.com/news/local/article158958379.html',
-    descr: 'Google glasses designed for blind people connects those with disabilities to a live person who describes the surroundings of the person while viewing through the glasses camera.',
+    descr: 'Smart glasses by Google allow blind and visually impaired individuals to experience their surroundings by connecting them to live “agents” who describe what the glasses’ camera is recording.',
   },
   {
     id: '',
     date: 'JULY 13',
     source: 'CBCNews',
-    title: 'Sometimes all sign language needs is a helping glove that translates their words into text.',
+    title: 'Researchers Create Glove that Translates ASL into Text',
     thumbnail: signLang,
     linkKey: 'http://www.cbc.ca/news/technology/wearable-tech-asl-glove-1.4195429',
-    descr: 'Wearable tech gloves that can sense sign language and translate the movements into text that can be read, making communication between those with speaking disabilities and others much better.',
+    descr: 'A new project out of the University of California San Diego shows how wearable technology could more easily integrate with the way people live — and that high-tech does not have to come with a high cost.',
   },
   {
     id: '',
     date: 'MARCH 23',
     source: 'Citylab',
-    title: 'How can we actually know who needs our seat on transit?',
+    title: 'Improving Transit for Those with Invisible Illnesses',
     thumbnail: seats,
     linkKey: 'https://www.citylab.com/life/2017/03/riding-the-subway-with-an-invisible-illness/520503/',
-    descr: 'This article raises the question of who deserves to be given priority on transit seats, considering the number of people who have disabilities that may not be visually identifiable.',
+    descr: 'A London agency is developing a campaign for destigmatizing the usage of disabled seating by individuals with illnesses that are not visibly identifiable by others, such as neurological disorders, chronic pain, or fatigue.',
   },
   {
     id: '',
     date: 'JULY 12',
     source: 'EcoWatch',
-    title: 'Lyft has made a pledge to power 1 billion automated electric car rides per year by 2025.',
+    title: 'Lyft to Go All Electric for Autonomous Vehicle Fleet',
     thumbnail: lyft,
     linkKey: 'https://www.ecowatch.com/lyft-electric-car-2458093644.html',
-    descr: 'If you think the only way to drive electric is to buy electric, then think again. From ride sharing to car sharing, and short-term rentals to typical rental cars, the auto industry is making it easier for those without their own set of wheels to drive—or ride—electric.',
+    descr: 'If you think the only way to drive electric is to buy electric, then think again. The auto industry is making it easier for those without their own set of wheels to drive—or ride—electric.',
   },
   {
     id: '',
     date: 'JULY 21',
     source: 'Stanford News',
-    title: 'Self-driving cars have eyes too, or at least cameras that provide 140 degrees of information and a 4D image.',
+    title: 'Researchers Create 4D camera for Improving Robot Vision',
     thumbnail: carEyes,
     linkKey: 'http://news.stanford.edu/2017/07/21/new-camera-improve-robot-vision-virtual-reality/',
-    descr: 'This article introduces a new technology, a camera that generates a four-dimensional image and captures 140 degrees of information that can help robots navigate the world, especially autonomous vehicles.',
+    descr: 'This camera prototype could provide artificially intelligent technology with an exceptionally wide field of view and detailed depth information, all from a single image.',
   },
   {
     id: '',
     date: 'JULY 19',
     source: 'The Verge',
-    title: ' Lobbying might be bad for road safety if Congress doesn’t fully consider the impact of AVs',
+    title: 'Congress is Overestimating Safety of Self Driving Cars',
     thumbnail: lobbying,
     linkKey: 'https://www.theverge.com/2017/7/19/15998356/self-driving-car-congress-legislation-lobbying-safety',
-    descr: 'Companies are lobbying to be granted the privilege of ignoring some of the current road safety measures for the testing of autonomous vehicles.',
+    descr: 'Multiple auto companies are lobbying for the ability to circumnavigate certain road safety standards. And it’s working, Congress is set to fast-track several bills that will lift regulations for testing.',
   },
   {
     id: '',
@@ -105,6 +105,15 @@ const NEWS_ARTICLES = [
     thumbnail: proPilot,
     linkKey: 'http://wardsauto.com/technology/nissan-aims-ease-stress-heavy-traffic-propilot',
     descr: 'ProPilot Assist, from Nissan is supposed to help with stop-and-go traffic while taking away some of the stress of driving, it stops on its own, alerts the driver that the car has stopped, and will prompt them to put their feet on the breaks, supposedly making the process less stressful.',
+  },
+  {
+    id: '',
+    date: 'JULY 21',
+    source: 'Wards Auto',
+    title: 'UNC is digitizing its campus parking permits',
+    thumbnail: proPilot,
+    linkKey: 'http://wardsauto.com/technology/nissan-aims-ease-stress-heavy-traffic-propilot',
+    descr: 'Starting this fall, drivers will no longer need to display paper permits in their windows, and UNCC parking staff will be able to monitor vehicles through a digital system alone.',
   },
 ];
 
@@ -142,7 +151,7 @@ function LatestInMobility() {
               thumbnail={thumbnail}
               descr={descr}
               source={source}
-              linkUrl={`/challenges/${linkKey}`}
+              linkUrl={linkKey}
             />
           ))}
         </div>
