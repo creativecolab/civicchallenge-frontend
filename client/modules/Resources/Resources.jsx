@@ -87,7 +87,9 @@ function Resources() {
             />
           ))}
         </div>
-        <LatestInMobility />
+        <div className={styles.sectionWrapper}>
+          <LatestInMobility />
+        </div>
       </div>
       <Footer />
     </div>

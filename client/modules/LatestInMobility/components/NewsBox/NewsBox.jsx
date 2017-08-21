@@ -39,7 +39,7 @@ function NewsBox({ title, date, thumbnail, linkUrl, descr, source }) {
             <div className={styles.newsText}>
               <h5 className={styles.date}>{date} • {source}</h5>
               <a className={styles.title} href={linkUrl}><span className={globalStyles.blue}>{title}&nbsp;&nbsp;</span></a>
-              <h4 className={styles.descr}>{descr}</h4>
+              <p className={styles.descr}>{descr}</p>
             </div>
           </div>
         </section>

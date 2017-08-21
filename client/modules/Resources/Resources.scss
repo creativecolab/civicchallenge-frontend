@@ -5,19 +5,8 @@
   width: 100%;
   overflow-x: hidden;
 
-  .content {
-    width: 80%;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: left;
-    align-items: center;
-
-    .boxRow {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-    }
+  .sectionWrapper {
+    padding-top: $resource-padding; 
   }
 }
 
