@@ -37,16 +37,16 @@ const RESOURCE_CONTENT = [
     linkKey: 'http://civicdesign.ucsd.edu/',
   },
   {
-    title: 'SAP tools for creating design-led applications',
-    text: 'SAP has created a set of educational materials and tools called BUILD.ME to help developers put people first. This site explains how you should invest time in user research and design at the beginning of the product lifecycle.',
-    icon: buildMeHeader,
-    linkKey: 'https://www.build.me/splashapp/how-it-works',
-  },
-  {
     title: 'City of San Diego’s Open Data Portal',
     text: 'The official data portal for City of San Diego includes data on public safety, street repairs, transit route lines bike routes, parking meter transactions and locations, traffic volume, and traffic accidents. Use the search bar at the top to find data.',
     icon: openDataHeader,
     linkKey: 'https://data.sandiego.gov/',
+  },
+  {
+    title: 'SAP tools for creating design-led applications',
+    text: 'SAP has created a set of educational materials and tools called BUILD.ME to help developers put people first. This site explains how you should invest time in user research and design at the beginning of the product lifecycle.',
+    icon: buildMeHeader,
+    linkKey: 'https://www.build.me/splashapp/how-it-works',
   },
 ];
 

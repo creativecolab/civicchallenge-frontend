@@ -35,7 +35,7 @@ function ToolBox({ title, text, icon, linkUrl }) {
           <div className={styles.title}>
             <a href={linkUrl}><h3 className={globalStyles.blue}>{title}&nbsp;&nbsp;</h3></a>
           </div>
-          <h4>{text}</h4>
+          <p>{text}</p>
         </div>
       </div>
     </div>

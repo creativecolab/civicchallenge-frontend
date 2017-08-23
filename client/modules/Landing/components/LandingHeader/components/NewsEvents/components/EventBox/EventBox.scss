@@ -63,8 +63,16 @@ $box-dim-height: $box-dim-width * 1.2;
             bottom: 0;
           }
 
+          h2 {
+            font-size: 0.875em;
+          }
+
           h3 {
             text-transform: uppercase;
+          }
+
+          h5 {
+            font-size: 0.7em;
           }
         }
       }

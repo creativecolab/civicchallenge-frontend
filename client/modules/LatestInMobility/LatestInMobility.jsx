@@ -91,7 +91,7 @@ const NEWS_ARTICLES = [
   {
     id: '',
     date: 'JULY 19',
-    source: 'San Diego Union-Tribune',
+    source: 'SD Union-Tribune',
     title: 'A Local Community Solves a Dangerous Parking Situation',
     thumbnail: communityParking,
     linkKey: 'http://www.sandiegouniontribune.com/ramona-sentinel/news/local-news/sd-cm-ram-mt-woodson-mtg-0713-story.html',

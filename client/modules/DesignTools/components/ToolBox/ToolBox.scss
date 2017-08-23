@@ -1,7 +1,7 @@
 @import '~styles/variables';
 
 $box-dim-width: 300px;
-$box-dim-height: $box-dim-width * 1.4;
+$box-dim-height: $box-dim-width * 1.25;
 $icon-dim: 60px;
 
 .tool-box {
@@ -44,10 +44,14 @@ $icon-dim: 60px;
           text-decoration: none;
         }
       }
-
+      p {
+        font-size: 14px;
+      }
+      /*
       h4 {
         margin-top: 15px;
       }
+      */
     }
   }
 }
