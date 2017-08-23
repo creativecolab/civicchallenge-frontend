@@ -27,7 +27,7 @@ const twitterSectionTitle = 'LATEST TWEET';
 const NULL_EVENTS = [
   {
     id: '',
-    date: 'Details coming soon!',
+    date: 'Sept 12 • Details coming soon!',
     title: 'D4SD Information Session',
     link: '',
   },
