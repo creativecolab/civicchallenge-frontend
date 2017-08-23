@@ -3,8 +3,10 @@
 import globalStyles from 'main.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
-import facebookIcon from './facebook-icon.png';
-import twitterIcon from './twitter-icon.png';
+
+
+import facebookIcon from './icon-facebook-white.png';
+import twitterIcon from './icon-twitter-white.png';
 import styles from './Footer.scss';
 
 // import designLabLogo from './design-lab-logo.png';
