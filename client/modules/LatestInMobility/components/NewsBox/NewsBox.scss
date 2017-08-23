@@ -62,6 +62,7 @@ $box-dim-height: $box-dim-width * 1.25;
             margin: 0;
             font-weight: bold;
             text-decoration: none;
+            font-size: 1em * 0.9;
             span:after {
               content:url('./newtab_icon.png');
             }
