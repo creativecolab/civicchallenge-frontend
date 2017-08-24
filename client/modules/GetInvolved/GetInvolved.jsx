@@ -47,7 +47,7 @@ const BOX_TEXT = [
   {
     title: 'Discuss Mobility in Slack',
     text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
-    buttonText: 'Join Discussion',
+    buttonText: 'Join the Discussion',
     linkUrl: 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA',
     rel: 'noopener noreferrer',
     target: '_blank',
