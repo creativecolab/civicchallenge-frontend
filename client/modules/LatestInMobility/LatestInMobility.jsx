@@ -112,7 +112,7 @@ const NEWS_ARTICLES = [
     source: 'Campus Technology',
     title: 'Smarter Parking Systems Save Time and Money. This Campus Made Digital Parking Permits.',
     thumbnail: smartParking,
-    linkKey: 'http://wardsauto.com/technology/nissan-aims-ease-stress-heavy-traffic-propilot',
+    linkKey: 'https://campustechnology.com/articles/2017/07/06/unc-charlotte-gets-smart-with-parking-on-campus.aspx',
     descr: 'Starting this fall, drivers will no longer need to display paper permits in their windows, and UNCC parking staff will be able to monitor vehicles through a digital system alone.',
   },
 ];
