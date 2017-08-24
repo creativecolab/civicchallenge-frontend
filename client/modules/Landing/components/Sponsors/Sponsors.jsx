@@ -6,6 +6,7 @@ import { withCollectRef } from 'util/RefCollector';
 
 import styles from './Sponsors.scss';
 
+import sdLogo from './city-of-sd-logo.png';
 import nsfLogo from './nsf-logo.png';
 import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
@@ -15,6 +16,11 @@ import scaleSDLogo from './scale-sd-logo.png';
  * Sponsors
  */
 const SPONSORS = [
+  {
+    href: 'https://www.sandiego.gov/',
+    img: sdLogo,
+    alt: 'City of San Diego',
+  },
   {
     href: 'https://www.nsf.gov/',
     img: nsfLogo,

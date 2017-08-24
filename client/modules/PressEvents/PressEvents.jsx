@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import Header from 'components/Header/Header';
+import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
+import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
 
 import globalStyles from 'main.scss';
 
 import styles from './PressEvents.scss';
+
+/**
+ * Constants
+ */
+
+const sectionTitle = 'Press & Events';
 
 /**
  * PressEvents
@@ -27,20 +34,14 @@ function PressEvents() {
       <Helmet
         title="Press & Events"
       />
-      <Header
-        backgroundImg={''}
-        headerText={'Press & Events'}
-        subheaderText={''}
-        showButton={false}
-      />
-      <div className={globalStyles.contentWrapper}>
-        <div className={globalStyles.placeholderWrapper}>
-          <p>Content Coming Soon</p>
-        </div>
+      <Navbar />
+      <div className={globalStyles.pageWrapper}>
+        <StandardSectionBox
+          sectionTitle={sectionTitle}
+          text=""
+        />
       </div>
-      <div className={globalStyles.placeholderFooter}>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

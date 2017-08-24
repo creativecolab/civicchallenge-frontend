@@ -16,6 +16,7 @@ import team from './team.png';
 import scaleSDLogo from './scale-sd-logo.png';
 import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
+import sdLogo from './city-of-sd-logo.png';
 /**
  * About
  */
@@ -74,8 +75,13 @@ const CREDITS = [
 
 const PARTNERS = [
   {
-    href: 'http://designlab.ucsd.edu/',
+    href: 'https://www.sandiego.gov/',
     img: designLabLogo,
+    alt: 'City of San Diego',
+  },
+  {
+    href: 'http://designlab.ucsd.edu/',
+    img: sdLogo,
     alt: 'UC San Diego Design Lab',
   },
   {
