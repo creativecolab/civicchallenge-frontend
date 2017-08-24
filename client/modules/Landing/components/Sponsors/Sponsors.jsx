@@ -9,7 +9,6 @@ import styles from './Sponsors.scss';
 import nsfLogo from './nsf-logo.png';
 import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
-import protolabLogo from './protolab-logo.png';
 import scaleSDLogo from './scale-sd-logo.png';
 
 /**
@@ -30,11 +29,6 @@ const SPONSORS = [
     href: 'http://designforwardsd.com/',
     img: designForwardLogo,
     alt: 'Design Forward Alliance',
-  },
-  {
-    href: 'http://protolab.ucsd.edu/',
-    img: protolabLogo,
-    alt: 'ProtoLab',
   },
   {
     href: 'http://www.scalesd.com/',
