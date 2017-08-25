@@ -152,6 +152,29 @@ $content-width: 70%;
 
 	.resources {
 		width: $content-width;
+
+		.resourceHeader {
+			display: flex;
+			align-items: flex-end;
+			
+			h2 {
+				padding: 0;
+			}
+			a {
+				text-decoration: none;
+				span {
+					padding-left: 10px;
+					color: $theme-color-blue;
+					font-size: 0.9em;
+					font-weight: 800;
+				}
+
+				&:hover {
+					opacity: 0.7;
+					transition: opacity 0.5s ease 0s;
+				}
+			}
+		}
 	}
 	hr{ 
     border-top: 1px solid #d4d4d4;

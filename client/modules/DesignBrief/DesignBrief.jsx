@@ -504,7 +504,10 @@ class DesignBrief extends React.PureComponent {
             ))}
 
             <div id={'resources'} className={classNames([styles.resources, styles.contentWrapper])} ref={(el) => { this.resources = el; }}>
-              <h2>Resources</h2>
+              <div className={styles.resourceHeader}>
+                <h2>Resources</h2>
+                <a href="/resources"><span>(See More)</span></a>
+              </div>
               <br />
               {resources.map(({ date, source, title, thumbnail, linkKey, descr }) => (
                 <NewsBox
