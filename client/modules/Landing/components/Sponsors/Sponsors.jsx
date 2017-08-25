@@ -17,6 +17,11 @@ import scaleSDLogo from './scale-sd-logo.png';
  */
 const SPONSORS = [
   {
+    href: 'http://designlab.ucsd.edu/',
+    img: designLabLogo,
+    alt: 'UC San Diego Design Lab',
+  },
+  {
     href: 'https://www.sandiego.gov/',
     img: sdLogo,
     alt: 'City of San Diego',
@@ -25,11 +30,6 @@ const SPONSORS = [
     href: 'https://www.nsf.gov/',
     img: nsfLogo,
     alt: 'National Science Foundation',
-  },
-  {
-    href: 'http://designlab.ucsd.edu/',
-    img: designLabLogo,
-    alt: 'UC San Diego Design Lab',
   },
   {
     href: 'http://designforwardsd.com/',
