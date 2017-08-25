@@ -8,6 +8,7 @@
   @return $number;
 }
 
+$content-width: 70%;
 .DesignBrief {
 	height: 100%;
 	width: 100%;
@@ -33,7 +34,6 @@
 
 		.menu {
 			z-index: 1;
-			$content-width: 70%;
 			width: $content-width;
 			.sidebar {
 				text-align: left;
@@ -150,6 +150,9 @@
 		}
 	}
 
+	.resources {
+		width: $content-width;
+	}
 	hr{ 
     border-top: 1px solid #d4d4d4;
 	}
@@ -161,6 +164,10 @@
 		overflow-x: hidden;
 		.sidebar {
 			display: none;
+		}
+
+		.resources {
+			width: 100%;
 		}
 	}
 }

@@ -11,7 +11,7 @@ import globalStyles from 'main.scss';
 
 import DBHeader from './components/DBHeader/DBHeader';
 import DBOverview from './components/DBOverview/DBOverview';
-/* import Resources from './components/Resources/Resources'; */
+import NewsBox from '../LatestInMobility/components/NewsBox/NewsBox';
 
 import styles from './DesignBrief.scss';
 
@@ -36,6 +36,18 @@ import headerAV from './imgs/headers/autonomous.png';
 import productive from './imgs/av/AV-productive.jpg';
 import whatsNext from './imgs/av/av-truck.jpeg';
 import stopSigns from './imgs/av/AV-stopsigns.jpg';
+
+/** resource images */
+import googleGlass from '../LatestInMobility/imgs/june30googleGlass.png';
+import signLang from '../LatestInMobility/imgs/july13signLang.png';
+import seats from '../LatestInMobility/imgs/march23seats.png';
+import lyftR from '../LatestInMobility/imgs/july12lyft.png';
+import lobbying from '../LatestInMobility/imgs/july19lobbying.png';
+import communityParking from '../LatestInMobility/imgs/july19communityParking.png';
+import proPilot from '../LatestInMobility/imgs/july21proPilot.png';
+import futureCars from '../LatestInMobility/imgs/may12futurecars.jpg';
+import smartParking from '../LatestInMobility/imgs/july12smartParkingUNC.png';
+
 
 let TweenLite = {};
 if (process.env.browser) {
@@ -91,6 +103,7 @@ const CHALLENGE_INFO = {
         figureCLink: '',
       },
     ],
+    resources: [],
   },
   improvingaccessibility: {
     challengeTitle: 'Improving Accesibility',
@@ -147,6 +160,35 @@ const CHALLENGE_INFO = {
         figureCLink: '',
       },
     ],
+    resources: [
+      {
+        id: '',
+        date: 'JUNE 30',
+        source: 'The Kansas City Star',
+        title: 'Helping the Blind Experience World with Google Glass',
+        thumbnail: googleGlass,
+        linkKey: 'http://www.kansascity.com/news/local/article158958379.html',
+        descr: 'Smart glasses by Google allow blind and visually impaired individuals to experience their surroundings by connecting them to live “agents” who describe what the glasses’ camera is recording.',
+      },
+      {
+        id: '',
+        date: 'JULY 13',
+        source: 'CBCNews',
+        title: 'Researchers Create Glove that Translates ASL into Text',
+        thumbnail: signLang,
+        linkKey: 'http://www.cbc.ca/news/technology/wearable-tech-asl-glove-1.4195429',
+        descr: 'A new project out of the University of California San Diego shows how wearable technology could improve the lives of people with hearing impairments, by translating sign language into text.',
+      },
+      {
+        id: '',
+        date: 'MARCH 23',
+        source: 'Citylab',
+        title: 'Improving Public Transit for Those with Invisible Illnesses',
+        thumbnail: seats,
+        linkKey: 'https://www.citylab.com/life/2017/03/riding-the-subway-with-an-invisible-illness/520503/',
+        descr: 'Many transit riders suffer from an invisible illness—such as neurological disorders or chronic pain— that prevents others from sharing their seat. This London agency aims to help.',
+      },
+    ],
   },
   traffic: {
     challengeTitle: 'Enhancing the Commuter Experience',
@@ -189,6 +231,35 @@ const CHALLENGE_INFO = {
         figureBLink: '',
         figureC: '',
         figureCLink: '',
+      },
+    ],
+    resources: [
+      {
+        id: '',
+        date: 'JULY 19',
+        source: 'SD Union-Tribune',
+        title: 'A Local Community Solves a Dangerous Parking Situation',
+        thumbnail: communityParking,
+        linkKey: 'http://www.sandiegouniontribune.com/ramona-sentinel/news/local-news/sd-cm-ram-mt-woodson-mtg-0713-story.html',
+        descr: 'Hikers are currently endangering themselves by parking along Highway 67 to access a popular trail in Ramona. A local supervisor hosted a community meeting to hammer out details with local officials and other groups.',
+      },
+      {
+        id: '',
+        date: 'JULY 21',
+        source: 'Wards Auto',
+        title: 'Semi-Automatic Cruise Control Tech Aims to Ease Traffic',
+        thumbnail: proPilot,
+        linkKey: 'http://wardsauto.com/technology/nissan-aims-ease-stress-heavy-traffic-propilot',
+        descr: 'Nissan is bringing together adaptive cruise control and lane-keeping assist with lane-centering technology into a new featured called ProPilot Assist. The technology will assist drivers with heavy stop-and-go traffic.',
+      },
+      {
+        id: '',
+        date: 'JULY 21',
+        source: 'Campus Technology',
+        title: 'Smarter Parking Systems Save Time and Money. This Campus Made Digital Parking Permits.',
+        thumbnail: smartParking,
+        linkKey: 'https://campustechnology.com/articles/2017/07/06/unc-charlotte-gets-smart-with-parking-on-campus.aspx',
+        descr: 'Starting this fall, drivers will no longer need to display paper permits in their windows, and UNCC parking staff will be able to monitor vehicles through a digital system alone.',
       },
     ],
   },
@@ -235,6 +306,35 @@ const CHALLENGE_INFO = {
         figureCLink: '',
       },
     ],
+    resources: [
+      {
+        id: '',
+        date: 'JULY 12',
+        source: 'EcoWatch',
+        title: 'Lyft to Go All Electric for Autonomous Vehicle Fleet',
+        thumbnail: lyftR,
+        linkKey: 'https://www.ecowatch.com/lyft-electric-car-2458093644.html',
+        descr: 'If you think the only way to drive electric is to buy electric, then think again. Ride sharing companies like Lyft and Uber will be going all electric for their fleet of autonomous cars.',
+      },
+      {
+        id: '',
+        date: 'MAY 12',
+        source: 'CityLab',
+        title: 'How does a city plan for a future filled with autonomous cars?',
+        thumbnail: futureCars,
+        linkKey: 'https://www.citylab.com/transportation/2017/05/8-bright-ideas-for-driverless-cities/526446/',
+        descr: 'Could self-driving cars bring on more affordable housing? Should car companies slap a “warning label” on private autos? At a national summit of mobility leaders, some big thoughts came up.',
+      },
+      {
+        id: '',
+        date: 'JULY 19',
+        source: 'The Verge',
+        title: 'Has Congress Overestimated the Safety of Self Driving Cars?',
+        thumbnail: lobbying,
+        linkKey: 'https://www.theverge.com/2017/7/19/15998356/self-driving-car-congress-legislation-lobbying-safety',
+        descr: 'Multiple auto companies are lobbying for the ability to circumnavigate certain road safety standards. And it’s working, Congress is set to fast-track several bills that will lift regulations for testing.',
+      },
+    ],
   },
   error: {
     challengeTitle: 'Error',
@@ -265,7 +365,7 @@ class DesignBrief extends React.PureComponent {
   static CURRENTSECTION_OVERVIEW_BASE = 'overview';
   static CURRENTSECTION_RESOURCES = 'resources';
 
-  static SCROLL_PX_PER_MS = 1000;
+  static SCROLL_PX_PER_MS = 1500;
 
   constructor(props) {
     super(props);
@@ -298,6 +398,11 @@ class DesignBrief extends React.PureComponent {
     let newCurrentSection = DesignBrief.CURRENTSECTION_HEADER;
 
     for (let i = this.overviews.length - 1; i >= 0; i -= 1) {
+      if (this.resources.getBoundingClientRect().top <= 30) {
+        newCurrentSection = DesignBrief.CURRENTSECTION_RESOURCES;
+        console.log('yoooo');
+        break;
+      }
       if (this.overviews[i].getBoundingClientRect().top <= 30) {
         newCurrentSection = `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}`;
         break;
@@ -332,7 +437,7 @@ class DesignBrief extends React.PureComponent {
       pageInfo = CHALLENGE_INFO.error;
     }
 
-    const { headerImg, challengeTitle, intro, question, overview } = pageInfo;
+    const { headerImg, challengeTitle, intro, question, overview, resources } = pageInfo;
 
     return (
       <div className={styles.DesignBrief}>
@@ -368,6 +473,14 @@ class DesignBrief extends React.PureComponent {
                     </li>
                   </a>
                 ))}
+                <a>
+                  <li
+                    className={currentSection === DesignBrief.CURRENTSECTION_RESOURCES ? styles.current : ''}
+                    onClick={this._onNavItemClicked('resources')}
+                  >
+                    <p>Resources</p>
+                  </li>
+                </a>
               </ul>
             </div>
 
@@ -390,6 +503,20 @@ class DesignBrief extends React.PureComponent {
               </div>
             ))}
 
+            <div id={'resources'} className={classNames([styles.resources, styles.contentWrapper])} ref={(el) => { this.resources = el; }}>
+              <h2>Resources</h2>
+              <br />
+              {resources.map(({ date, source, title, thumbnail, linkKey, descr }) => (
+                <NewsBox
+                  title={title}
+                  date={date}
+                  thumbnail={thumbnail}
+                  descr={descr}
+                  source={source}
+                  linkUrl={linkKey}
+                />
+              ))}
+            </div>
             {/* <div id={'learningresources'} ref={(el) => { this.resources = el; }}>
               <Resources
                 title={RESOURCES.challengeName}
