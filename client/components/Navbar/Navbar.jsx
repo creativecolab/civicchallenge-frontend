@@ -50,6 +50,10 @@ const LINKS = [
     text: 'Resources',
   },
   {
+    href: '',
+    text: 'FAQs',
+  },
+  {
     href: '/sponsors',
     text: 'Sponsors',
   },
