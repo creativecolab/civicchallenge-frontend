@@ -42,16 +42,8 @@ const LINKS = [
     ],
   },
   {
-    href: '/events',
-    text: 'Events',
-  },
-  {
     href: '/resources',
     text: 'Resources',
-  },
-  {
-    href: '',
-    text: 'FAQs',
   },
   {
     href: '/sponsors',

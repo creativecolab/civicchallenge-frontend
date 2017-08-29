@@ -47,7 +47,7 @@ export default (
     <Route path="/resources" getComponent={getResources} />
     <Route path="/resources/designtoolsandtips" getComponent={getDesignTools} />
     <Route path="/resources/latestinmobility" getComponent={getLatestInMobility} />
-    <Route path="/resources/faqs" getComponent={getFAQ} />
+    <Route path="/faqs" getComponent={getFAQ} />
     <Route path="/designbrief" getComponent={getDesignBrief} />
     <Route path="/getinvolved" getComponent={getGetInvolved} />
     <Route path="/events" getComponent={getEvents} />
