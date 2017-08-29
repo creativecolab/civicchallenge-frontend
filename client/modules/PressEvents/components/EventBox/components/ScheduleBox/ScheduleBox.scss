@@ -1,0 +1,36 @@
+@import "~styles/variables.scss";
+
+
+.schedule-wrapper {
+  margin: $event-spacing-margin*2 0;
+
+  h3 {
+    margin: $event-spacing-margin 0;
+  }
+  .schedule-box {
+    $grid-min-height: 30px;
+    width: 60%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 0;
+    align-items: center;
+    grid-auto-rows: minmax($grid-min-height, auto);
+
+    .date {
+      h6 {
+        margin: 0;
+        font-weight: normal;
+      }
+    }
+
+    .event {
+      p {
+        color: $theme-color-lightgrey;
+        font-size: 0.7em;
+        margin: 0;
+      }
+    }
+  }
+}
