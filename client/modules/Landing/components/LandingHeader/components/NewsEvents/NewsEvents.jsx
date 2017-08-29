@@ -8,7 +8,6 @@ import globalStyles from 'main.scss';
 
 import styles from './NewsEvents.scss';
 import EventBox from './components/EventBox/EventBox';
-import EventBoxNull from './components/EventBoxNull/EventBoxNull';
 import TwitterBox from './components/TwitterBox/TwitterBox';
 
 /* images */
@@ -24,18 +23,15 @@ const twitterSectionTitle = 'LATEST TWEET';
  * NewsEvents
  */
 
-const NULL_EVENTS = [
+const EVENTS = [
   {
     id: '',
     date: 'Sept 21-23 • Downtown Works',
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
-    callToAction: 'Register on EventBrite',
+    callToAction: 'Registration link coming soon',
     callToActionLink: '/',
   },
-];
-
-const EVENTS = [
   {
     id: '',
     date: 'Oct 24 • Details coming soon!',
@@ -77,14 +73,6 @@ function NewsEvents(props) {
           <div className={styles.news}>
             <h4 className={styles.sectionTitle}>{newsSectionTitle}</h4>
             <div className={styles.newsBoxes}>
-              {NULL_EVENTS.map(({ title, date, callToAction, callToActionLink }) => (
-                <EventBoxNull
-                  title={title}
-                  date={date}
-                  callToAction={callToAction}
-                  callToActionLink={callToActionLink}
-                />
-              ))}
               {EVENTS.map(({ title, date, link, callToAction }) => (
                 <EventBox
                   title={title}

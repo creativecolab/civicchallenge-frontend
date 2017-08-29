@@ -76,7 +76,7 @@ const FAQ_CONTENT = [
   },
   {
     question: 'I forgot my password? What do I do?',
-    answer: 'https://get.slack.help/hc/en-us/articles/201909068-Manage-your-password',
+    answer: 'Slack\'s FAQ answers that question <a target="_blank" ref="nooponer noreferrer" href="https://get.slack.help/hc/en-us/articles/201909068-Manage-your-password">here</a>',
   },
   {
     question: 'I forgot my password? What do I do?',
@@ -110,6 +110,7 @@ function FAQ() {
         />
         {FAQ_CONTENT.map(({ question, answer }) => (
           <QuestionBox
+            key={question}
             question={question}
             answer={answer}
           />

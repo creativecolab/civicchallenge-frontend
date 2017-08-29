@@ -45,33 +45,13 @@ div.panel {
   width: 100%;
   .content {
     width: 100%;
-    .questionBar {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 0;
-      .qBtn {
-        display: flex;
-        justify-content: flex-end;
-
-        button {
-          width: 30px;
-          height: 30px;
-          border: 3px solid $theme-color-blue;
-          background-color: transparent;
-          border-radius: 40px;
-          content: '\02795'; /* Unicode character for "plus" sign (+) */
-          color: $theme-color-blue;
-          font-size: 1em;
-          font-weight: bold;
-        }
-      }
-    }
+    padding-top: 20px;
 
     .questionText {
       border: 1px solid $box-border-lightgrey;
       background-color: $box-background-lightgrey;
+
+      overflow: hidden;
 
       p {
         margin: 20px;

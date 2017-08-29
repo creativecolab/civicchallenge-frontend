@@ -1,7 +1,9 @@
+
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import globalStyles from 'main.scss';
+// import globalStyles from 'main.scss';
 import styles from './QuestionBox.scss';
 
 /**
@@ -20,7 +22,7 @@ const contextTypes = {
 const defaultProps = {};
 
 function QuestionBox({ question, answer }) {
-  /* componentDidMount() {
+  /* _componentDidMount() {
     const acc = document.getElementsByClassName("accordion");
     const i;
     for (i = 0; i < acc.length; i++) {
@@ -34,25 +36,18 @@ function QuestionBox({ question, answer }) {
         }
       }
     }
-  } */
+  }; */
 
   return (
     <div className={styles.QuestionBox}>
       <div className={styles.content}>
-        <button className={styles.accordion}>Section 1</button>
-        <div className={styles.panel}>
-          <p>Lorem ipsum dolor sit amet,</p>
-        </div>
-        <div className={styles.questionBar}>
-          <div className={styles.qQuestion}>
-            <h3 className={globalStyles.blue}>{question}</h3>
-          </div>
-          <div className={styles.qBtn}>
-            <button label="expand"><div className={styles.plus}>+</div></button>
-          </div>
-        </div>
+        <button className={styles.accordion}>{question}</button>
         <div className={styles.questionText}>
-          <p>{answer}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: answer,
+            }}
+          />
         </div>
       </div>
     </div>
