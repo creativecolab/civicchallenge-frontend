@@ -27,7 +27,7 @@ const twitterSectionTitle = 'LATEST TWEET';
 const NULL_EVENTS = [
   {
     id: '',
-    date: 'Sept 22-23 • Details coming soon!',
+    date: 'Sept 21-23 • Details coming soon!',
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
   },
