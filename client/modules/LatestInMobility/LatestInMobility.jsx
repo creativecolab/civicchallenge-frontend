@@ -19,6 +19,9 @@ import communityParking from './imgs/july19communityParking.png';
 import proPilot from './imgs/july21proPilot.png';
 import futureCars from './imgs/may12futurecars.jpg';
 import smartParking from './imgs/july12smartParkingUNC.png';
+import blvd from './imgs/june27kansaselcajonblvd.png';
+import bikelanes from './imgs/may30bikelanes.jpg';
+import zerodeaths from './imgs/march8zerotrafficdeaths.jpg';
 /**
  * Constants
  */
@@ -114,6 +117,33 @@ const NEWS_ARTICLES = [
     thumbnail: smartParking,
     linkKey: 'https://campustechnology.com/articles/2017/07/06/unc-charlotte-gets-smart-with-parking-on-campus.aspx',
     descr: 'Starting this fall, drivers will no longer need to display paper permits in their windows, and UNCC parking staff will be able to monitor vehicles through a digital system alone.',
+  },
+  {
+    id: '',
+    date: 'JUNE 27',
+    source: 'San Diego Reader',
+    title: 'Should the city engineers have made safety improvements?',
+    thumbnail: blvd,
+    linkKey: 'https://www.sandiegoreader.com/news/2017/jun/27/ticker-city-engineers-changes-kansas-el-cajon-bl/#',
+    descr: 'Traffic engineers maintain that a traffic intersection that has caused a string of pedestrian deaths does not require a traffic signal or warrant improvements for safety.',
+  },
+  {
+    id: '',
+    date: 'MAY 30',
+    source: 'The San Diego Union Tribune',
+    title: 'Are bike lanes bad for business?',
+    thumbnail: bikelanes,
+    linkKey: 'http://www.sandiegouniontribune.com/news/environment/sd-me-carwars-bike-lanes-201705230-story.html',
+    descr: 'This article is a discussion of how bike lanes affect businesses, including their influence when the space needed to create bike lanes is factored in.',
+  },
+  {
+    id: '',
+    date: 'MARCH 8',
+    source: 'KPBS',
+    title: 'How will the San Diego City Council eliminate all traffic deaths by 2025?',
+    thumbnail: zerodeaths,
+    linkKey: 'http://www.kpbs.org/news/2017/jul/20/san-diego-city-council-vision-zero-traffic-safety/',
+    descr: 'The San Diego City Council heard a plan that hopes to eliminate all traffic deaths by 2025 and make travel safer for pedestrians and bicyclists.',
   },
 ];
 

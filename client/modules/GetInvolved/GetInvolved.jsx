@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -23,7 +23,6 @@ import search from './search_icon.png';
 import mail from './email-icon.png';
 import submit from './submit-icon.png';
 /* import test from './test_icon.png'; */
-
 /**
  * Constants
  */
