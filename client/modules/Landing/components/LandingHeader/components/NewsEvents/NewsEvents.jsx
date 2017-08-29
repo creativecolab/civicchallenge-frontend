@@ -18,7 +18,7 @@ import TwitterBox from './components/TwitterBox/TwitterBox';
  * Constants
  */
 
-const newsSectionTitle = '2017 EVENTS';
+const newsSectionTitle = 'KEY DATES';
 const twitterSectionTitle = 'LATEST TWEET';
 /**
  * NewsEvents
@@ -31,15 +31,15 @@ const NULL_EVENTS = [
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
   },
-  {
-    id: '',
-    date: 'Oct 24 • Details coming soon!',
-    title: 'D4SD Submission Deadline',
-    link: '',
-  },
 ];
 
 const EVENTS = [
+  {
+    id: '',
+    date: 'Oct 24 • Details coming soon!',
+    title: 'Challenge Submission Deadline',
+    link: '/getinvolved',
+  },
   {
     id: '',
     date: 'Oct 25-26 • Liberty Station',
