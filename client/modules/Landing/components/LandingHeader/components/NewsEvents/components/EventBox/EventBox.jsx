@@ -8,7 +8,7 @@ import styles from './EventBox.scss';
 /**
  * Constants
  */
-
+// const message = 'Link Coming Soon!';
 /**
  * EventBox
  */
@@ -31,7 +31,17 @@ function EventBox({ title, date, link, callToAction }) {
     <section className={styles.wrapper}>
       <div className={styles.boxWrapper}>
         <section className={styles.EventBox}>
-          <a href={link} rel="noopener noreferrer" target="_blank">
+          {link ?
+            <a href={link} rel="noopener noreferrer" target="_blank">
+              <div className={styles.eventTextWrapper}>
+                <div className={styles.eventText}>
+                  <h2 className={styles.title}>{title}</h2>
+                  <h5 className={styles.date}>{date}</h5>
+                  <h5 className={styles.callToAction}>{callToAction}</h5>
+                </div>
+              </div>
+            </a>
+          :
             <div className={styles.eventTextWrapper}>
               <div className={styles.eventText}>
                 <h2 className={styles.title}>{title}</h2>
@@ -39,7 +49,7 @@ function EventBox({ title, date, link, callToAction }) {
                 <h5 className={styles.callToAction}>{callToAction}</h5>
               </div>
             </div>
-          </a>
+          }
         </section>
       </div>
     </section>

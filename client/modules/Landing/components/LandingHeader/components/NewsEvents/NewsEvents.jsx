@@ -30,7 +30,7 @@ const EVENTS = [
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
     callToAction: 'Registration link coming soon',
-    callToActionLink: '/',
+    callToActionLink: '',
   },
   {
     id: '',
