@@ -7,6 +7,8 @@ import styles from './ScheduleBox.scss';
  * Constants
  */
 
+const defaultMessage = 'Details coming soon!';
+
 /**
  * ScheduleBox
  */
@@ -25,7 +27,7 @@ const defaultProps = {};
 function ScheduleBox({ dayTitle, dayEvents }) {
   return (
     <div className={styles.scheduleWrapper}>
-      <h3>{dayTitle}</h3>
+      {dayTitle ? <h3>{dayTitle}</h3> : <h5>{defaultMessage}</h5>}
       {dayEvents.map(({ timeRange, eventDetails }) => (
         <div className={styles.scheduleBox}>
           <div className={styles.date}>

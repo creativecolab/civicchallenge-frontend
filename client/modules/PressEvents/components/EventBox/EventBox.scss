@@ -2,7 +2,7 @@
 $content-width: 70%;
 .event-box {
   .event-wrapper {
-    margin: $event-spacing-margin*2 0;
+    margin: $subsection-padding*1.5 0;
     .eventHeader {
 
       h6 {
@@ -29,8 +29,6 @@ $content-width: 70%;
 
     width: $content-width;
 
-    // margin: $subsection-padding auto 110px auto;
-    padding: $subsection-padding 0 110px 0;
     @media (max-width: $mobile-max-width) {
       padding-bottom: 60px;
     }

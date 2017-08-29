@@ -12,6 +12,17 @@ import styles from './EventBox.scss';
  * Constants
  */
 
+/**
+ * Events list
+ * enter schedulelsit with no existing schedule in following format
+ *
+  scheduleList: [
+    {
+      dayTitle: '',
+      dayEvents: [],
+    },
+  ],
+ */
 const EVENTS = [
   {
     eventName: 'Kickoff Event',
@@ -19,7 +30,7 @@ const EVENTS = [
     hostedBy: 'x, y, z',
     scheduleList: [
       {
-        dayTitle: 'Sept 21, Opening Cermonies',
+        dayTitle: 'Sept 21, Opening Ceremonies',
         dayEvents: [
           {
             timeRange: '11:00-11:59',
@@ -52,7 +63,7 @@ const EVENTS = [
         ],
       },
       {
-        dayTitle: 'Sept 21, Opening Cermonies',
+        dayTitle: 'Sept 21, Opening Ceremonies',
         dayEvents: [
           {
             timeRange: '11:00-11:59',
@@ -83,6 +94,17 @@ const EVENTS = [
             eventDetails: 'yes this is the event',
           },
         ],
+      },
+    ],
+  },
+  {
+    eventName: 'D4SD Challenge Judging and Prize Ceremony',
+    eventDate: 'Oct 26',
+    hostedBy: 'Design Forward at Liberty Station',
+    scheduleList: [
+      {
+        dayTitle: '',
+        dayEvents: [],
       },
     ],
   },

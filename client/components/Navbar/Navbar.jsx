@@ -42,7 +42,7 @@ const LINKS = [
     ],
   },
   {
-    href: '/press-and-events',
+    href: '/events',
     text: 'Events',
   },
   {
