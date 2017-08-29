@@ -27,14 +27,14 @@ const twitterSectionTitle = 'LATEST TWEET';
 const NULL_EVENTS = [
   {
     id: '',
-    date: 'Sept 12 • Details coming soon!',
-    title: 'D4SD Information Session',
+    date: 'Sept 22-23 • Details coming soon!',
+    title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
   },
   {
     id: '',
-    date: 'Sept 22-23 • Details coming soon!',
-    title: 'D4SD Kickoff Design Sprint & Hackathon',
+    date: 'Oct 24 • Details coming soon!',
+    title: 'D4SD Submission Deadline',
     link: '',
   },
 ];
@@ -42,7 +42,7 @@ const NULL_EVENTS = [
 const EVENTS = [
   {
     id: '',
-    date: 'Oct 26 • Liberty Station',
+    date: 'Oct 25-26 • Liberty Station',
     title: 'Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
   },
