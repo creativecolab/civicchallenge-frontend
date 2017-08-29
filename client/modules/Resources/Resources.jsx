@@ -28,6 +28,7 @@ const sectionTitle = 'Resources';
 const titleDescription = 'This page provides a wealth of resources to help you learn methods for human-centered design, find about the latest technology related to mobility, and get answers to your frequently asked questions.';
 
 const description = 'New to human-centered design? These resources can help you get started.';
+const description2 = 'If you find more news on Mobility, please join the online Slack discussion group and share!';
 
 const RESOURCE_CONTENT = [
   {
@@ -90,6 +91,7 @@ function Resources() {
         <div className={styles.sectionWrapper}>
           <LatestInMobility />
         </div>
+        <p> {description2} </p>
       </div>
       <Footer />
     </div>

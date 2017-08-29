@@ -47,6 +47,9 @@ import communityParking from '../LatestInMobility/imgs/july19communityParking.pn
 import proPilot from '../LatestInMobility/imgs/july21proPilot.png';
 import futureCars from '../LatestInMobility/imgs/may12futurecars.jpg';
 import smartParking from '../LatestInMobility/imgs/july12smartParkingUNC.png';
+import blvd from '../LatestInMobility/imgs/june27kansaselcajonblvd.png';
+import bikelanes from '../LatestInMobility/imgs/may30bikelanes.jpg';
+import zerodeaths from '../LatestInMobility/imgs/march8zerotrafficdeaths.jpg';
 
 
 let TweenLite = {};
@@ -103,7 +106,35 @@ const CHALLENGE_INFO = {
         figureCLink: '',
       },
     ],
-    resources: [],
+    resources: [
+      {
+        id: '',
+        date: 'JUNE 27',
+        source: 'San Diego Reader',
+        title: 'Should the city engineers have made safety improvements?',
+        thumbnail: blvd,
+        linkKey: 'https://www.sandiegoreader.com/news/2017/jun/27/ticker-city-engineers-changes-kansas-el-cajon-bl/#',
+        descr: 'Traffic engineers maintain that a traffic intersection that has caused a string of pedestrian deaths does not require a traffic signal or warrant improvements for safety.',
+      },
+      {
+        id: '',
+        date: 'MAY 30',
+        source: 'The San Diego Union Tribune',
+        title: 'Are bike lanes bad for business?',
+        thumbnail: bikelanes,
+        linkKey: 'http://www.sandiegouniontribune.com/news/environment/sd-me-carwars-bike-lanes-201705230-story.html',
+        descr: 'This article is a discussion of how bike lanes affect businesses, including their influence when the space needed to create bike lanes is factored in.',
+      },
+      {
+        id: '',
+        date: 'MARCH 8',
+        source: 'KPBS',
+        title: 'How will the San Diego City Council eliminate all traffic deaths by 2025?',
+        thumbnail: zerodeaths,
+        linkKey: 'http://www.kpbs.org/news/2017/jul/20/san-diego-city-council-vision-zero-traffic-safety/',
+        descr: 'The San Diego City Council heard a plan that hopes to eliminate all traffic deaths by 2025 and make travel safer for pedestrians and bicyclists.',
+      },
+    ],
   },
   improvingaccessibility: {
     challengeTitle: 'Improving Accesibility',
