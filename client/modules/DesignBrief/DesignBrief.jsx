@@ -400,7 +400,6 @@ class DesignBrief extends React.PureComponent {
     for (let i = this.overviews.length - 1; i >= 0; i -= 1) {
       if (this.resources.getBoundingClientRect().top <= 30) {
         newCurrentSection = DesignBrief.CURRENTSECTION_RESOURCES;
-        console.log('yoooo');
         break;
       }
       if (this.overviews[i].getBoundingClientRect().top <= 30) {

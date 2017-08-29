@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -66,7 +68,7 @@ const FAQ_CONTENT = [
   },
   {
     question: 'What information on my profile is visible to others?',
-    answer: 'Coming Soon'
+    answer: 'Coming Soon',
   },
   {
     question: 'How do I get Slack on my phone?',

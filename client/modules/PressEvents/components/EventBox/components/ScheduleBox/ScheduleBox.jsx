@@ -31,10 +31,10 @@ function ScheduleBox({ dayTitle, dayEvents }) {
       {dayEvents.map(({ timeRange, eventDetails }) => (
         <div className={styles.scheduleBox}>
           <div className={styles.date}>
-            <h6>{timeRange}</h6>
+            <h6 key={timeRange}>{timeRange}</h6>
           </div>
           <div className={styles.event}>
-            <p>{eventDetails}</p>
+            <p key={eventDetails}>{eventDetails}</p>
           </div>
         </div>
       ))}

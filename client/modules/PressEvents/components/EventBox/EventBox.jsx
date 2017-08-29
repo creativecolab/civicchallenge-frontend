@@ -128,7 +128,7 @@ function EventBox() {
     <div className={classNames([styles.eventBox, globalStyles.contentWrapper])}>
       <div className={styles.contentContainer}>
         {EVENTS.map(({ eventName, eventDate, hostedBy, scheduleList }) => (
-          <div className={styles.eventWrapper}>
+          <div key={eventName} className={styles.eventWrapper}>
             <div className={styles.eventHeader}>
               <h6>{eventDate}</h6>
               <h2>{eventName}</h2>

@@ -27,9 +27,11 @@ const twitterSectionTitle = 'LATEST TWEET';
 const NULL_EVENTS = [
   {
     id: '',
-    date: 'Sept 21-23 • Details coming soon!',
+    date: 'Sept 21-23 • Downtown Works',
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: '',
+    callToAction: 'Register on EventBrite',
+    callToActionLink: '/',
   },
 ];
 
@@ -39,12 +41,14 @@ const EVENTS = [
     date: 'Oct 24 • Details coming soon!',
     title: 'Challenge Submission Deadline',
     link: '/getinvolved',
+    callToAction: 'Create a team submission',
   },
   {
     id: '',
     date: 'Oct 25-26 • Liberty Station',
-    title: 'Design Forward Summit',
+    title: 'D4SD Award Ceremony, Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
+    callToAction: 'Register now',
   },
 ];
 
@@ -73,17 +77,20 @@ function NewsEvents(props) {
           <div className={styles.news}>
             <h4 className={styles.sectionTitle}>{newsSectionTitle}</h4>
             <div className={styles.newsBoxes}>
-              {NULL_EVENTS.map(({ title, date }) => (
+              {NULL_EVENTS.map(({ title, date, callToAction, callToActionLink }) => (
                 <EventBoxNull
                   title={title}
                   date={date}
+                  callToAction={callToAction}
+                  callToActionLink={callToActionLink}
                 />
               ))}
-              {EVENTS.map(({ title, date, link }) => (
+              {EVENTS.map(({ title, date, link, callToAction }) => (
                 <EventBox
                   title={title}
                   date={date}
                   link={link}
+                  callToAction={callToAction}
                 />
               ))}
             </div>

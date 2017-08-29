@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len, react/no-danger */
 
 import React from 'react';
 import PropTypes from 'prop-types';

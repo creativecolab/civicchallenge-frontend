@@ -17,6 +17,7 @@ const propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  callToAction: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -25,17 +26,20 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function EventBox({ title, date, link }) {
+function EventBox({ title, date, link, callToAction }) {
   return (
     <section className={styles.wrapper}>
       <div className={styles.boxWrapper}>
         <section className={styles.EventBox}>
-          <div className={styles.eventTextWrapper}>
-            <div className={styles.eventText}>
-              <a href={link} rel="noopener noreferrer" target="_blank"><h2 className={styles.title}>{title}</h2></a>
-              <h5 className={styles.date}>{date}</h5>
+          <a href={link} rel="noopener noreferrer" target="_blank">
+            <div className={styles.eventTextWrapper}>
+              <div className={styles.eventText}>
+                <h2 className={styles.title}>{title}</h2>
+                <h5 className={styles.date}>{date}</h5>
+                <h5 className={styles.callToAction}>{callToAction}</h5>
+              </div>
             </div>
-          </div>
+          </a>
         </section>
       </div>
     </section>

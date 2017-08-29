@@ -34,7 +34,7 @@ const defaultProps = {};
 
 function PressEvents() {
   return (
-    <section classNames={classNames([styles.pressEvents, globalStyles.contentWrapper])}>
+    <section className={classNames([styles.pressEvents, globalStyles.contentWrapper])}>
       <Helmet
         title="Press & Events"
       />
