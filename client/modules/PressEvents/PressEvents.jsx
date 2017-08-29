@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-
-import Navbar from 'components/Navbar/Navbar';
-import Footer from 'components/Footer/Footer';
-import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
+import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
+
+import Navbar from 'components/Navbar/Navbar';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+
+import EventBox from './components/EventBox/EventBox';
 
 import styles from './PressEvents.scss';
 
@@ -14,7 +17,8 @@ import styles from './PressEvents.scss';
  * Constants
  */
 
-const sectionTitle = 'Press & Events';
+const sectionTitle = 'Events';
+
 
 /**
  * PressEvents
@@ -30,19 +34,20 @@ const defaultProps = {};
 
 function PressEvents() {
   return (
-    <div className={styles.pressEvents}>
+    <section classNames={classNames([styles.pressEvents, globalStyles.contentWrapper])}>
       <Helmet
         title="Press & Events"
       />
       <Navbar />
-      <div className={globalStyles.pageWrapper}>
-        <StandardSectionBox
-          sectionTitle={sectionTitle}
-          text=""
-        />
-      </div>
+      <Header
+        backgroundImg=""
+        headerText={sectionTitle}
+        subheaderText=""
+        showButton={false}
+      />
+      <EventBox />
       <Footer />
-    </div>
+    </section>
   );
 }
 

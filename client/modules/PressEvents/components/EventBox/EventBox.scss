@@ -1,0 +1,53 @@
+@import "~styles/variables.scss";
+$content-width: 70%;
+.event-box {
+  .event-wrapper {
+    margin: $event-spacing-margin*2 0;
+    .eventHeader {
+
+      h6 {
+        margin: 0;
+        text-transform: uppercase;
+        color: $theme-color-lightgrey;
+      }
+
+      h2 {
+        margin: 5px 0;
+        color: $theme-color-blue;
+      }
+
+
+      hr {
+        border-top: 1px solid #979797;
+        margin: $event-spacing-margin 0;
+      }
+    }
+  }
+
+
+  .contentContainer {
+
+    width: $content-width;
+
+    // margin: $subsection-padding auto 110px auto;
+    padding: $subsection-padding 0 110px 0;
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 60px;
+    }
+    // position: relative;
+
+    &.post {
+      .menu {
+        .sidebar {
+          position: fixed;
+          top: $subsection-padding;
+          left: 70%;
+        }
+      }
+    }
+
+    .section-divide {
+      border-color: rgba(247, 247, 247, 0.5);
+    }
+  }
+}
