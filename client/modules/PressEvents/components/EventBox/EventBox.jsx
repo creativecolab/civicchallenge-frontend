@@ -56,7 +56,7 @@ const EVENTS = [
         dayEvents: [
           {
             timeRange: 'Oct 24 (Tue)',
-            eventDetails: 'Challenge Submissions Due',
+            eventDetails: 'Online Challenge Submissions Deadline',
           },
           {
             timeRange: 'Oct 25 (Wed)',
