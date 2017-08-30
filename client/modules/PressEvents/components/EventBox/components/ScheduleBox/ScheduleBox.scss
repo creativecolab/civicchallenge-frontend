@@ -2,16 +2,14 @@
 
 
 .schedule-wrapper {
-  margin: $event-spacing-margin*2 0;
+  margin: 0;
 
   h3 {
     margin: $event-spacing-margin 0;
   }
   .schedule-box {
     $grid-min-height: 30px;
-    width: 60%;
     height: 100%;
-
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 0;

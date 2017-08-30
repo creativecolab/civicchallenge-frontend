@@ -8,6 +8,7 @@ import globalStyles from 'main.scss';
 import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
+import events from './events.jpg';
 
 import EventBox from './components/EventBox/EventBox';
 
@@ -40,7 +41,7 @@ function PressEvents() {
       />
       <Navbar />
       <Header
-        backgroundImg=""
+        backgroundImg={events}
         headerText={sectionTitle}
         subheaderText=""
         showButton={false}

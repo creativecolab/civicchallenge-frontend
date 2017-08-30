@@ -25,73 +25,23 @@ import styles from './EventBox.scss';
  */
 const EVENTS = [
   {
-    eventName: 'Kickoff Event',
+    eventName: 'D4SD Kick-off Design Sprint and Hackathon',
     eventDate: 'Sept 21-23',
-    hostedBy: 'x, y, z',
+    hostedBy: 'SCALE SD at Downtown Works',
     scheduleList: [
       {
-        dayTitle: 'Sept 21, Opening Ceremonies',
         dayEvents: [
           {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
+            timeRange: 'Sept 21 (Thu)',
+            eventDetails: 'Kick off (Meet the Mayor & learn about the mobility challenges)',
           },
           {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
+            timeRange: 'Sept 22 (Fri)',
+            eventDetails: 'Design Sprint (Brainstorm ideas, form teams, & start prototyping solutions)',
           },
           {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-        ],
-      },
-      {
-        dayTitle: 'Sept 21, Opening Ceremonies',
-        dayEvents: [
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
-          },
-          {
-            timeRange: '11:00-11:59',
-            eventDetails: 'yes this is the event',
+            timeRange: 'Sept 23 (Sat)',
+            eventDetails: 'Hackathon (teams share prototypes and win prizes)',
           },
         ],
       },
@@ -99,12 +49,24 @@ const EVENTS = [
   },
   {
     eventName: 'D4SD Challenge Judging and Prize Ceremony',
-    eventDate: 'Oct 26',
-    hostedBy: 'Design Forward at Liberty Station',
+    eventDate: 'Oct 24-26',
+    hostedBy: 'Design Forward at Broadway Pier & Liberty Station',
     scheduleList: [
       {
-        dayTitle: '',
-        dayEvents: [],
+        dayEvents: [
+          {
+            timeRange: 'Oct 24 (Tue)',
+            eventDetails: 'Challenge Submissions Due',
+          },
+          {
+            timeRange: 'Oct 25 (Wed)',
+            eventDetails: 'Final Submissions Judged & Showcased (Broadway Pier)',
+          },
+          {
+            timeRange: 'Oct 26 (Thu)',
+            eventDetails: 'Finalists Showcased & Awards Presented (Liberty Station)',
+          },
+        ],
       },
     ],
   },
@@ -136,14 +98,11 @@ function EventBox() {
               <hr />
             </div>
             {scheduleList
-              .map(({ dayTitle, dayEvents }) => (
+              .map(({ dayEvents }) => (
                 <ScheduleBox
-                  dayTitle={dayTitle}
                   dayEvents={dayEvents}
                 />
-              ))
-              .reduce((prev, curr) =>
-                [prev, <hr className={styles.sectionDivide} />, curr])}
+              ))}
           </div>
         ))}
       </div>
