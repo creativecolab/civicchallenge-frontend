@@ -11,17 +11,24 @@ $box-dim-width: 300px;
 $box-dim-height: $box-dim-width * 1.25;
 
 .wrapper {
-  box-shadow: $theme-boxshadow;
   width: $box-dim-width;
   height: $box-dim-height;
   margin: 0 20px 20px 0;
   vertical-align: bottom;
   display: inline-block;
+  top: 0;
+
+  box-shadow: $theme-boxshadow;
   @media(max-width: $mobile-max-width) {
     margin-right: 0;
     width: 100%;
   }
 
+  &:hover {
+    transition: top 0.2s ease 0s;
+    position: relative;
+    top: -10px;
+  }
   .boxWrapper {
 
     a {
@@ -35,11 +42,7 @@ $box-dim-height: $box-dim-width * 1.25;
         .newsImg {
           padding: 0;
           margin: 0;
-          opacity: 0.8;
 
-          &:hover {
-            opacity: 1;
-          }
           img {
             width: 100%;
           }
@@ -64,9 +67,9 @@ $box-dim-height: $box-dim-width * 1.25;
               margin: 0;
               font-weight: bold;
               font-size: 1em * 0.9;
-              &:after {
+              /* &:after {
                 content:url('./newtab_icon.png');
-              }
+              } */
             }
             .descr {
               font-size: 14px;
