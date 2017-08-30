@@ -23,72 +23,75 @@ $box-dim-height: $box-dim-width * 1.25;
   }
 
   .boxWrapper {
-    height: 100%;
 
-    .NewsBox {
-      margin: 0;
-      padding: 0;
-      //background-color: #fff;
+    a {
+      text-decoration: none;
 
-      .newsImg {
-        width: auto;
-        height: auto;
-        padding: 0;
+      .NewsBox {
         margin: 0;
+        padding: 0;
         //background-color: #fff;
-        img {
-          width: 100%;
-          height:  auto;
+        
+        .newsImg {
+          padding: 0;
+          margin: 0;
+          opacity: 0.8;
+
+          &:hover {
+            opacity: 1;
+          }
+          img {
+            width: 100%;
+          }
         }
-      }
-      .newsTextWrapper {
-        //background-color: #fff;
-        margin: 0;
-        padding: 0;
-        height: auto;
-        .newsText {
-          text-align: left;
-          padding: 15px 20px 25px 20px;
-          max-width: 100%;
-          height: auto;
-          /*padding: $padding-mobile*2 $padding-mobile;*/
-          .date {
-            text-transform: uppercase;
-            color: $theme-color-medgrey;
-            padding-bottom: 10px;
-          }
-          .title {
-            padding-bottom: 5px;
-            margin: 0;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1em * 0.9;
-            span:after {
-              content:url('./newtab_icon.png');
+        .newsTextWrapper {
+          //background-color: #fff;
+          margin: 0;
+          padding: 0;
+          .newsText {
+            text-align: left;
+            padding: 15px 20px 25px 20px;
+            max-width: 100%;
+            height: auto;
+            /*padding: $padding-mobile*2 $padding-mobile;*/
+            .date {
+              text-transform: uppercase;
+              color: $theme-color-medgrey;
+              padding-bottom: 10px;
             }
-          }
-          .descr {
-            font-size: 14px;
-          }
+            .title {
+              padding-bottom: 5px;
+              margin: 0;
+              font-weight: bold;
+              font-size: 1em * 0.9;
+              &:after {
+                content:url('./newtab_icon.png');
+              }
+            }
+            .descr {
+              font-size: 14px;
+              color: $theme-color-medgrey;
+            }
 
-          .button {
-            text-align: right;
-            padding-top: 10px;
-            h4 {
-              display: inline-block;
+            .button {
+              text-align: right;
+              padding-top: 10px;
+              h4 {
+                display: inline-block;
+              }
+              img {
+                display: inline-block;
+                margin-left: 15px;
+              }
+              .blue {
+                color: $theme-color-blue;
+                text-decoration: none;
+              }
             }
-            img {
-              display: inline-block;
-              margin-left: 15px;
-            }
-            .blue {
-              color: $theme-color-blue;
-              text-decoration: none;
-            }
-          }
 
-          h3 {
-            text-transform: uppercase;
+            h3 {
+              text-transform: uppercase;
+            }
           }
         }
       }

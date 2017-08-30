@@ -107,7 +107,7 @@ div[data-reactroot] {
 
 /* current */
 
-.pageWrapper {
+.page-wrapper {
   width: $component-width-desktop;
   margin: $page-margins-d; 
 
@@ -352,15 +352,15 @@ div[data-reactroot] {
 
   a.orangeOutline {
     text-decoration: none;
-    padding: $button-padding;
+    padding: 10px 30px;
     margin: 0;
     color: $theme-color-orange;
-    font-size: $button-size;
+    font-size: $button-size*0.75;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
 
-    border: 2px solid $theme-color-orange;
+    border: 1px solid $theme-color-orange;
 
     &:hover {
       transition: color $ease-time ease $color-delay;

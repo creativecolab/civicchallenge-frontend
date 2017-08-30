@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'util/classNames';
 
 import globalStyles from 'main.scss';
 
@@ -28,21 +29,23 @@ function NewsBox({ title, date, thumbnail, linkUrl, descr, source }) {
   return (
     <section className={styles.wrapper}>
       <div className={styles.boxWrapper}>
-        <section className={styles.NewsBox}>
-          <div className={styles.newsImg}>
-            <div className={styles.blackBox} />
-            <div className={styles.thumbnailImg}>
-              <img src={thumbnail} alt={title} />
+        <a className={styles.boxLink} href={linkUrl} target="_blank" rel="noopener noreferrer">
+          <section className={styles.NewsBox}>
+            <div className={styles.newsImg}>
+              <div className={styles.blackBox} />
+              <div className={styles.thumbnailImg}>
+                <img src={thumbnail} alt={title} />
+              </div>
             </div>
-          </div>
-          <div className={styles.newsTextWrapper}>
-            <div className={styles.newsText}>
-              <h5 className={styles.date}>{date} • {source}</h5>
-              <a className={styles.title} href={linkUrl} target="_blank" rel="noopener noreferrer"><span className={globalStyles.blue}>{title}&nbsp;&nbsp;</span></a>
-              <p className={styles.descr}>{descr}</p>
+            <div className={styles.newsTextWrapper}>
+              <div className={styles.newsText}>
+                <h5 className={styles.date}>{date} • {source}</h5>
+                <span className={classNames([globalStyles.blue, styles.title])}>{title}&nbsp;&nbsp;</span>
+                <p className={styles.descr}>{descr}</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </a>
       </div>
     </section>
   );

@@ -45,11 +45,8 @@ function DBBox({ title, subtitle, thumbnail, linkUrl }) {
             <div className={styles.dbBoxText}>
               <h3 className={globalStyles.grey}>{subtitle}</h3>
               <h2>{title}</h2>
-              <div className={styles.button}>
-                <div className={globalStyles.sectionBtn}>
-                  <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
-                  {/* <a className={globalStyles.orangeOutline} href={linkUrl}>{ButtonText}</a> */}
-                </div>
+              <div className={classNames([styles.button, globalStyles.sectionBtn])}>
+                <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
               </div>
             </div>
           </div>
