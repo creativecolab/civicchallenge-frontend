@@ -8,18 +8,31 @@
     margin: $event-spacing-margin 0;
   }
   .schedule-box {
-    $grid-min-height: 30px;
+    $grid-min-height: 70px;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4.5fr;
     grid-gap: 0;
     align-items: center;
     grid-auto-rows: minmax($grid-min-height, auto);
 
+    @media (max-width: $mobile-max-width) {
+      grid-template-columns: 1fr 3fr;
+    }
+
+    padding: 0 20px;
+
     .date {
-      h6 {
+      h5 {
+                text-transform: uppercase;
         margin: 0;
-        font-weight: normal;
+
+      }
+
+      span {
+
+        font-size: 0.65em;
+        opacity: 0.7;
       }
     }
 
@@ -30,5 +43,9 @@
         margin: 0;
       }
     }
+  }
+
+  hr.between-events {
+    border-top: 1px solid #dbdbdb;
   }
 }

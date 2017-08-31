@@ -28,8 +28,9 @@ const sectionTitle = 'Resources';
 const titleDescription = 'This page provides a wealth of resources to help you learn methods for human-centered design, find about the latest technology related to mobility, and get answers to your frequently asked questions.';
 
 const description = 'New to human-centered design? These resources can help you get started.';
-const description2 = 'If you find more news on Mobility, please join the online Slack discussion group and share!';
+const description2 = 'If you find more news on Mobility, join the online Slack discussion group and share!';
 
+const slackLink = 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA';
 const RESOURCE_CONTENT = [
   {
     title: 'Civic Design course at UC San Diego',
@@ -91,7 +92,14 @@ function Resources() {
         <div className={styles.sectionWrapper}>
           <LatestInMobility />
         </div>
-        <p> {description2} </p>
+        <div className={styles.callOut}>
+          <div className={styles.callOutWrapper}>
+            <p> {description2} </p>
+            <div className={globalStyles.sectionBtn}>
+              <a className={globalStyles.whiteOutline} href={slackLink} target="_blank" rel="noopener noreferrer">share now</a>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

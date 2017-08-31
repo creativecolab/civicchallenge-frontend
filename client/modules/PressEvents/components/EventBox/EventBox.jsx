@@ -32,15 +32,18 @@ const EVENTS = [
       {
         dayEvents: [
           {
-            timeRange: 'Sept 21 (Thu)',
+            date: 'Sept 21',
+            timeRange: '10am-1pm',
             eventDetails: 'Kick off (Meet the Mayor & learn about the mobility challenges)',
           },
           {
-            timeRange: 'Sept 22 (Fri)',
+            date: 'Sept 22',
+            timeRange: '5pm-midnight',
             eventDetails: 'Design Sprint (Brainstorm ideas, form teams, & start prototyping solutions)',
           },
           {
-            timeRange: 'Sept 23 (Sat)',
+            date: 'Sept 23',
+            timeRange: '6pm-9pm',
             eventDetails: 'Hackathon (teams share prototypes and win prizes)',
           },
         ],
@@ -55,15 +58,18 @@ const EVENTS = [
       {
         dayEvents: [
           {
-            timeRange: 'Oct 24 (Tue)',
+            date: 'Oct 24',
+            timeRange: '',
             eventDetails: 'Online Challenge Submissions Deadline',
           },
           {
-            timeRange: 'Oct 25 (Wed)',
+            date: 'Oct 25',
+            timeRange: '',
             eventDetails: 'Final Submissions Judged & Showcased (Broadway Pier)',
           },
           {
-            timeRange: 'Oct 26 (Thu)',
+            date: 'Oct 26',
+            timeRange: '',
             eventDetails: 'Finalists Showcased & Awards Presented (Liberty Station)',
           },
         ],

@@ -24,16 +24,20 @@ const defaultProps = {};
 function ScheduleBox({ dayEvents }) {
   return (
     <div className={styles.scheduleWrapper}>
-      {dayEvents.map(({ timeRange, eventDetails }) => (
-        <div className={styles.scheduleBox}>
-          <div className={styles.date}>
-            <h6 key={timeRange}>{timeRange}</h6>
+      {dayEvents
+        .map(({ date, timeRange, eventDetails }) => (
+          <div className={styles.scheduleBox}>
+            <div className={styles.date}>
+              <h5 key={date}>{date}</h5>
+              <span key={timeRange}>{timeRange}</span>
+            </div>
+            <div className={styles.event}>
+              <p key={eventDetails}>{eventDetails}</p>
+            </div>
           </div>
-          <div className={styles.event}>
-            <p key={eventDetails}>{eventDetails}</p>
-          </div>
-        </div>
-      ))}
+        ))
+        .reduce((prev, curr) =>
+          [prev, <hr className={styles.betweenEvents} />, curr])}
     </div>
   );
 }

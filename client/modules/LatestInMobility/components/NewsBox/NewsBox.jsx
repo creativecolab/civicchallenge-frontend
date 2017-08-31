@@ -6,6 +6,8 @@ import globalStyles from 'main.scss';
 
 import styles from './NewsBox.scss';
 
+/** images */
+
 /**
  * NewsBox
  */
@@ -40,7 +42,7 @@ function NewsBox({ title, date, thumbnail, linkUrl, descr, source }) {
             <div className={styles.newsTextWrapper}>
               <div className={styles.newsText}>
                 <h5 className={styles.date}>{date} • {source}</h5>
-                <span className={classNames([globalStyles.blue, styles.title])}>{title}&nbsp;&nbsp;</span>
+                <span className={classNames([globalStyles.blue, styles.title])}>{title}</span>
                 <p className={styles.descr}>{descr}</p>
               </div>
             </div>
