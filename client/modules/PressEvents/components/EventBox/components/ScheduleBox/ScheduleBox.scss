@@ -42,6 +42,11 @@
         font-size: 0.7em;
         margin: 0;
       }
+
+      p.day-name {
+        font-weight: bolder;
+        color: $theme-color-medgrey;
+      }
     }
   }
 

@@ -25,19 +25,18 @@ function ScheduleBox({ dayEvents }) {
   return (
     <div className={styles.scheduleWrapper}>
       {dayEvents
-        .map(({ date, timeRange, eventDetails }) => (
+        .map(({ date, timeRange, dayName, dayDetails }) => (
           <div className={styles.scheduleBox}>
             <div className={styles.date}>
               <h5 key={date}>{date}</h5>
               <span key={timeRange}>{timeRange}</span>
             </div>
             <div className={styles.event}>
-              <p key={eventDetails}>{eventDetails}</p>
+              <p className={styles.dayName} key={dayName}>{dayName}</p>
+              <p key={dayDetails}>{dayDetails}</p>
             </div>
           </div>
-        ))
-        .reduce((prev, curr) =>
-          [prev, <hr className={styles.betweenEvents} />, curr])}
+        ))}
     </div>
   );
 }
