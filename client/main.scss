@@ -73,7 +73,10 @@ html, body {
     padding: 0;
     margin: 0; 
   }
-
+  .red {
+    color: $theme-color-red;
+  }
+  
   .orange {
     color: $theme-color-orange;
   }
@@ -334,6 +337,29 @@ div[data-reactroot] {
     padding: $button-padding;
 
     color: $theme-color-red;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-red;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-red;
+    }
+
+  }
+
+  a.salmonSmallOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0;
+    color: $theme-color-red;
+    font-size: $button-size*0.75;
+
     font-size: $button-size;
     font-weight: bold;
     text-decoration: none;

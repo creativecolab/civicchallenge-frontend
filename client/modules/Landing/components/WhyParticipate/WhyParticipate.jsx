@@ -65,7 +65,7 @@ function WhyParticipate(props) {
                 </div>
               </div>
               <div className={styles.contentText}>
-                <h2 className={globalStyles.orange}>Learn Design</h2>
+                <h2 className={globalStyles.red}>Learn Design</h2>
                 <p>
                   The D4SD <Link to="/challenges">Civic Design Challenge on Mobility</Link> provides a great opportunity to practice design on real-world problems and to get mentorship from domain experts.
                 </p>
@@ -78,7 +78,7 @@ function WhyParticipate(props) {
                 </div>
               </div>
               <div className={styles.contentText}>
-                <h2 className={globalStyles.orange}>15 Minutes of Fame</h2>
+                <h2 className={globalStyles.red}>Showcase Your Ideas</h2>
                 <p>We will showcase qualifying submissions on our website and finalists at the <a href="http://www.designforwardsd.com/the-summit/" rel="noopener noreferrer" target="_blank">Design Forward Alliance Summit on Oct 26</a>.</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ function WhyParticipate(props) {
                 </div>
               </div>
               <div className={styles.contentText}>
-                <h2 className={globalStyles.orange}>Win Prizes</h2>
+                <h2 className={globalStyles.red}>Win Prizes</h2>
                 <p>Submissions judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.</p>
               </div>
             </div>

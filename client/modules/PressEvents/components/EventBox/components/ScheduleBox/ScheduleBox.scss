@@ -8,33 +8,39 @@
   h3 {
     margin: $event-spacing-margin 0;
   }
+  @media (max-width: $mobile-max-width) {
+    padding-top: $grid-min-height*0.75;
+  }
   .schedule-box {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 4.5fr;
     grid-template-rows: $grid-min-height;
-    grid-row-gap: 100px;
     align-items: flex-end;
 
     grid-auto-rows: auto;
 
-    @media (max-width: $mobile-max-width) {
-      grid-template-columns: 1fr 3fr;
-    }
-
     padding: 0 20px;
+    @media (max-width: $mobile-max-width) { 
+      padding: 0;
+
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: $grid-min-height*1.5;
+      align-items: flex-start;
+    }
 
     .date {
 
-      h5 {
+      p {
+        font-size: 0.7;
         text-transform: uppercase;
         margin: 0;
-
+        padding: 0;
       }
 
       span {
-        font-weight: 600;
-        font-size: 0.6em;
+        color: $theme-color-lightgrey;
+        font-size: 0.7em;
       }
     }
 
@@ -53,7 +59,17 @@
   }
 
   .callout-btn {
-    padding: $grid-min-height 0 $grid-min-height/2 0;
-
+    padding: $grid-min-height*0.6 0 $grid-min-height/2 0;
+    
+    @media (max-width: $mobile-max-width) {
+      text-align: center;
+      padding: 0;
+      a {
+        padding: 10px 30px;
+        span {
+          font-size: 0.9em;
+        }
+      }
+    }
   }
 }

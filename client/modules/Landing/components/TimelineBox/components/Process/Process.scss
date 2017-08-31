@@ -97,11 +97,10 @@ $text-width-desktop: 350px;
             left: 50%;
             transform: translateX(-$radius);
             display: inline-block;
-
             svg {
               width: $circle-diameter;
               height: $circle-diameter;
-              fill: $theme-color-orange;
+              
             }
           }
         }

@@ -43,7 +43,7 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
       <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
         {scheduleButton.map(({ scheduleLink, scheduleCallout }) => (
           <a className={globalStyles.salmonOutline} href={scheduleLink}>
-            {scheduleCallout}
+            <span>{scheduleCallout}</span>
           </a>
         ))}
       </div>

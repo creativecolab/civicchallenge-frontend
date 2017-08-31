@@ -11,7 +11,7 @@ import globalStyles from 'main.scss';
 import styles from './Process.scss';
 
 import diagnose from './discover.svg';
-import ideate from './ideateOrange.svg';
+import ideate from './ideate.svg';
 import propose from './action.svg';
 import implement from './prototype.svg';
 
