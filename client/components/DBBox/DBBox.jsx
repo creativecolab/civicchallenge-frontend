@@ -46,7 +46,7 @@ function DBBox({ title, subtitle, thumbnail, linkUrl }) {
               <h3 className={globalStyles.grey}>{subtitle}</h3>
               <h2>{title}</h2>
               <div className={classNames([styles.button, globalStyles.sectionBtn])}>
-                <Link to={linkUrl} className={globalStyles.orangeOutline}>{ButtonText}</Link>
+                <Link to={linkUrl} className={globalStyles.orangeSmallOutline}>{ButtonText}</Link>
               </div>
             </div>
           </div>

@@ -52,6 +52,12 @@ const EVENTS = [
         ],
       },
     ],
+    scheduleButton: [
+      {
+        scheduleLink: '',
+        scheduleCallout: 'Register Now for the Event',
+      },
+    ],
   },
   {
     eventName: 'D4SD Challenge Judging and Prize Ceremony',
@@ -81,6 +87,12 @@ const EVENTS = [
         ],
       },
     ],
+    scheduleButton: [
+      {
+        scheduleLink: 'http://www.designforwardsd.com/',
+        scheduleCallout: 'Learn More about Design Forward',
+      },
+    ],
   },
 ];
 
@@ -101,7 +113,7 @@ function EventBox() {
   return (
     <div className={classNames([styles.eventBox, globalStyles.contentWrapper])}>
       <div className={styles.contentContainer}>
-        {EVENTS.map(({ eventName, eventDate, hostedBy, scheduleList }) => (
+        {EVENTS.map(({ eventName, eventDate, hostedBy, scheduleList, scheduleButton }) => (
           <div key={eventName} className={styles.eventWrapper}>
             <div className={styles.eventHeader}>
               <h6>{eventDate}</h6>
@@ -113,6 +125,7 @@ function EventBox() {
               .map(({ dayEvents }) => (
                 <ScheduleBox
                   dayEvents={dayEvents}
+                  scheduleButton={scheduleButton}
                 />
               ))}
           </div>

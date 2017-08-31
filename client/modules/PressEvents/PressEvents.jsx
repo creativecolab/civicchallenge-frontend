@@ -37,7 +37,7 @@ function PressEvents() {
   return (
     <section className={classNames([styles.pressEvents, globalStyles.contentWrapper])}>
       <Helmet
-        title="Press & Events"
+        title="Events"
       />
       <Navbar />
       <Header

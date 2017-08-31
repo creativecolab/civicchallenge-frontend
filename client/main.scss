@@ -352,6 +352,27 @@ div[data-reactroot] {
 
   a.orangeOutline {
     text-decoration: none;
+    padding: $button-padding;
+    margin: 0;
+    color: $theme-color-orange;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-orange;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-orange;
+    }
+
+  }
+
+  a.orangeSmallOutline {
+    text-decoration: none;
     padding: 10px 30px;
     margin: 0;
     color: $theme-color-orange;
@@ -360,7 +381,7 @@ div[data-reactroot] {
     text-decoration: none;
     text-transform: uppercase;
 
-    border: 1px solid $theme-color-orange;
+    border: 2px solid $theme-color-orange;
 
     &:hover {
       transition: color $ease-time ease $color-delay;
