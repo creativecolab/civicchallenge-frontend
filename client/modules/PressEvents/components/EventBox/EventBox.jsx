@@ -70,7 +70,7 @@ const EVENTS = [
             date: 'Oct 24',
             timeRange: '5pm',
             dayName: 'Design Challenge Deadline',
-            dayDetails: 'All entries must be submitted on <a href="d4sd.org">d4sd.org</a>',
+            dayDetails: 'All entries must be submitted on <a href="https://d4sd.org">d4sd.org</a>',
           },
           {
             date: 'Oct 25',
