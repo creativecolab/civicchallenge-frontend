@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'util/classNames';
@@ -36,7 +37,11 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
             </div>
             <div className={styles.event}>
               <p className={styles.dayName} key={dayName}>{dayName}</p>
-              <p key={dayDetails}>{dayDetails}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: dayDetails,
+                }}
+              />
             </div>
           </div>
         ))}

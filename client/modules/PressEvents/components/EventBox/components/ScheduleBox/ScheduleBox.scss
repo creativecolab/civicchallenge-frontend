@@ -55,6 +55,12 @@
         font-weight: bolder;
         color: $theme-color-medgrey;
       }
+
+      a {
+        text-decoration: none;
+        color: $theme-color-blue;
+        font-weight: 500;   
+      }
     }
   }
 
