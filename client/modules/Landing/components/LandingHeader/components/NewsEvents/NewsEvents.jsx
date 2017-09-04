@@ -30,6 +30,8 @@ const EVENTS = [
     title: 'D4SD Kickoff Design Sprint & Hackathon',
     link: 'https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393',
     callToAction: 'Register Now',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
   {
     id: '',
@@ -37,6 +39,8 @@ const EVENTS = [
     title: 'Challenge Submission Deadline',
     link: '/getinvolved',
     callToAction: 'Create a team submission',
+    target: '',
+    rel: '',
   },
   {
     id: '',
@@ -44,6 +48,8 @@ const EVENTS = [
     title: 'D4SD Award Ceremony, Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
     callToAction: 'Register Now',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
 ];
 
@@ -72,12 +78,14 @@ function NewsEvents(props) {
           <div className={styles.news}>
             <h4 className={styles.sectionTitle}>{newsSectionTitle}</h4>
             <div className={styles.newsBoxes}>
-              {EVENTS.map(({ title, date, link, callToAction }) => (
+              {EVENTS.map(({ title, date, link, callToAction, target, rel }) => (
                 <EventBox
                   title={title}
                   date={date}
                   link={link}
                   callToAction={callToAction}
+                  target={target}
+                  rel={rel}
                 />
               ))}
             </div>
