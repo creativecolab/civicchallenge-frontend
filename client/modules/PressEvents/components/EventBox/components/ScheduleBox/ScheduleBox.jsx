@@ -38,12 +38,13 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
             <div className={styles.event}>
               <p className={styles.dayName} key={dayName}>{dayName}</p>
               <p
+                className={styles.eventDetails}
                 dangerouslySetInnerHTML={{
                   __html: dayDetails,
                 }}
               />
+              {buttonTitle && <div className={globalStyles.sectionBtn}><a className={classNames([globalStyles.salmonSmallOutline, styles.eventButton])} href={buttonLink}>{buttonTitle}</a></div>}
             </div>
-            {buttonTitle && <div className={globalStyles.sectionBtn}><a className={globalStyles.salmonSmallOutline} href={buttonLink}>{buttonTitle}</a></div>}
           </div>
         ))}
       <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>

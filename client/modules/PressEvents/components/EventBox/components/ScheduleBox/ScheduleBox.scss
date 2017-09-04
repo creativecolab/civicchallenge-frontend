@@ -2,7 +2,7 @@
 
 
 .schedule-wrapper {
-  $grid-min-height: 70px;
+  $grid-min-height: 60px;
   margin: 0;
 
   h3 {
@@ -14,10 +14,11 @@
   .schedule-box {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4.5fr 1fr;
-    grid-template-rows: $grid-min-height;
-    align-items: flex-end;
+    grid-template-columns: 1fr 4.5fr;
+    grid-template-rows: minmax($grid-min-height, auto);
+    align-items: flex-start;
 
+    grid-row-gap: 30px;
     grid-auto-rows: auto;
 
     padding: 0 20px;
@@ -55,11 +56,17 @@
         font-weight: bolder;
         color: $theme-color-medgrey;
       }
+      
+      .event-details {
+        a {
+          text-decoration: none;
+          color: $theme-color-blue;
+          font-weight: 500;   
+        }
+      }
 
-      a {
-        text-decoration: none;
-        color: $theme-color-blue;
-        font-weight: 500;   
+      a.event-button {
+        margin: 50px 0;
       }
     }
   }
