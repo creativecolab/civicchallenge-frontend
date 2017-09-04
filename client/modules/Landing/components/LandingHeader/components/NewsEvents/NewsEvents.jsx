@@ -28,9 +28,8 @@ const EVENTS = [
     id: '',
     date: 'Sept 21-23 • Downtown Works',
     title: 'D4SD Kickoff Design Sprint & Hackathon',
-    link: '',
-    callToAction: 'Registration link coming soon',
-    callToActionLink: '',
+    link: 'https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393',
+    callToAction: 'Register Now',
   },
   {
     id: '',
@@ -44,7 +43,7 @@ const EVENTS = [
     date: 'Oct 25-26 • Liberty Station',
     title: 'D4SD Award Ceremony, Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
-    callToAction: 'Register now',
+    callToAction: 'Register Now',
   },
 ];
 
