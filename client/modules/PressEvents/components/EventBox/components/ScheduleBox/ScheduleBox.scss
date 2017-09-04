@@ -14,7 +14,7 @@
   .schedule-box {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4.5fr;
+    grid-template-columns: 1fr 4.5fr 1fr;
     grid-template-rows: $grid-min-height;
     align-items: flex-end;
 

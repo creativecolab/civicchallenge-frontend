@@ -29,7 +29,7 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
   return (
     <div className={styles.scheduleWrapper}>
       {dayEvents
-        .map(({ date, timeRange, dayName, dayDetails }) => (
+        .map(({ date, timeRange, dayName, dayDetails, buttonTitle, buttonLink }) => (
           <div className={styles.scheduleBox}>
             <div className={styles.date}>
               <h5 key={date}>{date}</h5>
@@ -43,14 +43,13 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
                 }}
               />
             </div>
+            {buttonTitle && <div className={globalStyles.sectionBtn}><a className={globalStyles.salmonSmallOutline} href={buttonLink}>{buttonTitle}</a></div>}
           </div>
         ))}
       <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
-        {scheduleButton.map(({ scheduleLink, scheduleCallout }) => (
-          <a className={globalStyles.salmonOutline} href={scheduleLink}>
-            <span>{scheduleCallout}</span>
-          </a>
-        ))}
+        {scheduleButton.map(({ scheduleLink, scheduleCallout }) =>
+          scheduleCallout && <a className={globalStyles.salmonOutline} href={scheduleLink}><span>{scheduleCallout}</span></a>
+        )}
       </div>
     </div>
   );
