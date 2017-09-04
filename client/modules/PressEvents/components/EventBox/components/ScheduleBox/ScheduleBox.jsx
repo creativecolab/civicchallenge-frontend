@@ -43,15 +43,17 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
                   __html: dayDetails,
                 }}
               />
-              {buttonTitle && <div className={globalStyles.sectionBtn}><a className={classNames([globalStyles.salmonSmallOutline, styles.eventButton])} href={buttonLink}>{buttonTitle}</a></div>}
+              {buttonTitle && <div className={classNames([globalStyles.sectionBtn, styles.eventButton])}><a className={classNames([globalStyles.salmonSmallOutline])} href={buttonLink}>{buttonTitle}</a></div>}
             </div>
           </div>
         ))}
-      <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
-        {scheduleButton.map(({ scheduleLink, scheduleCallout }) =>
-          scheduleCallout && <a className={globalStyles.salmonOutline} href={scheduleLink}><span>{scheduleCallout}</span></a>
-        )}
-      </div>
+      {scheduleButton &&
+        <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
+          {scheduleButton.map(({ scheduleLink, scheduleCallout }) =>
+            <a className={globalStyles.salmonOutline} href={scheduleLink}><span>{scheduleCallout}</span></a>
+          )}
+        </div>
+      }
     </div>
   );
 }

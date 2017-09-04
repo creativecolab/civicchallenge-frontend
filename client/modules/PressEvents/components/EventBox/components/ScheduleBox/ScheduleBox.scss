@@ -18,15 +18,14 @@
     grid-template-rows: minmax($grid-min-height, auto);
     align-items: flex-start;
 
-    grid-row-gap: 30px;
-    grid-auto-rows: auto;
+    grid-row-gap: 10px;
 
     padding: 0 20px;
     @media (max-width: $mobile-max-width) { 
       padding: 0;
 
       grid-template-columns: 1fr 3fr;
-      grid-template-rows: $grid-min-height*1.5;
+      grid-template-rows: minmax($grid-min-height*1.5, auto);
       align-items: flex-start;
     }
 
@@ -65,14 +64,22 @@
         }
       }
 
-      a.event-button {
-        margin: 50px 0;
+      .event-button {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        
+        @media(max-width: $mobile-max-width) {
+          font-size: 0.5em;
+          a {
+            padding: 10px 15px;
+          }
+        }
       }
     }
   }
 
   .callout-btn {
-    padding: $grid-min-height*0.6 0 $grid-min-height/2 0;
+    padding: $grid-min-height*0.8 0 $grid-min-height/2 0;
     
     @media (max-width: $mobile-max-width) {
       text-align: center;
@@ -80,7 +87,7 @@
       a {
         padding: 10px 30px;
         span {
-          font-size: 0.9em;
+          font-size: 0.7em;
         }
       }
     }

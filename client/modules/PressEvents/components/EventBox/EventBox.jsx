@@ -41,7 +41,7 @@ const EVENTS = [
           },
           {
             date: 'Sept 22',
-            timeRange: '5pm-midnight',
+            timeRange: '5pm-all night',
             dayName: 'Design Sprint & Hackathon - Day 1',
             dayDetails: 'Learn about the challenges, brainstorm, form teams, & build prototypes',
             buttonTitle: '',
@@ -49,7 +49,7 @@ const EVENTS = [
           },
           {
             date: 'Sept 23',
-            timeRange: '6pm-9pm',
+            timeRange: 'all day-9pm',
             dayName: 'Design Sprint & Hackathon - Day 2',
             dayDetails: 'Present Prototypes, Win Prizes & Party',
             buttonTitle: 'Register for the Design Sprint and Hackathon',
@@ -58,12 +58,7 @@ const EVENTS = [
         ],
       },
     ],
-    scheduleButton: [
-      {
-        scheduleLink: '',
-        scheduleCallout: '',
-      },
-    ],
+    scheduleButton: '',
   },
   {
     eventName: 'D4SD Challenge Judging and Prize Ceremony',
