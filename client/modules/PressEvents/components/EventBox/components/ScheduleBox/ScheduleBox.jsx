@@ -43,7 +43,7 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
                   __html: dayDetails,
                 }}
               />
-              {buttonTitle && <div className={classNames([globalStyles.sectionBtn, styles.eventButton])}><a className={classNames([globalStyles.salmonSmallOutline])} href={buttonLink}>{buttonTitle}</a></div>}
+              {buttonTitle && <div className={classNames([globalStyles.sectionBtn, styles.eventButton])}><a className={classNames([globalStyles.salmonSmallOutline])} href={buttonLink} target="_blank" rel="noreferrer noopener">{buttonTitle}</a></div>}
             </div>
           </div>
         ))}
