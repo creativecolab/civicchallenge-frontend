@@ -67,9 +67,10 @@
       .event-button {
         margin-top: 20px;
         margin-bottom: 30px;
-        
+        font-size: 0.8em;
+        font-weight: bold;
         @media(max-width: $mobile-max-width) {
-          font-size: 0.5em;
+          font-size: 0.45em;
           a {
             padding: 10px 15px;
           }
