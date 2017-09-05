@@ -88,18 +88,13 @@ const EVENTS = [
             timeRange: '9am-9pm',
             dayName: 'Finalist Showcase and Awards Ceremony',
             dayDetails: 'Finalists posters and award ceremony at Design Forward Summit (Liberty Station)',
-            buttonTitle: '',
-            buttonLink: '',
+            buttonTitle: 'Learn More about Design Forward',
+            buttonLink: 'http://www.designforwardsd.com/',
           },
         ],
       },
     ],
-    scheduleButton: [
-      {
-        scheduleLink: 'http://www.designforwardsd.com/',
-        scheduleCallout: 'Learn More about Design Forward',
-      },
-    ],
+    scheduleButton: '',
   },
 ];
 
