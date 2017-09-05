@@ -27,7 +27,7 @@ const EVENTS = [
   {
     id: '',
     date: 'Sept 21-23 • Downtown Works',
-    title: 'D4SD Kickoff Design Sprint & Hackathon',
+    title: 'D4SD Kickoff Event with Mayor Faulconer',
     link: 'https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393',
     callToAction: 'Register Now',
     target: '_blank',
