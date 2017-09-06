@@ -89,12 +89,6 @@ function ChallengeBriefs(props) {
             ))}
           </div>
         </div>
-        {/* <div className={styles.challengeRow}>
-          <div className={styles.textWrapper}>
-            <h1>{sectionTitle}</h1>
-            <p>{description}</p>
-          </div>
-        </div> */}
       </div>
     </section>
   );

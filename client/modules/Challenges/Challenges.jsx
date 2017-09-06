@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
@@ -11,7 +11,6 @@ import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox
 import globalStyles from 'main.scss';
 
 import DBBox from 'components/DBBox/DBBox';
-import Categories from './components/Categories/Categories';
 
 import styles from './Challenges.scss';
 
@@ -23,8 +22,6 @@ import walking from './biking.png';
 /**
  * Challenges
  */
-
-/* const dummyLink = ''; */
 
 const INFO = [
   {
@@ -73,52 +70,34 @@ const contextTypes = {
 
 const defaultProps = {};
 
-class Challenges extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { categories: [] };
-  }
-
-  componentDidMount() {
-    fetch('https://d4sd-api.ucsd.edu/categories?challenges=1&questions=1')
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        this.setState({ categories: data.categories });
-      });
-  }
-
-  render() {
-    return (
-      <section className={styles.challenges}>
-        <Helmet
-          title="Challenges"
-        />
-        <Header />
-        <div className={globalStyles.pageWrapper}>
-          {INFO.map(({ sectionTitle, text }) => (
-            <StandardSectionBox
-              sectionTitle={sectionTitle}
-              text={text}
+function Challenges() {
+  return (
+    <section className={styles.challenges}>
+      <Helmet
+        title="Challenges"
+      />
+      <Header />
+      <div className={globalStyles.pageWrapper}>
+        {INFO.map(({ sectionTitle, text }) => (
+          <StandardSectionBox
+            sectionTitle={sectionTitle}
+            text={text}
+          />
+        ))}
+        <div className={globalStyles.gridStyle}>
+          {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail, linkKey }) => (
+            <DBBox
+              title={title}
+              subtitle={subtitle}
+              thumbnail={thumbnail}
+              linkUrl={`/challenges/${linkKey}`}
             />
           ))}
-          <div className={globalStyles.gridStyle}>
-            {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail, linkKey }) => (
-              <DBBox
-                title={title}
-                subtitle={subtitle}
-                thumbnail={thumbnail}
-                linkUrl={`/challenges/${linkKey}`}
-              />
-            ))}
-          </div>
         </div>
-        <Categories categories={this.state.categories} />
-        <Footer />
-      </section>
-    );
-  }
+      </div>
+      <Footer />
+    </section>
+  );
 }
 
 Challenges.propTypes = propTypes;
