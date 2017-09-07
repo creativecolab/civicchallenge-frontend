@@ -20,7 +20,7 @@ function Placeholder() {
   return (
     <div className={styles.placeholder}>
       <Navbar />
-      <p>This is the placeholder page</p>
+      <p>This is the aa placeholder page</p>
     </div>
   );
 }

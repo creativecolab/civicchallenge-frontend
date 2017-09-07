@@ -59,7 +59,7 @@ const BOX_TEXT = [
     title: 'Sign up for the Newsletter',
     text: 'Fill out this simple online form with your Name and email address so we can keep you in the loop about the D4SD Mobility Challenges.',
     buttonText: 'Sign up for emails',
-    linkUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe-DzyjLGgLHdXkc8Fj7yGJrxm-PJ2Gr_LABKGeQDH699O6Hw/viewform',
+    linkUrl: 'http://eepurl.com/c2kFon',
     rel: 'noopener noreferrer',
     target: '_blank',
     icon: mail,
