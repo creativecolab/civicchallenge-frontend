@@ -180,9 +180,19 @@ class Navbar extends React.PureComponent {
     });
   }
 
+  _setZIndex = () => {
+    const { mobileNavbarOpen } = this.state;
+    if (!mobileNavbarOpen) {
+      return -10;
+    }
+
+    return 11;
+  }
+
   render() {
     // const { backgroundImg, headerText, subheaderText, showButton } = this.props;
     const { router } = this.context;
+    const navZ = { zIndex: this._setZIndex() };
 
     return (
       <header className={styles.navbar}>
@@ -192,7 +202,7 @@ class Navbar extends React.PureComponent {
           </div>
           <nav className={styles.navbarInner} ref={(el) => { this.navbar = el; }}>
             {LINKS.map(({ href, text, dropDown }, i) => (
-              <div key={text} className={styles.navbarLinkContainer} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
+              <div key={text} className={styles.navbarLinkContainer} style={navZ} ref={(el) => { this.navbarItems = this.navbarItems || []; this.navbarItems[i] = el; }}>
                 <Link key={text} to={href} className={(href === router.location.pathname) ? styles.active : ''}><p>{text}</p></Link>
                 {dropDown &&
                   <button

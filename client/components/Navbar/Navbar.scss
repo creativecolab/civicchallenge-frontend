@@ -14,9 +14,9 @@ $font-color: #fff;
   width: 100%;
 
   color: $font-color;
-
-  z-index: 9999;
-
+  @media(min-width: $mobile-max-width) {
+    z-index: 10;
+  }
   .navbar-container {
     height: $navbar-height;
     //border-bottom: 1px solid rgba(255, 255, 255, 0.5); // TEMP
@@ -82,10 +82,14 @@ $font-color: #fff;
       }
 
       .navbar-link-container {
+
         & > a {
           margin: 0 5px;
 
           background-color: transparent;
+          @media(min-width: $mobile-max-width) {
+            z-index: 10;
+          }
         }
       }
 

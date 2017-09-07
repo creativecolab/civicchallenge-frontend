@@ -40,7 +40,6 @@ class QuestionBox extends React.PureComponent {
   }
 
   toggleContent = () => {
-    console.log('hi');
     this.setState({
       open: !(this.state.open),
     });
