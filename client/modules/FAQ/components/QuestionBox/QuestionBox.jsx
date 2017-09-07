@@ -23,21 +23,6 @@ const contextTypes = {
 const defaultProps = {};
 
 class QuestionBox extends React.PureComponent {
-  /* _componentDidMount() {
-    const acc = document.getElementsByClassName("accordion");
-    const i;
-    for (i = 0; i < acc.length; i++) {
-      acc[i].onclick = function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      }
-    }
-  }; */
 
   constructor(props) {
     super(props);

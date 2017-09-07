@@ -46,6 +46,10 @@ const LINKS = [
     text: 'Events',
   },
   {
+    href: '/faqs',
+    text: 'FAQ',
+  },
+  {
     href: '/resources',
     text: 'Resources',
   },
