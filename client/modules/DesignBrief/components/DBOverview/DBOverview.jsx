@@ -45,7 +45,11 @@ function dbHeader({ title, text, figureA, figureALink }) {
           <div className={styles.fB}>
             <img src={figureA} alt={figureALink} />
           </div>
-          {text}
+          <span
+            dangerouslySetInnerHTML={{
+              __html: text,
+            }}
+          />
           {/* <div className={styles.fC} />
           <img src={figureB} href={figureBLink}</div> */}
         </p>
