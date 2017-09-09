@@ -27,6 +27,7 @@ const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require
 const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
 const getGetInvolved = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/GetInvolved/GetInvolved').default), 'getinvolved');
 const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PressEvents/PressEvents').default), 'events');
+const getCodeOfConduct = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/CodeOfConduct/CodeOfConduct').default), 'codeofconduct');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
 
@@ -51,6 +52,7 @@ export default (
     <Route path="/designbrief" getComponent={getDesignBrief} />
     <Route path="/getinvolved" getComponent={getGetInvolved} />
     <Route path="/events" getComponent={getEvents} />
+    <Route path="/codeofconduct" getComponent={getCodeOfConduct} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );

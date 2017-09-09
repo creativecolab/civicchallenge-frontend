@@ -16,14 +16,16 @@ import styles from './ScheduleBox.scss';
 
 const propTypes = {
   dayEvents: PropTypes.array.isRequired,
-  scheduleButton: PropTypes.array.isRequired,
+  scheduleButton: PropTypes.array,
 };
 
 const contextTypes = {
   router: PropTypes.object,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  scheduleButton: '',
+};
 
 function ScheduleBox({ dayEvents, scheduleButton }) {
   return (
@@ -43,14 +45,21 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
                   __html: dayDetails,
                 }}
               />
-              {buttonTitle && <div className={classNames([globalStyles.sectionBtn, styles.eventButton])}><a className={classNames([globalStyles.salmonSmallOutline])} href={buttonLink} target="_blank" rel="noreferrer noopener">{buttonTitle}</a></div>}
+              {buttonTitle &&
+                <div className={classNames([globalStyles.sectionBtn, styles.eventButton])}>
+                  <a className={classNames([globalStyles.salmonSmallOutline])} href={buttonLink} target="_blank" rel="noreferrer noopener">
+                    {buttonTitle}
+                  </a>
+                </div>}
             </div>
           </div>
         ))}
       {scheduleButton &&
         <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
           {scheduleButton.map(({ scheduleLink, scheduleCallout }) =>
-            <a className={globalStyles.salmonOutline} href={scheduleLink}><span>{scheduleCallout}</span></a>
+            <a className={globalStyles.salmonOutline} href={scheduleLink}>
+              <span>{scheduleCallout}</span>
+            </a>
           )}
         </div>
       }

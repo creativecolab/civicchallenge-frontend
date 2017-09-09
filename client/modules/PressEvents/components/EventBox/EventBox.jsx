@@ -58,7 +58,6 @@ const EVENTS = [
         ],
       },
     ],
-    scheduleButton: '',
   },
   {
     eventName: 'D4SD Challenge Judging and Prize Ceremony',
@@ -94,7 +93,6 @@ const EVENTS = [
         ],
       },
     ],
-    scheduleButton: '',
   },
 ];
 

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import Navbar from 'components/Navbar/Navbar';
+import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
 import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox';
@@ -13,6 +14,8 @@ import globalStyles from 'main.scss';
 import QuestionBox from './components/QuestionBox/QuestionBox';
 import styles from './FAQ.scss';
 
+
+import headerImg from './headerImg.jpg';
 /**
  * FAQ
  */
@@ -90,7 +93,12 @@ function FAQ() {
         title="FAQ"
       />
       <Navbar />
-
+      <Header
+        backgroundImg={headerImg}
+        headerText={sectionTitle}
+        subheaderText={description}
+        showButton={false}
+      />
       <div className={globalStyles.pageWrapper}>
         <StandardSectionBox
           sectionTitle={sectionTitle}

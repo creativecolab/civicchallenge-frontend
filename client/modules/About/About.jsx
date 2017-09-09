@@ -24,9 +24,7 @@ import sdLogo from './city-of-sd-logo.png';
 const ABOUT = [
   {
     sectionTitle: 'About D4SD',
-    text: [
-      'Design for San Diego (D4SD) is a combined effort to solve complex city problems through design thinking and crowdsourcing, led by the <a href="http://designlab.ucsd.edu/" rel="noopener noreferrer" target="_blank">UC San Diego Design Lab</a>—with support from the <a href="https://www.nsf.gov/" rel="noopener noreferrer" target="_blank">National Science Foundation</a>, <a href="http://www.designforwardsd.com/" rel="noopener noreferrer" target="_blank">Design Forward Alliance</a> and <a href="http://www.scalesd.com/" rel="noopener noreferrer" target="_blank">SCALE SD</a>. The D4SD processes for discovery, ideation, prototyping and for implementing solutions through structured feedback was inspired by human-centered design research and crowdsourcing systems. Through this open civics approach, we hope to create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.',
-    ],
+    text: 'Design for San Diego (D4SD) is a combined effort to solve complex city problems through design thinking and crowdsourcing, led by the <a href="http://designlab.ucsd.edu/" rel="noopener noreferrer" target="_blank">UC San Diego Design Lab</a>—with support from the <a href="https://www.nsf.gov/" rel="noopener noreferrer" target="_blank">National Science Foundation</a>, <a href="http://www.designforwardsd.com/" rel="noopener noreferrer" target="_blank">Design Forward Alliance</a> and <a href="http://www.scalesd.com/" rel="noopener noreferrer" target="_blank">SCALE SD</a>. The D4SD processes for discovery, ideation, prototyping and for implementing solutions through structured feedback was inspired by human-centered design research and crowdsourcing systems. Through this open civics approach, we hope to create opportunities for government, academia, and industry to collaboratively design innovative civic solutions.',
   },
 ];
 

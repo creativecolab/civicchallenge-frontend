@@ -183,7 +183,6 @@ class Navbar extends React.PureComponent {
   _setZIndex = () => {
     const { mobileNavbarOpen } = this.state;
     if (!mobileNavbarOpen) {
-      console.log('hi');
       return styles.navbarMobileZClosed;
     }
     return styles.navbarMobileZOpen;
