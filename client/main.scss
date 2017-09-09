@@ -25,6 +25,12 @@ html, body {
   text-align: left;
   color: $theme-color-black;
 
+  a {
+    text-decoration: none;
+    color: $theme-color-blue;
+    font-weight: 500;
+  }
+
   p, span {
     font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
   }
@@ -181,12 +187,10 @@ div[data-reactroot] {
   width: 100%;
 }
 
-.paragraphLink{
-  a {
-    text-decoration: none;
-    color: $theme-color-blue;
-    font-weight: 500;
-  }
+.styled-link {
+  text-decoration: none;
+  color: $theme-color-blue;
+  font-weight: 500; 
 }
 
 @media(max-width: $mobile-max-width) {

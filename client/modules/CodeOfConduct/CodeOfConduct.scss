@@ -1,3 +1,4 @@
+@import '~styles/variables';
 
 .code-of-conduct {
   height: 100%;
@@ -5,10 +6,7 @@
 
   overflow-x: hidden;
 
-  .content {
-    width: 70%;
-    margin: 0 auto;
-    padding-bottom: 40px;
+  .details {
+    margin: $spacing-margin 0;
   }
-
 }

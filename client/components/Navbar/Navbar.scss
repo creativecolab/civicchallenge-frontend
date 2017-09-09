@@ -79,6 +79,7 @@ $font-color: #fff;
         font-size: $navbar-font-size;
         font-weight: 100;
         color: $nav-font-color;
+        z-index: -1;
       }
 
       .navbar-link-container {
