@@ -87,9 +87,17 @@ $font-color: #fff;
           margin: 0 5px;
 
           background-color: transparent;
-          @media(min-width: $mobile-max-width) {
-            z-index: 10;
-          }
+        }
+      }
+
+      .navbar-mobile-z-open {
+        z-index: 11;
+      }
+
+      .navbar-mobile-z-closed {
+        z-index: -10;
+        @media(min-width: $mobile-max-width) {
+          z-index: 10;
         }
       }
 
