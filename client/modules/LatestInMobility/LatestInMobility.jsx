@@ -22,6 +22,7 @@ import smartParking from './imgs/july12smartParkingUNC.png';
 import blvd from './imgs/june27kansaselcajonblvd.png';
 import bikelanes from './imgs/may30bikelanes.jpg';
 import zerodeaths from './imgs/march8zerotrafficdeaths.jpg';
+import ford from './imgs/jan6ford.jpg';
 /**
  * Constants
  */
@@ -90,6 +91,15 @@ const NEWS_ARTICLES = [
     thumbnail: lobbying,
     linkKey: 'https://www.theverge.com/2017/7/19/15998356/self-driving-car-congress-legislation-lobbying-safety',
     descr: 'Multiple auto companies are lobbying for the ability to circumnavigate certain road safety standards. And it’s working, Congress is set to fast-track several bills that will lift regulations for testing.',
+  },
+  {
+    id: '',
+    date: 'JAN 6',
+    source: 'Wired',
+    title: 'Ford\'s future is filled with self-driving cars and drones',
+    thumbnail: ford,
+    linkKey: 'https://www.wired.com/2016/01/fords-future-is-filled-with-self-driving-cars-and-drones/',
+    descr: 'How is Ford integrating technological breakthroughs like self-driving cars and drones to become an auto and \'mobility\' company?',
   },
   {
     id: '',
