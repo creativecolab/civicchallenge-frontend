@@ -183,16 +183,16 @@ class Navbar extends React.PureComponent {
   _setZIndex = () => {
     const { mobileNavbarOpen } = this.state;
     if (!mobileNavbarOpen) {
-      return 'styles.navbarMobileZClosed';
+      console.log('hi');
+      return styles.navbarMobileZClosed;
     }
-
-    return 'styles.navbarMobileZOpen';
+    return styles.navbarMobileZOpen;
   }
 
   render() {
     // const { backgroundImg, headerText, subheaderText, showButton } = this.props;
     const { router } = this.context;
-    const navZ = { zIndex: this._setZIndex() };
+    const navZ = this._setZIndex();
 
     return (
       <header className={styles.navbar}>
