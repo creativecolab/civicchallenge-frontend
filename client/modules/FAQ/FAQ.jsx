@@ -8,7 +8,7 @@ import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
-import globalStyles from 'main.scss';
+// import globalStyles from 'main.scss';
 
 import QuestionBox from './components/QuestionBox/QuestionBox';
 import styles from './FAQ.scss';
@@ -83,7 +83,7 @@ const FAQ_CONTENT = [
   },
 ];
 
-const sectionTitle = 'FAQs';
+const sectionTitle = 'Frequently Asked Questions';
 const description = '';
 
 const propTypes = {};
@@ -107,7 +107,8 @@ function FAQ() {
         subheaderText={description}
         showButton={false}
       />
-      <div className={globalStyles.pageWrapper}>
+      {/* <div className={globalStyles.pageWrapper}> */}
+      <div className={styles.pageWrapper}>
         {FAQ_CONTENT.map(({ question, answer }) => (
           <QuestionBox
             key={question}
