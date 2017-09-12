@@ -29,7 +29,7 @@ const defaultProps = {};
 
 function Header({ backgroundImg, headerText, subheaderText }) {
   return (
-    <Parallax strength={400}>
+    <Parallax strength={400} className={styles.setZIndex}>
       <Background>
         <img className={styles.headerImage} src={backgroundImg} alt="header" />
         <div
