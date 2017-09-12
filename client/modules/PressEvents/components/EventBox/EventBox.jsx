@@ -36,7 +36,7 @@ const EVENTS = [
             timeRange: '10am-1pm',
             dayName: 'Kick-Off & Information Session',
             dayDetails: 'Introduction by Mayor Faulconer, Chancellor Khosla & Don Norman',
-            buttonTitle: 'Register for the Kickoff and Information Session on Sept 21',
+            buttonTitle: 'Register for the Kickoff and Information Session',
             buttonLink: 'https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393',
           },
           {
@@ -52,7 +52,7 @@ const EVENTS = [
             timeRange: 'all day-9pm',
             dayName: 'D4SD Challenge: Design Sprint & Hackathon - Day 2',
             dayDetails: 'Present prototypes, win prizes & party',
-            buttonTitle: 'Register for the 2017 D4SD Civic Design Challenge on Sept 22-23',
+            buttonTitle: 'Register for the 2017 D4SD Civic Design Challenge',
             buttonLink: 'https://www.eventbrite.com/e/design-sprint-and-hackathon-for-the-2017-d4sd-civic-design-challenge-tickets-37553137445',
           },
         ],

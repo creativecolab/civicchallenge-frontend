@@ -40,9 +40,10 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-  
+
 .QuestionBox {
   width: 100%;
+  position: relative;
   .content {
     width: 100%;
     padding-top: 20px;

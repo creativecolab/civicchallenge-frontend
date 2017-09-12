@@ -47,7 +47,7 @@ const LINKS = [
   },
   {
     href: '/faqs',
-    text: 'FAQ',
+    text: 'FAQs',
   },
   {
     href: '/resources',
