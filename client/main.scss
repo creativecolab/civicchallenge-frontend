@@ -16,7 +16,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  
+
 
   -webkit-overflow-scrolling: touch;
   position: relative;
@@ -39,7 +39,7 @@ html, body {
     font-size: 2em; /* 36pt */
     font-weight: 300;
     padding: 0;
-    margin: 0; 
+    margin: 0;
     @media (max-width: $mobile-max-width) {
       font-size: 1.5em;
     }
@@ -48,7 +48,7 @@ html, body {
   h2 {
     font-size: 1.3em; /* 24pt */
     padding: 0;
-    margin: 0; 
+    margin: 0;
     font-weight: 100;
     @media (max-width: $mobile-max-width) {
       font-size: 1.1em;
@@ -70,23 +70,23 @@ html, body {
     font-size: 0.875em; /* 14pt */
     font-family: 'Open Sans', Helvetica, sans-serif;
     padding: 0;
-    margin: 0; 
+    margin: 0;
   }
 
   h5 { /* labels */
     font-size: 0.8em; /* 10pt */
     font-family: 'Open Sans', Helvetica, sans-serif;
     padding: 0;
-    margin: 0; 
+    margin: 0;
   }
   .red {
     color: $theme-color-red;
   }
-  
+
   .orange {
     color: $theme-color-orange;
   }
-  
+
   .grey {
     color: $theme-color-medgrey;
   }
@@ -118,7 +118,7 @@ div[data-reactroot] {
 
 .page-wrapper {
   width: $component-width-desktop;
-  margin: $page-margins-d; 
+  margin: $page-margins-d;
 
   @media (max-width: $mobile-max-width) {
     width: $component-width-mobile;
@@ -129,7 +129,7 @@ div[data-reactroot] {
 .contentWrapper {
   width: $component-width-desktop;
   position: relative;
-  margin: 0 auto; 
+  margin: 0 auto;
   @media (max-width: $mobile-max-width) {
     width: $component-width-mobile;
   }
@@ -148,6 +148,7 @@ div[data-reactroot] {
 
 .gridStyle {
   text-align: left;
+  position: relative;
 }
 
 .sectionWrapper {
@@ -174,7 +175,7 @@ div[data-reactroot] {
 .placeholderWrapper {
   width: 100%;;
   height: 100%;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +191,7 @@ div[data-reactroot] {
 .styled-link {
   text-decoration: none;
   color: $theme-color-blue;
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 @media(max-width: $mobile-max-width) {
@@ -287,7 +288,7 @@ div[data-reactroot] {
       transition: color $ease-time ease $color-delay;
       color: #fff;
       transition: background-color $ease-time ease;
-      background-color: $theme-color-blue;  
+      background-color: $theme-color-blue;
     }
   }
 
@@ -444,4 +445,3 @@ div[data-reactroot] {
   }
 
 }
-
