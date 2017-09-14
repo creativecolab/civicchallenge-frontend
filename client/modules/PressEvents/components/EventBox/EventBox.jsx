@@ -27,7 +27,7 @@ const EVENTS = [
   {
     eventName: 'D4SD Kick-off Design Sprint and Hackathon',
     eventDate: 'Sept 21-23',
-    hostedBy: 'SCALE SD at Downtown Works',
+    hostedBy: 'Hosted by SCALE SD at Downtown Works',
     scheduleList: [
       {
         dayEvents: [
@@ -60,31 +60,42 @@ const EVENTS = [
     ],
   },
   {
-    eventName: 'D4SD Challenge Judging and Prize Ceremony',
-    eventDate: 'Oct 24-26',
-    hostedBy: 'Design Forward at Broadway Pier & Liberty Station',
+    eventName: 'D4SD Design Challenge Deadline',
+    eventDate: 'Oct 22',
+    hostedBy: '',
     scheduleList: [
       {
         dayEvents: [
           {
-            date: 'Oct 24',
-            timeRange: '5pm',
-            dayName: 'Design Challenge Deadline',
+            date: 'Oct 22',
+            timeRange: '11:59pm PDT',
+            dayName: 'Deadline',
             dayDetails: 'All entries must be submitted on <a href="/">d4sd.org</a>',
             buttonTitle: '',
             buttonLink: '',
           },
+        ],
+      },
+    ],
+  },
+  {
+    eventName: 'D4SD Challenge Judging and Awards Ceremony',
+    eventDate: 'Oct 25-26',
+    hostedBy: 'Hosted by Design Forward at Broadway Pier & Liberty Station',
+    scheduleList: [
+      {
+        dayEvents: [
           {
             date: 'Oct 25',
-            timeRange: '3pm-9pm',
+            timeRange: '6pm-9pm',
             dayName: 'Judging for D4SD Submissions',
-            dayDetails: 'Teams optionally present posters at the Design Forward community event (at Broadway Pier)',
+            dayDetails: 'Teams present posters at the Design Forward community event (at Broadway Pier)',
             buttonTitle: '',
             buttonLink: '',
           },
           {
             date: 'Oct 26',
-            timeRange: '9am-9pm',
+            timeRange: '7am-7pm',
             dayName: 'Finalist Showcase and Awards Ceremony',
             dayDetails: 'Finalists posters and award ceremony at Design Forward Summit (Liberty Station)',
             buttonTitle: 'Learn more about the Design Forward Summit',
@@ -118,7 +129,7 @@ function EventBox() {
             <div className={styles.eventHeader}>
               <h6>{eventDate}</h6>
               <h2>{eventName}</h2>
-              <h4>Hosted by {hostedBy}</h4>
+              <h4>{hostedBy}</h4>
               <hr />
             </div>
             {scheduleList

@@ -35,7 +35,7 @@ const EVENTS = [
   },
   {
     id: '',
-    date: 'Oct 24 • Details coming soon!',
+    date: 'Oct 22 • Details coming soon!',
     title: 'Challenge Submission Deadline',
     link: '/getinvolved',
     callToAction: 'Create a team submission',
