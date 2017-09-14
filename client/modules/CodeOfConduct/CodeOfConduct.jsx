@@ -33,14 +33,14 @@ const CONDUCT_DETAILS = [
   {
     ruleCategory: 'Talk Through Disagreements',
     ruleDetails: [
-      'When you see a message to the D4SD Slack Team discussion that introduces a view that is different, or in disagreement with your perspective, talk about it. Rather than staying silent, engage with the other participant by replying to their message. We recognize that it can be hard to engage with perspectives that are different or in disagreement with your own, so here are a few tips:',
+      'When you see a message to the <a href="https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA/" target="_blank" rel="noopener noreferrer">D4SD Slack Team</a> discussion that introduces a view that is different, or in disagreement with your perspective, talk about it. Rather than staying silent, engage with the other participant by replying to their message. We recognize that it can be hard to engage with perspectives that are different or in disagreement with your own, so here are a few tips:',
       '<ul><li><p><i>First ask for more information:</i>  Before responding with a message stating your perspective, try to get more information about where the other person’s perspective comes from. For example, write a reply to the other person that restates their perspective (this demonstrates to them that you understand what they are saying), and then ask them to expand on the aspects of their perspective that you disagree with.</p></li><li><p><i>Share a story:</i>  Personal experience helps to contextualize your perspective about a civic issue in the context of everyday life. When confronted with a perspective that is different from yours, think about what experiences or events led you to form your perspective. Share this story with the group, (e.g., where were you, what were you doing, how does the experience relate to your perspective of the civic issue). Encourage the other person to share their own story.</p></li><li><p><i>Where do we agree?</i>  While you might disagree with another person, you likely agree about many other elements of the mobility problem. For example, you might have a different perspective about where a trolley station should be located, but might agree that a trolley station is needed. Make a game out of finding where you agree and disagree!</p></li></ul>',
     ],
   },
   {
     ruleCategory: 'Identification policy',
     ruleDetails: [
-      'We ask that your online identity reflect your offline identity. Please log-in with your first and last name, and add information about your interest in mobility issues to your D4SD Slack Team profile. While you have provided your email address to log-in, we will help to protect your privacy by not sharing your email address beyond the D4SD Team.',
+      'We ask that your online identity reflect your offline identity. Please log-in with your first and last name, and add information about your interest in mobility issues to your <a href="https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA/" target="_blank" rel="noopener noreferrer">D4SD Slack Team</a> profile. While you have provided your email address to log-in, we will help to protect your privacy by not sharing your email address beyond the D4SD Team.',
     ],
   },
   {
@@ -51,8 +51,8 @@ const CONDUCT_DETAILS = [
   },
 ];
 
-const sectionTitle = 'Code of Conduct for the 2017 D4SD Civic Design Challenges';
-const description = 'Our (D4SD\'s) objective for your participation as part of the D4SD Slack Team and throughout the Civic Design Challenge, is that you contribute to a rich discussion that leads to design considerations, insights, and ways to evaluate potential solutions. We hope that through conversation with other San Diegans, your thoughts will help to spark new ideas to improve mobility in our city.';
+const sectionTitle = 'Code of Conduct for the 2017 D4SD Challenges';
+const description = 'Our (D4SD\'s) objective for your participation as part of the <a href="https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA/" target="_blank" rel="noopener noreferrer">D4SD Slack Team</a> and throughout the Civic Design Challenge, is that you contribute to a rich discussion that leads to design considerations, insights, and ways to evaluate potential solutions. We hope that through conversation with other San Diegans, your thoughts will help to spark new ideas to improve mobility in our city.';
 
 const thankYouStatement = 'Thank you for your participation.';
 
