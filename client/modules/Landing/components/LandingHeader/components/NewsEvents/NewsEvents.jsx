@@ -56,7 +56,7 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'Announced by our great ambassador James White of @freshform at the @DesignForwardSD event on Thursday',
+    tweet: 'D4SD in the news! Times of San Diego: "UC San Diego Challenges Public to Tackle San Diego’s Transportation Issues"',
   },
 ];
 
