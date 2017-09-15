@@ -56,7 +56,7 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'D4SD in the news! Times of San Diego: "UC San Diego Challenges Public to Tackle San Diego’s Transportation Issues"',
+    tweet: 'D4SD in Times of San Diego: "UC San Diego Challenges Public to Tackle San Diego’s Transportation Issues"',
   },
 ];
 

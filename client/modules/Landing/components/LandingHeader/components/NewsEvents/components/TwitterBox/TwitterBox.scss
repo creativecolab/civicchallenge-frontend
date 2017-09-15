@@ -35,12 +35,13 @@ $box-dim-height: $box-dim-width * 1.2;
           .twitterLogo {
             img {
               width: 25px;
-              height: 25px; 
+              height: 25px;
               margin-top: 5px;
               margin-right: 7px;
             }
           }
           .name {
+            padding-top: 6px;
             h4 {
               color: #cccccc;
             }
@@ -68,7 +69,7 @@ $box-dim-height: $box-dim-width * 1.2;
 }
 
 @media (min-width: $desktop-min-width) {
-  
+
 }
 
 @media(max-width: $mobile-max-width) {

@@ -36,7 +36,7 @@ function TwitterBox({ tweet }) {
                 <img src={twitterIcon} alt="twitter" />
               </div>
               <div className={styles.name}>
-                <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h4>Design for San Diego</h4></a>
+                {/* <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h4>Design for San Diego</h4></a> */}
                 <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h5>@Design4SD</h5></a>
               </div>
             </div>
