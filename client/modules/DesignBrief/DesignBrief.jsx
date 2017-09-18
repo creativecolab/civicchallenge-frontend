@@ -52,6 +52,7 @@ import blvd from '../LatestInMobility/imgs/june27kansaselcajonblvd.png';
 import bikelanes from '../LatestInMobility/imgs/may30bikelanes.jpg';
 import zerodeaths from '../LatestInMobility/imgs/march8zerotrafficdeaths.jpg';
 import ford from '../LatestInMobility/imgs/jan6ford.jpg';
+import lyftLA from '../LatestInMobility/imgs/sept18lyftLA.jpg';
 
 
 let TweenLite = {};
@@ -314,6 +315,15 @@ const CHALLENGE_INFO = {
     question: 'How do we take our hands off the wheel?',
     intro: 'An autonomous vehicle (self-driving car) is a vehicle that can drive itself without human guidance. These vehicles are arriving faster than most people have anticipated. How might we prepare for this major advance in transportation? An important concern about adding Autonomous Vehicles (AVs) is the effect of “driverless” on the industries that hire drivers, as well as the drivers themselves. There are also policy questions about Autonomous Vehicles such as, determining fault in the case of an accident (e.g., passenger, manufacturer, designer). However, a related concern is how other drivers will engage with AVs—there is some concern that other drivers might cut off, chase down, or otherwise aggressively engage with AVs.<br><br>Lastly, it may be easy to hack an AV, as they are designed to continuously receive information from other cars and sensors on the road through a “WiFi like” transmission system. Preparing for AVs may also mean rethinking the design of our existing roadways and signage. If AVs can monitor the speed and distance of other AVs, that means that cars can potentially travel at far faster speeds and in very close proximity. Will stop lights be necessary in this not-so-distant future?',
     overview: [
+      {
+        id: '',
+        date: 'SEPT 18',
+        source: 'CNN',
+        title: 'Lyft\'s redesigned street concept could fix L.A. traffic',
+        thumbnail: lyftLA,
+        linkKey: 'http://money.cnn.com/2017/09/18/technology/future/lyft-streets-autonomous-vehicles/index.html',
+        descr: 'Lyft and transportation experts illustrate the benefits of coordinating autonomous vehicles, bike lanes, public transit and more greenspace.',
+      },
       {
         title: 'User experience inside autonomous cars: Can we be more productive?',
         text: 'The experience of riding in an autonomous vehicle (AV) may be very different than driving. Driving may no longer be about keeping your eyes on the road and hands at 10 and 2. Moving around, dancing, even singing karaoke are all possibilities when driverless cars are involved. Several automotive companies have made a pledge to have AVs on the road before 2020.<br><br>As one example of how AVs might offer a radically new experience, think about what work might be like while riding in an AV. Many cars are already WiFi-enabled and wired for conference calls. Without needing to focus on the road, a rider could focus on that pressing report that\'s due. In fact, why meet in an office conference room, if we could sit around a table while cruising down La Jolla’s Scenic Drive?',
