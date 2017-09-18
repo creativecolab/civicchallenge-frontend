@@ -23,6 +23,7 @@ import blvd from './imgs/june27kansaselcajonblvd.png';
 import bikelanes from './imgs/may30bikelanes.jpg';
 import zerodeaths from './imgs/march8zerotrafficdeaths.jpg';
 import ford from './imgs/jan6ford.jpg';
+import lyftLA from './imgs/sept18lyftLA.jpg';
 /**
  * Constants
  */
@@ -64,6 +65,15 @@ const NEWS_ARTICLES = [
     thumbnail: seats,
     linkKey: 'https://www.citylab.com/life/2017/03/riding-the-subway-with-an-invisible-illness/520503/',
     descr: 'Many transit riders suffer from an invisible illness—such as neurological disorders or chronic pain— that prevents others from sharing their seat. This London agency aims to help.',
+  },
+  {
+    id: '',
+    date: 'SEPT 18',
+    source: 'CNN',
+    title: 'Lyft\'s redesigned street concept could fix L.A. traffic',
+    thumbnail: lyftLA,
+    linkKey: 'http://money.cnn.com/2017/09/18/technology/future/lyft-streets-autonomous-vehicles/index.html',
+    descr: 'Lyft and transportation experts illustrate the benefits of coordinating autonomous vehicles, bike lanes, public transit and more greenspace.',
   },
   {
     id: '',
