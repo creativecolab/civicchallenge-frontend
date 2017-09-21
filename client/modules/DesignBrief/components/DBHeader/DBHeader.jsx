@@ -9,10 +9,10 @@ import styles from './DBHeader.scss';
  * Constants
  */
 
-const rel = 'noreferrer noopener';
-const target = '_blank';
+const rel = '';
+const target = '';
 const buttonText = 'Join the Discussion';
-const linkUrl = 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA';
+const linkUrl = '/getinvolved';
 /**
  * DBHeader
  */
