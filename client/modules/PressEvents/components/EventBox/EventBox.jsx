@@ -70,7 +70,7 @@ const EVENTS = [
             date: 'Oct 22',
             timeRange: '11:59pm PDT',
             dayName: 'Deadline',
-            dayDetails: 'All entries must be submitted on <a href="/">d4sd.org</a>',
+            dayDetails: 'All entries due by midnight. <a href="https://herox.com/D4SD-2017">Register your team now.</a>',
             buttonTitle: '',
             buttonLink: '',
           },

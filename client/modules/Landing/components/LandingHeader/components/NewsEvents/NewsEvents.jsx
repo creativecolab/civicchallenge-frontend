@@ -38,7 +38,7 @@ const EVENTS = [
     date: 'Oct 22 at 11:59PM  • Online',
     title: 'Challenge Submission Deadline',
     link: 'https://herox.com/D4SD-2017',
-    callToAction: 'Create a team submission',
+    callToAction: 'Register your team now',
     target: '',
     rel: '',
   },
