@@ -28,7 +28,7 @@ import submit from './submit-icon.png';
  */
 
 const sectionTitle = 'Ready to get Involved?';
-const description = 'Jump in now to the online discussion or read more details about the four Civic Design Challenges on Mobility.  Check back later for more activities!';
+const description = 'Jump into the online discussion or read more details about the Design for San Diego Challenges on transportation and mobility.';
 
 const BOX_TEXT = [
   {
@@ -72,8 +72,8 @@ const BOX_TEXT = [
     text: 'Teams must register by Oct 10th and submit their final entry by Oct 22nd. See FAQs for rules and guidelines.',
     buttonText: 'Register here',
     linkUrl: 'https://herox.com/D4SD-2017',
-    rel: 'noopener noreferrer',
-    target: '_blank',
+    rel: '',
+    target: '',
     icon: submit,
     boxColor: '#fff',
     textColor: '#212121',

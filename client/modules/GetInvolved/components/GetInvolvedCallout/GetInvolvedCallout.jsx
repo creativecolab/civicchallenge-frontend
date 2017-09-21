@@ -12,10 +12,10 @@ import downloadIcon from './download_icon.png';*/
  * Constants
  */
 
-const sectionTitle = 'Challenge submissions are due in October 2017';
-const description = 'Check back here in September to get all the details about dates, contest rules, and submission guidelines.';
+const sectionTitle = 'Challenge entries due in October 22 at 11:59PM';
+const description = 'Check back soon to get all the details about dates, contest rules, and submission guidelines.';
 
-const pdfText = 'Submissions Rules & Guidelines PDF (COMING SOON)';
+const pdfText = 'Submission guidelines PDF (coming soon)';
 /**
  * GetInvolvedCallout
  */

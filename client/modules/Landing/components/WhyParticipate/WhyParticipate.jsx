@@ -90,7 +90,7 @@ function WhyParticipate(props) {
               </div>
               <div className={styles.contentText}>
                 <h2 className={globalStyles.red}>Win Prizes</h2>
-                <p>Submissions judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.</p>
+                <p><a href="https://herox.com/D4SD-2017">Entries</a> judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.</p>
               </div>
             </div>
           </div>

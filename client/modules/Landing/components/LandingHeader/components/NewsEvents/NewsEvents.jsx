@@ -35,9 +35,9 @@ const EVENTS = [
   },
   {
     id: '',
-    date: 'Oct 22 • Details coming soon!',
+    date: 'Oct 22 at 11:59PM  • Online',
     title: 'Challenge Submission Deadline',
-    link: '/getinvolved',
+    link: 'https://herox.com/D4SD-2017',
     callToAction: 'Create a team submission',
     target: '',
     rel: '',
