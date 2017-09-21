@@ -26,9 +26,9 @@ const twitterSectionTitle = 'LATEST TWEET';
 const EVENTS = [
   {
     id: '',
-    date: 'Sept 21-23 • Downtown Works',
-    title: 'D4SD Kickoff Event with Mayor Faulconer',
-    link: 'https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393',
+    date: 'Sept 22-23 • Downtown Works',
+    title: 'D4SD Design Sprint and Hackathon',
+    link: 'https://www.eventbrite.com/e/2017-d4sd-civic-design-challenge-tickets-37553137445',
     callToAction: 'Register Now',
     target: '_blank',
     rel: 'noopener noreferrer',
