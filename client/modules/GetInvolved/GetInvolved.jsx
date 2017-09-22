@@ -32,18 +32,6 @@ const description = 'Jump into the online discussion or read more details about 
 
 const BOX_TEXT = [
   {
-    title: 'Explore the Challenge Briefs',
-    text: 'Read the briefs to learn background information and to empathize with particular Mobility Challenges that San Diego residents face.',
-    buttonText: 'View the Briefs',
-    linkUrl: '/challenges',
-    rel: '',
-    target: '',
-    icon: search,
-    boxColor: '#fff',
-    textColor: '#212121',
-    button: 'globalStyles.blueOutline',
-  },
-  {
     title: 'Discuss Mobility in Slack',
     text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
     buttonText: 'Join the Discussion',
@@ -54,6 +42,18 @@ const BOX_TEXT = [
     boxColor: '#fff',
     textColor: '#212121',
     button: 'globalStyles.blueOutline',
+  },
+  {
+    title: 'Entries due Oct 22 at 11:59PM',
+    text: 'Teams must register by Oct 10th and submit their final entry by Oct 22nd. See FAQs for rules and guidelines.',
+    buttonText: 'Register here',
+    linkUrl: 'https://herox.com/D4SD-2017',
+    rel: '',
+    target: '',
+    icon: submit,
+    boxColor: '#fff',
+    textColor: '#212121',
+    button: 'globalStyles.orangeOutline',
   },
   {
     title: 'Sign up for the Newsletter',
@@ -68,16 +68,16 @@ const BOX_TEXT = [
     button: 'globalStyles.orangeOutline',
   },
   {
-    title: 'Entries due Oct 22 at 11:59PM',
-    text: 'Teams must register by Oct 10th and submit their final entry by Oct 22nd. See FAQs for rules and guidelines.',
-    buttonText: 'Register here',
-    linkUrl: 'https://herox.com/D4SD-2017',
+    title: 'Explore the Challenge Briefs',
+    text: 'Read the briefs to learn background information and to empathize with particular Mobility Challenges that San Diego residents face.',
+    buttonText: 'View the Briefs',
+    linkUrl: '/challenges',
     rel: '',
     target: '',
-    icon: submit,
+    icon: search,
     boxColor: '#fff',
     textColor: '#212121',
-    button: 'globalStyles.orangeOutline',
+    button: 'globalStyles.blueOutline',
   },
 ];
 
