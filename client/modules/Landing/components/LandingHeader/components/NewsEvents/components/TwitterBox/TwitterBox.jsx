@@ -17,6 +17,7 @@ import twitterIcon from './twitter_icon.png';
 
 const propTypes = {
   tweet: PropTypes.string.isRequired,
+  tweetURL: PropTypes.string.isRequired,
 };
 
 const contextTypes = {
@@ -25,7 +26,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function TwitterBox({ tweet }) {
+function TwitterBox({ tweet, tweetURL }) {
   return (
     <section className={styles.wrapper}>
       <div className={styles.boxWrapper}>
@@ -36,12 +37,11 @@ function TwitterBox({ tweet }) {
                 <img src={twitterIcon} alt="twitter" />
               </div>
               <div className={styles.name}>
-                {/* <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h4>Design for San Diego</h4></a> */}
                 <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><h5>@Design4SD</h5></a>
               </div>
             </div>
             <div className={styles.tweetText}>
-              <a href="https://twitter.com/Design4SD" rel="noopener noreferrer" target="_blank"><span>{tweet}</span></a>
+              <a href={tweetURL} rel="noopener noreferrer" target="_blank"><span>{tweet}</span></a>
             </div>
           </div>
         </section>

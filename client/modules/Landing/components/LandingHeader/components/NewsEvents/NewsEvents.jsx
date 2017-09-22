@@ -56,7 +56,8 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'D4SD in the San Diego Union-Tribune "Public invited to all-night hackathon to solve SD\'s commuting nightmare"',
+    tweet: 'D4SD has officially begun! Today the Mayor kicked off our month-long challenge with a bang!',
+    tweetURL: 'https://twitter.com/Design4SD/status/910935549774405632',
   },
 ];
 
@@ -94,9 +95,10 @@ function NewsEvents(props) {
           <div className={styles.twitter}>
             <h4 className={styles.sectionTitle}>{twitterSectionTitle}</h4>
             <div className={styles.newsBoxes}>
-              {TWEETS.map(({ tweet }) => (
+              {TWEETS.map(({ tweet, tweetURL }) => (
                 <TwitterBox
                   tweet={tweet}
+                  tweetURL={tweetURL}
                 />
               ))}
             </div>
