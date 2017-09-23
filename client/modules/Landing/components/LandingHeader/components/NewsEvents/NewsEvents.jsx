@@ -56,8 +56,8 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'D4SD has officially begun! Today the Mayor kicked off our month-long challenge with a bang!',
-    tweetURL: 'https://twitter.com/Design4SD/status/910935549774405632',
+    tweet: 'Brainstorming going strong, bring on the ideas! 💡#d4sd2017',
+    tweetURL: 'https://twitter.com/Design4SD/status/911436793458786304',
   },
 ];
 
