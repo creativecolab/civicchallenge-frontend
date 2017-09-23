@@ -42,29 +42,21 @@ $img-width: 960px;
   .partnersWrapper {
     padding-bottom: $subsection-padding;
     $partners-width: 80%;
+    display: flex;
+    text-align: center;
     .partners {
       width: $partners-width;
-      display: flex;
-
       @media (max-width: $mobile-max-width) {
         width: 100%;
       }
 
       a {
-        margin: 0 1.5%;
-        height: 7em;
-
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-        line-height: 100%;
+        position: relative;
 
         .sponsor-image {
-          max-width: 80%;
-          max-height: 70%;
+          height: 60px;
+          display: inline-block;
+          padding: 20px;
         }
 
         &:hover {

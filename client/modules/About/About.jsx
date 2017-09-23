@@ -17,6 +17,9 @@ import scaleSDLogo from './scale-sd-logo.png';
 import designLabLogo from './design-lab-logo.png';
 import designForwardLogo from './design-forward-logo.png';
 import sdLogo from './city-of-sd-logo.png';
+import portOfSD from './port-of-sd-logo.png';
+import sandag from './sandag-logo.png';
+
 /**
  * About
  */
@@ -73,14 +76,14 @@ const CREDITS = [
 
 const PARTNERS = [
   {
-    href: 'https://www.sandiego.gov/',
+    href: 'http://designlab.ucsd.edu/',
     img: designLabLogo,
-    alt: 'City of San Diego',
+    alt: 'UC San Diego Design Lab',
   },
   {
-    href: 'http://designlab.ucsd.edu/',
+    href: 'https://www.sandiego.gov/',
     img: sdLogo,
-    alt: 'UC San Diego Design Lab',
+    alt: 'City of San Diego',
   },
   {
     href: 'http://designforwardsd.com/',
@@ -91,6 +94,16 @@ const PARTNERS = [
     href: 'http://www.scalesd.com/',
     img: scaleSDLogo,
     alt: 'Scale SD',
+  },
+  {
+    href: 'http://www.sandag.org/',
+    img: sandag,
+    alt: 'SanDag',
+  },
+  {
+    href: 'https://www.portofsandiego.org',
+    img: portOfSD,
+    alt: 'Port of San Diego',
   },
 ];
 

@@ -54,10 +54,6 @@ const LINKS = [
     text: 'Resources',
   },
   {
-    href: '/sponsors',
-    text: 'Sponsors',
-  },
-  {
     href: '/about',
     text: 'About',
   },
