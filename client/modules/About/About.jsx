@@ -19,6 +19,8 @@ import designForwardLogo from './design-forward-logo.png';
 import sdLogo from './city-of-sd-logo.png';
 import portOfSD from './port-of-sd-logo.png';
 import sandag from './sandag-logo.png';
+import NSFLogo from './nsf-logo.png';
+
 
 /**
  * About
@@ -81,9 +83,9 @@ const PARTNERS = [
     alt: 'UC San Diego Design Lab',
   },
   {
-    href: 'https://www.sandiego.gov/',
-    img: sdLogo,
-    alt: 'City of San Diego',
+    href: 'https://www.portofsandiego.org',
+    img: portOfSD,
+    alt: 'Port of San Diego',
   },
   {
     href: 'http://designforwardsd.com/',
@@ -101,9 +103,14 @@ const PARTNERS = [
     alt: 'SanDag',
   },
   {
-    href: 'https://www.portofsandiego.org',
-    img: portOfSD,
-    alt: 'Port of San Diego',
+    href: 'https://www.sandiego.gov/',
+    img: sdLogo,
+    alt: 'City of San Diego',
+  },
+  {
+    href: 'https://www.nsf.gov/',
+    img: NSFLogo,
+    alt: 'NSF',
   },
 ];
 
@@ -137,8 +144,13 @@ function About() {
                 <img className={styles.sponsorImage} src={img} alt={alt} />
               </a>
             ))}
+            <div >
+              <div className={styles.sponsorDescription} />
+              If you would like to partner or sponsor the D4SD initiative, please reach out to <a href="mailto:team@d4sd.org">team@d4sd.org</a>
+            </div>
           </div>
         </div>
+
         <div className={styles.teamWrapper}>
           <h2 className={globalStyles.grey}>Our Team</h2>
           <div className={styles.fullWidthImg}>

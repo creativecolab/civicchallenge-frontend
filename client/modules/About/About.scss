@@ -64,6 +64,15 @@ $img-width: 960px;
           transition: opacity 0.5s ease 0s;
         }
       }
+
+      .sponsor-description {
+        border-top: 1.5px solid;
+        border-color: rgba(0, 0, 0, 0.33);
+        width: 53%;
+        margin: 6px auto;
+        padding-bottom: 6px;
+      }
+
     }
   }
 
