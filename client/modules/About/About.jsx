@@ -144,9 +144,9 @@ function About() {
                 <img className={styles.sponsorImage} src={img} alt={alt} />
               </a>
             ))}
-            <div >
+            <div className={styles.descriptionContainer}>
               <div className={styles.sponsorDescription} />
-              If you would like to partner or sponsor the D4SD initiative, please reach out to <a href="mailto:team@d4sd.org">team@d4sd.org</a>
+              If you would like to partner with or sponsor the D4SD initiative, please reach out to <a href="mailto:team@d4sd.org">team@d4sd.org</a>
             </div>
           </div>
         </div>
