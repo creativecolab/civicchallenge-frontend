@@ -26,7 +26,7 @@ import styles from './EventBox.scss';
 const EVENTS = [
   {
     eventName: 'D4SD Kick-off Design Sprint and Hackathon',
-    eventDate: 'Sept 21-23',
+    eventDate: '',
     hostedBy: 'Hosted by SCALE SD at Downtown Works',
     scheduleList: [
       {
