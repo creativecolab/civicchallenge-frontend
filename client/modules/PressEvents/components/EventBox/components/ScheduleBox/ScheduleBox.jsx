@@ -9,7 +9,7 @@ import styles from './ScheduleBox.scss';
 /**
  * Constants
  */
-/**yeeeeeah*/
+/** yeeeeeah */
 /**
  * ScheduleBox
  */
