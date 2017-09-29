@@ -7,7 +7,7 @@ import styles from './GetInvolvedCallout.scss';
 
 /* images
 
-import downloadIcon from './download_icon.png';*/
+import downloadIcon from './download_icon.png'; */
 /**
  * Constants
  */
