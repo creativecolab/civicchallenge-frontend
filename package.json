@@ -58,7 +58,7 @@
     "react": "^15.5.4",
     "react-addons-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-ga": "^2.2.0",
+    "react-ga": "2.2.0",
     "react-helmet": "^5.0.0",
     "react-hot-loader": "^3.0.0-beta.2",
     "react-parallax": "^1.4.4",
