@@ -56,8 +56,8 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'Brainstorming going strong, bring on the ideas! 💡#d4sd2017',
-    tweetURL: 'https://twitter.com/Design4SD/status/911436793458786304',
+    tweet: 'Civic Design class powers up UCSD students to join the mobility challenge #d4sd2017',
+    tweetURL: 'https://twitter.com/Design4SD/status/913907540978626565',
   },
 ];
 
