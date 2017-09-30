@@ -17,6 +17,7 @@ import styles from './ScheduleBox.scss';
 const propTypes = {
   dayEvents: PropTypes.array.isRequired,
   scheduleButton: PropTypes.array,
+  eventSummary: PropTypes.array,
 };
 
 const contextTypes = {
@@ -25,9 +26,10 @@ const contextTypes = {
 
 const defaultProps = {
   scheduleButton: '',
+  eventSummary: '',
 };
 
-function ScheduleBox({ dayEvents, scheduleButton }) {
+function ScheduleBox({ dayEvents, scheduleButton, eventSummary }) {
   return (
     <div className={styles.scheduleWrapper}>
       {dayEvents
@@ -54,6 +56,18 @@ function ScheduleBox({ dayEvents, scheduleButton }) {
             </div>
           </div>
         ))}
+      {eventSummary &&
+        <div className={styles.eventSummary}>
+          {eventSummary.map((eventParagraph => (
+            <p
+              key={eventParagraph}
+              dangerouslySetInnerHTML={{
+                __html: eventParagraph,
+              }}
+            />
+          )))}
+        </div>
+      }
       {scheduleButton &&
         <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
           {scheduleButton.map(({ scheduleLink, scheduleCallout }) =>

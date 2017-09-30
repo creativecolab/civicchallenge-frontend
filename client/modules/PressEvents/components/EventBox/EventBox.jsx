@@ -26,7 +26,7 @@ import styles from './EventBox.scss';
 const EVENTS = [
   {
     eventName: 'D4SD Kick-off Design Sprint and Hackathon',
-    eventDate: 'Sept 21-23',
+    eventDate: '',
     hostedBy: 'Hosted by SCALE SD at Downtown Works',
     scheduleList: [
       {
@@ -36,8 +36,8 @@ const EVENTS = [
             timeRange: '10am-1pm',
             dayName: 'Kick-Off & Information Session',
             dayDetails: 'Introduction by Mayor Faulconer, Chancellor Khosla & Don Norman',
-            buttonTitle: 'Register for the Kickoff and Information Session',
-            buttonLink: 'https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393',
+            buttonTitle: '',
+            buttonLink: '',
           },
           {
             date: 'Sept 22',
@@ -52,11 +52,18 @@ const EVENTS = [
             timeRange: 'all day-9pm',
             dayName: 'D4SD Challenge: Design Sprint & Hackathon - Day 2',
             dayDetails: 'Present prototypes, win prizes & party',
-            buttonTitle: 'Register for the 2017 D4SD Civic Design Challenge',
-            buttonLink: 'https://www.eventbrite.com/e/design-sprint-and-hackathon-for-the-2017-d4sd-civic-design-challenge-tickets-37553137445',
+            buttonTitle: '',
+            buttonLink: '',
           },
         ],
       },
+    ],
+    eventSummary: [
+      'Innovators from across the city kicked off the <a href="/">Design for San Diego (D4SD)</a> challenges with a design sprint and hackathon. Dozens of people worked into the wee hours of the morning and submitted 13 amazing and diverse concepts for the kickoff competition aimed at improving transportation in San Diego.',
+      'First place and a prize of $2,000 and 3 months of co-working space at Downtown Works went to Roshan Fernando, Ian Carrasco, and Lucien Eloundou—a mix of student engineers and cognitive scientists currently enrolled at UC San Diego and San Diego State University. Their winning concept seeks to streamline highway traffic by utilizing community-based navigation apps such as Google Maps and Waze to help current and future autonomous vehicles travel more efficiently and safely.',
+      'Second prize went to Laurel Green and Jacob Browne. Third prize was shared between Katherine Whitmore, Gleidson Dantas, Arielle Chen, Antonio Khazdozian, Katheryn Rhodes, Jared Libby and Andre Wolf.',
+      'Our weekend hackathon is complete, but challenge isn’t over yet! Teams can register until October 10 with entries due by Oct 22.  Find a team on our Slack discussion forum and join for hands-on sessions at UC San Diego campus.',
+      'Click through to learn more about what happened at the <a href=”https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393#” target=”_blank” rel=” noopener noreferrer”>Kickoff event with Mayor Faulconer</a> and the <a href=”https://www.eventbrite.com/e/2017-d4sd-civic-design-challenge-tickets-37553137445” target=”_blank” rel=” noopener noreferrer”>Design Sprint and Hackathon</a> (events closed).',
     ],
   },
   {
@@ -124,7 +131,7 @@ function EventBox() {
   return (
     <div className={classNames([styles.eventBox, globalStyles.contentWrapper])}>
       <div className={styles.contentContainer}>
-        {EVENTS.map(({ eventName, eventDate, hostedBy, scheduleList, scheduleButton }) => (
+        {EVENTS.map(({ eventName, eventDate, hostedBy, scheduleList, scheduleButton, eventSummary }) => (
           <div key={eventName} className={styles.eventWrapper}>
             <div className={styles.eventHeader}>
               <h6>{eventDate}</h6>
@@ -137,6 +144,7 @@ function EventBox() {
                 <ScheduleBox
                   dayEvents={dayEvents}
                   scheduleButton={scheduleButton}
+                  eventSummary={eventSummary}
                 />
               ))}
           </div>
