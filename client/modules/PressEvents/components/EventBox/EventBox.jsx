@@ -67,8 +67,27 @@ const EVENTS = [
     ],
   },
   {
+    eventName: 'Civic Design Course',
+    eventDate: '',
+    hostedBy: 'Professor Dow at UC San Diego',
+    scheduleList: [
+      {
+        dayEvents: [
+          {
+            date: 'Oct 3-19, 2017',
+            timeRange: '5pm-7pm',
+            dayName: 'Human-centered design process',
+            dayDetails: 'Join university professors, professional designers, and the City’s data scientists (location TBD)',
+            buttonTitle: '',
+            buttonLink: '',
+          },
+        ],
+      },
+    ],
+  },
+  {
     eventName: 'D4SD Design Challenge Deadline',
-    eventDate: 'Oct 22',
+    eventDate: '',
     hostedBy: '',
     scheduleList: [
       {
@@ -87,7 +106,7 @@ const EVENTS = [
   },
   {
     eventName: 'D4SD Challenge Judging and Awards Ceremony',
-    eventDate: 'Oct 25-26',
+    eventDate: '',
     hostedBy: 'Hosted by Design Forward at Broadway Pier & Liberty Station',
     scheduleList: [
       {
