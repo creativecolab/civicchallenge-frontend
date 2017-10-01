@@ -38,7 +38,7 @@ const TEAM_TEXT = [
     paragraphHeader: 'Our Mission',
     paragraphText: [
       'D4SD strives to create a platform that demonstrates the value of human-centered design and produces solutions that could incubate into companies or longer-term projects that foster economic activity in the City of San Diego and beyond.',
-      'Behind the scenes, the D4SD team conducts research on design process. Our team investigates how best to obtain design feedback from many stakeholders, how to asks crowds to generate novels ideas, and how to improve online forums for civic discussions.',
+      'Behind the scenes, the D4SD team conducts research on design process. Postdoctoral fellow <a href="http://nmahyar.ucsd.edu/" rel="noopener noreferrer" target="_blank">Narges Mahyar</a> and PhD student <a href="http://infosci.cornell.edu/forward-thinking-people/phds/brian-mcinnis/" rel="noopener noreferrer" target="_blank">Brian McInnis</a> are the lead researchers investigating how best to obtain design feedback from many stakeholders, how to asks crowds to generate novels ideas, and how to improve online forums for civic discussions.',
       'All of us have the common goal of making this first ever city-wide design challenge a raving success for both the city and our research, but most of all for the citizens of San Diego!',
     ],
   },
