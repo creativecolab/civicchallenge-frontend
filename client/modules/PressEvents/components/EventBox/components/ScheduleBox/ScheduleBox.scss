@@ -79,6 +79,42 @@
     }
   }
 
+  .event-recap-wrapper {
+    width: 100%;
+
+    @media(min-width: $mobile-max-width) {
+      margin-top: $spacing-margin*0.25;
+      
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .event-img {
+      width: 100%;
+      margin-bottom: $spacing-margin*0.25;
+      @media (min-width: $mobile-max-width) {          display: inline-block;
+        width: 40%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .event-summary {
+      width: 100%;
+      @media(min-width: $mobile-max-width) {
+        width: 55%;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.9em;
+        color: $theme-color-medgrey;
+      }
+    }
+
+
+  }
   .callout-btn {
     padding: $grid-min-height*0.8 0 $grid-min-height/2 0;
     

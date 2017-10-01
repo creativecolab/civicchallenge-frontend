@@ -8,6 +8,10 @@ import globalStyles from 'main.scss';
 import ScheduleBox from './components/ScheduleBox/ScheduleBox';
 import styles from './EventBox.scss';
 
+
+/** images */
+
+import hackathon from './hackathon.jpg';
 /**
  * Constants
  */
@@ -26,7 +30,6 @@ import styles from './EventBox.scss';
 const EVENTS = [
   {
     eventName: 'D4SD Kick-off Design Sprint and Hackathon',
-    eventDate: '',
     hostedBy: 'Hosted by SCALE SD at Downtown Works',
     scheduleList: [
       {
@@ -59,35 +62,74 @@ const EVENTS = [
       },
     ],
     eventSummary: [
-      'Innovators from across the city kicked off the <a href="/">Design for San Diego (D4SD)</a> challenges with a design sprint and hackathon. Dozens of people worked into the wee hours of the morning and submitted 13 amazing and diverse concepts for the kickoff competition aimed at improving transportation in San Diego.',
-      'First place and a prize of $2,000 and 3 months of co-working space at Downtown Works went to Roshan Fernando, Ian Carrasco, and Lucien Eloundou—a mix of student engineers and cognitive scientists currently enrolled at UC San Diego and San Diego State University. Their winning concept seeks to streamline highway traffic by utilizing community-based navigation apps such as Google Maps and Waze to help current and future autonomous vehicles travel more efficiently and safely.',
-      'Second prize went to Laurel Green and Jacob Browne. Third prize was shared between Katherine Whitmore, Gleidson Dantas, Arielle Chen, Antonio Khazdozian, Katheryn Rhodes, Jared Libby and Andre Wolf.',
-      'Our weekend hackathon is complete, but challenge isn’t over yet! Teams can register until October 10 with entries due by Oct 22.  Find a team on our Slack discussion forum and join for hands-on sessions at UC San Diego campus.',
-      'Click through to learn more about what happened at the <a href=”https://www.eventbrite.com/e/kickoff-for-the-2017-d4sd-civic-design-challenge-tickets-37543424393#” target=”_blank” rel=” noopener noreferrer”>Kickoff event with Mayor Faulconer</a> and the <a href=”https://www.eventbrite.com/e/2017-d4sd-civic-design-challenge-tickets-37553137445” target=”_blank” rel=” noopener noreferrer”>Design Sprint and Hackathon</a> (events closed).',
+      'Innovators from across the city kicked off the <a href=”/”>Design for San Diego (D4SD)</a> challenges with a design sprint and hackathon. Dozens of people worked into the wee hours of the morning and submitted 13 amazing and diverse concepts for the kickoff competition aimed at improving transportation in San Diego. Learn more about this event on the <a href="https://scalesdblog.wordpress.com/" target="_blank" rel="noopener noreferrer">SCALE blog post</a>.',
     ],
+    eventImg: hackathon,
+    eventImgAlt: 'People standing around a table at the hackathon event',
   },
   {
     eventName: 'Civic Design Course',
-    eventDate: '',
-    hostedBy: 'Professor Dow at UC San Diego',
+    hostedBy: 'Hosted by Professor Dow at UC San Diego',
     scheduleList: [
       {
         dayEvents: [
           {
-            date: 'Oct 3-19, 2017',
+            date: 'Oct 3',
             timeRange: '5pm-7pm',
-            dayName: 'Human-centered design process',
-            dayDetails: 'Join university professors, professional designers, and the City’s data scientists (location TBD)',
+            dayName: 'Team formation and brainstorming',
+            dayDetails: '',
+            buttonTitle: '',
+            buttonLink: '',
+          },
+          {
+            date: 'Oct 5',
+            timeRange: '5pm-7pm',
+            dayName: 'Problem framing and ideation',
+            dayDetails: '',
+            buttonTitle: '',
+            buttonLink: '',
+          },
+          {
+            date: 'Oct 10',
+            timeRange: '5pm-7pm',
+            dayName: 'Rapid prototyping',
+            dayDetails: '',
+            buttonTitle: '',
+            buttonLink: '',
+          },
+          {
+            date: 'Oct 12',
+            timeRange: '5pm-7pm',
+            dayName: 'User research presentations',
+            dayDetails: '',
+            buttonTitle: '',
+            buttonLink: '',
+          },
+          {
+            date: 'Oct 17',
+            timeRange: '5pm-7pm',
+            dayName: 'Visual design for posters/videos',
+            dayDetails: '',
+            buttonTitle: '',
+            buttonLink: '',
+          },
+          {
+            date: 'Oct 19',
+            timeRange: '5pm-7pm',
+            dayName: 'Studio time for prototypes, posters, and entries',
+            dayDetails: '',
             buttonTitle: '',
             buttonLink: '',
           },
         ],
       },
     ],
+    eventSummaryNoImg: [
+      'If you are interested in joining for any or all of these sessions on human-centered design, <a href="https://goo.gl/forms/0tkGBf09TXSqza7g1" target="_blank" rel="noopener noreferrer">please signup here</a>.',
+    ],
   },
   {
     eventName: 'D4SD Design Challenge Deadline',
-    eventDate: '',
     hostedBy: '',
     scheduleList: [
       {
@@ -106,7 +148,6 @@ const EVENTS = [
   },
   {
     eventName: 'D4SD Challenge Judging and Awards Ceremony',
-    eventDate: '',
     hostedBy: 'Hosted by Design Forward at Broadway Pier & Liberty Station',
     scheduleList: [
       {
@@ -150,10 +191,9 @@ function EventBox() {
   return (
     <div className={classNames([styles.eventBox, globalStyles.contentWrapper])}>
       <div className={styles.contentContainer}>
-        {EVENTS.map(({ eventName, eventDate, hostedBy, scheduleList, scheduleButton, eventSummary }) => (
+        {EVENTS.map(({ eventName, hostedBy, scheduleList, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }) => (
           <div key={eventName} className={styles.eventWrapper}>
             <div className={styles.eventHeader}>
-              <h6>{eventDate}</h6>
               <h2>{eventName}</h2>
               <h4>{hostedBy}</h4>
               <hr />
@@ -162,8 +202,10 @@ function EventBox() {
               .map(({ dayEvents }) => (
                 <ScheduleBox
                   dayEvents={dayEvents}
-                  scheduleButton={scheduleButton}
                   eventSummary={eventSummary}
+                  eventSummaryNoImg={eventSummaryNoImg}
+                  eventImg={eventImg}
+                  eventImgAlt={eventImgAlt}
                 />
               ))}
           </div>

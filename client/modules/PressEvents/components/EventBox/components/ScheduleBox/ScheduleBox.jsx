@@ -16,8 +16,10 @@ import styles from './ScheduleBox.scss';
 
 const propTypes = {
   dayEvents: PropTypes.array.isRequired,
-  scheduleButton: PropTypes.array,
   eventSummary: PropTypes.array,
+  eventSummaryNoImg: PropTypes.array,
+  eventImg: PropTypes.string,
+  eventImgAlt: PropTypes.string,
 };
 
 const contextTypes = {
@@ -25,11 +27,13 @@ const contextTypes = {
 };
 
 const defaultProps = {
-  scheduleButton: '',
-  eventSummary: '',
+  eventSummary: [],
+  eventSummaryNoImg: [],
+  eventImg: '',
+  eventImgAlt: '',
 };
 
-function ScheduleBox({ dayEvents, scheduleButton, eventSummary }) {
+function ScheduleBox({ dayEvents, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }) {
   return (
     <div className={styles.scheduleWrapper}>
       {dayEvents
@@ -56,9 +60,28 @@ function ScheduleBox({ dayEvents, scheduleButton, eventSummary }) {
             </div>
           </div>
         ))}
-      {eventSummary &&
-        <div className={styles.eventSummary}>
-          {eventSummary.map((eventParagraph => (
+      <div className={styles.eventRecapWrapper}>
+        {eventImg &&
+          <div className={styles.eventImg}>
+            <img src={eventImg} alt={eventImgAlt} />
+          </div>
+        }
+        {eventSummary &&
+          <div className={styles.eventSummary}>
+            {eventSummary.map((eventParagraph => (
+              <p
+                key={eventParagraph}
+                dangerouslySetInnerHTML={{
+                  __html: eventParagraph,
+                }}
+              />
+            )))}
+          </div>
+        }
+      </div>
+      {eventSummaryNoImg &&
+        <div className={styles.eventSummaryNoImg}>
+          {eventSummaryNoImg.map((eventParagraph => (
             <p
               key={eventParagraph}
               dangerouslySetInnerHTML={{
@@ -66,15 +89,6 @@ function ScheduleBox({ dayEvents, scheduleButton, eventSummary }) {
               }}
             />
           )))}
-        </div>
-      }
-      {scheduleButton &&
-        <div className={classNames([styles.calloutBtn, globalStyles.sectionBtn])}>
-          {scheduleButton.map(({ scheduleLink, scheduleCallout }) =>
-            <a className={globalStyles.salmonOutline} href={scheduleLink}>
-              <span>{scheduleCallout}</span>
-            </a>
-          )}
         </div>
       }
     </div>
