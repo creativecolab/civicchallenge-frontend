@@ -62,20 +62,20 @@ const EVENTS = [
       },
     ],
     eventSummary: [
-      'Innovators from across the city kicked off the <a href=”/”>Design for San Diego (D4SD)</a> challenges with a design sprint and hackathon. Dozens of people worked into the wee hours of the morning and submitted 13 amazing and diverse concepts for the kickoff competition aimed at improving transportation in San Diego. Learn more about this event on the <a href="https://scalesdblog.wordpress.com/" target="_blank" rel="noopener noreferrer">SCALE blog post</a>.',
+      'Innovators from across the city kicked off the <a href=”/”>Design for San Diego (D4SD)</a> challenges with a design sprint and hackathon. Dozens of people worked into the wee hours of the morning and submitted 13 amazing and diverse concepts for the kickoff competition aimed at improving transportation in San Diego. Check out this <a href=”http://ucsdnews.ucsd.edu/feature/you-can-help-design-solutions-to-san-diegos-troubles-with-traffic-and-more” target="_blank" rel="noopener noreferrer">story by ThisWeek@UCSanDiego</a> and this <a href=”https://scalesdblog.wordpress.com/” target="_blank" rel="noopener noreferrer">blog report by SCALE SD</a> about the event.',
     ],
     eventImg: hackathon,
     eventImgAlt: 'People standing around a table at the hackathon event',
   },
   {
     eventName: 'Civic Design Course',
-    hostedBy: 'Hosted by Professor Dow at UC San Diego',
+    hostedBy: 'Hosted by Professor Dow at UC San Diego (all sessions from 5-7pm)',
     scheduleList: [
       {
         dayEvents: [
           {
             date: 'Oct 3',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Team formation and brainstorming',
             dayDetails: '',
             buttonTitle: '',
@@ -83,7 +83,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 5',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Problem framing and ideation',
             dayDetails: '',
             buttonTitle: '',
@@ -91,7 +91,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 10',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Rapid prototyping',
             dayDetails: '',
             buttonTitle: '',
@@ -99,7 +99,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 12',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'User research presentations',
             dayDetails: '',
             buttonTitle: '',
@@ -107,7 +107,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 17',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Visual design for posters/videos',
             dayDetails: '',
             buttonTitle: '',
@@ -115,21 +115,29 @@ const EVENTS = [
           },
           {
             date: 'Oct 19',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Studio time for prototypes, posters, and entries',
             dayDetails: '',
             buttonTitle: '',
             buttonLink: '',
           },
+          {
+            date: '',
+            timeRange: '',
+            dayName: '',
+            dayDetails: '',
+            buttonTitle: 'Sign up now to join for one or all sessions at UCSD',
+            buttonLink: 'https://goo.gl/forms/0tkGBf09TXSqza7g1',
+          },
         ],
       },
     ],
     eventSummaryNoImg: [
-      'If you are interested in joining for any or all of these sessions on human-centered design, <a href="https://goo.gl/forms/0tkGBf09TXSqza7g1" target="_blank" rel="noopener noreferrer">please signup here</a>.',
+      '',
     ],
   },
   {
-    eventName: 'D4SD Design Challenge Deadline',
+    eventName: 'D4SD Challenge Deadline',
     hostedBy: '',
     scheduleList: [
       {
@@ -138,9 +146,9 @@ const EVENTS = [
             date: 'Oct 22',
             timeRange: '11:59pm PDT',
             dayName: 'Deadline',
-            dayDetails: 'All entries due by midnight. <a href="https://herox.com/D4SD-2017">Register your team now.</a>',
-            buttonTitle: '',
-            buttonLink: '',
+            dayDetails: 'All entries due by midnight.',
+            buttonTitle: 'Register your team now',
+            buttonLink: 'https://herox.com/D4SD-2017',
           },
         ],
       },
