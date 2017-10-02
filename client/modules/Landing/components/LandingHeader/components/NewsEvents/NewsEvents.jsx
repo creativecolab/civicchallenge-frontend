@@ -27,7 +27,7 @@ const EVENTS = [
   {
     id: '',
     date: 'Oct 3-19 • UCSD main campus',
-    title: 'Human-Centered Design Course at UC San Diego',
+    title: 'Human-Centered Design Course at UCSD',
     link: 'https://goo.gl/forms/PoOhtm0nhq6wDLjj1',
     callToAction: 'Apply now to attend',
     target: '_blank',
