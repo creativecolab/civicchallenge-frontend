@@ -26,12 +26,12 @@ const twitterSectionTitle = 'LATEST TWEET';
 const EVENTS = [
   {
     id: '',
-    date: 'Sept 22-23 • Downtown Works',
-    title: 'D4SD Design Sprint and Hackathon',
-    link: '/events',
-    callToAction: 'Read about the event',
-    target: '',
-    rel: '',
+    date: 'Oct 3-19 • UCSD main campus',
+    title: 'Human-Centered Design Course at UC San Diego',
+    link: 'https://goo.gl/forms/PoOhtm0nhq6wDLjj1',
+    callToAction: 'Apply now to attend',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
   {
     id: '',
