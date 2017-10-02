@@ -41,16 +41,18 @@ function ScheduleBox({ dayEvents, eventSummary, eventSummaryNoImg, eventImg, eve
           <div className={styles.scheduleBox}>
             <div className={styles.date}>
               <h5 key={date}>{date}</h5>
-              <span key={timeRange}>{timeRange}</span>
+              {timeRange && <span key={timeRange}>{timeRange}</span>}
             </div>
             <div className={styles.event}>
               <p className={styles.dayName} key={dayName}>{dayName}</p>
-              <p
-                className={styles.eventDetails}
-                dangerouslySetInnerHTML={{
-                  __html: dayDetails,
-                }}
-              />
+              {dayDetails &&
+                <p
+                  className={styles.eventDetails}
+                  dangerouslySetInnerHTML={{
+                    __html: dayDetails,
+                  }}
+                />
+              }
               {buttonTitle &&
                 <div className={classNames([globalStyles.sectionBtn, styles.eventButton])}>
                   <a className={classNames([globalStyles.salmonSmallOutline])} href={buttonLink} target="_blank" rel="noreferrer noopener">

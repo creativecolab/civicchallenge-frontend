@@ -75,7 +75,7 @@ const EVENTS = [
         dayEvents: [
           {
             date: 'Oct 3',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Team formation and brainstorming',
             dayDetails: '',
             buttonTitle: '',
@@ -83,7 +83,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 5',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Problem framing and ideation',
             dayDetails: '',
             buttonTitle: '',
@@ -91,7 +91,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 10',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Rapid prototyping',
             dayDetails: '',
             buttonTitle: '',
@@ -99,7 +99,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 12',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'User research presentations',
             dayDetails: '',
             buttonTitle: '',
@@ -107,7 +107,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 17',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Visual design for posters/videos',
             dayDetails: '',
             buttonTitle: '',
@@ -115,7 +115,7 @@ const EVENTS = [
           },
           {
             date: 'Oct 19',
-            timeRange: '5pm-7pm',
+            timeRange: '',
             dayName: 'Studio time for prototypes, posters, and entries',
             dayDetails: '',
             buttonTitle: '',
