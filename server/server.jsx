@@ -10,7 +10,6 @@ import bodyParser from 'body-parser';
 
 import sessions from 'client-sessions';
 import helmet from 'helmet';
-import lusca from 'lusca';
 
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
@@ -100,21 +99,6 @@ app.use(bodyParser.json({
 app.use(bodyParser.urlencoded({
   limit: '20mb',
   extended: false,
-}));
-
-// Lusca
-app.use(lusca({
-  csrf: true,
-  hsts: {
-    maxAge: 31536000,
-    includeSubDomains: true,
-    preload: true,
-  },
-
-  // Also handled by Helmet
-  xframe: 'SAMEORIGIN',
-  xssProtection: true,
-  nosniff: true,
 }));
 
 // Helmet
