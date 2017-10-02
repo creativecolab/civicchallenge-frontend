@@ -126,7 +126,7 @@ const EVENTS = [
             timeRange: '',
             dayName: '',
             dayDetails: '',
-            buttonTitle: 'Sign up now to join for one or all sessions at UCSD',
+            buttonTitle: 'Sign up now to join sessions at UCSD',
             buttonLink: 'https://goo.gl/forms/0tkGBf09TXSqza7g1',
           },
         ],

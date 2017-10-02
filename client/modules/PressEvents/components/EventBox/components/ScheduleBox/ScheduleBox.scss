@@ -15,10 +15,10 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 4.5fr;
-    grid-template-rows: minmax($grid-min-height, auto);
+    grid-template-rows: minmax($grid-min-height*0.85, auto);
     align-items: flex-start;
 
-    grid-row-gap: 10px;
+    grid-row-gap: 70px;
 
     padding: 0 20px;
     @media (max-width: $mobile-max-width) { 
@@ -108,7 +108,7 @@
 
       p {
         margin: 0;
-        font-size: 0.9em;
+        font-size: 0.85em;
         color: $theme-color-medgrey;
       }
     }
