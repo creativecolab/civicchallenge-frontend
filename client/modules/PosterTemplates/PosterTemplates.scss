@@ -4,9 +4,15 @@
   height: 100%;
   width: 100%;
 
-  overflow-x: hidden;
-
   .details {
     margin: $spacing-margin 0;
+  }
+
+  .posters {
+    img {
+      width: 30%;
+      margin-right: 5%;
+      box-shadow: $theme-boxshadow;
+    }
   }
 }
