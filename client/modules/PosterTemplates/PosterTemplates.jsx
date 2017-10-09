@@ -20,15 +20,9 @@ import posterExample from './D4SD-poster-example.png';
  */
 
 const sectionTitle = 'Poster Template and Example';
-const description = '<p>Create a poster with a size of <b>40” tall by 30” wide in full color</b> and adopt a design language that best represents the team\'s identity/concept. The poster should introduce the specific challenge your team chooses as a focus, highlight insights from user research, and introduce your novel idea for how to solve the challenge.</p><p>D4SD will pay to print and display your poster at the Design Forward Community mixer. Your poster must include the D4SD partner banner at the very bottom as shown in these examples.</p>';
+const description = '<p>Create a poster with a size of <b>40” tall by 30” wide in full color</b> and adopt a design language that best represents the team\'s identity/concept. The poster should introduce the specific challenge your team chooses as a focus, highlight insights from user research, and introduce your novel idea for how to solve the challenge.</p><p>D4SD will pay to print and display your poster at the Design Forward Community mixer. Your poster must include the D4SD partner banner at the very bottom as shown in these examples. Templates for Powerpoint, Photoshop, Illustrator are available <a href="https://drive.google.com/drive/folders/0B0hGIWeXKALjQzhzdFZveXdZYzQ?usp=sharing" target="_blank" ref="noreferrer nooponer">here</a> for download.</p>';
 
 const CONTENT = [
-  {
-    paragraph: [
-      'Templates here for Powerpoint, Photoshop, Illustrator.',
-    ],
-    bullets: [],
-  },
   {
     paragraph: [
       'Here’s what make a good poster:',
@@ -49,7 +43,6 @@ const CONTENT = [
       'The poster must follow the guidelines and use the poster template specified here.',
       'At least one team member must be able to present your poster at the Design Forward Community Mixer on Oct 25 from 6-9pm.',
       'If your team is selected as a finalist, at least one team member must be available for the Design Forward Summit on Oct 26th from 7am-7pm.',
-
     ],
   },
 ];
