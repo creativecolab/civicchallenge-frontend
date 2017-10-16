@@ -21,7 +21,7 @@ import jurorsBackground from './jurors-background.png';
  * Constants
  */
 
-const sectionTitle = 'Jurors';
+const sectionTitle = 'Judging';
 
 const prizeSectionTitle = 'Prizes';
 const prizeText = 'Entries judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.';
@@ -43,7 +43,7 @@ function Jurors() {
   return (
     <section className={classNames([styles.jurors, globalStyles.contentWrapper])}>
       <Helmet
-        title="Jurors"
+        title={sectionTitle}
       />
       <Navbar />
       <Header
