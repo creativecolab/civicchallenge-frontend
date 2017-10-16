@@ -1,0 +1,31 @@
+@import "~styles/variables.scss";
+
+$header-img-dim: 250px;
+
+$button-size: 0.7em;
+
+.juror-header {
+
+  display: flex;
+  justify-content: space-between;
+
+  .juror-header-text {
+    width: 45%;
+
+    h2 {
+      padding-bottom: $spacing-margin;
+    }
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .criteria-box {
+      padding-bottom: $spacing-margin;
+    }
+  }
+}

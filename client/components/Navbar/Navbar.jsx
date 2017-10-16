@@ -42,6 +42,10 @@ const LINKS = [
     ],
   },
   {
+    href: '/jurors',
+    text: 'Jurors',
+  },
+  {
     href: '/events',
     text: 'Events',
   },

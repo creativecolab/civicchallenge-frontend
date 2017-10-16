@@ -1,0 +1,45 @@
+@import "~styles/variables.scss";
+
+
+$header-img-dim: 250px;
+
+.juror-team {
+
+  .member-box {
+
+    .member-inline-wrapper {
+      width: 45%;
+      margin-right: 5%;
+      display: inline-block;
+      .member-wrapper {
+        width: 100%;
+        margin-top: $spacing-margin;
+
+        display: flex;
+
+        .member-img {
+          $img-dimension: 150px;
+          img {
+            width: $img-dimension;
+            height: $img-dimension;
+          }
+        }
+        .member-info {
+          $font-size: 1em*0.9;
+
+          margin-left: 3%;
+          
+
+          h3, span {
+            font-size: $font-size;
+          }
+
+          h3 {
+            color: $theme-color-blue;
+            margin-bottom: $font-size
+          }
+        }
+      }
+    }
+  }
+}

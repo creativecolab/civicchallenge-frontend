@@ -29,6 +29,7 @@ const getGetInvolved = (nextState, cb) => require.ensure([], require => cb(null,
 const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PressEvents/PressEvents').default), 'events');
 const getCodeOfConduct = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/CodeOfConduct/CodeOfConduct').default), 'codeofconduct');
 const getPosterTemplates = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PosterTemplates/PosterTemplates').default), 'postertemplates');
+const getJurors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Jurors/Jurors').default), 'jurors');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
 
 
@@ -55,6 +56,7 @@ export default (
     <Route path="/events" getComponent={getEvents} />
     <Route path="/codeofconduct" getComponent={getCodeOfConduct} />
     <Route path="/postertemplates" getComponent={getPosterTemplates} />
+    <Route path="/jurors" getComponent={getJurors} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );
