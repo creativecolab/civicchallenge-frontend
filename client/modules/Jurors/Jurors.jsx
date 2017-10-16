@@ -43,7 +43,7 @@ function Jurors() {
   return (
     <section className={classNames([styles.jurors, globalStyles.contentWrapper])}>
       <Helmet
-        title={sectionTitle}
+        title="Judging"
       />
       <Navbar />
       <Header
