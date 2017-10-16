@@ -29,6 +29,7 @@ const MEMBERS = [
       'Enterprise Strategy & Innovation, Port of San Diego',
     ],
     memberImg: JohnBadringa,
+    memberLink: '',
   },
   {
     memberName: 'Katie Rast',
@@ -37,14 +38,16 @@ const MEMBERS = [
       'Founder, Fab Lab',
     ],
     memberImg: KatieRast,
+    memberLink: '',
   },
   {
     memberName: 'Scott Klemmer',
     memberTitle: [
-      'Professor of Cogntive Science and Computer Science&Eng',
+      'Professor of Cognitive Science and Computer Science & Engineering',
       'Design Lab, UC San Diego',
     ],
     memberImg: ScottKlemmer,
+    memberLink: '',
   },
   {
     memberName: 'Chuck Pelly',
@@ -53,6 +56,7 @@ const MEMBERS = [
       'Intersection-Inc',
     ],
     memberImg: ChuckPelly,
+    memberLink: '',
   },
   {
     memberName: 'Antoinette Meier',
@@ -61,6 +65,7 @@ const MEMBERS = [
       'SANDAG',
     ],
     memberImg: AntoinetteMeir,
+    memberLink: '',
   },
   {
     memberName: 'Regina Bernal',
@@ -69,6 +74,7 @@ const MEMBERS = [
       'School of Business, University of San Diego',
     ],
     memberImg: ReginaBernal,
+    memberLink: '',
   },
   {
     memberName: 'Daniel Obodovski',
@@ -77,6 +83,7 @@ const MEMBERS = [
       'SCALE SD',
     ],
     memberImg: DanielObodovski,
+    memberLink: '',
   },
   {
     memberName: 'Arnaud Vedy',
@@ -85,6 +92,7 @@ const MEMBERS = [
       'Performance & Analytics Department, City of San Diego',
     ],
     memberImg: ArnaudVedy,
+    memberLink: '',
   },
 ];
 
@@ -102,22 +110,24 @@ function JurorTeam() {
       <h2>The Jurors</h2>
 
       <div className={styles.memberBox}>
-        {MEMBERS.map(({ memberName, memberTitle, memberImg }) => (
+        {MEMBERS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
           <div className={styles.memberInlineWrapper}>
-            <div className={styles.memberWrapper}>
-              <div className={styles.memberImg}>
-                <img src={memberImg} alt="team member name" />
+            <a className={styles.jurorLink} href={memberLink} target="_blank" rel="noopener noreferrer">
+              <div className={styles.memberWrapper}>
+                <div className={styles.memberImg}>
+                  <img src={memberImg} alt="team member name" />
+                </div>
+                <div className={styles.memberInfo}>
+                  <h3>{memberName}</h3>
+                  {memberTitle.map(position =>
+                    <div className={styles.memberPositions}>
+                      <span key={position}>{position}</span>
+                      <br />
+                    </div>
+                  )}
+                </div>
               </div>
-              <div className={styles.memberInfo}>
-                <h3>{memberName}</h3>
-                {memberTitle.map(position =>
-                  <div className={styles.memberPositions}>
-                    <span key={position}>{position}</span>
-                    <br />
-                  </div>
-                )}
-              </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>

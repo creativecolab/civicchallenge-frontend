@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger, max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import classNames from 'util/classNames';
 import styles from './JurorHeader.scss';
 
 /**
@@ -16,6 +16,10 @@ const JUDGING_PROCESS = [
 
 const CRITERIA = [
   {
+    criteriaTitle: '',
+    criteriaDescription: '',
+  },
+  {
     criteriaTitle: 'Human-centered process',
     criteriaDescription: 'How effectively does the team involve stakeholders, obtain feedback, and leverage data to support design decisions?',
   },
@@ -24,11 +28,11 @@ const CRITERIA = [
     criteriaDescription: 'How unique is the solution compared to other available solutions?',
   },
   {
-    criteriaTitle: 'FEASIBILITY',
+    criteriaTitle: 'Feasibility',
     criteriaDescription: 'How likely can this solution be implemented? Will it work in the real world?',
   },
   {
-    criteriaTitle: 'PROCESS',
+    criteriaTitle: 'Impact',
     criteriaDescription: 'How will the solution affect people? Does it have any downsides?',
   },
 ];
@@ -48,7 +52,7 @@ const defaultProps = {};
 function JurorHeader() {
   return (
     <section className={styles.jurorHeader}>
-      <div className={styles.jurorHeaderText}>
+      <div className={classNames([styles.jurorHeaderText, styles.notLastSection])}>
         <h2>Judging Process</h2>
         {JUDGING_PROCESS.map(processParagraph =>
           <p key={processParagraph}>{processParagraph}</p>
@@ -56,10 +60,14 @@ function JurorHeader() {
       </div>
       <div className={styles.jurorHeaderText}>
         <h2>Criteria</h2>
-        {CRITERIA.map(({ criteriaTitle, criteriaDescription }) => (
-          <div className={styles.criteriaBox}>
-            <h3>{criteriaTitle}</h3>
-            <span>{criteriaDescription}</span>
+        {CRITERIA.map(({ criteriaTitle, criteriaDescription }, i) => (
+          <div>
+            {criteriaTitle &&
+              <div className={styles.criteriaBox}>
+                <h3>{i}. {criteriaTitle}</h3>
+                <span>{criteriaDescription}</span>
+              </div>
+            }
           </div>
         ))}
       </div>
