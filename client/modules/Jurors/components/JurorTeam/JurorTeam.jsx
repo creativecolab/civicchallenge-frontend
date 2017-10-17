@@ -29,7 +29,7 @@ const MEMBERS = [
       'Enterprise Strategy & Innovation, Port of San Diego',
     ],
     memberImg: JohnBadringa,
-    memberLink: '',
+    memberLink: 'https://www.linkedin.com/in/john-bandringa-77a47a4',
   },
   {
     memberName: 'Katie Rast',
@@ -38,7 +38,7 @@ const MEMBERS = [
       'Founder, Fab Lab',
     ],
     memberImg: KatieRast,
-    memberLink: '',
+    memberLink: 'https://www.sdfoundation.org/about-us/who-we-are/our-team/katie-rast-bio/',
   },
   {
     memberName: 'Scott Klemmer',
@@ -47,7 +47,7 @@ const MEMBERS = [
       'Design Lab, UC San Diego',
     ],
     memberImg: ScottKlemmer,
-    memberLink: '',
+    memberLink: 'http://d.ucsd.edu/srk/about/',
   },
   {
     memberName: 'Chuck Pelly',
@@ -56,7 +56,7 @@ const MEMBERS = [
       'Intersection-Inc',
     ],
     memberImg: ChuckPelly,
-    memberLink: '',
+    memberLink: 'https://www.linkedin.com/in/chuck-pelly-63164211',
   },
   {
     memberName: 'Antoinette Meier',
@@ -65,7 +65,7 @@ const MEMBERS = [
       'SANDAG',
     ],
     memberImg: AntoinetteMeir,
-    memberLink: '',
+    memberLink: 'https://www.linkedin.com/in/armeier',
   },
   {
     memberName: 'Regina Bernal',
@@ -74,7 +74,7 @@ const MEMBERS = [
       'School of Business, University of San Diego',
     ],
     memberImg: ReginaBernal,
-    memberLink: '',
+    memberLink: 'http://www.sandiego.edu/business/faculty-and-staff/biography.php?profile_id=2019',
   },
   {
     memberName: 'Daniel Obodovski',
@@ -83,7 +83,7 @@ const MEMBERS = [
       'SCALE SD',
     ],
     memberImg: DanielObodovski,
-    memberLink: '',
+    memberLink: 'http://www.silentintelligence.com/bio/',
   },
   {
     memberName: 'Arnaud Vedy',
@@ -92,7 +92,7 @@ const MEMBERS = [
       'Performance & Analytics Department, City of San Diego',
     ],
     memberImg: ArnaudVedy,
-    memberLink: '',
+    memberLink: 'https://www.linkedin.com/in/arnaud-vedy-01a5b2106',
   },
 ];
 
