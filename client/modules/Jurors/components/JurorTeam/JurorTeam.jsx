@@ -23,7 +23,7 @@ import ScottKlemmer from './imgs/ScottKlemmer.jpg';
 
 const MEMBERS = [
   {
-    memberName: 'John Badringa',
+    memberName: 'John Bandringa',
     memberTitle: [
       'Director',
       'Enterprise Strategy & Innovation, Port of San Diego',
