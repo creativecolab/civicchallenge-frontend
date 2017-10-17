@@ -38,7 +38,7 @@ const TEAM_TEXT = [
     paragraphHeader: 'Our Mission',
     paragraphText: [
       'D4SD strives to create a platform that demonstrates the value of human-centered design and produces solutions that could incubate into companies or longer-term projects that foster economic activity in the City of San Diego and beyond.',
-      'Postdoctoral fellow Narges Mahyar and PhD student Brian McInnis are the lead researchers in this project. Narges is interested in extending crowdsourcing technologies to engage the public in complex civic processes. Her research investigates how a mix of online technologies and traditional face-to-face engagement approaches can support new forms of collective innovation for local issues. Brian explores how to use semi-automated moderation methods to improve online forums for civic discussion and idea generation.',
+      'Postdoctoral fellow Narges Mahyar and PhD student Brian McInnis are leading research on this project. Narges is interested in extending crowdsourcing technologies to engage the public in complex civic processes. Her research investigates how a mix of online technologies and traditional face-to-face engagement approaches can support new forms of collective innovation for local issues. Brian explores how to use semi-automated moderation methods to improve online forums for civic discussion and idea generation.',
       'All of us have the common goal of making this first ever city-wide design challenge a raving success for both the city and our research, but most of all for the residents of San Diego!',
     ],
   },
