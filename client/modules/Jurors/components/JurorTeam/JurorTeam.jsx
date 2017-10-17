@@ -34,8 +34,9 @@ const MEMBERS = [
   {
     memberName: 'Katie Rast',
     memberTitle: [
-      'Director, Community Impact, The San Diego Foundation',
-      'Founder, Fab Lab',
+      'Director of Community Impact at',
+      'The San Diego Foundation',
+      'Founder of Fab Lab',
     ],
     memberImg: KatieRast,
     memberLink: 'https://www.sdfoundation.org/about-us/who-we-are/our-team/katie-rast-bio/',
@@ -88,7 +89,7 @@ const MEMBERS = [
   {
     memberName: 'Arnaud Vedy',
     memberTitle: [
-      'Program Coordinator',
+      'Data Science Program Coordinator',
       'Performance & Analytics Department, City of San Diego',
     ],
     memberImg: ArnaudVedy,

@@ -56,7 +56,7 @@ export default (
     <Route path="/events" getComponent={getEvents} />
     <Route path="/codeofconduct" getComponent={getCodeOfConduct} />
     <Route path="/postertemplates" getComponent={getPosterTemplates} />
-    <Route path="/jurors" getComponent={getJurors} />
+    <Route path="/judging" getComponent={getJurors} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
   </Route>
 );

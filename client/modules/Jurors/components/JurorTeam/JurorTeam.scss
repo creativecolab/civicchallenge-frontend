@@ -39,16 +39,19 @@ $member-font-size: 1em*0.9;
             
 
             h3, span {
-              font-size: $member-font-size;
+              
             }
 
             h3 {
+              margin-bottom: $member-font-size;
+
               color: $theme-color-blue;
-              margin-bottom: $member-font-size
+
             }
 
             span {
               color: $theme-color-black;
+              font-size: $member-font-size;
             }
           }
         }
