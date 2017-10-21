@@ -9,13 +9,13 @@ import Navbar from 'components/Navbar/Navbar';
 import Footer from 'components/Footer/Footer';
 import LandingHeader from './components/LandingHeader/LandingHeader';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
-// import NewsEvents from './components/NewsEvents/NewsEvents';
+import LandingJurors from './components/LandingJurors/LandingJurors';
+import DesignForwardCallout from './components/DesignForwardCallout/DesignForwardCallout';
 import TimeLineBox from './components/TimelineBox/TimelineBox';
 import ChallengeBriefs from './components/ChallengeBriefs/ChallengeBriefs';
 import WhyParticipate from './components/WhyParticipate/WhyParticipate';
 import Register from './components/Register/Register';
 import Sponsors from './components/Sponsors/Sponsors';
-/* import ChallengeGrid from './components/ChallengeGrid/ChallengeGrid'; */
 
 import styles from './Landing.scss';
 
@@ -40,6 +40,8 @@ function Landing() {
       <Navbar />
       <LandingHeader />
       <ChallengeDescription />
+      <DesignForwardCallout />
+      <LandingJurors />
       <TimeLineBox />
       <WhyParticipate />
       <ChallengeBriefs />

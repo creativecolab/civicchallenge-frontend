@@ -272,6 +272,26 @@ div[data-reactroot] {
   margin: 10px 0;
   font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
 
+  a.greyOutline {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: $theme-color-medgrey;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-medgrey;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-medgrey;
+    }
+  }
+
   a.blueOutline {
     text-decoration: none;
     padding: $button-padding;

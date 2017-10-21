@@ -28,10 +28,10 @@ $member-font-size: 1em*0.9;
             transition: ease $ease-time;
           }
           .member-img {
-            $img-dimension: 150px;
+            $juror-member-img-dim: 150px;
             img {
-              width: $img-dimension;
-              height: $img-dimension;
+              width: $juror-member-img-dim;
+              height: $juror-member-img-dim;
             }
           }
           .member-info {

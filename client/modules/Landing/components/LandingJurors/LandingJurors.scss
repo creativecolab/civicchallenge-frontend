@@ -1,0 +1,84 @@
+@import '~styles/variables';
+
+$icon-dim: 150px;
+$item-font-size: 14px;
+$h4-font-size: 15px;
+$content-element-width-mobile: 90%;
+$content-element-width-desktop: 30%;
+$member-font-size: 0.65em;
+
+section#landing-jurors {
+  padding: $landing-section-padding-d;
+  @media (max-width: $mobile-max-width) {
+    padding: $landing-section-padding-m;
+  }
+  color: #212121;
+
+  margin: 0 auto;
+
+  div.contentContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    
+    a.juror-link {
+      div.member-wrapper {
+        width: $juror-member-img-dim;
+        div.member-img {
+          margin-bottom: 10px;
+          img {
+            height: $juror-member-img-dim;
+            width: $juror-member-img-dim;
+          }
+        }
+
+        &:hover {
+          opacity: 0.7;
+          transition: opacity $ease-time ease 0.1s;
+        }
+      }
+
+      div.member-info {
+        div.member-positions {
+          span {
+            color: $theme-color-black;
+            font-size: $member-font-size;
+          }
+        }
+      }
+    }
+  }
+
+  div.btn {
+    margin-top: $spacing-margin*2;
+    text-align: center;
+  }  
+  
+}
+
+@media (min-width: $desktop-min-width) {
+section#landing-jurors {
+  width: $component-width-desktop;
+
+  div.contentContainer {
+    width: $component-width-desktop;
+
+    div.participateIconsWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      div.contentElement {
+        width: $content-element-width-desktop;
+      }
+
+    }
+  }
+}
+}
+
+@media (max-width: $mobile-max-width) {
+section#landing-jurors{
+}
+}
