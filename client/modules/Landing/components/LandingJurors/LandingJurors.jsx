@@ -116,7 +116,7 @@ const contextTypes = {
 
 const defaultProps = {};
 
-/* randomizes four jurors */
+/* randomizes four jurors using fisher-yates */
 function getJurors(jurorList) {
   const shuffleList = jurorList;
   const displaySize = 4;  // number of jurors to display
