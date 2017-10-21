@@ -15,6 +15,12 @@ import JohnBadringa from '../../../Jurors/components/JurorTeam/imgs/JohnBadringa
 import KatieRast from '../../../Jurors/components/JurorTeam/imgs/KatieRast.jpg';
 import ScottKlemmer from '../../../Jurors/components/JurorTeam/imgs/ScottKlemmer.jpg';
 import ChuckPelly from '../../../Jurors/components/JurorTeam/imgs/ChuckPelly.jpg';
+
+import AntoinetteMeir from '../../../Jurors/components/JurorTeam/imgs/AntoinetteMeir.jpg';
+import ArnaudVedy from '../../../Jurors/components/JurorTeam/imgs/ArnaudVedy.jpg';
+import DanielObodovski from '../../../Jurors/components/JurorTeam/imgs/DanielObodovski.jpg';
+import ReginaBernal from '../../../Jurors/components/JurorTeam/imgs/ReginaBernal.jpg';
+
 /**
  * Get Involved
  */
@@ -28,7 +34,8 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'John Bandringa',
     memberTitle: [
-      'Port of San Diego',
+      'Director',
+      'Enterprise Strategy & Innovation, Port of San Diego',
     ],
     memberImg: JohnBadringa,
     memberLink: 'https://www.linkedin.com/in/john-bandringa-77a47a4',
@@ -36,8 +43,9 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Katie Rast',
     memberTitle: [
+      'Director of Community Impact at',
       'The San Diego Foundation',
-      'Fab Lab',
+      'Founder of Fab Lab',
     ],
     memberImg: KatieRast,
     memberLink: 'https://www.sdfoundation.org/about-us/who-we-are/our-team/katie-rast-bio/',
@@ -45,6 +53,7 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Scott Klemmer',
     memberTitle: [
+      'Professor of Cognitive Science and Computer Science & Engineering',
       'Design Lab, UC San Diego',
     ],
     memberImg: ScottKlemmer,
@@ -53,10 +62,47 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Chuck Pelly',
     memberTitle: [
+      'Chief Creative Officer',
       'Intersection-Inc',
     ],
     memberImg: ChuckPelly,
     memberLink: 'https://www.linkedin.com/in/chuck-pelly-63164211',
+  },
+  {
+    memberName: 'Antoinette Meier',
+    memberTitle: [
+      'Principal Regional Planner',
+      'SANDAG',
+    ],
+    memberImg: AntoinetteMeir,
+    memberLink: 'https://www.linkedin.com/in/armeier',
+  },
+  {
+    memberName: 'Regina Bernal',
+    memberTitle: [
+      'Entrepreneurship Manager',
+      'School of Business, University of San Diego',
+    ],
+    memberImg: ReginaBernal,
+    memberLink: 'http://www.sandiego.edu/business/faculty-and-staff/biography.php?profile_id=2019',
+  },
+  {
+    memberName: 'Daniel Obodovski',
+    memberTitle: [
+      'CEO/Founder',
+      'SCALE SD',
+    ],
+    memberImg: DanielObodovski,
+    memberLink: 'http://www.silentintelligence.com/bio/',
+  },
+  {
+    memberName: 'Arnaud Vedy',
+    memberTitle: [
+      'Data Science Program Coordinator',
+      'Performance & Analytics Department, City of San Diego',
+    ],
+    memberImg: ArnaudVedy,
+    memberLink: 'https://www.linkedin.com/in/arnaud-vedy-01a5b2106',
   },
 ];
 
@@ -70,14 +116,33 @@ const contextTypes = {
 
 const defaultProps = {};
 
+/* randomizes four jurors */
+function getJurors(jurorList) {
+  const shuffleList = jurorList;
+  const displaySize = 4;
+
+  for (let i = jurorList.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = jurorList[i];
+    shuffleList[i] = shuffleList[j];
+    shuffleList[j] = temp;
+  }
+
+  const spliceStart = displaySize - 1;
+  const spliceNumber = jurorList.length - displaySize;
+  shuffleList.splice(spliceStart, spliceNumber);
+  return shuffleList;
+}
+
 function LandingJurors(props) {
+  const SHUFFLED_JURORS = getJurors(JURORS_MAXFOUR);
   return (
     <section id={styles.landingJurors} ref={props.componentRef}>
       <div className={globalStyles.contentWrapper}>
         <h1>{sectionTitle}</h1>
         <p>{sectionDetails}</p>
         <div className={styles.contentContainer}>
-          {JURORS_MAXFOUR.map(({ memberName, memberTitle, memberImg, memberLink }) => (
+          {SHUFFLED_JURORS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
             <a className={styles.jurorLink} href={memberLink} target="_blank" rel="noopener noreferrer">
               <div className={styles.memberWrapper}>
                 <div className={styles.memberImg}>
