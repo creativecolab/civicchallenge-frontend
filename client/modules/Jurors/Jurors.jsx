@@ -24,7 +24,7 @@ import jurorsBackground from './jurors-background.png';
 const sectionTitle = 'Judging';
 
 const prizeSectionTitle = 'Prizes';
-const prizeText = 'Entries judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.';
+const prizeText = 'Entries judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities. D4SD will offer $5000 cash as the grand prize for the best team. Also, the top eight finalists will have a chance to make a special pitch directly to the City of San Diego, SCALE SD, and SANDAG for an opportunity to implement their ideas.';
 
 
 /**
