@@ -20,7 +20,7 @@ import ChuckPelly from '../../../Jurors/components/JurorTeam/imgs/ChuckPelly.jpg
  */
 
 const sectionTitle = 'Jurors';
-const sectionDetails = 'juror text goes here';
+const sectionDetails = 'Our amazing D4SD jurors come from the worlds of technology, government, entrepreneurship, and education. They will judge solutions based on four key criteria: human-centered process, novelty, feasibility, and impact.';
 const btnText = 'see all jurors';
 const btnLink = '/judging';
 

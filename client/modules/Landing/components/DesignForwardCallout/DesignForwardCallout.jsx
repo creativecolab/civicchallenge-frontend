@@ -22,8 +22,8 @@ const EVENTS = [
     details: 'D4SD Poster Showcase at the Community Mixer',
   },
   {
-    date: 'On Oct 25, 6-9pm',
-    details: 'D4SD Poster Showcase at the Community Mixer',
+    date: 'On Oct 26, 5-7pm',
+    details: 'D4SD Awards Ceremony at the Summit',
   },
 ];
 
