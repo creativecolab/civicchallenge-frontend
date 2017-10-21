@@ -119,8 +119,9 @@ const defaultProps = {};
 /* randomizes four jurors */
 function getJurors(jurorList) {
   const shuffleList = jurorList;
-  const displaySize = 4;
+  const displaySize = 4;  // number of jurors to display
 
+  /* randomize list */
   for (let i = jurorList.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     const temp = jurorList[i];
@@ -128,6 +129,7 @@ function getJurors(jurorList) {
     shuffleList[j] = temp;
   }
 
+  /* remove extra elements */
   const spliceStart = displaySize - 1;
   const spliceNumber = jurorList.length - displaySize;
   shuffleList.splice(spliceStart, spliceNumber);
