@@ -20,7 +20,7 @@ import AntoinetteMeir from '../../../Jurors/components/JurorTeam/imgs/Antoinette
 import ArnaudVedy from '../../../Jurors/components/JurorTeam/imgs/ArnaudVedy.jpg';
 import DanielObodovski from '../../../Jurors/components/JurorTeam/imgs/DanielObodovski.jpg';
 import ReginaBernal from '../../../Jurors/components/JurorTeam/imgs/ReginaBernal.jpg';
-
+import SeanVanTyne from '../../../Jurors/components/JurorTeam/imgs/SeanVanTyne.jpg';
 /**
  * Get Involved
  */
@@ -34,8 +34,7 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'John Bandringa',
     memberTitle: [
-      'Director',
-      'Enterprise Strategy & Innovation, Port of San Diego',
+      'Port of San Diego',
     ],
     memberImg: JohnBadringa,
     memberLink: 'https://www.linkedin.com/in/john-bandringa-77a47a4',
@@ -43,7 +42,6 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Katie Rast',
     memberTitle: [
-      'Director of Community Impact at',
       'The San Diego Foundation',
       'Founder of Fab Lab',
     ],
@@ -53,7 +51,6 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Scott Klemmer',
     memberTitle: [
-      'Professor of Cognitive Science and Computer Science & Engineering',
       'Design Lab, UC San Diego',
     ],
     memberImg: ScottKlemmer,
@@ -62,7 +59,6 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Chuck Pelly',
     memberTitle: [
-      'Chief Creative Officer',
       'Intersection-Inc',
     ],
     memberImg: ChuckPelly,
@@ -71,7 +67,6 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Antoinette Meier',
     memberTitle: [
-      'Principal Regional Planner',
       'SANDAG',
     ],
     memberImg: AntoinetteMeir,
@@ -80,7 +75,6 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Regina Bernal',
     memberTitle: [
-      'Entrepreneurship Manager',
       'School of Business, University of San Diego',
     ],
     memberImg: ReginaBernal,
@@ -89,7 +83,6 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Daniel Obodovski',
     memberTitle: [
-      'CEO/Founder',
       'SCALE SD',
     ],
     memberImg: DanielObodovski,
@@ -98,11 +91,18 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Arnaud Vedy',
     memberTitle: [
-      'Data Science Program Coordinator',
-      'Performance & Analytics Department, City of San Diego',
+      'City of San Diego',
     ],
     memberImg: ArnaudVedy,
     memberLink: 'https://www.linkedin.com/in/arnaud-vedy-01a5b2106',
+  },
+  {
+    memberName: 'Sean Van Tyne',
+    memberTitle: [
+      'Van Tyne Group',
+    ],
+    memberImg: SeanVanTyne,
+    memberLink: 'www.SeanVanTyne.com',
   },
 ];
 

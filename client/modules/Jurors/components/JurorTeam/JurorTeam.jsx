@@ -15,6 +15,7 @@ import JohnBadringa from './imgs/JohnBadringa.jpg';
 import KatieRast from './imgs/KatieRast.jpg';
 import ReginaBernal from './imgs/ReginaBernal.jpg';
 import ScottKlemmer from './imgs/ScottKlemmer.jpg';
+import SeanVanTyne from './imgs/SeanVanTyne.jpg';
 
 
 /**
@@ -94,6 +95,14 @@ const MEMBERS = [
     ],
     memberImg: ArnaudVedy,
     memberLink: 'https://www.linkedin.com/in/arnaud-vedy-01a5b2106',
+  },
+  {
+    memberName: 'Sean Van Tyne',
+    memberTitle: [
+      'Customer Experience Architect, Van Tyne Group',
+    ],
+    memberImg: SeanVanTyne,
+    memberLink: 'www.SeanVanTyne.com',
   },
 ];
 
