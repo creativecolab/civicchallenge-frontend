@@ -46,9 +46,16 @@ section#design-forward-callout {
 
     div.callout-text {
 
-      h2 {
-        color: #fff;
-        margin-bottom: $spacing-margin*0.75;
+      a {
+        h2 {
+          color: #fff;
+          margin-bottom: $spacing-margin*0.75;
+
+          &:hover {
+            opacity: 0.7;
+            transition: opacity $ease-time ease 0.1s;
+          }
+        }
       }
       
         
