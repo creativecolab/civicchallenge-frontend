@@ -54,7 +54,9 @@ function DesignForwardCallout(props) {
           <div className={styles.horizontalLine} />
           <hr className={styles.mobileLine} />
           <div className={styles.calloutText}>
-            <h2>{joinUs}</h2>
+            <a href={dfLink} target="_blank" rel="noopener noreferrer">
+              <h2>{joinUs}</h2>
+            </a>
             {EVENTS.map(({ date, details }) => (
               <div className={styles.datesWrapper}>
                 <p className={styles.date}>{date}</p>

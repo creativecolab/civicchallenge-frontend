@@ -38,7 +38,7 @@ const EVENTS = [
     date: 'Oct 22 at 11:59PM  • Online',
     title: 'Challenge Submission Deadline',
     link: 'https://herox.com/D4SD-2017',
-    callToAction: 'Register your team now',
+    callToAction: 'Submit Now',
     target: '',
     rel: '',
   },
@@ -56,8 +56,8 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'Only 1 DAY LEFT to register for the Design for San Diego challenge.',
-    tweetURL: 'https://twitter.com/Design4SD/status/917442178867019776',
+    tweet: 'Solutions for the D4SD Challenge are due tomorrow Oct 22nd, submit now!',
+    tweetURL: 'https://twitter.com/Design4SD/status/921906914056814594',
   },
 ];
 
