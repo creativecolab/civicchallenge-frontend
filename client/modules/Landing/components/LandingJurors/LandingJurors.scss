@@ -20,7 +20,7 @@ section#landing-jurors {
     
     a.juror-link {
       div.member-wrapper {
-        width: $juror-member-img-dim;
+        width: $juror-img-dim;
         div.member-img {
           margin-bottom: 10px;
           img {
@@ -36,6 +36,7 @@ section#landing-jurors {
       }
 
       div.member-info {
+        width: 100%;
         div.member-positions {
           span {
             color: $theme-color-black;
@@ -54,6 +55,18 @@ section#landing-jurors {
 }
 
 
-@media (min-width: $mobile-max-width) {
+@media (max-width: 900px) {
+section#landing-jurors {
+  width: 100%;
+  div.contentContainer {
+    width: 100%;
+    display: inline-block;
 
+    div.member-wrapper {
+      margin: 0 auto;
+      margin-bottom: $spacing-margin;
+    }
+  }  
+  
+}
 }

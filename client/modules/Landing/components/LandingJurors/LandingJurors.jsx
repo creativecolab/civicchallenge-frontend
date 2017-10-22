@@ -43,7 +43,7 @@ const JURORS_MAXFOUR = [
     memberName: 'Katie Rast',
     memberTitle: [
       'The San Diego Foundation',
-      'Founder of Fab Lab',
+      'and Fab Lab',
     ],
     memberImg: KatieRast,
     memberLink: 'https://www.sdfoundation.org/about-us/who-we-are/our-team/katie-rast-bio/',
@@ -75,7 +75,8 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'Regina Bernal',
     memberTitle: [
-      'School of Business, University of San Diego',
+      'School of Business,',
+      ' University of San Diego'
     ],
     memberImg: ReginaBernal,
     memberLink: 'http://www.sandiego.edu/business/faculty-and-staff/biography.php?profile_id=2019',
