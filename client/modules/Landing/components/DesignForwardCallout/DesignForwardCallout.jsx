@@ -46,7 +46,7 @@ function DesignForwardCallout(props) {
     <section id={styles.designForwardCallout} ref={props.componentRef}>
       <div className={globalStyles.contentWrapper}>
         <div className={styles.calloutWrapper}>
-          <a href={dfLink} target="_blank" rel="noopener noreferrer">
+          <a className={styles.calloutLink} href={dfLink} target="_blank" rel="noopener noreferrer">
             <div className={styles.dfLogo}>
               <img src={dfLogo} alt="design forward" />
             </div>

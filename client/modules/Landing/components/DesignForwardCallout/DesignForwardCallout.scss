@@ -45,10 +45,13 @@ section#design-forward-callout {
     }
 
     div.callout-text {
+
       h2 {
+        color: #fff;
         margin-bottom: $spacing-margin*0.75;
       }
       
+        
       div.dates-wrapper {
         margin: 15px 0;
         p {
