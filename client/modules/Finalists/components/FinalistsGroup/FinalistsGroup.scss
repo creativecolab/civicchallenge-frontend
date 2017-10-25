@@ -43,14 +43,17 @@ $member-font-size: 1em*0.9;
 
           }
 
-          span {
+          p, span {
             color: $theme-color-black;
             font-size: $member-font-size;
           }
 
           span.member-list {
-            padding-bottom: $member-font-size*0.5;
             font-weight: bold;
+            font-size: 0.8em;
+          }
+
+          p.team-desc {
             font-size: 0.8em;
           }
         }

@@ -19,6 +19,11 @@ const TEAMS = [
     memberList: 'Garret Hoover, Selene Young, Jessica Joy',
     teamImg: JohnBadringa,
   },
+  {
+    teamName: 'GATE Center: Immersive AV Learning Center',
+    memberList: 'Garret Hoover, Selene Young, Jessica Joy',
+    teamImg: JohnBadringa,
+  },
 ];
 
 const teamDesc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
@@ -46,7 +51,7 @@ function FinalistsGroup() {
                 <div className={styles.memberPositions}>
                   <span key={memberList} className={styles.memberList}>{memberList}</span>
                   <br />
-                  <span key={teamDesc}>{teamDesc}</span>
+                  <p key={teamDesc} className={styles.teamDesc}>{teamDesc}</p>
                 </div>
               </div>
             </div>
