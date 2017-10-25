@@ -13,6 +13,8 @@ import remoteService from './imgs/remoteService.jpg';
 import roadMap from './imgs/roadMap.jpg';
 import spot from './imgs/spot.jpg';
 
+import defaultPoster from './imgs/defaultPoster.jpg';
+
 /**
  * FinalistsGroup
  */
@@ -51,7 +53,7 @@ const TEAMS = [
   {
     teamName: 'Audio Movement',
     memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
-    teamImg: beachAccess,
+    teamImg: defaultPoster,
     projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
   },
   {
@@ -63,7 +65,7 @@ const TEAMS = [
   {
     teamName: 'San Diego Parking App',
     memberList: 'Tyler Reinecke, Thomas Twomey,  Jangwoo Lee, Adrian Derderian, Dave Dunn',
-    teamImg: beachAccess,
+    teamImg: defaultPoster,
     projectDesc: 'An app that shows available parking within downtown San Diego.',
   },
 ];
