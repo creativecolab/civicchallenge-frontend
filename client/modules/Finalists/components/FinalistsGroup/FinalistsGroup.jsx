@@ -44,6 +44,24 @@ const TEAMS = [
     teamImg: JohnBadringa,
     projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
   },
+  {
+    teamName: 'Audio Movement',
+    memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
+    teamImg: JohnBadringa,
+    projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
+  },
+  {
+    teamName: 'Road Map',
+    memberList: 'Anna Chen, Marie McNamara',
+    teamImg: JohnBadringa,
+    projectDesc: 'An app focused on the iterative design process, bringing professionals and the public together to share designs, expertise, and feedback.',
+  },
+  {
+    teamName: 'San Diego Parking App',
+    memberList: 'Tyler Reinecke, Thomas Twomey,  Jangwoo Lee, Adrian Derderian, Dave Dunn',
+    teamImg: JohnBadringa,
+    projectDesc: 'An app that shows available parking within downtown San Diego.',
+  },
 ];
 
 const propTypes = {};
