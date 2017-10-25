@@ -10,7 +10,7 @@ import styles from './JurorHeader.scss';
 
 const JUDGING_PROCESS = [
   'Judging for the 2017 D4SD challenge will happen in two rounds:',
-  'In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed below. Judging will happen online after the Oct 22 11:59pm PDT deadline.  Finalists will be announced on Oct 25th at the Design Forward community mixer at Broadway Pier (6-9pm), on the D4SD website, as well as through email.',
+  'In round one, a panel of experts in human-centered design, civics, and business will assess the deliverables according to the criteria listed below. Judging will happen online after the Oct 22 11:59pm PDT deadline.  Finalists will be announced on Oct 25th at the Design Forward community mixer at Broadway Pier (5:30-8:30pm), on the D4SD website, as well as through email.',
   'In round two, distinguished jurors will assess the finalists during the Design Forward Summit on Oct 26th. Teams must have at least one team member present throughout the day (7:30am-7pm) to interact with the jurors.  Finalist teams will also deliver a two-minute verbal pitch that evening during the D4SD Awards Ceremony.',
 ];
 

@@ -80,7 +80,7 @@ const JURORS_MAXFOUR = [
     memberName: 'Regina Bernal',
     memberTitle: [
       'School of Business,',
-      ' University of San Diego'
+      'University of San Diego',
     ],
     memberImg: ReginaBernal,
     memberLink: 'http://www.sandiego.edu/business/faculty-and-staff/biography.php?profile_id=2019',
@@ -177,15 +177,27 @@ function LandingJurors(props) {
         <p>{sectionDetails}</p>
         <div className={styles.contentContainer}>
           {SHUFFLED_JURORS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
-            <a className={styles.jurorLink} href={memberLink} target="_blank" rel="noopener noreferrer">
-              <div className={styles.memberWrapper}>
+            <a
+              key={memberLink}
+              className={styles.jurorLink}
+              href={memberLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                key={memberName}
+                className={styles.memberWrapper}
+              >
                 <div className={styles.memberImg}>
                   <img src={memberImg} alt={memberName} />
                 </div>
                 <div className={styles.memberInfo}>
                   <h3>{memberName}</h3>
                   {memberTitle.map(position =>
-                    <div className={styles.memberPositions}>
+                    <div
+                      key={position}
+                      className={styles.memberPositions}
+                    >
                       <span key={position}>{position}</span>
                       <br />
                     </div>

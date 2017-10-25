@@ -81,6 +81,7 @@ function NewsEvents(props) {
             <div className={styles.newsBoxes}>
               {EVENTS.map(({ title, date, link, callToAction, target, rel }) => (
                 <EventBox
+                  key={title}
                   title={title}
                   date={date}
                   link={link}
@@ -97,6 +98,7 @@ function NewsEvents(props) {
             <div className={styles.newsBoxes}>
               {TWEETS.map(({ tweet, tweetURL }) => (
                 <TwitterBox
+                  key={tweet}
                   tweet={tweet}
                   tweetURL={tweetURL}
                 />
