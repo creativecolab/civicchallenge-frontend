@@ -3,6 +3,8 @@
 
 $header-img-dim: 250px;
 
+$true-mobile-width: 500px;
+
 $member-font-size: 1em*0.9;
 .finalists-group {
 
@@ -63,7 +65,29 @@ $member-font-size: 1em*0.9;
   }
 }
 
-@media screen and (max-width: $mobile-max-width) {
+@media screen and (min-width: $true-mobile-width) and (max-width: $mobile-max-width) {
+  .finalists-group {
+    .member-box {
+      .member-inline-wrapper {
+        width: 100%;
+        .member-wrapper {
+          .member-info {
+            span {
+              font-size: $member-font-size*0.8;
+            }
+          }
+          .team-img {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $true-mobile-width) {
   .finalists-group {
     .member-box {
       .member-inline-wrapper {

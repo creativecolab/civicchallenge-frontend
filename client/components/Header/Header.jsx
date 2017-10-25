@@ -36,7 +36,7 @@ function Header({ backgroundImg, headerText, subheaderText }) {
           style={{
             width: 1440,
             height: 300,
-            backgroundColor: '#450093',
+            backgroundColor: '#4496FF',
           }}
         />
       </Background>
