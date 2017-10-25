@@ -21,6 +21,10 @@ import ArnaudVedy from '../../../Jurors/components/JurorTeam/imgs/ArnaudVedy.jpg
 import DanielObodovski from '../../../Jurors/components/JurorTeam/imgs/DanielObodovski.jpg';
 import ReginaBernal from '../../../Jurors/components/JurorTeam/imgs/ReginaBernal.jpg';
 import SeanVanTyne from '../../../Jurors/components/JurorTeam/imgs/SeanVanTyne.jpg';
+
+import DavidGraham from '../../../Jurors/components/JurorTeam/imgs/DavidGraham.jpg';
+import BrentBoyd from '../../../Jurors/components/JurorTeam/imgs/BrentBoyd.jpg';
+import LimaSaft from '../../../Jurors/components/JurorTeam/imgs/LimaSaft.jpg';
 /**
  * Get Involved
  */
@@ -104,6 +108,33 @@ const JURORS_MAXFOUR = [
     ],
     memberImg: SeanVanTyne,
     memberLink: 'www.SeanVanTyne.com',
+  },
+  {
+    memberName: 'Brent Boyd',
+    memberTitle: [
+      'Manager of Service Quality, Rail Division',
+      'Metropolitan Transit System',
+    ],
+    memberImg: BrentBoyd,
+    memberLink: 'https://www.linkedin.com/in/brent-boyd-0754816/',
+  },
+  {
+    memberName: 'Lima Saft',
+    memberTitle: [
+      'Transportation Engineer',
+      'California Department of Transportation',
+    ],
+    memberImg: LimaSaft,
+    memberLink: 'https://www.linkedin.com/in/lima-saft-phd-b5607619/',
+  },
+  {
+    memberName: 'David Graham',
+    memberTitle: [
+      'Chief Operating Officer',
+      'City of San Diego',
+    ],
+    memberImg: DavidGraham,
+    memberLink: 'http://cityage.org/project/david-graham-deputy-coo-city-of-san-diego/',
   },
 ];
 
