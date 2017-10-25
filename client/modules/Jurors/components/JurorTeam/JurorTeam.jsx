@@ -16,10 +16,64 @@ import KatieRast from './imgs/KatieRast.jpg';
 import ReginaBernal from './imgs/ReginaBernal.jpg';
 import ScottKlemmer from './imgs/ScottKlemmer.jpg';
 import SeanVanTyne from './imgs/SeanVanTyne.jpg';
+import DavidGraham from './imgs/DavidGraham.jpg';
+import BrentBoyd from './imgs/BrentBoyd.jpg';
+import LimaSaft from './imgs/LimaSaft.jpg';
+
+/**
+ * FinalistJurors
+ */
+
+const FINALIST_JURORS = [
+  {
+    memberName: 'Scott Klemmer',
+    memberTitle: [
+      'Professor of Cognitive Science and Computer Science & Engineering',
+      'Design Lab, UC San Diego',
+    ],
+    memberImg: ScottKlemmer,
+    memberLink: 'http://d.ucsd.edu/srk/about/',
+  },
+  {
+    memberName: 'David Graham',
+    memberTitle: [
+      'Chief Operating Officer',
+      'City of San Diego',
+    ],
+    memberImg: DavidGraham,
+    memberLink: 'http://cityage.org/project/david-graham-deputy-coo-city-of-san-diego/',
+  },
+  {
+    memberName: 'Sean Van Tyne',
+    memberTitle: [
+      'Customer Experience Architect, Van Tyne Group',
+    ],
+    memberImg: SeanVanTyne,
+    memberLink: 'http://www.SeanVanTyne.com',
+  },
+  {
+    memberName: 'Brent Boyd',
+    memberTitle: [
+      'Manager of Service Quality, Rail Division',
+      'Metropolitan Transit System',
+    ],
+    memberImg: BrentBoyd,
+    memberLink: 'https://www.linkedin.com/in/brent-boyd-0754816/',
+  },
+  {
+    memberName: 'Lima Saft',
+    memberTitle: [
+      'Transportation Engineer',
+      'California Department of Transportation',
+    ],
+    memberImg: LimaSaft,
+    memberLink: 'https://www.linkedin.com/in/lima-saft-phd-b5607619/',
+  },
+];
 
 
 /**
- * JurorTeam
+ * Round1JurorTeam
  */
 
 const MEMBERS = [
@@ -41,15 +95,6 @@ const MEMBERS = [
     ],
     memberImg: KatieRast,
     memberLink: 'https://www.sdfoundation.org/about-us/who-we-are/our-team/katie-rast-bio/',
-  },
-  {
-    memberName: 'Scott Klemmer',
-    memberTitle: [
-      'Professor of Cognitive Science and Computer Science & Engineering',
-      'Design Lab, UC San Diego',
-    ],
-    memberImg: ScottKlemmer,
-    memberLink: 'http://d.ucsd.edu/srk/about/',
   },
   {
     memberName: 'Chuck Pelly',
@@ -96,14 +141,6 @@ const MEMBERS = [
     memberImg: ArnaudVedy,
     memberLink: 'https://www.linkedin.com/in/arnaud-vedy-01a5b2106',
   },
-  {
-    memberName: 'Sean Van Tyne',
-    memberTitle: [
-      'Customer Experience Architect, Van Tyne Group',
-    ],
-    memberImg: SeanVanTyne,
-    memberLink: 'www.SeanVanTyne.com',
-  },
 ];
 
 const propTypes = {};
@@ -117,7 +154,35 @@ const defaultProps = {};
 function JurorTeam() {
   return (
     <section className={styles.jurorTeam}>
-      <h2>The Jurors</h2>
+      <h2>Finalist Jurors</h2>
+
+      <div className={styles.memberBox}>
+        {FINALIST_JURORS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
+          <div className={styles.memberInlineWrapper}>
+            <a className={styles.jurorLink} href={memberLink} target="_blank" rel="noopener noreferrer">
+              <div className={styles.memberWrapper}>
+                <div className={styles.memberImg}>
+                  <img src={memberImg} alt="team member name" />
+                </div>
+                <div className={styles.memberInfo}>
+                  <h3>{memberName}</h3>
+                  {memberTitle.map(position =>
+                    <div className={styles.memberPositions}>
+                      <span key={position}>{position}</span>
+                      <br />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+      <br />
+      <br />
+      <br />
+
+      <h2>Round 1 Jurors</h2>
 
       <div className={styles.memberBox}>
         {MEMBERS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
