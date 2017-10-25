@@ -58,7 +58,10 @@ function DesignForwardCallout(props) {
               <h2>{joinUs}</h2>
             </a>
             {EVENTS.map(({ date, details }) => (
-              <div className={styles.datesWrapper}>
+              <div
+                key={details}
+                className={styles.datesWrapper}
+              >
                 <p className={styles.date}>{date}</p>
                 <p className={styles.details}>{details}</p>
               </div>

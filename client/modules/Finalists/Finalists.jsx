@@ -14,7 +14,7 @@ import FinalistsGroup from './components/FinalistsGroup/FinalistsGroup';
 import styles from './Finalists.scss';
 
 /** images */
-// import FinalistsBackground from './Finalists-background.png';
+import finalistsBackground from './hands.jpg';
 
 /**
  * Constants
@@ -44,7 +44,7 @@ function Finalists() {
       />
       <Navbar />
       <Header
-        backgroundImg=""
+        backgroundImg={finalistsBackground}
         headerText={sectionTitle}
         subheaderText=""
         showButton={false}

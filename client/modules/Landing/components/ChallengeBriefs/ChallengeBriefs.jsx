@@ -81,6 +81,7 @@ function ChallengeBriefs(props) {
           <div className={classNames([globalStyles.gridStyle, styles.briefsWrapper])}>
             {DESIGN_BRIEFS.map(({ title, subtitle, thumbnail, linkKey }) => (
               <DBBox
+                key={title}
                 title={title}
                 subtitle={subtitle}
                 thumbnail={thumbnail}

@@ -35,16 +35,16 @@ const EVENTS = [
   },
   {
     id: '',
-    date: 'Oct 22 at 11:59PM  • Online',
-    title: 'Challenge Submission Deadline',
-    link: 'https://herox.com/D4SD-2017',
-    callToAction: 'Submit Now',
-    target: '',
-    rel: '',
+    date: 'Oct 25 • Broadway Pier',
+    title: 'D4SD Poster Session, Design Forward mixer',
+    link: 'http://www.designforwardsd.com/',
+    callToAction: 'Register Now',
+    target: '_blank',
+    rel: 'noopener noreferrer',
   },
   {
     id: '',
-    date: 'Oct 25-26 • Liberty Station',
+    date: 'Oct 26 • Liberty Station',
     title: 'D4SD Award Ceremony, Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
     callToAction: 'Register Now',
@@ -56,8 +56,8 @@ const EVENTS = [
 const TWEETS = [
   {
     id: '',
-    tweet: 'Solutions for the D4SD Challenge are due tomorrow Oct 22nd, submit now!',
-    tweetURL: 'https://twitter.com/Design4SD/status/921906914056814594',
+    tweet: 'The D4SD Poster Session is happening tonight at 5:30pm. Join us there!',
+    tweetURL: 'https://twitter.com/Design4SD/status/923311060760666112',
   },
 ];
 
@@ -81,6 +81,7 @@ function NewsEvents(props) {
             <div className={styles.newsBoxes}>
               {EVENTS.map(({ title, date, link, callToAction, target, rel }) => (
                 <EventBox
+                  key={title}
                   title={title}
                   date={date}
                   link={link}
@@ -97,6 +98,7 @@ function NewsEvents(props) {
             <div className={styles.newsBoxes}>
               {TWEETS.map(({ tweet, tweetURL }) => (
                 <TwitterBox
+                  key={tweet}
                   tweet={tweet}
                   tweetURL={tweetURL}
                 />

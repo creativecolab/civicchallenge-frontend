@@ -22,20 +22,14 @@ $member-font-size: 1em*0.9;
       .member-wrapper {
         width: 100%;
 
-        display: flex;
-
-        &:hover {
-          opacity: 0.7;
-          transition: ease $ease-time;
-        }
         .team-img {
+          margin-bottom: 10px;
           $juror-member-img-dim: 200px;
           img {
-            width: $juror-member-img-dim;
+            width: 100%;
           }
         }
         .member-info {
-          margin-left: 3%;
           
 
           h3 {
@@ -71,14 +65,16 @@ $member-font-size: 1em*0.9;
       .member-inline-wrapper {
         width: 100%;
         .member-wrapper {
+          display: flex;
           .member-info {
+            margin-left: 3%;
             span {
               font-size: $member-font-size*0.8;
             }
           }
           .team-img {
             img {
-              width: 100%;
+              width: 200px;
             }
           }
         }
