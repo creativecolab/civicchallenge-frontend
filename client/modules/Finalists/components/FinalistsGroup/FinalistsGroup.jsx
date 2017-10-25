@@ -6,8 +6,12 @@ import PropTypes from 'prop-types';
 import styles from './FinalistsGroup.scss';
 
 /** images */
-import JohnBadringa from './imgs/JohnBadringa.jpg';
-
+import beachAccess from './imgs/beachAccess.png';
+import cycleDetection from './imgs/cycleDetection.jpg';
+import gate from './imgs/gate.jpg';
+import remoteService from './imgs/remoteService.jpg';
+import roadMap from './imgs/roadMap.jpg';
+import spot from './imgs/spot.jpg';
 
 /**
  * FinalistsGroup
@@ -17,49 +21,49 @@ const TEAMS = [
   {
     teamName: 'GATE Center: Immersive AV Learning Center',
     memberList: 'Garret Hoover, Selene Young, Jessica Joy',
-    teamImg: JohnBadringa,
+    teamImg: gate,
     projectDesc: 'An education center where the public directly engages with AVs, accesses learning resources, and provides feedback for stakeholder insights.',
   },
   {
     teamName: 'Spot: Your Guide to Safe and Walkable Cities',
     memberList: 'Sayamon Riddang, Natalie Terenzi',
-    teamImg: JohnBadringa,
+    teamImg: spot,
     projectDesc: 'Spot is an app that provides the blind and visually impaired with accessibility-focused walking directions, using data from GE streetlamps.',
   },
   {
     teamName: 'Remote Service Provider for Autonomous Vehicles',
     memberList: 'Nicole Hing, Alex Tunchez, Jacob Browne, Joash Duhaylungsod, Claire Pham',
-    teamImg: JohnBadringa,
+    teamImg: remoteService,
     projectDesc: 'Hired specialists remotely maneuver AVs through areas of uncertain conditions allowing all riders to travel with no takeover responsibility.',
   },
   {
     teamName: 'Beach Access For All',
     memberList: 'Andrea Flagiello, Matt Abbondanzio, Tomas Robinson, Daniel Lenzen',
-    teamImg: JohnBadringa,
+    teamImg: beachAccess,
     projectDesc: 'We wish to redefine the beach experience for those with limited mobility. Our solution is an automated, shared-use, mobility aid service designed for the beach environment.',
   },
   {
     teamName: 'Cycle Detection',
     memberList: 'Stephen Cerruti, D.J. Nelson, Savera Soin, James Maron',
-    teamImg: JohnBadringa,
+    teamImg: cycleDetection,
     projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
   },
   {
     teamName: 'Audio Movement',
     memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
-    teamImg: JohnBadringa,
+    teamImg: beachAccess,
     projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
   },
   {
     teamName: 'Road Map',
     memberList: 'Anna Chen, Marie McNamara',
-    teamImg: JohnBadringa,
+    teamImg: roadMap,
     projectDesc: 'An app focused on the iterative design process, bringing professionals and the public together to share designs, expertise, and feedback.',
   },
   {
     teamName: 'San Diego Parking App',
     memberList: 'Tyler Reinecke, Thomas Twomey,  Jangwoo Lee, Adrian Derderian, Dave Dunn',
-    teamImg: JohnBadringa,
+    teamImg: beachAccess,
     projectDesc: 'An app that shows available parking within downtown San Diego.',
   },
 ];
