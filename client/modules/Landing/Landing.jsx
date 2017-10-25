@@ -39,13 +39,13 @@ function Landing() {
       />
       <Navbar />
       <LandingHeader />
+      <Register />
       <ChallengeDescription />
       <DesignForwardCallout />
       <LandingJurors />
       <TimeLineBox />
       <WhyParticipate />
       <ChallengeBriefs />
-      <Register />
       <Sponsors />
       <Footer />
     </div>

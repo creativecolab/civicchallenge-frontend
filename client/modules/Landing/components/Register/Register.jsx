@@ -11,10 +11,10 @@ import styles from './Register.scss';
  * Constants
  */
 
-const sectionTitle = 'Ready to Get Started?';
+const sectionTitle = 'Check out the Finalists';
 const description = 'Learn how you can get involved in the D4SD Civic Design Challenge on Mobility';
-const btnLink = '/getinvolved';
-const btnText = 'Get Involved';
+const btnLink = '/finalists';
+const btnText = 'See all';
 
 /**
  * Register
