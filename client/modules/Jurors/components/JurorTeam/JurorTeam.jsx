@@ -26,15 +26,6 @@ import LimaSaft from './imgs/LimaSaft.jpg';
 
 const FINALIST_JURORS = [
   {
-    memberName: 'Scott Klemmer',
-    memberTitle: [
-      'Professor of Cognitive Science and Computer Science & Engineering',
-      'Design Lab, UC San Diego',
-    ],
-    memberImg: ScottKlemmer,
-    memberLink: 'http://d.ucsd.edu/srk/about/',
-  },
-  {
     memberName: 'David Graham',
     memberTitle: [
       'Chief Operating Officer',
@@ -95,6 +86,15 @@ const MEMBERS = [
     ],
     memberImg: KatieRast,
     memberLink: 'https://www.sdfoundation.org/about-us/who-we-are/our-team/katie-rast-bio/',
+  },
+  {
+    memberName: 'Scott Klemmer',
+    memberTitle: [
+      'Professor of Cognitive Science and Computer Science & Engineering',
+      'Design Lab, UC San Diego',
+    ],
+    memberImg: ScottKlemmer,
+    memberLink: 'http://d.ucsd.edu/srk/about/',
   },
   {
     memberName: 'Chuck Pelly',
