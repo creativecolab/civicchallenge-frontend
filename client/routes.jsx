@@ -14,11 +14,7 @@ if (typeof require.ensure !== 'function') {
 
 const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Sponsors/Sponsors').default), 'sponsors');
 const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default), 'about');
-const getProcess = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Process/Process').default), 'process');
-const getTeam = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Team/Team').default), 'team');
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
-// const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
-// const getChallengeBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'challengebrief');
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
 const getLatestInMobility = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/LatestInMobility/LatestInMobility').default), 'latestinmobility');
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
@@ -41,8 +37,6 @@ export default (
     <IndexRoute component={Landing} />
     <Route path="/sponsors" getComponent={getSponsors} />
     <Route path="/about" getComponent={getAbout} />
-    <Route path="/process" getComponent={getProcess} />
-    <Route path="/team" getComponent={getTeam} />
     <Route path="/challenges" getComponent={getChallenges} />
     <Route path="/challenges/:id" getComponent={getDesignBrief} />
     <Route path="/resources" getComponent={getResources} />
