@@ -76,7 +76,7 @@ $font-color: #fff;
         cursor: pointer;
 
         text-decoration: none;
-        font-size: $navbar-font-size;
+        font-size: $navbar-font-size*0.85;
         font-weight: 100;
         color: $nav-font-color;
         z-index: -1;

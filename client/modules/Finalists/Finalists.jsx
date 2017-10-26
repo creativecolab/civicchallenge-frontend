@@ -22,7 +22,7 @@ import finalistsBackground from './hands.jpg';
 
 const sectionTitle = 'Finalists';
 
-const gridTitle = 'The Finalists';
+// const gridTitle = 'The Finalists';
 
 /**
  * Finalists
@@ -50,7 +50,7 @@ function Finalists() {
         showButton={false}
       />
       <div className={globalStyles.pageWrapper}>
-        <h2 className={styles.finalistTitle}>{gridTitle}</h2>
+        {/* <h2 className={styles.finalistTitle}>{gridTitle}</h2> */}
         <FinalistsGroup
           title=""
           text=""

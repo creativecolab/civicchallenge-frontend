@@ -6,14 +6,21 @@ $header-img-dim: 250px;
 $true-mobile-width: 500px;
 
 $member-font-size: 1em*0.9;
+
+$box-margin-right: 8%;
 .finalists-group {
 
   .member-box {
+    margin-right: -($box-margin-right);
+
+    p.section-details {
+      width: 90%;
+    }
 
     .member-inline-wrapper {
-      width: 45%;
-      margin-top: $spacing-margin;
-      margin-right: 5%;
+      width: 42%;
+      margin-top: $spacing-margin*1.2;
+      margin-right: $box-margin-right;
 
       display: inline-block;
       vertical-align: top;
@@ -62,6 +69,10 @@ $member-font-size: 1em*0.9;
 @media screen and (min-width: $true-mobile-width) and (max-width: $mobile-max-width) {
   .finalists-group {
     .member-box {
+      margin-right: $box-margin-right;
+      p.section-details {
+        width: 100%;
+      }
       .member-inline-wrapper {
         width: 100%;
         .member-wrapper {
@@ -86,6 +97,10 @@ $member-font-size: 1em*0.9;
 @media screen and (max-width: $true-mobile-width) {
   .finalists-group {
     .member-box {
+      margin-right: 0;
+      p.section-details {
+        width: 100%;
+      }
       .member-inline-wrapper {
         width: 100%;
         .member-wrapper {
