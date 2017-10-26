@@ -8,16 +8,16 @@ import styles from './LatestInMobility.scss';
 import NewsBox from './components/NewsBox/NewsBox';
 
 /** images */
-import googleGlass from './imgs/june30googleGlass.png';
-import signLang from './imgs/july13signLang.png';
-import seats from './imgs/march23seats.png';
-import lyft from './imgs/july12lyft.png';
-import lobbying from './imgs/july19lobbying.png';
-import communityParking from './imgs/july19communityParking.png';
-import proPilot from './imgs/july21proPilot.png';
+import googleGlass from './imgs/june30googleGlass.jpg';
+import signLang from './imgs/july13signLang.jpg';
+import seats from './imgs/march23seats.jpg';
+import lyft from './imgs/july12lyft.jpg';
+import lobbying from './imgs/july19lobbying.jpg';
+import communityParking from './imgs/july19communityParking.jpg';
+import proPilot from './imgs/july21proPilot.jpg';
 import futureCars from './imgs/may12futurecars.jpg';
-import smartParking from './imgs/july12smartParkingUNC.png';
-import blvd from './imgs/june27kansaselcajonblvd.png';
+import smartParking from './imgs/july12smartParkingUNC.jpg';
+import blvd from './imgs/june27kansaselcajonblvd.jpg';
 import bikelanes from './imgs/may30bikelanes.jpg';
 import zerodeaths from './imgs/march8zerotrafficdeaths.jpg';
 import ford from './imgs/jan6ford.jpg';
@@ -50,7 +50,7 @@ const NEWS_ARTICLES = [
     id: '',
     date: 'MAY 12',
     source: 'CityLab',
-    title: 'How does a city plan for a future filled with autonomous cars?',
+    title: 'How does a city plan for a future with autonomous cars?',
     thumbnail: futureCars,
     linkKey: 'https://www.citylab.com/transportation/2017/05/8-bright-ideas-for-driverless-cities/526446/',
     descr: 'Could self-driving cars bring on more affordable housing? Should car companies slap a “warning label” on private autos? At a national summit of mobility leaders, some big thoughts came up.',

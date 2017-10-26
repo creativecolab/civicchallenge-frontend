@@ -38,7 +38,7 @@ function ScheduleBox({ dayEvents, eventSummary, eventSummaryNoImg, eventImg, eve
     <div className={styles.scheduleWrapper}>
       {dayEvents
         .map(({ date, timeRange, dayName, dayDetails, buttonTitle, buttonLink }) => (
-          <div className={styles.scheduleBox}>
+          <div key={dayName} className={styles.scheduleBox}>
             <div className={styles.date}>
               <h5 key={date}>{date}</h5>
               {timeRange && <span key={timeRange}>{timeRange}</span>}

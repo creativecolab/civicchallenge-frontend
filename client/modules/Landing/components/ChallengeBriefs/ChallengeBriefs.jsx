@@ -11,10 +11,10 @@ import DBBox from 'components/DBBox/DBBox';
 
 import styles from './ChallengeBriefs.scss';
 
-import traffic from './traffic.png';
-import autonomousCars from './autonomous.png';
-import aging from './accessibility_2.jpg';
-import walking from './biking.png';
+import traffic from '../../../DesignBrief/imgs/headers/traffic.jpg';
+import autonomousCars from '../../../DesignBrief/imgs/headers/autonomous.jpg';
+import aging from '../../../DesignBrief/imgs/headers/accessibility_2.jpg';
+import walking from '../../../DesignBrief/imgs/headers/biking.jpg';
 
 /**
  * Constants

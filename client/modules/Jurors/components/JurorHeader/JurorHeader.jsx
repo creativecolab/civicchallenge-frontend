@@ -61,7 +61,7 @@ function JurorHeader() {
       <div className={styles.jurorHeaderText}>
         <h2>Criteria</h2>
         {CRITERIA.map(({ criteriaTitle, criteriaDescription }, i) => (
-          <div>
+          <div key={criteriaTitle}>
             {criteriaTitle &&
               <div className={styles.criteriaBox}>
                 <h3>{i}. {criteriaTitle}</h3>

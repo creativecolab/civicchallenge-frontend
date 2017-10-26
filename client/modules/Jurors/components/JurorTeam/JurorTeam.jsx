@@ -154,9 +154,10 @@ const defaultProps = {};
 function JurorTeam() {
   return (
     <section className={styles.jurorTeam}>
-      <h2>Finalist Jurors</h2>
 
+      {/* finalist juror section */}
       <div className={styles.memberBox}>
+        <h2>Finalist Jurors</h2>
         {FINALIST_JURORS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
           <div className={styles.memberInlineWrapper}>
             <a className={styles.jurorLink} href={memberLink} target="_blank" rel="noopener noreferrer">
@@ -178,13 +179,10 @@ function JurorTeam() {
           </div>
         ))}
       </div>
-      <br />
-      <br />
-      <br />
 
-      <h2>Round 1 Jurors</h2>
-
+      {/* round 1 juror section */}
       <div className={styles.memberBox}>
+        <h2>Round 1 Jurors</h2>
         {MEMBERS.map(({ memberName, memberTitle, memberImg, memberLink }) => (
           <div className={styles.memberInlineWrapper}>
             <a className={styles.jurorLink} href={memberLink} target="_blank" rel="noopener noreferrer">

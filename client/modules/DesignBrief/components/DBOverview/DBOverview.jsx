@@ -6,20 +6,14 @@ import PropTypes from 'prop-types';
 import styles from './DBOverview.scss';
 
 /**
- * dbHeader
+ * DBOverview
  */
 
 const propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-/* link: PropTypes.string,
-  linkText: PropTypes.string, */
   figureA: PropTypes.string,
   figureALink: PropTypes.string,
-  /* figureB: PropTypes.string,
-  figureBLink: PropTypes.string,
-  figureC: PropTypes.string,
-  figureCLink: PropTypes.string, */
 };
 
 const contextTypes = {
@@ -33,16 +27,12 @@ const defaultProps = {
   figureALink: '',
 };
 
-/* function dbHeader({ title, text, link, linkText }) { */
-function dbHeader({ title, text, figureA, figureALink }) {
+function DBOverview({ title, text, figureA, figureALink }) {
   return (
     <div className={styles.overview}>
       <div className={styles.overviewText}>
         <h2>{title}</h2>
-        {/* <div className={styles.fA}>
-          <img src={figureA} alt={figureALink} />
-        </div> */}
-        <p>
+        <div className={styles.overviewSummary}>
           <div className={styles.fB}>
             <img src={figureA} alt={figureALink} />
           </div>
@@ -51,19 +41,14 @@ function dbHeader({ title, text, figureA, figureALink }) {
               __html: text,
             }}
           />
-          {/* <div className={styles.fC} />
-          <img src={figureB} href={figureBLink}</div> */}
-        </p>
+        </div>
       </div>
-      {/* <div className={globalStyles.paragraphLink}>
-        <a href={link}>{linkText}</a>
-      </div> */}
     </div>
   );
 }
 
-dbHeader.propTypes = propTypes;
-dbHeader.contextTypes = contextTypes;
-dbHeader.defaultProps = defaultProps;
+DBOverview.propTypes = propTypes;
+DBOverview.contextTypes = contextTypes;
+DBOverview.defaultProps = defaultProps;
 
-export default dbHeader;
+export default DBOverview;

@@ -15,46 +15,54 @@ import NewsBox from '../LatestInMobility/components/NewsBox/NewsBox';
 
 import styles from './DesignBrief.scss';
 
-/* images */
-import headerWalking from './imgs/headers/biking.png';
-import fatal15 from './imgs/walking/min/walking-f15-min.jpg';
+/** IMAGES */
+
+/* walking */
+import headerWalking from './imgs/headers/biking.jpg';
 import bikerImpact from './imgs/walking/min/walking-biker-impact-min.jpg';
+import fatal15 from './imgs/walking/min/walking-f15-min.jpg';
 import pedestVisible from './imgs/walking/min/walking-visibility-min.jpg';
 
+/* accessibility */
 import headerAccess from './imgs/headers/accessibility_2.jpg';
-import visualImpair from './imgs/accessibility/accessibility-braille.jpg';
-import stairs from './imgs/accessibility/accessibility-stairs.jpg';
-import lyft from './imgs/accessibility/accessibility-lyft.jpg';
 import olderActive from './imgs/accessibility/accessibility-active-2.jpg';
+import visualImpair from './imgs/accessibility/accessibility-braille.jpg';
+import lyft from './imgs/accessibility/accessibility-lyft.jpg';
+import stairs from './imgs/accessibility/accessibility-stairs.jpg';
 
-import headerTraffic from './imgs/headers/traffic.png';
-import parkingDynamic from './imgs/parking/min/Parking-dynamic-min.jpg';
-import communicate from './imgs/parking/min/transit-1-min.jpg';
+
+/* parking == traffic */
+import headerTraffic from './imgs/headers/traffic.jpg';
 import enjoy from './imgs/parking/min/commuter-experience-min.jpg';
 import hub from './imgs/parking/min/hub.jpg';
+import parkingDynamic from './imgs/parking/min/Parking-dynamic-min.jpg';
+import communicate from './imgs/parking/min/transit-1-min.jpg';
 
-import headerAV from './imgs/headers/autonomous.png';
+/* av */
+import headerAV from './imgs/headers/autonomous.jpg';
 import productive from './imgs/av/AV-productive.jpg';
-import whatsNext from './imgs/av/av-truck.jpeg';
 import stopSigns from './imgs/av/AV-stopsigns.jpg';
+import whatsNext from './imgs/av/av-truck.jpeg';
+
 
 /** resource images */
-import googleGlass from '../LatestInMobility/imgs/june30googleGlass.png';
-import signLang from '../LatestInMobility/imgs/july13signLang.png';
-import seats from '../LatestInMobility/imgs/march23seats.png';
-import lyftR from '../LatestInMobility/imgs/july12lyft.png';
-import lobbying from '../LatestInMobility/imgs/july19lobbying.png';
-import communityParking from '../LatestInMobility/imgs/july19communityParking.png';
-import proPilot from '../LatestInMobility/imgs/july21proPilot.png';
+import googleGlass from '../LatestInMobility/imgs/june30googleGlass.jpg';
+import signLang from '../LatestInMobility/imgs/july13signLang.jpg';
+import seats from '../LatestInMobility/imgs/march23seats.jpg';
+import lyftR from '../LatestInMobility/imgs/july12lyft.jpg';
+import lobbying from '../LatestInMobility/imgs/july19lobbying.jpg';
+import communityParking from '../LatestInMobility/imgs/july19communityParking.jpg';
+import proPilot from '../LatestInMobility/imgs/july21proPilot.jpg';
 import futureCars from '../LatestInMobility/imgs/may12futurecars.jpg';
-import smartParking from '../LatestInMobility/imgs/july12smartParkingUNC.png';
-import blvd from '../LatestInMobility/imgs/june27kansaselcajonblvd.png';
+import smartParking from '../LatestInMobility/imgs/july12smartParkingUNC.jpg';
+import blvd from '../LatestInMobility/imgs/june27kansaselcajonblvd.jpg';
 import bikelanes from '../LatestInMobility/imgs/may30bikelanes.jpg';
 import zerodeaths from '../LatestInMobility/imgs/march8zerotrafficdeaths.jpg';
 import ford from '../LatestInMobility/imgs/jan6ford.jpg';
 import lyftLA from '../LatestInMobility/imgs/sept18lyftLA.jpg';
 
 
+/* navbar scroll animation */
 let TweenLite = {};
 if (process.env.browser) {
   TweenLite = require('gsap/TweenLite'); // eslint-disable-line global-require
@@ -375,7 +383,7 @@ const CHALLENGE_INFO = {
         id: '',
         date: 'MAY 12',
         source: 'CityLab',
-        title: 'How does a city plan for a future filled with autonomous cars?',
+        title: 'How does a city plan for a future with autonomous cars?',
         thumbnail: futureCars,
         linkKey: 'https://www.citylab.com/transportation/2017/05/8-bright-ideas-for-driverless-cities/526446/',
         descr: 'Could self-driving cars bring on more affordable housing? Should car companies slap a “warning label” on private autos? At a national summit of mobility leaders, some big thoughts came up.',
@@ -517,6 +525,8 @@ class DesignBrief extends React.PureComponent {
         <section className={classNames([styles.contentContainer, post && styles.post])} ref={(el) => { this.contentContainer = el; }}>
           <div className={globalStyles.contentWrapper}>
             <div className={styles.menu}>
+
+              {/* sidebar */}
               <ul className={styles.sidebar}>
                 <a>
                   <li
@@ -527,7 +537,7 @@ class DesignBrief extends React.PureComponent {
                   </li>
                 </a>
                 {overview.map(({ title }, i) => (
-                  <a>
+                  <a key={title}>
                     <li
                       className={currentSection === `${DesignBrief.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}
                       onClick={this._onNavItemClicked(title.replace(/( |\W)/g, '').toLowerCase())}
@@ -553,19 +563,24 @@ class DesignBrief extends React.PureComponent {
               />
             </div>
 
+            {/* overview */}
             {overview.map(({ title, text, link, linkText, figureA, figureALink }, i) => (
-              <div id={title.replace(/( |\W)/g, '').toLowerCase()} className={styles.contentWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}>
+              <div
+                key={title}
+                id={title.replace(/( |\W)/g, '').toLowerCase()}
+                className={styles.contentWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}
+              >
                 <DBOverview
+                  key={text}
                   title={title}
                   text={text}
                   figureA={figureA}
                   figureALink={figureALink}
-                  /* link={link}
-                  linkText={linkText} */
                 />
               </div>
             ))}
 
+            {/* resources */}
             <div id={'resources'} className={classNames([styles.resources, styles.contentWrapper])} ref={(el) => { this.resources = el; }}>
               <div className={styles.resourceHeader}>
                 <h2>Resources</h2>
@@ -574,6 +589,7 @@ class DesignBrief extends React.PureComponent {
               <br />
               {resources.map(({ date, source, title, thumbnail, linkKey, descr }) => (
                 <NewsBox
+                  key={title}
                   title={title}
                   date={date}
                   thumbnail={thumbnail}
@@ -583,13 +599,6 @@ class DesignBrief extends React.PureComponent {
                 />
               ))}
             </div>
-            {/* <div id={'learningresources'} ref={(el) => { this.resources = el; }}>
-              <Resources
-                title={RESOURCES.challengeName}
-                external={RESOURCES.external}
-                news={RESOURCES.news}
-              />
-            </div> */}
           </div>
         </section>
         <Footer />

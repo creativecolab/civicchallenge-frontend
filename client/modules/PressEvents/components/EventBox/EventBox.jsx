@@ -209,6 +209,7 @@ function EventBox() {
             {scheduleList
               .map(({ dayEvents }) => (
                 <ScheduleBox
+                  key={dayEvents}
                   dayEvents={dayEvents}
                   eventSummary={eventSummary}
                   eventSummaryNoImg={eventSummaryNoImg}

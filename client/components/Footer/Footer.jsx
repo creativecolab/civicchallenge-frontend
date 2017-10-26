@@ -4,14 +4,9 @@ import globalStyles from 'main.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import facebookIcon from './icon-facebook-white.png';
 import twitterIcon from './icon-twitter-white.png';
 import styles from './Footer.scss';
-
-// import designLabLogo from './design-lab-logo.png';
-// import designForwardLogo from './design-forward-logo.png';
-// import protolabLogo from './protolab-logo.png';
 
 /**
  * Constants

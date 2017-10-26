@@ -32,11 +32,7 @@ function DBHeader({ intro }) {
     <section className={styles.DBHeader}>
       <div className={styles.DBHeaderText}>
         <h2>Introduction</h2>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: intro,
-          }}
-        />
+        <p dangerouslySetInnerHTML={{ __html: intro }} />
         <div className={styles.button}>
           <div className={globalStyles.sectionBtn}>
             <a className={globalStyles.blueOutline} href={linkUrl} rel={rel} target={target}>{buttonText}</a>
