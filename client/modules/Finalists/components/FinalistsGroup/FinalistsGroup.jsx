@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styles from './FinalistsGroup.scss';
 
 /** images */
-import audioMovement from './imgs/audioMovement.jpg';
+import audioMovement from './imgs/audioMovement.png';
 import beachAccess from './imgs/beachAccess.png';
 import cycleDetection from './imgs/cycleDetection.jpg';
 import gate from './imgs/gate.jpg';
