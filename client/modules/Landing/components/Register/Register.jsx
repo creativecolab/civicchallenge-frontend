@@ -11,10 +11,10 @@ import styles from './Register.scss';
  * Constants
  */
 
-const sectionTitle = 'Ready to Get Started?';
-const description = 'Learn how you can get involved in the D4SD Civic Design Challenge on Mobility';
-const btnLink = '/getinvolved';
-const btnText = 'Get Involved';
+const sectionTitle = 'Congratulations to the 2017 D4SD Finalists!';
+const description = 'Out of 23 entries into this year\'s challenge, we selected 8 finalists that represent a mix of our four challenge briefs  (commuter experience, accessibility, biking/walking, and autonomous vehicles).';
+const btnLink = '/finalists';
+const btnText = 'SEE FINALISTS';
 
 /**
  * Register

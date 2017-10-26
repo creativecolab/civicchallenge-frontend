@@ -11,6 +11,7 @@ import cycleDetection from './imgs/cycleDetection.jpg';
 import gate from './imgs/gate.jpg';
 import remoteService from './imgs/remoteService.jpg';
 import roadMap from './imgs/roadMap.jpg';
+import sdParking from './imgs/sdParking.jpg';
 import spot from './imgs/spot.jpg';
 
 import defaultPoster from './imgs/defaultPoster.jpg';
@@ -51,12 +52,6 @@ const TEAMS = [
     projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
   },
   {
-    teamName: 'Audio Movement',
-    memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
-    teamImg: defaultPoster,
-    projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
-  },
-  {
     teamName: 'Road Map',
     memberList: 'Anna Chen, Marie McNamara',
     teamImg: roadMap,
@@ -65,8 +60,14 @@ const TEAMS = [
   {
     teamName: 'San Diego Parking App',
     memberList: 'Tyler Reinecke, Thomas Twomey,  Jangwoo Lee, Adrian Derderian, Dave Dunn',
-    teamImg: defaultPoster,
+    teamImg: sdParking,
     projectDesc: 'An app that shows available parking within downtown San Diego.',
+  },
+  {
+    teamName: 'Audio Movement',
+    memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
+    teamImg: defaultPoster,
+    projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
   },
 ];
 
