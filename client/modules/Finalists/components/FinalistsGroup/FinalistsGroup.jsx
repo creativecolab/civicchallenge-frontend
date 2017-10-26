@@ -95,6 +95,7 @@ function FinalistsGroup() {
               <div className={styles.teamImg}>
                 <img src={teamImg} alt="team member name" />
               </div>
+              {/* group details (text) */}
               <div className={styles.memberInfo}>
                 <h3>{teamName}</h3>
                 <div className={styles.memberPositions}>
