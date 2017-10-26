@@ -11,7 +11,7 @@ import StandardSectionBox from 'components/StandardSectionBox/StandardSectionBox
 import globalStyles from 'main.scss';
 import styles from './About.scss';
 
-import team from './team.png';
+import team from './team.jpg';
 
 import scaleSDLogo from './scale-sd-logo.png';
 import designLabLogo from './design-lab-logo.png';
@@ -126,6 +126,7 @@ function About() {
       <div className={globalStyles.pageWrapper}>
         {ABOUT.map(({ sectionTitle, text }) => (
           <StandardSectionBox
+            key={text}
             sectionTitle={sectionTitle}
             text={text}
           />
@@ -151,7 +152,10 @@ function About() {
               }}
             />
             {TEAM_TEXT.map(({ paragraphHeader, paragraphText }) => (
-              <div className={styles.teamText}>
+              <div
+                key={paragraphHeader}
+                className={styles.teamText}
+              >
                 <h3>{paragraphHeader}</h3>
                 {paragraphText.map(newParagraph =>
                   <p key={newParagraph}>
@@ -169,7 +173,10 @@ function About() {
         <div className={styles.ackWrapper}>
           <h2 className={globalStyles.grey}>Acknowledgements</h2>
           {CREDITS.map(({ name, photoUsed, profileLink, websiteName }) => (
-            <div className={styles.creditsWrapper}>
+            <div
+              key={photoUsed}
+              className={styles.creditsWrapper}
+            >
               <span>{photoUsed} image by <a href={profileLink}>{name}</a> on {websiteName}.</span>
               <br />
             </div>

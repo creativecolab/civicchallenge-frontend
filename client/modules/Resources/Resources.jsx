@@ -16,9 +16,9 @@ import LatestInMobility from '../LatestInMobility/LatestInMobility';
 import styles from './Resources.scss';
 
 /* icons */
-import civicCourseHeader from './imgs/civicCourse3.png';
-import buildMeHeader from './imgs/buildme.png';
-import openDataHeader from './imgs/data.png';
+import civicCourseHeader from './imgs/civicCourse3.jpg';
+import buildMeHeader from './imgs/buildme.jpg';
+import openDataHeader from './imgs/data.jpg';
 
 /**
  * Constants
@@ -82,6 +82,7 @@ function Resources() {
         <div className={globalStyles.gridStyle}>
           {RESOURCE_CONTENT.map(({ title, text, icon, linkKey }) => (
             <DesignToolsBox
+              key={linkKey}
               title={title}
               text={text}
               icon={icon}

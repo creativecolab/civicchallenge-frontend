@@ -19,9 +19,7 @@ const getTeam = (nextState, cb) => require.ensure([], require => cb(null, requir
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
 // const getChallenge = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenge/Challenge').default), 'challenge');
 // const getChallengeBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'challengebrief');
-const getRewards = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Rewards/Rewards').default), 'rewards');
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
-const getDesignTools = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignTools/DesignTools').default), 'designtoolsandtips');
 const getLatestInMobility = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/LatestInMobility/LatestInMobility').default), 'latestinmobility');
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
 const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
@@ -47,9 +45,7 @@ export default (
     <Route path="/team" getComponent={getTeam} />
     <Route path="/challenges" getComponent={getChallenges} />
     <Route path="/challenges/:id" getComponent={getDesignBrief} />
-    <Route path="/rewards" getComponent={getRewards} />
     <Route path="/resources" getComponent={getResources} />
-    <Route path="/resources/designtoolsandtips" getComponent={getDesignTools} />
     <Route path="/resources/latestinmobility" getComponent={getLatestInMobility} />
     <Route path="/faqs" getComponent={getFAQ} />
     <Route path="/designbrief" getComponent={getDesignBrief} />

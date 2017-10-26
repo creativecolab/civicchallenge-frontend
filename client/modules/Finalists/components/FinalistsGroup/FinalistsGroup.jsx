@@ -36,7 +36,7 @@ const TEAMS = [
     projectDesc: 'Spot is an app that provides the blind and visually impaired with accessibility-focused walking directions, using data from GE streetlamps.',
   },
   {
-    teamName: 'Remote Service Provider for Autonomous Vehicles',
+    teamName: 'AV onDemand: Remote Service Provider for Autonomous vehicles',
     memberList: 'Marissa Hing, Alex Tunchez, Jacob Browne, Josh Duhay, Claire Pham',
     teamImg: remoteService,
     projectDesc: 'Hired specialists remotely maneuver AVs through areas of uncertain conditions allowing all riders to travel with no takeover responsibility.',

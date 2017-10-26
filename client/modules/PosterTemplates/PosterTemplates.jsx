@@ -79,7 +79,10 @@ function PosterTemplates() {
         <div className={globalStyles.contentContainer}>
           <div className={styles.posterParagraphs}>
             {CONTENT.map(({ paragraph, bullets }) => (
-              <div className={styles.paragraphWrapper}>
+              <div
+                key={paragraph}
+                className={styles.paragraphWrapper}
+              >
                 <p>{paragraph}</p>
                 <ul>
                   {bullets.map(bullet => (

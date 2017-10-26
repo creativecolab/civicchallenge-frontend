@@ -15,7 +15,10 @@ import downloadIcon from './download_icon.png'; */
 const sectionTitle = 'Challenge entries due in October 22 at 11:59PM';
 const description = 'Check back soon to get all the details about dates, contest rules, and submission guidelines.';
 
-const pdfText = 'Submission guidelines PDF (coming soon)';
+const pdfText = 'Submission guidelines can be viewed ';
+const link = '/codeofconduct';
+const linkText = 'here';
+const period = '.';
 /**
  * GetInvolvedCallout
  */
@@ -37,9 +40,11 @@ function GetInvolvedCallout() {
             <h2 className={globalStyles.grey}>{sectionTitle}</h2>
             <p className={globalStyles.grey}>{description}</p>
             <div className={globalStyles.paragraphLink}>
-              {/* <img className={styles.icon} src={downloadIcon} alt="downlaod symbol" />
-              <a href="">{pdfText}</a> */}
-              <p className={globalStyles.grey}>{pdfText}</p>
+              <p className={globalStyles.grey}>
+                {pdfText}
+                <a href={link}>{linkText}</a>
+                {period}
+              </p>
             </div>
           </div>
         </div>

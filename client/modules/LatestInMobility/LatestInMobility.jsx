@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 /* import classNames from 'util/classNames'; */
 
 import globalStyles from 'main.scss';
-
 import styles from './LatestInMobility.scss';
-
 import NewsBox from './components/NewsBox/NewsBox';
 
 /** images */
@@ -167,18 +165,6 @@ const NEWS_ARTICLES = [
   },
 ];
 
-/*
-  {
-    id: '',
-    date: 'JANUARY 5',
-    source: 'Entrepreneur',
-    title: 'With Hyundai’s new legs, paraplegics and the elderly may be able to walk normally.',
-    thumbnail: walking,
-    linkKey: 'https://www.entrepreneur.com/article/287388',
-    descr: 'Hyundai has begun to showcase wearable robot legs that are intended to help paraplegics and the elderly.',
-  },
-*/
-
 const contextTypes = {
   router: PropTypes.object,
 };
@@ -196,6 +182,7 @@ function LatestInMobility() {
         <div className={globalStyles.gridStyle}>
           {NEWS_ARTICLES.map(({ title, date, thumbnail, linkKey, descr, source }) => (
             <NewsBox
+              key={linkKey}
               title={title}
               date={date}
               thumbnail={thumbnail}

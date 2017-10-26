@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Navbar from './components/Navbar/Navbar';
 
 import styles from './Placeholder.scss';
 
@@ -19,8 +18,7 @@ const defaultProps = {};
 function Placeholder() {
   return (
     <div className={styles.placeholder}>
-      <Navbar />
-      <p>This is the aa placeholder page ldjldsf</p>
+      <p>This is the a placeholder page</p>
     </div>
   );
 }
