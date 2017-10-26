@@ -49,15 +49,15 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <section className={globalStyles.contentWrapper}>
+        <div className={styles.copyright}>
+          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href={`mailto:${email}`}>{email}</a>.</p></div>
+        </div>
         <div className={styles.mediaIcons}>
           {SOCIAL_MEDIA.map(({ mediaLink, imgSrc, imgAlt }) => (
             <a href={mediaLink} key={imgAlt} target="_blank" rel="noopener noreferrer">
               <img src={imgSrc} alt={imgAlt} />
             </a>
           ))}
-        </div>
-        <div className={styles.copyright}>
-          <div className={styles.copyright}><p>Copyright &copy; {copyrightYear} D4SD. All Rights Reserved. Send feedback to <a href={`mailto:${email}`}>{email}</a>.</p></div>
         </div>
       </section>
     </footer>
