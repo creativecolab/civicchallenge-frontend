@@ -25,7 +25,7 @@ const sectionDetails = 'Congratulations to the 2017 D4SD Finalists!  Out of 23 e
 const TEAMS = [
   {
     teamName: 'GATE Center: Immersive AV Learning Center',
-    memberList: 'Garret Hoover, Selene Young, Jessica Joy',
+    memberList: 'Garret Hoover, Selene Hoover, Jessica Yeung',
     teamImg: gate,
     projectDesc: 'An education center where the public directly engages with AVs, accesses learning resources, and provides feedback for stakeholder insights.',
   },
