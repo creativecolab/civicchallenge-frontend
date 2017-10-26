@@ -37,7 +37,7 @@ const TEAMS = [
   },
   {
     teamName: 'Remote Service Provider for Autonomous Vehicles',
-    memberList: 'Nicole Hing, Alex Tunchez, Jacob Browne, Joash Duhaylungsod, Claire Pham',
+    memberList: 'Marissa Hing, Alex Tunchez, Jacob Browne, Josh Duhay, Claire Pham',
     teamImg: remoteService,
     projectDesc: 'Hired specialists remotely maneuver AVs through areas of uncertain conditions allowing all riders to travel with no takeover responsibility.',
   },
