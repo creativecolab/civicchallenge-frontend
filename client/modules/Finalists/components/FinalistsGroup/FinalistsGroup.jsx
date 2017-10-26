@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import styles from './FinalistsGroup.scss';
 
 /** images */
+import audioMovement from './imgs/audioMovement.jpg';
 import beachAccess from './imgs/beachAccess.png';
 import cycleDetection from './imgs/cycleDetection.jpg';
 import gate from './imgs/gate.jpg';
@@ -14,7 +15,6 @@ import roadMap from './imgs/roadMap.jpg';
 import sdParking from './imgs/sdParking.jpg';
 import spot from './imgs/spot.jpg';
 
-import defaultPoster from './imgs/defaultPoster.jpg';
 
 /**
  * FinalistsGroup
@@ -68,7 +68,7 @@ const TEAMS = [
   {
     teamName: 'Audio Movement',
     memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
-    teamImg: defaultPoster,
+    teamImg: audioMovement,
     projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
   },
 ];
