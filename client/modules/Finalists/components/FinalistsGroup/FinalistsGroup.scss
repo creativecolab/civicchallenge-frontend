@@ -13,6 +13,9 @@ $box-margin-right: 8%;
   .member-box {
     margin-right: -($box-margin-right);
 
+    h2.the-finalists {
+      margin-top: $spacing-margin*1.5;
+    }
     p.section-details {
       width: 90%;
     }
