@@ -20,11 +20,14 @@ import spot from './imgs/spot.jpg';
  * FinalistsGroup
  */
 
+const SECTION_DETAILS = [
+  'Congratulations to the 2017 D4SD Finalists! Out of 23 entries into this year\'s challenge, we selected 8 finalists that represent a mix of our four challenge briefs (commuter experience, accessibility, biking/walking, and autonomous vehicles).',
+  'The winner received a $5000 cash prize. The top three teams will get opportunities to pitch directly to the City of San Diego, SCALE SD, and SANDAG to implement their ideas.',
+];
 
 const TEAMS = [
   {
     header: 'The Winner',
-    sectionDetails: '',
     boxContent: [
       {
         teamName: 'Cycle Detection',
@@ -36,7 +39,6 @@ const TEAMS = [
   },
   {
     header: 'The Runnerups',
-    sectionDetails: '',
     boxContent: [
       {
         teamName: 'AV onDemand: Remote Service Provider for Autonomous vehicles',
@@ -54,7 +56,6 @@ const TEAMS = [
   },
   {
     header: 'The Finalists',
-    sectionDetails: 'Congratulations to the 2017 D4SD Finalists!  Out of 23 entries into this year\'s challenge, we selected 8 finalists that represent a mix of our four challenge briefs  (commuter experience, accessibility, biking/walking, and autonomous vehicles).',
     boxContent: [
       {
         teamName: 'GATE Center: Immersive AV Learning Center',
@@ -101,10 +102,12 @@ const defaultProps = {};
 function FinalistsGroup() {
   return (
     <section className={styles.finalistsGroup}>
-      {TEAMS.map(({ header, sectionDetails, boxContent }) => (
+      {SECTION_DETAILS.map(paragraph =>
+        <p key={paragraph} className={styles.sectionDetails}>{paragraph}</p>
+      )}
+      {TEAMS.map(({ header, boxContent }) => (
         <div key={header} className={styles.memberBox}>
           <h2 className={styles.theFinalists}>{header}</h2>
-          {sectionDetails && <p className={styles.sectionDetails}>{sectionDetails}</p>}
           {boxContent.map(({ teamName, memberList, teamImg, projectDesc }) => (
             <div
               key={teamName}

@@ -16,9 +16,6 @@ $box-margin-right: 8%;
     h2.the-finalists {
       margin-top: $spacing-margin*1.5;
     }
-    p.section-details {
-      width: 90%;
-    }
 
     .member-inline-wrapper {
       width: 42%;
@@ -73,9 +70,6 @@ $box-margin-right: 8%;
   .finalists-group {
     .member-box {
       margin-right: $box-margin-right;
-      p.section-details {
-        width: 100%;
-      }
       .member-inline-wrapper {
         width: 100%;
         .member-wrapper {
@@ -101,9 +95,6 @@ $box-margin-right: 8%;
   .finalists-group {
     .member-box {
       margin-right: 0;
-      p.section-details {
-        width: 100%;
-      }
       .member-inline-wrapper {
         width: 100%;
         .member-wrapper {
