@@ -130,7 +130,7 @@ const JURORS_MAXFOUR = [
   {
     memberName: 'David Graham',
     memberTitle: [
-      'Chief Operating Officer',
+      'Deputy Chief Operating Officer',
       'City of San Diego',
     ],
     memberImg: DavidGraham,
