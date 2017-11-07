@@ -27,7 +27,7 @@ import submit from './submit-icon.png';
  * Constants
  */
 
-const sectionTitle = 'Ready to get Involved?';
+const sectionTitle = 'Ready to Get Involved?';
 const description = 'Jump into the online discussion or read more details about the Design for San Diego Challenges on transportation and mobility.';
 
 const BOX_TEXT = [
