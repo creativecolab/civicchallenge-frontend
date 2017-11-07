@@ -12,7 +12,7 @@ import globalStyles from 'main.scss';
 /* import GetInvolvedHeader from './components/GetInvolvedHeader/GetInvolvedHeader'; */
 import GetInvolvedBox from './components/GetInvolvedBox/GetInvolvedBox';
 
-import GetInvolvedCallout from './components/GetInvolvedCallout/GetInvolvedCallout';
+/*import GetInvolvedCallout from './components/GetInvolvedCallout/GetInvolvedCallout';*/
 
 import styles from './GetInvolved.scss';
 
@@ -44,20 +44,8 @@ const BOX_TEXT = [
     button: 'globalStyles.blueOutline',
   },
   {
-    title: 'Entries due Oct 22 at 11:59PM',
-    text: 'Teams must register by Oct 10th and submit their final entry by Oct 22nd. See FAQs for rules and guidelines.',
-    buttonText: 'Register here',
-    linkUrl: 'https://herox.com/D4SD-2017',
-    rel: '',
-    target: '',
-    icon: submit,
-    boxColor: '#fff',
-    textColor: '#212121',
-    button: 'globalStyles.orangeOutline',
-  },
-  {
     title: 'Sign up for the Newsletter',
-    text: 'Fill out this simple online form with your Name and email address so we can keep you in the loop about the D4SD Mobility Challenges.',
+    text: 'Fill out this online form with your name and email address so we can keep you in the loop about current and future D4SD Challenges.',
     buttonText: 'Sign up for emails',
     linkUrl: 'http://eepurl.com/c2kFon',
     rel: 'noopener noreferrer',
@@ -69,7 +57,7 @@ const BOX_TEXT = [
   },
   {
     title: 'Explore the Challenge Briefs',
-    text: 'Read the briefs to learn background information and to empathize with particular Mobility Challenges that San Diego residents face.',
+    text: 'Read the briefs to learn background information and to empathize with particular mobility challenges that San Diego residents face.',
     buttonText: 'View the Briefs',
     linkUrl: '/challenges',
     rel: '',
@@ -78,6 +66,18 @@ const BOX_TEXT = [
     boxColor: '#fff',
     textColor: '#212121',
     button: 'globalStyles.blueOutline',
+  },
+  {
+    title: 'Challenge Submission Closed',
+    text: 'A total of 23 teams competed in the D4SD Challenge. Check out the finalists using the button below.',
+    buttonText: 'Checkout the finalists',
+    linkUrl: '/finalists',
+    rel: '',
+    target: '',
+    icon: submit,
+    boxColor: '#fff',
+    textColor: '#212121',
+    button: 'globalStyles.orangeOutline',
   },
 ];
 
@@ -130,7 +130,7 @@ function GetInvolved() {
               button={button}
             />
           ))}
-          <GetInvolvedCallout />
+          {/*<GetInvolvedCallout />*/}
         </div>
       </div>
       <Footer />

@@ -18,29 +18,6 @@ import winPrizes from './win-prizes.png';
 
 const sectionTitle = 'Why Participate?';
 
-/*
-const PARTICIPATE = [
-  {
-    title: 'Learn Design',
-    img: learnAndPractice,
-    alt: 'Learn and Practice Icon',
-    desc: 'The D4SD <a href="https://d4sd.org/challenges" rel="noopener noreferrer" target="_blank">Civic Design Challenge on Mobility</a> provides a great opportunity to practice design on real-world problems and to get mentorship from domain experts.',
-  },
-  {
-    title: '15 Minutes of Fame',
-    img: fame,
-    alt: '15 Minutes Icon',
-    desc: 'We will showcase qualifying submissions on our website and finalists at the Design Forward Alliance Summit <a href="http://www.designforwardsd.com/the-summit/" rel="noopener noreferrer" target="_blank">on Oct 26</a>.',
-  },
-  {
-    title: 'Win Prizes',
-    img: winPrizes,
-    alt: 'Win Prizes Icon',
-    desc: 'Submissions judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.',
-  },
-];
-*/
-
 const propTypes = {
   componentRef: PropTypes.func.isRequired,
 };
@@ -90,7 +67,7 @@ function WhyParticipate(props) {
               </div>
               <div className={styles.contentText}>
                 <h2 className={globalStyles.red}>Win Prizes</h2>
-                <p><a href="https://herox.com/D4SD-2017">Entries</a> judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.</p>
+                <p>Entries judged to have the most potential will be awarded in cash prizes and exclusive networking opportunities.</p>
               </div>
             </div>
           </div>
