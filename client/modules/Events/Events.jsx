@@ -240,7 +240,6 @@ class Events extends React.PureComponent {
     }
 
     let newCurrentSection = Events.CURRENTSECTION_HEADER;
-
     for (let i = this.overviews.length - 1; i >= 0; i -= 1) {
       if (this.overviews[i].getBoundingClientRect().top <= 30) {
         newCurrentSection = `${Events.CURRENTSECTION_OVERVIEW_BASE}${i}`;
@@ -307,32 +306,35 @@ class Events extends React.PureComponent {
               </ul>
             </div>
 
-            {/* events */}
-            {EVENTS.map(({ eventName, hostedBy, scheduleList, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }, i) => (
-              <div
-                key={eventName}
-                id={eventName.replace(/( |\W)/g, '').toLowerCase()}
-                className={eventStyles.eventWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}
-              >
-                <div className={eventStyles.eventHeader}>
-                  <h2>{eventName}</h2>
-                  <h4>{hostedBy}</h4>
-                  <hr />
-                </div>
-                {scheduleList
-                  .map(({ dayEvents }) => (
-                    <ScheduleBox
-                      key={dayEvents}
-                      dayEvents={dayEvents}
-                      eventSummary={eventSummary}
-                      eventSummaryNoImg={eventSummaryNoImg}
-                      eventImg={eventImg}
-                      eventImgAlt={eventImgAlt}
-                    />
-                  ))}
+            <div className={classNames([eventStyles.eventBox, globalStyles.contentWrapper])}>
+              <div className={eventStyles.contentContainer}>
+                {/* events */}
+                {EVENTS.map(({ eventName, hostedBy, scheduleList, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }, i) => (
+                  <div
+                    key={eventName}
+                    id={eventName.replace(/( |\W)/g, '').toLowerCase()}
+                    className={eventStyles.eventWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}
+                  >
+                    <div className={eventStyles.eventHeader}>
+                      <h2>{eventName}</h2>
+                      <h4>{hostedBy}</h4>
+                      <hr />
+                    </div>
+                    {scheduleList
+                      .map(({ dayEvents }) => (
+                        <ScheduleBox
+                          key={dayEvents}
+                          dayEvents={dayEvents}
+                          eventSummary={eventSummary}
+                          eventSummaryNoImg={eventSummaryNoImg}
+                          eventImg={eventImg}
+                          eventImgAlt={eventImgAlt}
+                        />
+                      ))}
+                  </div>
+                ))}
               </div>
-            ))}
-
+            </div>
           </div>
         </section>
         <Footer />

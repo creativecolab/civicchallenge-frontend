@@ -1,8 +1,10 @@
 @import "~styles/variables.scss";
 $content-width: 70%;
 .event-box {
+  z-index: -1;
+  margin-bottom: $subsection-padding*3;
   .event-wrapper {
-    margin: $subsection-padding*1 0;
+    margin-bottom: $subsection-padding*3;
     .eventHeader {
 
       h6 {
@@ -16,7 +18,6 @@ $content-width: 70%;
         color: $theme-color-blue;
       }
 
-
       hr {
         border-top: 1px solid #979797;
         margin-top: $event-spacing-margin;
@@ -28,6 +29,7 @@ $content-width: 70%;
   .contentContainer {
 
     width: $content-width;
+    margin-bottom: $subsection-padding*4;
 
     @media (max-width: $mobile-max-width) {
       width: 100%;
