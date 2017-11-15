@@ -26,6 +26,7 @@ const getPosterTemplates = (nextState, cb) => require.ensure([], require => cb(n
 const getJurors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Jurors/Jurors').default), 'jurors');
 const getFinalists = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Finalists/Finalists').default), 'finalists');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
+const getEvents2 = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'eventstest');
 
 
 function onRouteChange(prev, next) {
@@ -50,5 +51,6 @@ export default (
     <Route path="/judging" getComponent={getJurors} />
     <Route path="/finalists" getComponent={getFinalists} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
+    <Route path="/eventstest" getComponent={getEvents2} />
   </Route>
 );
