@@ -1,38 +1,32 @@
-/* eslint-disable max-len, jsx-a11y/no-static-element-interactions */
+/* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import classNames from 'util/classNames';
 
-import Navbar from 'components/Navbar/Navbar';
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
 import globalStyles from 'main.scss';
 
-import ScheduleBox from './components/EventBox/components/ScheduleBox/ScheduleBox';
-
-import styles from './Events.scss';
-import eventStyles from './components/EventBox/EventBox.scss';
-
-/** IMAGES */
-
-import headerImg from './headerImg.jpg';
-import hackathon from './components/EventBox/hackathon.jpg';
+import ScheduleBox from './components/ScheduleBox/ScheduleBox';
+import styles from './EventBox.scss';
 
 
-/* navbar scroll animation */
-let TweenLite = {};
-if (process.env.browser) {
-  TweenLite = require('gsap/TweenLite'); // eslint-disable-line global-require
-  require('gsap/ScrollToPlugin'); // eslint-disable-line global-require
-}
+/** images */
 
+import hackathon from './hackathon.jpg';
 /**
  * Constants
  */
 
-const headerText = 'Events';
-
+/**
+ * Events list
+ * enter schedulelsit with no existing schedule in following format
+ *
+  scheduleList: [
+    {
+      dayTitle: '',
+      dayEvents: [],
+    },
+  ],
+ */
 const EVENTS = [
   {
     eventName: 'D4SD Kick-off Design Sprint and Hackathon',
@@ -190,13 +184,10 @@ const EVENTS = [
 
 
 /**
- * Events
+ * EventBox
  */
 
-
-const propTypes = {
-  params: PropTypes.object.isRequired,
-};
+const propTypes = {};
 
 const contextTypes = {
   router: PropTypes.object,
@@ -204,146 +195,37 @@ const contextTypes = {
 
 const defaultProps = {};
 
-class Events extends React.PureComponent {
-  static CURRENTSECTION_HEADER = 'header';
-  static CURRENTSECTION_OVERVIEW_BASE = 'overview';
-  static CURRENTSECTION_RESOURCES = 'resources';
-
-  static SCROLL_PX_PER_MS = 1500;
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentSection: Events.CURRENTSECTION_HEADER,
-      post: false,
-    };
-  }
-
-  componentDidMount() {
-    this._onWindowScroll();
-    window.addEventListener('scroll', this._onWindowScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this._onWindowScroll);
-  }
-
-  _onWindowScroll = () => {
-    const { currentSection, post } = this.state;
-
-    const newPost = this.contentContainer.getBoundingClientRect().top < 0;
-    if (newPost !== post) {
-      this.setState({
-        post: newPost,
-      });
-    }
-
-    let newCurrentSection = Events.CURRENTSECTION_HEADER;
-
-    for (let i = this.overviews.length - 1; i >= 0; i -= 1) {
-      if (this.overviews[i].getBoundingClientRect().top <= 30) {
-        newCurrentSection = `${Events.CURRENTSECTION_OVERVIEW_BASE}${i}`;
-        break;
-      }
-    }
-
-    if (newCurrentSection !== currentSection) {
-      this.setState({
-        currentSection: newCurrentSection,
-      });
-    }
-  }
-
-  _onNavItemClicked = id => () => {
-    const target = document.getElementById(id);
-
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const bodyTop = document.body.getBoundingClientRect().top;
-    const targetTop = target.getBoundingClientRect().top;
-    const scrollTarget = targetTop - bodyTop;
-    const scrollDuration = Math.abs(scrollTop - scrollTarget) / Events.SCROLL_PX_PER_MS;
-
-    TweenLite.to(window, scrollDuration, { scrollTo: scrollTarget });
-  }
-
-  render() {
-    const { currentSection, post } = this.state;
-
-    let pageInfo = EVENTS;
-
-    if (!pageInfo) {
-      pageInfo = EVENTS.error;
-    }
-
-    return (
-      <div className={styles.events}>
-        <Helmet
-          title={headerText}
-        />
-        <Navbar />
-        <Header
-          backgroundImg={headerImg}
-          headerText={headerText}
-          subheaderText=""
-          showButton={false}
-        />
-        <section className={classNames([styles.contentContainer, post && styles.post])} ref={(el) => { this.contentContainer = el; }}>
-          <div className={globalStyles.contentWrapper}>
-            <div className={styles.menu}>
-
-              {/* sidebar */}
-              <ul className={styles.sidebar}>
-                {EVENTS.map(({ eventName }, i) => (
-                  <a key={eventName}>
-                    <li
-                      className={currentSection === `${Events.CURRENTSECTION_OVERVIEW_BASE}${i}` ? styles.current : ''}
-                      onClick={this._onNavItemClicked(eventName.replace(/( |\W)/g, '').toLowerCase())}
-                    >
-                      <p>{eventName}</p>
-                    </li>
-                  </a>
-                ))}
-              </ul>
+function EventBox() {
+  return (
+    <div className={classNames([styles.eventBox, globalStyles.contentWrapper])}>
+      <div className={styles.contentContainer}>
+        {EVENTS.map(({ eventName, hostedBy, scheduleList, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }) => (
+          <div key={eventName} className={styles.eventWrapper}>
+            <div className={styles.eventHeader}>
+              <h2>{eventName}</h2>
+              <h4>{hostedBy}</h4>
+              <hr />
             </div>
-
-            {/* events */}
-            {EVENTS.map(({ eventName, hostedBy, scheduleList, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }, i) => (
-              <div
-                key={eventName}
-                id={eventName.replace(/( |\W)/g, '').toLowerCase()}
-                className={eventStyles.eventWrapper} ref={(el) => { this.overviews = this.overviews || []; this.overviews[i] = el; }}
-              >
-                <div className={eventStyles.eventHeader}>
-                  <h2>{eventName}</h2>
-                  <h4>{hostedBy}</h4>
-                  <hr />
-                </div>
-                {scheduleList
-                  .map(({ dayEvents }) => (
-                    <ScheduleBox
-                      key={dayEvents}
-                      dayEvents={dayEvents}
-                      eventSummary={eventSummary}
-                      eventSummaryNoImg={eventSummaryNoImg}
-                      eventImg={eventImg}
-                      eventImgAlt={eventImgAlt}
-                    />
-                  ))}
-              </div>
-            ))}
-
+            {scheduleList
+              .map(({ dayEvents }) => (
+                <ScheduleBox
+                  key={dayEvents}
+                  dayEvents={dayEvents}
+                  eventSummary={eventSummary}
+                  eventSummaryNoImg={eventSummaryNoImg}
+                  eventImg={eventImg}
+                  eventImgAlt={eventImgAlt}
+                />
+              ))}
           </div>
-        </section>
-        <Footer />
-
+        ))}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-Events.propTypes = propTypes;
-Events.contextTypes = contextTypes;
-Events.defaultProps = defaultProps;
+EventBox.propTypes = propTypes;
+EventBox.contextTypes = contextTypes;
+EventBox.defaultProps = defaultProps;
 
-export default Events;
+export default EventBox;
