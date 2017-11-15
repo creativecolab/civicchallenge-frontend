@@ -20,13 +20,12 @@ const getLatestInMobility = (nextState, cb) => require.ensure([], require => cb(
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
 const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
 const getGetInvolved = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/GetInvolved/GetInvolved').default), 'getinvolved');
-const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PressEvents/PressEvents').default), 'events');
+const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'events');
 const getCodeOfConduct = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/CodeOfConduct/CodeOfConduct').default), 'codeofconduct');
 const getPosterTemplates = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PosterTemplates/PosterTemplates').default), 'postertemplates');
 const getJurors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Jurors/Jurors').default), 'jurors');
 const getFinalists = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Finalists/Finalists').default), 'finalists');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
-const getEvents2 = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'eventstest');
 
 
 function onRouteChange(prev, next) {
@@ -51,6 +50,5 @@ export default (
     <Route path="/judging" getComponent={getJurors} />
     <Route path="/finalists" getComponent={getFinalists} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
-    <Route path="/eventstest" getComponent={getEvents2} />
   </Route>
 );
