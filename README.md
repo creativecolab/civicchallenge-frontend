@@ -76,7 +76,7 @@ A barebones testing configuration with [AVA](https://github.com/avajs) for unit 
 
 ## People
 
-Gus, Lauren, Steven :)
+Eun-hye, Gus, Lauren, Steven :)
 
 ## Known Issues/Fixes
 
