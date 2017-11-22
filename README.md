@@ -76,7 +76,7 @@ A barebones testing configuration with [AVA](https://github.com/avajs) for unit 
 
 ## People
 
-TODO :)
+Gus :)
 
 ## Known Issues/Fixes
 
