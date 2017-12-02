@@ -1,4 +1,4 @@
-# Title
+# Frontend for D4SD
 
 > Currently hosted at https://d4sd.org/
 
@@ -19,8 +19,8 @@
 
 ## Requirements
 
-- Node.js
-- Yarn
+- Node.js [v7.6.0]
+- Yarn [1.3.2]
 
 #### Installing Node.js
 
@@ -76,7 +76,7 @@ A barebones testing configuration with [AVA](https://github.com/avajs) for unit 
 
 ## People
 
-TODO :)
+Eun-hye, Gus, Lauren, Steven :)
 
 ## Known Issues/Fixes
 
