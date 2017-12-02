@@ -18,7 +18,7 @@ const defaultProps = {};
 function Placeholder() {
   return (
     <div className={styles.placeholder}>
-      <p>This is the a placeholder page</p>
+      <p>This is the a placeholder page!!</p>
     </div>
   );
 }
