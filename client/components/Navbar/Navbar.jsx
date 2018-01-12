@@ -78,7 +78,6 @@ const propTypes = {
   // headerText: PropTypes.string.isRequired,
   // subheaderText: PropTypes.string.isRequired,
   // showButton: PropTypes.bool.isRequired,
-  // auth: PropTypes.object.isRequired,
 };
 
 const contextTypes = {
@@ -100,10 +99,9 @@ class Navbar extends React.PureComponent {
 
   constructor(props) {
     super(props);
-    // const { isAuthenticated } = props.auth;
+
     this.state = {
       mobileNavbarOpen: false,
-      // isAuthenticated: isAuthenticated(),
     };
   }
 
@@ -229,11 +227,6 @@ class Navbar extends React.PureComponent {
           <div className={styles.registerButton}>
             <div className={styles.buttonContainer}>
               <Link onClick={logClick} to="/getinvolved"><p>Get Involved</p></Link>
-            </div>
-          </div>
-          <div className={styles.loginButton}>
-            <div className={styles.buttonContainer}>
-              <Link onClick={logClick} to="/userlogin"><p>Login</p></Link>
             </div>
           </div>
           <button className={styles.mobileNavbar} onClick={this._mobileNavbarOnClick}>
