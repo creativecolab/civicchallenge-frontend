@@ -67,6 +67,34 @@ $font-color: #fff;
       }
     }
 
+    .loginButton {
+      $ease-time: 0.5s;
+      $color-delay: 0.2s;
+      border: 2px solid $theme-color-orange;
+      padding: 0;
+      margin: 0 0 0 25px;
+      font-size: $button-size;
+      p {
+        margin: 0;
+        padding: 8px 15px;
+        text-transform: uppercase;
+        color: $theme-color-orange;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      &:hover {
+        transition: background-color $ease-time ease;
+        background-color: $theme-color-orange;
+        p {
+          transition: color $ease-time ease $color-delay;
+          color: #fff;
+        }
+      }
+    }
+
     .logo, .navbar-inner {
       a {
         border: none;

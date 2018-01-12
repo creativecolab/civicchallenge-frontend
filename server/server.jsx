@@ -44,6 +44,29 @@ const app = express();
 
 app.enable('trust proxy');
 
+/**
+ * Auth0
+ */
+
+// const jwt = require('express-jwt');
+// const jwks = require('jwks-rsa');
+// const cors = require('cors');
+
+// app.use(cors());
+
+// const authCheck = jwt({
+//   secret: jwks.expressJwtSecret({
+//         cache: true,
+//         rateLimit: true,
+//         jwksRequestsPerMinute: 5,
+//         // YOUR-AUTH0-DOMAIN name e.g prosper.auth0.com
+//         jwksUri: "https://{YOUR-AUTH0-DOMAIN}/.well-known/jwks.json"
+//     }),
+//     // This is the identifier we set when we created the API
+//     audience: '{YOUR-API-AUDIENCE-ATTRIBUTE}',
+//     issuer: '{YOUR-AUTH0-DOMAIN}',
+//     algorithms: ['RS256']
+// });
 
 /**
  * Middleware Stack

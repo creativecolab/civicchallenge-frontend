@@ -1,9 +1,13 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+// import {  } from 'react-router';
+import { IndexRoute, Route } from 'react-router';
 import ReactGA from 'react-ga';
 
 import App from './modules/App/App';
 import Landing from './modules/Landing/Landing';
+import Auth from './modules/UserLogin/components/Auth/Auth';
+// import Callback from './modules/UserLogin/components/Callback/Callback';
+// import history from './modules/UserLogin/components/history'
 
 // require.ensure Polyfill
 if (typeof require.ensure !== 'function') {
@@ -11,6 +15,9 @@ if (typeof require.ensure !== 'function') {
     callback(require);
   };
 }
+
+// auth0
+const auth = new Auth();
 
 const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Sponsors/Sponsors').default), 'sponsors');
 const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default), 'about');
@@ -26,6 +33,8 @@ const getPosterTemplates = (nextState, cb) => require.ensure([], require => cb(n
 const getJurors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Jurors/Jurors').default), 'jurors');
 const getFinalists = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Finalists/Finalists').default), 'finalists');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
+const getUserLogin = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/UserLogin/UserLogin').default), 'userlogin');
+const getCallback = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/UserLogin/components/Callback/Callback').default), 'callback');
 
 
 function onRouteChange(prev, next) {
@@ -34,21 +43,23 @@ function onRouteChange(prev, next) {
 
 export default (
   <Route path="/" component={App} onChange={onRouteChange}>
-    <IndexRoute component={Landing} />
-    <Route path="/sponsors" getComponent={getSponsors} />
-    <Route path="/about" getComponent={getAbout} />
-    <Route path="/challenges" getComponent={getChallenges} />
-    <Route path="/challenges/:id" getComponent={getDesignBrief} />
-    <Route path="/resources" getComponent={getResources} />
-    <Route path="/resources/latestinmobility" getComponent={getLatestInMobility} />
-    <Route path="/faqs" getComponent={getFAQ} />
-    <Route path="/designbrief" getComponent={getDesignBrief} />
-    <Route path="/getinvolved" getComponent={getGetInvolved} />
-    <Route path="/events" getComponent={getEvents} />
-    <Route path="/codeofconduct" getComponent={getCodeOfConduct} />
-    <Route path="/postertemplates" getComponent={getPosterTemplates} />
-    <Route path="/judging" getComponent={getJurors} />
-    <Route path="/finalists" getComponent={getFinalists} />
-    <Route path="/placeholder" getComponent={getPlaceholder} />
+    <IndexRoute component={Landing} auth={auth} />
+    <Route path="/sponsors" getComponent={getSponsors} auth={auth} />
+    <Route path="/about" getComponent={getAbout} auth={auth} />
+    <Route path="/challenges" getComponent={getChallenges} auth={auth} />
+    <Route path="/challenges/:id" getComponent={getDesignBrief} auth={auth} />
+    <Route path="/resources" getComponent={getResources} auth={auth} />
+    <Route path="/resources/latestinmobility" getComponent={getLatestInMobility} auth={auth} />
+    <Route path="/faqs" getComponent={getFAQ} auth={auth} />
+    <Route path="/designbrief" getComponent={getDesignBrief} auth={auth} />
+    <Route path="/getinvolved" getComponent={getGetInvolved} auth={auth} />
+    <Route path="/events" getComponent={getEvents} auth={auth} />
+    <Route path="/codeofconduct" getComponent={getCodeOfConduct} auth={auth} />
+    <Route path="/postertemplates" getComponent={getPosterTemplates} auth={auth} />
+    <Route path="/judging" getComponent={getJurors} auth={auth} />
+    <Route path="/finalists" getComponent={getFinalists} auth={auth} />
+    <Route path="/placeholder" getComponent={getPlaceholder} auth={auth} />
+    <Route path="/userlogin" getComponent={getUserLogin} auth={auth} />
+    <Route path="/callback" getComponent={getCallback} auth={auth} />
   </Route>
 );
