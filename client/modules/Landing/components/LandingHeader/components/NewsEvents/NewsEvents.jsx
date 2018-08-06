@@ -26,7 +26,7 @@ const twitterSectionTitle = 'LATEST TWEET';
 const EVENTS = [
   {
     id: '',
-    date: 'Oct 3-19 • UCSD main campus',
+    date: 'Oct 3-19 2017 • UCSD main campus',
     title: 'Human-Centered Design Course at UCSD',
     link: 'https://goo.gl/forms/PoOhtm0nhq6wDLjj1',
     callToAction: '',
@@ -35,7 +35,7 @@ const EVENTS = [
   },
   {
     id: '',
-    date: 'Oct 25 • Broadway Pier',
+    date: 'Oct 25 2017 • Broadway Pier',
     title: 'D4SD Poster Session, Design Forward mixer',
     link: 'http://www.designforwardsd.com/',
     callToAction: '',
@@ -44,7 +44,7 @@ const EVENTS = [
   },
   {
     id: '',
-    date: 'Oct 26 • Liberty Station',
+    date: 'Oct 26 2017 • Liberty Station',
     title: 'D4SD Award Ceremony, Design Forward Summit',
     link: 'http://www.designforwardsd.com/',
     callToAction: '',

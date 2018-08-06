@@ -40,6 +40,8 @@ function Landing() {
       <Navbar />
       <LandingHeader />
       <Register />
+      {/* TODO: Make this a LandingVideo component */}
+      <video style={{ maxWidth: '100%' }} autoPlay="autoplay" src="landing-video.mp4" controls muted />
       <ChallengeDescription />
       <DesignForwardCallout />
       <LandingJurors />
