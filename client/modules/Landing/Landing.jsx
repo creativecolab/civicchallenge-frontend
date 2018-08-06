@@ -41,7 +41,19 @@ function Landing() {
       <LandingHeader />
       <Register />
       {/* TODO: Make this a LandingVideo component */}
-      <video style={{ maxWidth: '100%' }} autoPlay="autoplay" src="landing-video.mp4" controls muted />
+      <div
+        style={{ position: 'relative',
+          width: '100%',
+          paddingBottom: '56.25%' }}
+      >
+        <iframe
+          style={{ position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%' }} src="https://www.youtube.com/embed/lDWrwvqqKa4?autoplay=1&rel=0&showinfo=0&vq=highres" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen
+        />
+      </div>
       <ChallengeDescription />
       <DesignForwardCallout />
       <LandingJurors />
