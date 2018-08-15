@@ -8,6 +8,7 @@ import Navbar from 'components/Navbar/Navbar';
 
 import Footer from 'components/Footer/Footer';
 import LandingHeader from './components/LandingHeader/LandingHeader';
+import LandingVideo from './components/LandingVideo/LandingVideo';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
 import LandingJurors from './components/LandingJurors/LandingJurors';
 import DesignForwardCallout from './components/DesignForwardCallout/DesignForwardCallout';
@@ -18,6 +19,7 @@ import Register from './components/Register/Register';
 import Sponsors from './components/Sponsors/Sponsors';
 
 import styles from './Landing.scss';
+// import LandingVideo from './components/LandingVideo/LandingVideo';
 
 /**
  * Landing
@@ -41,19 +43,7 @@ function Landing() {
       <LandingHeader />
       <Register />
       {/* TODO: Make this a LandingVideo component */}
-      <div
-        style={{ position: 'relative',
-          width: '100%',
-          paddingBottom: '56.25%' }}
-      >
-        <iframe
-          style={{ position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%' }} src="https://www.youtube.com/embed/lDWrwvqqKa4?autoplay=1&rel=0&showinfo=0&vq=highres&mute=1" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen
-        />
-      </div>
+      <LandingVideo />
       <ChallengeDescription />
       <DesignForwardCallout />
       <LandingJurors />

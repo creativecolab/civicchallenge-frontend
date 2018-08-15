@@ -22,6 +22,7 @@ import slack from './slack_icon.png';
 import search from './search_icon.png';
 import mail from './email-icon.png';
 import submit from './submit-icon.png';
+import interest from './calendar-plus-icon.svg';
 /* import test from './test_icon.png'; */
 /**
  * Constants
@@ -32,13 +33,13 @@ const description = 'Jump into the online discussion or read more details about 
 
 const BOX_TEXT = [
   {
-    title: 'Discuss Mobility in Slack',
-    text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
-    buttonText: 'Join the Discussion',
-    linkUrl: 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA',
+    title: 'Fill Out Interest Form',
+    text: 'D4SD is coming back in 2019! Show your interest in the next year\'s challenge by filling out this form.',
+    buttonText: 'Fill Out Form',
+    linkUrl: 'https://www.google.com/forms/about/',
     rel: 'noopener noreferrer',
     target: '_blank',
-    icon: slack,
+    icon: interest,
     boxColor: '#fff',
     textColor: '#212121',
     button: 'globalStyles.blueOutline',
@@ -56,8 +57,20 @@ const BOX_TEXT = [
     button: 'globalStyles.orangeOutline',
   },
   {
+    title: 'Discuss Mobility in Slack',
+    text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
+    buttonText: 'Join the Discussion',
+    linkUrl: 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA',
+    rel: 'noopener noreferrer',
+    target: '_blank',
+    icon: slack,
+    boxColor: '#fff',
+    textColor: '#212121',
+    button: 'globalStyles.blueOutline',
+  },
+  {
     title: 'Explore the Challenge Briefs',
-    text: 'Read the briefs to learn background information and to empathize with particular mobility challenges that San Diego residents face.',
+    text: 'Read the 2017 briefs to learn background information and to empathize with particular mobility challenges that San Diego residents face.',
     buttonText: 'View the Briefs',
     linkUrl: '/challenges',
     rel: '',
@@ -69,8 +82,8 @@ const BOX_TEXT = [
   },
   {
     title: 'Challenge Submission Closed',
-    text: 'A total of 23 teams competed in the D4SD Challenge. Check out the finalists using the button below.',
-    buttonText: 'Checkout the finalists',
+    text: 'A total of 23 teams competed in the D4SD Challenge 2017. Check out the finalists using the button below.',
+    buttonText: 'Checkout finalists',
     linkUrl: '/finalists',
     rel: '',
     target: '',
