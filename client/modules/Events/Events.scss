@@ -13,7 +13,11 @@
 	width: 70%;
 	a {
 		color: $theme-color-red;
-	} 
+	}
+	@media (max-width: $mobile-max-width) {
+		width: 90%;
+    margin: 0 auto;
+	}
 }
 
 $content-width: 70%;
