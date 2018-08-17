@@ -22,6 +22,9 @@ import slack from './slack_icon.png';
 import search from './search_icon.png';
 import mail from './email-icon.png';
 import submit from './submit-icon.png';
+import interest from './calendar-plus-icon.svg';
+import team from './users-solid.svg';
+
 /* import test from './test_icon.png'; */
 /**
  * Constants
@@ -31,6 +34,18 @@ const sectionTitle = 'Ready to Get Involved?';
 const description = 'Jump into the online discussion or read more details about the Design for San Diego Challenges on transportation and mobility.';
 
 const BOX_TEXT = [
+  {
+    title: 'Join the D4SD research team!',
+    text: 'Apply by October 15th 2018 to be part of the team that shapes the next big civic challenge.',
+    buttonText: 'Apply Now',
+    linkUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeNqFs9qOseMVc8NFJxrG1clB1r6MK71NvMiBBBKAypEKKVPg/viewform?c=0&w=1',
+    rel: 'noopener noreferrer',
+    target: '_blank',
+    icon: team,
+    boxColor: '#fff',
+    textColor: '#212121',
+    button: 'globalStyles.blueOutline',
+  },
   {
     title: 'Discuss Mobility in Slack',
     text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
@@ -57,7 +72,7 @@ const BOX_TEXT = [
   },
   {
     title: 'Explore the Challenge Briefs',
-    text: 'Read the briefs to learn background information and to empathize with particular mobility challenges that San Diego residents face.',
+    text: 'Read the 2017 briefs to learn background information and to empathize with particular mobility challenges that San Diego residents face.',
     buttonText: 'View the Briefs',
     linkUrl: '/challenges',
     rel: '',
@@ -69,8 +84,8 @@ const BOX_TEXT = [
   },
   {
     title: 'Challenge Submission Closed',
-    text: 'A total of 23 teams competed in the D4SD Challenge. Check out the finalists using the button below.',
-    buttonText: 'Checkout the finalists',
+    text: 'A total of 23 teams competed in the D4SD Challenge 2017. Check out the finalists using the button below.',
+    buttonText: 'Checkout finalists',
     linkUrl: '/finalists',
     rel: '',
     target: '',
@@ -97,7 +112,7 @@ function GetInvolved() {
   return (
     <div className={styles.getInvolved}>
       <Helmet
-        title="GetInvolved"
+        title="Get Involved"
       />
       <Navbar />
       <div className={globalStyles.pageWrapper}>
