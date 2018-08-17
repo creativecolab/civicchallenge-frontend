@@ -20,7 +20,7 @@ const LandingVideo = (props) => {
   return (
     <div className={styles.landingVideoContainer} ref={props.componentRef}>
       <iframe
-        className={styles.landingVideo} src="https://www.youtube.com/embed/lDWrwvqqKa4?autoplay=1&rel=0&showinfo=0&vq=highres&mute=1"
+        className={styles.landingVideo} src="https://www.youtube.com/embed/V7LxWFqMm4g?autoplay=1&rel=0&showinfo=0&vq=highres&mute=1"
         frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen
       />
     </div>
