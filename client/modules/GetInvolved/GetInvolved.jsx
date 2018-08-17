@@ -23,6 +23,8 @@ import search from './search_icon.png';
 import mail from './email-icon.png';
 import submit from './submit-icon.png';
 import interest from './calendar-plus-icon.svg';
+import team from './users-solid.svg';
+
 /* import test from './test_icon.png'; */
 /**
  * Constants
@@ -33,13 +35,25 @@ const description = 'Jump into the online discussion or read more details about 
 
 const BOX_TEXT = [
   {
-    title: 'Fill Out Interest Form',
-    text: 'D4SD is coming back in 2019! Show your interest in the next year\'s challenge by filling out this form.',
-    buttonText: 'Fill Out Form',
-    linkUrl: 'https://www.google.com/forms/about/',
+    title: 'Join the D4SD research team!',
+    text: 'Apply by October 15th 2018 to be part of the team that shapes the next big civic challenge.',
+    buttonText: 'Apply Now',
+    linkUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeNqFs9qOseMVc8NFJxrG1clB1r6MK71NvMiBBBKAypEKKVPg/viewform?c=0&w=1',
     rel: 'noopener noreferrer',
     target: '_blank',
-    icon: interest,
+    icon: team,
+    boxColor: '#fff',
+    textColor: '#212121',
+    button: 'globalStyles.blueOutline',
+  },
+  {
+    title: 'Discuss Mobility in Slack',
+    text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
+    buttonText: 'Join the Discussion',
+    linkUrl: 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA',
+    rel: 'noopener noreferrer',
+    target: '_blank',
+    icon: slack,
     boxColor: '#fff',
     textColor: '#212121',
     button: 'globalStyles.blueOutline',
@@ -55,18 +69,6 @@ const BOX_TEXT = [
     boxColor: '#fff',
     textColor: '#212121',
     button: 'globalStyles.orangeOutline',
-  },
-  {
-    title: 'Discuss Mobility in Slack',
-    text: 'Discussions focus on sharing everyday issues with transportation, discussing key policy decisions, and generating ideas for a weekly series of design sprints.',
-    buttonText: 'Join the Discussion',
-    linkUrl: 'https://join.slack.com/t/d4sd/shared_invite/MjExMjA5MDY0MjkzLTE0OTk3ODcxMjktMzIxYmRkMTJkMA',
-    rel: 'noopener noreferrer',
-    target: '_blank',
-    icon: slack,
-    boxColor: '#fff',
-    textColor: '#212121',
-    button: 'globalStyles.blueOutline',
   },
   {
     title: 'Explore the Challenge Briefs',

@@ -8,6 +8,14 @@
   @return $number;
 }
 
+.alert {
+	padding-bottom: 2em;
+	width: 70%;
+	a {
+		color: $theme-color-red;
+	} 
+}
+
 $content-width: 70%;
 .events {
 	height: 100%;
