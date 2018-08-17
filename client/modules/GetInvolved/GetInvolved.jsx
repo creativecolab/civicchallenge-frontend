@@ -112,7 +112,7 @@ function GetInvolved() {
   return (
     <div className={styles.getInvolved}>
       <Helmet
-        title="GetInvolved"
+        title="Get Involved"
       />
       <Navbar />
       <div className={globalStyles.pageWrapper}>
