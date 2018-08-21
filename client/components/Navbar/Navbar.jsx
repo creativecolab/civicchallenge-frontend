@@ -20,6 +20,10 @@ if (process.env.browser) {
 // TODO: Make homepage links scroll to correct area
 const LINKS = [
   {
+    href: '/press',
+    text: 'Press',
+  },
+  {
     href: '/challenges',
     text: 'Challenge Briefs',
     dropDown: [

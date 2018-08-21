@@ -1,0 +1,46 @@
+@import '~styles/variables';
+
+.press {
+  height: 100%;
+  width: 100%;
+
+  .sectionWrapper {
+    padding-top: $resource-padding; 
+  }
+
+  .call-out {
+    height: 30%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    .call-out-wrapper {
+      height: 100%;
+      width: 100%;
+
+      padding: $resource-padding 0;
+      margin-right: $border-margin;
+
+      @media (max-width: $mobile-max-width) {
+        margin-right: 0;
+        padding: $resource-padding $border-margin;
+      }
+
+      background-color: $theme-color-blue;
+      p {
+        color: $theme-color-white;
+        margin-bottom: $spacing-margin;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .grid-wrapper {
+    text-align: center;
+  }
+}

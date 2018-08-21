@@ -11,7 +11,7 @@ if (typeof require.ensure !== 'function') {
     callback(require);
   };
 }
-
+const getPress = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Press/Press').default), 'press');
 const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Sponsors/Sponsors').default), 'sponsors');
 const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default), 'about');
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
@@ -50,5 +50,6 @@ export default (
     <Route path="/judging" getComponent={getJurors} />
     <Route path="/finalists" getComponent={getFinalists} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
+    <Route path="/press" getComponent={getPress} />
   </Route>
 );
