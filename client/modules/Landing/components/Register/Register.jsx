@@ -14,7 +14,7 @@ import styles from './Register.scss';
 
 const sectionTitle = 'Congratulations to the 2017 D4SD Finalists!';
 const description = 'Out of 23 entries into this year\'s challenge, we selected 8 finalists that represent a mix of our four challenge briefs<br /> (commuter experience, accessibility, biking/walking, and autonomous vehicles).';
-const btnLink = '/finalists';
+const btnLink = '/entries';
 const btnText = 'SEE FINALISTS';
 
 /**

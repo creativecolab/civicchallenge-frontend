@@ -46,8 +46,8 @@ const LINKS = [
     ],
   },
   {
-    href: '/finalists',
-    text: 'Finalists',
+    href: '/entries',
+    text: 'Entries',
   },
   {
     href: '/judging',

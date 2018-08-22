@@ -9,23 +9,25 @@ import Navbar from 'components/Navbar/Navbar';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 
+import EntriesGroup from './components/EntriesGroup/EntriesGroup';
 import FinalistsGroup from './components/FinalistsGroup/FinalistsGroup';
 
-import styles from './Finalists.scss';
+
+import styles from './Entries.scss';
 
 /** images */
-import finalistsBackground from './hands.jpg';
+import entriesBackground from './hands.jpg';
 
 /**
  * Constants
  */
 
-const sectionTitle = 'Finalists';
+const sectionTitle = 'Entries';
 
-// const gridTitle = 'The Finalists';
+// const gridTitle = 'The Entries';
 
 /**
- * Finalists
+ * Entries
  */
 
 const propTypes = {};
@@ -36,35 +38,44 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Finalists() {
+function Entries() {
   return (
-    <section className={classNames([styles.finalists, globalStyles.contentWrapper])}>
+    <section className={classNames([styles.entries, globalStyles.contentWrapper])}>
       <Helmet
-        title="Finalists"
+        title="Entries"
       />
       <Navbar />
       <Header
-        backgroundImg={finalistsBackground}
+        backgroundImg={entriesBackground}
         headerText={sectionTitle}
         subheaderText=""
         showButton={false}
       />
       <div className={globalStyles.pageWrapper}>
         {/* <h2 className={styles.finalistTitle}>{gridTitle}</h2> */}
+
         <FinalistsGroup
           title=""
           text=""
           figureA=""
           figureALink=""
         />
+
+        <EntriesGroup
+          title=""
+          text=""
+          figureA=""
+          figureALink=""
+        />
+
       </div>
       <Footer />
     </section>
   );
 }
 
-Finalists.propTypes = propTypes;
-Finalists.contextTypes = contextTypes;
-Finalists.defaultProps = defaultProps;
+Entries.propTypes = propTypes;
+Entries.contextTypes = contextTypes;
+Entries.defaultProps = defaultProps;
 
-export default Finalists;
+export default Entries;
