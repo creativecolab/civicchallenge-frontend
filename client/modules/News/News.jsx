@@ -18,17 +18,18 @@ const contextTypes = {
 };
 
 const defaultProps = {
-  sectionTitle: 'Add Title',
-  description: 'Add Description',
+  sectionTitle: null,
+  description: null,
   articles: [],
 };
 
 function News(props) {
+  const { sectionTitle, description } = props;
   return (
     <div className={styles.resources}>
       <div className={styles.headerText}>
-        <h2>{props.sectionTitle}</h2>
-        <p>{props.description}</p>
+        {sectionTitle && <h2>{sectionTitle}</h2>}
+        {description && <p>{description}</p>}
       </div>
       <div className={styles.challenge}>
         <div className={globalStyles.gridStyle}>

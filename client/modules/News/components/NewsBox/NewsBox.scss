@@ -8,13 +8,14 @@ $button-size: 0.7em;
 $h2-mobile: 1.2em;
 
 $box-dim-width: 300px;
-$box-dim-height: $box-dim-width * 1.25;
+$box-dim-height: $box-dim-width * 1.33;
 
 .wrapper {
   width: $box-dim-width;
-  height: $box-dim-height;
+  // height: $box-dim-height;
   margin: 0 20px 20px 0;
-  vertical-align: bottom;
+  // vertical-align: bottom;
+  vertical-align: top;
   display: inline-block;
   top: 0;
 
