@@ -27,36 +27,29 @@ const SECTION_DETAILS = [
 
 const TEAMS = [
   {
-    header: 'The Winner',
+    header: 'Finalists',
     boxContent: [
       {
         teamName: 'Cycle Detection',
+        position: 1,
         memberList: 'Stephen Cerruti, D.J. Nelson, Savera Soin, James Maron',
         teamImg: cycleDetection,
         projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
       },
-    ],
-  },
-  {
-    header: 'The Runnerups',
-    boxContent: [
       {
         teamName: 'AV onDemand: Remote Service Provider for Autonomous vehicles',
+        position: 2,
         memberList: 'Marissa Hing, Alex Tunchez, Jacob Browne, Josh Duhay, Claire Pham',
         teamImg: remoteService,
         projectDesc: 'Hired specialists remotely maneuver AVs through areas of uncertain conditions allowing all riders to travel with no takeover responsibility.',
       },
       {
         teamName: 'Spot: Your Guide to Safe and Walkable Cities',
+        position: 3,
         memberList: 'Sayamon Riddang, Natalie Terenzi',
         teamImg: spot,
         projectDesc: 'Spot is an app that provides the blind and visually impaired with accessibility-focused walking directions, using data from GE streetlamps.',
       },
-    ],
-  },
-  {
-    header: 'The Finalists',
-    boxContent: [
       {
         teamName: 'GATE Center: Immersive AV Learning Center',
         memberList: 'Garret Hoover, Selene Hoover, Jessica Yeung',

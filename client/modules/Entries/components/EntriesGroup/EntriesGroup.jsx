@@ -28,7 +28,7 @@ import spot from './imgs/spot.png';
 
 const TEAMS = [
   {
-    header: 'Other entries',
+    header: 'Other Entries',
     boxContent: [
       {
         teamName: 'PAC: Personal Assistant for Cars',

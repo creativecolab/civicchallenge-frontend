@@ -50,6 +50,7 @@ $icon-dim: 60px;
 @media (max-width: $mobile-max-width) {
   .press-box {
     margin-right: 0;
-    width: 90%;
+    // width: 90%;
+    width: 100%;
   }
 }
