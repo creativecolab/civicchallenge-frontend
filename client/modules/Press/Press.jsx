@@ -22,13 +22,14 @@ import designWorldCapital from './imgs/designWorldCapital.jpg';
 import xconomy from './imgs/xconomy.jpg';
 import hackathon from './imgs/hackathon.jpg';
 import ucsdnews from './imgs/ucsdnews.jpg';
+import timesofsd from './imgs/timesofsd.jpg';
 
 /**
  * Constants
  */
 
 const sectionTitle = 'Press';
-const titleDescription = 'This page provides a wealth of press to help you learn methods for human-centered design, find about the latest technology related to mobility, and get answers to your frequently asked questions.';
+// const titleDescription = 'This page provides a wealth of press to help you learn methods for human-centered design, find about the latest technology related to mobility, and get answers to your frequently asked questions.';
 
 /**
  * Articles
@@ -79,6 +80,15 @@ const ARTICLES = [
     linkKey: 'https://ucsdnews.ucsd.edu/index.php/pressrelease/public-invited-to-design-solutions-to-our-citys-biggest-issues',
     descr: 'Mayor and UC San Diego Chancellor slated to kick off city-wide civic design challenge on transportation and mobility on Sept. 21',
   },
+  {
+    id: '',
+    date: 'SEP 2017',
+    source: 'TIMES OF SAN DIEGO',
+    title: 'UCSD Challenges Public to Tackle San Diego’s Transportation Issues',
+    thumbnail: timesofsd,
+    linkKey: 'https://timesofsandiego.com/tech/2017/09/07/ucsd-challenges-public-to-tackle-san-diegos-transportation-issues/',
+    descr: '',
+  },
 ];
 
 /**
@@ -103,7 +113,7 @@ function Press() {
       <div className={globalStyles.pageWrapper}>
         <StandardSectionBox
           sectionTitle={sectionTitle}
-          text={titleDescription}
+          // text={titleDescription}
         />
         <News articles={ARTICLES} />
       </div>
