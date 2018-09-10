@@ -15,6 +15,8 @@ import roadMap from './imgs/roadMap.jpg';
 import sdParking from './imgs/sdParking.jpg';
 import spot from './imgs/spot.jpg';
 
+import firstPlace from './imgs/first-place.png';
+
 
 /**
  * FinalistsGroup
@@ -101,13 +103,14 @@ function FinalistsGroup() {
       {TEAMS.map(({ header, boxContent }) => (
         <div key={header} className={styles.memberBox}>
           <h2 className={styles.theFinalists}>{header}</h2>
-          {boxContent.map(({ teamName, memberList, teamImg, projectDesc }) => (
+          {boxContent.map(({ teamName, position, memberList, teamImg, projectDesc }) => (
             <div
               key={teamName}
               className={styles.memberInlineWrapper}
             >
               <div className={styles.memberWrapper}>
                 <div className={styles.teamImg}>
+                  {position === 1 && <img className={styles.firstPlace} src={firstPlace} alt="First Place" />}
                   <img src={teamImg} alt={teamName} />
                 </div>
                 {/* group details (text) */}
