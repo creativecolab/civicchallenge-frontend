@@ -10,11 +10,14 @@ import styles from './EntriesGroup.scss';
 // import beachAccess from './imgs/beachAccess.png';
 // import cycleDetection from './imgs/cycleDetection.jpg';
 // import gate from './imgs/gate.jpg';
-import noimg from './imgs/noimg.jpg';
+// import noimg from './imgs/noimg.jpg';
 import mia from './imgs/mia.png';
 import icbus from './imgs/icbus.png';
 import pac from './imgs/pac.png';
 import spot from './imgs/spot.png';
+import mts from './imgs/mts.jpg';
+import teams from './imgs/teams.jpg';
+import safed from './imgs/safed.jpg';
 
 // import remoteService from './imgs/remoteService.jpg';
 // import roadMap from './imgs/roadMap.jpg';
@@ -40,7 +43,7 @@ const TEAMS = [
       {
         teamName: 'ESSENSE: Driver’s seat vibration pad',
         memberList: 'Erich McMillan, Lindy Wong, Dean Ravida, Siyuan Gao, Joel Yun',
-        teamImg: noimg,
+        teamImg: teams,
         projectDesc: 'ESSENCE is the new way to alert driver\'s of pedestrians who are preparing to cross the street at the intersection through vibrations.',
         link: 'https://joelyun.wixsite.com/teams',
       },
@@ -61,22 +64,22 @@ const TEAMS = [
       {
         teamName: 'MTS - Track Your Bus: Closing the gap between MTS and its users',
         memberList: 'Arvin Dagoc, Vivian Trinh, Swarnakshi Kapil, Saul Mendez, Chengyang Yu',
-        teamImg: noimg,
-        projectDesc: '',
+        teamImg: mts,
+        projectDesc: 'An application which rewards users for reporting MTS related problems.',
         link: 'https://citywalkers.wixsite.com/portfolio',
       },
       {
         teamName: 'SafeD',
         memberList: 'Steven Chen, Christopher Wong, Eric Liu, Bradley Day, Grace Chen',
-        teamImg: noimg,
-        projectDesc: '',
+        teamImg: safed,
+        projectDesc: 'Our solution combines infrastructural changes and social awareness campaigns supplemented by an attachable device that enhances visibility for drivers. These combine to create better experiences for drivers while improving pedestrian safety.',
         link: 'https://safeducsd.wixsite.com/safed',
       },
       {
         teamName: 'iCbus: Real-time Bus Capacity Forecasting System',
         memberList: 'Yuxuan Zhou, Yuanqi Wang, Yujie Wang',
         teamImg: icbus,
-        projectDesc: '',
+        projectDesc: 'iCBus is a multi-platform bus forecasting system. Based on existing drivers\' control system, it provides drivers a new interface to send out more valuable information, containing bus capacity and wheelchair availability, which will be synchronously transferred to users\' mobile application.',
         link: 'https://yuw281.wixsite.com/icbus',
       },
     ],
