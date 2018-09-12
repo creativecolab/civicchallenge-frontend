@@ -15,7 +15,9 @@ import roadMap from './imgs/roadMap.jpg';
 import sdParking from './imgs/sdParking.jpg';
 import spot from './imgs/spot.jpg';
 
-import firstPlace from './imgs/first-place.png';
+import firstPlace from './imgs/ribbon-first.png';
+import secondPlace from './imgs/ribbon-second.png';
+import thirdPlace from './imgs/ribbon-third.png';
 
 
 /**
@@ -110,7 +112,9 @@ function FinalistsGroup() {
             >
               <div className={styles.memberWrapper}>
                 <div className={styles.teamImg}>
-                  {position === 1 && <img className={styles.firstPlace} src={firstPlace} alt="First Place" />}
+                  {position === 1 && <img className={styles.ribbon} src={firstPlace} alt="First Place" />}
+                  {position === 2 && <img className={styles.ribbon} src={secondPlace} alt="Second Place" />}
+                  {position === 3 && <img className={styles.ribbon} src={thirdPlace} alt="Third Place" />}
                   <img src={teamImg} alt={teamName} />
                 </div>
                 {/* group details (text) */}
