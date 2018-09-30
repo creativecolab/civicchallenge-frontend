@@ -35,6 +35,16 @@ const debug = {
   err: d('server:err'),
 };
 
+/**
+ * HTTPS
+ */
+// const https = require('https'); // eslint-disable-line global-require, import/no-extraneous-dependencies, no-unused-vars
+// const fs = require('fs'); // eslint-disable-line global-require, import/no-extraneous-dependencies, no-unused-vars
+
+// const options = {
+//   key: fs.readFileSync('/srv/www/keys/my-site-key.pem'),
+//   cert: fs.readFileSync('/srv/www/keys/chain.pem'),
+// };
 
 /**
  * App
@@ -232,4 +242,12 @@ app.listen(serverConfig.port, (err) => {
       opn(`http://127.0.0.1:${serverConfig.port}`);
     }
   }
+});
+
+/**
+ * Server-side route to D4SD 2019 application form
+ */
+
+app.get('/apply', (req, res) => {
+  res.status(301).redirect('https://docs.google.com/forms/d/e/1FAIpQLSeNqFs9qOseMVc8NFJxrG1clB1r6MK71NvMiBBBKAypEKKVPg/viewform?c=0&w=1');
 });

@@ -86,7 +86,7 @@ const BOX_TEXT = [
     title: 'Challenge Submission Closed',
     text: 'A total of 23 teams competed in the D4SD Challenge 2017. Check out the finalists using the button below.',
     buttonText: 'Checkout finalists',
-    linkUrl: '/finalists',
+    linkUrl: '/entries',
     rel: '',
     target: '',
     icon: submit,

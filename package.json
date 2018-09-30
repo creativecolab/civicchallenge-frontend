@@ -6,7 +6,7 @@
     "/* Deploy Scripts */": "",
     "deploy": "pm2 deploy ecosystem.config.js production",
     "/* Prod Scripts */": "",
-    "start": "cross-env NODE_ENV=production node index.js",
+    "start": "cross-env PORT=80 NODE_ENV=production node index.js",
     "/* Dev Scripts */": "",
     "dev": "cross-env API_HOST=d4sd.dev BABEL_DISABLE_CACHE=1 DEBUG=server:* NODE_ENV=development nodemon index.js",
     "/* Staging Scripts */": "",

@@ -9,7 +9,7 @@
 }
 
 $content-width: 70%;
-.finalists {
+.entries {
 	height: 100%;
 	width: 100%;
 
@@ -22,7 +22,7 @@ $content-width: 70%;
 }
 
 @media (max-width: $mobile-max-width) {
-	.finalists {
+	.entries {
 		overflow-x: hidden;
 		.sidebar {
 			display: none;
