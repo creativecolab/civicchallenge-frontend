@@ -33,27 +33,40 @@ const contextTypes = {
 
 const defaultProps = {};
 
-function Landing() {
-  return (
-    <div className={styles.landing}>
-      <Helmet
-        title="Home"
-      />
-      <Navbar />
-      <LandingHeader />
-      <Register />
-      {/* TODO: Make this a LandingVideo component */}
-      <LandingVideo />
-      <ChallengeDescription />
-      <DesignForwardCallout />
-      <LandingJurors />
-      <TimeLineBox />
-      <WhyParticipate />
-      <ChallengeBriefs />
-      <Sponsors />
-      <Footer />
-    </div>
-  );
+class Landing extends React.Component {
+  state = { messages: [] }
+
+  componentDidMount() {
+    fetch('../api/landing')
+      .then(res => res.json())
+      .then(messages => this.setState({ messages }));
+  }
+
+  render() {
+    return (
+      <div className={styles.landing}>
+        <Helmet
+          title="Home"
+        />
+        <Navbar />
+        <LandingHeader />
+        {this.state.messages.map(message =>
+          <div>Welcome {message.message}</div>
+        )}
+        <Register />
+        {/* TODO: Make this a LandingVideo component */}
+        <LandingVideo />
+        <ChallengeDescription />
+        <DesignForwardCallout />
+        <LandingJurors />
+        <TimeLineBox />
+        <WhyParticipate />
+        <ChallengeBriefs />
+        <Sponsors />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 Landing.propTypes = propTypes;

@@ -7,6 +7,7 @@ import express from 'express';
 import compression from 'compression';
 import serveStatic from 'serve-static';
 import bodyParser from 'body-parser';
+import passport from 'passport'
 
 import sessions from 'client-sessions';
 import helmet from 'helmet';
@@ -25,6 +26,7 @@ import serverConfig from './config';
 import configureStore from '../client/store';
 import fetchComponentData from './util/fetchData';
 import routes from '../client/routes';
+
 
 /**
  * Debug
@@ -53,7 +55,6 @@ const debug = {
 const app = express();
 
 app.enable('trust proxy');
-
 
 /**
  * Middleware Stack
@@ -102,6 +103,13 @@ app.use(sessions({
   },
 }));
 
+/**
+ * Passport
+ */
+require('./passport')(passport); // pass passport for configuration
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
 // Handle JSON/URL Encoding
 app.use(bodyParser.json({
   limit: '20mb',
@@ -129,6 +137,14 @@ app.use(serveStatic(path.join(__dirname, '../public')));
 /**
  * Routes
  */
+
+app.use('/api/activate', require('./routes/activate'));
+
+app.use('/api/signup', require('./routes/signup'));
+
+app.use('/api/landing', require('./routes/landing'));
+
+app.use('/api/login', require('./routes/login')(app, passport));
 
 
 /**

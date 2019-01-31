@@ -4,13 +4,16 @@ import ReactGA from 'react-ga';
 
 import App from './modules/App/App';
 import Landing from './modules/Landing/Landing';
-
+import SignUp from './modules/SignUp/SignUp';
+import Login from './modules/Login/Login';
+import Activation from './modules/Activation/Activation';
 // require.ensure Polyfill
 if (typeof require.ensure !== 'function') {
   require.ensure = function requireModule(deps, callback) {
     callback(require);
   };
 }
+
 const getPress = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Press/Press').default), 'press');
 const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Sponsors/Sponsors').default), 'sponsors');
 const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default), 'about');
@@ -35,6 +38,9 @@ function onRouteChange(prev, next) {
 export default (
   <Route path="/" component={App} onChange={onRouteChange}>
     <IndexRoute component={Landing} />
+    <Route path="/signup" component={SignUp} />
+    <Route path="/login" component={Login} />
+    <Route path="/activation/:id" component={Activation} />
     <Route path="/sponsors" getComponent={getSponsors} />
     <Route path="/about" getComponent={getAbout} />
     <Route path="/challenges" getComponent={getChallenges} />
