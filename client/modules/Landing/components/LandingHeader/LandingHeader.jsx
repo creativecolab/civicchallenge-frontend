@@ -45,7 +45,7 @@ class LandingHeader extends React.PureComponent {
 
   _onLearnMoreClicked = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollTarget = this.props.refs.ChallengeDescription.offsetTop;
+    const scrollTarget = this.props.refs.LandingVideo.offsetTop;
     const scrollDuration = Math.abs(scrollTop - scrollTarget) / LandingHeader.SCROLL_PX_PER_MS;
 
     TweenLite.to(window, scrollDuration, { scrollTo: scrollTarget });

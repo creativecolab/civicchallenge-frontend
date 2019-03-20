@@ -11,7 +11,7 @@ import globalStyles from 'main.scss';
 
 import DBHeader from './components/DBHeader/DBHeader';
 import DBOverview from './components/DBOverview/DBOverview';
-import NewsBox from '../LatestInMobility/components/NewsBox/NewsBox';
+import NewsBox from '../News/components/NewsBox/NewsBox';
 
 import styles from './DesignBrief.scss';
 
@@ -46,20 +46,20 @@ import whatsNext from './imgs/av/av-truck.jpeg';
 
 
 /** resource images */
-import googleGlass from '../LatestInMobility/imgs/june30googleGlass.jpg';
-import signLang from '../LatestInMobility/imgs/july13signLang.jpg';
-import seats from '../LatestInMobility/imgs/march23seats.jpg';
-import lyftR from '../LatestInMobility/imgs/july12lyft.jpg';
-import lobbying from '../LatestInMobility/imgs/july19lobbying.jpg';
-import communityParking from '../LatestInMobility/imgs/july19communityParking.jpg';
-import proPilot from '../LatestInMobility/imgs/july21proPilot.jpg';
-import futureCars from '../LatestInMobility/imgs/may12futurecars.jpg';
-import smartParking from '../LatestInMobility/imgs/july12smartParkingUNC.jpg';
-import blvd from '../LatestInMobility/imgs/june27kansaselcajonblvd.jpg';
-import bikelanes from '../LatestInMobility/imgs/may30bikelanes.jpg';
-import zerodeaths from '../LatestInMobility/imgs/march8zerotrafficdeaths.jpg';
-import ford from '../LatestInMobility/imgs/jan6ford.jpg';
-import lyftLA from '../LatestInMobility/imgs/sept18lyftLA.jpg';
+import googleGlass from '../Resources/imgs/june30googleGlass.jpg';
+import signLang from '../Resources/imgs/july13signLang.jpg';
+import seats from '../Resources/imgs/march23seats.jpg';
+import lyftR from '../Resources/imgs/july12lyft.jpg';
+import lobbying from '../Resources/imgs/july19lobbying.jpg';
+import communityParking from '../Resources/imgs/july19communityParking.jpg';
+import proPilot from '../Resources/imgs/july21proPilot.jpg';
+import futureCars from '../Resources/imgs/may12futurecars.jpg';
+import smartParking from '../Resources/imgs/july12smartParkingUNC.jpg';
+import blvd from '../Resources/imgs/june27kansaselcajonblvd.jpg';
+import bikelanes from '../Resources/imgs/may30bikelanes.jpg';
+import zerodeaths from '../Resources/imgs/march8zerotrafficdeaths.jpg';
+import ford from '../Resources/imgs/jan6ford.jpg';
+import lyftLA from '../Resources/imgs/sept18lyftLA.jpg';
 
 
 /* navbar scroll animation */

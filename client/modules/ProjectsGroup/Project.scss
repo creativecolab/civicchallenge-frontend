@@ -1,0 +1,130 @@
+@import "~styles/variables.scss";
+
+
+$header-img-dim: 250px;
+
+$true-mobile-width: 500px;
+
+$member-font-size: 1em*0.9;
+
+$box-margin-right: 8%;
+.projects-group {
+  left: 100px;
+  .member-box {
+    margin-right: -($box-margin-right);
+
+    h2.the-finalists {
+      margin-top: $spacing-margin*1.5;
+    }
+
+    .member-inline-wrapper {
+      width: 90%;
+      margin-top: $spacing-margin*1.2;
+      margin-right: $box-margin-right;
+
+      display: inline-block;
+      vertical-align: top;
+
+
+      .member-wrapper {
+        width: 100%;
+
+        .ribbon {
+          position: absolute;
+          bottom: 10px;
+          right: 0;
+          width: 100px!important;
+        }
+
+        .team-img {
+          position: absolute;
+          left:400px;
+          margin-bottom: 10px;
+          $juror-member-img-dim: 200px;
+          img {
+            width: 100%;
+          }
+        }
+        .member-info {
+
+          h5 {
+            color: $theme-color-blue;
+            font-weight: bold;
+            font-size: $member-font-size;
+          }
+
+          
+          p, span {
+            color: $theme-color-black;
+            font-size: $member-font-size;
+          }
+          
+          span.member-list {
+            font-weight: bold;
+            font-size: 0.8em;
+          }
+          
+          h3 {
+            //margin-bottom: $member-font-size*0.5;
+    
+            color: $theme-color-blue;
+    
+          }
+          p.team-desc {
+            font-size: 0.8em;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@media screen and (min-width: $true-mobile-width) and (max-width: $mobile-max-width) {
+  .finalists-group {
+    .member-box {
+      margin-right: $box-margin-right;
+      .member-inline-wrapper {
+        width: 100%;
+        .member-wrapper {
+          display: flex;
+          .member-info {
+            margin-left: 3%;
+            span {
+              font-size: $member-font-size*0.8;
+            }
+          }
+          .team-img {
+            img {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $true-mobile-width) {
+  .finalists-group {
+    .member-box {
+      margin-right: 0;
+      .member-inline-wrapper {
+        width: 100%;
+        .member-wrapper {
+          display: inline-block;
+          .member-info {
+            span {
+              font-size: $member-font-size*0.8;
+            }
+          }
+          .team-img {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

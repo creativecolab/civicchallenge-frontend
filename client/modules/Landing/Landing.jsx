@@ -8,6 +8,7 @@ import Navbar from 'components/Navbar/Navbar';
 
 import Footer from 'components/Footer/Footer';
 import LandingHeader from './components/LandingHeader/LandingHeader';
+import LandingVideo from './components/LandingVideo/LandingVideo';
 import ChallengeDescription from './components/ChallengeDescription/ChallengeDescription';
 import LandingJurors from './components/LandingJurors/LandingJurors';
 import DesignForwardCallout from './components/DesignForwardCallout/DesignForwardCallout';
@@ -18,6 +19,7 @@ import Register from './components/Register/Register';
 import Sponsors from './components/Sponsors/Sponsors';
 
 import styles from './Landing.scss';
+// import LandingVideo from './components/LandingVideo/LandingVideo';
 
 /**
  * Landing
@@ -40,6 +42,8 @@ function Landing() {
       <Navbar />
       <LandingHeader />
       <Register />
+      {/* TODO: Make this a LandingVideo component */}
+      <LandingVideo />
       <ChallengeDescription />
       <DesignForwardCallout />
       <LandingJurors />

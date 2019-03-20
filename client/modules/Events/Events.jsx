@@ -306,8 +306,19 @@ class Events extends React.PureComponent {
               </ul>
             </div>
 
+            {/* 2017 alert */}
+
+            <div className={styles.alert}>
+              <a href="/getinvolved">
+                <b>All events below happened in 2017.</b>
+                <br />Stay tuned for upcoming events or get involved on the planning team.
+              </a>
+            </div>
+
+
             <div className={classNames([eventStyles.eventBox, globalStyles.contentWrapper])}>
               <div className={eventStyles.contentContainer}>
+
                 {/* events */}
                 {EVENTS.map(({ eventName, hostedBy, scheduleList, eventSummary, eventSummaryNoImg, eventImg, eventImgAlt }, i) => (
                   <div
@@ -338,7 +349,6 @@ class Events extends React.PureComponent {
           </div>
         </section>
         <Footer />
-
       </div>
     );
   }

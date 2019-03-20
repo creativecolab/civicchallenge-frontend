@@ -11,22 +11,21 @@ if (typeof require.ensure !== 'function') {
     callback(require);
   };
 }
-
+const getPress = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Press/Press').default), 'press');
 const getSponsors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Sponsors/Sponsors').default), 'sponsors');
 const getAbout = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/About/About').default), 'about');
 const getChallenges = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Challenges/Challenges').default), 'challenges');
 const getResources = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Resources/Resources').default), 'resources');
-const getLatestInMobility = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/LatestInMobility/LatestInMobility').default), 'latestinmobility');
+const getNews = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/News/News').default), 'News');
 const getFAQ = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/FAQ/FAQ').default), 'faq');
 const getDesignBrief = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/DesignBrief/DesignBrief').default), 'designbrief');
 const getGetInvolved = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/GetInvolved/GetInvolved').default), 'getinvolved');
-const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PressEvents/PressEvents').default), 'events');
+const getEvents = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'events');
 const getCodeOfConduct = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/CodeOfConduct/CodeOfConduct').default), 'codeofconduct');
 const getPosterTemplates = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/PosterTemplates/PosterTemplates').default), 'postertemplates');
 const getJurors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Jurors/Jurors').default), 'jurors');
-const getFinalists = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Finalists/Finalists').default), 'finalists');
+const getEntries = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Entries/Entries').default), 'entries');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
-const getEvents2 = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Events/Events').default), 'eventstest');
 
 
 function onRouteChange(prev, next) {
@@ -41,7 +40,7 @@ export default (
     <Route path="/challenges" getComponent={getChallenges} />
     <Route path="/challenges/:id" getComponent={getDesignBrief} />
     <Route path="/resources" getComponent={getResources} />
-    <Route path="/resources/latestinmobility" getComponent={getLatestInMobility} />
+    <Route path="/resources/News" getComponent={getNews} />
     <Route path="/faqs" getComponent={getFAQ} />
     <Route path="/designbrief" getComponent={getDesignBrief} />
     <Route path="/getinvolved" getComponent={getGetInvolved} />
@@ -49,8 +48,8 @@ export default (
     <Route path="/codeofconduct" getComponent={getCodeOfConduct} />
     <Route path="/postertemplates" getComponent={getPosterTemplates} />
     <Route path="/judging" getComponent={getJurors} />
-    <Route path="/finalists" getComponent={getFinalists} />
+    <Route path="/entries" getComponent={getEntries} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
-    <Route path="/eventstest" getComponent={getEvents2} />
+    <Route path="/press" getComponent={getPress} />
   </Route>
 );
