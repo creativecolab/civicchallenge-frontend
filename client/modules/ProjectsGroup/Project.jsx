@@ -25,7 +25,7 @@ const TEAMS = [
         projectLink: 'Link',
         projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
         link: '',
-      }
+      },
     ],
   },
 ];

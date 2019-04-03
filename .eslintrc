@@ -24,7 +24,7 @@
     "react/no-did-mount-set-state": [0],
     "import/extensions": [0],
     "import/no-extraneous-dependencies": [0],
-    "import/no-unresolved": [0], // Until import plugin supports webpack 2 resolveModules
+    "import/no-unresolved": [0],
     "compat/compat": 2
   },
   "settings": {

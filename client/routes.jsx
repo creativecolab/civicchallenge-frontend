@@ -26,6 +26,7 @@ const getPosterTemplates = (nextState, cb) => require.ensure([], require => cb(n
 const getJurors = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Jurors/Jurors').default), 'jurors');
 const getEntries = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Entries/Entries').default), 'entries');
 const getPlaceholder = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/Placeholder/Placeholder').default), 'placeholder');
+const getProjects = (nextState, cb) => require.ensure([], require => cb(null, require('./modules/ProjectsGroup/Project').default), 'Project');
 
 
 function onRouteChange(prev, next) {
@@ -51,5 +52,6 @@ export default (
     <Route path="/entries" getComponent={getEntries} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
     <Route path="/press" getComponent={getPress} />
+    <Route path="/projects" getComponent={getProjects} />
   </Route>
 );
