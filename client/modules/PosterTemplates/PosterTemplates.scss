@@ -1,0 +1,18 @@
+@import '~styles/variables';
+
+.poster-templates{
+  height: 100%;
+  width: 100%;
+
+  .details {
+    margin: $spacing-margin 0;
+  }
+
+  .posters {
+    img {
+      width: 30%;
+      margin-right: 5%;
+      box-shadow: $theme-boxshadow;
+    }
+  }
+}

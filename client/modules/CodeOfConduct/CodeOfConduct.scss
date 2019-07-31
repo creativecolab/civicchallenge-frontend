@@ -1,0 +1,12 @@
+@import '~styles/variables';
+
+.code-of-conduct {
+  height: 100%;
+  width: 100%;
+
+  overflow-x: hidden;
+
+  .details {
+    margin: $spacing-margin 0;
+  }
+}

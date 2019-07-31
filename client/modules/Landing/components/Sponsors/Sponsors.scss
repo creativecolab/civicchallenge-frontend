@@ -1,0 +1,49 @@
+@import '~styles/variables';
+
+#sponsors {
+  width: 100%;
+  padding: 3em 0 0 0;
+  position: relative;
+  background-color: $theme-color-medgrey;
+  display: flex;
+  text-align: center;
+
+  #sponsorWrapper {
+    margin: 0 50px;
+    width: 100%;
+
+    a {
+      position: relative;
+      .backgroundFill {
+        height: 60px;
+        display: inline-block;
+        padding: 20px;
+      }
+
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  #sponsorsWrapper{
+    width: $component-width-desktop
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+#sponsors {
+  width: 100%;
+  #sponsorWrapper {
+
+    width: $component-width-mobile;
+    margin: 0 auto;
+    
+    a {
+      .backgroundFill {
+        height: 50px;
+      } 
+    }
+  }
+
+}
+}

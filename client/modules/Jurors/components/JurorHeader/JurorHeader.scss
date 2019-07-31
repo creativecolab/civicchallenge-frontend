@@ -1,0 +1,47 @@
+@import "~styles/variables.scss";
+
+$header-img-dim: 250px;
+
+$button-size: 0.7em;
+
+.juror-header {
+
+  .juror-header-text {
+    display: inline-block;
+    vertical-align: top;
+    width: 43%;
+    margin-right: 7%;
+
+    h2 {
+      padding-bottom: $spacing-margin;
+    }
+
+    h3 {
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .criteria-box {
+      padding-bottom: $spacing-margin;
+    }
+  }
+
+  .not-last-section {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $mobile-max-width) {
+  .juror-header {
+    .juror-header-text {
+      width: 100%;
+    }
+
+    .not-last-section {
+      margin-bottom: $spacing-margin;
+    }
+  }
+}

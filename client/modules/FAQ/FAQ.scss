@@ -1,0 +1,35 @@
+@import "~styles/variables.scss";
+
+.Faq {
+  height: 100%;
+  width: 100%;
+
+  overflow-x: hidden;
+
+  .faqHeader {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+}
+
+$page-margins-d: 50px auto;
+$page-margins-m: 30px auto;
+
+.page-wrapper {
+  width: $component-width-desktop;
+  margin: $page-margins-d;
+
+  @media (max-width: $mobile-max-width) {
+    width: $component-width-mobile;
+    margin: $page-margins-m;
+  }
+}

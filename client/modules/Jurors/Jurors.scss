@@ -1,0 +1,35 @@
+@import "~styles/variables.scss";
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+$content-width: 70%;
+.jurors {
+	height: 100%;
+	width: 100%;
+
+	
+	section{
+		margin-top: $spacing-margin;
+	}
+
+
+}
+
+@media (max-width: $mobile-max-width) {
+	.jurors {
+		overflow-x: hidden;
+		.sidebar {
+			display: none;
+		}
+
+		.resources {
+			width: 100%;
+		}
+	}
+}

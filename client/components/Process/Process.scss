@@ -1,0 +1,179 @@
+@import '~styles/variables';
+
+$component-spacing: 3em;
+
+.process {
+  margin: 0 auto;
+  padding: 0;
+
+  text-align: center;
+  
+  .timeline {
+    $timeline-items: 4;
+
+    @function darken-right($color) {
+      @return darken($color, 2.5%)
+    }
+
+    .chart {
+      $colors: (
+              0: rgb(126, 146, 206),
+              1: rgb(148, 192, 227),
+              2: rgb(146, 214, 215),
+              3: rgb(165, 211, 172)
+      );
+
+      position: relative;
+
+      text-align: center;
+
+      .inactive {
+        opacity: 0.5;
+      }
+
+      .past {
+        opacity: 1;
+      }
+
+      .circles-container {
+        display: flex;
+
+        .circle-container {
+          $radius: 2.5 * $font-size;
+          $diameter: 2 * $radius;
+
+          position: relative;
+          flex: 1;
+          z-index: 2;
+
+          font-size: 0;
+
+          .circle {
+            border-radius: 50%;
+            width: $diameter;
+            height: $diameter;
+
+            display: inline-block;
+          }
+
+          @each $index, $color in $colors {
+            .circle-#{$index} {
+              background-color: $color;
+            }
+          }
+
+          .circle-overlay {
+            border-top-right-radius: $diameter;
+            border-bottom-right-radius: $diameter;
+            width: $radius;
+            height: $diameter;
+
+            position: absolute;
+            left: 50%;
+            display: inline-block;
+          }
+
+          @each $index, $color in $colors {
+            .circle-overlay-#{$index} {
+              background-color: darken-right($color);
+            }
+          }
+
+          .circle-icon {
+            $icon-size-ratio: 2 / 3;
+
+            $margin: $diameter * (1 - $icon-size-ratio) / 2;
+            $diameter: $diameter * $icon-size-ratio;
+
+            margin-top: $margin;
+            margin-left: $margin;
+            width: $diameter;
+            height: $diameter;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-$radius);
+            display: inline-block;
+
+            svg {
+              width: $diameter;
+              height: $diameter;
+            }
+          }
+        }
+      }
+
+      @for $j from 1 to $timeline-items {
+        $i: $j - 1;
+
+        .connector-#{$i}-#{$j} {
+          margin-left: 12.5% + ($i * 25%);
+          width: 25%;
+          height: 12.5%;
+
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+
+          background: linear-gradient(to right, darken-right(map-get($colors, $i)), map-get($colors, $j));
+        }
+      }
+    }
+
+    .timeline-text-container {
+      display: flex;
+
+      .timeline-text {
+        flex: 1;
+
+        text-align: center;
+
+        .months {
+          margin-top: 1em;
+          margin-bottom: 2em;
+
+          font-size: 0.7em;
+          font-weight: bold;
+          color: rgb(189, 191, 201);
+        }
+
+        .title {
+          text-transform: uppercase;
+          font-size: 0.9em;
+          font-weight: bold;
+          color: rgb(69, 76, 119);
+        }
+
+        .description {
+          font-size: 0.8em;
+          color: rgb(69, 76, 119);
+        }
+      }
+
+      .inactive-text {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .process {
+    width: $component-width-desktop;
+
+    &.mini {
+      width: auto !important;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .process {
+    width: $component-width-mobile;
+
+    &.mini {
+      width: auto !important;
+    }
+  }
+}

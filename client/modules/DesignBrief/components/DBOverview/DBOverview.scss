@@ -1,0 +1,46 @@
+@import "~styles/variables.scss";
+
+
+$header-img-dim: 250px;
+
+.overview {
+  width: 100%;
+
+  margin: $subsection-padding 0;
+
+
+  .overviewText {
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+    @media (min-width: $desktop-min-width) {
+      width: $right-side-width;
+    }
+
+    overflow: auto;
+
+    div.overview-summary {
+      $margt-span: 20px;
+      margin-top: $margt-span;
+    }
+
+    .fB {
+      margin-left: 20px;
+      float: right;
+      background-color: $theme-color-medgrey;
+      height: 200px;
+      width: 300px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      @media (max-width: $mobile-max-width) {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+      }
+    }
+
+  }
+
+}

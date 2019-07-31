@@ -1,0 +1,467 @@
+@import '~styles/variables';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+$page-padding-width: 328px;
+$page-padding-height: 124px;
+
+/**
+ * Global Styles
+ */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  font-size: $font-size;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  text-align: left;
+  color: $theme-color-black;
+
+  a {
+    text-decoration: none;
+    color: $theme-color-blue;
+    font-weight: 500;
+  }
+
+  p, span {
+    font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-size: 2em; /* 36pt */
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    @media (max-width: $mobile-max-width) {
+      font-size: 1.5em;
+    }
+  }
+
+  h2 {
+    font-size: 1.3em; /* 24pt */
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+    @media (max-width: $mobile-max-width) {
+      font-size: 1.1em;
+    }
+  }
+
+  h3 {
+    font-size: 1em; /* 18pt */
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 600;
+    @media (max-width: $mobile-max-width) {
+      font-size: .9em;
+    }
+  }
+
+  h4 {
+    font-size: 0.875em; /* 14pt */
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  h5 { /* labels */
+    font-size: 0.8em; /* 10pt */
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .red {
+    color: $theme-color-red;
+  }
+
+  .orange {
+    color: $theme-color-orange;
+  }
+
+  .grey {
+    color: $theme-color-medgrey;
+  }
+
+  .blue {
+    color: $theme-color-blue;
+  }
+
+  .white {
+    color: $theme-color-white;
+  }
+
+}
+
+div[data-reactmount],
+div[data-reactroot] {
+  width: 100%;
+  height: 100%;
+}
+
+.text-container {
+  margin: 1.5em auto;
+  max-width: 750px;
+  padding: 1em;
+}
+
+
+/* current */
+
+.page-wrapper {
+  width: $component-width-desktop;
+  margin: $page-margins-d;
+
+  @media (max-width: $mobile-max-width) {
+    width: $component-width-mobile;
+    margin: $page-margins-m;
+  }
+}
+
+.contentWrapper {
+  width: $component-width-desktop;
+  position: relative;
+  margin: 0 auto;
+  @media (max-width: $mobile-max-width) {
+    width: $component-width-mobile;
+  }
+}
+
+.contentWrapperGrid {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contentWrapperGridGI {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.gridStyle {
+  text-align: left;
+  position: relative;
+}
+
+.sectionWrapper {
+  box-shadow: $theme-boxshadow;
+  width: 450px;
+  margin: 0 20px 20px 0;
+  vertical-align: bottom;
+  display: inline-block;
+  @media(max-width: $mobile-max-width) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.sectionWrapperBlue {
+  background-color: $theme-color-blue;
+  box-shadow: $theme-boxshadow;
+  width: 450px;
+  margin: 0 20px 20px 0;
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+.placeholderWrapper {
+  width: 100%;;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.placeholderFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.styled-link {
+  text-decoration: none;
+  color: $theme-color-blue;
+  font-weight: 500;
+}
+
+@media(max-width: $mobile-max-width) {
+  .contentWrapper {
+    width: $component-width-mobile;
+  }
+}
+
+.contentContainer {
+  /* StandardSectionBox, margin under header sections */
+  margin-bottom: $subsection-padding;
+}
+
+/* current */
+
+.title {
+  text-align: center;
+  h3 {
+    font-size: 1.5em;
+    display: inline-block;
+  }
+}
+
+.sectionTitle, .sectionTitleWhite {
+  width: $component-width-desktop; /* WIDTH OF THE LANDING PAGE INFO PARAGRAPHS */
+  margin: 0 auto;
+
+  p {
+  }
+}
+
+.sectionTitleWhite {
+  color: #fff;
+}
+
+/**
+ * Helper Styles
+ */
+
+.ul:after {
+  content: '';
+
+  margin-top: 0.25em;
+  margin-left: 10%;
+  border-bottom: 4px solid rgb(112, 197, 213);
+  width: 80%;
+
+  display: block;
+
+  text-align: center;
+}
+
+.scrollButtonBlue {
+  text-decoration: none;
+  padding: $button-padding;
+
+  color: #fff;
+  font-size: $button-size;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: $theme-color-blue;
+  border: 2px solid $theme-color-blue;
+  box-shadow: $theme-boxshadow;
+
+  &:hover {
+    transition: color $ease-time ease $color-delay;
+    color: $theme-color-blue;
+    transition: background-color $ease-time ease;
+    background-color: #fff;
+    border-color: #fff;
+  }
+}
+
+.sectionBtn {
+
+  margin: 10px 0;
+  font-family: 'Open Sans', Avenir, Helvetica, sans-serif;
+
+  a.greyOutline {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: $theme-color-medgrey;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-medgrey;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-medgrey;
+    }
+  }
+
+  a.blueOutline {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: $theme-color-blue;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-blue;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-blue;
+    }
+  }
+
+  a.blue {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $theme-color-blue;
+    border: 2px solid $theme-color-blue;
+    box-shadow: $theme-boxshadow;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-blue;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+  }
+  a.whiteOutline {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: none;
+
+    border: 2px solid #fff;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-blue;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+    }
+
+  }
+
+  a.salmonOutline {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: $theme-color-red;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-red;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-red;
+    }
+
+  }
+
+  a.salmonSmallOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0;
+    color: $theme-color-red;
+    font-size: $button-size*0.75;
+
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-red;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-red;
+    }
+
+  }
+
+  a.orangeOutline {
+    text-decoration: none;
+    padding: $button-padding;
+    margin: 0;
+    color: $theme-color-orange;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-orange;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-orange;
+    }
+
+  }
+
+  a.orangeSmallOutline {
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0;
+    color: $theme-color-orange;
+    font-size: $button-size*0.75;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border: 2px solid $theme-color-orange;
+
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: #fff;
+      transition: background-color $ease-time ease;
+      background-color: $theme-color-orange;
+    }
+
+  }
+
+  a.salmon {
+    text-decoration: none;
+    padding: $button-padding;
+
+    color: #fff;
+    font-size: $button-size;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    background-color: $theme-color-red;
+    border: 2px solid $theme-color-red;
+    &:hover {
+      transition: color $ease-time ease $color-delay;
+      color: $theme-color-red;
+      transition: background-color $ease-time ease;
+      background-color: #fff;
+      border-color: #fff;
+    }
+  }
+
+}
