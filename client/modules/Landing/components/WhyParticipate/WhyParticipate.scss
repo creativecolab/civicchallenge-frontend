@@ -1,0 +1,92 @@
+@import '~styles/variables';
+
+$icon-dim: 150px;
+$item-font-size: 14px;
+$h4-font-size: 15px;
+$content-element-width-mobile: 90%;
+$content-element-width-desktop: 30%;
+
+#participate {
+  padding: $landing-section-padding-d;
+  @media (max-width: $mobile-max-width) {
+    padding: $landing-section-padding-m;
+  }
+  color: #212121;
+
+  margin: 0 auto;
+
+  div.contentContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    
+    div.participateIconsWrapper {
+
+      div.contentElement {
+        display: inline-block;
+        width: $content-element-width-mobile;
+        @media (max-width: $mobile-max-width) {
+          width: 100%;
+        }
+
+        div.imgCont {
+          margin: $landing-inter-spacing 0;
+          div.contentImg {
+            display: flex;
+            justify-content: center;
+            img {
+              height: $icon-dim;
+            }
+          }
+        }
+
+        div.contentText {
+          /* h4 {
+            font-weight: 600;
+            margin-bottom: 0px;
+            padding: 0;
+            font-size: $h4-font-size;
+            color: $theme-color-orange;
+          }
+
+          p {
+            font-family: 'Open Sans';
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            font-size: $item-font-size;
+            text-align: left;
+          } */
+        }
+      }
+    }
+  }
+  
+}
+
+@media (min-width: $desktop-min-width) {
+#participate {
+  width: $component-width-desktop;
+
+  div.contentContainer {
+    width: $component-width-desktop;
+
+    div.participateIconsWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      div.contentElement {
+        width: $content-element-width-desktop;
+      }
+
+    }
+  }
+}
+}
+
+@media (max-width: $mobile-max-width) {
+#participate {
+}
+}

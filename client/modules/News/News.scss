@@ -1,0 +1,33 @@
+@import '~styles/variables';
+
+.resources {
+  height: 100%;
+  width: 100%;
+
+  .challenge {
+    h2 {
+      padding-bottom: 30px;
+    }
+    margin-bottom: 30px;
+  }
+  .content {
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    .boxRow {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .grid-wrapper {
+    text-align: center;
+  }
+}

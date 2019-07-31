@@ -1,0 +1,115 @@
+@import '~styles/variables';
+
+$stroke-size: 1px;
+$imgBox-dim: 300px + ($stroke-size * 2);
+$imgBox-dim-height: 200px + ($stroke-size * 2);
+
+$button-size: 0.7em;
+$h2-mobile: 1.2em;
+
+$box-dim-width: 300px;
+$box-dim-height: $box-dim-width * 1.33;
+
+.wrapper {
+  width: $box-dim-width;
+  // height: $box-dim-height;
+  margin: 0 20px 20px 0;
+  // vertical-align: bottom;
+  vertical-align: top;
+  display: inline-block;
+  top: 0;
+
+  box-shadow: $theme-boxshadow;
+  @media(max-width: $mobile-max-width) {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  &:hover {
+    transition: top 0.2s ease 0s;
+    position: relative;
+    top: -10px;
+  }
+  .boxWrapper {
+
+    a {
+      text-decoration: none;
+
+      .NewsBox {
+        margin: 0;
+        padding: 0;
+        //background-color: #fff;
+        
+        .newsImg {
+          padding: 0;
+          margin: 0;
+
+          img {
+            width: 100%;
+          }
+        }
+        .newsTextWrapper {
+          //background-color: #fff;
+          margin: 0;
+          padding: 0;
+          .newsText {
+            text-align: left;
+            padding: 15px 20px 25px 20px;
+            max-width: 100%;
+            height: auto;
+            /*padding: $padding-mobile*2 $padding-mobile;*/
+            .date {
+              text-transform: uppercase;
+              color: $theme-color-medgrey;
+              padding-bottom: 10px;
+            }
+            .title {
+              padding-bottom: 5px;
+              margin: 0;
+              font-weight: bold;
+              font-size: 1em * 0.9;
+              /* &:after {
+                content:url('./newtab_icon.png');
+              } */
+            }
+            .descr {
+              font-size: 14px;
+              color: $theme-color-medgrey;
+            }
+
+            .button {
+              text-align: right;
+              padding-top: 10px;
+              h4 {
+                display: inline-block;
+              }
+              img {
+                display: inline-block;
+                margin-left: 15px;
+              }
+              .blue {
+                color: $theme-color-blue;
+                text-decoration: none;
+              }
+            }
+
+            h3 {
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  
+}
+
+@media(max-width: $mobile-max-width) {
+  .wrapper {
+    margin-right: 0;
+    width: 100%;
+  }
+}
