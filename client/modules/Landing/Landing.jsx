@@ -39,6 +39,14 @@ function Landing() {
       <Helmet
         title="Home"
       />
+      <div style={{"position":"fixed", "backgroundColor":"#4496ff", "top":"0", "left":"0", "right":"0", "color":"white", "textAlign":"center"}}>
+        <p style={{"font-size":"22px", "font-weight":"500", "fontFamily":"'Montserrat', sans-serif"}}>
+          RETURNING SOON -- Get Involved in D4SD2020!
+          <a target="_blank" href="/whitepaper.pdf" style={{"border":"1.5px solid white", "padding": "0.5em 1em 0.5em 1em", "textDecoration":"none", "marginLeft":"3rem", "fontSize":"16px", "color":"white"}}>
+            Review D4SD2017!
+          </a>
+        </p>
+      </div>
       <Navbar />
       <LandingHeader />
       <Register />
