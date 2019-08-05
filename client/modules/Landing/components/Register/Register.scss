@@ -14,8 +14,28 @@
   }
 }
 
+.pdf {
+  text-decoration: none;
+  padding: 15px 30px;
+  margin-left: 10px;
+  color: #fff!important;
+  font-size: $button-size;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: none;
+
+  border: 2px solid #fff;
+
+  &:hover {
+    transition: color $ease-time ease $color-delay;
+    color: $theme-color-blue!important;
+    transition: background-color $ease-time ease;
+    background-color: #fff;
+  }
+}
+
 /* @media (min-width: $desktop-min-width) {
-  
+
   #register {
     width: $desktop-min-width;
   }
