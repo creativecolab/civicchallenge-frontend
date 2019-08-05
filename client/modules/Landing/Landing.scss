@@ -20,19 +20,21 @@
   text-align: center;
 
   h3 {
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.75em 0;
+    letter-spacing: 0.05em;
   }
 
   a {
     border-bottom: 1.5px solid white;
-    font-size: 22px;
+    padding-bottom: 0.1em;
     color: white;
   }
 
   a:hover {
     color: rgba(33, 33, 33, 0.9);
     border-bottom: 1.5px solid rgba(33, 33, 33, 0.9);
-    font-weight: 900;
+    padding-bottom: 0.1em;
+    
   }
 }
 
