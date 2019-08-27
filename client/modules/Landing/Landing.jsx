@@ -39,6 +39,14 @@ function Landing() {
       <Helmet
         title="Home"
       />
+      <div className={styles.update}>
+        <div>
+          <h3>D4SD will be returning in Fall!
+            <a href="http://eepurl.com/c2kFon"> Join the mailing list </a>
+            to get the latest.
+          </h3>
+        </div>
+      </div>
       <Navbar />
       <LandingHeader />
       <Register />
