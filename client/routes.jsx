@@ -52,6 +52,6 @@ export default (
     <Route path="/entries" getComponent={getEntries} />
     <Route path="/placeholder" getComponent={getPlaceholder} />
     <Route path="/press" getComponent={getPress} />
-    <Route path="/projects" getComponent={getProjects} />
+    <Route path="/entries/:id" getComponent={getProjects} />
   </Route>
 );
