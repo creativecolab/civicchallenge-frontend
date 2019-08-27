@@ -39,7 +39,7 @@ const TEAMS = [
         teamImg: pac,
         projectDesc: 'PAC is a smartphone application that provides audio alerts to drivers when it senses an urgent emergency.',
         link: 'https://okiyuki.github.io/ARCportfolio/public/portfolio.html',
-        link2: '/entries/PAC',
+        link2: '/projects',
       },
       {
         teamName: 'ESSENSE: Driver’s seat vibration pad',
@@ -47,7 +47,7 @@ const TEAMS = [
         teamImg: teams,
         projectDesc: 'ESSENCE is the new way to alert driver\'s of pedestrians who are preparing to cross the street at the intersection through vibrations.',
         link: 'https://joelyun.wixsite.com/teams',
-        link2: '/entries/ESSENSE',
+        link2: '/projects',
       },
       {
         teamName: 'M. I. A. -- My Instructional Assistant',
@@ -55,7 +55,7 @@ const TEAMS = [
         teamImg: mia,
         projectDesc: 'An AI instructional assistant that helps reinforce good driving habits by reducing visual cognitive load though the aid of real-time audio feedback from car sensor technology.',
         link: 'https://docs.google.com/presentation/d/18qyh4fYF1w2llDMvokNLTqaY5xZAL_jgfhCgsVPwf18/edit',
-        link2: '/entries/MIA',
+        link2: '/projects',
       },
       {
         teamName: 'Spot: The Smart Parking App',
@@ -63,7 +63,7 @@ const TEAMS = [
         teamImg: spot,
         projectDesc: 'SPOT is an application that aims to make parking in congested areas easier and more efficient by allowing people to give their parking and its location directly to someone else.',
         link: 'http://spotsd.com/',
-        link2: '/entries/Spot2',
+        link2: '/projects',
       },
       {
         teamName: 'MTS - Track Your Bus: Closing the gap between MTS and its users',
@@ -71,7 +71,7 @@ const TEAMS = [
         teamImg: mts,
         projectDesc: 'An application which rewards users for reporting MTS related problems.',
         link: 'https://citywalkers.wixsite.com/portfolio',
-        link2: '/entries/MTS',
+        link2: '/projects',
       },
       {
         teamName: 'SafeD',
@@ -79,7 +79,7 @@ const TEAMS = [
         teamImg: safed,
         projectDesc: 'Our solution combines infrastructural changes and social awareness campaigns supplemented by an attachable device that enhances visibility for drivers. These combine to create better experiences for drivers while improving pedestrian safety.',
         link: 'https://safeducsd.wixsite.com/safed',
-        link2: '/entries/SafeD',
+        link2: '/projects',
       },
       {
         teamName: 'iCbus: Real-time Bus Capacity Forecasting System',
@@ -87,7 +87,7 @@ const TEAMS = [
         teamImg: icbus,
         projectDesc: 'iCBus is a multi-platform bus forecasting system. Based on existing drivers\' control system, it provides drivers a new interface to send out more valuable information, containing bus capacity and wheelchair availability, which will be synchronously transferred to users\' mobile application.',
         link: 'https://yuw281.wixsite.com/icbus',
-        link2: '/entries/iCbus',
+        link2: '/projects',
       },
     ],
   },
