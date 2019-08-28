@@ -34,12 +34,13 @@ const TEAMS = [
     header: 'Finalists',
     boxContent: [
       {
-        teamName: 'Cycle Detection',
+        teamName: 'CycleDetection',
         position: 1,
         memberList: 'Stephen Cerruti, D.J. Nelson, Savera Soin, James Maron',
         teamImg: cycleDetection,
         projectDesc: 'How can we make bicycles more visible to cars of the future? We think DSRC, the technology behind V2V communication, may be the answer.',
         link: '',
+        link2: '/mobility/Cycle_Detection',
       },
       {
         teamName: 'AV onDemand: Remote Service Provider for Autonomous vehicles',
@@ -48,6 +49,7 @@ const TEAMS = [
         teamImg: remoteService,
         projectDesc: 'Hired specialists remotely maneuver AVs through areas of uncertain conditions allowing all riders to travel with no takeover responsibility.',
         link: 'http://joshduhay.herokuapp.com/av.html',
+        link2: '/mobility/AV_onDemand',
       },
       {
         teamName: 'Spot: Your Guide to Safe and Walkable Cities',
@@ -56,6 +58,7 @@ const TEAMS = [
         teamImg: spot,
         projectDesc: 'Spot is an app that provides the blind and visually impaired with accessibility-focused walking directions, using data from GE streetlamps.',
         link: 'http://naterenzi.portfoliobox.net/spot',
+        link2: '/mobility/Spot1',
       },
       {
         teamName: 'GATE Center: Immersive AV Learning Center',
@@ -63,6 +66,7 @@ const TEAMS = [
         teamImg: gate,
         projectDesc: 'An education center where the public directly engages with AVs, accesses learning resources, and provides feedback for stakeholder insights.',
         link: 'https://astrotransits.wixsite.com/gate1/about-1',
+        link2: '/mobility/Gate_Center',
       },
       {
         teamName: 'Beach Access For All',
@@ -70,6 +74,7 @@ const TEAMS = [
         teamImg: beachAccess,
         projectDesc: 'We wish to redefine the beach experience for those with limited mobility. Our solution is an automated, shared-use, mobility aid service designed for the beach environment.',
         link: '',
+        link2: '/mobility/Beach_Access_For_All',
       },
       {
         teamName: 'Road Map',
@@ -77,6 +82,7 @@ const TEAMS = [
         teamImg: roadMap,
         projectDesc: 'An app focused on the iterative design process, bringing professionals and the public together to share designs, expertise, and feedback.',
         link: '',
+        link2: '/mobility/Road_Map',
       },
       {
         teamName: 'San Diego Parking App',
@@ -84,6 +90,7 @@ const TEAMS = [
         teamImg: sdParking,
         projectDesc: 'An app that shows available parking within downtown San Diego.',
         link: '',
+        link2: '/mobility/San_Diego_Parking_App',
       },
       {
         teamName: 'Audio Movement',
@@ -91,6 +98,7 @@ const TEAMS = [
         teamImg: audioMovement,
         projectDesc: 'WiFi installation on all MTS vehicles, improving the experience of regular MTS commuters, through education and entertainment resources.',
         link: 'https://www.amwebportfolio.com/',
+        link2: '/mobility/Audio_Movement',
       },
     ],
   },
@@ -113,6 +121,7 @@ function FinalistsGroup() {
       {TEAMS.map(({ header, boxContent }) => (
         <div key={header} className={styles.memberBox}>
           <h2 className={styles.theFinalists}>{header}</h2>
+          {/* {boxContent.map(({ teamName, position, memberList, teamImg, projectDesc, link, link2 }) => ( */}
           {boxContent.map(({ teamName, position, memberList, teamImg, projectDesc, link }) => (
             <div
               key={teamName}
@@ -135,6 +144,9 @@ function FinalistsGroup() {
                   </div>
                 </div>
               </div>
+              {/* <div>
+                <a href={link2}><h4>External page for this project</h4></a>
+              </div> */}
             </div>
           ))}
         </div>

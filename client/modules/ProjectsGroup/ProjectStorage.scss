@@ -1,0 +1,147 @@
+@import "~styles/variables.scss";
+
+$header-img-dim: 250px;
+
+$true-mobile-width: 500px;
+
+$member-font-size: 1em*0.9;
+
+$box-margin-right: 8%;
+$box-margin-left: 8%;
+
+.Project {  
+  align-content: left;
+  .member-box {
+   margin-right: -($box-margin-right);
+   margin-left: +($box-margin-left);
+
+    .member-inline-wrapper { 
+      width: 100%;
+      margin-top: $spacing-margin*1.2;
+      margin-bottom: $spacing-margin*1.2;
+     margin-right: $box-margin-right;
+
+      display: inline-block;
+      vertical-align: top;
+
+      .member-wrapper {
+        width: 100%;
+        text-align: left;
+        a {
+          h1 {
+            text-align: left;
+            margin-right: $box-margin-right;
+            margin-bottom: $spacing-margin*1.2;
+            color: $theme-color-blue;
+            font-weight: bold;
+            font-size: large;
+          }
+        }
+
+        .team-img {
+          left: 0px;
+          margin-bottom: 10px;
+          $juror-member-img-dim: 400px;
+          img {
+            width: 60%;
+          }
+        }
+
+        .ribbon {
+          position: relative;
+          bottom: 10px;
+          right: 175px;
+          width: 100px!important;
+        }
+
+        .member-info {
+          text-align: left;
+          p, span {
+            color: $theme-color-black;
+            font-size: $member-font-size;
+          }
+          
+          span.member-list {
+            font-weight: bold;
+            font-size: 0.8em;
+          }
+          
+          p.team-desc {
+            font-size: 0.8em;
+          }
+
+          a.button {
+            font-weight: bold;
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008CBA;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            
+            }
+            a.button:hover {background-color: #3e8e41}
+
+            a.button:active {
+              background-color: #008CBA;
+              box-shadow: 0 5px #666;
+              transform: translateY(4px);
+            }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $true-mobile-width) and (max-width: $mobile-max-width) {
+  .Project {
+    .member-box {
+      margin-right: $box-margin-right;
+      .member-inline-wrapper {
+        width: 100%;
+        .member-wrapper {
+          display: flex;
+          .member-info {
+            margin-left: 3%;
+            span {
+              font-size: $member-font-size*0.8;
+            }
+          }
+          .team-img {
+            img {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $true-mobile-width) {
+  .Project {
+    .member-box {
+      margin-right: 0;
+      .member-inline-wrapper {
+        width: 100%;
+        .member-wrapper {
+          display: inline-block;
+          .member-info {
+            span {
+              font-size: $member-font-size*0.8;
+            }
+          }
+          .team-img {
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
