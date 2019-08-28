@@ -51,7 +51,7 @@ const defaultProps = {};
 const TEAMS = [
   // Finalists Groups
   {
-    id: 'Cycle_Detection',
+    id: 'CycleDetection',
     teamName: 'Cycle Detection',
     position: 1,
     memberList: 'Stephen Cerruti, D.J. Nelson, Savera Soin, James Maron',
@@ -60,7 +60,7 @@ const TEAMS = [
     link: '',
   },
   {
-    id: 'AV_onDemand',
+    id: 'AVonDemand',
     teamName: 'AV onDemand: Remote Service Provider for Autonomous vehicles',
     position: 2,
     memberList: 'Marissa Hing, Alex Tunchez, Jacob Browne, Josh Duhay, Claire Pham',
@@ -69,7 +69,7 @@ const TEAMS = [
     link: 'http://joshduhay.herokuapp.com/av.html',
   },
   {
-    id: 'Spot1',
+    id: 'SPOTGuide',
     teamName: 'Spot: Your Guide to Safe and Walkable Cities',
     position: 3,
     memberList: 'Sayamon Riddang, Natalie Terenzi',
@@ -78,7 +78,7 @@ const TEAMS = [
     link: 'http://naterenzi.portfoliobox.net/spot',
   },
   {
-    id: 'Gate_Center',
+    id: 'GATECenter',
     teamName: 'GATE Center: Immersive AV Learning Center',
     memberList: 'Garret Hoover, Selene Hoover, Jessica Yeung',
     teamImg: gate,
@@ -86,7 +86,7 @@ const TEAMS = [
     link: 'https://astrotransits.wixsite.com/gate1/about-1',
   },
   {
-    id: 'Beach_Access_For_All',
+    id: 'BeachAccessForAll',
     teamName: 'Beach Access For All',
     memberList: 'Andrea Flagiello, Matt Abbondanzio, Tomas Robinson, Daniel Lenzen',
     teamImg: beachAccess,
@@ -110,7 +110,7 @@ const TEAMS = [
     link: '',
   },
   {
-    id: 'Audio_Movement',
+    id: 'AudioMovement',
     teamName: 'Audio Movement',
     memberList: 'Ting Wei Lin, Nathaniel Moreno, James Rich, Danfei  Sun, Diana Nguyen',
     teamImg: audioMovement,
@@ -127,7 +127,7 @@ const TEAMS = [
     link: 'https://okiyuki.github.io/ARCportfolio/public/portfolio.html',
   },
   {
-    id: 'ESSENSE',
+    id: 'Essence',
     teamName: 'ESSENSE: Driver’s seat vibration pad',
     memberList: 'Erich McMillan, Lindy Wong, Dean Ravida, Siyuan Gao, Joel Yun',
     teamImg: teams,
@@ -143,7 +143,7 @@ const TEAMS = [
     link: 'https://docs.google.com/presentation/d/18qyh4fYF1w2llDMvokNLTqaY5xZAL_jgfhCgsVPwf18/edit',
   },
   {
-    id: 'Spot2',
+    id: 'SPOTParkingApp',
     teamName: 'Spot: The Smart Parking App',
     memberList: 'Shelly Bae, Daniel Won, Kyle Rico, Tayte Duong, Kellie Higa',
     teamImg: spot2,
@@ -191,48 +191,50 @@ class Project extends React.PureComponent {
     }
     const TeamToDisplay = TEAMS.filter(isCurrentTeam);
     return (
-      <section className={classNames([styles.Project, globalStyles.contentWrapper])}>
+      <div>
+        <Navbar />
         <Helmet
           title="Entries"
         />
-        <Navbar />
         <Header
           backgroundImg={entriesBackground}
-          headerText
+          headerText="Entries"
           subheaderText=""
           showButton={false}
         />
-        <div className={styles.memberBox}>
-          {TeamToDisplay.map(({ teamName, position, memberList, teamImg, projectDesc, link }) => (
-            <div
-              key={teamName}
-              className={styles.memberInlineWrapper}
-            >
-              <div className={styles.memberWrapper}>
-                <a href={link}><h1>{teamName}</h1></a>
-                <div className={styles.teamImg}>
-                  <img src={teamImg} alt={teamName} />
-                  {position === 1 && <img className={styles.ribbon} src={firstPlace} alt="First Place" />}
-                  {position === 2 && <img className={styles.ribbon} src={secondPlace} alt="Second Place" />}
-                  {position === 3 && <img className={styles.ribbon} src={thirdPlace} alt="Third Place" />}
-                </div>
-                {/* group details (text) */}
-                <div className={styles.memberInfo}>
-                  <div className={styles.memberPositions}>
-                    <span key={memberList} className={styles.memberList}>{memberList}</span>
-                    <br />
-                    <p key={projectDesc} className={styles.teamDesc}>{projectDesc}</p>
-                    <a href="/entries/" className={styles.button}>Go Back</a>
-                    <br />
+        <section className={classNames([styles.Project, globalStyles.contentWrapper])}>
+          <div className={styles.memberBox}>
+            {TeamToDisplay.map(({ teamName, position, memberList, teamImg, projectDesc, link }) => (
+              <div
+                key={teamName}
+                className={styles.memberInlineWrapper}
+              >
+                <div className={styles.memberWrapper}>
+                  <a href={link}><h1>{teamName}</h1></a>
+                  <div className={styles.teamImg}>
+                    <img src={teamImg} alt={teamName} />
+                    {position === 1 && <img className={styles.ribbon} src={firstPlace} alt="First Place" />}
+                    {position === 2 && <img className={styles.ribbon} src={secondPlace} alt="Second Place" />}
+                    {position === 3 && <img className={styles.ribbon} src={thirdPlace} alt="Third Place" />}
+                  </div>
+                  {/* group details (text) */}
+                  <div className={styles.memberInfo}>
+                    <div className={styles.memberPositions}>
+                      <span key={memberList} className={styles.memberList}>{memberList}</span>
+                      <br />
+                      <p key={projectDesc} className={styles.teamDesc}>{projectDesc}</p>
+                      {/* <a href="/D4SD_2017_WhitePaper.pdf" className={styles.button}>Go Back</a> */}
+                      <a href="/entries" className={styles.button}>Go Back</a>
+                      <br />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            // Mem
             ))}
-        </div>
+          </div>
+        </section>
         <Footer />
-      </section>
+      </div>
     );
   }
 }
