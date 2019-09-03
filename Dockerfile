@@ -5,8 +5,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package*.json /app/
 
-RUN npm install
-RUN npm build
+RUN yarn install
+RUN yarn build:all
 
 COPY . /app
 
