@@ -11,11 +11,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package*.json /app/
-COPY webpack.config.*.js /app/
-COPY postcss.config.js /app/
-COPY webpack-modules /app/webpack-modules/
-COPY public /app/public/
-
+COPY . /app/
 
 RUN yarn install
 RUN yarn build:all
