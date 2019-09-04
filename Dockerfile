@@ -7,11 +7,12 @@ RUN apt-get update && apt-get install -y curl apt-transport-https && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install -y yarn
 
-  
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package*.json /app/
+COPY webpack.config.*.js /app/
+COPY postcss.config.js /app/
 
 RUN yarn install
 RUN yarn build:all
