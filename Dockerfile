@@ -16,8 +16,6 @@ COPY . /app/
 RUN yarn install
 RUN yarn build:all
 
-COPY . /app
-
 EXPOSE 3000
 
 CMD ["npm","start"]
