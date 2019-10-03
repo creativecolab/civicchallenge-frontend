@@ -41,9 +41,9 @@ function Landing() {
       />
       <div className={styles.update}>
         <div>
-          <h3>D4SD will be returning in Fall!
-            <a href="http://eepurl.com/c2kFon"> Join the mailing list </a>
-            to get the latest.
+          <h3>D4SD 2020 is returning! Checkout the
+            <a href="http://d4sd.org"> new website </a>
+            and take part!         
           </h3>
         </div>
       </div>
