@@ -102,7 +102,7 @@
     "file-loader": "^0.11.1",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "imagemin-webpack-plugin": "^1.4.4",
-    "jsdom": "^10.1.0",
+    "jsdom": "^16.5.0",
     "mock-css-modules": "^1.0.0",
     "node-sass": "^4.5.1",
     "nodemon": "^1.11.0",
